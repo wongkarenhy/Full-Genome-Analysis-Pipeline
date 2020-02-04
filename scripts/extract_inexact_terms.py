@@ -11,23 +11,23 @@ def queryHPO(args):
 
     # Read the hpo file in obo format
     try:
-        hpo = obonet.read_obo(args.ontology)
+        hpo = obonet.read_obo(args.database + "/hp.obo")
     except OSError:
-        print("Count not open/read the obo file:", args.ontology)
+        print("Count not open/read the obo file:" + args.database + "/hp.obo")
         sys.exit()
 
     # Read the file containing query HPO terms
     try:
-        hpo_exact = open(args.workdir + '/' + args.sampleid + '_hpo_exact.txt', 'r')
+        hpo_exact = open(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt', 'r')
     except OSError:
-        print("Count not open/read the input file:", args.workdir + '/' + args.sampleid + '_hpo_exact.txt')
+        print("Count not open/read the input file:", args.workdir + '/results' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt')
         sys.exit()
 
     # Read the file containing manual HPO terms
     try:
-        hpo_manual = open(args.workdir + '/' + args.sampleid + '_hpo_manual.txt', 'r')
+        hpo_manual = open(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt', 'r')
     except OSError:
-        print("Count not open/read the input file:", args.workdir + '/' + args.sampleid + '_hpo_manual.txt')
+        print("Count not open/read the input file:", args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt')
         sys.exit()
 
     with hpo_manual:
@@ -50,7 +50,7 @@ def queryHPO(args):
             relatives = relatives.union(networkx.ancestors(hpo, query))
             relatives = relatives.union(networkx.descendants(hpo, query))
 
-        with open(args.workdir + '/' + args.sampleid + '_hpo_inexact.txt', 'a') as out:
+        with open(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt', 'a') as out:
 
             for terms in relatives:
 
@@ -64,16 +64,16 @@ def getGeneList(args, relatives):
 
     try:
         # Read the gene phenotype file into a pandas dataframe
-        df = pd.read_csv(args.gene, sep = '\t', names=["HPO_id", "HPO_name", "gene_id", "gene_name"], comment = '#')
+        df = pd.read_csv(args.database + "/ALL_SOURCES_ALL_FREQUENCIES_phenotype_to_genes.txt", sep = '\t', names=["HPO_id", "HPO_name", "gene_id", "gene_name"], comment = '#')
     except OSError:
-        print("Count not open/read the gene-phenotype file:", args.gene)
+        print("Count not open/read the gene-phenotype file:", args.database + "/ALL_SOURCES_ALL_FREQUENCIES_phenotype_to_genes.txt")
         sys.exit()
 
     for hpo in relatives:
 
         geneList = geneList.union(set(df[df.HPO_id == hpo]['gene_name'].tolist()))
 
-    with open(args.workdir + '/' + args.sampleid + '_gene_list.txt', 'a') as out:
+    with open(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt', 'a') as out:
 
         for gene in geneList:
 
@@ -84,22 +84,16 @@ def main():
 
     parser=argparse.ArgumentParser(description="This software extracts inexact HPO terms and generate a gene list.")
     parser.add_argument("-s","--sampleid",help="Sample ID." ,dest="sampleid", type=str, required = True)
-    parser.add_argument("-w","--workdir",help="Work directory (folder/directory) containing all the sample input files.",dest="workdir",type=str, default='./genelist')
-    parser.add_argument("-o", "--ontology", \
-                        help="Ontology file in obo format. Default is ../../../../../media/KwokRaid02/karen/database/human_pheno_ontology/hp.obo", \
-                        dest="ontology", type=str, default = "../../../../../media/KwokRaid02/karen/database/human_pheno_ontology/hp.obo")
-    parser.add_argument("-g", "--gene", \
-                        help="Gene phenotype relationship table. Default is ../../../../../media/KwokRaid02/karen/database/human_pheno_ontology/ALL_SOURCES_ALL_FREQUENCIES_phenotype_to_genes.txt", \
-                        dest="gene", type=str, default = "../../../../../media/KwokRaid02/karen/database/human_pheno_ontology/ALL_SOURCES_ALL_FREQUENCIES_phenotype_to_genes.txt")
+    parser.add_argument("-w","--workdir",help="This is the base work directory (folder/directory).",dest="workdir",type=str, required = True)
+    parser.add_argument("-d", "--database", help="Path to the HPO database", dest="database", type=str, required = True)
+    # parser.add_argument("-o", "--ontology", \
+    #                     help="Ontology file in obo format. Default is /media/KwokRaid02/karen/database/human_pheno_ontology/hp.obo", \
+    #                     dest="ontology", type=str, default = "/media/KwokRaid02/karen/database/human_pheno_ontology/hp.obo")
+    # parser.add_argument("-g", "--gene", \
+    #                     help="Gene phenotype relationship table. Default is /media/KwokRaid02/karen/database/human_pheno_ontology/ALL_SOURCES_ALL_FREQUENCIES_phenotype_to_genes.txt", \
+    #                     dest="gene", type=str, default = "/media/KwokRaid02/karen/database/human_pheno_ontology/ALL_SOURCES_ALL_FREQUENCIES_phenotype_to_genes.txt")
     args=parser.parse_args()
 
-
-    # gene = "../../../../../media/KwokRaid02/karen/database/human_pheno_ontology/ALL_SOURCES_ALL_FREQUENCIES_phenotype_to_genes.txt"
-    # ontology = "../../../../../media/KwokRaid02/karen/database/human_pheno_ontology/hp.obo"
-    # sampleid='test'
-
-    if not os.path.isdir(args.workdir):
-        os.mkdir(workdir)
 
     # run query
     relatives = queryHPO(args)

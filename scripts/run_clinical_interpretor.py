@@ -1,4 +1,5 @@
-#!/user/bin/python3
+#!/usr/local/bin/python3.6
+
 import pandas as pd
 from collections import defaultdict, Counter
 import argparse
@@ -6,6 +7,8 @@ import sys
 import os
 import re
 import numpy as np
+from datetime import datetime
+
 
 def createGeneSyndromeDict(database_df):
 
@@ -88,7 +91,7 @@ def getParentsGeno(filtered_intervar, inheritance_mode, ov_allele):
 
 
 
-def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFinalFile, gene_score_result_r):
+def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFinalFile, gene_score_result_r, famid):
 
     # Overlap gene_score_result_r with small variants genes found in the proband
     gene_score_result_r = gene_score_result_r[gene_score_result_r.gene.isin(smallVariantFile.gene)]
@@ -101,6 +104,7 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
     filtered_intervar = pd.merge(interVarFinalFile, gene_score_result_r, left_on='Ref_Gene', right_on='gene',how='inner')
     filtered_intervar = filtered_intervar.sort_values(by='score', ascending=False)
 
+
     # Create a bed file and write it out
     pd.DataFrame(filtered_intervar).to_csv(
         './results/' + args.sampleid + "/" + args.sampleid + '_smallVariantCandidates.txt', index=False, sep='\t',
@@ -111,7 +115,6 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
     pd.DataFrame(filtered_intervar_bed).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_target.bed', index=False, sep='\t', header=False)
 
     # Get overlapping variants from the parents so we know which variants are inherited
-    famid = args.sampleid[3:5]
     print("Comparing small variants (SNPs/indels) inheritance")
     cmd = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed /media/KwokRaid04/CIAPM/CIAPM_longranger/BC0" + famid + "01_longranger/outs/phased_variants.vcf.gz > ./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf"
     os.system(cmd)
@@ -134,6 +137,7 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
             "Could not open/read the input file: ./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf")
         sys.exit()
 
+
     filtered_intervar = getParentsGeno(filtered_intervar, 'paternal', paternal_ov_allele)
     filtered_intervar = getParentsGeno(filtered_intervar, 'maternal', maternal_ov_allele)
 
@@ -155,9 +159,10 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
     for gene in compoundhet_genes:
 
         df = compoundhet[compoundhet['Ref_Gene'].str.contains(gene)]
+        row_count = len(df.index)
         col_list = ['paternal', 'maternal']
         res = df[col_list].sum(axis=0)
-        if (res[0] == 0) or (res[1] == 0):
+        if ((res[0] == 0) & (res[1] == row_count)) or (res[1] == 0 & (res[0] == row_count)):
             discard.append(gene)
 
     compoundhet = compoundhet[~compoundhet['Ref_Gene'].isin(discard)]
@@ -246,6 +251,73 @@ def normalizeRawScore(args, raw_score, mode):
     return(raw_score)
 
 
+def compileControlFiles(control_files_path):
+
+    full_paths = []
+    for path in control_files_path:
+        control_files = os.listdir(path)
+        for file in control_files:
+            if not (re.match('BC0..0[34]{1}', file) or re.match(rf"BC0{famid}..", file)):  # Discard trio of interest and all probands
+                full_paths.append(os.path.join(path, file))
+
+    return full_paths
+
+
+
+def bionanoSV(args, famid):
+
+    # Generate controls files (1KGP BN samples + CIAPM parents (excluding  parents of the proband of interest)
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
+        "%d/%m/%Y %H:%M:%S") + ' Generating bionano control file...')
+    control_files_path = [args.workdir + "/bionano_sv/controls/DLE", args.workdir + "/bionano_sv/controls/BspQI", args.workdir + "/bionano_sv/cases/DLE", args.workdir + "/bionano_sv/cases/BspQI"]
+    full_paths = compileControlFiles(control_files_path)
+
+    ## Write an empty file
+    with open(args.workdir + "/results/" + args.sampleid + "/bionano_control.smap",
+              'w'):  # So it will overwrite the old file
+        pass
+
+    for path in full_paths:
+        cmd = "cat " + path + "/exp_refineFinal1_merged_filter.smap >> " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap"
+        os.system(cmd)
+
+    # Call bionano translocation
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
+        "%d/%m/%Y %H:%M:%S") + ' Detecting bionano translocations on ' + args.sampleid + '...')
+    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoTranslocations.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed'
+    os.system(cmd)
+
+    # Call bionano deletion
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
+        "%d/%m/%Y %H:%M:%S") + ' Detecting bionano deletions on ' + args.sampleid + '...')
+    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoDeletions.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed -y ' + args.workdir + '/cytoband.bed'
+    os.system(cmd)
+
+    # Call bionano insertion
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
+        "%d/%m/%Y %H:%M:%S") + ' Detecting bionano insertions on ' + args.sampleid + '...')
+    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoInsertions.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed'
+    os.system(cmd)
+
+
+def linkedreadSV():
+
+    # Need to generate a reference file for all the medium size deletions
+    control_files_path = [args.workdir + "/linkedRead_sv/controls", args.workdir + "/bionano_sv/linkedRead_sv", args.workdir + "/linkedRead_sv/cases", args.workdir + "/bionano_sv/linkedRead_sv"]
+    full_paths = compileControlFiles(control_files_path)
+    ## Write an empty file
+    with open(args.workdir + "/results/" + args.sampleid + "/10x_del_control.smap",'w'):  # So it will overwrite the old file
+        pass
+
+    for path in full_paths:
+        cmd = "cat " + path + "/dels.vcf.gz >> " + args.workdir + "/results/" + args.sampleid + "/10x_del_control.vcf"
+        os.system(cmd)
+
+
+    # Need to generate another reference file for large SVs
+
+
+
 def main():
 
     # Parse argument
@@ -254,6 +326,10 @@ def main():
     parser.add_argument("-w", "--workdir", help="This is the base work directory.", dest="workdir", type=str, required = True)
     parser.add_argument("-d", "--database", help="Path to HPO database", dest="database", type=str, required = True)
     parser.add_argument("-i", "--intervar", help="Path to InterVar output folder", dest="intervar", type=str, required = True)
+    parser.add_argument("-b", "--bionano", help="Set this flag to evaluate bionano SVs.", dest="bionano", action='store_true')
+    parser.add_argument("-l", "--linkedreadSV", help="Set this flag to evaluate linkedread SVs.", dest="linkedreadSV", action='store_true')
+    parser.add_argument("-e", "--enzyme", help="Bionano enzyme used (BspQI or DLE). Only set this flag if -b is set", dest="enzyme", type=str)
+
     args = parser.parse_args()
 
     # Change work dir
@@ -291,26 +367,36 @@ def main():
 
     weights_gene = "./HPO_weight_gene.txt"
     weights_syndrome = "./HPO_weight_syndrome.txt"
+    famid = args.sampleid[3:5]
 
-    hpo_gene_dict = createGeneSyndromeDict(hpo_genes_df)
-    hpo_syndrome_dict = createGeneSyndromeDict(hpo_syndromes_df)
+    # hpo_gene_dict = createGeneSyndromeDict(hpo_genes_df)
+    # hpo_syndrome_dict = createGeneSyndromeDict(hpo_syndromes_df)
+    #
+    # weightGeneDict = createWeightDict(weights_gene)
+    # weightSyndromeDict = createWeightDict(weights_syndrome)
+    #
+    # # Retrieve clinical phenome from the patient
+    # clinical_phenome = getClinicalPhenome(args)
+    #
+    # # Get gene sume score
+    # # Overlap the gene list (gene_score_result_r) with the snv, indel list generated as part of Intervar
+    # gene_score_result_r = calculateGeneSumScore(args, hpo_gene_dict, weightGeneDict, clinical_phenome)
+    #
+    # # Overlap important genes (gene_score_result_r) with all the SNPs and indels
+    # print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting SNPs and indels on ' + args.sampleid + '...')
+    # smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFinalFile, gene_score_result_r, famid)
+    #
+    # # Get differential diagnosis
+    # syndrome_score_result_r = differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenome)
 
-    weightGeneDict = createWeightDict(weights_gene)
-    weightSyndromeDict = createWeightDict(weights_syndrome)
 
-    # Retrieve clinical phenome from the patient
-    clinical_phenome = getClinicalPhenome(args)
+    # If bionano is flagged, check SV from bionano SV calls
+    if args.bionano:
+        bionanoSV(args, famid)
 
-    # Get gene sume score
-    # Overlap the gene list (gene_score_result_r) with the snv, indel list generated as part of Intervar
-    gene_score_result_r = calculateGeneSumScore(args, hpo_gene_dict, weightGeneDict, clinical_phenome)
-
-    # Overlap important genes (gene_score_result_r) with all the SNPs and indels
-    smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFinalFile, gene_score_result_r)
-
-    # Get differential diagnosis
-    syndrome_score_result_r = differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenome)
-
+    # Make 10x SV calls
+    if args.linkedreadSV:
+        linkedreadSV(args)
 
     #normalizeRawScore(args, syndrome_score_result_r, 'syndrome')
 

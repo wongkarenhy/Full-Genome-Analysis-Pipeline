@@ -50,7 +50,7 @@ def queryHPO(args):
             relatives = relatives.union(networkx.ancestors(hpo, query))
             relatives = relatives.union(networkx.descendants(hpo, query))
 
-        with open(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt', 'a') as out:
+        with open(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt', 'w') as out:
 
             for terms in relatives:
 
@@ -73,7 +73,7 @@ def getGeneList(args, relatives):
 
         geneList = geneList.union(set(df[df.HPO_id == hpo]['gene_name'].tolist()))
 
-    with open(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt', 'a') as out:
+    with open(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt', 'w') as out:
 
         for gene in geneList:
 

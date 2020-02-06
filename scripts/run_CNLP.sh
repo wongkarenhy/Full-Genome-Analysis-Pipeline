@@ -42,7 +42,7 @@ cat ${WORKDIR}/results/${SAMPLEID}/${SAMPLEID}_tmp.txt | tr -d '[]"\n' | tr '\' 
 clinphen ${WORKDIR}/results/${SAMPLEID}/${SAMPLEID}.txt | awk -F'\t' '{print $1}' | tail -n +2 > ${WORKDIR}/results/${SAMPLEID}/${SAMPLEID}_hpo_exact.txt
 
 # extract inexact HPO terms                                                                                                                                                                                 
-python3 ${WORKDIR}/scripts/extract_inexact_terms.py -s ${SAMPLEID} -w ${WORKDIR} -d ${DATABASE}
+python3.6 ${WORKDIR}/scripts/extract_inexact_terms.py -s ${SAMPLEID} -w ${WORKDIR} -d ${DATABASE}
 
 # remove intermediate files                                                                                                                                                                                 
 rm ${WORKDIR}/results/${SAMPLEID}/${SAMPLEID}_tmp.txt

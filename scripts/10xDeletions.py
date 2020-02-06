@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/local/bin/python3.6
 
 import pandas as pd
 import os
@@ -10,37 +10,43 @@ import allel
 import argparse
 
 
+
+def read10x(input):
+
+    df = allel.vcf_to_dataframe(input, fields=['variants/CHROM', 'variants/POS', 'variants/ID', 'variants/REF', 'variants/ALT', 'variants/QUAL', 'variants/FILTER_PASS', 'variants/END'])
+    scores_cutoff = np.mean(df.QUAL) - 2*np.std(df.QUAL)
+    df = df.loc[df['FILTER_PASS']==True].loc[df['QUAL']>scores_cutoff]
+
+    return(df)
+
+
+
 def tenxdeletions():
-    parser = argparse.ArgumentParser(description='Sample and Path arguments.')
-    parser.add_argument("-i", "--sampleID", help="Give the sample ID", dest="sampleID", type=str, required=True)
-    parser.add_argument("-s", "--samplepath", help="Give the full path to the sample file", dest="samplepath", type=str, required=True)
-    parser.add_argument("-f", "--fpath", help="Give the full path to the father's file", dest="fpath", type=str, required=True)
-    parser.add_argument("-m", "--mpath", help="Give the full path to the mother's file", dest="mpath", type=str, required=True)
-    parser.add_argument("-r", "--referencepath", help="Give the full path to the reference file", dest="referencepath", type=str, required=True)
-    parser.add_argument("-o", "--outputdirectory", help="Give the directory path for the output file", dest="outputdirectory", type=str, required=True)
-    parser.add_argument("-e", "--exons", help="Give the file with exons intervals, names, and phenotypes here", dest="exons", type=str, required=True)
-    parser.add_argument("-y", "--cytobands", help="Give the BED file with cytoband intervals", dest="cytobands", type=str, required=True)
-    args = parser.parse_args()
-    
-    #load sample data 
-    sample_frame = allel.vcf_to_dataframe(args.samplepath, fields=['variants/CHROM', 'variants/POS', 'variants/ID', 'variants/REF', 'variants/ALT', 'variants/QUAL', 'variants/FILTER_PASS', 'variants/END'])
-    scores_cutoff = np.mean(sample_frame.QUAL) - 2*np.std(sample_frame.QUAL)
-    sample_frame = sample_frame.loc[sample_frame['FILTER_PASS']==True].loc[sample_frame['QUAL']>scores_cutoff]
-    
-    #load parent data 
-    father_frame = allel.vcf_to_dataframe(args.fpath, fields=['variants/CHROM', 'variants/POS', 'variants/ID', 'variants/REF', 'variants/ALT', 'variants/QUAL', 'variants/FILTER_PASS', 'variants/END'])
-    scores_cutoff = np.mean(father_frame.QUAL) - 2*np.std(father_frame.QUAL)
-    father_frame = father_frame.loc[father_frame['FILTER_PASS']==True].loc[father_frame['QUAL']>scores_cutoff]
-    mother_frame = allel.vcf_to_dataframe(args.mpath, fields=['variants/CHROM', 'variants/POS', 'variants/ID', 'variants/REF', 'variants/ALT', 'variants/QUAL', 'variants/FILTER_PASS', 'variants/END'])
-    scores_cutoff = np.mean(mother_frame.QUAL) - 2*np.std(mother_frame.QUAL)
-    mother_frame = mother_frame.loc[mother_frame['FILTER_PASS']==True].loc[mother_frame['QUAL']>scores_cutoff] 
+
+    #load sample data
+    sample_frame = read10x(args.samplepath)
+    # sample_frame = allel.vcf_to_dataframe(args.samplepath, fields=['variants/CHROM', 'variants/POS', 'variants/ID', 'variants/REF', 'variants/ALT', 'variants/QUAL', 'variants/FILTER_PASS', 'variants/END'])
+    # scores_cutoff = np.mean(sample_frame.QUAL) - 2*np.std(sample_frame.QUAL)
+    # sample_frame = sample_frame.loc[sample_frame['FILTER_PASS']==True].loc[sample_frame['QUAL']>scores_cutoff]
+
+    #load parent data
+    father_frame = read10x(args.fpath)
+    mother_frame = read10x(args.mpath)
     parent_frame = pd.concat([mother_frame, father_frame])
-    
+    # father_frame = allel.vcf_to_dataframe(args.fpath, fields=['variants/CHROM', 'variants/POS', 'variants/ID', 'variants/REF', 'variants/ALT', 'variants/QUAL', 'variants/FILTER_PASS', 'variants/END'])
+    # scores_cutoff = np.mean(father_frame.QUAL) - 2*np.std(father_frame.QUAL)
+    # father_frame = father_frame.loc[father_frame['FILTER_PASS']==True].loc[father_frame['QUAL']>scores_cutoff]
+    # mother_frame = allel.vcf_to_dataframe(args.mpath, fields=['variants/CHROM', 'variants/POS', 'variants/ID', 'variants/REF', 'variants/ALT', 'variants/QUAL', 'variants/FILTER_PASS', 'variants/END'])
+    # scores_cutoff = np.mean(mother_frame.QUAL) - 2*np.std(mother_frame.QUAL)
+    # mother_frame = mother_frame.loc[mother_frame['FILTER_PASS']==True].loc[mother_frame['QUAL']>scores_cutoff]
+    # parent_frame = pd.concat([mother_frame, father_frame])
+
     #load reference data
-    ref_frame = allel.vcf_to_dataframe(args.referencepath, fields=['variants/CHROM', 'variants/POS', 'variants/ID', 'variants/REF', 'variants/ALT', 'variants/QUAL', 'variants/FILTER_PASS', 'variants/END'])
-    scores_cutoff = np.mean(ref_frame.QUAL) - 2*np.std(ref_frame.QUAL)
-    ref_frame = ref_frame.loc[ref_frame['FILTER_PASS']==True]
-    ref_frame = ref_frame.loc[ref_frame['QUAL']>scores_cutoff]
+    ref_frame = read10x(args.referencepath)
+    # ref_frame = allel.vcf_to_dataframe(args.referencepath, fields=['variants/CHROM', 'variants/POS', 'variants/ID', 'variants/REF', 'variants/ALT', 'variants/QUAL', 'variants/FILTER_PASS', 'variants/END'])
+    # scores_cutoff = np.mean(ref_frame.QUAL) - 2*np.std(ref_frame.QUAL)
+    # ref_frame = ref_frame.loc[ref_frame['FILTER_PASS']==True]
+    # ref_frame = ref_frame.loc[ref_frame['QUAL']>scores_cutoff]
 
     sample_copy, parent_copy, ref_copy = sample_frame.copy(), parent_frame.copy(), ref_frame.copy()
 
@@ -90,4 +96,24 @@ def tenxdeletions():
     cytoband_calls.to_csv(args.outputdirectory+'10xDeletions'+args.sampleID+'cytobands', sep='\t')
     exon_calls.to_csv(args.outputdirectory+'10xDeletions'+args.sampleID+'exons', sep='\t')
 
-tenxdeletions()
+
+
+def main():
+
+    parser = argparse.ArgumentParser(description='Sample and Path arguments.')
+    parser.add_argument("-i", "--sampleID", help="Give the sample ID", dest="sampleID", type=str, required=True)
+    parser.add_argument("-s", "--samplepath", help="Give the full path to the sample file", dest="samplepath", type=str, required=True)
+    parser.add_argument("-f", "--fpath", help="Give the full path to the father's file", dest="fpath", type=str, required=True)
+    parser.add_argument("-m", "--mpath", help="Give the full path to the mother's file", dest="mpath", type=str, required=True)
+    parser.add_argument("-r", "--referencepath", help="Give the full path to the reference file", dest="referencepath", type=str, required=True)
+    parser.add_argument("-o", "--outputdirectory", help="Give the directory path for the output file", dest="outputdirectory", type=str, required=True)
+    parser.add_argument("-e", "--exons", help="Give the file with exons intervals, names, and phenotypes here", dest="exons", type=str, required=True)
+    parser.add_argument("-y", "--cytobands", help="Give the BED file with cytoband intervals", dest="cytobands", type=str, required=True)
+    args = parser.parse_args()
+
+    # Actual function
+    tenxdeletions()
+
+if __name__=="__main__":
+    main()
+

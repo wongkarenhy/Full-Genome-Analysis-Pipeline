@@ -299,6 +299,18 @@ def bionanoSV(args, famid):
     cmd = "python3.6 " + args.workdir + "/scripts/BioNanoInsertions.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed'
     os.system(cmd)
 
+    # Call bionano duplications
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
+        "%d/%m/%Y %H:%M:%S") + ' Detecting bionano duplications on ' + args.sampleid + '...')
+    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoDuplications.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed -y ' + args.workdir + '/cytoband.bed'
+    os.system(cmd)
+
+    # Call bionano inversions
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
+        "%d/%m/%Y %H:%M:%S") + ' Detecting bionano inversions on ' + args.sampleid + '...')
+    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoInversions.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed'
+    os.system(cmd)
+
 
 def linkedreadSV(args, famid):
 
@@ -395,26 +407,26 @@ def main():
     weights_syndrome = "./HPO_weight_syndrome.txt"
     famid = args.sampleid[3:5]
 
-    hpo_gene_dict = createGeneSyndromeDict(hpo_genes_df)
-    hpo_syndrome_dict = createGeneSyndromeDict(hpo_syndromes_df)
-
-    weightGeneDict = createWeightDict(weights_gene)
-    weightSyndromeDict = createWeightDict(weights_syndrome)
-
-    # Retrieve clinical phenome from the patient
-    clinical_phenome = getClinicalPhenome(args)
-
-    # Get gene sume score
-    # Overlap the gene list (gene_score_result_r) with the snv, indel list generated as part of Intervar
-    gene_score_result_r = calculateGeneSumScore(args, hpo_gene_dict, weightGeneDict, clinical_phenome)
-
-    # Overlap important genes (gene_score_result_r) with all the SNPs and indels
-    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting SNPs and indels on ' + args.sampleid + '...')
-    smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFinalFile, gene_score_result_r, famid)
-
-    # Get differential diagnosis
-    syndrome_score_result_r = differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenome)
-
+    # hpo_gene_dict = createGeneSyndromeDict(hpo_genes_df)
+    # hpo_syndrome_dict = createGeneSyndromeDict(hpo_syndromes_df)
+    #
+    # weightGeneDict = createWeightDict(weights_gene)
+    # weightSyndromeDict = createWeightDict(weights_syndrome)
+    #
+    # # Retrieve clinical phenome from the patient
+    # clinical_phenome = getClinicalPhenome(args)
+    #
+    # # Get gene sume score
+    # # Overlap the gene list (gene_score_result_r) with the snv, indel list generated as part of Intervar
+    # gene_score_result_r = calculateGeneSumScore(args, hpo_gene_dict, weightGeneDict, clinical_phenome)
+    #
+    # # Overlap important genes (gene_score_result_r) with all the SNPs and indels
+    # print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting SNPs and indels on ' + args.sampleid + '...')
+    # smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFinalFile, gene_score_result_r, famid)
+    #
+    # # Get differential diagnosis
+    # syndrome_score_result_r = differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenome)
+    #
 
     # If bionano is flagged, check SV from bionano SV calls
     if args.bionano:

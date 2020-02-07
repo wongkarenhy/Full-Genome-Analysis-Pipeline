@@ -7,16 +7,44 @@ from pyranges import PyRanges
 from io import StringIO
 import numpy as np
 import argparse
-from BioNanoTranslocations import readsmap
+
+def readsmap(input, args, sv_type):
+
+    colnames = ['SmapEntryID', 'QryContigID', 'RefcontigID1', 'RefcontigID2', 'QryStartPos', 'QryEndPos', 'RefStartPos',
+                'RefEndPos', 'Confidence', 'Type', 'XmapID1', 'XmapID2', 'LinkID', 'QryStartIdx', 'QryEndIdx',
+                'RefStartIdx', 'RefEndIdx', 'Zygosity', 'Genotype', 'GenotypeGroup', 'RawConfidence',
+                'RawConfidenceLeft', 'RawConfidenceRight', 'RawConfidenceCenter', 'SVsize']
+
+    raw_df = pd.read_csv(input, sep='\t', comment='#', names=colnames, header=None, skiprows=lambda x: x in [0])
+    raw_df = raw_df[['SmapEntryID', 'RefcontigID1', 'RefcontigID2', 'RefStartPos','RefEndPos', 'QryStartPos', 'QryEndPos', 'Confidence', 'Type', 'Zygosity', 'Genotype']]
+    confident_df = raw_df.loc[raw_df['Confidence'] > 0.5] #modulate confidence threshold here
+    confident_df  = confident_df[confident_df['Type']==sv_type]
+
+    return(confident_df)
+
+
+def cytobandOverlap(args, df):
+
+    #describe cytoband overlap
+    cytoband_frame = pr.read_bed(args.cytobands)
+    cytoband_overlap = PyRanges(df).join(cytoband_frame).drop(like="_b")
+    cytoband_calls = cytoband_overlap.df
+    cytoband_calls["Cytoband"] = cytoband_calls[['Chromosome', 'Name']].apply(lambda x: ''.join(x), axis=1)
+    cytoband_calls = cytoband_calls.drop(columns = ['Chromosome', 'Start', 'End', 'Name'])
+
+    return cytoband_calls
+
 
 def deletion(args):
 
     #loadsample
     sample_frame = readsmap(args.samplepath, args, 'deletion')
+    print(sample_frame)
 
     # raw_sf = pd.read_csv(args.samplepath, sep='\t', comment='#', names=colnames, header=None, skiprows=lambda x: x in [0])
     # confident_sf = raw_sf.loc[raw_sf['Confidence'] > args.confidence] #modulate confidence threshold here
     # sample_frame  = confident_sf[confident_sf['Type']=='deletion']
+    print(sample_frame.loc[sample_frame['SmapEntryID']==18576])
 
     #loadparent
     mother_frame = readsmap(args.mpath, args, 'deletion')
@@ -31,18 +59,29 @@ def deletion(args):
 
     # #load reference
     ref_frame = readsmap(args.referencepath, args, 'deletion')
+    # colnames = ['SmapEntryID', 'QryContigID', 'RefcontigID1', 'RefcontigID2', 'QryStartPos', 'QryEndPos', 'RefStartPos',
+    #             'RefEndPos', 'Confidence', 'Type', 'XmapID1', 'XmapID2', 'LinkID', 'QryStartIdx', 'QryEndIdx',
+    #             'RefStartIdx', 'RefEndIdx', 'Zygosity', 'Genotype', 'GenotypeGroup', 'RawConfidence',
+    #             'RawConfidenceLeft', 'RawConfidenceRight', 'RawConfidenceCenter', 'SVsize']
+    #
     # raw_rf = pd.read_csv(args.referencepath, sep='\t', comment='#', names=colnames, header=None, skiprows=lambda x: x in [0])
     # confident_rf = raw_rf.loc[raw_rf['Confidence'] > 0.3]
     # del_confident_rf = confident_rf[confident_rf['Type']=='deletion']
     # ref_frame = del_confident_rf
-    
+    #ref_frame.to_csv(args.outputdirectory + '/' + args.sampleID + '_test_exons.txt', sep='\t', index = False)
+    #print(ref_frame.shape)
+
     sample_copy, parent_copy, ref_copy = sample_frame.copy(), parent_frame.copy(), ref_frame.copy()
 
     for df in [sample_copy, parent_copy, ref_copy]:
         df['Start'], df['End'], df['Chromosome']  = df.RefStartPos, df.RefEndPos, df['RefcontigID1']
 
     #remove anything that overlaps with the reference
+    overlap_frame = []
     overlap_frame = PyRanges(sample_copy).overlap(PyRanges(ref_copy))
+    #print(overlap_frame[overlap_frame.SmapEntryID == 18576])
+
+
 
     if overlap_frame.df.empty:
         filtered_sample_frame = sample_frame
@@ -66,12 +105,14 @@ def deletion(args):
     df = denovo_filtered_sample_frame
     df['Start'], df['End'], df['Chromosome'] = df.RefStartPos, df.RefEndPos, df['RefcontigID1']
     
-    #describe cytoband overlap 
-    cytoband_frame = pr.read_bed(args.cytobands)
-    cytoband_overlap = PyRanges(df).join(cytoband_frame).drop(like="_b")
-    cytoband_calls = cytoband_overlap.df
-    cytoband_calls["Cytoband"] = cytoband_calls[['Chromosome', 'Name']].apply(lambda x: ''.join(x), axis=1)
-    cytoband_calls = cytoband_calls.drop(columns = ['Chromosome', 'Start', 'End', 'Name'])
+    # #describe cytoband overlap
+    # cytoband_frame = pr.read_bed(args.cytobands)
+    # cytoband_overlap = PyRanges(df).join(cytoband_frame).drop(like="_b")
+    # cytoband_calls = cytoband_overlap.df
+    # cytoband_calls["Cytoband"] = cytoband_calls[['Chromosome', 'Name']].apply(lambda x: ''.join(x), axis=1)
+    # cytoband_calls = cytoband_calls.drop(columns = ['Chromosome', 'Start', 'End', 'Name'])
+
+    cytoband_calls = cytobandOverlap(args, df)
 
     #describe exon overlap
     exon_frame = pr.read_bed(args.exons)
@@ -83,6 +124,7 @@ def deletion(args):
 
     cytoband_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNanoDeletions_cytobands.txt', sep='\t', index = False)
     exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNanoDeletions_exons.txt', sep='\t', index = False)
+    #print(exon_calls)
 
 
 def main():
@@ -94,9 +136,10 @@ def main():
     parser.add_argument("-m", "--mpath", help="Give the full path to the mother's file", dest="mpath", type=str, required=True)
     parser.add_argument("-r", "--referencepath", help="Give the full path to the reference file", dest="referencepath", type=str, required=True)
     parser.add_argument("-o", "--outputdirectory", help="Give the directory path for the output file", dest="outputdirectory", type=str, required=True)
-    parser.add_argument("-c", "--confidence", help="Give the confidence level cutoff for the sample here", dest="confidence", type=str, default=0.5)
+    parser.add_argument("-c", "--confidence", help="Give the confidence level cutoff for the sample here", dest="confidence", type=float, default=0.5)
     parser.add_argument("-e", "--exons", help="Give the file with exons intervals, names, and phenotypes here", dest="exons", type=str, required=True)
     parser.add_argument("-y", "--cytobands", help="Give the BED file with cytoband intervals", dest="cytobands", type=str, required=True)
+    parser.add_argument("-g", "--genelist", help="Primary genelist", dest="genelist", type=str)
     args = parser.parse_args()
 
     # Actual function

@@ -1,6 +1,6 @@
 #!/usr/local/bin/python3.6
 
-from BioNanoTranslocations import readsmap
+from BioNanoDeletions import readsmap
 import pandas as pd
 import os
 import pyranges as pr
@@ -92,6 +92,7 @@ def main():
     parser.add_argument("-o", "--outputdirectory", help="Give the directory path for the output file", dest="outputdirectory", type=str, required=True)
     parser.add_argument("-c", "--confidence", help="Give the confidence level cutoff for the sample here", dest="confidence", type=str, default=0.5)
     parser.add_argument("-e", "--exons", help="Give the file with exons intervals, names, and phenotypes here", dest="exons", type=str, required=True)
+    parser.add_argument("-g", "--genelist", help="Primary genelist", dest="genelist", type=str)
     args = parser.parse_args()
 
     # Actual function

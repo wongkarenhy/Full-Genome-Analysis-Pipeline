@@ -7,18 +7,8 @@ from pyranges import PyRanges
 from io import StringIO
 import numpy as np
 import argparse
+from BioNanoDeletions import readsmap
 
-def readsmap(input, args, sv_type):
-
-    colnames = ['SmapEntryID', 'QryContigID', 'RefcontigID1', 'RefcontigID2', 'QryStartPos', 'QryEndPos', 'RefStartPos',
-                'RefEndPos', 'Confidence', 'Type', 'XmapID1', 'XmapID2', 'LinkID', 'QryStartIdx', 'QryEndIdx',
-                'RefStartIdx', 'RefEndIdx', 'Zygosity', 'Genotype', 'GenotypeGroup', 'RawConfidence',
-                'RawConfidenceLeft', 'RawConfidenceRight', 'RawConfidenceCenter', 'SVsize']
-
-    raw_df = pd.read_csv(input, sep='\t', comment='#', names=colnames, header=None, skiprows=lambda x: x in [0])
-    confident_df = raw_df.loc[raw_df['Confidence'] > args.confidence] #modulate confidence threshold here
-    confident_df  = confident_df[confident_df['Type']==sv_type]
-    return(confident_df)
 
 
 def translocation(args):
@@ -68,8 +58,8 @@ def translocation(args):
         sample_frame = exon_start.df.filter(items=['SmapEntryID', 'Name', 'Score']).drop_duplicates().merge(sample_frame, on=['SmapEntryID'], how='right')
         sample_frame['Name2'] = sample_frame['Score2'] = 'None'
     else: 
-        sample_frame = exon_start.df.filter(items=['SmapEntryID', 'Name']).drop_duplicates().merge(sample_frame, on=['SmapEntryID'], how='right')
-        sample_frame = sample_frame.merge(exon_end.df.rename(columns = {'Name':'Name2', 'Score':'Score2'}).filter(items=['SmapEntryID', 'Name']), on=['SmapEntryID'], how='left')
+        sample_frame = exon_start.df.filter(items=['SmapEntryID', 'Name', 'Score']).drop_duplicates().merge(sample_frame, on=['SmapEntryID'], how='right')
+        sample_frame = sample_frame.merge(exon_end.df.rename(columns = {'Name':'Name2', 'Score':'Score2'}).filter(items=['SmapEntryID', 'Name2', 'Score2']), on=['SmapEntryID'], how='left')
     
     #remove anything that overlaps with the reference
     overlap_start = PyRanges(sample_start).overlap(PyRanges(ref_start)) 
@@ -113,6 +103,7 @@ def main():
     parser.add_argument("-o", "--outputdirectory", help="Give the directory path for the output file",dest="outputdirectory", type=str, required=True)
     parser.add_argument("-c", "--confidence", help="Give the confidence level cutoff for the sample here",dest="confidence", type=str, default=0.5)
     parser.add_argument("-e", "--exons", help="Give the BED file with exons intervals, names, and phenotypes here",dest="exons", type=str, required=True)
+    parser.add_argument("-g", "--genelist", help="Primary genelist", dest="genelist", type=str)
     args = parser.parse_args()
 
 

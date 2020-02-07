@@ -1,5 +1,6 @@
 #!/usr/local/bin/python3.6
 
+from BioNanoTranslocations import readsmap
 import pandas as pd
 import os
 import pyranges as pr
@@ -7,10 +8,10 @@ from pyranges import PyRanges
 from io import StringIO
 import numpy as np
 import argparse
-from BioNanoTranslocations import readsmap
 
 
-def insertion():
+
+def insertion(args):
 
     #loadsample
     sample_frame = readsmap(args.samplepath, args, 'insertion')
@@ -72,11 +73,11 @@ def insertion():
     exon_frame = pr.read_bed(args.exons)
     exon_overlap = PyRanges(df).join(exon_frame).drop(like="_b")
     if exon_overlap.df.empty:
-        exon_calls = pd.Dataframe()
+        exon_calls = pd.DataFrame()
     else:
         exon_calls = exon_overlap.df.drop(columns = ['Chromosome', 'Start', 'End']).rename(columns = {'Name':'Gene', 'Score':'Phenotype'}).drop_duplicates()
 
-        exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNanoInsertions.txt', sep='\t', index = False)
+    exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNanoInsertions.txt', sep='\t', index = False)
 
 
 def main():

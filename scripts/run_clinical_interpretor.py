@@ -85,7 +85,8 @@ def getParentsGeno(filtered_intervar, inheritance_mode, ov_allele):
     for idx, row in enumerate(filtered_intervar.itertuples(index=False)):
         if int(getattr(row, 'Start')) in set(ov_allele['Start']):
             parents_geno = ov_allele.loc[ov_allele['Start']==getattr(row,'Start'),'geno'].item()
-            filtered_intervar.set_value(idx, inheritance_mode, parents_geno)
+            filtered_intervar.loc[idx, inheritance_mode] = parents_geno
+            #filtered_intervar.set_value(idx, inheritance_mode, parents_geno)
 
     return(filtered_intervar)
 
@@ -219,7 +220,7 @@ def parseSyndromeNameToCytoband(df):
     for index, row in df.iterrows():
         m = re.search(regex, str(row))
         if m is not None:
-            df.ix[index, 'cytoband'] = m.group(1)
+            df.loc[index, 'cytoband'] = m.group(1)
 
     return(df)
 
@@ -251,7 +252,7 @@ def normalizeRawScore(args, raw_score, mode):
     return(raw_score)
 
 
-def compileControlFiles(control_files_path):
+def compileControlFiles(control_files_path, famid):
 
     full_paths = []
     for path in control_files_path:
@@ -270,52 +271,77 @@ def bionanoSV(args, famid):
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
         "%d/%m/%Y %H:%M:%S") + ' Generating bionano control file...')
     control_files_path = [args.workdir + "/bionano_sv/controls/DLE", args.workdir + "/bionano_sv/controls/BspQI", args.workdir + "/bionano_sv/cases/DLE", args.workdir + "/bionano_sv/cases/BspQI"]
-    full_paths = compileControlFiles(control_files_path)
+    full_paths = compileControlFiles(control_files_path, famid)
 
     ## Write an empty file
-    with open(args.workdir + "/results/" + args.sampleid + "/bionano_control.smap",
-              'w'):  # So it will overwrite the old file
+    with open(args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz", 'w'):  # So it will overwrite the old file
         pass
 
     for path in full_paths:
-        cmd = "cat " + path + "/exp_refineFinal1_merged_filter.smap >> " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap"
+        cmd = "cat " + path + "/exp_refineFinal1_merged_filter.smap | gzip >> " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz"
         os.system(cmd)
 
     # Call bionano translocation
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
         "%d/%m/%Y %H:%M:%S") + ' Detecting bionano translocations on ' + args.sampleid + '...')
-    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoTranslocations.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed'
+    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoTranslocations.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed'
     os.system(cmd)
 
     # Call bionano deletion
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
         "%d/%m/%Y %H:%M:%S") + ' Detecting bionano deletions on ' + args.sampleid + '...')
-    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoDeletions.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed -y ' + args.workdir + '/cytoband.bed'
+    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoDeletions.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed -y ' + args.workdir + '/cytoband.bed'
     os.system(cmd)
 
     # Call bionano insertion
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
         "%d/%m/%Y %H:%M:%S") + ' Detecting bionano insertions on ' + args.sampleid + '...')
-    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoInsertions.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed'
+    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoInsertions.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed'
     os.system(cmd)
 
 
-def linkedreadSV():
+def linkedreadSV(args, famid):
 
     # Need to generate a reference file for all the medium size deletions
-    control_files_path = [args.workdir + "/linkedRead_sv/controls", args.workdir + "/bionano_sv/linkedRead_sv", args.workdir + "/linkedRead_sv/cases", args.workdir + "/bionano_sv/linkedRead_sv"]
-    full_paths = compileControlFiles(control_files_path)
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Generating linked-reads control files...')
+    control_files_path = [args.workdir + "/linkedRead_sv/controls", args.workdir + "/linkedRead_sv/cases"]
+    full_paths = compileControlFiles(control_files_path, famid)
     ## Write an empty file
-    with open(args.workdir + "/results/" + args.sampleid + "/10x_del_control.smap",'w'):  # So it will overwrite the old file
+    with open(args.workdir + "/results/" + args.sampleid + "/10x_del_control.vcf.gz",'w'):  # So it will overwrite the old file
         pass
 
     for path in full_paths:
-        cmd = "cat " + path + "/dels.vcf.gz >> " + args.workdir + "/results/" + args.sampleid + "/10x_del_control.vcf"
+        cmd = "zcat " + path + "/dels.vcf.gz | gzip >> " + args.workdir + "/results/" + args.sampleid + "/10x_del_control.vcf.gz"
         os.system(cmd)
 
 
     # Need to generate another reference file for large SVs
+    with open(args.workdir + "/results/" + args.sampleid + "/10x_largeSV_control.vcf.gz",'w'):  # So it will overwrite the old file
+        pass
 
+    for path in full_paths:
+        cmd = "zcat " + path + "/large_svs.vcf.gz | gzip >> " + args.workdir + "/results/" + args.sampleid + "/10x_largeSV_control.vcf.gz"
+        os.system(cmd)
+
+    # Call medium size deletions
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads medium deletions on ' + args.sampleid + '...')
+    cmd = "python3.6 " + args.workdir + "/scripts/tenxDeletions.py -i " + args.sampleid + " -s " + args.workdir + "/linkedRead_sv/cases/" + args.sampleid + "/dels.vcf.gz -f " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "01/dels.vcf.gz -m " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "02/dels.vcf.gz -r " + args.workdir + "/results/" + args.sampleid + "/10x_del_control.vcf.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed -y ' + args.workdir + '/cytoband.bed'
+    os.system(cmd)
+
+    # Call large deletions
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large deletions on ' + args.sampleid + '...')
+    cmd = "python3.6 " + args.workdir + "/scripts/tenxLargeSvDeletions.py -i " + args.sampleid + " -s " + args.workdir + "/linkedRead_sv/cases/" + args.sampleid + "/large_svs.vcf.gz -f " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "01/large_svs.vcf.gz -m " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "02/large_svs.vcf.gz -r " + args.workdir + "/results/" + args.sampleid + "/10x_largeSV_control.vcf.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed -y ' + args.workdir + '/cytoband.bed'
+    os.system(cmd)
+
+    # Call large duplications
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large duplications on ' + args.sampleid + '...')
+    cmd = "python3.6 " + args.workdir + "/scripts/tenxLargeSvDuplications.py -i " + args.sampleid + " -s " + args.workdir + "/linkedRead_sv/cases/" + args.sampleid + "/large_svs.vcf.gz -f " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "01/large_svs.vcf.gz -m " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "02/large_svs.vcf.gz -r " + args.workdir + "/results/" + args.sampleid + "/10x_largeSV_control.vcf.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed -y ' + args.workdir + '/cytoband.bed'
+    os.system(cmd)
+
+    # Call large inversions
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large inversions on ' + args.sampleid + '...')
+    cmd = "python3.6 " + args.workdir + "/scripts/tenxLargeSvInversions.py -i " + args.sampleid + " -s " + args.workdir + "/linkedRead_sv/cases/" + args.sampleid + "/large_svs.vcf.gz -f " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "01/large_svs.vcf.gz -m " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "02/large_svs.vcf.gz -r " + args.workdir + "/results/" + args.sampleid + "/10x_largeSV_control.vcf.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed'
+    os.system(cmd)
 
 
 def main():
@@ -369,25 +395,25 @@ def main():
     weights_syndrome = "./HPO_weight_syndrome.txt"
     famid = args.sampleid[3:5]
 
-    # hpo_gene_dict = createGeneSyndromeDict(hpo_genes_df)
-    # hpo_syndrome_dict = createGeneSyndromeDict(hpo_syndromes_df)
-    #
-    # weightGeneDict = createWeightDict(weights_gene)
-    # weightSyndromeDict = createWeightDict(weights_syndrome)
-    #
-    # # Retrieve clinical phenome from the patient
-    # clinical_phenome = getClinicalPhenome(args)
-    #
-    # # Get gene sume score
-    # # Overlap the gene list (gene_score_result_r) with the snv, indel list generated as part of Intervar
-    # gene_score_result_r = calculateGeneSumScore(args, hpo_gene_dict, weightGeneDict, clinical_phenome)
-    #
-    # # Overlap important genes (gene_score_result_r) with all the SNPs and indels
-    # print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting SNPs and indels on ' + args.sampleid + '...')
-    # smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFinalFile, gene_score_result_r, famid)
-    #
-    # # Get differential diagnosis
-    # syndrome_score_result_r = differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenome)
+    hpo_gene_dict = createGeneSyndromeDict(hpo_genes_df)
+    hpo_syndrome_dict = createGeneSyndromeDict(hpo_syndromes_df)
+
+    weightGeneDict = createWeightDict(weights_gene)
+    weightSyndromeDict = createWeightDict(weights_syndrome)
+
+    # Retrieve clinical phenome from the patient
+    clinical_phenome = getClinicalPhenome(args)
+
+    # Get gene sume score
+    # Overlap the gene list (gene_score_result_r) with the snv, indel list generated as part of Intervar
+    gene_score_result_r = calculateGeneSumScore(args, hpo_gene_dict, weightGeneDict, clinical_phenome)
+
+    # Overlap important genes (gene_score_result_r) with all the SNPs and indels
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting SNPs and indels on ' + args.sampleid + '...')
+    smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFinalFile, gene_score_result_r, famid)
+
+    # Get differential diagnosis
+    syndrome_score_result_r = differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenome)
 
 
     # If bionano is flagged, check SV from bionano SV calls
@@ -396,7 +422,7 @@ def main():
 
     # Make 10x SV calls
     if args.linkedreadSV:
-        linkedreadSV(args)
+        linkedreadSV(args, famid)
 
     #normalizeRawScore(args, syndrome_score_result_r, 'syndrome')
 

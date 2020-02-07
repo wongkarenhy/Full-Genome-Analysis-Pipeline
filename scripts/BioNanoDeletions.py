@@ -77,7 +77,7 @@ def deletion(args):
     exon_frame = pr.read_bed(args.exons)
     exon_overlap = PyRanges(df).join(exon_frame).drop(like="_b")
     if exon_overlap.df.empty:
-        exon_calls = pd.Dataframe()
+        exon_calls = pd.DataFrame()
     else:
         exon_calls = exon_overlap.df.drop(columns = ['Chromosome', 'Start', 'End']).rename(columns = {'Name':'Gene', 'Score':'Phenotype'}).drop_duplicates()
 

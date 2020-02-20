@@ -1,4 +1,4 @@
-#!/usr/local/bin/python3.6
+#!/usr/bin/env python3.6
 
 import pandas as pd
 from collections import defaultdict, Counter
@@ -8,6 +8,18 @@ import os
 import re
 import numpy as np
 from datetime import datetime
+from itertools import chain
+from pyranges import PyRanges
+from SV_modules import *
+pd.set_option('display.max_columns', None)
+pd.set_option('display.expand_frame_repr', False)
+pd.set_option('max_colwidth', None)
+
+
+class Namespace:
+    def __init__(self, **kwargs):
+        self.__dict__.update(kwargs)
+
 
 
 def createGeneSyndromeDict(database_df):
@@ -183,7 +195,7 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
 
 
 
-def differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenome):
+def differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenome, args, cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, cyto_BN_del, cyto_BN_dup):
 
     syndrome_score_result = pd.DataFrame(columns=['syndrome', 'score'])
 
@@ -204,16 +216,35 @@ def differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenom
 
     syndrome_score_result_r = syndrome_score_result.sort_values(by='score', ascending=False)
     syndrome_score_result_r['syndrome'] = syndrome_score_result_r['syndrome'].str.upper()
-    #print(syndrome_score_result_r)
+
     # Specifically look for deletion/duplication syndrome
-    delDupSyndrome(syndrome_score_result_r)
+    delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, cyto_BN_del, cyto_BN_dup)
 
     return(syndrome_score_result_r)
 
 
 
 
-def parseSyndromeNameToCytoband(df):
+def findGenomicLocation(cytoband_key, cytobandDict):
+
+    keys = [key for key in cytobandDict if key.startswith(cytoband_key)]
+    genomic_coords_list = []
+    for key in keys:
+        genomic_coords_list.append(cytobandDict[key].split('-'))
+
+    genomic_coords_list = list(chain.from_iterable(genomic_coords_list))
+    min_coords = min(genomic_coords_list)
+    max_coords = max(genomic_coords_list)
+
+    genomic_range = str(min_coords) + '-' + str(max_coords)
+
+    return genomic_range
+
+
+
+
+
+def parseSyndromeNameToCytoband(df, cytobandDict):
 
     regex = r'([0-9XY]{1,2}[PQ]{1}[\w\\.\\-]{1,10}[\s$])'
 
@@ -222,11 +253,71 @@ def parseSyndromeNameToCytoband(df):
         if m is not None:
             df.loc[index, 'cytoband'] = m.group(1)
 
-    return(df)
+    df.dropna(subset=['cytoband'], inplace=True)
+    df['cytoband'] = df['cytoband'].str.lower()
+    df['cytoband'] = df['cytoband'].str.replace('x', 'X')
+    df[['Chromosome', 'discard']] = df.cytoband.str.split('p|q', 1, expand=True)
+    df = df.drop('discard', axis=1)
+    df[['cytoband_start', 'cytoband_stop']] = df.cytoband.str.split('-', expand=True)
+    df['arm'] = np.where(df['cytoband_start'].str.contains('p'), 'p', 'q')
+
+
+    for idx, row in df.iterrows():
+
+        cytoband_start_key = row['cytoband_start'].replace(" ","")
+        if cytoband_start_key in cytobandDict:
+            coords_start = cytobandDict[cytoband_start_key]
+
+        else:
+            genomic_range = findGenomicLocation(cytoband_start_key, cytobandDict)
+            coords_start = genomic_range
+
+
+        if row['cytoband_stop'] is not None: # Fix cytoband_stop column for quick cytobandDict lookup
+            print(type(row['cytoband_stop']))
+            current_chr = np.where(('p' in str(row['cytoband_stop'])) or ('q' in str(row['cytoband_stop'])), str(row['Chromosome']), str(row['Chromosome']) + str(row['arm']))
+            edited_cytoband_stop = str(current_chr) + row['cytoband_stop']
+            edited_cytoband_stop = edited_cytoband_stop.replace(" ", "")
+            df.at[idx, 'cytoband_stop'] = edited_cytoband_stop
+
+            if edited_cytoband_stop in cytobandDict:
+                coords_stop = cytobandDict[edited_cytoband_stop]
+            else:
+                genomic_range = findGenomicLocation(edited_cytoband_stop, cytobandDict)
+                coords_stop = genomic_range
+
+            # New coords will be the the beginning of coords_start and end of coords_stop
+            df.at[idx, 'Start'] = coords_start.split('-')[0]
+            df.at[idx, 'End'] = coords_stop.split('-')[1]
+
+        else:
+            df.at[idx, 'Start'] = coords_start.split('-')[0]
+            df.at[idx, 'End'] = coords_start.split('-')[1]
+
+    return df
 
 
 
-def delDupSyndrome(syndrome_score_result_r):
+
+def createCytobandDict(args):
+
+    try:
+        cyto = pd.read_csv(args.workdir + '/cytoband.txt', sep = '\t', names=["cytoband", "coords"], comment = '#')
+    except OSError:
+        print("Count not open/read the input file:" + args.workdir + '/cytoband.txt')
+        sys.exit()
+
+    cytobandDict = dict(zip(cyto.cytoband, cyto.coords))
+
+    return(cytobandDict)
+
+
+
+
+def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, cyto_BN_del, cyto_BN_dup):
+
+    # Create cytoband <-> genomic coordinates dict
+    cytobandDict = createCytobandDict(args)
 
     del_cond = syndrome_score_result_r['syndrome'].str.contains('DELETION')
     dup_cond = syndrome_score_result_r['syndrome'].str.contains('DUPLICATION')
@@ -234,10 +325,33 @@ def delDupSyndrome(syndrome_score_result_r):
     del_df = syndrome_score_result_r[del_cond]
     dup_df = syndrome_score_result_r[dup_cond]
 
-    del_df = parseSyndromeNameToCytoband(del_df)
-    dup_df = parseSyndromeNameToCytoband(dup_df)
+    del_df = parseSyndromeNameToCytoband(del_df, cytobandDict)
+    dup_df = parseSyndromeNameToCytoband(dup_df, cytobandDict)
 
-    # Overlap with Michelle's Del/Dup datasets
+
+    if args.bionano:
+        # Overlap with del/dup syndromes
+        if cyto_BN_dup is not None: # It can be None because old Bionano pipeline doesn't call duplications...
+            overlap_dup_BN = PyRanges(dup_df).overlap(PyRanges(cyto_BN_dup))
+            overlap_dup_BN.df.sort_values(by='score', ascending=False).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_duplication_syndrome.txt', sep='\t', index=False)
+        else:
+            pd.DataFrame().to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_duplication_syndrome.txt', sep='\t', index=False)
+
+
+        overlap_del_BN = PyRanges(del_df).overlap(PyRanges(cyto_BN_del))
+        overlap_del_BN.df.sort_values(by='score', ascending=False).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_deletion_syndrome.txt', sep='\t', index=False)
+
+    if args.linkedreadSV:
+        overlap_dup_largeSV_10x = PyRanges(dup_df).overlap(PyRanges(cyto_10x_dup_largeSV))
+        overlap_dup_largeSV_10x.df.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_duplication_largeSV_syndrome.txt', sep='\t', index=False)
+
+        overlap_del_largeSV_10x = PyRanges(del_df).overlap(PyRanges(cyto_10x_del_largeSV))
+        overlap_del_largeSV_10x.df.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_deletion_largeSV_syndrome.txt', sep='\t', index=False)
+
+        overlap_del_10x = PyRanges(del_df).overlap(PyRanges(cyto_10x_del))
+        overlap_del_10x.df.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_deletion_syndrome.txt', sep='\t', index=False)
+
+
 
 
 
@@ -250,6 +364,7 @@ def normalizeRawScore(args, raw_score, mode):
     #pd.DataFrame(raw_score).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_' + mode + '_score_result.txt', index=False, sep='\t', header=True)
 
     return(raw_score)
+
 
 
 def compileControlFiles(control_files_path, famid):
@@ -265,11 +380,13 @@ def compileControlFiles(control_files_path, famid):
 
 
 
-def bionanoSV(args, famid):
+
+
+
+def bionanoSV(args, famid, gene_score_result_r):
 
     # Generate controls files (1KGP BN samples + CIAPM parents (excluding  parents of the proband of interest)
-    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
-        "%d/%m/%Y %H:%M:%S") + ' Generating bionano control file...')
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Generating bionano control file...')
     control_files_path = [args.workdir + "/bionano_sv/controls/DLE", args.workdir + "/bionano_sv/controls/BspQI", args.workdir + "/bionano_sv/cases/DLE", args.workdir + "/bionano_sv/cases/BspQI"]
     full_paths = compileControlFiles(control_files_path, famid)
 
@@ -281,38 +398,43 @@ def bionanoSV(args, famid):
         cmd = "cat " + path + "/exp_refineFinal1_merged_filter.smap | gzip >> " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz"
         os.system(cmd)
 
+    # Create a BN arg object
+    BN_args = Namespace(sampleID = args.sampleid,
+                        samplepath = args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap",
+                        fpath = args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap",
+                        mpath = args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap",
+                        referencepath = args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz",
+                        outputdirectory = args.workdir + '/results/' + args.sampleid,
+                        exons = args.workdir + '/annotatedexonsphenotypes.bed',
+                        genelist = gene_score_result_r)
+
+
     # Call bionano translocation
-    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
-        "%d/%m/%Y %H:%M:%S") + ' Detecting bionano translocations on ' + args.sampleid + '...')
-    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoTranslocations.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed'
-    os.system(cmd)
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting bionano translocations on ' + args.sampleid + '...')
+    BN_translocation(BN_args)
 
     # Call bionano deletion
-    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
-        "%d/%m/%Y %H:%M:%S") + ' Detecting bionano deletions on ' + args.sampleid + '...')
-    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoDeletions.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed -y ' + args.workdir + '/cytoband.bed'
-    os.system(cmd)
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting bionano deletions on ' + args.sampleid + '...')
+    cyto_BN_del = BN_deletion(BN_args)
 
     # Call bionano insertion
-    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
-        "%d/%m/%Y %H:%M:%S") + ' Detecting bionano insertions on ' + args.sampleid + '...')
-    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoInsertions.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed'
-    os.system(cmd)
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting bionano insertions on ' + args.sampleid + '...')
+    BN_insertion(BN_args)
 
     # Call bionano duplications
-    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
-        "%d/%m/%Y %H:%M:%S") + ' Detecting bionano duplications on ' + args.sampleid + '...')
-    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoDuplications.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed -y ' + args.workdir + '/cytoband.bed'
-    os.system(cmd)
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting bionano duplications on ' + args.sampleid + '...')
+    cyto_BN_dup = BN_duplication(BN_args)
 
     # Call bionano inversions
-    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime(
-        "%d/%m/%Y %H:%M:%S") + ' Detecting bionano inversions on ' + args.sampleid + '...')
-    cmd = "python3.6 " + args.workdir + "/scripts/BioNanoInversions.py -i " + args.sampleid + " -s " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap -f " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap -m " + args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap -r " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed'
-    os.system(cmd)
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting bionano inversions on ' + args.sampleid + '...')
+    BN_inversion(BN_args)
+
+    return cyto_BN_del, cyto_BN_dup
 
 
-def linkedreadSV(args, famid):
+
+
+def linkedreadSV(args, famid, gene_score_result_r):
 
     # Need to generate a reference file for all the medium size deletions
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Generating linked-reads control files...')
@@ -335,25 +457,43 @@ def linkedreadSV(args, famid):
         cmd = "zcat " + path + "/large_svs.vcf.gz | gzip >> " + args.workdir + "/results/" + args.sampleid + "/10x_largeSV_control.vcf.gz"
         os.system(cmd)
 
+    tenx_args_del = Namespace(sampleID = args.sampleid,
+                        samplepath = args.workdir + "/linkedRead_sv/cases/" + args.sampleid + "/dels.vcf.gz",
+                        fpath = args.workdir + "/linkedRead_sv/cases/BC0" + famid + "01/dels.vcf.gz",
+                        mpath = args.workdir + "/linkedRead_sv/cases/BC0" + famid + "02/dels.vcf.gz",
+                        referencepath = args.workdir + "/results/" + args.sampleid + "/10x_del_control.vcf.gz",
+                        outputdirectory = args.workdir + '/results/' + args.sampleid,
+                        exons = args.workdir + '/annotatedexonsphenotypes.bed',
+                        genelist = gene_score_result_r)
+
+    tenx_args_largeSV = Namespace(sampleID = args.sampleid,
+                        samplepath = args.workdir + "/linkedRead_sv/cases/" + args.sampleid + "/large_svs.vcf.gz",
+                        fpath = args.workdir + "/linkedRead_sv/cases/BC0" + famid + "01/large_svs.vcf.gz",
+                        mpath = args.workdir + "/linkedRead_sv/cases/BC0" + famid + "02/large_svs.vcf.gz",
+                        referencepath = args.workdir + "/results/" + args.sampleid + "/10x_largeSV_control.vcf.gz",
+                        outputdirectory = args.workdir + '/results/' + args.sampleid,
+                        exons = args.workdir + '/annotatedexonsphenotypes.bed',
+                        genelist = gene_score_result_r)
+
+
     # Call medium size deletions
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads medium deletions on ' + args.sampleid + '...')
-    cmd = "python3.6 " + args.workdir + "/scripts/tenxDeletions.py -i " + args.sampleid + " -s " + args.workdir + "/linkedRead_sv/cases/" + args.sampleid + "/dels.vcf.gz -f " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "01/dels.vcf.gz -m " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "02/dels.vcf.gz -r " + args.workdir + "/results/" + args.sampleid + "/10x_del_control.vcf.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed -y ' + args.workdir + '/cytoband.bed'
-    os.system(cmd)
+    cyto_10x_del = tenxdeletions(tenx_args_del)
 
     # Call large deletions
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large deletions on ' + args.sampleid + '...')
-    cmd = "python3.6 " + args.workdir + "/scripts/tenxLargeSvDeletions.py -i " + args.sampleid + " -s " + args.workdir + "/linkedRead_sv/cases/" + args.sampleid + "/large_svs.vcf.gz -f " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "01/large_svs.vcf.gz -m " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "02/large_svs.vcf.gz -r " + args.workdir + "/results/" + args.sampleid + "/10x_largeSV_control.vcf.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed -y ' + args.workdir + '/cytoband.bed'
-    os.system(cmd)
+    cyto_10x_del_largeSV = tenxlargesvdeletions(tenx_args_largeSV)
 
     # Call large duplications
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large duplications on ' + args.sampleid + '...')
-    cmd = "python3.6 " + args.workdir + "/scripts/tenxLargeSvDuplications.py -i " + args.sampleid + " -s " + args.workdir + "/linkedRead_sv/cases/" + args.sampleid + "/large_svs.vcf.gz -f " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "01/large_svs.vcf.gz -m " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "02/large_svs.vcf.gz -r " + args.workdir + "/results/" + args.sampleid + "/10x_largeSV_control.vcf.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed -y ' + args.workdir + '/cytoband.bed'
-    os.system(cmd)
+    cyto_10x_dup_largeSV = tenxlargesvduplications(tenx_args_largeSV)
 
     # Call large inversions
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large inversions on ' + args.sampleid + '...')
-    cmd = "python3.6 " + args.workdir + "/scripts/tenxLargeSvInversions.py -i " + args.sampleid + " -s " + args.workdir + "/linkedRead_sv/cases/" + args.sampleid + "/large_svs.vcf.gz -f " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "01/large_svs.vcf.gz -m " + args.workdir + "/linkedRead_sv/cases/BC0" + famid + "02/large_svs.vcf.gz -r " + args.workdir + "/results/" + args.sampleid + "/10x_largeSV_control.vcf.gz -o " + args.workdir + '/results/' + args.sampleid + ' -e ' + args.workdir + '/annotatedexonsphenotypes.bed'
-    os.system(cmd)
+    tenxlargesvinversions(tenx_args_largeSV)
+
+    return cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV
+
 
 
 def main():
@@ -367,7 +507,6 @@ def main():
     parser.add_argument("-b", "--bionano", help="Set this flag to evaluate bionano SVs.", dest="bionano", action='store_true')
     parser.add_argument("-l", "--linkedreadSV", help="Set this flag to evaluate linkedread SVs.", dest="linkedreadSV", action='store_true')
     parser.add_argument("-e", "--enzyme", help="Bionano enzyme used (BspQI or DLE). Only set this flag if -b is set", dest="enzyme", type=str)
-
     args = parser.parse_args()
 
     # Change work dir
@@ -407,37 +546,49 @@ def main():
     weights_syndrome = "./HPO_weight_syndrome.txt"
     famid = args.sampleid[3:5]
 
-    # hpo_gene_dict = createGeneSyndromeDict(hpo_genes_df)
-    # hpo_syndrome_dict = createGeneSyndromeDict(hpo_syndromes_df)
-    #
-    # weightGeneDict = createWeightDict(weights_gene)
-    # weightSyndromeDict = createWeightDict(weights_syndrome)
-    #
-    # # Retrieve clinical phenome from the patient
-    # clinical_phenome = getClinicalPhenome(args)
-    #
-    # # Get gene sume score
-    # # Overlap the gene list (gene_score_result_r) with the snv, indel list generated as part of Intervar
-    # gene_score_result_r = calculateGeneSumScore(args, hpo_gene_dict, weightGeneDict, clinical_phenome)
-    #
+    hpo_gene_dict = createGeneSyndromeDict(hpo_genes_df)
+    hpo_syndrome_dict = createGeneSyndromeDict(hpo_syndromes_df)
+
+    weightGeneDict = createWeightDict(weights_gene)
+    weightSyndromeDict = createWeightDict(weights_syndrome)
+
+    # Retrieve clinical phenome from the patient
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Analyzing the clinical phenome for ' + args.sampleid + '...')
+    clinical_phenome = getClinicalPhenome(args)
+
+    # Get gene sume score
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Generating a clinically relevant primary gene list for ' + args.sampleid + '...')
+    gene_score_result_r = calculateGeneSumScore(args, hpo_gene_dict, weightGeneDict, clinical_phenome)
+
     # # Overlap important genes (gene_score_result_r) with all the SNPs and indels
     # print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting SNPs and indels on ' + args.sampleid + '...')
     # smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFinalFile, gene_score_result_r, famid)
-    #
-    # # Get differential diagnosis
-    # syndrome_score_result_r = differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenome)
-    #
+
 
     # If bionano is flagged, check SV from bionano SV calls
     if args.bionano:
-        bionanoSV(args, famid)
 
-    # Make 10x SV calls
+        if not ((args.enzyme == 'DLE') or (args.enzyme == 'BspQI')):
+            raise Exception("Enzyme flag not set correctly! Either DLE or BspQI must be specified when using -b.")
+
+        # Call all SVs using bionano
+        cyto_BN_del, cyto_BN_dup = bionanoSV(args, famid, gene_score_result_r)
+
+    #Make 10x SV calls
     if args.linkedreadSV:
-        linkedreadSV(args, famid)
+        cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV = linkedreadSV(args, famid, gene_score_result_r)
 
-    #normalizeRawScore(args, syndrome_score_result_r, 'syndrome')
+    # Get differential diagnosis
+    if args.bionano or args.linkedreadSV:
+        if args.bionano and not args.linkedreadSV:
+            cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV = None, None, None
+        elif args.linkedreadSV and not args.bionano:
+            cyto_BN_del, cyto_BN_dup = None, None
 
+        syndrome_score_result_r = differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenome, args, cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, cyto_BN_del, cyto_BN_dup)
+    # normalizeRawScore(args, syndrome_score_result_r, 'syndrome')
+
+    print("Pipeline finished successfully!")
 
 
 if __name__=="__main__":

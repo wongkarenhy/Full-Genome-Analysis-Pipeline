@@ -51,9 +51,9 @@ def tenxlargesvdeletions(args):
     #describe exon overlap
     exon_calls = exonOverlap(args, df)
 
-    exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_10xLargeSVDeletions_exons.txt', sep='\t', index = False)
+    exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_10x_deletions_largeSV_exons.txt', sep='\t', index = False)
 
-    return df
+    return df, exon_calls
 
 def main():
 

@@ -38,13 +38,16 @@ def tenxlargesvinversions(args):
     if exon_start.df.empty and exon_end.df.empty:
         sample_frame['Name'] = sample_frame['Name2'] = sample_frame['Score'] = sample_frame['Score2'] ='None' 
     elif exon_start.df.empty:
-        sample_frame = exon_end.df.rename(columns = {'Name':'Name2', 'Score':'Score2'}).filter(items=['ID', 'Name']).drop_duplicates().merge(sample_frame, on=['ID'], how='right')
+        sample_frame = sample_frame.merge(exon_end.df.rename(columns={'Name': 'Name2', 'Score': 'Score2'}).filter(items=['ID', 'Name']).drop_duplicates(), on='ID', how="left")
+        #sample_frame = exon_end.df.rename(columns = {'Name':'Name2', 'Score':'Score2'}).filter(items=['ID', 'Name']).drop_duplicates().merge(sample_frame, on=['ID'], how='right')
         sample_frame['Name'] = sample_frame['Score'] = 'None'
-    elif exon_end.df.empty: 
-        sample_frame = exon_start.df.filter(items=['ID', 'Name', 'Score']).drop_duplicates().merge(sample_frame, on=['ID'], how='right')
+    elif exon_end.df.empty:
+        sample_frame = sample_frame.merge(exon_start.df.filter(items=['ID', 'Name', 'Score']).drop_duplicates(), on='ID', how='left')
+        #sample_frame = exon_start.df.filter(items=['ID', 'Name', 'Score']).drop_duplicates().merge(sample_frame, on=['ID'], how='right')
         sample_frame['Name2'] = sample_frame['Score2'] = 'None'
     else: 
-        sample_frame = exon_start.df.filter(items=['ID', 'Name', 'Score']).drop_duplicates().merge(sample_frame, on=['ID'], how='right')
+        sample_frame = sample_frame.merge(exon_start.df.filter(items=['ID', 'Name', 'Score']).drop_duplicates(), on='ID', how='left')
+        #sample_frame = exon_start.df.filter(items=['ID', 'Name', 'Score']).drop_duplicates().merge(sample_frame, on=['ID'], how='right')
         sample_frame = sample_frame.merge(exon_end.df.rename(columns={'Name': 'Name2', 'Score': 'Score2'}).filter(items=['ID', 'Name2', 'Score2']),on=['ID'], how='left')
 
     #remove anything that overlaps with the reference
@@ -86,7 +89,9 @@ def tenxlargesvinversions(args):
         calls = filtered_sample_frame.drop(columns = ['Chromosome', 'Start', 'End']).rename(columns = {'Score':'Phenotype', 'Score2':'Phenotype2'}).drop_duplicates()
 
     # Write final output
-    calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_10xLargeSVInversions_exons.txt', sep='\t', index = False)
+    cols = ['Name', 'Name2', 'Phenotype', 'Phenotype2', 'Found_in_Father', 'CHROM' ,'POS' ,'ID' ,'REF', 'ALT_1', 'ALT_2', 'ALT_3', 'QUAL', 'FILTER_PASS', 'END', 'Found_in_Mother']
+    calls = calls[cols]
+    calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_10x_inversions_largeSV_exons.txt', sep='\t', index = False)
 
 
 def main():

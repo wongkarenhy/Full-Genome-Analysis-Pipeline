@@ -111,7 +111,7 @@ def BN_translocation(args):
     calls = checkParentsOverlapTransloInv(filtered_sample_frame, sample_start, father_start, mother_start, sample_end, father_end, mother_end)
 
     # Write output
-    calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNanoTranslocations.txt', sep='\t', index = False)
+    calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_Bionano_translocations.txt', sep='\t', index = False)
 
 
 

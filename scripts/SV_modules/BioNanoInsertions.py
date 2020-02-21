@@ -38,7 +38,7 @@ def BN_insertion(args):
     #describe exon overlap
     exon_calls = exonOverlap(args, df)
 
-    exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNanoInsertions.txt', sep='\t', index = False)
+    exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_Bionano_insertions.txt', sep='\t', index = False)
 
 
 def main():

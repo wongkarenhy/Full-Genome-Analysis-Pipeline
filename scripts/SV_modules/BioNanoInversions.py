@@ -82,7 +82,7 @@ def BN_inversion(args):
     calls = checkParentsOverlapTransloInv(filtered_sample_frame, sample_start, father_start, mother_start, sample_end, father_end, mother_end)
 
     # Write output
-    calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNanoInversions.txt', sep='\t', index = False)
+    calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_Bionano_inversions.txt', sep='\t', index = False)
 
 
 

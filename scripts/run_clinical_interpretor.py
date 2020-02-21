@@ -11,9 +11,9 @@ from datetime import datetime
 from itertools import chain
 from pyranges import PyRanges
 from SV_modules import *
-pd.set_option('display.max_columns', None)
-pd.set_option('display.expand_frame_repr', False)
-pd.set_option('max_colwidth', None)
+# pd.set_option('display.max_columns', None)
+# pd.set_option('display.expand_frame_repr', False)
+# pd.set_option('max_colwidth', None)
 
 
 class Namespace:
@@ -83,6 +83,7 @@ def calculateGeneSumScore(args, hpo_gene_dict, weightDict, clinical_phenome):
             gene_score_result = gene_score_result.append({'gene':query, 'score':gene_sum_score}, ignore_index=True)
 
         gene_score_result_r = gene_score_result.iloc[::-1]
+        gene_score_result_r = normalizeRawScore(args, gene_score_result_r, 'gene')
 
     return(gene_score_result_r)
 
@@ -98,7 +99,6 @@ def getParentsGeno(filtered_intervar, inheritance_mode, ov_allele):
         if int(getattr(row, 'Start')) in set(ov_allele['Start']):
             parents_geno = ov_allele.loc[ov_allele['Start']==getattr(row,'Start'),'geno'].item()
             filtered_intervar.loc[idx, inheritance_mode] = parents_geno
-            #filtered_intervar.set_value(idx, inheritance_mode, parents_geno)
 
     return(filtered_intervar)
 
@@ -109,18 +109,16 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
     # Overlap gene_score_result_r with small variants genes found in the proband
     gene_score_result_r = gene_score_result_r[gene_score_result_r.gene.isin(smallVariantFile.gene)]
 
-    gene_score_result_r = normalizeRawScore(args, gene_score_result_r, 'gene')
+    #gene_score_result_r = normalizeRawScore(args, gene_score_result_r, 'gene')
 
     # Subset the intervar files further to store entries relevant to these set of genes
-    ### BC00103.hg38_multianno.txt.intervar.FINAL
-    # filtered_intervar = interVarFinalFile[interVarFinalFile.Ref_Gene.isin(gene_score_result_r.gene)]
     filtered_intervar = pd.merge(interVarFinalFile, gene_score_result_r, left_on='Ref_Gene', right_on='gene',how='inner')
     filtered_intervar = filtered_intervar.sort_values(by='score', ascending=False)
 
 
     # Create a bed file and write it out
     pd.DataFrame(filtered_intervar).to_csv(
-        './results/' + args.sampleid + "/" + args.sampleid + '_smallVariantCandidates.txt', index=False, sep='\t',
+        './results/' + args.sampleid + "/" + args.sampleid + '_smallVariant_candidates.txt', index=False, sep='\t',
         header=False)  # Write out a subset of the variant first
     filtered_intervar_bed = filtered_intervar[['Chr', 'Start', 'End']]
     filtered_intervar_bed.loc[:,'Chr'] = 'chr' + filtered_intervar_bed.loc[:,'Chr'].astype(str)
@@ -128,7 +126,7 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
     pd.DataFrame(filtered_intervar_bed).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_target.bed', index=False, sep='\t', header=False)
 
     # Get overlapping variants from the parents so we know which variants are inherited
-    print("Comparing small variants (SNPs/indels) inheritance")
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Comparing small variants (SNPs/indels) inheritance')
     cmd = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed /media/KwokRaid04/CIAPM/CIAPM_longranger/BC0" + famid + "01_longranger/outs/phased_variants.vcf.gz > ./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf"
     os.system(cmd)
     cmd = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed /media/KwokRaid04/CIAPM/CIAPM_longranger/BC0" + famid + "02_longranger/outs/phased_variants.vcf.gz > ./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf"
@@ -183,15 +181,17 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
 
     # Print all the variants according to inheritance mode
     # Recessive
-    pd.DataFrame(recessive).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_recessive_smallVariants_candidates.txt', index=False, sep='\t', header=True)
+    pd.DataFrame(recessive).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_smallVariants_recessive_candidates.txt', index=False, sep='\t', header=True)
     # Dominant
     #pd.DataFrame(dominant).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_dominant_smallVariants_candidates.txt', index=False, sep='\t', header=True)
     # De novo
-    pd.DataFrame(denovo).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_denovo_smallVariants_candidates.txt', index=False, sep='\t', header=True)
+    pd.DataFrame(denovo).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_smallVariants_denovo_candidates.txt', index=False, sep='\t', header=True)
     # Compound het
-    pd.DataFrame(compoundhet).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_compoundhet_smallVariants_candidates.txt', index=False, sep='\t', header=True)
+    pd.DataFrame(compoundhet).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_smallVariants_compoundhet_candidates.txt', index=False, sep='\t', header=True)
     # All
-    pd.DataFrame(filtered_intervar).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_ALL_smallVariants_candidates.txt', index=False, sep='\t', header=True)
+    pd.DataFrame(filtered_intervar).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_smallVariants_ALL_candidates.txt', index=False, sep='\t', header=True)
+
+    return filtered_intervar
 
 
 
@@ -216,6 +216,9 @@ def differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenom
 
     syndrome_score_result_r = syndrome_score_result.sort_values(by='score', ascending=False)
     syndrome_score_result_r['syndrome'] = syndrome_score_result_r['syndrome'].str.upper()
+
+    # Add a normalized score column
+    syndrome_score_result_r = normalizeRawScore(args, syndrome_score_result_r, 'syndrome')
 
     # Specifically look for deletion/duplication syndrome
     delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, cyto_BN_del, cyto_BN_dup)
@@ -328,29 +331,39 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
     del_df = parseSyndromeNameToCytoband(del_df, cytobandDict)
     dup_df = parseSyndromeNameToCytoband(dup_df, cytobandDict)
 
-
     if args.bionano:
         # Overlap with del/dup syndromes
         if cyto_BN_dup is not None: # It can be None because old Bionano pipeline doesn't call duplications...
-            overlap_dup_BN = PyRanges(dup_df).overlap(PyRanges(cyto_BN_dup))
-            overlap_dup_BN.df.sort_values(by='score', ascending=False).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_duplication_syndrome.txt', sep='\t', index=False)
+            overlap_dup_BN = delDupSyndromeSVOverlap(dup_df, cyto_BN_dup)
+            overlap_dup_BN.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_duplication_syndrome.txt', sep='\t', index=False)
         else:
             pd.DataFrame().to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_duplication_syndrome.txt', sep='\t', index=False)
 
-
-        overlap_del_BN = PyRanges(del_df).overlap(PyRanges(cyto_BN_del))
-        overlap_del_BN.df.sort_values(by='score', ascending=False).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_deletion_syndrome.txt', sep='\t', index=False)
+        overlap_del_BN = delDupSyndromeSVOverlap(del_df, cyto_BN_del)
+        overlap_del_BN.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_deletion_syndrome.txt', sep='\t', index=False)
 
     if args.linkedreadSV:
-        overlap_dup_largeSV_10x = PyRanges(dup_df).overlap(PyRanges(cyto_10x_dup_largeSV))
-        overlap_dup_largeSV_10x.df.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_duplication_largeSV_syndrome.txt', sep='\t', index=False)
+        overlap_dup_largeSV_10x = delDupSyndromeSVOverlap(dup_df, cyto_10x_dup_largeSV)
+        overlap_dup_largeSV_10x.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_duplication_largeSV_syndrome.txt', sep='\t', index=False)
 
-        overlap_del_largeSV_10x = PyRanges(del_df).overlap(PyRanges(cyto_10x_del_largeSV))
-        overlap_del_largeSV_10x.df.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_deletion_largeSV_syndrome.txt', sep='\t', index=False)
+        overlap_del_largeSV_10x = delDupSyndromeSVOverlap(del_df, cyto_10x_del_largeSV)
+        overlap_del_largeSV_10x.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_deletion_largeSV_syndrome.txt', sep='\t', index=False)
 
-        overlap_del_10x = PyRanges(del_df).overlap(PyRanges(cyto_10x_del))
-        overlap_del_10x.df.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_deletion_syndrome.txt', sep='\t', index=False)
+        overlap_del_10x = delDupSyndromeSVOverlap(del_df, cyto_10x_del)
+        overlap_del_10x.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_deletion_syndrome.txt', sep='\t', index=False)
 
+
+
+def delDupSyndromeSVOverlap(del_df, cyto_BN_del):
+    overlap_del_BN = PyRanges(del_df).overlap(PyRanges(cyto_BN_del))
+    if not overlap_del_BN.df.empty:
+        overlap_del_BN = overlap_del_BN.df.sort_values(by='score', ascending=False)
+        # Rearrange the column
+        cols = ['Chromosome', 'Start', 'End', 'cytoband', 'cytoband_start', 'cytoband_stop', 'arm', 'syndrome', 'score', 'normalized_score']
+        overlap_del_BN = overlap_del_BN[cols]
+        return overlap_del_BN
+    else:
+        return overlap_del_BN.df
 
 
 
@@ -360,8 +373,6 @@ def normalizeRawScore(args, raw_score, mode):
     # Normalize all the scores to 1-100
     max_score = max(raw_score['score'])
     raw_score.loc[:,'normalized_score'] = raw_score.loc[:,'score']/max_score * 100
-
-    #pd.DataFrame(raw_score).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_' + mode + '_score_result.txt', index=False, sep='\t', header=True)
 
     return(raw_score)
 
@@ -382,8 +393,7 @@ def compileControlFiles(control_files_path, famid):
 
 
 
-
-def bionanoSV(args, famid, gene_score_result_r):
+def bionanoSV(args, famid, gene_score_result_r, all_small_variants):
 
     # Generate controls files (1KGP BN samples + CIAPM parents (excluding  parents of the proband of interest)
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Generating bionano control file...')
@@ -415,7 +425,7 @@ def bionanoSV(args, famid, gene_score_result_r):
 
     # Call bionano deletion
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting bionano deletions on ' + args.sampleid + '...')
-    cyto_BN_del = BN_deletion(BN_args)
+    cyto_BN_del, exon_calls_BN_del = BN_deletion(BN_args)
 
     # Call bionano insertion
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting bionano insertions on ' + args.sampleid + '...')
@@ -423,18 +433,28 @@ def bionanoSV(args, famid, gene_score_result_r):
 
     # Call bionano duplications
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting bionano duplications on ' + args.sampleid + '...')
-    cyto_BN_dup = BN_duplication(BN_args)
+    cyto_BN_dup, exon_calls_BN_dup = BN_duplication(BN_args)
 
     # Call bionano inversions
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting bionano inversions on ' + args.sampleid + '...')
     BN_inversion(BN_args)
+
+    # Check potential compoundhets with SNPs and indels
+    #all_small_variants_exons = all_small_variants['Ref_Gene']
+    BN_exons = pd.concat([exon_calls_BN_del, exon_calls_BN_dup])
+    if BN_exons.empty:
+        pd.DataFrame().to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
+    else:
+        #BN_exons = BN_exons[BN_exons['gene'].isin(all_small_variants_exons)]
+        BN_exons = pd.merge(BN_exons, all_small_variants, left_on='gene', right_on='Ref_Gene', how='inner')
+        BN_exons.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
 
     return cyto_BN_del, cyto_BN_dup
 
 
 
 
-def linkedreadSV(args, famid, gene_score_result_r):
+def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
 
     # Need to generate a reference file for all the medium size deletions
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Generating linked-reads control files...')
@@ -475,22 +495,30 @@ def linkedreadSV(args, famid, gene_score_result_r):
                         exons = args.workdir + '/annotatedexonsphenotypes.bed',
                         genelist = gene_score_result_r)
 
-
     # Call medium size deletions
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads medium deletions on ' + args.sampleid + '...')
-    cyto_10x_del = tenxdeletions(tenx_args_del)
+    cyto_10x_del, exon_calls_10x_del = tenxdeletions(tenx_args_del)
 
     # Call large deletions
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large deletions on ' + args.sampleid + '...')
-    cyto_10x_del_largeSV = tenxlargesvdeletions(tenx_args_largeSV)
+    cyto_10x_del_largeSV, exon_calls_10x_largeSV_del = tenxlargesvdeletions(tenx_args_largeSV)
 
     # Call large duplications
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large duplications on ' + args.sampleid + '...')
-    cyto_10x_dup_largeSV = tenxlargesvduplications(tenx_args_largeSV)
+    cyto_10x_dup_largeSV, exon_calls_10x_largeSV_dup = tenxlargesvduplications(tenx_args_largeSV)
 
     # Call large inversions
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large inversions on ' + args.sampleid + '...')
     tenxlargesvinversions(tenx_args_largeSV)
+
+    # Check potential compoundhets with SNPs and indels
+    tenx_exons = pd.concat([exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup])
+    if tenx_exons.empty:
+        pd.DataFrame().to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
+    else:
+        #BN_exons = BN_exons[BN_exons['gene'].isin(all_small_variants_exons)]
+        tenx_exons = pd.merge(tenx_exons, all_small_variants, left_on='gene', right_on='Ref_Gene', how='inner')
+        tenx_exons.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
 
     return cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV
 
@@ -561,8 +589,8 @@ def main():
     gene_score_result_r = calculateGeneSumScore(args, hpo_gene_dict, weightGeneDict, clinical_phenome)
 
     # # Overlap important genes (gene_score_result_r) with all the SNPs and indels
-    # print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting SNPs and indels on ' + args.sampleid + '...')
-    # smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFinalFile, gene_score_result_r, famid)
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting SNPs and indels on ' + args.sampleid + '...')
+    all_small_variants = smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFinalFile, gene_score_result_r, famid)
 
 
     # If bionano is flagged, check SV from bionano SV calls
@@ -572,11 +600,15 @@ def main():
             raise Exception("Enzyme flag not set correctly! Either DLE or BspQI must be specified when using -b.")
 
         # Call all SVs using bionano
-        cyto_BN_del, cyto_BN_dup = bionanoSV(args, famid, gene_score_result_r)
+        cyto_BN_del, cyto_BN_dup = bionanoSV(args, famid, gene_score_result_r, all_small_variants)
 
     #Make 10x SV calls
     if args.linkedreadSV:
-        cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV = linkedreadSV(args, famid, gene_score_result_r)
+        cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV = linkedreadSV(args, famid, gene_score_result_r, all_small_variants)
+
+        # Remove control files
+        cmd = 'rm ./results/' + args.sampleid + '/10x_del_control.vcf.gz ./results/' + args.sampleid + '/10x_largeSV_control.vcf.gz'
+        os.system(cmd)
 
     # Get differential diagnosis
     if args.bionano or args.linkedreadSV:
@@ -586,15 +618,17 @@ def main():
             cyto_BN_del, cyto_BN_dup = None, None
 
         syndrome_score_result_r = differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenome, args, cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, cyto_BN_del, cyto_BN_dup)
-    # normalizeRawScore(args, syndrome_score_result_r, 'syndrome')
 
-    print("Pipeline finished successfully!")
+        # Remove control files
+        cmd = 'rm ./results/' + args.sampleid + '/bionano_control.smap.gz'
+        os.system(cmd)
+
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Pipeline finished successfully')
+
 
 
 if __name__=="__main__":
     main()
-
-
 
 
 

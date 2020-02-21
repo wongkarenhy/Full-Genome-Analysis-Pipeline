@@ -38,7 +38,7 @@ def reciprocal_overlap(overlap): #takes input PyRanges and refPyRanges
 def read10x(input):
 
     df = allel.vcf_to_dataframe(input, fields=['variants/CHROM', 'variants/POS', 'variants/ID', 'variants/REF', 'variants/ALT', 'variants/QUAL', 'variants/FILTER_PASS', 'variants/END'])
-    scores_cutoff = np.mean(df.QUAL) - 2*np.std(df.QUAL)
+    # scores_cutoff = np.mean(df.QUAL) - 2*np.std(df.QUAL)
     # df = df.loc[df['FILTER_PASS']==True]
     # df = df.loc[df['QUAL']>scores_cutoff]
     df.reset_index(inplace = True, drop=True)
@@ -131,10 +131,6 @@ def tenxdeletions(args):
 
     #load sample data
     sample_frame = read10x(args.samplepath)
-    sample_frame.to_csv(args.outputdirectory + '/' + args.sampleID + '_test_sample_frame.txt', sep='\t', index = True)
-
-    # print("checking sample_frame")
-    # print(sample_frame[sample_frame.index.duplicated()])
 
     #load parent data
     father_frame = read10x(args.fpath)
@@ -142,9 +138,6 @@ def tenxdeletions(args):
 
     #load reference data
     ref_frame = read10x(args.referencepath)
-    # print("checking ref_frame")
-    # print(ref_frame[ref_frame.index.duplicated()])
-    ref_frame.to_csv(args.outputdirectory + '/' + args.sampleID + '_test_ref_frame.txt', sep='\t', index = True)
 
     sample_copy, mother_copy, father_copy, ref_copy = sample_frame.copy(), mother_frame.copy(), father_frame.copy(), ref_frame.copy()
 
@@ -155,7 +148,6 @@ def tenxdeletions(args):
     filtered_sample_frame = checkRefOverlap(sample_copy, ref_copy, sample_frame)
 
     #add column based on overlap with parents
-    #print(sample_copy.shape, father_copy.shape, mother_copy.shape, filtered_sample_frame.shape)
     df = checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_frame)
 
     # Write output for cytoband overlap later to detect dup/del syndrome
@@ -165,9 +157,9 @@ def tenxdeletions(args):
     exon_calls = exonOverlap(args, df)
 
     # Write final output
-    exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_10xDeletions_exons.txt', sep='\t', index = False)
+    exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_10x_deletions_exons.txt', sep='\t', index = False)
 
-    return df
+    return df, exon_calls
 
 
 def main():

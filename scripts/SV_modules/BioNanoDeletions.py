@@ -159,9 +159,9 @@ def BN_deletion(args):
     exon_calls = exonOverlap(args, df)
 
     # Write output files
-    exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNanoDeletions_exons.txt', sep='\t', index = False)
+    exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_Bionano_deletions_exons.txt', sep='\t', index = False)
 
-    return df
+    return df, exon_calls
 
 
 

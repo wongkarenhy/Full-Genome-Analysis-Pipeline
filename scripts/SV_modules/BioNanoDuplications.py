@@ -34,7 +34,7 @@ def BN_duplication(args):
 
     # Some old BN pipeline doesn't call duplication
     if sample_frame.empty:
-        return None
+        return None, None
 
     #loadparent
     father_frame = readsmapDup(args.fpath)
@@ -63,9 +63,9 @@ def BN_duplication(args):
 
 
     #df.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNanoDuplications_cytobands.txt', sep='\t', index = False)
-    exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNanoDuplications_exons.txt', sep='\t', index = False)
+    exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_Bionano_duplications_exons.txt', sep='\t', index = False)
 
-    return df
+    return df, exon_calls
 
                 
 def main():
@@ -79,7 +79,6 @@ def main():
     parser.add_argument("-o", "--outputdirectory", help="Give the directory path for the output file", dest="outputdirectory", type=str, required=True)
     parser.add_argument("-c", "--confidence", help="Give the confidence level cutoff for the sample here", dest="confidence", type=str, default=0.5)
     parser.add_argument("-e", "--exons", help="Give the file with exons intervals, names, and phenotypes here", dest="exons", type=str, required=True)
-    #parser.add_argument("-y", "--cytobands", help="Give the BED file with cytoband intervals", dest="cytobands", type=str, required=True)
     parser.add_argument("-g", "--genelist", help="Primary genelist with scores", dest="genelist", type=str)
     args = parser.parse_args()
 

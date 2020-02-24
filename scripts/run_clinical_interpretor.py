@@ -11,9 +11,10 @@ from datetime import datetime
 from itertools import chain
 from pyranges import PyRanges
 from SV_modules import *
-# pd.set_option('display.max_columns', None)
-# pd.set_option('display.expand_frame_repr', False)
-# pd.set_option('max_colwidth', None)
+pd.set_option('display.max_columns', None)
+pd.set_option('display.expand_frame_repr', False)
+pd.set_option('max_colwidth', None)
+pd.options.display.max_rows = 999
 
 
 class Namespace:
@@ -104,6 +105,37 @@ def getParentsGeno(filtered_intervar, inheritance_mode, ov_allele):
 
 
 
+
+def rerankSmallVariant(df):
+    #df = df[['Chr', 'Start', 'End', 'Clinvar', 'InterVar_InterVarandEvidence']]
+    df['Clinvar_idx'] = df.Clinvar.str[9:-1]
+    df['InterVar_idx'] = df.InterVar_InterVarandEvidence.str[10:].str.split('PVS1').str[0]
+    df[['Clinvar_idx', 'InterVar_idx']] = df[['Clinvar_idx', 'InterVar_idx']].apply(lambda x:x.astype(str).str.lower())
+    df['Clinvar_score'], df['InterVar_score'] = 3, 3
+
+    # Calculate Clinvar score
+    df.loc[(df['Clinvar_idx'].str.contains('benign')), 'Clinvar_score'] = 1
+    df.loc[((df['Clinvar_idx'].str.contains('benign')) & (df['Clinvar_idx'].str.contains('likely'))), 'Clinvar_score'] = 2
+    df.loc[(df['Clinvar_idx'].str.contains('pathogenic')), 'Clinvar_score'] = 5
+    df.loc[((df['Clinvar_idx'].str.contains('pathogenic')) & (df['Clinvar_idx'].str.contains('likely'))), 'Clinvar_score'] = 4
+    df.loc[(df['Clinvar_idx'].str.contains('conflicting')), 'Clinvar_score'] = 3
+
+    # Calculate Intervar score
+    df.loc[(df['InterVar_idx'].str.contains('benign')), 'InterVar_score'] = 1
+    df.loc[((df['InterVar_idx'].str.contains('benign')) & (df['InterVar_idx'].str.contains('likely'))), 'InterVar_score'] = 2
+    df.loc[(df['InterVar_idx'].str.contains('pathogenic')), 'InterVar_score'] = 5
+    df.loc[((df['InterVar_idx'].str.contains('pathogenic')) & (df['InterVar_idx'].str.contains('likely'))), 'InterVar_score'] = 4
+    # Add them up
+    df['Patho_score'] = df['Clinvar_score'] + df['InterVar_score']
+
+    # Sort by the total patho_score
+    df = df.sort_values(by='Patho_score', ascending=False)
+    df = df.drop(['Clinvar_idx', 'InterVar_idx', 'Clinvar_score', 'InterVar_score', 'Patho_score'], axis=1)
+
+    return df
+
+
+
 def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFinalFile, gene_score_result_r, famid):
 
     # Overlap gene_score_result_r with small variants genes found in the proband
@@ -151,6 +183,11 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
 
     filtered_intervar = getParentsGeno(filtered_intervar, 'paternal', paternal_ov_allele)
     filtered_intervar = getParentsGeno(filtered_intervar, 'maternal', maternal_ov_allele)
+
+    # Rerank variants based on reported or predicted pathogeneicity
+    filtered_intervar = rerankSmallVariant(filtered_intervar)
+
+
 
     # Divide the dataset into recessive, dominant, de novo, compound het
     ## Recessive
@@ -202,7 +239,7 @@ def differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenom
 
     # Check every syndrome and its overlapping hpo terms
     for syndrome in hpo_syndrome_dict:
-        #print(syndrome)
+
         hpo_terms = set(hpo_syndrome_dict[syndrome])
 
         score = 0
@@ -222,6 +259,7 @@ def differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenom
 
     # Specifically look for deletion/duplication syndrome
     delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, cyto_BN_del, cyto_BN_dup)
+    #delDupSyndrome(syndrome_score_result_r, args)
 
     return(syndrome_score_result_r)
 
@@ -263,7 +301,6 @@ def parseSyndromeNameToCytoband(df, cytobandDict):
     df = df.drop('discard', axis=1)
     df[['cytoband_start', 'cytoband_stop']] = df.cytoband.str.split('-', expand=True)
     df['arm'] = np.where(df['cytoband_start'].str.contains('p'), 'p', 'q')
-
 
     for idx, row in df.iterrows():
 
@@ -332,6 +369,7 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
     dup_df = parseSyndromeNameToCytoband(dup_df, cytobandDict)
 
     if args.bionano:
+
         # Overlap with del/dup syndromes
         if cyto_BN_dup is not None: # It can be None because old Bionano pipeline doesn't call duplications...
             overlap_dup_BN = delDupSyndromeSVOverlap(dup_df, cyto_BN_dup)
@@ -351,6 +389,11 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
 
         overlap_del_10x = delDupSyndromeSVOverlap(del_df, cyto_10x_del)
         overlap_del_10x.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_deletion_syndrome.txt', sep='\t', index=False)
+
+    #if args.linkedreadSV and args.bionano:
+        # syndrome appearing in both 10x and bionano --> confident set
+
+
 
 
 
@@ -588,7 +631,7 @@ def main():
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Generating a clinically relevant primary gene list for ' + args.sampleid + '...')
     gene_score_result_r = calculateGeneSumScore(args, hpo_gene_dict, weightGeneDict, clinical_phenome)
 
-    # # Overlap important genes (gene_score_result_r) with all the SNPs and indels
+    # Overlap important genes (gene_score_result_r) with all the SNPs and indels
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting SNPs and indels on ' + args.sampleid + '...')
     all_small_variants = smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFinalFile, gene_score_result_r, famid)
 
@@ -624,7 +667,6 @@ def main():
         os.system(cmd)
 
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Pipeline finished successfully')
-
 
 
 if __name__=="__main__":

@@ -31,6 +31,8 @@ def BN_duplication(args):
 
     #loadsample
     sample_frame = readsmapDup(args.samplepath)
+    # calculate SV size
+    sample_frame['SV_size'] = sample_frame['RefEndPos'] - sample_frame['RefStartPos'] - sample_frame['QryEndPos'] + sample_frame['QryStartPos']
 
     # Some old BN pipeline doesn't call duplication
     if sample_frame.empty:

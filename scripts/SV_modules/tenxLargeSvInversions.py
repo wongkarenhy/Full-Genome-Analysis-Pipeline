@@ -89,7 +89,7 @@ def tenxlargesvinversions(args):
         calls = filtered_sample_frame.drop(columns = ['Chromosome', 'Start', 'End']).rename(columns = {'Score':'Phenotype', 'Score2':'Phenotype2'}).drop_duplicates()
 
     # Write final output
-    cols = ['Name', 'Name2', 'Phenotype', 'Phenotype2', 'Found_in_Father', 'CHROM' ,'POS' ,'ID' ,'REF', 'ALT_1', 'ALT_2', 'ALT_3', 'QUAL', 'FILTER_PASS', 'END', 'Found_in_Mother']
+    cols = ['CHROM' ,'POS' ,'ID' ,'REF', 'ALT_1', 'ALT_2', 'ALT_3', 'QUAL', 'FILTER_PASS', 'END', 'SVLEN','Name', 'Name2', 'Phenotype', 'Phenotype2', 'Found_in_Father', 'Found_in_Mother']
     calls = calls[cols]
     calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_10x_inversions_largeSV_exons.txt', sep='\t', index = False)
 

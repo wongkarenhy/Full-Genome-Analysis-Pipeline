@@ -130,6 +130,8 @@ def BN_deletion(args):
 
     #loadsample
     sample_frame = readsmap(args.samplepath, args, 'deletion')
+    # calculate SV size
+    sample_frame['SV_size'] = sample_frame['RefEndPos'] - sample_frame['RefStartPos'] - sample_frame['QryEndPos'] + sample_frame['QryStartPos']
 
     #loadparent
     mother_frame = readsmap(args.mpath, args, 'deletion')

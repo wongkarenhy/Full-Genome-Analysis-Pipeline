@@ -6,9 +6,11 @@ set -e
 usage() {
     NAME=$(basename $0)
     cat <<EOF
-Usage:                                                                                                                                                                                                      
-  ${NAME} [path_to_json] [out_path] [sample_id]                                                                                                                                                             
-This software extracts HPO terms from json files, searches for inexact terms, and outputs the associated genes.
+Usage:
+ 
+  ${NAME} [path_to_json] [work_dir] [sample_id] [hpo_database_path][path_to_intervar] [bionano:true or false] [DLE/BspQI/None] [linkedReadSV:true or false]
+
+This software extracts HPO terms from json files using clinical natural language processing, searches for inexact terms, and finds clinically relevant genes. It then identifies genetic variants from the proband and ranks them based on clinical relevance.
 
 EOF
 }

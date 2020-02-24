@@ -13,7 +13,7 @@ from .tenxDeletions import checkRefOverlap, checkParentsOverlap, exonOverlap, ov
 
 def read10xlargeSVs(input, sv_type):
 
-    df = allel.vcf_to_dataframe(input, fields=['variants/CHROM', 'variants/POS', 'variants/ID', 'variants/REF', 'variants/ALT', 'variants/QUAL', 'variants/FILTER_PASS', 'variants/END'])
+    df = allel.vcf_to_dataframe(input, fields=['variants/CHROM', 'variants/POS', 'variants/ID', 'variants/REF', 'variants/ALT', 'variants/QUAL', 'variants/FILTER_PASS', 'variants/END', 'variants/SVLEN'])
     # scores_cutoff = np.mean(df.QUAL) - 2*np.std(df.QUAL)
     # df = df.loc[df['FILTER_PASS']==True]
     # df = df.loc[df['QUAL']>scores_cutoff]

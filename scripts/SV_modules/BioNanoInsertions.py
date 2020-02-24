@@ -15,6 +15,8 @@ def BN_insertion(args):
 
     #loadsample
     sample_frame = readsmap(args.samplepath, args, 'insertion')
+    # calculate SV size
+    sample_frame['SV_size'] = sample_frame['RefEndPos'] - sample_frame['RefStartPos'] - sample_frame['QryEndPos'] + sample_frame['QryStartPos']
 
     #loadparent
     mother_frame = readsmap(args.mpath, args, 'insertion')

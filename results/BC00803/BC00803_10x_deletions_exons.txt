@@ -1,0 +1,3 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+16	88803433	call_2994	C	<DEL>			6.0	True	88812349	-8916	True	False	CDT1	['Meier-Gorlin syndrome 4, 613804 (3)']	79.368784815999	86.46576456437754
+4	103158362	call_2622	A	<DEL>			19.0	True	103158411	-49	False	False	CENPE	['?Microcephaly 13, primary, autosomal recessive, 616051 (3)']	59.393786886998186	64.70464686417611

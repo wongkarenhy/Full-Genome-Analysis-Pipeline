@@ -1,0 +1,2 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+14	88445450	call_3943	C	<DEL>			4.0	True	88457671	-12221	True	False	SPATA7	['Leber congenital amaurosis 3, 604232 (3)' 'Retinitis pigmentosa, juvenile, autosomal recessive, 604232 (3)']	91.83777127699976	63.18546404012649

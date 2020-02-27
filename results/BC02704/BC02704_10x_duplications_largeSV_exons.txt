@@ -1,0 +1,12 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+18	58368946	call_2895	T	<DUP:TANDEM>			3.0	False	58435750	66804	False	False	NEDD4L	['Periventricular nodular heterotopia 7, 617201 (3)']	60.1768490929979	95.79443376821979
+1	181558123	call_2553	A	<DUP:TANDEM>			3.0	False	181594880	36757	False	False	CACNA1E	['Epileptic encephalopathy, early infantile, 69, 618285 (3)']	50.11456805399853	79.77647122820707
+2	199428163	call_3009	G	<DUP:TANDEM>			3.0	False	199495737	67574	False	False	SATB2	['Glass syndrome, 612313 (3)']	47.15317130599868	75.0622774989993
+8	143182452	call_1696	C	<DUP:TANDEM>			5.0	False	143218566	36114	False	False	GPIHBP1	['Hyperlipoproteinemia, type 1D, 615947 (3)']	44.99281068799888	71.6232386450934
+16	49760487	call_1989	C	<DUP:TANDEM>			4.0	False	49810767	50280	False	False	ZNF423	['Joubert syndrome 19, 614844 (3)' 'Nephronophthisis 14, 614844 (3)']	32.44916729699979	51.65524041749845
+11	93749938	call_2643	T	<DUP:TANDEM>			3.0	False	93813960	64022	False	False	MED17	['Microcephaly, postnatal progressive, with seizures and brain atrophy, 613668 (3)']	32.24837974499981	51.33561035807443
+22	37180381	call_2168	C	<DUP:TANDEM>			4.0	False	37231350	50969	False	False	RAC2	['Neutrophil immunodeficiency syndrome, 608203 (3)']	15.606931969000089	24.84439171148717
+19	40599775	call_2920	T	<DUP:TANDEM>			3.0	False	40641077	41302	False	False	LTBP4	['Cutis laxa, autosomal recessive, type IC, 613177 (3)']	12.569729901000054	20.00952486935495
+6	33117159	call_3254	G	<DUP:TANDEM>			3.0	False	33164911	47752	False	False	COL11A2	['Deafness, autosomal dominant 13, 601868 (3)' 'Deafness, autosomal recessive 53, 609706 (3)' 'Fibrochondrogenesis 2, 614524 (3)' 'Otospondylomegaepiphyseal dysplasia, autosomal dominant, 184840 (3)' 'Otospondylomegaepiphyseal dysplasia, autosomal recessive, 215150 (3)']	10.369128572000037	16.50642755803897
+7	78179142	call_1650	C	<DUP:TANDEM>			5.0	False	78212398	33256	False	False	MAGI2	['Nephrotic syndrome, type 15, 617609 (3)']	0.9782166800000008	1.5572053767456502
+3	53805750	call_1053	T	<DUP:TANDEM>			6.0	False	53837351	31601	False	False	CACNA1D	['Primary aldosteronism, seizures, and neurologic abnormalities, 615474 (3)' 'Sinoatrial node dysfunction and deafness, 614896 (3)']	0.3954856539999999	0.629566433926039

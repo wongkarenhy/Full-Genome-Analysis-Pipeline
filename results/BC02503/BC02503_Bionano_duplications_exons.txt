@@ -1,0 +1,3 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+10304	9	9	105764356.0	105778937.0	37567147.4	37596329.7	-1.0	duplication	unknown	-1	14601.0	False	False	TMEM38B	['Osteogenesis imperfecta, type XIV, 615066 (3)']	98.17281768999726	52.39904457665687
+10402	9	9	105764356.0	105778937.0	37638821.0	37668003.4	-1.0	duplication	unknown	-1	14601.0	False	False	TMEM38B	['Osteogenesis imperfecta, type XIV, 615066 (3)']	98.17281768999726	52.39904457665687

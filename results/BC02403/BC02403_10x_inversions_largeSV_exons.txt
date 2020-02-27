@@ -1,0 +1,23 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Name	Name2	Phenotype	Phenotype2	Found_in_Father	Found_in_Mother
+1	68151996	call_924	G	<INV>			5.0	False	68199150	47154	None	None	None	None	False	False
+1	82951942	call_2380	G	<INV>			3.0	False	83001775	49833	None	None	None	None	False	False
+1	226347703	call_2425	T	<INV>			3.0	False	226391855	44152	None	None	None	None	False	False
+10	48120227	call_1506	T	<INV>			4.0	False	48152280	32053	None	None	None	None	False	False
+11	206830	call_1530	A	<INV>			4.0	False	247000	40170	None	None	None	None	False	False
+13	33334323	call_1616	G	<INV>			4.0	False	33374826	40503	None	None	None	None	False	False
+15	33039027	call_719	T	<INV>			6.0	False	33073365	34338	None	None	None	None	False	False
+15	78004608	call_1070	T	<INV>			5.0	False	78032242	27634	None	None	None	None	False	False
+16	60568812	call_1093	C	<INV>			5.0	False	60613102	44290	None	None	None	None	False	False
+2	10927572	call_2881	C	<INV>			3.0	False	10975093	47521	None	None	None	None	False	False
+20	25018385	call_2987	C	<INV>			3.0	False	25049089	30704	None	None	None	None	False	False
+21	10481061	call_3006	A	<INV>			3.0	False	10517101	36040	None	None	None	None	False	False
+22	20701919	call_1893	C	<INV>			4.0	False	20738339	36420	None	None	None	None	False	False
+22	30271702	call_1199	A	<INV>			5.0	False	30301807	30105	None	None	None	None	False	False
+3	89097642	call_3078	A	<INV>			3.0	False	89142431	44789	None	None	None	None	False	False
+8	84909978	call_3509	A	<INV>			3.0	False	84942273	32295	None	None	None	None	False	False
+8	111169742	call_2231	G	<INV>			4.0	False	111204513	34771	None	None	None	None	False	False
+X	29832348	call_3605	C	<INV>			3.0	False	29898145	65797	None	None	None	None	False	False
+X	44674173	call_1389	A	<INV>			5.0	False	44707146	32973	None	None	None	None	False	False
+X	69187627	call_3628	C	<INV>			3.0	False	69251122	63495	None	None	None	None	False	False
+X	88090305	call_901	A	<INV>			6.0	False	88121632	31327	None	None	None	None	False	False
+X	103460204	call_3642	T	<INV>			3.0	False	103515175	54971	None	None	None	None	False	False

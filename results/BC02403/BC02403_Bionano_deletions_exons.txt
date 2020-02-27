@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+5679	5	5	126522858.0	126536373.0	55701442.8	55712506.5	1.0	deletion	heterozygous	1	2451.0	True	False	ALDH7A1	['Epilepsy, pyridoxine-dependent, 266100 (3)']	1.9211283139999897	24.896458285451406

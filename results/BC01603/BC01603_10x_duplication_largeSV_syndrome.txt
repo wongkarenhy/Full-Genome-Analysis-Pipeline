@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+X	149141889	149203199	call_3447	A	<DUP:TANDEM>	2.0	False	61310	False	False	XQ28 (MECP2) DUPLICATION	Xq28 	0.024448400000000002	1.2121758233256463

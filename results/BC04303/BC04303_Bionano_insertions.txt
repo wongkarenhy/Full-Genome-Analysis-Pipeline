@@ -1,0 +1,3 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+12795	11	11	119181622.0	119208575.0	30275012.3	30304223.7	1.0	insertion	heterozygous	1	2258.0	False	False	CBL	['?Juvenile myelomonocytic leukemia, 607785 (3)' 'Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia, 613563 (3)']	33.5563922439998	82.43192991317116
+2915	2	2	178431759.0	178440436.0	46322279.5	46332330.3	1.0	insertion	heterozygous	1	1374.0	True	False	PRKRA	['Dystonia 16, 612067 (3)']	12.874721066000099	31.627002594532993

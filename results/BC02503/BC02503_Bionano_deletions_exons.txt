@@ -1,0 +1,4 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+15122	17	17	1267841.0	1315080.0	20569563.5	20615725.6	0.99	deletion	heterozygous	2	1077.0	False	False	BHLHA9	['?Camptosynpolydactyly, complex, 607539 (3)' 'Syndactyly, mesoaxial synostotic, with phalangeal reduction, 609432 (3)']	163.8280864349962	87.44207822498326
+8369	7	7	107688079.5	107733140.0	30990101.0	31033402.7	0.99	deletion	heterozygous	1	1759.0	True	False	SLC26A4	['Deafness, autosomal recessive 4, with enlarged vestibular aqueduct, 600791 (3)' 'Pendred syndrome, 274600 (3)']	127.96202225899607	68.2988210610509
+966	1	1	182574621.5	182579898.0	21113503.9	21117235.4	0.99	deletion	heterozygous	1	1545.0	True	False	RNASEL	['Prostate cancer 1, 601518 (3)']	22.37523730200005	11.942624082595065

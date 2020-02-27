@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
+2	237400389	237409480	call_4369	A	<DEL>	3.0	True	-5318	True	False	CHROMOSOME 2Q37 DELETION SYNDROME	2q37 	0.00121359	0.12088308209695348	3220	1.0	deletion	heterozygous	1	5332.0	True	False

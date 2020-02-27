@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+13821	15	15	84265985.0	86013575.0	1794856.1	3429827.5	1.0	deletion	heterozygous	1	112619.0	False	False	WDR73	['Galloway-Mowat syndrome 1, 251300 (3)']	27.35634196400088	80.13946008085065

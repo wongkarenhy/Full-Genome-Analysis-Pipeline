@@ -1,0 +1,5 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+18558	22	22	23931280.0	25268731.0	7221808.8	8834548.1	1.0	insertion	heterozygous	1	275288.0	False	False	GGT1	['?Glutathioninuria, 231950 (3)']	20.73597826900033	89.03728036524679
+18558	22	22	23931280.0	25268731.0	7221808.8	8834548.1	1.0	insertion	heterozygous	1	275288.0	False	False	SPECC1L	['?Facial clefting, oblique, 1, 600251 (3)' 'Hypertelorism, Teebi type, 145420 (3)' 'Opitz GBBB syndrome, type II, 145410 (3)']	12.331810491000061	52.95100399192295
+17512	19	19	44932808.0	44953950.0	13905262.3	14508326.2	1.0	insertion	heterozygous	1	581922.0	False	False	APOC2	['Hyperlipoproteinemia, type Ib, 207750 (3)']	9.853885466000111	42.31115366449405
+18558	22	22	23931280.0	25268731.0	7221808.8	8834548.1	1.0	insertion	heterozygous	1	275288.0	False	False	UPB1	['Beta-ureidopropionase deficiency, 613161 (3)']	2.5223797389999953	10.830732415683022

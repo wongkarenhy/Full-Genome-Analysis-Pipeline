@@ -1,0 +1,9 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Name	Name2	Phenotype	Phenotype2	Found_in_Father	Found_in_Mother
+1	97494740	call_1983	T	<INV>			3.0	False	97525811	31071	None	None	None	None	False	False
+10	42922136	call_649	G	<INV>			7.0	False	42954999	32863	None	None	None	None	True	False
+14	19680284	call_896	A	<INV>			6.0	False	19710806	30522	None	None	None	None	False	False
+18	4829646	call_716	C	<INV>			7.0	False	4860139	30493	None	None	None	None	False	False
+2	154708995	call_1733	A	<INV>			4.0	False	154756619	47624	None	None	None	None	False	False
+21	39584090	call_1757	C	<INV>			4.0	False	39622215	38125	None	None	None	None	False	False
+X	52448058	call_310	A	<INV>			23.0	False	52549002	100944	None	None	None	None	False	False
+X	97009921	call_1962	A	<INV>			4.0	False	97045571	35650	None	None	None	None	False	False

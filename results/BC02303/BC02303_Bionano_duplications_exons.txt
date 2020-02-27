@@ -1,0 +1,3 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+4790	4	4	447742.0	712180.0	441149.4	1022266.9	-1.0	duplication	unknown	-1	316680.0	False	False	PDE6B	['Night blindness, congenital stationary, autosomal dominant 2, 163500 (3)' 'Retinitis pigmentosa-40, 613801 (3)']	33.76627271300017	53.69222800257363
+4790	4	4	447742.0	712180.0	441149.4	1022266.9	-1.0	duplication	unknown	-1	316680.0	False	False	PIGG	['Mental retardation, autosomal recessive 53, 616917 (3)']	25.25632085300038	40.160433142013886

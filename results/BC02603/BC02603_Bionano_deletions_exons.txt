@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+14103	14	14	65079714.5	65094196.0	45120835.6	45133472.6	0.99	deletion	heterozygous	1	1844.0	False	False	MAX	['{Pheoomocytoma, susceptibility to}, 171300 (3)']	4.352589429000011	19.260583269067265

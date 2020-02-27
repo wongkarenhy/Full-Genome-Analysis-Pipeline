@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+2806	10	10	27534384.0	27547856.0	835653.3	847790.4	0.99	deletion	heterozygous	1	1335.0	False	False	RAB18	['Warburg micro syndrome 3, 614222 (3)']	10.035852184000115	54.691670244313926

@@ -1,0 +1,6 @@
+SmapEntryID	Name	Phenotype	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Name2	Phenotype2	Found_in_Father	Found_in_Mother
+14377	TRPM1	['Night blindness, congenital stationary (complete), 1C, autosomal recessive, 613216 (3)']	15	15	31023132.0	32401289.0	421968.9	421968.9	0.01	inversion	homozygous	1			True	True
+6756			5	5	176267700.0	177500036.0	105041958.4	105041958.4	0.09	inversion	heterozygous	1	DDX41	['{Myeloproliferative/lymphoproliferative neoplasms, familial (multiple types), susceptibility to}, 616871 (3)']	False	False
+11023			10	10	79511390.0	79623101.0	288761.7	288761.7	0.05	inversion	heterozygous	1			True	False
+14903			16	16	18490832.0	18490832.0	3400334.4	3400334.4	0.0	inversion	homozygous	1			True	True
+18494			23	23	141109425.0	141339534.0	140517.6	140517.6	0.53	inversion	heterozygous	1			False	True

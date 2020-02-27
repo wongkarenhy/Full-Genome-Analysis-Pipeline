@@ -1,0 +1,8 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+814	3	3	9679946.0	9689020.5	636320.4	641458.8	1.0	deletion	heterozygous	1	3936.0	False	False	MTMR14	['{Centronuclear myopathy, autosomal, modifier of}, 160150 (3)']	45.22689145599909	92.11022775574553
+751	2	2	231337204.0	231358663.0	1039262.2	1059586.7	0.98	deletion	homozygous	1	1134.0	False	False	ARMC9	['Joubert syndrome 30, 617622 (3)']	35.89929745099977	73.1134145644279
+752	2	2	231337204.0	231358663.0	1039262.2	1059586.7	0.98	deletion	homozygous	1	1134.0	False	False	ARMC9	['Joubert syndrome 30, 617622 (3)']	35.89929745099977	73.1134145644279
+534	2	2	47425414.0	47430854.0	4075529.4	4079774.5	0.99	deletion	heterozygous	1	1195.0	False	False	MSH2	['Colorectal cancer, hereditary nonpolyposis, type 1, 120435 (3)' 'Mismatch repair cancer syndrome, 276300 (3)' 'Muir-Torre syndrome, 158320 (3)']	20.484490914000283	41.71923081171188
+4432	19	19	1027846.0	1046471.5	968635.4	986129.2	0.99	deletion	heterozygous	1	1132.0	False	False	ABCA7	['{Alzheimer disease 9, susceptibility to}, 608907 (3)']	7.792651510999997	15.870710596983878
+3187	11	11	116860341.0	116868910.0	70077.4	77443.6	0.99	deletion	heterozygous	1	1203.0	False	False	SIK3	['?Spondyloepimetaphyseal dysplasia, Krakow type, 618162 (3)']	2.858500543999998	5.821694298931028
+2794	10	10	53902290.0	53918336.0	182365.8	196903.3	0.99	deletion	heterozygous	1	1508.0	True	False	PCDH15	['Deafness, autosomal recessive 23, 609533 (3)' 'Usher syndrome, type 1D/F digenic, 601067 (3)' 'Usher syndrome, type 1F, 602083 (3)']	0.8180129900000003	1.665985885617704

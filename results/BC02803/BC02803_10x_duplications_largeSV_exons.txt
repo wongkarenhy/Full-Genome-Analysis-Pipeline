@@ -1,0 +1,10 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+13	38754308	call_3678	A	<DUP:TANDEM>			3.0	False	38799018	44710	False	False	FREM2	['Cryptophthalmos, unilateral or bilateral, isolated, 123570 (3)' 'Fraser syndrome 2, 617666 (3)']	7.562885275000043	95.58539697714748
+20	51727061	call_2837	A	<DUP:TANDEM>			4.0	False	51794191	67130	True	False	SALL4	['Duane-radial ray syndrome, 607323 (3)' 'IVIC syndrome, 147750 (3)']	6.847453099000031	86.5432303877323
+9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	SIGMAR1	['?Amyotrophic lateral sclerosis 16, juvenile, 614373 (3)' '?Spinal muscular atrophy, distal, autosomal recessive, 2, 605726 (3)']	5.011979714000006	63.3451458251954
+10	71432275	call_3515	A	<DUP:TANDEM>			3.0	False	71466661	34386	False	False	CDH23	['Deafness, autosomal recessive 12, 601386 (3)' 'Usher syndrome, type 1D, 601067 (3)' 'Usher syndrome, type 1D/F digenic, 601067 (3)' '{Pituitary adenoma 5, multiple types}, 617540 (3)']	4.900394882000003	61.93485331439852
+9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	IL11RA	['Craniosynostosis and dental anomalies, 614188 (3)']	4.526452238999995	57.20868668907716
+1	235646454	call_3480	T	<DUP:TANDEM>			3.0	False	235736000	89546	False	False	LYST	['Chediak-Higashi syndrome, 214500 (3)']	3.975718917999984	50.24810733316084
+2	98965072	call_4016	T	<DUP:TANDEM>			3.0	False	99217689	252617	False	False	LIPT1	['Lipoyltransferase 1 deficiency, 616299 (3)']	2.8027687649999913	35.4234865790255
+3	101531055	call_4219	C	<DUP:TANDEM>			3.0	False	101747353	216298	False	False	ZBTB11	['Intellectual developmental disorder, autosomal recessive 69, 618383 (3)']	2.6013056809999924	32.877245540035226
+X	9763361	call_4752	C	<DUP:TANDEM>			3.0	False	9816812	53451	False	False	GPR143	['Nystagmus 6, congenital, X-linked, 300814 (3)' 'Ocular albinism, type I, Nettleship-Falls type, 300500 (3)']	2.5943227109999927	32.78898954576068

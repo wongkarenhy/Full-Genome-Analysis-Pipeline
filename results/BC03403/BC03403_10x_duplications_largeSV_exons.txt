@@ -1,0 +1,18 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+3	111648986	call_2140	A	<DUP:TANDEM>			5.0	False	111673078	24092	False	False	CD96	['C syndrome, 211750 (3)']	140.6044127850012	96.73748550706368
+12	110199717	call_3603	C	<DUP:TANDEM>			3.0	False	110245653	45936	False	False	IFT81	['Short-rib thoracic dysplasia 19 with or without polydactyly, 617895 (3)']	139.59487516500118	96.04291178103904
+15	82241270	call_3732	C	<DUP:TANDEM>			3.0	False	82346711	105441	False	False	EFL1	['Shwachman-Diamond syndrome 2, 617941 (3)']	116.19223982200009	79.94162411532102
+6	57198647	call_2261	C	<DUP:TANDEM>			5.0	False	57241351	42704	False	False	RAB23	['Carpenter syndrome, 201000 (3)']	105.18705851999987	72.36993027145311
+11	102883142	call_3546	G	<DUP:TANDEM>			3.0	False	103002253	119111	False	False	MMP13	['Metaphyseal anadysplasia 1, 602111 (3)' 'Metaphyseal dysplasia, Spahr type, 250400 (3)' 'Spondyloepimetaphyseal dysplasia, Missouri type, 602111 (3)']	101.76013109399983	70.0121639991146
+5	172741091	call_4257	A	<DUP:TANDEM>			3.0	False	172836483	95392	False	False	ERGIC1	['?Arthrogryposis multiplex congenita, neurogenic type, 208100 (3)']	99.89420696499981	68.72838630813679
+4	102601422	call_4149	T	<DUP:TANDEM>			3.0	False	102642857	41435	False	False	NFKB1	['Immunodeficiency, common variable, 12, 616576 (3)']	97.78049393599979	67.27412694700531
+17	1961716	call_3792	T	<DUP:TANDEM>			3.0	False	2045624	83908	False	False	DPH1	['Developmental delay with short stature, dysmorphic facial features, and sparse hair, 616901 (3)']	78.36902762099957	53.918810395244144
+4	125456177	call_4160	A	<DUP:TANDEM>			3.0	False	125504204	48027	False	False	FAT4	['Hennekam lymphangiectasia-lymphedema syndrome 2, 616006 (3)' 'Van Maldergem syndrome 2, 615546 (3)']	76.87357267399956	52.88991984766872
+10	110561448	call_2517	T	<DUP:TANDEM>			4.0	False	110618152	56704	False	False	SMC3	['Cornelia de Lange syndrome 3, 610759 (3)']	67.54144106699947	46.46930382146613
+16	3182690	call_2717	C	<DUP:TANDEM>			4.0	False	3254195	71505	False	False	MEFV	['Familial Mediterranean fever, AD, 134610 (3)' 'Familial Mediterranean fever, AR, 249100 (3)']	64.65582522299943	44.48396626798014
+2	108732927	call_3922	G	<DUP:TANDEM>			3.0	False	108774447	41520	False	False	RANBP2	['{Encephalopathy, acute, infection-induced, 3, susceptibility to}, 608033 (3)']	62.53675826199948	43.02602333882268
+9	110708369	call_3303	C	<DUP:TANDEM>			4.0	False	110749449	41080	False	False	MUSK	['Fetal akinesia deformation sequence 1, 208150 (3)' 'Myasthenic syndrome, congenital, 9, associated with acetylcholine receptor deficiency, 616325 (3)']	43.520002330999624	29.94227216182757
+4	102601422	call_4149	T	<DUP:TANDEM>			3.0	False	102642857	41435	False	False	MANBA	['Mannosidosis, beta, 248510 (3)']	18.35433362799996	12.627996861275342
+17	7557622	call_3798	T	<DUP:TANDEM>			3.0	False	7596337	38715	False	False	MPDU1	['Congenital disorder of glycosylation, type If, 609180 (3)']	18.195020261999986	12.51838739647092
+6	101921132	call_3144	G	<DUP:TANDEM>			4.0	False	101969154	48022	False	False	GRIK2	['Mental retardation, autosomal recessive, 6, 611092 (3)']	18.087780005999996	12.444604842245997
+3	30661825	call_2124	A	<DUP:TANDEM>			5.0	False	30702940	41115	False	False	TGFBR2	['Colorectal cancer, hereditary nonpolyposis, type 6, 614331 (3)' 'Esophageal cancer, somatic, 133239 (3)' 'Loeys-Dietz syndrome 2, 610168 (3)']	5.547570744000022	3.81679375360515

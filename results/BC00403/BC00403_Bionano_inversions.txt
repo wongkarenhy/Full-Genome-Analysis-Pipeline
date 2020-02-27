@@ -1,0 +1,5 @@
+SmapEntryID	Name	Phenotype	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Name2	Phenotype2	Found_in_Father	Found_in_Mother
+4388	PLEKHM1	['?Osteopetrosis, autosomal recessive 6, 611497 (3)' 'Osteopetrosis, autosomal dominant 3, 618107 (3)']	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	None	None	True	True
+4391	PLEKHM1	['?Osteopetrosis, autosomal recessive 6, 611497 (3)' 'Osteopetrosis, autosomal dominant 3, 618107 (3)']	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	None	None	True	True
+5178			22	22	19329537.0	21181136.0	616857.2	651870.2	-1.0	inversion	unknown	-1	None	None	True	True
+5618			24	24	21681131.0	21891573.0	408102.6	453966.1	-1.0	inversion	unknown	-1	None	None	False	False

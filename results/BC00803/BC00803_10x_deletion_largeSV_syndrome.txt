@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+2	232338988	232448865	call_3266	T	<DEL>	2.0	False	-109877	False	False	CHROMOSOME 2Q37 DELETION SYNDROME	2q37 	0.001759633	0.11458370708327746

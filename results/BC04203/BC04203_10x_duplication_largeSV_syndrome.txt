@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+22	43795060	43827481	call_2448	A	<DUP:TANDEM>	4.0	False	32421	False	False	CHROMOSOME 22Q13 DUPLICATION SYNDROME	22q13 	0.001759633	0.11268075986493675

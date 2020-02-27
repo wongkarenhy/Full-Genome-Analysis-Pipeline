@@ -1,0 +1,12 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+8	132892873	call_2412	G	<DUP:TANDEM>			5.0	False	132933531	40658	False	False	TG	['Thyroid dyshormonogenesis 3, 274700 (3)' '{Autoimmune thyroid disease, susceptibility to, 3}, 608175 (3)']	77.13962648199875	87.52401201453459
+1	8433744	call_3417	G	<DUP:TANDEM>			2.0	False	8511010	77266	False	False	RERE	['Neurodevelopmental disorder with or without anomalies of the brain, eye, or heart, 616975 (3)']	70.51290298099885	80.00521196623694
+13	101680713	call_3054	A	<DUP:TANDEM>			3.0	False	101735076	54363	False	False	FGF14	['Spinocerebellar ataxia 27, 609307 (3)']	63.92912319899896	72.53513663633787
+14	92471778	call_3067	A	<DUP:TANDEM>			3.0	False	92545730	73952	False	False	SLC24A4	['Amelogenesis imperfecta, type IIA5, 615887 (3)' '[Skin/hair/eye pigmentation 6, blond/brown hair], 210750 (3)' '[Skin/hair/eye pigmentation 6, blue/green eyes], 210750 (3)']	59.80108532699923	67.85139038576882
+6	34224874	call_3298	A	<DUP:TANDEM>			3.0	False	34304510	79636	False	False	HMGA1	['{Diabetes mellitus, noninsulin-dependent, susceptibility to}, 125853 (3)']	57.14743207799935	64.84050753035244
+2	49146057	call_2210	A	<DUP:TANDEM>			5.0	False	49201457	55400	False	False	FSHR	['Ovarian dysgenesis 1, 233300 (3)' 'Ovarian hyperstimulation syndrome, 608115 (3)' 'Ovarian response to FSH stimulation, 276400 (3)']	17.07887197000014	19.37799628632916
+7	157341353	call_3343	T	<DUP:TANDEM>			3.0	False	157394655	53302	False	False	DNAJB6	['Muscular dystrophy, limb-girdle, autosomal dominant 1, 603511 (3)']	16.257782842000154	18.44637374702577
+4	56019851	call_1842	A	<DUP:TANDEM>			6.0	False	56053365	33514	False	False	CEP135	['Microcephaly 8, primary, autosomal recessive, 614673 (3)']	14.043459515000144	15.933962547813657
+7	781569	call_3318	T	<DUP:TANDEM>			3.0	False	887013	105444	False	False	DNAAF5	['Ciliary dyskinesia, primary, 18, 614874 (3)']	12.715917332000116	14.427709234520647
+2	177418008	call_3689	C	<DUP:TANDEM>			2.0	False	177526632	108624	False	False	AGPS	['Rhizomelic chondrodysplasia punctata, type 3, 600121 (3)']	10.169022240000055	11.537956110242924
+15	50999271	call_2146	T	<DUP:TANDEM>			5.0	False	51054085	54814	False	False	AP4E1	['Spastic paraplegia 51, autosomal recessive, 613744 (3)' 'Stuttering, familial persistent, 1, 184450 (3)']	8.04890124500002	9.132428576583518

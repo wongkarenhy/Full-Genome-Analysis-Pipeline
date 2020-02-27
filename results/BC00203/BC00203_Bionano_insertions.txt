@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+4325	16	16	47493238.0	47509603.0	701736.4	721102.6	1.0	insertion	heterozygous	1	3001.0	False	False	PHKB	['Phosphorylase kinase deficiency of liver and muscle, autosomal recessive, 261750 (3)']	10.72577937500048	91.72381284860096

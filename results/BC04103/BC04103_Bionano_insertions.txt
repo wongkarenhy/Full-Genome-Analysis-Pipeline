@@ -1,0 +1,4 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+17251	19	19	49807882.0	49845677.0	22776618.1	22986391.4	1.0	insertion	heterozygous	2	171978.0	False	False	MED25	['?Charcot-Marie-Tooth disease, type 2B2, 605589 (3)' 'Basel-Vanagait-Smirin-Yosef syndrome, 616449 (3)']	5.870270664000115	92.51176172534984
+6964	6	6	129471077.0	129482859.5	69250549.5	69268813.8	1.0	insertion	heterozygous	1	6482.0	True	False	LAMA2	['Muscular dystrophy, congenital, merosin deficient or partially deficient, 607855 (3)' 'Muscular dystrophy, limb-girdle, autosomal recessive 23, 618138 (3)']	4.380102982000048	69.02765930168614
+17251	19	19	49807882.0	49845677.0	22776618.1	22986391.4	1.0	insertion	heterozygous	2	171978.0	False	False	FUZ	['{Neural tube defects, susceptibility to}, 182940 (3)']	1.0413090500000026	16.41037359773242

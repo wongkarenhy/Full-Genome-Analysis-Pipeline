@@ -1,0 +1,2 @@
+Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+15	28394036	28424089	14485	-1.0	duplication_inverted	unknown	-1	105202.0	False	False	CHROMOSOME 15Q11-Q13 DUPLICATION SYNDROME	15q11-q13 	0.000915751	0.05864149997589026

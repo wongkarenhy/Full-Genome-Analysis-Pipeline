@@ -1,0 +1,23 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Name	Name2	Phenotype	Phenotype2	Found_in_Father	Found_in_Mother
+10	38332967	call_2755	T	<INV>			3.0	False	38366866	33899	None	None	None	None	False	False
+10	83713315	call_1996	C	<INV>			4.0	False	83754602	41287	None	None	None	None	False	False
+11	94241653	call_2036	G	<INV>			4.0	False	94267586	25933	None	None	None	None	False	False
+13	96631398	call_1049	T	<INV>			6.0	False	96679645	48247	None	None	None	None	False	False
+14	79925377	call_1056	A	<INV>			6.0	False	79955392	30015	None	None	None	None	False	False
+15	87423396	call_1510	T	<INV>			5.0	False	87466488	43092	None	None	None	None	False	False
+2	29408098	call_1125	T	<INV>			6.0	False	29451010	42912	None	None	None	None	False	False
+3	67643076	call_2331	G	<INV>			4.0	False	67701926	58850	None	None	None	None	False	False
+3	104994023	call_2340	C	<INV>			4.0	False	105066304	72281	None	None	None	None	False	False
+3	189500311	call_522	T	<INV>			9.0	False	189534605	34294	None	None	None	None	False	False
+4	99165041	call_2393	T	<INV>			4.0	False	99211701	46660	None	None	None	None	False	False
+4	173294825	call_3280	C	<INV>			3.0	False	173325166	30341	None	None	None	None	False	False
+5	112637644	call_2450	A	<INV>			4.0	False	112704922	67278	None	None	None	None	False	False
+6	61775098	call_3361	A	<INV>			3.0	False	61837660	62562	None	None	None	None	False	False
+6	93323325	call_1260	G	<INV>			6.0	False	93374245	50920	None	None	None	None	False	False
+X	16130254	call_1869	T	<INV>			5.0	False	16161545	31291	None	None	None	None	False	False
+X	31817791	call_3547	A	<INV>			3.0	False	31857632	39841	None	None	None	None	False	False
+X	37487377	call_1871	A	<INV>			5.0	False	37521255	33878	None	None	None	None	False	False
+X	76399357	call_2645	A	<INV>			4.0	False	76443414	44057	None	None	None	None	False	False
+X	89233845	call_3568	T	<INV>			3.0	False	89272191	38346	None	None	None	None	False	False
+X	103820518	call_2655	T	<INV>			4.0	False	103874943	54425	None	None	None	None	False	False
+X	135903905	call_3593	T	<INV>			3.0	False	135980996	77091	None	None	None	None	False	False

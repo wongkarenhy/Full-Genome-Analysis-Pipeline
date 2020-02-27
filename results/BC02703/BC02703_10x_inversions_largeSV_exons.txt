@@ -1,0 +1,24 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Name	Name2	Phenotype	Phenotype2	Found_in_Father	Found_in_Mother
+11	17230213	call_1395	C	<INV>			5.0	False	17262212	31999	None	None	None	None	False	False
+11	98706947	call_2138	T	<INV>			4.0	False	98745105	38158	None	None	None	None	False	False
+11	124630328	call_936	G	<INV>			6.0	False	124665525	35197	None	None	None	None	False	False
+12	28387726	call_2156	T	<INV>			4.0	False	28422371	34645	None	None	None	None	False	False
+13	65866447	call_3145	T	<INV>			3.0	False	65902418	35971	None	None	None	None	False	False
+17	55568647	call_3278	G	<INV>			3.0	False	55612387	43740	None	None	None	None	False	False
+17	64876585	call_3283	C	<INV>			3.0	False	64927625	51040	None	None	None	None	False	False
+2	139424425	call_3390	C	<INV>			3.0	False	139463229	38804	None	None	None	None	False	False
+4	70858176	call_1735	A	<INV>			5.0	False	70889750	31574	None	None	None	None	False	False
+4	181178869	call_3625	G	<INV>			3.0	False	181197950	19081	None	None	None	None	False	False
+5	54453734	call_2605	G	<INV>			4.0	False	54498359	44625	None	None	None	None	False	False
+5	83315901	call_1783	C	<INV>			5.0	False	83355498	39597	None	None	None	None	False	False
+6	81157614	call_3728	G	<INV>			3.0	False	81211053	53439	None	None	None	None	False	False
+6	99760708	call_1827	C	<INV>			5.0	False	99792680	31972	None	None	None	None	False	False
+7	4561879	call_1217	G	<INV>			6.0	False	4602948	41069	None	None	None	None	False	False
+8	26897950	call_1889	A	<INV>			5.0	False	26930136	32186	None	None	None	None	False	False
+8	94894524	call_3864	C	<INV>			3.0	False	94927898	33374	None	None	None	None	False	False
+8	143593216	call_1916	A	<INV>			5.0	False	143630064	36848	None	None	None	None	False	False
+9	19938907	call_1924	A	<INV>			5.0	False	19979739	40832	None	None	None	None	False	False
+9	66927892	call_1264	T	<INV>			6.0	False	66968747	40855	None	None	None	None	False	False
+9	91418298	call_839	C	<INV>			7.0	False	91455256	36958	None	None	None	None	False	False
+X	18753947	call_1275	G	<INV>			6.0	False	18794743	40796	None	None	None	None	False	False
+X	137429871	call_3993	T	<INV>			3.0	False	137470622	40751	None	None	None	None	False	False

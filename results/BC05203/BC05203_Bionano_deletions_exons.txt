@@ -1,0 +1,8 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+11321	11	11	14630048.0	14917122.0	34717668.0	34729506.8	0.97	deletion	heterozygous	1	275235.0	True	False	CYP2R1	['Rickets due to defect in vitamin D 25-hydroxylation, 600081 (3)']	23.51691946900012	96.6491759626153
+16692	19	19	41337862.0	41378669.5	17019718.6	17059347.0	0.98	deletion	heterozygous	1	1179.0	True	False	B9D2	['?Meckel syndrome 10, 614175 (3)' 'Joubert syndrome 34, 614175 (3)']	14.561977455999953	59.84640647189391
+62	1	1	12777473.0	16566162.0	10166955.4	13937743.9	1.0	deletion	heterozygous	1	17900.0	True	False	CLCNKB	['Bartter syndrome, type 3, 607364 (3)' 'Bartter syndrome, type 4b, digenic, 613090 (3)']	9.868334260999955	40.556603330063695
+62	1	1	12777473.0	16566162.0	10166955.4	13937743.9	1.0	deletion	heterozygous	1	17900.0	True	False	CTRC	['{Pancreatitis, onic, susceptibility to}, 167800 (3)']	9.246260323999953	38.00002131352348
+10182	9	9	105720930.0	105735448.0	37520836.3	37532069.7	1.0	deletion	heterozygous	1	3285.0	False	False	TMEM38B	['Osteogenesis imperfecta, type XIV, 615066 (3)']	3.5827501779999964	14.724286182127896
+16692	19	19	41337862.0	41378669.5	17019718.6	17059347.0	0.98	deletion	heterozygous	1	1179.0	True	False	TGFB1	['Camurati-Engelmann disease, 131300 (3)' 'Inflammatory bowel disease, immunodeficiency, and encephalopathy, 618213 (3)' '{Cystic fibrosis lung disease, modifier of}, 219700 (3)']	2.4426077399999993	10.038560772472781
+62	1	1	12777473.0	16566162.0	10166955.4	13937743.9	1.0	deletion	heterozygous	1	17900.0	True	False	CLCNKA	['Bartter syndrome, type 4b, digenic, 613090 (3)']	2.346818784	9.644890008071734

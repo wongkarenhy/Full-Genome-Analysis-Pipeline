@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
+22	21641798	21648328	call_3282	C	<DEL>	8.0	True	-1080	False	False	22Q11.2 DISTAL DELETION SYNDROME	22q11.2 	0.030302999999999997	1.6229052694866495	12273	0.99	deletion	heterozygous	1	1149.0	False	True

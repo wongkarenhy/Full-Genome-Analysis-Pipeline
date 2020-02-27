@@ -1,0 +1,7 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+5	37219220	call_3140	A	<DUP:TANDEM>			2.0	False	37326019	106799	False	False	CPLANE1	['Joubert syndrome 17, 614615 (3)' 'Orofaciodigital syndrome VI, 277170 (3)']	10.602289514000207	99.67665181068566
+14	90301011	call_2812	C	<DUP:TANDEM>			2.0	False	90402474	101463	False	False	CALM1	['Long QT syndrome 14, 616247 (3)' 'Ventricular tachycardia, catecholaminergic polymorphic, 4, 614916 (3)']	3.6966988699999845	34.754244885255865
+18	69982050	call_2920	A	<DUP:TANDEM>			2.0	False	70024584	42534	False	False	RTTN	['Microcephaly, short stature, and polymicrogyria with seizures, 614833 (3)']	3.6849737559999847	34.64401208090966
+3	180617377	call_1779	A	<DUP:TANDEM>			4.0	False	180670301	52924	False	False	CCDC39	['Ciliary dyskinesia, primary, 14, 613807 (3)']	2.7857779329999945	26.19028811492674
+2	88506706	call_2963	T	<DUP:TANDEM>			2.0	False	88577244	70538	False	False	EIF2AK3	['Wolcott-Rallison syndrome, 226980 (3)']	1.0402267809999997	9.779616234490737
+6	80247959	call_1855	A	<DUP:TANDEM>			4.0	False	80285855	37896	False	False	BCKDHB	['Maple syrup urine disease, type Ib, 248600 (3)']	0.6385936000000002	6.003691167995306

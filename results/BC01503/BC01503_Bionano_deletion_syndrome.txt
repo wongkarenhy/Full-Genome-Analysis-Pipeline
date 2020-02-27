@@ -1,0 +1,2 @@
+Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+8	8020195	8043075	2391	0.99	deletion	heterozygous	1	7433.0	False	False	8P23.1 DELETION SYNDROME	8p23.1 	0.00515464	0.257098828317967

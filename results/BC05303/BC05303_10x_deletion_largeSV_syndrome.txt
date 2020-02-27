@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+14	42397343	42493440	call_163	C	<DEL>	47.0	True	-96097	False	True	CHROMOSOME 14Q11-Q22 DELETION SYNDROME	14q11-q22 	0.034263833	2.2842555333333334

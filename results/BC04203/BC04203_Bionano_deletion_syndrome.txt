@@ -1,0 +1,2 @@
+Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+11	35021421	35059595	11580	1.0	deletion	heterozygous	1	28457.0	True	False	CHROMOSOME 11P13 DELETION SYNDROME, DISTAL	11p13 	0.001759633	0.11268075986493675

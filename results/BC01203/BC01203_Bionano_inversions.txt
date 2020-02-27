@@ -1,0 +1,2 @@
+SmapEntryID	Name	Phenotype	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Name2	Phenotype2	Found_in_Father	Found_in_Mother
+678	SMPD4	['Neurodevelopmental disorder with microcephaly, arthrogryposis, and structural brain anomalies, 618622 (3)']	2	2	130137133.0	130968568.0	232840.3	232840.3	0.12	inversion	unknown	-1			False	False

@@ -1,0 +1,3 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+2792	12	12	6388400.5	6556090.0	21049.7	245366.9	-1.0	duplication_inverted	unknown	-1	56628.0	False	False	NCAPD2	['?Microcephaly 21, primary, autosomal recessive, 617983 (3)']	327.0364736769986	91.41412639953812
+2792	12	12	6388400.5	6556090.0	21049.7	245366.9	-1.0	duplication_inverted	unknown	-1	56628.0	False	False	VAMP1	['Myasthenic syndrome, congenital, 25, 618323 (3)' 'Spastic ataxia 1, autosomal dominant, 108600 (3)']	232.987686564994	65.12535311343869

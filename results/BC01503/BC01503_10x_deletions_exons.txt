@@ -1,0 +1,2 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+11	17573025	call_3911	A	<DEL>			2.0	True	17573332	-307	False	False	OTOG	['Deafness, autosomal recessive 18B, 614945 (3)']	82.04067425799872	93.08482924937732

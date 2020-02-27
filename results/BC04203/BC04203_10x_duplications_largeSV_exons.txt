@@ -1,0 +1,15 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+5	149000013	call_3746	A	<DUP:TANDEM>			3.0	False	149037543	37530	False	False	SH3TC2	['Charcot-Marie-Tooth disease, type 4C, 601596 (3)' 'Mononeuropathy of the median nerve, mild, 613353 (3)']	81.61110653399821	80.1823058457667
+14	75036521	call_3210	T	<DUP:TANDEM>			3.0	False	75106681	70160	False	False	NEK9	['?Arthrogryposis, Perthes disease, and upward gaze palsy, 614262 (3)' 'Lethal congenital contracture syndrome 10, 617022 (3)' 'Nevus comedonicus, somatic, 617025 (3)']	81.38939177599822	79.96447274324566
+4	93202778	call_3654	T	<DUP:TANDEM>			3.0	False	93250206	47428	False	False	GRID2	['Spinocerebellar ataxia, autosomal recessive 18, 616204 (3)']	78.922034118998	77.54031217630042
+2	196898061	call_1588	T	<DUP:TANDEM>			5.0	False	196930560	32499	False	False	PGAP1	['Mental retardation, autosomal recessive 42, 615802 (3)']	43.869576182999005	43.10153267391386
+2	169105306	call_3470	A	<DUP:TANDEM>			3.0	False	169152558	47252	False	False	LRP2	['Donnai-Barrow syndrome, 222448 (3)']	36.203787480999566	35.569952226629006
+14	75036521	call_3210	T	<DUP:TANDEM>			3.0	False	75106681	70160	False	False	MLH3	['Colorectal cancer, hereditary nonpolyposis, type 7, 614385 (3)' 'Colorectal cancer, somatic, 114500 (3)' '{Endometrial cancer, susceptibility to}, 608089 (3)']	28.35426599199991	27.85785568114606
+1	97550326	call_2917	T	<DUP:TANDEM>			3.0	False	97602289	51963	False	False	DPYD	['5-fluorouracil toxicity, 274270 (3)' 'Dihydropyrimidine dehydrogenase deficiency, 274270 (3)']	20.081656056000114	19.73007787979087
+12	104404915	call_3133	A	<DUP:TANDEM>			3.0	False	104461110	56195	False	False	CHST11	['?Osteochondrodysplasia, brachydactyly, and overlapping malformed digits, 618167 (3)']	18.21988327100019	17.900899950436365
+10	62397222	call_2995	C	<DUP:TANDEM>			3.0	False	62479876	82654	False	False	ZNF365	['{Nephrolithiasis, uric acid, susceptibility to}, 605990 (3)']	13.707281631000217	13.467302365187942
+19	47837628	call_1544	A	<DUP:TANDEM>			5.0	False	47874469	36841	False	False	CRX	['Cone-rod retinal dystrophy-2, 120970 (3)' 'Leber congenital amaurosis 7, 613829 (3)']	12.969999664000182	12.742928310194118
+12	88172156	call_3123	T	<DUP:TANDEM>			3.0	False	88255649	83493	False	False	TMTC3	['Lissencephaly 8, 617255 (3)']	7.023054245000007	6.900098618432649
+1	9932825	call_2870	G	<DUP:TANDEM>			3.0	False	9985660	52835	False	False	NMNAT1	['Leber congenital amaurosis 9, 608553 (3)']	4.9404551329999995	4.8539604634139835
+4	118730107	call_2533	C	<DUP:TANDEM>			4.0	False	118774026	43919	False	False	SEC24D	['Cole-Carpenter syndrome 2, 616294 (3)']	2.0962351139999997	2.0595354256759535
+20	34909276	call_3514	G	<DUP:TANDEM>			3.0	False	34946828	37552	False	False	GSS	['Glutathione synthetase deficiency, 266130 (3)' 'Hemolytic anemia due to glutathione synthetase deficiency, 231900 (3)']	0.7754094720000004	0.7618340453907154

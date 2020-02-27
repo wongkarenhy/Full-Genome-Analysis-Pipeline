@@ -1,0 +1,3 @@
+SmapEntryID	Name	Phenotype	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Name2	Phenotype2	Found_in_Father	Found_in_Mother
+14050			14	14	106352992.0	106453324.0	468501.5	605193.7	0.03	inversion	heterozygous	1			False	False
+17236			22	22	10784271.0	10960224.0	119077.4	119077.4	0.25	inversion	homozygous	1			False	False

@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
+5	180484946	180489775	call_3510	C	<DEL>	12.0	True	-3657	True	False	#117550 SOTOS SYNDROME 1; SOTOS1;;SOTOS SYNDROME;;CEREBRAL GIGANTISM;;CHROMOSOME 5Q35 DELETION SYNDROME	5q35 	0.001759633	0.04577255012131605	6491	1.0	deletion	heterozygous	1	3864.0	True	False

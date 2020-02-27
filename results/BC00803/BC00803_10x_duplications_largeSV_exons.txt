@@ -1,0 +1,13 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+5	138527982	call_3407	A	<DUP:TANDEM>			2.0	False	138629121	101139	False	False	HSPA9	['Anemia, sideroblastic, 4, 182170 (3)' 'Even-plus syndrome, 616854 (3)']	85.6170139349994	93.27269639784657
+2	209950390	call_2668	C	<DUP:TANDEM>			3.0	False	210031125	80735	False	False	UNC80	['Hypotonia, infantile, with psychomotor retardation and characteristic facies 2, 616801 (3)']	76.31385840499887	83.13767344609458
+14	58585513	call_3121	C	<DUP:TANDEM>			2.0	False	58677074	91561	False	False	DACT1	['?Townes-Brocks syndrome 2, 617466 (3)']	75.30182176299881	82.03514274437644
+10	125791387	call_2461	T	<DUP:TANDEM>			3.0	False	125858428	67041	False	False	UROS	['Porphyria, congenital erythropoietic, 263700 (3)']	75.06979303299877	81.78236652275649
+20	19857706	call_2679	A	<DUP:TANDEM>			3.0	False	19957741	100035	False	False	RIN2	['Macrocephaly, alopecia, cutis laxa, and scoliosis, 613075 (3)']	66.9501046249982	72.93663368395966
+2	29477357	call_3237	C	<DUP:TANDEM>			2.0	False	29607399	130042	False	False	ALK	['{Neuroblastoma, susceptibility to, 3}, 613014 (3)']	37.43014027399946	40.777059949277074
+8	99152392	call_2910	G	<DUP:TANDEM>			3.0	False	99249932	97540	False	False	VPS13B	['Cohen syndrome, 216550 (3)']	33.581552191999776	36.584339703214106
+11	116758811	call_2480	T	<DUP:TANDEM>			3.0	False	116813549	54738	False	False	APOA5	['Hyperchylomicronemia, late-onset, 144650 (3)' '{Hypertriglyceridemia, susceptibility to}, 145750 (3)']	32.10429916499997	34.97499400476728
+16	54012818	call_2009	A	<DUP:TANDEM>			4.0	False	54061661	48843	False	False	FTO	['Growth retardation, developmental delay, facial dysmorphism, 612938 (3)' '{Obesity, susceptibility to, BMIQ14}, 612460 (3)']	23.14211732500009	25.21143385001533
+4	41240213	call_2766	A	<DUP:TANDEM>			3.0	False	41278237	38024	False	False	UCHL1	['Spastic paraplegia 79, autosomal recessive, 615491 (3)' '{?Parkinson disease 5, susceptibility to}, 613643 (3)']	17.291212860000147	18.837354555086133
+1	2196560	call_1801	G	<DUP:TANDEM>			4.0	False	2279930	83370	False	False	SKI	['Shprintzen-Goldberg syndrome, 182212 (3)']	15.166308131000147	16.522445583688974
+1	75699116	call_2401	A	<DUP:TANDEM>			3.0	False	75819974	120858	False	False	ACADM	['Acyl-CoA dehydrogenase, medium chain, deficiency of, 201450 (3)']	3.511498715000002	3.8254890995647495

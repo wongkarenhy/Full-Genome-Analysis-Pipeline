@@ -1,0 +1,4 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
+14	46530954	46534925	call_58	T	<DEL>	244.0	True	-1563	True	False	CHROMOSOME 14Q11-Q22 DELETION SYNDROME	14q11-q22 	0.034263833	2.2842555333333334	13738	0.99	deletion	heterozygous	1	1609.0	True	False
+6	1504627	1509917	call_3741	T	<DEL>	8.0	True	-4079	False	False	CHROMOSOME 6PTER-P24 DELETION SYNDROME	6pter-p24 	0.009675943	0.6450628666666667	6488	1.0	deletion	heterozygous	1	3895.0	True	False
+13	50400644	50406394	call_3686	A	<DEL>	8.0	True	-1796	False	False	CHROMOSOME 13Q14 DELETION SYNDROME	13q14 	0.00358423	0.23894866666666664	12819	0.99	deletion	heterozygous	1	1752.0	False	True

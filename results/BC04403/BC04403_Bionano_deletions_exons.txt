@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+3625	3	3	43419984.0	43434540.0	43538988.8	43549263.5	1.0	deletion	heterozygous	1	4281.0	True	False	ANO10	['Spinocerebellar ataxia, autosomal recessive 10, 613728 (3)']	5.365135713999991	50.703264807408345

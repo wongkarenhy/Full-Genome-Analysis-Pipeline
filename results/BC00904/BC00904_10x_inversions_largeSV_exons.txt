@@ -1,0 +1,24 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Name	Name2	Phenotype	Phenotype2	Found_in_Father	Found_in_Mother
+1	143246770	call_76	A	<INV>			39.0	False	143262935	16165	None	None	None	None	False	False
+11	29259570	call_1725	A	<INV>			4.0	False	29308315	48745	None	None	None	None	False	False
+11	36236978	call_1727	C	<INV>			4.0	False	36302479	65501	None	None	None	None	False	False
+11	68303761	call_3260	T	<INV>			2.0	False	68351601	47840	None	None	None	None	False	False
+16	82123771	call_1868	T	<INV>			4.0	False	82165104	41333	None	None	None	None	False	False
+18	24924709	call_1896	C	<INV>			4.0	False	24982649	57940	None	None	None	None	False	False
+2	10951453	call_1333	C	<INV>			5.0	False	11008968	57515	None	None	None	None	False	False
+2	29286747	call_2669	A	<INV>			3.0	False	29345331	58584	None	None	None	None	False	False
+2	238723239	call_933	A	<INV>			6.0	False	238776297	53058	None	None	None	None	False	False
+3	79016903	call_2807	T	<INV>			3.0	False	79082272	65369	None	None	None	None	False	False
+3	94039219	call_3709	T	<INV>			2.0	False	94165070	125851	None	None	None	None	False	False
+3	183327938	call_1439	A	<INV>			5.0	False	183361928	33990	None	None	None	None	False	False
+4	185594701	call_2876	C	<INV>			3.0	False	185648752	54051	None	None	None	None	False	False
+6	633916	call_1501	G	<INV>			5.0	False	677339	43423	None	None	None	None	False	False
+6	27469335	call_1022	C	<INV>			6.0	False	27510894	41559	None	None	None	None	False	False
+9	42098372	call_4050	A	<INV>			2.0	False	42175185	76813	None	None	None	None	False	False
+X	28072249	call_3080	A	<INV>			3.0	False	28111814	39565	None	None	None	None	False	False
+X	57245004	call_3085	C	<INV>			3.0	False	57275587	30583	None	None	None	None	False	False
+Y	8581554	call_4112	T	<INV>			2.0	False	8620866	39312	None	None	None	None	False	False
+Y	14284583	call_3107	C	<INV>			3.0	False	14316993	32410	None	None	None	None	False	False
+Y	14741373	call_3108	C	<INV>			3.0	False	14786728	45355	None	None	None	None	False	False
+Y	15212526	call_4115	T	<INV>			2.0	False	15256368	43842	None	None	None	None	False	False
+Y	20958676	call_3112	A	<INV>			3.0	False	21031567	72891	None	None	None	None	False	False

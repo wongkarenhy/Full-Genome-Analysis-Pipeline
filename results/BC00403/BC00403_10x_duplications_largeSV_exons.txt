@@ -1,0 +1,45 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+16	4318686	call_1405	C	<DUP:TANDEM>			4.0	False	4349576	30890	False	False	PAM16	['Spondylometaphyseal dysplasia, Megarbane-Dagher-Melike type, 613320 (3)']	46.48880187299902	98.12762672395571
+7	139834606	call_5249	C	<DUP:TANDEM>			2.0	False	139886099	51493	False	False	TBXAS1	['?Thromboxane synthase deficiency, 614158 (1)' 'Ghosal hematodiaphyseal syndrome, 231095 (3)']	45.28085464699901	95.5779160469849
+17	44553857	call_2618	C	<DUP:TANDEM>			3.0	False	44599666	45809	False	False	FZD2	['Omodysplasia 2, 164745 (3)']	44.07641873199914	93.03561697455648
+4	112876631	call_3101	T	<DUP:TANDEM>			3.0	False	112913598	36967	False	False	ANK2	['Cardiac arrhythmia, ankyrin-B-related, 600919 (3)' 'Long QT syndrome 4, 600919 (3)']	43.87841015099919	92.61766444961114
+10	51006771	call_3783	C	<DUP:TANDEM>			2.0	False	51087689	80918	False	False	PRKG1	['Aortic aneurysm, familial thoracic 8, 615436 (3)']	43.35856968499923	91.52039566339882
+2	55662192	call_1528	T	<DUP:TANDEM>			4.0	False	55692293	30101	False	False	PNPT1	['Combined oxidative phosphorylation deficiency 13, 614932 (3)' 'Deafness, autosomal recessive 70, 614934 (3)']	43.323722728999236	91.44684141048054
+9	21935493	call_1077	T	<DUP:TANDEM>			5.0	False	21972366	36873	False	False	CDKN2A	['{Melanoma and neural system tumor syndrome}, 155755 (3)' '{Melanoma, cutaneous malignant, 2}, 155601 (3)' '{Melanoma-pancreatic cancer syndrome}, 606719 (3)']	42.92912359299927	90.61392950131196
+19	10962125	call_2695	G	<DUP:TANDEM>			3.0	False	10994768	32643	False	False	SMARCA4	['Coffin-Siris syndrome 4, 614609 (3)' '{Rhabdoid tumor predisposition syndrome 2}, 613325 (3)']	42.65921954099928	90.0442214641315
+10	99102344	call_3810	A	<DUP:TANDEM>			2.0	False	99156278	53934	False	False	HPSE2	['Urofacial syndrome 1, 236730 (3)']	39.61542240399946	83.61943576845111
+20	36167068	call_2878	C	<DUP:TANDEM>			3.0	False	36200858	33790	False	False	EPB41L1	['?Mental retardation, autosomal dominant 11, 614257 (3)']	39.24799571399946	82.84387891105489
+1	180678435	call_2136	C	<DUP:TANDEM>			3.0	False	180722506	44071	False	False	XPR1	['Basal ganglia calcification, idiopathic, 6, 616413 (3)']	38.61978924499952	81.51787334816676
+5	177483612	call_3237	G	<DUP:TANDEM>			3.0	False	177531533	47921	False	False	DDX41	['{Myeloproliferative/lymphoproliferative neoplasms, familial (multiple types), susceptibility to}, 616871 (3)']	38.16104891099955	80.54957349004293
+5	151663948	call_3220	A	<DUP:TANDEM>			3.0	False	151696857	32909	False	False	SPARC	['Osteogenesis imperfecta, type XVII, 616507 (3)']	38.152852190999546	80.53227201854625
+17	50582426	call_2624	A	<DUP:TANDEM>			3.0	False	50612644	30218	False	False	CACNA1G	['Spinocerebellar ataxia 42, 616795 (3)' 'Spinocerebellar ataxia 42, early-onset, severe, with neurodevelopmental deficits, 618087 (3)']	37.80630492099957	79.80078702038125
+7	42154972	call_5178	T	<DUP:TANDEM>			2.0	False	42212410	57438	False	False	GLI3	['Greig cephalopolysyndactyly syndrome, 175700 (3)' 'Pallister-Hall syndrome, 146510 (3)' 'Polydactyly, postaxial, types A1 and B, 174200 (3)' 'Polydactyly, preaxial, type IV, 174700 (3)' '{Hypothalamic hamartomas, somatic}, 241800 (3)']	36.713568181999634	77.4942603190679
+2	26496060	call_2748	T	<DUP:TANDEM>			3.0	False	26546677	50617	False	False	OTOF	['Auditory neuropathy, autosomal recessive, 1, 601071 (3)' 'Deafness, autosomal recessive 9, 601071 (3)']	36.44104160199964	76.9190167026019
+14	91387020	call_748	T	<DUP:TANDEM>			5.0	False	91427421	40401	False	False	CCDC88C	['?Spinocerebellar ataxia 40, 616053 (3)' 'Hydrocephalus, congenital, 1, 236600 (3)']	36.406896751999646	76.84694444088824
+2	60546506	call_4480	A	<DUP:TANDEM>			2.0	False	60590869	44363	False	False	BCL11A	['Dias-Logan syndrome, 617101 (3)']	34.08214570499969	71.93990675062176
+9	85709981	call_5427	C	<DUP:TANDEM>			2.0	False	85759554	49573	False	False	AGTPBP1	['Neurodegeneration, childhood-onset, with cerebellar atrophy, 618276 (3)']	33.036515934999734	69.73281249075431
+19	40208540	call_1507	C	<DUP:TANDEM>			4.0	False	40247490	38950	False	False	AKT2	['Diabetes mellitus, type II, 125853 (3)' 'Hypoinsulinemic hypoglycemia with hemihypertrophy, 240900 (3)']	32.28075631899981	68.13757031405812
+8	140005880	call_1980	T	<DUP:TANDEM>			4.0	False	140041952	36072	False	False	TRAPPC9	['Mental retardation, autosomal recessive 13, 613192 (3)']	30.906229534999873	65.23624686091996
+2	74096995	call_2777	G	<DUP:TANDEM>			3.0	False	74149946	52951	False	False	BOLA3	['Multiple mitochondrial dysfunctions syndrome 2 with hyperglycinemia, 614299 (3)']	30.386884366999894	64.14002353975086
+2	196887229	call_4562	C	<DUP:TANDEM>			2.0	False	196932144	44915	False	False	PGAP1	['Mental retardation, autosomal recessive 42, 615802 (3)']	30.048692743999904	63.42617547299337
+15	27743404	call_4154	A	<DUP:TANDEM>			2.0	False	27788236	44832	False	False	OCA2	['Albinism, brown oculocutaneous, 203200 (3)' 'Albinism, oculocutaneous, type II, 203200 (3)' '[Skin/hair/eye pigmentation 1, blond/brown hair], 227220 (3)' '[Skin/hair/eye pigmentation 1, blue/nonblue eyes], 227220 (3)']	27.580634707999938	58.216648276502504
+17	40828276	call_2613	G	<DUP:TANDEM>			3.0	False	40864821	36545	False	False	KRT12	['Meesmann corneal dystrophy, 122100 (3)']	25.64688630999998	54.134931103077186
+1	44913138	call_2074	C	<DUP:TANDEM>			3.0	False	44944386	31248	False	False	EIF2B3	['Leukoencephalopathy with vanishing white matter, 603896 (3)']	23.493470387999995	49.58954414402615
+8	43173018	call_3448	C	<DUP:TANDEM>			3.0	False	43212845	39827	False	False	HGSNAT	['Mucopolysaccharidosis type IIIC (Sanfilippo C), 252930 (3)' 'Retinitis pigmentosa 73, 616544 (3)']	22.663093359000026	47.83680103474025
+9	14134002	call_5387	A	<DUP:TANDEM>			2.0	False	14301847	167845	False	False	NFIB	['Macrocephaly, acquired, with impaired intellectual development, 618286 (3)']	21.938882783000043	46.30815193628839
+X	10159925	call_5463	C	<DUP:TANDEM>			2.0	False	10200985	41060	False	False	CLCN4	['Raynaud-Claes syndrome, 300114 (3)']	18.213123406000133	38.44389407891677
+8	41987018	call_3447	G	<DUP:TANDEM>			3.0	False	42021390	34372	False	False	KAT6A	['Mental retardation, autosomal dominant 32, 616268 (3)']	15.391269066000158	32.487580769286865
+1	181729087	call_2138	C	<DUP:TANDEM>			3.0	False	181766047	36960	False	False	CACNA1E	['Epileptic encephalopathy, early infantile, 69, 618285 (3)']	14.344048185000126	30.277128024364913
+20	10290083	call_531	G	<DUP:TANDEM>			6.0	False	10321575	31492	False	False	SNAP25	['?Myasthenic syndrome, congenital, 18, 616330 (3)']	13.508552295000113	28.513580126372347
+16	57179427	call_2583	A	<DUP:TANDEM>			3.0	False	57218976	39549	False	False	RSPRY1	['Spondyloepimetaphyseal dysplasia, Faden-Alkuraya type, 616723 (3)']	13.43981890500011	28.368499071028786
+5	119525410	call_4995	T	<DUP:TANDEM>			2.0	False	119572147	46737	False	False	HSD17B4	['D-bifunctional protein deficiency, 261515 (3)' 'Perrault syndrome 1, 233400 (3)']	12.967243609000096	27.370996653746964
+4	13430339	call_3040	T	<DUP:TANDEM>			3.0	False	13481967	51628	False	False	RAB28	['Cone-rod dystrophy 18, 615374 (3)']	12.950784469000096	27.336255032516764
+3	50760962	call_2959	T	<DUP:TANDEM>			3.0	False	50797420	36458	False	False	DOCK3	['Neurodevelopmental disorder with impaired intellectual development, hypotonia, and ataxia, 618292 (3)']	6.819221648000027	14.393875717659943
+9	99102066	call_3543	T	<DUP:TANDEM>			3.0	False	99135266	33200	False	False	TGFBR1	['Loeys-Dietz syndrome 1, 609192 (3)' '{Multiple self-healing squamous epithelioma, susceptibility to}, 132800 (3)']	6.619766400000019	13.972869597146298
+11	13447331	call_3847	C	<DUP:TANDEM>			2.0	False	13495617	48286	False	False	PTH	['Hypoparathyroidism, autosomal dominant, 146200 (3)' 'Hypoparathyroidism, autosomal recessive, 146200 (3)']	6.5932164800000175	13.916828560717176
+5	94099900	call_4977	T	<DUP:TANDEM>			2.0	False	94161019	61119	False	False	KIAA0825	['Polydactyly, postaxial, type A10, 618498 (3)']	5.3844161600000096	11.365317190112197
+18	9101117	call_4329	G	<DUP:TANDEM>			2.0	False	9169766	68649	False	False	NDUFV2	['Mitochondrial complex I deficiency, nuclear type 7, 618229 (3)']	3.3547910579999947	7.08122540080965
+1	215908900	call_2162	C	<DUP:TANDEM>			3.0	False	215942080	33180	False	False	USH2A	['Retinitis pigmentosa 39, 613809 (3)' 'Usher syndrome, type 2A, 276901 (3)']	3.3547910579999947	7.08122540080965
+10	13958179	call_3754	T	<DUP:TANDEM>			2.0	False	14043374	85195	False	False	FRMD4A	['?Corpus callosum, agenesis of, with facial anomalies and cerebellar ataxia, 616819 (3)']	2.182754079999998	4.60731335209637
+17	67952005	call_1466	G	<DUP:TANDEM>			4.0	False	67990806	38801	False	False	BPTF	['Neurodevelopmental disorder with dysmorphic facies and distal limb anomalies, 617755 (3)']	0.7971319079999994	1.682569977425243
+10	88744982	call_3807	T	<DUP:TANDEM>			2.0	False	88787552	42570	False	False	LIPN	['Ichthyosis, congenital, autosomal recessive 8, 613943 (3)']	0.17246951799999996	0.3640451851135818

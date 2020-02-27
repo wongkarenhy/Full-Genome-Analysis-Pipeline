@@ -1,0 +1,2 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
+17	63834468	call_4322	T	<DEL>			2.0	True	63834780	-312	False	False	SMARCD2	['Specific granule deficiency 2, 617475 (3)']	0.5525874150000003	6.754734816281472

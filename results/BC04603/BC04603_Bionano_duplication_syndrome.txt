@@ -1,0 +1,2 @@
+Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+22	17753554	17786146	17274	-1.0	duplication	unknown	-1	32194.0	True	False	CHROMOSOME 22Q11.2 DUPLICATION SYNDROME	22q11.2 	0.0053767220000000004	0.4884182115116664

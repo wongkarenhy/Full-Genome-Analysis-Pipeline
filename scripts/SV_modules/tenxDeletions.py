@@ -8,7 +8,6 @@ from io import StringIO
 import numpy as np
 import allel
 import argparse
-#from .BioNanoDeletions import overlap_length, reciprocal_overlap
 
 
 def overlap_length(df):
@@ -86,7 +85,7 @@ def checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_f
     else:
         filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_f_frame, on=None, how='left', indicator='Found_in_Father')
         filtered_sample_frame['Found_in_Father'] = np.where(filtered_sample_frame.Found_in_Father == 'both', True, False)
-        filtered_sample_frame = filtered_sample_frame.drop(columns=['Start', 'End', 'Chromosome', 'Length', 'Length_b', 'Overlap', 'Fraction', 'Fraction_b']).drop_duplicates()
+        filtered_sample_frame = filtered_sample_frame.drop(columns=['Start', 'End', 'Chromosome', 'Length', 'Length_b', 'Overlap', 'Fraction', 'Fraction_b', 'CHROM_b', 'POS_b', 'ID_b', 'REF_b', 'ALT_1_b','ALT_2_b','ALT_3_b', 'QUAL_b','FILTER_PASS_b', 'END_b','SVLEN_b','Start_b', 'End_b']).drop_duplicates()
 
 
     if denovo_m_frame.empty:
@@ -96,7 +95,7 @@ def checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_f
     else:
         denovo_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_m_frame, on=None, how='left', indicator='Found_in_Mother')
         denovo_filtered_sample_frame['Found_in_Mother'] = np.where(denovo_filtered_sample_frame.Found_in_Mother == 'both', True, False)
-        denovo_filtered_sample_frame = denovo_filtered_sample_frame.drop(columns=['Start', 'End', 'Chromosome', 'Length', 'Length_b', 'Overlap', 'Fraction', 'Fraction_b']).drop_duplicates()
+        denovo_filtered_sample_frame = denovo_filtered_sample_frame.drop(columns=['Start', 'End', 'Chromosome', 'Length', 'Length_b', 'Overlap', 'Fraction', 'Fraction_b', 'CHROM_b', 'POS_b', 'ID_b', 'REF_b', 'ALT_1_b','ALT_2_b','ALT_3_b', 'QUAL_b','FILTER_PASS_b', 'END_b','SVLEN_b','Start_b', 'End_b']).drop_duplicates()
 
     df = denovo_filtered_sample_frame
 

@@ -42,10 +42,10 @@ def BN_inversion(args):
 
     for df in [sample_start, mother_start, father_start,
                ref_start]:  # create an interval for the translocation start point
-        df['Start'], df['End'], df['Chromosome'] = df.RefStartPos - 100000, df.RefStartPos + 100000, df['RefcontigID1']
+        df['Start'], df['End'], df['Chromosome'] = df.RefStartPos - 20000, df.RefStartPos + 20000, df['RefcontigID1']
 
     for df in [sample_end, mother_end, father_end, ref_end]:  # create an interval for the translocation end point
-        df['Start'], df['End'], df['Chromosome'] = df.RefEndPos - 100000, df.RefEndPos + 100000, df['RefcontigID2']
+        df['Start'], df['End'], df['Chromosome'] = df.RefEndPos - 20000, df.RefEndPos + 20000, df['RefcontigID2']
 
 
     #overlap start and end points with exons separately  

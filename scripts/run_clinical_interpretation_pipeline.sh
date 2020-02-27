@@ -52,6 +52,10 @@ if [[ ! -d ${WORKDIR}/results/${SAMPLEID} ]];
     mkdir ${WORKDIR}/results/${SAMPLEID}
 fi
 
+if [[ ! -d ${WORKDIR}/results/${SAMPLEID}/confident_set ]]; then
+    mkdir ${WORKDIR}/results/${SAMPLEID}/confident_set
+fi
+
 additional_var=''
 if [[ ${BIONANO} = true ]]; then
     additional_var+=" -b -e ${ENZYME}"

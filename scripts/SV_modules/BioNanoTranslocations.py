@@ -19,8 +19,8 @@ def readsmapTranslo(input, args):
 
     raw_df = pd.read_csv(input, sep='\t', comment='#', names=colnames, header=None, skiprows=lambda x: x in [0])
     raw_df = raw_df[['SmapEntryID', 'RefcontigID1', 'RefcontigID2', 'RefStartPos','RefEndPos', 'QryStartPos', 'QryEndPos', 'Confidence', 'Type', 'Zygosity', 'Genotype']]
-    confident_df = raw_df.loc[raw_df['Confidence'] > 0.5] #modulate confidence threshold here
-    confident_df  = confident_df[confident_df['Type'].str.contains('translocation')]
+    #confident_df = raw_df.loc[raw_df['Confidence'] > 0.3] #modulate confidence threshold here
+    confident_df  = raw_df[raw_df['Type'].str.contains('translocation')]
 
     return(confident_df)
 
@@ -60,7 +60,7 @@ def BN_translocation(args):
 
     #loadsample
     sample_frame = readsmapTranslo(args.samplepath, args)
-
+    print(sample_frame)
     #loadparent
     mother_frame = readsmapTranslo(args.mpath, args)
     father_frame = readsmapTranslo(args.fpath, args)
@@ -71,10 +71,10 @@ def BN_translocation(args):
     sample_start, sample_end, mother_start, mother_end, father_start, father_end, ref_start, ref_end = sample_frame.copy(), sample_frame.copy(), mother_frame.copy(), mother_frame.copy(), father_frame.copy(), father_frame.copy(), ref_frame.copy(), ref_frame.copy()
         
     for df in [sample_start, mother_start, father_start, ref_start]: #create an interval for the translocation start point
-        df['Start'], df['End'], df['Chromosome'] = df.RefStartPos - 100000, df.RefStartPos + 100000, df['RefcontigID1']
+        df['Start'], df['End'], df['Chromosome'] = df.RefStartPos - 20000, df.RefStartPos + 20000, df['RefcontigID1']
                         
     for df in [sample_end, mother_end, father_end, ref_end]: #create an interval for the translocation end point
-        df['Start'], df['End'], df['Chromosome'] = df.RefEndPos - 100000, df.RefEndPos + 100000, df['RefcontigID2']
+        df['Start'], df['End'], df['Chromosome'] = df.RefEndPos - 20000, df.RefEndPos + 20000, df['RefcontigID2']
                     
     #overlap start and end points with exons separately  
     exon_frame = pr.read_bed(args.exons)
@@ -92,21 +92,21 @@ def BN_translocation(args):
     else: 
         sample_frame = exon_start.df.filter(items=['SmapEntryID', 'Name', 'Score']).drop_duplicates().merge(sample_frame, on=['SmapEntryID'], how='right')
         sample_frame = sample_frame.merge(exon_end.df.rename(columns = {'Name':'Name2', 'Score':'Score2'}).filter(items=['SmapEntryID', 'Name2', 'Score2']), on=['SmapEntryID'], how='left')
-    
+
     #remove anything that overlaps with the reference
-    overlap_start = PyRanges(sample_start).overlap(PyRanges(ref_start)) 
+    overlap_start = PyRanges(sample_start).overlap(PyRanges(ref_start))
     overlap_end = PyRanges(sample_end).overlap(PyRanges(ref_end))
     if overlap_start.df.empty and overlap_end.df.empty:
-        filtered_sample_frame = sample_frame          
+        filtered_sample_frame = sample_frame
     else:
-        overlap_frame = overlap_start.df.merge(overlap_end.df, on=['SmapEntryID']) 
+        overlap_frame = overlap_start.df.merge(overlap_end.df, on=['SmapEntryID'])
 
         if overlap_frame.empty:
             filtered_sample_frame = sample_frame
         else:
             common = sample_frame.merge(overlap_frame,on=['SmapEntryID'])
             filtered_sample_frame = sample_frame[(~sample_frame.SmapEntryID.isin(common.SmapEntryID))]
-    
+    print(filtered_sample_frame)
     #add column based on overlap with parents
     calls = checkParentsOverlapTransloInv(filtered_sample_frame, sample_start, father_start, mother_start, sample_end, father_end, mother_end)
 

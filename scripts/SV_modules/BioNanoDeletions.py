@@ -9,6 +9,30 @@ import numpy as np
 import argparse
 
 
+
+def readsmap(input, args, sv_type):
+
+    colnames = ['SmapEntryID', 'QryContigID', 'RefcontigID1', 'RefcontigID2', 'QryStartPos', 'QryEndPos', 'RefStartPos',
+                'RefEndPos', 'Confidence', 'Type', 'XmapID1', 'XmapID2', 'LinkID', 'QryStartIdx', 'QryEndIdx',
+                'RefStartIdx', 'RefEndIdx', 'Zygosity', 'Genotype', 'GenotypeGroup', 'RawConfidence',
+                'RawConfidenceLeft', 'RawConfidenceRight', 'RawConfidenceCenter', 'SVsize']
+
+    raw_df = pd.read_csv(input, sep='\t', comment='#', names=colnames, header=None, skiprows=lambda x: x in [0])
+    raw_df = raw_df[['SmapEntryID', 'RefcontigID1', 'RefcontigID2', 'RefStartPos','RefEndPos', 'QryStartPos', 'QryEndPos', 'Confidence', 'Type', 'Zygosity', 'Genotype']]
+    confident_df = raw_df.loc[raw_df['Confidence'] > 0.5] #modulate confidence threshold here
+    confident_df  = confident_df[confident_df['Type']==sv_type]
+
+    # calculate SV size
+    confident_df['SV_size'] = confident_df['RefEndPos'] - confident_df['RefStartPos'] - confident_df['QryEndPos'] + confident_df['QryStartPos']
+    confident_df['SV_size'] = confident_df['SV_size'].abs().round(0)
+    confident_df = confident_df.loc[confident_df['SV_size'] >= 1000]
+
+    return(confident_df)
+
+
+
+
+
 def overlap_length(df):
     overlap = np.maximum(0, np.minimum(df.End, df.End_b) - np.maximum(df.Start, df.Start_b))
     frac = overlap / df.Length
@@ -28,21 +52,6 @@ def reciprocal_overlap(df1, df2): #takes input PyRanges and refPyRanges
     overlap = overlap.loc[overlap['Fraction_b'] >= 0.5]
     return overlap
 
-
-
-def readsmap(input, args, sv_type):
-
-    colnames = ['SmapEntryID', 'QryContigID', 'RefcontigID1', 'RefcontigID2', 'QryStartPos', 'QryEndPos', 'RefStartPos',
-                'RefEndPos', 'Confidence', 'Type', 'XmapID1', 'XmapID2', 'LinkID', 'QryStartIdx', 'QryEndIdx',
-                'RefStartIdx', 'RefEndIdx', 'Zygosity', 'Genotype', 'GenotypeGroup', 'RawConfidence',
-                'RawConfidenceLeft', 'RawConfidenceRight', 'RawConfidenceCenter', 'SVsize']
-
-    raw_df = pd.read_csv(input, sep='\t', comment='#', names=colnames, header=None, skiprows=lambda x: x in [0])
-    raw_df = raw_df[['SmapEntryID', 'RefcontigID1', 'RefcontigID2', 'RefStartPos','RefEndPos', 'QryStartPos', 'QryEndPos', 'Confidence', 'Type', 'Zygosity', 'Genotype']]
-    confident_df = raw_df.loc[raw_df['Confidence'] > 0.5] #modulate confidence threshold here
-    confident_df  = confident_df[confident_df['Type']==sv_type]
-
-    return(confident_df)
 
 
 
@@ -130,8 +139,6 @@ def BN_deletion(args):
 
     #loadsample
     sample_frame = readsmap(args.samplepath, args, 'deletion')
-    # calculate SV size
-    sample_frame['SV_size'] = sample_frame['RefEndPos'] - sample_frame['RefStartPos'] - sample_frame['QryEndPos'] + sample_frame['QryStartPos']
 
     #loadparent
     mother_frame = readsmap(args.mpath, args, 'deletion')

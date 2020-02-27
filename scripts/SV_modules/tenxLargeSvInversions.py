@@ -25,10 +25,10 @@ def tenxlargesvinversions(args):
     sample_start, sample_end, mother_start, mother_end, father_start, father_end, ref_start, ref_end = sample_frame.copy(), sample_frame.copy(), mother_frame.copy(), mother_frame.copy(), father_frame.copy(), father_frame.copy(), ref_frame.copy(), ref_frame.copy()
 
     for df in [sample_start, father_start, mother_start, ref_start]: #create an interval for the inversion start point
-        df['Start'], df['End'], df['Chromosome'] = df.POS - 100000, df.POS + 100000, df['CHROM']
+        df['Start'], df['End'], df['Chromosome'] = df.POS - 10000, df.POS + 10000, df['CHROM']
                         
     for df in [sample_end, father_end, mother_end, ref_end]: #create an interval for the inversion end point
-        df['Start'], df['End'], df['Chromosome'] = df.END - 100000, df.END + 100000, df['CHROM']
+        df['Start'], df['End'], df['Chromosome'] = df.END - 10000, df.END + 10000, df['CHROM']
     
     #overlap start and end points with exons separately  
     exon_frame = pr.read_bed(args.exons)              

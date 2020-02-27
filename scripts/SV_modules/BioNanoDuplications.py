@@ -22,17 +22,19 @@ def readsmapDup(input):
     #confident_df = raw_df.loc[raw_df['Confidence'] > 0.5] #modulate confidence threshold here
     confident_df  = raw_df[raw_df['Type'].str.contains('duplication')]
 
+    # calculate SV size
+    confident_df['SV_size'] = confident_df['RefEndPos'] - confident_df['RefStartPos'] - confident_df['QryEndPos'] + confident_df['QryStartPos']
+    confident_df['SV_size'] = confident_df['SV_size'].abs().round(0)
+    confident_df = confident_df.loc[confident_df['SV_size'] >= 1000]
+
     return(confident_df)
 
 
 
 def BN_duplication(args):
 
-
     #loadsample
     sample_frame = readsmapDup(args.samplepath)
-    # calculate SV size
-    sample_frame['SV_size'] = sample_frame['RefEndPos'] - sample_frame['RefStartPos'] - sample_frame['QryEndPos'] + sample_frame['QryStartPos']
 
     # Some old BN pipeline doesn't call duplication
     if sample_frame.empty:
@@ -68,6 +70,7 @@ def BN_duplication(args):
     exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_Bionano_duplications_exons.txt', sep='\t', index = False)
 
     return df, exon_calls
+
 
                 
 def main():

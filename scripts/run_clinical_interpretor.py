@@ -26,7 +26,7 @@ class Namespace:
 def createGeneSyndromeDict(database_df):
 
     dict = defaultdict(list)
-    for var, hpo in database_df.itertuples(index=False): # var can either be gene or syndrome
+    for var, hpo in database_df.itertuples(index=False):  # var can either be gene or syndrome
         dict[var].append(hpo)
 
     return(dict)
@@ -129,7 +129,7 @@ def rerankSmallVariant(df):
     df['Patho_score'] = df['Clinvar_score'] + df['InterVar_score']
 
     # Sort by the total patho_score
-    df = df.sort_values(by='Patho_score', ascending=False)
+    df = df.sort_values(by=['Patho_score', 'score'], ascending=False)
     df = df.drop(['Clinvar_idx', 'InterVar_idx', 'Clinvar_score', 'InterVar_score', 'Patho_score'], axis=1)
 
     return df
@@ -141,11 +141,9 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
     # Overlap gene_score_result_r with small variants genes found in the proband
     gene_score_result_r = gene_score_result_r[gene_score_result_r.gene.isin(smallVariantFile.gene)]
 
-    #gene_score_result_r = normalizeRawScore(args, gene_score_result_r, 'gene')
-
     # Subset the intervar files further to store entries relevant to these set of genes
     filtered_intervar = pd.merge(interVarFinalFile, gene_score_result_r, left_on='Ref_Gene', right_on='gene',how='inner')
-    filtered_intervar = filtered_intervar.sort_values(by='score', ascending=False)
+    #filtered_intervar = filtered_intervar.sort_values(by='score', ascending=False)
 
 
     # Create a bed file and write it out
@@ -193,7 +191,7 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
     ## Recessive
     recessive = filtered_intervar[(filtered_intervar['paternal'] == 1) & (filtered_intervar['maternal'] == 1) & (filtered_intervar['Otherinfo'] == 'hom')]
     ## Dominant
-    #dominant = filtered_intervar[((filtered_intervar['paternal'] == 1) & (filtered_intervar['maternal'] == 0)) | ((filtered_intervar['maternal'] == 1) & (filtered_intervar['paternal'] == 0))]
+    dominant_inherited = filtered_intervar[((filtered_intervar['paternal'] == 1) & (filtered_intervar['maternal'] == 0)) | ((filtered_intervar['maternal'] == 1) & (filtered_intervar['paternal'] == 0))]
     ## De novo
     denovo = filtered_intervar[(filtered_intervar['paternal'] == 0) & (filtered_intervar['maternal'] == 0)]
     #Compound het
@@ -218,13 +216,13 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
 
     # Print all the variants according to inheritance mode
     # Recessive
-    pd.DataFrame(recessive).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_smallVariants_recessive_candidates.txt', index=False, sep='\t', header=True)
+    pd.DataFrame(recessive).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_recessive_candidates.txt', index=False, sep='\t', header=True)
     # Dominant
-    #pd.DataFrame(dominant).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_dominant_smallVariants_candidates.txt', index=False, sep='\t', header=True)
+    pd.DataFrame(dominant_inherited).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_dominant_inherited_smallVariants_candidates.txt', index=False, sep='\t', header=True)
     # De novo
-    pd.DataFrame(denovo).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_smallVariants_denovo_candidates.txt', index=False, sep='\t', header=True)
+    pd.DataFrame(denovo).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_denovo_candidates.txt', index=False, sep='\t', header=True)
     # Compound het
-    pd.DataFrame(compoundhet).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_smallVariants_compoundhet_candidates.txt', index=False, sep='\t', header=True)
+    pd.DataFrame(compoundhet).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_compoundhet_candidates.txt', index=False, sep='\t', header=True)
     # All
     pd.DataFrame(filtered_intervar).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_smallVariants_ALL_candidates.txt', index=False, sep='\t', header=True)
 
@@ -259,7 +257,6 @@ def differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenom
 
     # Specifically look for deletion/duplication syndrome
     delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, cyto_BN_del, cyto_BN_dup)
-    #delDupSyndrome(syndrome_score_result_r, args)
 
     return(syndrome_score_result_r)
 
@@ -287,6 +284,7 @@ def findGenomicLocation(cytoband_key, cytobandDict):
 
 def parseSyndromeNameToCytoband(df, cytobandDict):
 
+    df['cytoband'] = float('Nan')
     regex = r'([0-9XY]{1,2}[PQ]{1}[\w\\.\\-]{1,10}[\s$])'
 
     for index, row in df.iterrows():
@@ -295,11 +293,19 @@ def parseSyndromeNameToCytoband(df, cytobandDict):
             df.loc[index, 'cytoband'] = m.group(1)
 
     df.dropna(subset=['cytoband'], inplace=True)
+    if df.empty:  # df can be empty after dropping NA
+        return pd.DataFrame()
+
+    df['cytoband'] = df['cytoband'].astype(str)
     df['cytoband'] = df['cytoband'].str.lower()
     df['cytoband'] = df['cytoband'].str.replace('x', 'X')
     df[['Chromosome', 'discard']] = df.cytoband.str.split('p|q', 1, expand=True)
     df = df.drop('discard', axis=1)
-    df[['cytoband_start', 'cytoband_stop']] = df.cytoband.str.split('-', expand=True)
+    if df.cytoband.str.contains('-').any():
+        df[['cytoband_start', 'cytoband_stop']] = df.cytoband.str.split('-', expand=True)
+    else:
+        df['cytoband_start'] = df.cytoband
+        df['cytoband_stop'] = None
     df['arm'] = np.where(df['cytoband_start'].str.contains('p'), 'p', 'q')
 
     for idx, row in df.iterrows():
@@ -314,7 +320,6 @@ def parseSyndromeNameToCytoband(df, cytobandDict):
 
 
         if row['cytoband_stop'] is not None: # Fix cytoband_stop column for quick cytobandDict lookup
-            print(type(row['cytoband_stop']))
             current_chr = np.where(('p' in str(row['cytoband_stop'])) or ('q' in str(row['cytoband_stop'])), str(row['Chromosome']), str(row['Chromosome']) + str(row['arm']))
             edited_cytoband_stop = str(current_chr) + row['cytoband_stop']
             edited_cytoband_stop = edited_cytoband_stop.replace(" ", "")
@@ -367,46 +372,107 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
 
     del_df = parseSyndromeNameToCytoband(del_df, cytobandDict)
     dup_df = parseSyndromeNameToCytoband(dup_df, cytobandDict)
+    # print(dup_df)
+    #
+    # if del_df.empty:
+    #     del_df = None
+    # else:
+    #     del_df = parseSyndromeNameToCytoband(del_df, cytobandDict)
+    # if dup_df.empty:
+    #     dup_df = None
+    # else:
+    #     dup_df = parseSyndromeNameToCytoband(dup_df, cytobandDict)
 
     if args.bionano:
 
+        cols = ['Chromosome', 'Start', 'End', 'SmapEntryID', 'Confidence', 'Type', 'Zygosity', 'Genotype', 'SV_size', 'Found_in_Father', 'Found_in_Mother', 'syndrome', 'cytoband', 'score', 'normalized_score']
+
         # Overlap with del/dup syndromes
         if cyto_BN_dup is not None: # It can be None because old Bionano pipeline doesn't call duplications...
-            overlap_dup_BN = delDupSyndromeSVOverlap(dup_df, cyto_BN_dup)
+            # dup_df.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_input1.txt', sep='\t', index=False)
+            # cyto_BN_dup.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_input2.txt', sep='\t',index=False)
+            # cyto_10x_dup_largeSV.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_input2.txt', sep='\t',index=False)
+
+            overlap_dup_BN = delDupSyndromeSVOverlap(dup_df, cyto_BN_dup, cols)
             overlap_dup_BN.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_duplication_syndrome.txt', sep='\t', index=False)
         else:
+            overlap_dup_BN = None
             pd.DataFrame().to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_duplication_syndrome.txt', sep='\t', index=False)
 
-        overlap_del_BN = delDupSyndromeSVOverlap(del_df, cyto_BN_del)
+        overlap_del_BN = delDupSyndromeSVOverlap(del_df, cyto_BN_del, cols)
         overlap_del_BN.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_deletion_syndrome.txt', sep='\t', index=False)
 
     if args.linkedreadSV:
-        overlap_dup_largeSV_10x = delDupSyndromeSVOverlap(dup_df, cyto_10x_dup_largeSV)
+
+        cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'Found_in_Father', 'Found_in_Mother', 'syndrome', 'cytoband', 'score', 'normalized_score']
+        overlap_dup_largeSV_10x = delDupSyndromeSVOverlap(dup_df, cyto_10x_dup_largeSV, cols)
         overlap_dup_largeSV_10x.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_duplication_largeSV_syndrome.txt', sep='\t', index=False)
 
-        overlap_del_largeSV_10x = delDupSyndromeSVOverlap(del_df, cyto_10x_del_largeSV)
+        overlap_del_largeSV_10x = delDupSyndromeSVOverlap(del_df, cyto_10x_del_largeSV, cols)
         overlap_del_largeSV_10x.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_deletion_largeSV_syndrome.txt', sep='\t', index=False)
 
-        overlap_del_10x = delDupSyndromeSVOverlap(del_df, cyto_10x_del)
+
+        overlap_del_10x = delDupSyndromeSVOverlap(del_df, cyto_10x_del, cols)
+
         overlap_del_10x.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_deletion_syndrome.txt', sep='\t', index=False)
 
-    #if args.linkedreadSV and args.bionano:
+    if args.linkedreadSV and args.bionano:
+
+        cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'Found_in_Father',
+                'Found_in_Mother', 'syndrome', 'cytoband', 'score', 'normalized_score', 'SmapEntryID', 'Confidence',
+                'Type', 'Zygosity', 'Genotype', 'SV_size', 'Found_in_Father_b', 'Found_in_Mother_b']
+
         # syndrome appearing in both 10x and bionano --> confident set
+        ## for duplications
+        if ((overlap_dup_BN is not None) and (not overlap_dup_BN.empty) and (not overlap_dup_largeSV_10x.empty)):
+            overlap_dup_largeSV_10x = overlap_dup_largeSV_10x.loc[overlap_dup_largeSV_10x['SVLEN'] >= 1000]
+            confident_dup_syndrome = delDupSyndromeSVOverlap(overlap_dup_largeSV_10x, overlap_dup_BN, cols)
+
+            if not confident_dup_syndrome.empty:
+                confident_dup_syndrome.to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_confident_duplication_syndrome.txt', sep='\t',index=False)
+            else: # Write an empty dataframe
+                pd.DataFrame().to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_confident_duplication_syndrome.txt', sep='\t',index=False)
+
+        ## for deletions
+        del_10x = pd.concat([overlap_del_largeSV_10x, overlap_del_10x])
+        if ((not overlap_del_BN.empty) and (not del_10x.empty)):
+            del_10x = del_10x.loc[del_10x['SVLEN'] <= (-1000)]
+            confidnet_del_syndrome = delDupSyndromeSVOverlap(del_10x, overlap_del_BN, cols)
+
+            #confidnet_del_syndrome = pd.merge(del_10x, overlap_del_BN, on='syndrome', how='inner')
+            if not confidnet_del_syndrome.empty:
+                confidnet_del_syndrome.to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_confident_deletion_syndrome.txt', sep='\t',index=False)
+            else:
+                pd.DataFrame().to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_confident_deletion_syndrome.txt', sep='\t',index=False)
 
 
 
 
+def delDupSyndromeSVOverlap(del_df, cyto_BN_del, cols):
+    #print(cyto_BN_del)
+    #print(del_df)
+    if del_df.empty:
+        return pd.DataFrame()
 
-def delDupSyndromeSVOverlap(del_df, cyto_BN_del):
-    overlap_del_BN = PyRanges(del_df).overlap(PyRanges(cyto_BN_del))
+    overlap_del_BN = PyRanges(cyto_BN_del).join(PyRanges(del_df))
+    #print(overlap_del_BN.df)
     if not overlap_del_BN.df.empty:
-        overlap_del_BN = overlap_del_BN.df.sort_values(by='score', ascending=False)
+        overlap_del_BN = overlap_del_BN.df
+        # print(overlap_del_BN)
+        # print(np.maximum(0, np.minimum(overlap_del_BN.End, overlap_del_BN.End_b) - np.maximum(overlap_del_BN.Start,overlap_del_BN.Start_b)))
+        overlap_del_BN['overlap_len'] = np.maximum(0, np.minimum(overlap_del_BN.End, overlap_del_BN.End_b) - np.maximum(overlap_del_BN.Start,overlap_del_BN.Start_b))
+        # print(overlap_del_BN)
+        #overlap_del_BN = overlap_del_BN.drop(like="_b")
+        overlap_del_BN = overlap_del_BN.sort_values(by='score', ascending=False)
+        overlap_del_BN = overlap_del_BN.loc[overlap_del_BN['overlap_len'] > 0]
+        # print(overlap_del_BN)
+        #overlap_del_BN = overlap_del_BN.df.sort_values(by='score', ascending=False)
         # Rearrange the column
-        cols = ['Chromosome', 'Start', 'End', 'cytoband', 'cytoband_start', 'cytoband_stop', 'arm', 'syndrome', 'score', 'normalized_score']
         overlap_del_BN = overlap_del_BN[cols]
         return overlap_del_BN
     else:
         return overlap_del_BN.df
+
 
 
 
@@ -483,16 +549,14 @@ def bionanoSV(args, famid, gene_score_result_r, all_small_variants):
     BN_inversion(BN_args)
 
     # Check potential compoundhets with SNPs and indels
-    #all_small_variants_exons = all_small_variants['Ref_Gene']
     BN_exons = pd.concat([exon_calls_BN_del, exon_calls_BN_dup])
     if BN_exons.empty:
-        pd.DataFrame().to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
+        pd.DataFrame().to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_Bionano_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
     else:
-        #BN_exons = BN_exons[BN_exons['gene'].isin(all_small_variants_exons)]
         BN_exons = pd.merge(BN_exons, all_small_variants, left_on='gene', right_on='Ref_Gene', how='inner')
-        BN_exons.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
+        BN_exons.to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_Bionano_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
 
-    return cyto_BN_del, cyto_BN_dup
+    return cyto_BN_del, cyto_BN_dup, exon_calls_BN_del, exon_calls_BN_dup
 
 
 
@@ -557,13 +621,49 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
     # Check potential compoundhets with SNPs and indels
     tenx_exons = pd.concat([exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup])
     if tenx_exons.empty:
-        pd.DataFrame().to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
+        pd.DataFrame().to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_10x_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
     else:
-        #BN_exons = BN_exons[BN_exons['gene'].isin(all_small_variants_exons)]
         tenx_exons = pd.merge(tenx_exons, all_small_variants, left_on='gene', right_on='Ref_Gene', how='inner')
-        tenx_exons.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
+        tenx_exons.to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_10x_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
 
-    return cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV
+    return cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup
+
+
+
+def pyrangeJoin(df1_10x, df2_BN):
+
+    if df1_10x.empty or df2_BN.empty:
+        return pd.DataFrame()
+
+    df1_10x['Chromosome'], df1_10x['Start'], df1_10x['End'] = [df1_10x['CHROM'], df1_10x['POS'], df1_10x['END']]
+    df2_BN['Chromosome'], df2_BN['Start'], df2_BN['End'] = [df2_BN['RefcontigID1'], df2_BN['RefStartPos'], df2_BN['RefEndPos']]
+    overlap = PyRanges(df1_10x).join(PyRanges(df2_BN))
+
+    #print(overlap)
+    if not overlap.df.empty:
+        overlap = overlap.df
+        overlap['overlap_len'] = np.maximum(0, np.minimum(overlap.End, overlap.End_b) - np.maximum(overlap.Start,overlap.Start_b))
+        #overlap = overlap.drop(like="_b")
+        overlap = overlap.drop(['Chromosome', 'Start', 'End'], axis = 1)
+        overlap = overlap.loc[overlap['overlap_len'] > 0]
+        return overlap
+    else:
+        return overlap.df
+
+
+
+def findConfDelDup(args, exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup, exon_calls_BN_del, exon_calls_BN_dup):
+
+    tenx_del = pd.concat([exon_calls_10x_del, exon_calls_10x_largeSV_del])
+    overlap_del_10x_BN = pyrangeJoin(tenx_del, exon_calls_BN_del)
+    overlap_del_10x_BN.to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_confident_deletion_exons.txt', sep='\t', index=False)
+
+    if exon_calls_BN_dup is not None:  # some bionano assemblies were generated with old pipelines
+        overlap_dup_10x_BN = pyrangeJoin(exon_calls_10x_largeSV_dup, exon_calls_BN_dup)
+        overlap_dup_10x_BN.to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_confident_duplication_exons.txt', sep='\t', index=False)
+    else:
+        pd.DataFrame().to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_confident_duplication_exons.txt', sep='\t', index=False)
+
 
 
 
@@ -627,7 +727,7 @@ def main():
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Analyzing the clinical phenome for ' + args.sampleid + '...')
     clinical_phenome = getClinicalPhenome(args)
 
-    # Get gene sume score
+    # Get gene sum score
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Generating a clinically relevant primary gene list for ' + args.sampleid + '...')
     gene_score_result_r = calculateGeneSumScore(args, hpo_gene_dict, weightGeneDict, clinical_phenome)
 
@@ -643,11 +743,11 @@ def main():
             raise Exception("Enzyme flag not set correctly! Either DLE or BspQI must be specified when using -b.")
 
         # Call all SVs using bionano
-        cyto_BN_del, cyto_BN_dup = bionanoSV(args, famid, gene_score_result_r, all_small_variants)
+        cyto_BN_del, cyto_BN_dup, exon_calls_BN_del, exon_calls_BN_dup = bionanoSV(args, famid, gene_score_result_r, all_small_variants)
 
     #Make 10x SV calls
     if args.linkedreadSV:
-        cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV = linkedreadSV(args, famid, gene_score_result_r, all_small_variants)
+        cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup = linkedreadSV(args, famid, gene_score_result_r, all_small_variants)
 
         # Remove control files
         cmd = 'rm ./results/' + args.sampleid + '/10x_del_control.vcf.gz ./results/' + args.sampleid + '/10x_largeSV_control.vcf.gz'
@@ -663,17 +763,27 @@ def main():
         syndrome_score_result_r = differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenome, args, cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, cyto_BN_del, cyto_BN_dup)
 
         # Remove control files
-        cmd = 'rm ./results/' + args.sampleid + '/bionano_control.smap.gz'
-        os.system(cmd)
+        # cmd = 'rm ./results/' + args.sampleid + '/bionano_control.smap.gz'
+        # os.system(cmd)
+
+    if args.bionano and args.linkedreadSV:
+        print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Searching for confident large dels and dups on ' + args.sampleid + '...')
+        findConfDelDup(args, exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup, exon_calls_BN_del, exon_calls_BN_dup)
 
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Pipeline finished successfully')
 
 
+    # del_df_name = args.workdir + '/results/' + args.sampleid + "/" + args.sampleid + '_input1.txt'
+    # del_df = pd.read_csv(del_df_name, sep='\t')
+    # cyto_BN_del_name = args.workdir + '/results/' + args.sampleid + "/" + args.sampleid + '_input2.txt'
+    # cyto_BN_del = pd.read_csv(cyto_BN_del_name, sep='\t')
+    # cyto_BN_del = cyto_BN_del.drop(columns=['CHROM_b', 'POS_b', 'ID_b', 'REF_b', 'ALT_1_b','ALT_2_b','ALT_3_b', 'QUAL_b','FILTER_PASS_b', 'END_b','SVLEN_b','Start_b', 'End_b'])
+    # cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'Found_in_Father',
+    #         'Found_in_Mother', 'syndrome', 'cytoband', 'score', 'normalized_score']
+    # delDupSyndromeSVOverlap(del_df, cyto_BN_del, cols)
+
+
 if __name__=="__main__":
     main()
-
-
-
-
 
 

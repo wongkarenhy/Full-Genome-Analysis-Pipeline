@@ -7,6 +7,10 @@ from pyranges import PyRanges
 from io import StringIO
 import numpy as np
 import argparse
+pd.set_option('display.max_columns', None)
+pd.set_option('display.expand_frame_repr', False)
+pd.set_option('max_colwidth', None)
+pd.options.display.max_rows = 999
 
 
 
@@ -21,6 +25,8 @@ def readsmap(input, args, sv_type):
     raw_df = raw_df[['SmapEntryID', 'RefcontigID1', 'RefcontigID2', 'RefStartPos','RefEndPos', 'QryStartPos', 'QryEndPos', 'Confidence', 'Type', 'Zygosity', 'Genotype']]
     confident_df = raw_df.loc[raw_df['Confidence'] > 0.5] #modulate confidence threshold here
     confident_df  = confident_df[confident_df['Type']==sv_type]
+    confident_df['RefcontigID1'] = confident_df['RefcontigID1'].astype(str).str.replace("23", "X")
+    confident_df['RefcontigID2'] = confident_df['RefcontigID2'].astype(str).str.replace("24", "Y")
 
     # calculate SV size
     confident_df['SV_size'] = confident_df['RefEndPos'] - confident_df['RefStartPos'] - confident_df['QryEndPos'] + confident_df['QryStartPos']
@@ -55,19 +61,6 @@ def reciprocal_overlap(df1, df2): #takes input PyRanges and refPyRanges
 
 
 
-def cytobandOverlap(args, df):
-
-    #describe cytoband overlap
-    cytoband_frame = pr.read_bed(args.cytobands)
-    cytoband_overlap = PyRanges(df).join(cytoband_frame).drop(like="_b")
-    cytoband_calls = cytoband_overlap.df
-    if not cytoband_calls.empty:
-        cytoband_calls["Cytoband"] = cytoband_calls[['Chromosome', 'Name']].apply(lambda x: ''.join(x), axis=1)
-        cytoband_calls = cytoband_calls.drop(columns = ['Chromosome', 'Start', 'End', 'Name'])
-
-    return cytoband_calls
-
-
 
 def checkRefOverlap(sample_copy, ref_copy, sample_frame):
 
@@ -84,33 +77,36 @@ def checkRefOverlap(sample_copy, ref_copy, sample_frame):
 
 
 def checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_frame):
+    colnames = ['SmapEntryID', 'RefcontigID1', 'RefcontigID2', 'RefStartPos', 'RefEndPos', 'QryStartPos', 'QryEndPos','Confidence', 'Type', 'Zygosity', 'Genotype']
 
-    denovo_f_frame, denovo_m_frame = reciprocal_overlap(PyRanges(sample_copy), PyRanges(father_copy)), reciprocal_overlap(PyRanges(sample_copy), PyRanges(mother_copy))
+    denovo_f_frame, denovo_m_frame = reciprocal_overlap(PyRanges(sample_copy), PyRanges(father_copy))[colnames], \
+                                     reciprocal_overlap(PyRanges(sample_copy), PyRanges(mother_copy))[colnames]
 
+    #print(denovo_f_frame)
     if denovo_f_frame.empty:
         filtered_sample_frame["Found_in_Father"] = "False"
-    else:
-        filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_f_frame, on=None, how='left', indicator='Found_in_Father')
-        filtered_sample_frame['Found_in_Father'] = np.where(filtered_sample_frame.Found_in_Father == 'both', True, False)
-        filtered_sample_frame = filtered_sample_frame.drop(columns=['Start', 'End', 'Chromosome', 'Length', 'SmapEntryID_b', 'RefcontigID1_b', 'RefcontigID2_b', 'RefStartPos_b', 'RefEndPos_b', 'QryStartPos_b', 'QryEndPos_b', 'Confidence_b', 'Type_b', 'Zygosity_b', 'Genotype_b', 'Start_b', 'End_b', 'Length_b', 'Overlap', 'Fraction', 'Fraction_b']).drop_duplicates()
-
-
     if denovo_m_frame.empty:
         filtered_sample_frame["Found_in_Mother"] = "False"
-        denovo_filtered_sample_frame = filtered_sample_frame
 
-    else:
-        denovo_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_m_frame, on=None, how='left', indicator='Found_in_Mother')
-        denovo_filtered_sample_frame['Found_in_Mother'] = np.where(denovo_filtered_sample_frame.Found_in_Mother == 'both', True, False)
-        denovo_filtered_sample_frame = denovo_filtered_sample_frame.drop(columns=['Start', 'End', 'Chromosome', 'Length', 'SmapEntryID_b', 'RefcontigID1_b', 'RefcontigID2_b', 'RefStartPos_b', 'RefEndPos_b', 'QryStartPos_b', 'QryEndPos_b', 'Confidence_b', 'Type_b', 'Zygosity_b', 'Genotype_b', 'Start_b', 'End_b', 'Length_b', 'Overlap', 'Fraction', 'Fraction_b']).drop_duplicates()
+    elif not (denovo_f_frame.empty and denovo_m_frame.empty):
+        f_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_f_frame, on=None, how='left',
+                                           indicator='Found_in_Father')
+        f_filtered_sample_frame['Found_in_Father'] = np.where(f_filtered_sample_frame.Found_in_Father == 'both', True,
+                                                              False)
+        f_filtered_sample_frame = f_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
 
-    df = denovo_filtered_sample_frame
+        m_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_m_frame, on=None, how='left',
+                                           indicator='Found_in_Mother')
+        m_filtered_sample_frame['Found_in_Mother'] = np.where(m_filtered_sample_frame.Found_in_Mother == 'both', True,
+                                                              False)
+        m_filtered_sample_frame = m_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
+        f_filtered_sample_frame['Found_in_Mother'] = m_filtered_sample_frame['Found_in_Mother']
+        filtered_sample_frame = f_filtered_sample_frame
 
-    # Make proper columns for the next step (exon overlap)
-    df['Start'], df['End'], df['Chromosome'] = df.RefStartPos, df.RefEndPos, df['RefcontigID1']
+    # df = filtered_sample_frame
+    # df['Start'], df['End'], df['Chromosome'] = df.RefStartPos, df.RefEndPos, df['RefcontigID1']
 
-
-    return df
+    return filtered_sample_frame
 
 
 
@@ -120,11 +116,11 @@ def exonOverlap(args, df):
 
     exon_frame = pr.read_bed(args.exons)
     exon_overlap = PyRanges(df).join(exon_frame).drop(like="_b")
+
     if exon_overlap.df.empty:
         exon_calls = pd.DataFrame()
     else:
         exon_calls = exon_overlap.df.drop(columns = ['Chromosome', 'Start', 'End']).rename(columns = {'Name':'gene', 'Score':'Phenotype'}).drop_duplicates()
-
         # if args.genelist:
         #     #gene_list = pd.read_csv(args.genelist, sep='\t', names=['Gene'], header=None)
         exon_calls = exon_calls.merge(args.genelist, on=['gene'])
@@ -159,12 +155,14 @@ def BN_deletion(args):
 
 
     #add column based on overlap with parents
-    df = checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_frame)
+    if not args.singleton:
+        df = checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_frame)
+    else:
+        df = filtered_sample_frame
 
-    #cytoband_calls = cytobandOverlap(args, df)
-    #df.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNanoDeletions_cytobands.txt', sep='\t', index = False)
 
     #describe exon overlap
+    df['Start'], df['End'], df['Chromosome'] = df.RefStartPos, df.RefEndPos, df['RefcontigID1']
     exon_calls = exonOverlap(args, df)
 
     # Write output files
@@ -187,6 +185,7 @@ def main():
     parser.add_argument("-c", "--confidence", help="Give the confidence level cutoff for the sample here", dest="confidence", type=float, default=0.5)
     parser.add_argument("-e", "--exons", help="Give the file with exons intervals, names, and phenotypes here", dest="exons", type=str, required=True)
     parser.add_argument("-g", "--genelist", help="Primary genelist with scores", dest="genelist", type=str)
+    parser.add_argument("-S", help="Set this flag if this is a singleton case", dest="singleton", action='store_true')
     args = parser.parse_args()
 
     # Actual function

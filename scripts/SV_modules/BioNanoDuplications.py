@@ -7,7 +7,7 @@ from pyranges import PyRanges
 from io import StringIO
 import numpy as np
 import argparse
-from .BioNanoDeletions import cytobandOverlap, reciprocal_overlap, checkRefOverlap, checkParentsOverlap, exonOverlap, overlap_length
+from .BioNanoDeletions import reciprocal_overlap, checkRefOverlap, checkParentsOverlap, exonOverlap, overlap_length
 
 
 def readsmapDup(input):
@@ -21,6 +21,9 @@ def readsmapDup(input):
     raw_df = raw_df[['SmapEntryID', 'RefcontigID1', 'RefcontigID2', 'RefStartPos','RefEndPos', 'QryStartPos', 'QryEndPos', 'Confidence', 'Type', 'Zygosity', 'Genotype']]
     #confident_df = raw_df.loc[raw_df['Confidence'] > 0.5] #modulate confidence threshold here
     confident_df  = raw_df[raw_df['Type'].str.contains('duplication')]
+    confident_df['RefcontigID1'] = confident_df['RefcontigID1'].astype(str).str.replace("23", "X")
+    confident_df['RefcontigID2'] = confident_df['RefcontigID2'].astype(str).str.replace("24", "Y")
+
 
     # calculate SV size
     confident_df['SV_size'] = confident_df['RefEndPos'] - confident_df['RefStartPos'] - confident_df['QryEndPos'] + confident_df['QryStartPos']
@@ -57,12 +60,13 @@ def BN_duplication(args):
     filtered_sample_frame = checkRefOverlap(sample_copy, ref_copy, sample_frame)
 
     #add column based on overlap with parents
-    df = checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_frame)
-
-    #cytoband_calls = cytobandOverlap(args, df)
-    #cytoband_calls = df
+    if not args.singleton:
+        df = checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_frame)
+    else:
+        df = filtered_sample_frame
 
     #describe exon overlap
+    df['Start'], df['End'], df['Chromosome'] = df.RefStartPos, df.RefEndPos, df['RefcontigID1']
     exon_calls = exonOverlap(args, df)
 
 
@@ -85,6 +89,7 @@ def main():
     parser.add_argument("-c", "--confidence", help="Give the confidence level cutoff for the sample here", dest="confidence", type=str, default=0.5)
     parser.add_argument("-e", "--exons", help="Give the file with exons intervals, names, and phenotypes here", dest="exons", type=str, required=True)
     parser.add_argument("-g", "--genelist", help="Primary genelist with scores", dest="genelist", type=str)
+    parser.add_argument("-S", help="Set this flag if this is a singleton case", dest="singleton", action='store_true')
     args = parser.parse_args()
 
 

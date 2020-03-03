@@ -8,7 +8,7 @@ from io import StringIO
 import numpy as np
 import argparse
 pd.set_option('display.max_columns', None)
-from .BioNanoTranslocations import checkParentsOverlapTransloInv
+from .BioNanoTranslocations import checkParentsOverlapTransloInv, exonOverlapTransloInv
 
 def readsmapInv(input):
 
@@ -21,6 +21,8 @@ def readsmapInv(input):
     raw_df = raw_df[['SmapEntryID', 'RefcontigID1', 'RefcontigID2', 'RefStartPos','RefEndPos', 'QryStartPos', 'QryEndPos', 'Confidence', 'Type', 'Zygosity', 'Genotype']]
     #confident_df = raw_df.loc[raw_df['Confidence'] > 0.5] #modulate confidence threshold here
     confident_df  = raw_df[raw_df['Type']=='inversion']
+    confident_df['RefcontigID1'] = confident_df['RefcontigID1'].astype(str).str.replace("23", "X")
+    confident_df['RefcontigID2'] = confident_df['RefcontigID2'].astype(str).str.replace("24", "Y")
 
     return(confident_df)
 
@@ -49,21 +51,7 @@ def BN_inversion(args):
 
 
     #overlap start and end points with exons separately  
-    exon_frame = pr.read_bed(args.exons)
-    exon_start = PyRanges(sample_start).join(exon_frame[["Name", "Score"]]).drop(like="_b")
-    exon_end = PyRanges(sample_end).join(exon_frame[["Name", "Score"]]).drop(like="_b")
-
-    if exon_start.df.empty and exon_end.df.empty:
-        sample_frame['Name'] = sample_frame['Name2'] = sample_frame['Score'] = sample_frame['Score2'] ='None'
-    elif exon_start.df.empty:
-        sample_frame = exon_end.df.rename(columns = {'Name':'Name2', 'Score':'Score2'}).filter(items=['SmapEntryID', 'Name']).drop_duplicates().merge(sample_frame, on=['SmapEntryID'], how='right')
-        sample_frame['Name'] = sample_frame['Score'] = 'None'
-    elif exon_end.df.empty:
-        sample_frame = exon_start.df.filter(items=['SmapEntryID', 'Name', 'Score']).drop_duplicates().merge(sample_frame, on=['SmapEntryID'], how='right')
-        sample_frame['Name2'] = sample_frame['Score2'] = 'None'
-    else:
-        sample_frame = exon_start.df.filter(items=['SmapEntryID', 'Name', 'Score']).drop_duplicates().merge(sample_frame, on=['SmapEntryID'], how='right')
-        sample_frame = sample_frame.merge(exon_end.df.rename(columns = {'Name':'Name2', 'Score':'Score2'}).filter(items=['SmapEntryID', 'Name2', 'Score2']), on=['SmapEntryID'], how='left')
+    sample_frame = exonOverlapTransloInv(args, sample_start, sample_end, sample_frame)
 
     #remove anything that overlaps with the reference
     overlap_start = PyRanges(sample_start).overlap(PyRanges(ref_start))
@@ -79,7 +67,10 @@ def BN_inversion(args):
             filtered_sample_frame = sample_frame[(~sample_frame.SmapEntryID.isin(common.SmapEntryID))]
 
     #add column based on overlap with parents
-    calls = checkParentsOverlapTransloInv(filtered_sample_frame, sample_start, father_start, mother_start, sample_end, father_end, mother_end)
+    if not args.singleton:
+        calls = checkParentsOverlapTransloInv(filtered_sample_frame, sample_start, father_start, mother_start, sample_end, father_end, mother_end)
+    else:
+        calls = filtered_sample_frame
 
     # Write output
     calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_Bionano_inversions.txt', sep='\t', index = False)
@@ -97,6 +88,7 @@ def main():
     parser.add_argument("-o", "--outputdirectory", help="Give the directory path for the output file", dest="outputdirectory", type=str, required=True)
     parser.add_argument("-c", "--confidence", help="Give the confidence level cutoff for the sample here", dest="confidence", type=str, default=0.5)
     parser.add_argument("-e", "--exons", help="Give the file with exons intervals, names, and phenotypes here", dest="exons", type=str, required=True)
+    parser.add_argument("-S", help="Set this flag if this is a singleton case", dest="singleton", action='store_true')
     args = parser.parse_args()
 
 

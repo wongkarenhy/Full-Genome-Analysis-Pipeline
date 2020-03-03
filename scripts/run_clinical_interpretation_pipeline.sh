@@ -24,6 +24,7 @@ INTERVAR=${5}
 BIONANO=${6}
 ENZYME=${7}
 LINKEDREADSV=${8}
+TYPE=${9}
 
 if [[ ! -d ${WORKDIR}/log ]]; then
     mkdir ${WORKDIR}/log
@@ -39,8 +40,7 @@ fi
 
 ## main pipeline
 pipeline(){
-echo [`date +"%Y-%m-%d %H:%M:%S"`] "#> START: " $0 
-
+echo [`date +"%Y-%m-%d %H:%M:%S"`] "#> START:  ${0} $JSON $WORKDIR $SAMPLEID $DATABASE $INTERVAR $BIONANO $ENZYME $LINKEDREADSV $TYPE"
 
 if [[ ! -d ${WORKDIR}/results ]];
     then
@@ -62,6 +62,9 @@ if [[ ${BIONANO} = true ]]; then
 fi
 if [[ ${LINKEDREADSV} = true ]]; then
     additional_var+=" -l"
+fi
+if [[ ${TYPE} == 'singleton' ]]; then
+    additional_var+=" -S"
 fi
 
 # extract exact and inexact HPO terms then run CNLP

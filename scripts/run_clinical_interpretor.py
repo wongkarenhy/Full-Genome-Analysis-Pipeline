@@ -36,13 +36,13 @@ def createGeneSyndromeDict(database_df):
 def createWeightDict(weights):
 
     try:
+
         w_df = pd.read_csv(weights, sep = ' ', names=["HPO_id", "weight"], comment = '#')
     except OSError:
         print("Count not open/read the input file:" + weights)
         sys.exit()
 
     weightDict = dict(zip(w_df.HPO_id, w_df.weight))
-
     return(weightDict)
 
 
@@ -75,6 +75,7 @@ def calculateGeneSumScore(args, hpo_gene_dict, weightDict, clinical_phenome):
         gene_score_result = pd.DataFrame(columns=['gene', 'score'])
 
         for query in gene:
+            #print(query)
             hpo_pheno = set(hpo_gene_dict[query]) # To get the phenotypic features for a given gene
             overlap = hpo_pheno.intersection(clinical_phenome) # overlap all the phenotypic features with the clinical phenomes
 
@@ -107,7 +108,7 @@ def getParentsGeno(filtered_intervar, inheritance_mode, ov_allele):
 
 
 def rerankSmallVariant(df):
-    #df = df[['Chr', 'Start', 'End', 'Clinvar', 'InterVar_InterVarandEvidence']]
+
     df['Clinvar_idx'] = df.Clinvar.str[9:-1]
     df['InterVar_idx'] = df.InterVar_InterVarandEvidence.str[10:].str.split('PVS1').str[0]
     df[['Clinvar_idx', 'InterVar_idx']] = df[['Clinvar_idx', 'InterVar_idx']].apply(lambda x:x.astype(str).str.lower())
@@ -143,7 +144,6 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
 
     # Subset the intervar files further to store entries relevant to these set of genes
     filtered_intervar = pd.merge(interVarFinalFile, gene_score_result_r, left_on='Ref_Gene', right_on='gene',how='inner')
-    #filtered_intervar = filtered_intervar.sort_values(by='score', ascending=False)
 
 
     # Create a bed file and write it out
@@ -155,75 +155,77 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
     filtered_intervar_bed.loc[:,'Start'] -= 1
     pd.DataFrame(filtered_intervar_bed).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_target.bed', index=False, sep='\t', header=False)
 
-    # Get overlapping variants from the parents so we know which variants are inherited
-    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Comparing small variants (SNPs/indels) inheritance')
-    cmd = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed /media/KwokRaid04/CIAPM/CIAPM_longranger/BC0" + famid + "01_longranger/outs/phased_variants.vcf.gz > ./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf"
-    os.system(cmd)
-    cmd = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed /media/KwokRaid04/CIAPM/CIAPM_longranger/BC0" + famid + "02_longranger/outs/phased_variants.vcf.gz > ./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf"
-    os.system(cmd)
+    if not args.singleton:
 
-    # Go through every row in filtered_intervar and see if the same variant is found in either of the parents
-    # We will only compare allele start position (we always assume the alt allele is the same)
-    try:
-        paternal_ov_allele = pd.read_csv("./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf", sep='\t',usecols=[1,9], names=["Start", "geno"], comment='#')
-        paternal_ov_allele['geno'] = paternal_ov_allele['geno'].str[:1].astype(int) + paternal_ov_allele['geno'].str[2:3].astype(int)
-    except OSError:
-        print("Could not open/read the input file: ./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf")
-        sys.exit()
-    try:
-        maternal_ov_allele = pd.read_csv("./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf", sep='\t',usecols=[1,9], names=["Start", "geno"], comment='#')
-        maternal_ov_allele['geno'] = maternal_ov_allele['geno'].str[:1].astype(int) + maternal_ov_allele['geno'].str[2:3].astype(int)
-    except OSError:
-        print(
-            "Could not open/read the input file: ./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf")
-        sys.exit()
+        # Get overlapping variants from the parents so we know which variants are inherited
+        print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Comparing small variants (SNPs/indels) inheritance')
+        cmd = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed /media/KwokRaid04/CIAPM/CIAPM_longranger/BC0" + famid + "01_longranger/outs/phased_variants.vcf.gz > ./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf"
+        os.system(cmd)
+        cmd = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed /media/KwokRaid04/CIAPM/CIAPM_longranger/BC0" + famid + "02_longranger/outs/phased_variants.vcf.gz > ./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf"
+        os.system(cmd)
 
-
-    filtered_intervar = getParentsGeno(filtered_intervar, 'paternal', paternal_ov_allele)
-    filtered_intervar = getParentsGeno(filtered_intervar, 'maternal', maternal_ov_allele)
-
-    # Rerank variants based on reported or predicted pathogeneicity
-    filtered_intervar = rerankSmallVariant(filtered_intervar)
+        # Go through every row in filtered_intervar and see if the same variant is found in either of the parents
+        # We will only compare allele start position (we always assume the alt allele is the same)
+        try:
+            paternal_ov_allele = pd.read_csv("./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf", sep='\t',usecols=[1,9], names=["Start", "geno"], comment='#')
+            paternal_ov_allele['geno'] = paternal_ov_allele['geno'].str[:1].astype(int) + paternal_ov_allele['geno'].str[2:3].astype(int)
+        except OSError:
+            print("Could not open/read the input file: ./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf")
+            sys.exit()
+        try:
+            maternal_ov_allele = pd.read_csv("./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf", sep='\t',usecols=[1,9], names=["Start", "geno"], comment='#')
+            maternal_ov_allele['geno'] = maternal_ov_allele['geno'].str[:1].astype(int) + maternal_ov_allele['geno'].str[2:3].astype(int)
+        except OSError:
+            print(
+                "Could not open/read the input file: ./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf")
+            sys.exit()
 
 
+        filtered_intervar = getParentsGeno(filtered_intervar, 'paternal', paternal_ov_allele)
+        filtered_intervar = getParentsGeno(filtered_intervar, 'maternal', maternal_ov_allele)
 
-    # Divide the dataset into recessive, dominant, de novo, compound het
-    ## Recessive
-    recessive = filtered_intervar[(filtered_intervar['paternal'] == 1) & (filtered_intervar['maternal'] == 1) & (filtered_intervar['Otherinfo'] == 'hom')]
-    ## Dominant
-    dominant_inherited = filtered_intervar[((filtered_intervar['paternal'] == 1) & (filtered_intervar['maternal'] == 0)) | ((filtered_intervar['maternal'] == 1) & (filtered_intervar['paternal'] == 0))]
-    ## De novo
-    denovo = filtered_intervar[(filtered_intervar['paternal'] == 0) & (filtered_intervar['maternal'] == 0)]
-    #Compound het
-    filtered_intervar_compoundhet = filtered_intervar[(filtered_intervar['Otherinfo'] == 'het')]
-    filtered_intervar_compoundhet = filtered_intervar_compoundhet[(filtered_intervar_compoundhet['maternal'] != 2) & (filtered_intervar_compoundhet['paternal'] != 2) & ((filtered_intervar_compoundhet['paternal'] == 1) & (filtered_intervar_compoundhet['maternal'] == 0)) | ((filtered_intervar_compoundhet['maternal'] == 1) & (filtered_intervar_compoundhet['paternal'] == 0))]
-    count = Counter(filtered_intervar_compoundhet['Ref_Gene'])
-    compoundhet_genes = [x for x, cnt in count.items() if cnt > 1]
-    compoundhet = filtered_intervar_compoundhet[filtered_intervar_compoundhet['Ref_Gene'].isin(compoundhet_genes)]
+        # Rerank variants based on reported or predicted pathogeneicity
+        filtered_intervar = rerankSmallVariant(filtered_intervar)
 
-    discard = []
-    for gene in compoundhet_genes:
+        # Divide the dataset into recessive, dominant, de novo, compound het
+        ## Recessive
+        recessive = filtered_intervar[(filtered_intervar['paternal'] == 1) & (filtered_intervar['maternal'] == 1) & (filtered_intervar['Otherinfo'] == 'hom')]
+        ## Dominant
+        dominant_inherited = filtered_intervar[((filtered_intervar['paternal'] == 1) & (filtered_intervar['maternal'] == 0)) | ((filtered_intervar['maternal'] == 1) & (filtered_intervar['paternal'] == 0))]
+        ## De novo
+        denovo = filtered_intervar[(filtered_intervar['paternal'] == 0) & (filtered_intervar['maternal'] == 0)]
+        #Compound het
+        filtered_intervar_compoundhet = filtered_intervar[(filtered_intervar['Otherinfo'] == 'het')]
+        filtered_intervar_compoundhet = filtered_intervar_compoundhet[(filtered_intervar_compoundhet['maternal'] != 2) & (filtered_intervar_compoundhet['paternal'] != 2) & ((filtered_intervar_compoundhet['paternal'] == 1) & (filtered_intervar_compoundhet['maternal'] == 0)) | ((filtered_intervar_compoundhet['maternal'] == 1) & (filtered_intervar_compoundhet['paternal'] == 0))]
+        count = Counter(filtered_intervar_compoundhet['Ref_Gene'])
+        compoundhet_genes = [x for x, cnt in count.items() if cnt > 1]
+        compoundhet = filtered_intervar_compoundhet[filtered_intervar_compoundhet['Ref_Gene'].isin(compoundhet_genes)]
 
-        df = compoundhet[compoundhet['Ref_Gene'].str.contains(gene)]
-        row_count = len(df.index)
-        col_list = ['paternal', 'maternal']
-        res = df[col_list].sum(axis=0)
-        if ((res[0] == 0) & (res[1] == row_count)) or (res[1] == 0 & (res[0] == row_count)):
-            discard.append(gene)
+        discard = []
+        for gene in compoundhet_genes:
 
-    compoundhet = compoundhet[~compoundhet['Ref_Gene'].isin(discard)]
+            df = compoundhet[compoundhet['Ref_Gene'].str.contains(gene)]
+            row_count = len(df.index)
+            col_list = ['paternal', 'maternal']
+            res = df[col_list].sum(axis=0)
+            if ((res[0] == 0) & (res[1] == row_count)) or (res[1] == 0 & (res[0] == row_count)):
+                discard.append(gene)
+
+        compoundhet = compoundhet[~compoundhet['Ref_Gene'].isin(discard)]
 
 
-    # Print all the variants according to inheritance mode
-    # Recessive
-    pd.DataFrame(recessive).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_recessive_candidates.txt', index=False, sep='\t', header=True)
-    # Dominant
-    pd.DataFrame(dominant_inherited).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_dominant_inherited_smallVariants_candidates.txt', index=False, sep='\t', header=True)
-    # De novo
-    pd.DataFrame(denovo).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_denovo_candidates.txt', index=False, sep='\t', header=True)
-    # Compound het
-    pd.DataFrame(compoundhet).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_compoundhet_candidates.txt', index=False, sep='\t', header=True)
+        # Print all the variants according to inheritance mode
+        # Recessive
+        pd.DataFrame(recessive).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_recessive_candidates.txt', index=False, sep='\t', header=True)
+        # Dominant
+        pd.DataFrame(dominant_inherited).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_dominant_inherited_smallVariants_candidates.txt', index=False, sep='\t', header=True)
+        # De novo
+        pd.DataFrame(denovo).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_denovo_candidates.txt', index=False, sep='\t', header=True)
+        # Compound het
+        pd.DataFrame(compoundhet).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_compoundhet_candidates.txt', index=False, sep='\t', header=True)
+
     # All
+    filtered_intervar = rerankSmallVariant(filtered_intervar)
     pd.DataFrame(filtered_intervar).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_smallVariants_ALL_candidates.txt', index=False, sep='\t', header=True)
 
     return filtered_intervar
@@ -266,11 +268,21 @@ def differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenom
 def findGenomicLocation(cytoband_key, cytobandDict):
 
     keys = [key for key in cytobandDict if key.startswith(cytoband_key)]
+
+    if len(keys)==0:
+        cytoband_key = cytoband_key[:-1]
+        keys = [key for key in cytobandDict if key.startswith(cytoband_key)]
+
+    print('shortened list')
+    print(cytoband_key)
     genomic_coords_list = []
+    print('in genomic_coords_list')
+    print(keys)
     for key in keys:
         genomic_coords_list.append(cytobandDict[key].split('-'))
-
+    print(genomic_coords_list)
     genomic_coords_list = list(chain.from_iterable(genomic_coords_list))
+    print(genomic_coords_list)
     min_coords = min(genomic_coords_list)
     max_coords = max(genomic_coords_list)
 
@@ -285,7 +297,7 @@ def findGenomicLocation(cytoband_key, cytobandDict):
 def parseSyndromeNameToCytoband(df, cytobandDict):
 
     df['cytoband'] = float('Nan')
-    regex = r'([0-9XY]{1,2}[PQ]{1}[\w\\.\\-]{1,10}[\s$])'
+    regex = r'((^|\W)[0-9XY]{1,2}[PQ]{1}[\w\\.\\-]{1,15}[\s$])'
 
     for index, row in df.iterrows():
         m = re.search(regex, str(row))
@@ -308,8 +320,12 @@ def parseSyndromeNameToCytoband(df, cytobandDict):
         df['cytoband_stop'] = None
     df['arm'] = np.where(df['cytoband_start'].str.contains('p'), 'p', 'q')
 
-    for idx, row in df.iterrows():
+    df['cytoband_stop'] = np.where(df['cytoband_start'].str.count('p|q')>1, df['arm'] + df['cytoband_start'].str.split('p|q').str[2], df['cytoband_stop'])
+    df['cytoband_start'] = np.where(df['cytoband_start'].str.count('p|q')>1, df['cytoband_start'].str.split('p|q').str[0] + df['arm'] + df['cytoband_start'].str.split('p|q').str[1], df['cytoband_start'])
 
+
+    print(df)
+    for idx, row in df.iterrows():
         cytoband_start_key = row['cytoband_start'].replace(" ","")
         if cytoband_start_key in cytobandDict:
             coords_start = cytobandDict[cytoband_start_key]
@@ -361,6 +377,8 @@ def createCytobandDict(args):
 
 def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, cyto_BN_del, cyto_BN_dup):
 
+    print(syndrome_score_result_r)
+    syndrome_score_result_r.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_syndrome_score_result_r.txt', sep='\t', index=False)
     # Create cytoband <-> genomic coordinates dict
     cytobandDict = createCytobandDict(args)
 
@@ -369,7 +387,7 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
 
     del_df = syndrome_score_result_r[del_cond]
     dup_df = syndrome_score_result_r[dup_cond]
-
+    print(del_df)
     del_df = parseSyndromeNameToCytoband(del_df, cytobandDict)
     dup_df = parseSyndromeNameToCytoband(dup_df, cytobandDict)
     # print(dup_df)
@@ -384,8 +402,10 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
     #     dup_df = parseSyndromeNameToCytoband(dup_df, cytobandDict)
 
     if args.bionano:
-
-        cols = ['Chromosome', 'Start', 'End', 'SmapEntryID', 'Confidence', 'Type', 'Zygosity', 'Genotype', 'SV_size', 'Found_in_Father', 'Found_in_Mother', 'syndrome', 'cytoband', 'score', 'normalized_score']
+        if not args.singleton:
+            cols = ['Chromosome', 'Start', 'End', 'SmapEntryID', 'Confidence', 'Type', 'Zygosity', 'Genotype', 'SV_size', 'Found_in_Father', 'Found_in_Mother', 'syndrome', 'cytoband', 'score', 'normalized_score']
+        else:
+            cols = ['Chromosome', 'Start', 'End', 'SmapEntryID', 'Confidence', 'Type', 'Zygosity', 'Genotype', 'SV_size', 'syndrome', 'cytoband', 'score', 'normalized_score']
 
         # Overlap with del/dup syndromes
         if cyto_BN_dup is not None: # It can be None because old Bionano pipeline doesn't call duplications...
@@ -404,7 +424,14 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
 
     if args.linkedreadSV:
 
-        cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'Found_in_Father', 'Found_in_Mother', 'syndrome', 'cytoband', 'score', 'normalized_score']
+        if not args.singleton:
+            cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'Found_in_Father', 'Found_in_Mother', 'syndrome', 'cytoband', 'score', 'normalized_score']
+        else:
+            cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'syndrome', 'cytoband', 'score', 'normalized_score']
+
+        dup_df.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_input1.txt', sep='\t', index=False)
+        cyto_10x_dup_largeSV.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_input2.txt', sep='\t', index=False)
+
         overlap_dup_largeSV_10x = delDupSyndromeSVOverlap(dup_df, cyto_10x_dup_largeSV, cols)
         overlap_dup_largeSV_10x.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_duplication_largeSV_syndrome.txt', sep='\t', index=False)
 
@@ -418,9 +445,10 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
 
     if args.linkedreadSV and args.bionano:
 
-        cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'Found_in_Father',
-                'Found_in_Mother', 'syndrome', 'cytoband', 'score', 'normalized_score', 'SmapEntryID', 'Confidence',
-                'Type', 'Zygosity', 'Genotype', 'SV_size', 'Found_in_Father_b', 'Found_in_Mother_b']
+        if not args.singleton:
+            cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'Found_in_Father', 'Found_in_Mother', 'syndrome', 'cytoband', 'score', 'normalized_score', 'SmapEntryID', 'Confidence', 'Type', 'Zygosity', 'Genotype', 'SV_size', 'Found_in_Father_b', 'Found_in_Mother_b']
+        else:
+            cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'syndrome', 'cytoband', 'score', 'normalized_score', 'SmapEntryID', 'Confidence', 'Type', 'Zygosity', 'Genotype', 'SV_size']
 
         # syndrome appearing in both 10x and bionano --> confident set
         ## for duplications
@@ -449,15 +477,23 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
 
 
 def delDupSyndromeSVOverlap(del_df, cyto_BN_del, cols):
-    #print(cyto_BN_del)
-    #print(del_df)
+
+    print(del_df)
+    print(cyto_BN_del)
+
+
+
+
     if del_df.empty:
         return pd.DataFrame()
 
+    del_df['Chromosome'] = del_df['Chromosome'].str.strip()
     overlap_del_BN = PyRanges(cyto_BN_del).join(PyRanges(del_df))
-    #print(overlap_del_BN.df)
+
     if not overlap_del_BN.df.empty:
+        print('df not empty')
         overlap_del_BN = overlap_del_BN.df
+        print(overlap_del_BN)
         # print(overlap_del_BN)
         # print(np.maximum(0, np.minimum(overlap_del_BN.End, overlap_del_BN.End_b) - np.maximum(overlap_del_BN.Start,overlap_del_BN.Start_b)))
         overlap_del_BN['overlap_len'] = np.maximum(0, np.minimum(overlap_del_BN.End, overlap_del_BN.End_b) - np.maximum(overlap_del_BN.Start,overlap_del_BN.Start_b))
@@ -495,6 +531,7 @@ def compileControlFiles(control_files_path, famid):
         for file in control_files:
             if not (re.match('BC0..0[34]{1}', file) or re.match(rf"BC0{famid}..", file)):  # Discard trio of interest and all probands
                 full_paths.append(os.path.join(path, file))
+                full_paths.append(os.path.join(path, file))
 
     return full_paths
 
@@ -525,7 +562,8 @@ def bionanoSV(args, famid, gene_score_result_r, all_small_variants):
                         referencepath = args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz",
                         outputdirectory = args.workdir + '/results/' + args.sampleid,
                         exons = args.workdir + '/annotatedexonsphenotypes.bed',
-                        genelist = gene_score_result_r)
+                        genelist = gene_score_result_r,
+                        singleton = args.singleton)
 
 
     # Call bionano translocation
@@ -591,7 +629,8 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
                         referencepath = args.workdir + "/results/" + args.sampleid + "/10x_del_control.vcf.gz",
                         outputdirectory = args.workdir + '/results/' + args.sampleid,
                         exons = args.workdir + '/annotatedexonsphenotypes.bed',
-                        genelist = gene_score_result_r)
+                        genelist = gene_score_result_r,
+                        singleton = args.singleton)
 
     tenx_args_largeSV = Namespace(sampleID = args.sampleid,
                         samplepath = args.workdir + "/linkedRead_sv/cases/" + args.sampleid + "/large_svs.vcf.gz",
@@ -600,7 +639,8 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
                         referencepath = args.workdir + "/results/" + args.sampleid + "/10x_largeSV_control.vcf.gz",
                         outputdirectory = args.workdir + '/results/' + args.sampleid,
                         exons = args.workdir + '/annotatedexonsphenotypes.bed',
-                        genelist = gene_score_result_r)
+                        genelist = gene_score_result_r,
+                        singleton = args.singleton)
 
     # Call medium size deletions
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads medium deletions on ' + args.sampleid + '...')
@@ -617,6 +657,14 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
     # Call large inversions
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large inversions on ' + args.sampleid + '...')
     tenxlargesvinversions(tenx_args_largeSV)
+
+    # Call large breakends
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large breakends on ' + args.sampleid + '...')
+    tenxlargesvbreakends(tenx_args_largeSV)
+
+    # Call large unknwon calls
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large unknown on ' + args.sampleid + '...')
+    tenxlargesvunknown(tenx_args_largeSV)
 
     # Check potential compoundhets with SNPs and indels
     tenx_exons = pd.concat([exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup])
@@ -678,6 +726,7 @@ def main():
     parser.add_argument("-b", "--bionano", help="Set this flag to evaluate bionano SVs.", dest="bionano", action='store_true')
     parser.add_argument("-l", "--linkedreadSV", help="Set this flag to evaluate linkedread SVs.", dest="linkedreadSV", action='store_true')
     parser.add_argument("-e", "--enzyme", help="Bionano enzyme used (BspQI or DLE). Only set this flag if -b is set", dest="enzyme", type=str)
+    parser.add_argument("-S", help="Set this flag if this is a singleton case", dest="singleton", action='store_true')
     args = parser.parse_args()
 
     # Change work dir
@@ -685,19 +734,19 @@ def main():
 
     # Define variables
     ## Read the database files
-    hpo_genes = args.database + "/ALL_SOURCES_ALL_FREQUENCIES_genes_to_phenotype.txt"
-    hpo_syndromes = args.database + "/phenotype_annotation_hpoteam.tab"
+    hpo_genes = args.database + "/genes_to_phenotype.txt"
+    hpo_syndromes = args.database + "/phenotype_annotation.tab"
     smallVariantFileName = args.intervar + "/example/" + args.sampleid + "_smallVariant_geneList.txt"
     interVarFinalFileName = args.intervar + "/example/" + args.sampleid +  ".hg38_multianno.txt.intervar.FINAL"
 
     try:
-        hpo_genes_df = pd.read_csv(hpo_genes, sep='\t', usecols=[1, 3], names=["gene_name", "HPO_id"], comment='#')
+        hpo_genes_df = pd.read_csv(hpo_genes, sep='\t', usecols=[1, 2], names=["gene_name", "HPO_id"], comment='#')
     except OSError:
         print("Could not open/read the input file: " + hpo_genes)
         sys.exit()
 
     try:
-        hpo_syndromes_df = pd.read_csv(hpo_syndromes, sep='\t', usecols=[2, 4], names=["syndrome_name", "HPO_id"])
+        hpo_syndromes_df = pd.read_csv(hpo_syndromes, sep='\t', usecols=[2, 4], names=["syndrome_name", "HPO_id"], comment='#')
     except OSError:
         print("Could not open/read the input file: " + hpo_syndromes)
         sys.exit()
@@ -712,13 +761,21 @@ def main():
     except OSError:
         print ("Could not open/read the input file: " + interVarFinalFileName)
 
-
-    weights_gene = "./HPO_weight_gene.txt"
-    weights_syndrome = "./HPO_weight_syndrome.txt"
     famid = args.sampleid[3:5]
+
 
     hpo_gene_dict = createGeneSyndromeDict(hpo_genes_df)
     hpo_syndrome_dict = createGeneSyndromeDict(hpo_syndromes_df)
+
+    weights_gene = args.workdir + "/HPO_weight_gene.txt"
+    weights_syndrome = args.workdir + "/HPO_weight_syndrome.txt"
+
+    if not os.path.exists(weights_gene):
+        cmd = 'grep -v ^# ' + args.database + '/phenotype_to_genes.txt |cut -f-1 | uniq -c |awk \'{print $2, 1/$1}\' > ' + args.workdir + '/HPO_weight_gene.txt'
+        os.system(cmd)
+    if not os.path.exists(weights_syndrome):
+        cmd = 'cat ' + args.database + '/phenotype_annotation.tab | awk -F"\t" \'{print $5}\'| sort | uniq -c | awk \'{print $2, 1/$1}\' > ' + args.workdir + '/HPO_weight_syndrome.txt'
+        os.system(cmd)
 
     weightGeneDict = createWeightDict(weights_gene)
     weightSyndromeDict = createWeightDict(weights_syndrome)
@@ -750,8 +807,8 @@ def main():
         cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup = linkedreadSV(args, famid, gene_score_result_r, all_small_variants)
 
         # Remove control files
-        cmd = 'rm ./results/' + args.sampleid + '/10x_del_control.vcf.gz ./results/' + args.sampleid + '/10x_largeSV_control.vcf.gz'
-        os.system(cmd)
+        # cmd = 'rm ./results/' + args.sampleid + '/10x_del_control.vcf.gz ./results/' + args.sampleid + '/10x_largeSV_control.vcf.gz'
+        # os.system(cmd)
 
     # Get differential diagnosis
     if args.bionano or args.linkedreadSV:
@@ -777,9 +834,8 @@ def main():
     # del_df = pd.read_csv(del_df_name, sep='\t')
     # cyto_BN_del_name = args.workdir + '/results/' + args.sampleid + "/" + args.sampleid + '_input2.txt'
     # cyto_BN_del = pd.read_csv(cyto_BN_del_name, sep='\t')
-    # cyto_BN_del = cyto_BN_del.drop(columns=['CHROM_b', 'POS_b', 'ID_b', 'REF_b', 'ALT_1_b','ALT_2_b','ALT_3_b', 'QUAL_b','FILTER_PASS_b', 'END_b','SVLEN_b','Start_b', 'End_b'])
-    # cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'Found_in_Father',
-    #         'Found_in_Mother', 'syndrome', 'cytoband', 'score', 'normalized_score']
+    # #cyto_BN_del = cyto_BN_del.drop(columns=['CHROM_b', 'POS_b', 'ID_b', 'REF_b', 'ALT_1_b','ALT_2_b','ALT_3_b', 'QUAL_b','FILTER_PASS_b', 'END_b','SVLEN_b','Start_b', 'End_b'])
+    # cols = []
     # delDupSyndromeSVOverlap(del_df, cyto_BN_del, cols)
 
 

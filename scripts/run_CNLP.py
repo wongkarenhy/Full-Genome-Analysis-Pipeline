@@ -66,9 +66,9 @@ def getGeneList(args, relatives):
 
     try:
         # Read the gene phenotype file into a pandas dataframe
-        df = pd.read_csv(args.database + "/ALL_SOURCES_ALL_FREQUENCIES_phenotype_to_genes.txt", sep = '\t', names=["HPO_id", "HPO_name", "gene_id", "gene_name"], comment = '#')
+        df = pd.read_csv(args.database + "/phenotype_to_genes.txt", sep = '\t', usecols=[*range(0,4)], names=["HPO_id", "HPO_name", "gene_id", "gene_name"], comment = '#')
     except OSError:
-        print("Count not open/read the gene-phenotype file:", args.database + "/ALL_SOURCES_ALL_FREQUENCIES_phenotype_to_genes.txt")
+        print("Count not open/read the gene-phenotype file:", args.database + "/phenotype_to_genes.txt")
         sys.exit()
 
     for hpo in relatives:

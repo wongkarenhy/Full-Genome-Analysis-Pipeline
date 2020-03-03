@@ -33,9 +33,13 @@ def BN_insertion(args):
     filtered_sample_frame = checkRefOverlap(sample_copy, ref_copy, sample_frame)
 
     #add column based on overlap with parents
-    df = checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_frame)
-    
+    if not args.singleton:
+        df = checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_frame)
+    else:
+        df = filtered_sample_frame
+
     #describe exon overlap
+    df['Start'], df['End'], df['Chromosome'] = df.RefStartPos, df.RefEndPos, df['RefcontigID1']
     exon_calls = exonOverlap(args, df)
 
     exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_Bionano_insertions.txt', sep='\t', index = False)
@@ -54,6 +58,7 @@ def main():
     parser.add_argument("-c", "--confidence", help="Give the confidence level cutoff for the sample here", dest="confidence", type=str, default=0.5)
     parser.add_argument("-e", "--exons", help="Give the file with exons intervals, names, and phenotypes here", dest="exons", type=str, required=True)
     parser.add_argument("-g", "--genelist", help="Primary genelist with scores", dest="genelist", type=str)
+    parser.add_argument("-S", help="Set this flag if this is a singleton case", dest="singleton", action='store_true')
     args = parser.parse_args()
 
     # Actual function

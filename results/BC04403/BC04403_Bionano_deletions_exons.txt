@@ -1,0 +1,3 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+16250	17	17	11935813.0	11951718.0	6563679.9	6576622.1	1.0	deletion	heterozygous	1	2963.0	False	True	DNAH9	['Ciliary dyskinesia, primary, 40, 618300 (3)']	8.364183152999987	91.82731665408521
+3625	3	3	43419984.0	43434540.0	43538988.8	43549263.5	1.0	deletion	heterozygous	1	4281.0	True	False	ANO10	['Spinocerebellar ataxia, autosomal recessive 10, 613728 (3)']	7.945612351999988	87.23198047092248

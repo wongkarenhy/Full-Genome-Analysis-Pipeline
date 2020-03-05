@@ -1,0 +1,9 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+15387	16	16	2546651.0	2559658.0	1312260.8	1327248.3	0.05	inversion	heterozygous	1	AMDHD2	.	PDPK1	.	False	False
+15387	16	16	2546651.0	2559658.0	1312260.8	1327248.3	0.05	inversion	heterozygous	1	CEMP1	.	PDPK1	.	False	False
+15387	16	16	2546651.0	2559658.0	1312260.8	1327248.3	0.05	inversion	heterozygous	1	MIR3178	.	PDPK1	.	False	False
+15387	16	16	2546651.0	2559658.0	1312260.8	1327248.3	0.05	inversion	heterozygous	1	PDPK1	.	PDPK1	.	False	False
+15390	16	16	2616774.0	2616774.0	1384212.3	1384212.3	0.07	inversion	heterozygous	1	PDPK1	.	PDPK1	.	False	False
+15390	16	16	2616774.0	2616774.0	1384212.3	1384212.3	0.07	inversion	heterozygous	1	PDPK1	.	LOC652276	.	False	False
+15390	16	16	2616774.0	2616774.0	1384212.3	1384212.3	0.07	inversion	heterozygous	1	LOC652276	.	PDPK1	.	False	False
+15390	16	16	2616774.0	2616774.0	1384212.3	1384212.3	0.07	inversion	heterozygous	1	LOC652276	.	LOC652276	.	False	False

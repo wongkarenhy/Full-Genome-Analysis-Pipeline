@@ -1,0 +1,3 @@
+CHROM_x	POS_x	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	SVTYPE	MATEID_x	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2
+1	27071377	call_146_1	C	C]chr1:27103717]			22.0	False	BND	call_146_2	LOC101928391	.	SLC9A1	['?Lichtenstein-Knorr syndrome, 616291 (3)']
+1	27071378	call_146_3	C	[chr1:27103718[C			22.0	False	BND	call_146_4	LOC101928391	.	SLC9A1	['?Lichtenstein-Knorr syndrome, 616291 (3)']

@@ -1,0 +1,9 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+14	99921379	call_3361	T	<DUP:TANDEM>			2.0	False	100027572	106193	False	False	EML1	['Band heterotopia, 600348 (3)']	1.6690281320000493	98.24418433898862
+9	130898773	call_4065	A	<DUP:TANDEM>			2.0	False	131015303	116530	False	False	LAMC3	['Cortical malformations, occipital, 614115 (3)']	1.6416911180000473	96.63504271267261
+9	130997328	call_3073	G	<DUP:TANDEM>			3.0	False	131041756	44428	False	False	LAMC3	['Cortical malformations, occipital, 614115 (3)']	1.6416911180000473	96.63504271267261
+2	1778901	call_2665	T	<DUP:TANDEM>			3.0	False	1833485	54584	False	False	MYT1L	['Mental retardation, autosomal dominant 39, 616521 (3)']	1.4886743340000363	87.62799912483223
+1	119025549	call_3158	C	<DUP:TANDEM>			2.0	False	119138203	112654	False	False	WARS2	['Neurodevelopmental disorder, mitochondrial, with abnormal movements and lactic acidosis, with or without seizures, 617710 (3)']	1.074972538000022	63.276225342031246
+7	44170703	call_3936	C	<DUP:TANDEM>			2.0	False	44252208	81505	False	False	GCK	['Diabetes mellitus, noninsulin-dependent, late onset, 125853 (3)', 'Diabetes mellitus, permanent neonatal, 606176 (3)', 'Hyperinsulinemic hypoglycemia, familial, 3, 602485 (3)', 'MODY, type II, 125851 (3)']	0.06851395999999996	4.032944674196713
+10	94559460	call_3222	T	<DUP:TANDEM>			2.0	False	94637981	78521	False	False	HELLS	['Immunodeficiency-centromeric instability-facial anomalies syndrome 4, 616911 (3)']	0.02880986800000001	1.6958383914009705
+19	7152567	call_3493	T	<DUP:TANDEM>			2.0	False	7229864	77297	False	False	INSR	['Diabetes mellitus, insulin-resistant, with acanthosis nigricans, 610549 (3)', 'Hyperinsulinemic hypoglycemia, familial, 5, 609968 (3)', 'Leprechaunism, 246200 (3)', 'Rabson-Mendenhall syndrome, 262190 (3)']	0.026086312000000007	1.5355214185522763

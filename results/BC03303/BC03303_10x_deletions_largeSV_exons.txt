@@ -1,0 +1,3 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+7	142626931	call_3440	T	<DEL>			3.0	False	142797084	-170153	False	False	PRSS1	['Pancreatitis, hereditary, 167800 (3)', 'Trypsinogen deficiency, 614044 (1)']	25.891928363000115	48.677887220814156
+7	142626931	call_3440	T	<DEL>			3.0	False	142797084	-170153	False	False	PRSS2	['{Pancreatitis, chronic, protection against}, 167800 (3)']	19.709097809000106	37.053912204604

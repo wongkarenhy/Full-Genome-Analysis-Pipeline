@@ -1,0 +1,4 @@
+Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+15	39086856	39092128	3922	0.99	deletion	heterozygous	1	1638.0	False	False	CHROMOSOME 15Q14 DELETION SYNDROME	 15q14 	0.03192638	4.560911428571428
+15	25215869	25225532	3891	0.99	deletion	heterozygous	1	1895.0	True	False	CHROMOSOME 15Q11.2 DELETION SYNDROME	 15q11.2 	0.00162338	0.23191142857142857
+15	39086856	39092128	3922	0.99	deletion	heterozygous	1	1638.0	False	False	15Q14 MICRODELETION SYNDROME	 15q14 	0.00162338	0.23191142857142857

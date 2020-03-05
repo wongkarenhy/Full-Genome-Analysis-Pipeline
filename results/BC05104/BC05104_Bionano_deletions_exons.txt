@@ -1,0 +1,4 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+18843	X	23	1045828.0	3861713.0	578226.6	3187377.3	0.97	deletion	heterozygous	1	206734.0	False	False	CSF2RA	['Surfactant metabolism dysfunction, pulmonary, 4, 300770 (3)']	37.73063761299994	68.78120765981225
+18613	22	22	20036490.0	20076036.0	1470144.8	1473536.5	1.0	deletion	heterozygous	1	36154.0	True	True	TANGO2	['Metabolic encephalomyopathic crises, recurrent, with rhabdomyolysis, cardiac arrhythmias, and neurodegeneration, 616878 (3)']	37.08067136399994	67.59634924308261
+18641	22	22	20036490.0	20076036.0	1353919.8	1359663.3	1.0	deletion	heterozygous	2	33802.0	True	True	TANGO2	['Metabolic encephalomyopathic crises, recurrent, with rhabdomyolysis, cardiac arrhythmias, and neurodegeneration, 616878 (3)']	37.08067136399994	67.59634924308261

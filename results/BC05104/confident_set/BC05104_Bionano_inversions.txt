@@ -1,0 +1,5 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+14068	13	13	19362897.0	20427899.0	337493.6	365969.8	0.28	inversion	unknown	-1	ANKRD26P3	.	CRYL1	.	False	False
+14068	13	13	19362897.0	20427899.0	337493.6	365969.8	0.28	inversion	unknown	-1	ANKRD26P3	.	MIR4499	.	False	False
+14068	13	13	19362897.0	20427899.0	337493.6	365969.8	0.28	inversion	unknown	-1	LINC00421	.	CRYL1	.	False	False
+14068	13	13	19362897.0	20427899.0	337493.6	365969.8	0.28	inversion	unknown	-1	LINC00421	.	MIR4499	.	False	False

@@ -1,0 +1,16 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+2	201630016	call_3675	C	<DUP:TANDEM>			3.0	False	201872473	242457	False	False	ALS2	['Amyotrophic lateral sclerosis 2, juvenile, 205100 (3)', 'Primary lateral sclerosis, juvenile, 606353 (3)', 'Spastic paralysis, infantile onset ascending, 607225 (3)']	51.48658909299992	93.85767111661288
+5	132383057	call_3962	C	<DUP:TANDEM>			3.0	False	132609598	226541	False	False	IRF1	['Gastric cancer, somatic, 613659 (3)', 'Myelodysplastic syndrome, preleukemic (3)', 'Myelogenous leukemia, acute (3)', 'Nonsmall cell lung cancer, somatic, 211980 (3)']	51.276283666999916	93.47429404978303
+7	74302302	call_2927	G	<DUP:TANDEM>			4.0	False	74333308	31006	False	False	CLIP2	.	38.48831584499994	70.16242004082315
+2	201630016	call_3675	C	<DUP:TANDEM>			3.0	False	201872473	242457	False	False	TMEM237	['Joubert syndrome 14, 614424 (3)']	36.948142360999945	67.3547549989093
+5	132383057	call_3962	C	<DUP:TANDEM>			3.0	False	132609598	226541	False	False	SLC22A5	['Carnitine deficiency, systemic primary, 212140 (3)']	31.99824249899992	58.3313164396257
+X	48834644	call_4251	A	<DUP:TANDEM>			3.0	False	48904336	69692	False	False	SLC35A2	['Congenital disorder of glycosylation, type IIm, 300896 (3)']	31.434399050999932	57.30345590670034
+9	37397531	call_4191	A	<DUP:TANDEM>			3.0	False	37605549	208018	False	False	GRHPR	['Hyperoxaluria, primary, type II, 260000 (3)']	27.618390335999948	50.347048475948775
+X	48834644	call_4251	A	<DUP:TANDEM>			3.0	False	48904336	69692	False	False	PQBP1	['Renpenning syndrome, 309500 (3)']	19.99704495000003	36.45368825716998
+X	130130037	call_4290	A	<DUP:TANDEM>			3.0	False	130291411	161374	False	False	AIFM1	['Combined oxidative phosphorylation deficiency 6, 300816 (3)', 'Cowchock syndrome, 310490 (3)', 'Deafness, X-linked 5, 300614 (3)', 'Spondyloepimetaphyseal dysplasia, X-linked, with hypomyelinating leukodystrophy, 300232 (3)']	13.882821622000028	25.307741859043386
+1	62530157	call_2136	A	<DUP:TANDEM>			4.0	False	62595001	64844	False	False	DOCK7	['Epileptic encephalopathy, early infantile, 23, 615859 (3)']	13.570991557000024	24.739290069934256
+7	114478025	call_2010	C	<DUP:TANDEM>			5.0	False	114522273	44248	False	False	FOXP2	['Speech-language disorder-1, 602081 (3)']	12.466950996000023	22.726675179354384
+5	132383057	call_3962	C	<DUP:TANDEM>			3.0	False	132609598	226541	False	False	RAD50	['Nijmegen breakage syndrome-like disorder, 613078 (3)']	12.105535275000014	22.067831032255807
+3	68935189	call_3808	G	<DUP:TANDEM>			3.0	False	68989176	53987	False	False	EOGT	['Adams-Oliver syndrome 4, 615297 (3)']	11.24685749200001	20.502501140108922
+2	210258756	call_2588	G	<DUP:TANDEM>			4.0	False	210296671	37915	False	False	MYL1	['Myopathy, congenital, with fast-twitch (type II) fiber atrophy, 618414 (3)']	6.955099711999991	12.678825163053903
+19	35853105	call_2522	T	<DUP:TANDEM>			4.0	False	35908662	55557	False	False	TYROBP	['Polycystic lipomembranous osteodysplasia with sclerosing leukoencephalopathy 1, 221770 (3)']	0.694770496	1.2665344872099875

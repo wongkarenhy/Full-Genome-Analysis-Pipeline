@@ -1,0 +1,5 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+4028	15	15	22616049.0	30148131.0	100589.6	111875.7	0.0	translocation_intrachr	heterozygous	1	LOC101927846	.	ULK4P3	.	False	False
+4028	15	15	22616049.0	30148131.0	100589.6	111875.7	0.0	translocation_intrachr	heterozygous	1	LOC101927846	.	GOLGA8T	.	False	False
+4028	15	15	22616049.0	30148131.0	100589.6	111875.7	0.0	translocation_intrachr	heterozygous	1	GOLGA8IP	.	ULK4P3	.	False	False
+4028	15	15	22616049.0	30148131.0	100589.6	111875.7	0.0	translocation_intrachr	heterozygous	1	GOLGA8IP	.	GOLGA8T	.	False	False

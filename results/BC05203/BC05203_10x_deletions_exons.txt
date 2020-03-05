@@ -1,0 +1,14 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+7	26365148	call_4460	G	<DEL>			3.0	True	26371883	-6735	False	False	SNX10	['Osteopetrosis, autosomal recessive 8, 615085 (3)']	19.061943938000326	89.86827658169639
+1	155188614	call_2773	G	<DEL>			68.0	True	155188692	-78	False	False	MUC1	['Medullary cystic kidney disease 1, 174000 (3)']	18.907082894000315	89.13817816260602
+6	33305393	call_4454	G	<DEL>			3.0	True	33313214	-7821	False	False	TAPBP	['Bare lymphocyte syndrome, type I, 604571 (3)']	15.432885993000097	72.75894165798366
+4	82428177	call_3264	A	<DEL>			22.0	True	82428275	-98	False	False	HNRNPDL	['Muscular dystrophy, limb-girdle, autosomal dominant 3, 609115 (3)']	15.335610717000096	72.30033358335272
+13	27622010	call_4361	G	<DEL>			3.0	True	27648374	-26364	False	False	POLR1D	['Treacher Collins syndrome 2, 613717 (3)']	13.491939353000065	63.608273182555564
+5	96662500	call_4446	G	<DEL>			3.0	True	96675499	-12999	False	False	CAST	['Peeling skin with leukonychia, acral punctate keratoses, cheilitis, and knuckle pads, 616295 (3)']	11.059658108000045	52.141188589237586
+19	52190174	call_3824	G	<DEL>			7.0	True	52201939	-11765	False	False	PPP2R1A	['Mental retardation, autosomal dominant 36, 616362 (3)']	6.620656305000024	31.21334182417655
+14	74484585	call_4550	T	<DEL>			2.0	True	74486326	-1741	False	False	NPC2	['Niemann-pick disease, type C2, 607625 (3)']	6.538287863000025	30.825012598608808
+2	73927056	call_4073	A	<DEL>			5.0	True	73946690	-19634	False	False	DGUOK	['Mitochondrial DNA depletion syndrome 3 (hepatocerebral type), 251880 (3)', 'Portal hypertension, noncirrhotic, 617068 (3)', 'Progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal recessive 4, 617070 (3)']	4.417795828000024	20.82787037059241
+16	88810559	call_4564	G	<DEL>			2.0	True	88811545	-986	False	False	APRT	['Adenine phosphoribosyltransferase deficiency, 614723 (3)']	4.267600582000026	20.11976903776477
+1	17308310	call_4493	T	<DEL>			2.0	True	17330929	-22619	False	False	PADI4	['{Rheumatoid arthritis, susceptibility to}, 180300 (3)']	3.5000881070000207	16.501301602987574
+9	2161893	call_4666	T	<DEL>			2.0	True	2181566	-19673	False	False	SMARCA2	['Nicolaides-Baraitser syndrome, 601358 (3)']	3.2254402120000147	15.206463412784055
+8	38428415	call_4661	C	<DEL>			2.0	True	38457353	-28938	False	False	FGFR1	['Encephalocraniocutaneous lipomatosis, somatic mosaic, 613001 (3)', 'Hartsfield syndrome, 615465 (3)', 'Hypogonadotropic hypogonadism 2 with or without anosmia, 147950 (3)', 'Jackson-Weiss syndrome, 123150 (3)', 'Osteoglophonic dysplasia, 166250 (3)', 'Pfeiffer syndrome, 101600 (3)', 'Trigonocephaly 1, 190440 (3)']	2.8743056460000096	13.551025835309325

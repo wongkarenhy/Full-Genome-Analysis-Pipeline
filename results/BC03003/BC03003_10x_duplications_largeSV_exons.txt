@@ -1,0 +1,13 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+9	99129436	call_3604	C	<DUP:TANDEM>			3.0	False	99204263	74827	False	False	TGFBR1	['Loeys-Dietz syndrome 1, 609192 (3)', '{Multiple self-healing squamous epithelioma, susceptibility to}, 132800 (3)']	625.5692798369464	99.87327839936937
+X	64973045	call_3638	T	<DUP:TANDEM>			3.0	False	65032103	59058	False	False	ZC4H2	['Wieacker-Wolff syndrome, 314580 (3)']	463.1504398899733	73.94281387343435
+4	92582963	call_1315	G	<DUP:TANDEM>			6.0	False	92616640	33677	False	False	GRID2	['Spinocerebellar ataxia, autosomal recessive 18, 616204 (3)']	409.33450622698064	65.3510017460118
+7	78180800	call_1918	T	<DUP:TANDEM>			5.0	False	78223595	42795	False	False	MAGI2	['Nephrotic syndrome, type 15, 617609 (3)']	220.23807590099852	35.161411177887544
+10	18247948	call_2868	A	<DUP:TANDEM>			3.0	False	18292377	44429	False	False	CACNB2	['Brugada syndrome 4, 611876 (3)']	218.81191693299854	34.93372229314892
+6	158752708	call_3476	G	<DUP:TANDEM>			3.0	False	158815530	62822	False	False	EZR	.	204.93516102399875	32.71827286036848
+22	25855994	call_3276	T	<DUP:TANDEM>			3.0	False	25923360	67366	False	False	MYO18B	['Klippel-Feil syndrome 4, autosomal recessive, with myopathy and facial dysmorphism, 616549 (3)']	204.8932958939987	32.71158901587917
+9	91738548	call_2724	T	<DUP:TANDEM>			4.0	False	91783492	44944	False	False	ROR2	['Brachydactyly, type B1, 113000 (3)', 'Robinow syndrome, autosomal recessive, 268310 (3)']	201.21147856299882	32.12378015255005
+17	63312005	call_3100	G	<DUP:TANDEM>			3.0	False	63532683	220678	False	False	CYB561	['Orthostatic hypotension 2, 618182 (3)']	158.59678757299974	25.320266881795106
+17	63312005	call_3100	G	<DUP:TANDEM>			3.0	False	63532683	220678	False	False	ACE	['Renal tubular dysgenesis, 267430 (3)', '[Angiotensin I-converting enzyme, benign serum increase] (3)', '{Microvascular complications of diabetes 3}, 612624 (3)', '{Myocardial infarction, susceptibility to} (3)', '{SARS, progression of} (3)', '{Stroke, hemorrhagic}, 614519 (3)']	116.61800687800027	18.6182778514026
+16	56473549	call_2273	A	<DUP:TANDEM>			4.0	False	56519774	46225	False	False	BBS2	['Bardet-Biedl syndrome 2, 615981 (3)', 'Retinitis pigmentosa 74, 616562 (3)']	96.32913110400011	15.379121767659013
+3	128771443	call_2477	G	<DUP:TANDEM>			4.0	False	128811257	39814	False	False	RAB7A	.	44.40749488300008	7.089737687605832

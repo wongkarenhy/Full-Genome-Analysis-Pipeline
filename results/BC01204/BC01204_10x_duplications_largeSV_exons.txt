@@ -1,0 +1,2 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+1	15956893	call_1782	A	<DUP:TANDEM>			3.0	False	16038821	81928	False	False	CLCNKA	['Bartter syndrome, type 4b, digenic, 613090 (3)']	0.18777009999999994	7.199698684124129

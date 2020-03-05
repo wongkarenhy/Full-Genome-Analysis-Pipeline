@@ -1,0 +1,65 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+1	61840288	call_852	T	<INV>			7.0	False	61878972	38684	PATJ	.	PATJ	.	False	False
+1	61840288	call_852	T	<INV>			7.0	False	61878972	38684	MIR12132	.	PATJ	.	False	False
+1	82954918	call_855	T	<INV>			7.0	False	82993342	38424	LINC01362	.	LINC01362	.	False	False
+1	82954918	call_855	T	<INV>			7.0	False	82993342	38424	LINC01362	.	LINC01361	.	False	False
+1	120028850	call_1526	T	<INV>			5.0	False	120083021	54171	NOTCH2	['Alagille syndrome 2, 610205 (3)', 'Hajdu-Cheney syndrome, 102500 (3)']	LOC101929178	.	False	False
+1	120028850	call_1526	T	<INV>			5.0	False	120083021	54171	NOTCH2	['Alagille syndrome 2, 610205 (3)', 'Hajdu-Cheney syndrome, 102500 (3)']	LOC105378939	.	False	False
+10	129604148	call_886	C	<INV>			7.0	False	129640365	36217	MGMT	.	MGMT	.	False	False
+11	18247365	call_2100	T	<INV>			4.0	False	18293111	45746	SAA2-SAA4	.	HPS5	['Hermansky-Pudlak syndrome 5, 614074 (3)']	False	False
+11	18247365	call_2100	T	<INV>			4.0	False	18293111	45746	SAA2	.	HPS5	['Hermansky-Pudlak syndrome 5, 614074 (3)']	False	False
+17	21232669	call_1681	T	<INV>			5.0	False	21264115	31446	NATD1	.			False	False
+17	79821362	call_2871	A	<INV>			3.0	False	79857087	35725	LOC102723961	.			False	False
+17	79821362	call_2871	A	<INV>			3.0	False	79857087	35725	LINC01977	.			False	False
+2	198574690	call_2946	A	<INV>			3.0	False	198614097	39407	LOC105373831	.	LOC105373831	.	False	False
+2	198574690	call_2946	A	<INV>			3.0	False	198614097	39407	LOC105373830	.	LOC105373831	.	False	False
+20	44352152	call_2361	A	<INV>			4.0	False	44406332	54180	R3HDML	.	HNF4A	['Fanconi renotubular syndrome 4, with maturity-onset diabetes of the young, 616026 (3)', 'MODY, type I, 125850 (3)', '{Diabetes mellitus, noninsulin-dependent}, 125853 (3)']	False	False
+20	44352152	call_2361	A	<INV>			4.0	False	44406332	54180	R3HDML	.	MIR3646	.	False	False
+20	44352152	call_2361	A	<INV>			4.0	False	44406332	54180	LOC105372629	.	HNF4A	['Fanconi renotubular syndrome 4, with maturity-onset diabetes of the young, 616026 (3)', 'MODY, type I, 125850 (3)', '{Diabetes mellitus, noninsulin-dependent}, 125853 (3)']	False	False
+20	44352152	call_2361	A	<INV>			4.0	False	44406332	54180	LOC105372629	.	MIR3646	.	False	False
+20	44352152	call_2361	A	<INV>			4.0	False	44406332	54180	HNF4A	['Fanconi renotubular syndrome 4, with maturity-onset diabetes of the young, 616026 (3)', 'MODY, type I, 125850 (3)', '{Diabetes mellitus, noninsulin-dependent}, 125853 (3)']	HNF4A	['Fanconi renotubular syndrome 4, with maturity-onset diabetes of the young, 616026 (3)', 'MODY, type I, 125850 (3)', '{Diabetes mellitus, noninsulin-dependent}, 125853 (3)']	False	False
+20	44352152	call_2361	A	<INV>			4.0	False	44406332	54180	HNF4A	['Fanconi renotubular syndrome 4, with maturity-onset diabetes of the young, 616026 (3)', 'MODY, type I, 125850 (3)', '{Diabetes mellitus, noninsulin-dependent}, 125853 (3)']	MIR3646	.	False	False
+20	61291290	call_2365	A	<INV>			4.0	False	61331302	40012	CDH4	.	CDH4	.	False	False
+22	30017663	call_1795	T	<INV>			5.0	False	30047828	30165	MTMR3	.	HORMAD2-AS1	.	False	False
+22	30017663	call_1795	T	<INV>			5.0	False	30047828	30165	HORMAD2-AS1	.	HORMAD2-AS1	.	False	False
+3	30305300	call_3009	C	<INV>			3.0	False	30345076	39776			LOC101927995	.	False	False
+4	9558842	call_1376	T	<INV>			6.0	False	9595159	36317	MIR548I2	.			False	False
+4	140158696	call_1390	G	<INV>			6.0	False	140193315	34619	MAML3	.			False	False
+5	54489002	call_3099	T	<INV>			3.0	False	54521573	32571			SNX18	.	False	False
+5	100257241	call_3119	T	<INV>			3.0	False	100296864	39623	LOC105379101	.			False	False
+7	72808614	call_1947	A	<INV>			5.0	False	72846999	38385	TYW1B	.	SBDSP1	.	False	False
+8	58740020	call_1965	T	<INV>			5.0	False	58783415	43395	LOC105375858	.			True	True
+X	14606	call_3255	G	<INV>			3.0	False	225194	210588					False	False
+X	20917947	call_2604	C	<INV>			4.0	False	20950625	32678					False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	SPRY3	.	SPRY3	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	SPRY3	.	VAMP7	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	SPRY3	.	IL9R	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	SPRY3	.	WASIR1	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	SPRY3	.	DDX11L16	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	VAMP7	.	SPRY3	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	VAMP7	.	VAMP7	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	VAMP7	.	IL9R	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	VAMP7	.	WASIR1	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	VAMP7	.	DDX11L16	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	IL9R	.	SPRY3	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	IL9R	.	VAMP7	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	IL9R	.	IL9R	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	IL9R	.	WASIR1	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	IL9R	.	DDX11L16	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	WASIR1	.	SPRY3	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	WASIR1	.	VAMP7	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	WASIR1	.	IL9R	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	WASIR1	.	WASIR1	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	WASIR1	.	DDX11L16	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	DDX11L16	.	SPRY3	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	DDX11L16	.	VAMP7	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	DDX11L16	.	IL9R	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	DDX11L16	.	WASIR1	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	DDX11L16	.	DDX11L16	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	ADGRG4	.	SPRY3	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	ADGRG4	.	VAMP7	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	ADGRG4	.	IL9R	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	ADGRG4	.	WASIR1	.	False	False
+X	136396821	call_3278	G	<INV>			3.0	False	136432297	35476	ADGRG4	.	DDX11L16	.	False	False
+Y	5946952	call_2005	A	<INV>			5.0	False	5986092	39140					False	False
+Y	14091442	call_3283	T	<INV>			3.0	False	14132653	41211					False	False

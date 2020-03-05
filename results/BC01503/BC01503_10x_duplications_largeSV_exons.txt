@@ -1,0 +1,13 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+2	49146057	call_2210	A	<DUP:TANDEM>			5.0	False	49201457	55400	False	False	FSHR	['Ovarian dysgenesis 1, 233300 (3)', 'Ovarian hyperstimulation syndrome, 608115 (3)', 'Ovarian response to FSH stimulation, 276400 (3)']	67.81895687199922	87.30831696072923
+6	34224874	call_3298	A	<DUP:TANDEM>			3.0	False	34304510	79636	False	False	HMGA1	['{Diabetes mellitus, noninsulin-dependent, susceptibility to}, 125853 (3)']	67.2269091279992	86.54613047964551
+13	101680713	call_3054	A	<DUP:TANDEM>			3.0	False	101735076	54363	False	False	FGF14	['Spinocerebellar ataxia 27, 609307 (3)']	66.10847029199901	85.10628214079541
+1	8433744	call_3417	G	<DUP:TANDEM>			2.0	False	8511010	77266	False	False	RERE	['Neurodevelopmental disorder with or without anomalies of the brain, eye, or heart, 616975 (3)']	57.43933846699909	73.94587295638435
+7	781569	call_3318	T	<DUP:TANDEM>			3.0	False	887013	105444	False	False	DNAAF5	['Ciliary dyskinesia, primary, 18, 614874 (3)']	51.93592652499937	66.8609271483199
+14	92471778	call_3067	A	<DUP:TANDEM>			3.0	False	92545730	73952	False	False	SLC24A4	['Amelogenesis imperfecta, type IIA5, 615887 (3)', '[Skin/hair/eye pigmentation 6, blond/brown hair], 210750 (3)', '[Skin/hair/eye pigmentation 6, blue/green eyes], 210750 (3)']	48.65571190299942	62.63806629752092
+19	4671495	call_1728	A	<DUP:TANDEM>			6.0	False	4737713	66218	False	False	DPP9	.	28.32631419599985	36.46654169012514
+15	50999271	call_2146	T	<DUP:TANDEM>			5.0	False	51054085	54814	False	False	AP4E1	['Spastic paraplegia 51, autosomal recessive, 613744 (3)', 'Stuttering, familial persistent, 1, 184450 (3)']	27.84065555599988	35.84131770509891
+8	132892873	call_2412	G	<DUP:TANDEM>			5.0	False	132933531	40658	False	False	TG	['Thyroid dyshormonogenesis 3, 274700 (3)', '{Autoimmune thyroid disease, susceptibility to, 3}, 608175 (3)']	26.536741848999906	34.162693962255766
+7	157341353	call_3343	T	<DUP:TANDEM>			3.0	False	157394655	53302	False	False	DNAJB6	['Muscular dystrophy, limb-girdle, autosomal dominant 1, 603511 (3)']	16.69870302400004	21.497465070189378
+4	56019851	call_1842	A	<DUP:TANDEM>			6.0	False	56053365	33514	False	False	CEP135	['Microcephaly 8, primary, autosomal recessive, 614673 (3)']	15.510713463000036	19.968078982261357
+2	177418008	call_3689	C	<DUP:TANDEM>			2.0	False	177526632	108624	False	False	AGPS	['Rhizomelic chondrodysplasia punctata, type 3, 600121 (3)']	1.577021478000001	2.0302154059221365

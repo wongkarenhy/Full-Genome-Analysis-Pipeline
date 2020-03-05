@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
+6	27724680	27741542	call_4219	C	<DEL>	7.0	True	-6041	True	False	6P22 MICRODELETION SYNDROME	 6p22 	0.0238095	2.38095	6444	1.0	deletion	heterozygous	1	6103.0	True	False

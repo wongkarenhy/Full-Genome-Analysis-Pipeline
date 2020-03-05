@@ -1,0 +1,9 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+272	1	1	146312706.0	148345207.0	1549793.6	1595485.6	-1.0	inversion	unknown	-1	NUDT4P2	.	MIR5087	.	False	False
+272	1	1	146312706.0	148345207.0	1549793.6	1595485.6	-1.0	inversion	unknown	-1	NUDT4P2	.	RNVU1-1	.	False	False
+272	1	1	146312706.0	148345207.0	1549793.6	1595485.6	-1.0	inversion	unknown	-1	SEC22B4P	.	MIR5087	.	False	False
+272	1	1	146312706.0	148345207.0	1549793.6	1595485.6	-1.0	inversion	unknown	-1	SEC22B4P	.	RNVU1-1	.	False	False
+275	1	1	146312706.0	148345207.0	1549793.6	1595485.6	-1.0	inversion	unknown	-1	NUDT4P2	.	MIR5087	.	False	False
+275	1	1	146312706.0	148345207.0	1549793.6	1595485.6	-1.0	inversion	unknown	-1	NUDT4P2	.	RNVU1-1	.	False	False
+275	1	1	146312706.0	148345207.0	1549793.6	1595485.6	-1.0	inversion	unknown	-1	SEC22B4P	.	MIR5087	.	False	False
+275	1	1	146312706.0	148345207.0	1549793.6	1595485.6	-1.0	inversion	unknown	-1	SEC22B4P	.	RNVU1-1	.	False	False

@@ -1,0 +1,15 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+2	229769222	call_2455	A	<DUP:TANDEM>			3.0	False	229800031	30809	False	False	TRIP12	['Mental retardation, autosomal dominant 49, 617752 (3)']	2.9852808950000087	93.40049483550317
+7	40002082	call_1878	G	<DUP:TANDEM>			4.0	False	40046436	44354	False	False	CDK13	['Congenital heart defects, dysmorphic facial features, and intellectual developmental disorder, 617360 (3)']	2.8218411360000104	88.28695446750534
+1	231235338	call_1323	A	<DUP:TANDEM>			4.0	False	231268502	33164	False	False	GNPAT	['Rhizomelic chondrodysplasia punctata, type 2, 222765 (3)']	2.4444766890000134	76.48035156385275
+X	148922883	call_1254	C	<DUP:TANDEM>			5.0	False	148957500	34617	False	False	AFF2	['Mental retardation, X-linked, FRAXE type, 309548 (3)']	2.4104784350000137	75.41664806028575
+2	199312787	call_2447	A	<DUP:TANDEM>			3.0	False	199344687	31900	False	False	SATB2	['Glass syndrome, 612313 (3)']	2.0167485420000175	63.098019384732176
+11	68901802	call_2123	C	<DUP:TANDEM>			3.0	False	68934917	33115	False	False	IGHMBP2	['Charcot-Marie-Tooth disease, axonal, type 2S, 616155 (3)', 'Neuronopathy, distal hereditary motor, type VI, 604320 (3)']	1.912259661000016	59.828875363292234
+9	91316414	call_2849	T	<DUP:TANDEM>			3.0	False	91350215	33801	False	False	AUH	['3-methylglutaconic aciduria, type I, 250950 (3)']	1.866770090000015	58.40564298058045
+7	102039536	call_1213	T	<DUP:TANDEM>			5.0	False	102076300	36764	False	False	CUX1	['Global developmental delay with or without impaired intellectual development, 618330 (3)']	1.8121152900000137	56.69565804291998
+5	13675273	call_1789	T	<DUP:TANDEM>			4.0	False	13711965	36692	False	False	DNAH5	['Ciliary dyskinesia, primary, 3, with or without situs inversus, 608644 (3)']	1.7618210670000123	55.12210249461796
+11	60084888	call_2119	G	<DUP:TANDEM>			3.0	False	60128858	43970	False	False	MS4A2	['{Atopy, susceptibility to}, 147050 (3)']	1.5348133490000093	48.0197111490697
+10	99719742	call_522	C	<DUP:TANDEM>			7.0	False	99750365	30623	False	False	COX15	['Cardioencephalomyopathy, fatal infantile, due to cytochrome c oxidase deficiency 2, 615119 (3)', 'Leigh syndrome due to cytochrome c oxidase deficiency, 256000 (3)']	1.3741420270000073	42.99278688013098
+20	9432895	call_1060	T	<DUP:TANDEM>			5.0	False	9463930	31035	False	False	PLCB4	['Auriculocondylar syndrome 2, 614669 (3)']	1.294339891000006	40.49601714438715
+3	111503644	call_1729	T	<DUP:TANDEM>			4.0	False	111547777	44133	False	False	CD96	['C syndrome, 211750 (3)']	0.9169758820000008	28.689427944441988
+10	102615311	call_1366	A	<DUP:TANDEM>			4.0	False	102651430	36119	False	False	SUFU	['Basal cell nevus syndrome, 109400 (3)', 'Joubert syndrome 32, 617757 (3)', 'Medulloblastoma, desmoplastic, 155255 (3)', '{Meningioma, familial, susceptibility to}, 607174 (3)']	0.3388269810000005	10.600881056795691

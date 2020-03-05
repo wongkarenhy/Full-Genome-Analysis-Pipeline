@@ -1,0 +1,5 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
+11	31575779	31607133	call_3117	T	<DEL>	5.0	True	-2724	False	True	CHROMOSOME 11P13 DELETION SYNDROME, DISTAL	 11p13 	0.000545554	0.46303075959828016	2923	1.0	deletion	heterozygous	1	2746.0	False	True
+17	7657806	7667697	call_2761	T	<DEL>	9.0	True	-1545	True	False	CHROMOSOME 17P13.1 DELETION SYNDROME	 17p13.1 	0.000545554	0.46303075959828016	3963	0.99	deletion	heterozygous	1	1619.0	True	False
+17	39589710	39595649	call_3390	G	<DEL>	3.0	True	-1863	True	False	17Q12 MICRODELETION SYNDROME	 17q12 	0.000545554	0.46303075959828016	4046	0.99	deletion	heterozygous	1	1724.0	False	False
+X	26119471	26140228	call_3471	T	<DEL>	3.0	True	-8661	False	True	XP21 MICRODELETION SYNDROME	 Xp21 	0.000545554	0.46303075959828016	4998	1.0	deletion	homozygous	1	8741.0	False	True

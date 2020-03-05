@@ -1,0 +1,6 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+18169	X	23	41337161.5	41342405.0	31663288.5	31669642.9	1.0	insertion	heterozygous	2	1111.0	False	True	DDX3X	['Mental retardation, X-linked 102, 300958 (3)']	34.62153534399963	51.583433182167305
+16518	19	19	13897949.5	13911642.0	10686229.6	10716495.0	1.0	insertion	heterozygous	1	16573.0	True	False	CC2D1A	['Mental retardation, autosomal recessive 3, 608443 (3)']	25.692543524999795	38.27991996985327
+8217	7	7	68695981.0	73011514.0	5285418.0	9642754.7	0.99	insertion	heterozygous	1	41804.0	False	False	AUTS2	.	15.202290197999826	22.650246814670822
+15064	16	16	16170001.5	16173852.0	844070.6	848967.9	1.0	insertion	homozygous	1	1047.0	False	False	ABCC6	['Arterial calcification, generalized, of infancy, 2, 614473 (3)', 'Pseudoxanthoma elasticum, 264800 (3)', 'Pseudoxanthoma elasticum, forme fruste, 177850 (3)']	7.150290831999906	10.653385117117715
+15074	16	16	16170001.5	16173852.0	843939.1	848816.8	1.0	insertion	homozygous	1	1027.0	False	False	ABCC6	['Arterial calcification, generalized, of infancy, 2, 614473 (3)', 'Pseudoxanthoma elasticum, 264800 (3)', 'Pseudoxanthoma elasticum, forme fruste, 177850 (3)']	7.150290831999906	10.653385117117715

@@ -1,0 +1,2 @@
+Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+7	76485710	76994527	8364	-1.0	duplication_split	unknown	-1	212278.0	False	False	7Q11.23 MICRODUPLICATION SYNDROME	 7q11.23 	0.025191309000000002	0.9450809330281571

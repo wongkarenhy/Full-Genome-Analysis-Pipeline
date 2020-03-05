@@ -1,0 +1,16 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+6	33117159	call_3254	G	<DUP:TANDEM>			3.0	False	33164911	47752	False	False	COL11A2	['Deafness, autosomal dominant 13, 601868 (3)', 'Deafness, autosomal recessive 53, 609706 (3)', 'Fibrochondrogenesis 2, 614524 (3)', 'Otospondylomegaepiphyseal dysplasia, autosomal dominant, 184840 (3)', 'Otospondylomegaepiphyseal dysplasia, autosomal recessive, 215150 (3)']	51.206504515999015	92.19949966540094
+18	58368946	call_2895	T	<DUP:TANDEM>			3.0	False	58435750	66804	False	False	NEDD4L	['Periventricular nodular heterotopia 7, 617201 (3)']	51.15160596499903	92.10065247826336
+3	53805750	call_1053	T	<DUP:TANDEM>			6.0	False	53837351	31601	False	False	CACNA1D	['Primary aldosteronism, seizures, and neurologic abnormalities, 615474 (3)', 'Sinoatrial node dysfunction and deafness, 614896 (3)']	51.03655255199902	91.89349389140682
+7	78179142	call_1650	C	<DUP:TANDEM>			5.0	False	78212398	33256	False	False	MAGI2	['Nephrotic syndrome, type 15, 617609 (3)']	47.01890930699903	84.65955553681084
+19	40599775	call_2920	T	<DUP:TANDEM>			3.0	False	40641077	41302	False	False	LTBP4	['Cutis laxa, autosomal recessive, type IC, 613177 (3)']	43.450602173999116	78.2346660540249
+16	49760487	call_1989	C	<DUP:TANDEM>			4.0	False	49810767	50280	False	False	ZNF423	['Joubert syndrome 19, 614844 (3)', 'Nephronophthisis 14, 614844 (3)']	43.413562311999115	78.16797419961394
+11	93749938	call_2643	T	<DUP:TANDEM>			3.0	False	93813960	64022	False	False	MED17	['Microcephaly, postnatal progressive, with seizures and brain atrophy, 613668 (3)']	34.14395024699912	61.477641544348714
+7	73540684	call_3310	G	<DUP:TANDEM>			3.0	False	73587352	46668	False	False	TBL2	.	32.09511913199911	57.78863356601883
+2	199428163	call_3009	G	<DUP:TANDEM>			3.0	False	199495737	67574	False	False	SATB2	['Glass syndrome, 612313 (3)']	29.62515692099931	53.34136105251466
+22	29330578	call_2167	C	<DUP:TANDEM>			4.0	False	29375721	45143	False	False	AP1B1	.	28.97873164899938	52.17744472561828
+1	181558123	call_2553	A	<DUP:TANDEM>			3.0	False	181594880	36757	False	False	CACNA1E	['Epileptic encephalopathy, early infantile, 69, 618285 (3)']	16.37694212100006	29.487384149286473
+17	31980332	call_2006	G	<DUP:TANDEM>			4.0	False	32021547	41215	False	False	SUZ12	.	14.535934275000077	26.17257084801452
+8	143182452	call_1696	C	<DUP:TANDEM>			5.0	False	143218566	36114	False	False	GPIHBP1	['Hyperlipoproteinemia, type 1D, 615947 (3)']	12.508426873000044	22.52195712619928
+22	37180381	call_2168	C	<DUP:TANDEM>			4.0	False	37231350	50969	False	False	RAC2	['Neutrophil immunodeficiency syndrome, 608203 (3)']	11.261999667000024	20.27771167635336
+8	31160705	call_3352	C	<DUP:TANDEM>			3.0	False	31216759	56054	False	False	WRN	['Werner syndrome, 277700 (3)']	9.295643034999983	16.73720252917066

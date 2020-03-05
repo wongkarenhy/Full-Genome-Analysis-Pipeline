@@ -1,0 +1,11 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+1	58686906	call_4081	A	<DUP:TANDEM>			3.0	False	58764291	77385	False	False	MYSM1	['Bone marrow failure syndrome 4, 618116 (3)']	11.65043578000028	91.62655108890439
+15	36858217	call_4471	G	<DUP:TANDEM>			3.0	False	36900501	42284	False	False	MEIS2	['Cleft palate, cardiac defects, and mental retardation, 600987 (3)']	11.369828430000226	89.41967366592947
+17	77351091	call_4590	A	<DUP:TANDEM>			3.0	False	77412344	61253	False	False	SEPTIN9	.	10.994060224000155	86.46438981433687
+4	109258020	call_5034	A	<DUP:TANDEM>			3.0	False	109329598	71578	False	False	COL25A1	['Fibrosis of extraocular muscles, congenital, 5, 616219 (3)']	9.73723474000003	76.57990252183048
+11	111850655	call_3009	A	<DUP:TANDEM>			4.0	False	111922516	71861	False	False	ALG9	['Congenital disorder of glycosylation, type Il, 608776 (3)', 'Gillessen-Kaesbach-Nishimura syndrome, 263210 (3)']	8.9607546539999	70.47316165712043
+16	88679542	call_4546	A	<DUP:TANDEM>			3.0	False	88748678	69136	False	False	CTU2	['Microcephaly, facial dysmorphism, renal agenesis, and ambiguous genitalia syndrome, 618142 (3)']	8.869631383999879	69.75650941237112
+16	88679542	call_4546	A	<DUP:TANDEM>			3.0	False	88748678	69136	False	False	PIEZO1	['Dehydrated hereditary stomatocytosis with or without pseudohyperkalemia and/or perinatal edema, 194380 (3)', 'Lymphatic malformation 6, 616843 (3)']	4.206083791999997	33.07935932435063
+15	55435311	call_4480	C	<DUP:TANDEM>			3.0	False	55469696	34385	False	False	DNAAF4	['Ciliary dyskinesia, primary, 25, 615482 (3)', '{Dyslexia, susceptibility to, 1}, 127700 (3)']	3.5217288900000048	27.697150403145542
+5	157313789	call_5165	A	<DUP:TANDEM>			3.0	False	157348669	34880	False	False	CYFIP2	['Epileptic encephalopathy, early infantile, 65, 618008 (3)']	1.9294369740000155	15.174338437581541
+6	152247977	call_1195	C	<DUP:TANDEM>			7.0	False	152280103	32126	False	False	SYNE1	['Arthrogryposis multiplex congenita, myogenic type, 618484 (3)', 'Emery-Dreifuss muscular dystrophy 4, autosomal dominant, 612998 (3)', 'Spinocerebellar ataxia, autosomal recessive 8, 610743 (3)']	0.470495944	3.7002839605401667

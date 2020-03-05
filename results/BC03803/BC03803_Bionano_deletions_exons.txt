@@ -1,0 +1,4 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+13821	15	15	84265985.0	86013575.0	1794856.1	3429827.5	1.0	deletion	heterozygous	1	112619.0	False	False	ZNF592	.	29.013263251000232	97.2054022334451
+13821	15	15	84265985.0	86013575.0	1794856.1	3429827.5	1.0	deletion	heterozygous	1	112619.0	False	False	WDR73	['Galloway-Mowat syndrome 1, 251300 (3)']	21.963177915000152	73.58495061663585
+665	1	1	111684418.0	111693985.0	28346335.3	28350625.1	1.0	deletion	heterozygous	1	5277.0	True	False	RAP1A	.	18.598024990000127	62.31041590395046

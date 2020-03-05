@@ -1,0 +1,4 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+15907	17	17	19342159.0	20380311.0	1513310.7	1513310.7	0.07	inversion	homozygous	1	EPN2	.	CCDC144CP	.	False	False
+15907	17	17	19342159.0	20380311.0	1513310.7	1513310.7	0.07	inversion	homozygous	1	B9D1	['?Meckel syndrome 9, 614209 (3)', 'Joubert syndrome 27, 617120 (3)']	CCDC144CP	.	False	False
+15907	17	17	19342159.0	20380311.0	1513310.7	1513310.7	0.07	inversion	homozygous	1	MIR1180	.	CCDC144CP	.	False	False

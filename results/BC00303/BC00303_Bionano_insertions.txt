@@ -1,0 +1,4 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+324	1	1	161590409.5	161592084.0	1934216.4	2017517.8	1.0	insertion	heterozygous	1	81627.0	False	False	FCGR2C	['Thrombocytopenic purpura, autoimmune, 188030 (1)']	33.24586369699968	84.6917282849392
+892	3	3	12614705.0	12625782.0	300271.1	313806.1	1.0	insertion	heterozygous	1	2458.0	False	True	RAF1	['Cardiomyopathy, dilated, 1NN, 615916 (3)', 'LEOPARD syndrome 2, 611554 (3)', 'Noonan syndrome 5, 611553 (3)']	18.70250530999991	47.64344558463346
+2680	9	9	33106502.0	33137532.0	1651290.6	1683523.7	1.0	insertion	heterozygous	2	1203.0	False	False	B4GALT1	['Congenital disorder of glycosylation, type IId, 607091 (3)']	11.475766834999982	29.233787863325865

@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+389	1	1	219917229.5	219923025.0	3530661.6	3537852.6	1.0	insertion	heterozygous	1	1396.0	False	False	SLC30A10	['Hypermanganesemia with dystonia 1, 613280 (3)']	3.2839295000000193	85.85999021280706

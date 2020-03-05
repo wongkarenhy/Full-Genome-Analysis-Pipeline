@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+13888	14	14	88438971.0	88457610.0	69041025.4	69047416.9	1.0	deletion	heterozygous	1	12248.0	True	False	SPATA7	['Leber congenital amaurosis 3, 604232 (3)', 'Retinitis pigmentosa, juvenile, autosomal recessive, 604232 (3)']	92.99035611300162	72.01083767381921

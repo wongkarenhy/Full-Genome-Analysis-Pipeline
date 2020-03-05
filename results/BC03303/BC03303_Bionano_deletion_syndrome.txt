@@ -1,0 +1,3 @@
+Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+X	30097360	30123378	17837	1.0	deletion	homozygous	1	5088.0	False	False	XP21 MICRODELETION SYNDROME	 Xp21 	0.01549268	0.3565665328388726
+X	30097360	30123378	17937	1.0	deletion	homozygous	1	5088.0	False	False	XP21 MICRODELETION SYNDROME	 Xp21 	0.01549268	0.3565665328388726

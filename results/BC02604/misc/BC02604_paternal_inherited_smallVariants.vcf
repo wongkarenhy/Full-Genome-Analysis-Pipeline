@@ -1,0 +1,286 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##GATKCommandLine=<ID=HaplotypeCaller,CommandLine="HaplotypeCaller  --genotyping-mode DISCOVERY --output /home/yulia/data/BC02601_longranger/PHASER_SVCALLER_CS/PHASER_SVCALLER/_SNPINDEL_PHASER/_SNPINDEL_CALLER/CALL_SNPINDELS/fork0/chnk00-u4fef07d573/files/default.vcf --intervals /home/yulia/data/BC02601_longranger/PHASER_SVCALLER_CS/PHASER_SVCALLER/_SNPINDEL_PHASER/_SNPINDEL_CALLER/CALL_SNPINDELS/fork0/chnk00-u4fef07d573/files/default.vcf.bed --input /home/yulia/data/BC02601_longranger/PHASER_SVCALLER_CS/PHASER_SVCALLER/_LINKED_READS_ALIGNER/MERGE_POS_BAM/fork0/join-u4fef06ec2d/files/pos_sorted_bam.bam --reference /home/yulia/data/local/refdata-GRCh38-2.1.0/fasta/genome.fa  --annotation-group StandardAnnotation --annotation-group StandardHCAnnotation --disable-tool-default-annotations false --emit-ref-confidence NONE --gvcf-gq-bands 1 --gvcf-gq-bands 2 --gvcf-gq-bands 3 --gvcf-gq-bands 4 --gvcf-gq-bands 5 --gvcf-gq-bands 6 --gvcf-gq-bands 7 --gvcf-gq-bands 8 --gvcf-gq-bands 9 --gvcf-gq-bands 10 --gvcf-gq-bands 11 --gvcf-gq-bands 12 --gvcf-gq-bands 13 --gvcf-gq-bands 14 --gvcf-gq-bands 15 --gvcf-gq-bands 16 --gvcf-gq-bands 17 --gvcf-gq-bands 18 --gvcf-gq-bands 19 --gvcf-gq-bands 20 --gvcf-gq-bands 21 --gvcf-gq-bands 22 --gvcf-gq-bands 23 --gvcf-gq-bands 24 --gvcf-gq-bands 25 --gvcf-gq-bands 26 --gvcf-gq-bands 27 --gvcf-gq-bands 28 --gvcf-gq-bands 29 --gvcf-gq-bands 30 --gvcf-gq-bands 31 --gvcf-gq-bands 32 --gvcf-gq-bands 33 --gvcf-gq-bands 34 --gvcf-gq-bands 35 --gvcf-gq-bands 36 --gvcf-gq-bands 37 --gvcf-gq-bands 38 --gvcf-gq-bands 39 --gvcf-gq-bands 40 --gvcf-gq-bands 41 --gvcf-gq-bands 42 --gvcf-gq-bands 43 --gvcf-gq-bands 44 --gvcf-gq-bands 45 --gvcf-gq-bands 46 --gvcf-gq-bands 47 --gvcf-gq-bands 48 --gvcf-gq-bands 49 --gvcf-gq-bands 50 --gvcf-gq-bands 51 --gvcf-gq-bands 52 --gvcf-gq-bands 53 --gvcf-gq-bands 54 --gvcf-gq-bands 55 --gvcf-gq-bands 56 --gvcf-gq-bands 57 --gvcf-gq-bands 58 --gvcf-gq-bands 59 --gvcf-gq-bands 60 --gvcf-gq-bands 70 --gvcf-gq-bands 80 --gvcf-gq-bands 90 --gvcf-gq-bands 99 --indel-size-to-eliminate-in-ref-model 10 --use-alleles-trigger false --disable-optimizations false --just-determine-active-regions false --dont-genotype false --dont-trim-active-regions false --max-disc-ar-extension 25 --max-gga-ar-extension 300 --padding-around-indels 150 --padding-around-snps 20 --kmer-size 10 --kmer-size 25 --dont-increase-kmer-sizes-for-cycles false --allow-non-unique-kmers-in-ref false --num-pruning-samples 1 --recover-dangling-heads false --do-not-recover-dangling-branches false --min-dangling-branch-length 4 --consensus false --max-num-haplotypes-in-population 128 --error-correct-kmers false --min-pruning 2 --debug-graph-transformations false --kmer-length-for-read-error-correction 25 --min-observations-for-kmer-to-be-solid 20 --likelihood-calculation-engine PairHMM --base-quality-score-threshold 18 --pair-hmm-gap-continuation-penalty 10 --pair-hmm-implementation FASTEST_AVAILABLE --pcr-indel-model CONSERVATIVE --phred-scaled-global-read-mismapping-rate 45 --native-pair-hmm-threads 4 --native-pair-hmm-use-double-precision false --debug false --use-filtered-reads-for-annotations false --bam-writer-type CALLED_HAPLOTYPES --dont-use-soft-clipped-bases false --capture-assembly-failure-bam false --error-correct-reads false --do-not-run-physical-phasing false --min-base-quality-score 10 --smith-waterman JAVA --use-new-qual-calculator false --annotate-with-num-discovered-alleles false --heterozygosity 0.001 --indel-heterozygosity 1.25E-4 --heterozygosity-stdev 0.01 --standard-min-confidence-threshold-for-calling 10.0 --max-alternate-alleles 6 --max-genotype-count 1024 --sample-ploidy 2 --genotype-filtered-alleles false --contamination-fraction-to-filter 0.0 --output-mode EMIT_VARIANTS_ONLY --all-site-pls false --min-assembly-region-size 50 --max-assembly-region-size 300 --assembly-region-padding 100 --max-reads-per-alignment-start 50 --active-probability-threshold 0.002 --max-prob-propagation-distance 50 --interval-set-rule UNION --interval-padding 0 --interval-exclusion-padding 0 --interval-merging-rule ALL --read-validation-stringency SILENT --seconds-between-progress-updates 10.0 --disable-sequence-dictionary-validation false --create-output-bam-index true --create-output-bam-md5 false --create-output-variant-index true --create-output-variant-md5 false --lenient false --add-output-sam-program-record true --add-output-vcf-command-line true --cloud-prefetch-buffer 40 --cloud-index-prefetch-buffer -1 --disable-bam-index-caching false --help false --version false --showHidden false --verbosity INFO --QUIET false --use-jdk-deflater false --use-jdk-inflater false --gcs-max-retries 20 --disable-tool-default-read-filters false --minimum-mapping-quality 20",Version=4.0.4.0,Date="May 25, 2018 9:22:05 AM UTC">
+##source=HaplotypeCaller
+##source=10X/pipelines/stages/snpindels/attach_bcs_snpindels 2.2.2
+##source=10X/pipelines/stages/snpindels/phase_snpindels 2.2.2
+##bcftools_filterVersion=1.1-3-g9058fce+htslib-1.1-1-g03a4427
+##bcftools_filterCommand=filter canonicalized.vcftmp.vcf
+##bcftools_filterCommand=filter -O v --soft-filter 10X_RESCUED_MOLECULE_HIGH_DIVERSITY -e '(((RESCUED+NOT_RESCUED) > 0 & RESCUED/(RESCUED+NOT_RESCUED) > 0.1) & (MMD == -1 | MMD >= 3.0)) ' -m '+' /home/yulia/data/BC02601_longranger/PHASER_SVCALLER_CS/PHASER_SVCALLER/_SNPINDEL_PHASER/_SNPINDEL_CALLER/POPULATE_INFO_FIELDS/fork0/chnk00-u4fef0805e2/files/default.vcf.gztmp2.vcf
+##bcftools_filterCommand=filter -O v --soft-filter 10X_QUAL_FILTER -e '(%QUAL <= 15 || (AF[0] > 0.5 && %QUAL < 50))' -m '+' /home/yulia/data/BC02601_longranger/PHASER_SVCALLER_CS/PHASER_SVCALLER/_SNPINDEL_PHASER/_SNPINDEL_CALLER/POPULATE_INFO_FIELDS/fork0/chnk00-u4fef0805e2/files/default.vcf.gztmp2.vcf
+##bcftools_filterCommand=filter -O v --soft-filter 10X_ALLELE_FRACTION_FILTER -e '(AO[0] < 2 || AO[0]/(AO[0] + RO) < 0.15)' -m '+' /home/yulia/data/BC02601_longranger/PHASER_SVCALLER_CS/PHASER_SVCALLER/_SNPINDEL_PHASER/_SNPINDEL_CALLER/POPULATE_INFO_FIELDS/fork0/chnk00-u4fef0805e2/files/default.vcf.gztmp2.vcf
+##bcftools_filterCommand=filter -O v --soft-filter 10X_RESCUED_MOLECULE_HIGH_DIVERSITY -e '(((RESCUED+NOT_RESCUED) > 0 & RESCUED/(RESCUED+NOT_RESCUED) > 0.1) & (MMD == -1 | MMD >= 3.0)) ' -m '+' /home/yulia/data/BC02601_longranger/PHASER_SVCALLER_CS/PHASER_SVCALLER/_SNPINDEL_PHASER/POPULATE_INFO_FIELDS/fork0/chnk00-u4fef08e191/files/default.vcf.gztmp3.vcf
+##bcftools_filterCommand=filter -O v --soft-filter 10X_QUAL_FILTER -e '(%QUAL <= 15 || (AF[0] > 0.5 && %QUAL < 50))' -m '+' /home/yulia/data/BC02601_longranger/PHASER_SVCALLER_CS/PHASER_SVCALLER/_SNPINDEL_PHASER/POPULATE_INFO_FIELDS/fork0/chnk00-u4fef08e191/files/default.vcf.gztmp2.vcf
+##bcftools_filterCommand=filter -O v --soft-filter 10X_ALLELE_FRACTION_FILTER -e '(AO[0] < 2 || AO[0]/(AO[0] + RO) < 0.15)' -m '+' /home/yulia/data/BC02601_longranger/PHASER_SVCALLER_CS/PHASER_SVCALLER/_SNPINDEL_PHASER/POPULATE_INFO_FIELDS/fork0/chnk00-u4fef08e191/files/default.vcf.gztmp2.vcf
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Allele count in genotypes, for each ALT allele, in the same order as listed">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Allele Frequency, for each ALT allele, in the same order as listed">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=BaseQRankSum,Number=1,Type=Float,Description="Z-score from Wilcoxon rank sum test of Alt Vs. Ref base qualities">
+##INFO=<ID=ClippingRankSum,Number=1,Type=Float,Description="Z-score From Wilcoxon rank sum test of Alt vs. Ref number of hard clipped bases">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth; some reads may have been filtered">
+##INFO=<ID=DS,Number=0,Type=Flag,Description="Were any of the samples downsampled?">
+##INFO=<ID=ExcessHet,Number=1,Type=Float,Description="Phred-scaled p-value for exact test of excess heterozygosity">
+##INFO=<ID=FS,Number=1,Type=Float,Description="Phred-scaled p-value using Fisher's exact test to detect strand bias">
+##INFO=<ID=InbreedingCoeff,Number=1,Type=Float,Description="Inbreeding coefficient as estimated from the genotype likelihoods per-sample when compared against the Hardy-Weinberg expectation">
+##INFO=<ID=MLEAC,Number=A,Type=Integer,Description="Maximum likelihood expectation (MLE) for the allele counts (not necessarily the same as the AC), for each ALT allele, in the same order as listed">
+##INFO=<ID=MLEAF,Number=A,Type=Float,Description="Maximum likelihood expectation (MLE) for the allele frequency (not necessarily the same as the AF), for each ALT allele, in the same order as listed">
+##INFO=<ID=MQ,Number=1,Type=Float,Description="RMS Mapping Quality">
+##INFO=<ID=MQRankSum,Number=1,Type=Float,Description="Z-score From Wilcoxon rank sum test of Alt vs. Ref read mapping qualities">
+##INFO=<ID=QD,Number=1,Type=Float,Description="Variant Confidence/Quality by Depth">
+##INFO=<ID=RAW_MQ,Number=1,Type=Float,Description="Raw data for RMS Mapping Quality">
+##INFO=<ID=ReadPosRankSum,Number=1,Type=Float,Description="Z-score from Wilcoxon rank sum test of Alt vs. Ref read position bias">
+##INFO=<ID=SOR,Number=1,Type=Float,Description="Symmetric Odds Ratio of 2x2 contingency table to detect strand bias">
+##INFO=<ID=TYPE,Number=A,Type=String,Description="The type of allele, either snp, mnp, ins, del, or complex.">
+##INFO=<ID=LEN,Number=A,Type=Integer,Description="allele length">
+##INFO=<ID=VCFALLELICPRIMITIVE,Number=0,Type=Flag,Description="The allele was parsed using vcfallelicprimitives.">
+##INFO=<ID=TENX,Number=0,Type=Flag,Description="called by 10X">
+##INFO=<ID=POSTHPC,Number=.,Type=Integer,Description="Postvariant homopolymer count">
+##INFO=<ID=POSTHPB,Number=.,Type=Character,Description="Postvariant homopolymer base">
+##INFO=<ID=MUMAP_REF,Number=1,Type=Float,Description="Mean mapping score of ref allele">
+##INFO=<ID=MUMAP_ALT,Number=.,Type=Float,Description="Mean mapping scores of alt alleles">
+##INFO=<ID=AO,Number=.,Type=Integer,Description="Alternate allele observed count">
+##INFO=<ID=RO,Number=1,Type=Integer,Description="Reference allele observed count">
+##INFO=<ID=MMD,Number=.,Type=Float,Description="Mean molecule divergence from reference per read">
+##INFO=<ID=RESCUED,Number=.,Type=Integer,Description="How many reads were rescued via cross barcode mapq correction">
+##INFO=<ID=NOT_RESCUED,Number=.,Type=Integer,Description="How many reads were not rescued via cross barcode mapq correction">
+##INFO=<ID=POSTDNB,Number=.,Type=String,Description="Post variant dinucleotide repeat sequence">
+##INFO=<ID=POSTDNC,Number=.,Type=Integer,Description="Post variant dinucleotide repeat count">
+##INFO=<ID=POSTTNB,Number=.,Type=String,Description="Post variant trinucleotide repeat sequence">
+##INFO=<ID=POSTTNC,Number=.,Type=Integer,Description="Post variant trinucleotide repeat count">
+##INFO=<ID=HAPLOCALLED,Number=1,Type=Integer,Description="1 for variants that were called after phasing via splitting the bam into its component haplotypes and calling variants in haploid mode">
+##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Allelic depths for the ref and alt alleles in the order listed">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Approximate read depth (reads with MQ=255 or with bad mates are filtered)">
+##FORMAT=<ID=GQ,Number=1,Type=Integer,Description="Genotype Quality">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=PL,Number=G,Type=Integer,Description="Normalized, Phred-scaled likelihoods for genotypes as defined in the VCF specification">
+##FORMAT=<ID=BX,Number=.,Type=String,Description="Barcodes and Associated Qual-Scores Supporting Alleles">
+##FORMAT=<ID=PS,Number=1,Type=Integer,Description="ID of Phase Set for Variant">
+##FORMAT=<ID=PQ,Number=1,Type=Integer,Description="Phred QV indicating probability at this variant is incorrectly phased">
+##FORMAT=<ID=JQ,Number=1,Type=Integer,Description="Phred QV indicating probability of a phasing switch error in gap prior to this variant">
+##FILTER=<ID=LowQual,Description="Low quality">
+##FILTER=<ID=UNSUPPORTED_GENOTYPE,Description="If genotype field contains '.' we assume that this is due to making a single sample vcf from a multiple sample vcf in which this sample does not contain the variant.">
+##FILTER=<ID=10X_RESCUED_MOLECULE_HIGH_DIVERSITY,Description="Set if true: (((RESCUED+NOT_RESCUED) > 0 & RESCUED/(RESCUED+NOT_RESCUED) > 0.1) & (MMD == -1 | MMD >= 3.0))">
+##FILTER=<ID=10X_QUAL_FILTER,Description="Set if true: (%QUAL <= 15 || (AF[0] > 0.5 && %QUAL < 50))">
+##FILTER=<ID=10X_ALLELE_FRACTION_FILTER,Description="Set if true: (AO[0] < 2 || AO[0]/(AO[0] + RO) < 0.15)">
+##FILTER=<ID=10X_PHASING_INCONSISTENT,Description="Uses haplotype information from the fragments and the alleles to filter some variants that are not consistent with phasing.">
+##FILTER=<ID=10X_HOMOPOLYMER_UNPHASED_INSERTION,Description="Unphased insertions in homopolymer regions tend to be false positives">
+##contig=<ID=chr1,length=248956422>
+##contig=<ID=chr2,length=242193529>
+##contig=<ID=chr3,length=198295559>
+##contig=<ID=chr4,length=190214555>
+##contig=<ID=chr5,length=181538259>
+##contig=<ID=chr6,length=170805979>
+##contig=<ID=chr7,length=159345973>
+##contig=<ID=chr8,length=145138636>
+##contig=<ID=chr9,length=138394717>
+##contig=<ID=chr10,length=133797422>
+##contig=<ID=chr11,length=135086622>
+##contig=<ID=chr12,length=133275309>
+##contig=<ID=chr13,length=114364328>
+##contig=<ID=chr14,length=107043718>
+##contig=<ID=chr15,length=101991189>
+##contig=<ID=chr16,length=90338345>
+##contig=<ID=chr17,length=83257441>
+##contig=<ID=chr18,length=80373285>
+##contig=<ID=chr19,length=58617616>
+##contig=<ID=chr20,length=64444167>
+##contig=<ID=chr21,length=46709983>
+##contig=<ID=chr22,length=50818468>
+##contig=<ID=chrX,length=156040895>
+##contig=<ID=chrY,length=57227415>
+##contig=<ID=chrM,length=16569>
+##contig=<ID=chr1_KI270706v1_random,length=175055>
+##contig=<ID=chr1_KI270707v1_random,length=32032>
+##contig=<ID=chr1_KI270708v1_random,length=127682>
+##contig=<ID=chr1_KI270709v1_random,length=66860>
+##contig=<ID=chr1_KI270710v1_random,length=40176>
+##contig=<ID=chr1_KI270711v1_random,length=42210>
+##contig=<ID=chr1_KI270712v1_random,length=176043>
+##contig=<ID=chr1_KI270713v1_random,length=40745>
+##contig=<ID=chr1_KI270714v1_random,length=41717>
+##contig=<ID=chr2_KI270715v1_random,length=161471>
+##contig=<ID=chr2_KI270716v1_random,length=153799>
+##contig=<ID=chr3_GL000221v1_random,length=155397>
+##contig=<ID=chr4_GL000008v2_random,length=209709>
+##contig=<ID=chr5_GL000208v1_random,length=92689>
+##contig=<ID=chr9_KI270717v1_random,length=40062>
+##contig=<ID=chr9_KI270718v1_random,length=38054>
+##contig=<ID=chr9_KI270719v1_random,length=176845>
+##contig=<ID=chr9_KI270720v1_random,length=39050>
+##contig=<ID=chr11_KI270721v1_random,length=100316>
+##contig=<ID=chr14_GL000009v2_random,length=201709>
+##contig=<ID=chr14_GL000225v1_random,length=211173>
+##contig=<ID=chr14_KI270722v1_random,length=194050>
+##contig=<ID=chr14_GL000194v1_random,length=191469>
+##contig=<ID=chr14_KI270723v1_random,length=38115>
+##contig=<ID=chr14_KI270724v1_random,length=39555>
+##contig=<ID=chr14_KI270725v1_random,length=172810>
+##contig=<ID=chr14_KI270726v1_random,length=43739>
+##contig=<ID=chr15_KI270727v1_random,length=448248>
+##contig=<ID=chr16_KI270728v1_random,length=1872759>
+##contig=<ID=chr17_GL000205v2_random,length=185591>
+##contig=<ID=chr17_KI270729v1_random,length=280839>
+##contig=<ID=chr17_KI270730v1_random,length=112551>
+##contig=<ID=chr22_KI270731v1_random,length=150754>
+##contig=<ID=chr22_KI270732v1_random,length=41543>
+##contig=<ID=chr22_KI270733v1_random,length=179772>
+##contig=<ID=chr22_KI270734v1_random,length=165050>
+##contig=<ID=chr22_KI270735v1_random,length=42811>
+##contig=<ID=chr22_KI270736v1_random,length=181920>
+##contig=<ID=chr22_KI270737v1_random,length=103838>
+##contig=<ID=chr22_KI270738v1_random,length=99375>
+##contig=<ID=chr22_KI270739v1_random,length=73985>
+##contig=<ID=chrY_KI270740v1_random,length=37240>
+##contig=<ID=chrUn_KI270302v1,length=2274>
+##contig=<ID=chrUn_KI270304v1,length=2165>
+##contig=<ID=chrUn_KI270303v1,length=1942>
+##contig=<ID=chrUn_KI270305v1,length=1472>
+##contig=<ID=chrUn_KI270322v1,length=21476>
+##contig=<ID=chrUn_KI270320v1,length=4416>
+##contig=<ID=chrUn_KI270310v1,length=1201>
+##contig=<ID=chrUn_KI270316v1,length=1444>
+##contig=<ID=chrUn_KI270315v1,length=2276>
+##contig=<ID=chrUn_KI270312v1,length=998>
+##contig=<ID=chrUn_KI270311v1,length=12399>
+##contig=<ID=chrUn_KI270317v1,length=37690>
+##contig=<ID=chrUn_KI270412v1,length=1179>
+##contig=<ID=chrUn_KI270411v1,length=2646>
+##contig=<ID=chrUn_KI270414v1,length=2489>
+##contig=<ID=chrUn_KI270419v1,length=1029>
+##contig=<ID=chrUn_KI270418v1,length=2145>
+##contig=<ID=chrUn_KI270420v1,length=2321>
+##contig=<ID=chrUn_KI270424v1,length=2140>
+##contig=<ID=chrUn_KI270417v1,length=2043>
+##contig=<ID=chrUn_KI270422v1,length=1445>
+##contig=<ID=chrUn_KI270423v1,length=981>
+##contig=<ID=chrUn_KI270425v1,length=1884>
+##contig=<ID=chrUn_KI270429v1,length=1361>
+##contig=<ID=chrUn_KI270442v1,length=392061>
+##contig=<ID=chrUn_KI270466v1,length=1233>
+##contig=<ID=chrUn_KI270465v1,length=1774>
+##contig=<ID=chrUn_KI270467v1,length=3920>
+##contig=<ID=chrUn_KI270435v1,length=92983>
+##contig=<ID=chrUn_KI270438v1,length=112505>
+##contig=<ID=chrUn_KI270468v1,length=4055>
+##contig=<ID=chrUn_KI270510v1,length=2415>
+##contig=<ID=chrUn_KI270509v1,length=2318>
+##contig=<ID=chrUn_KI270518v1,length=2186>
+##contig=<ID=chrUn_KI270508v1,length=1951>
+##contig=<ID=chrUn_KI270516v1,length=1300>
+##contig=<ID=chrUn_KI270512v1,length=22689>
+##contig=<ID=chrUn_KI270519v1,length=138126>
+##contig=<ID=chrUn_KI270522v1,length=5674>
+##contig=<ID=chrUn_KI270511v1,length=8127>
+##contig=<ID=chrUn_KI270515v1,length=6361>
+##contig=<ID=chrUn_KI270507v1,length=5353>
+##contig=<ID=chrUn_KI270517v1,length=3253>
+##contig=<ID=chrUn_KI270529v1,length=1899>
+##contig=<ID=chrUn_KI270528v1,length=2983>
+##contig=<ID=chrUn_KI270530v1,length=2168>
+##contig=<ID=chrUn_KI270539v1,length=993>
+##contig=<ID=chrUn_KI270538v1,length=91309>
+##contig=<ID=chrUn_KI270544v1,length=1202>
+##contig=<ID=chrUn_KI270548v1,length=1599>
+##contig=<ID=chrUn_KI270583v1,length=1400>
+##contig=<ID=chrUn_KI270587v1,length=2969>
+##contig=<ID=chrUn_KI270580v1,length=1553>
+##contig=<ID=chrUn_KI270581v1,length=7046>
+##contig=<ID=chrUn_KI270579v1,length=31033>
+##contig=<ID=chrUn_KI270589v1,length=44474>
+##contig=<ID=chrUn_KI270590v1,length=4685>
+##contig=<ID=chrUn_KI270584v1,length=4513>
+##contig=<ID=chrUn_KI270582v1,length=6504>
+##contig=<ID=chrUn_KI270588v1,length=6158>
+##contig=<ID=chrUn_KI270593v1,length=3041>
+##contig=<ID=chrUn_KI270591v1,length=5796>
+##contig=<ID=chrUn_KI270330v1,length=1652>
+##contig=<ID=chrUn_KI270329v1,length=1040>
+##contig=<ID=chrUn_KI270334v1,length=1368>
+##contig=<ID=chrUn_KI270333v1,length=2699>
+##contig=<ID=chrUn_KI270335v1,length=1048>
+##contig=<ID=chrUn_KI270338v1,length=1428>
+##contig=<ID=chrUn_KI270340v1,length=1428>
+##contig=<ID=chrUn_KI270336v1,length=1026>
+##contig=<ID=chrUn_KI270337v1,length=1121>
+##contig=<ID=chrUn_KI270363v1,length=1803>
+##contig=<ID=chrUn_KI270364v1,length=2855>
+##contig=<ID=chrUn_KI270362v1,length=3530>
+##contig=<ID=chrUn_KI270366v1,length=8320>
+##contig=<ID=chrUn_KI270378v1,length=1048>
+##contig=<ID=chrUn_KI270379v1,length=1045>
+##contig=<ID=chrUn_KI270389v1,length=1298>
+##contig=<ID=chrUn_KI270390v1,length=2387>
+##contig=<ID=chrUn_KI270387v1,length=1537>
+##contig=<ID=chrUn_KI270395v1,length=1143>
+##contig=<ID=chrUn_KI270396v1,length=1880>
+##contig=<ID=chrUn_KI270388v1,length=1216>
+##contig=<ID=chrUn_KI270394v1,length=970>
+##contig=<ID=chrUn_KI270386v1,length=1788>
+##contig=<ID=chrUn_KI270391v1,length=1484>
+##contig=<ID=chrUn_KI270383v1,length=1750>
+##contig=<ID=chrUn_KI270393v1,length=1308>
+##contig=<ID=chrUn_KI270384v1,length=1658>
+##contig=<ID=chrUn_KI270392v1,length=971>
+##contig=<ID=chrUn_KI270381v1,length=1930>
+##contig=<ID=chrUn_KI270385v1,length=990>
+##contig=<ID=chrUn_KI270382v1,length=4215>
+##contig=<ID=chrUn_KI270376v1,length=1136>
+##contig=<ID=chrUn_KI270374v1,length=2656>
+##contig=<ID=chrUn_KI270372v1,length=1650>
+##contig=<ID=chrUn_KI270373v1,length=1451>
+##contig=<ID=chrUn_KI270375v1,length=2378>
+##contig=<ID=chrUn_KI270371v1,length=2805>
+##contig=<ID=chrUn_KI270448v1,length=7992>
+##contig=<ID=chrUn_KI270521v1,length=7642>
+##contig=<ID=chrUn_GL000195v1,length=182896>
+##contig=<ID=chrUn_GL000219v1,length=179198>
+##contig=<ID=chrUn_GL000220v1,length=161802>
+##contig=<ID=chrUn_GL000224v1,length=179693>
+##contig=<ID=chrUn_KI270741v1,length=157432>
+##contig=<ID=chrUn_GL000226v1,length=15008>
+##contig=<ID=chrUn_GL000213v1,length=164239>
+##contig=<ID=chrUn_KI270743v1,length=210658>
+##contig=<ID=chrUn_KI270744v1,length=168472>
+##contig=<ID=chrUn_KI270745v1,length=41891>
+##contig=<ID=chrUn_KI270746v1,length=66486>
+##contig=<ID=chrUn_KI270747v1,length=198735>
+##contig=<ID=chrUn_KI270748v1,length=93321>
+##contig=<ID=chrUn_KI270749v1,length=158759>
+##contig=<ID=chrUn_KI270750v1,length=148850>
+##contig=<ID=chrUn_KI270751v1,length=150742>
+##contig=<ID=chrUn_KI270752v1,length=27745>
+##contig=<ID=chrUn_KI270753v1,length=62944>
+##contig=<ID=chrUn_KI270754v1,length=40191>
+##contig=<ID=chrUn_KI270755v1,length=36723>
+##contig=<ID=chrUn_KI270756v1,length=79590>
+##contig=<ID=chrUn_KI270757v1,length=71251>
+##contig=<ID=chrUn_GL000214v1,length=137718>
+##contig=<ID=chrUn_KI270742v1,length=186739>
+##contig=<ID=chrUn_GL000216v2,length=176608>
+##contig=<ID=chrUn_GL000218v1,length=161147>
+##contig=<ID=chrEBV,length=171823>
+##contig=<ID=hs38d1,length=10560522>
+##bcftools_viewVersion=1.10.2+htslib-1.10.2
+##bcftools_viewCommand=view -R ./results/BC02604/BC02604_target.bed /media/KwokRaid04/CIAPM/CIAPM_longranger/BC02601_longranger/outs/phased_variants.vcf.gz; Date=Wed Mar  4 19:39:49 2020
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	BC02601_longranger
+chr12	6936728	.	ACAGCAGCAGCAGCAGCAGCAG	ACAGCAGCAGCAGCAGCAG,A	1192.73	PASS	AC=1,1;AF=0.5,0.5;AN=2;DP=38;ExcessHet=3.0103;FS=0;MLEAC=1,1;MLEAF=0.5,0.5;MQ=60;QD=30.85;SOR=0.818;TYPE=del,del;LEN=3,21;VCFALLELICPRIMITIVE;POSTHPC=1,1;POSTHPB=A,A;MUMAP_REF=31;MUMAP_ALT=60,60;AO=27,11;RO=0;MMD=1.25223;RESCUED=0;NOT_RESCUED=38;POSTDNB=AG,AG;POSTDNC=1,1;POSTTNB=AGC,AGC;POSTTNC=10,10;HAPLOCALLED=0	GT:BX:PS:PQ:JQ	2|1:,ACTTTCACAGAGACGT-1_43;CCCGGAATCTGTCCGT-1_43;CTCAGAAAGGGATAAG-1_43;AAGAGCGCATCCCTTG-1_43;CAGTACACAGGGCATA-1_43;CGTATGATCCAGGCAC-1_43;CTGTTGCAGGACATAT-1_43;AAGATAGGTAACACTC-1_43;ATGCAACTCCGCCTAT-1_43;ACTAGTGTCGTACAGT-1_43;AGAATAGAGTTACCCA-1_43;TCTTAGTAGGCTAAAT-1_43;ATCTATCGTACATGAA-1_43;GCCGTTTTCTAACCGA-1_43;TGACTTTAGGCTCTAT-1_43;TATCTACGTCGCTTCT-1_43;GCTAGCGAGATGGTAT-1_43;ACTACGATCCAATGGT-1_43;TTACCCGCAACGAAAT-1_43;TATGCCCAGCGGCTTC-1_43;ATAAGAGAGAGCTATA-1_43;AGGGAACGTATAGGTA-1_43;TACCTTAAGGATGGAA-1_43;GCGCTGATCACCATAG-1_43;TTTGTGTTCTGTCTCG-1_43,CGTCGTTCAGTGGGAT-1_43;TGAGACTGTTACCAGT-1_43;TACCATTAGCTAAGGC-1_43_43;GCGGATCCAATGGGAC-1_43_43;TGAAGGGGTCTAAACC-1_43;ACGATACGTGATCCTA-1_43;CGATCAAAGGAATAGG-1_43;CCTTTCTCAGCTCATA-1_43;CACAAACTCTTATGGG-1_43:6578346:88:255
+chr12	120737875	.	C	T	2064.77	PASS	AC=2;AF=1;AN=2;BaseQRankSum=-0.253;ClippingRankSum=0;DP=55;ExcessHet=3.0103;FS=0;MLEAC=2;MLEAF=1;MQ=60;MQRankSum=0;QD=32.08;ReadPosRankSum=-1.423;SOR=0.223;MUMAP_REF=60;MUMAP_ALT=60;AO=57;RO=1;MMD=0.949361;RESCUED=0;NOT_RESCUED=58;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS	1|1:1,54:55:99:2093,122,0:CACATCCCAAGGGTAC-1_70,GACTACAAGTCAACAA-1_70;TCGCTTGGTCCACACG-1_70;AGATACCAGTTGTGCT-1_70;TTAGGCAGTAAGTAGT-1_70;CAATCCCAGCGACTAG-1_70;TGACGGCTCGAGAGCA-1_70;TACTAGGTCGAGTGGA-1_70;TATCAGGTCAGCATAC-1_70;CTCGCATTCCTTAGAG-1_70;TAAGCGTCAGCCTGGT-1_44;AGTCGTAGTTCCACAA-1_70;CGGTACGAGTCGTGTT-1_70;TTCGACCGTGTAGTGG-1_58;CCGGTAGCACAGGCCT-1_58;GTCTTCGGTCAGCCTG-1_70;GACACCGTCGAGCCGT-1_70;CTACCCACACATCGTA-1_70;ATGAAAGTCGAATCAC-1_70;AGTATGCGTTAGCTCA-1_70;CAGAGAGCAGAGGACT-1_70;AGATAAGCATCGGACC-1_70;CGACTCTAGATCGCGA-1_70;ACGCTCTAGCATCATC-1_70;TGAACTGTCGTCTGAA-1_44_70;TCGTACCAGGAGCGAG-1_70;TCCTCGAGTAGCACGA-1_70;TCATGTTGTTGTAAGA-1_70;AACATGCGTGTAAGTA-1_70;TAGAGCTAGGTAGTGC-1_70;AGCTGATAGTAAGAGG-1_70;ACTAGTGAGAGTTAGT-1_70_70;CCCATACGTCAACATC-1_70;AGCCACGGTAATGACA-1_70;TGGGCGTAGACCTAGG-1_70_44;TAGACACAGAAGTTCA-1_70;TGAGGGATCCGCCAGA-1_70;ATGCAACTCACGCATA-1_70;CTGGCGACAAGCGGAT-1_70;CAGCATAGTAAACGGC-1_70_70;ATAGACCTCTAGCACA-1_70;TGAGCATCATTCGCTC-1_70;AAGCCTACAAGGTCGA-1_70;GCTTTATAGGGTGAAA-1_70;AGCAATCCACACTCGG-1_70;GGTCAGCGTAGTGACG-1_70;AGGGTTTCAAGGCGAT-1_70:120717144
+chr14	52314795	.	T	G	816.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=0.2;ClippingRankSum=0;DP=58;ExcessHet=3.0103;FS=1.027;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=14.59;ReadPosRankSum=-0.706;SOR=0.602;MUMAP_REF=60;MUMAP_ALT=60;AO=27;RO=39;MMD=0.72692;RESCUED=1;NOT_RESCUED=65;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	0|1:29,27:56:99:845,0,886:CAAGATCGTCCTCCAT-1_70;TCATGAGCAATAGGAT-1_70;AATCCAGAGGACATAT-1_70;TCCTCAGAGCCCGTTG-1_44;ATCATGGTCAGCCCGA-1_58;GTAGGCCTCGGTGACC-1_70_70_70;CCTTTCTTCTCAGATG-1_70;TTACTCAAGCCGCCTA-1_70;CTACACCCACATGTCA-1_70_70;TGCTCACAGTTGGCAG-1_44;GAATGTCAGTAGAGTT-1_70;AAGTGGGGTTACAGAA-1_70;CCACTACGTGGGCCTT-1_70;TGTAGTGCATCTCGCT-1_70;CCGGATGCATTACCTT-1_70;GTGACCGTCTTGTTTG-1_70;AGTAGTCAGCCGTCCA-1_70;CACGGGTCACCCACAG-1_58;CTAAGACGTTGTATCG-1_44;GTCTGAAGTTCCCTTG-1_70;AGTCGATCACCAACCG-1_70;TCCCATGGTTAGAGCG-1_70;AACTCAGGTACAATAG-1_44;AACTCAGCAGGTCTCG-1_70_44;ACACTCCCAATCCAAC-1_70;AGTCGTAAGTGAACAT-1_70_70;CCAATCCGTTGCCTCT-1_70;CCATCGTCATCAGCAT-1_70;TACCCACAGGTATCAA-1_70;AGGGTTTAGCCGTTCG-1_58,AGGGTGAGTCACCTGG-1_70;AACCGCGAGGAGGACG-1_70;GTGACATCAACGACAG-1_70_70;AGCAGCCTCTAGCCTC-1_70;TATCATCTCATGGGCC-1_70;TGAGACTCATAGACAA-1_70;GCAAAGGGTCTCTGGG-1_70;ATCGAGTGTGATCCTA-1_70;TAGCGTATCCAGTAGT-1_70;TATCTCAGTTTGACTG-1_70;AGCTCTCTCAGAGGAC-1_70;AAAGTAGGTCACCCAG-1_70_70;GGACGTCCAACTAGTC-1_70;CCTAGTCTCGGCCAGT-1_70;ACCCAAAGTTGGTGTT-1_70;CTTCATACATAACCTG-1_58_44;AGGGAGTCATGCATGT-1_70;TCTCATAAGCGAACTG-1_70:43966823:184:255
+chr16	70483921	.	G	T	618.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=0.815;ClippingRankSum=0;DP=45;ExcessHet=3.0103;FS=0;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=13.75;ReadPosRankSum=1.074;SOR=0.556;MUMAP_REF=59.3125;MUMAP_ALT=60;AO=22;RO=32;MMD=0.782664;RESCUED=0;NOT_RESCUED=54;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	0|1:26,19:45:99:647,0,885:AACTCCCCAGATAATG-1_70;GTCTTATCAGAGAGCT-1_70;AACTCAGCATCGGACC-1_70_70;CAAGCGCAGTTCGCAT-1_70;AATCGGTCAAGAACCG-1_44;GTGGACCTCCACCACT-1_44;CACATTTGTTAAAGTG-1_70;TGTGACATCGCGTCGA-1_70;GTTACTTAGCCTATGT-1_70;GCCATGGAGAGCACCA-1_70;TGACCAACACGCACCA-1_70;GTTTCTAAGATCCGAG-1_70_58;TGAGGGATCTGTAACG-1_70;GTTCTCGTCATGCATG-1_70_58;ACCACGGAGAGTAAGG-1_70;TGCTAAGCAGCTGCGT-1_70;GTGAATCGTTCGTCTC-1_70;ATCTTGTCACCTTGTC-1_70;CCGATAAGTGCTTTGA-1_70;CGCGTTTCATAGTGGG-1_70;CACCACTGTGCACCAC-1_70;CTCCACACAGTTTGCA-1_70;TCACGTCCATGACCGC-1_70_70_70;AACGGAGCACCGGCAT-1_70;CCTTTCTAGACAATGT-1_70,TCTTCGGTCGTCCGTT-1_70;ATAGCGTCAATTTCGG-1_70;GGGTTGCAGCGATGAC-1_70;GGATTTGAGCGCCTTG-1_70;ACGTCAACACACACGC-1_70;CGTGAGCTCATGTAGC-1_70;AGGCGAACAGCCTTGG-1_70;GTCTTCGAGGTAATAC-1_70;TACGAGTGTTCAAGAA-1_70;TGTCCCAAGAGGAGAT-1_70;AGTGAGGGTAAGTCTC-1_70;CTTACCGTCGAACAAA-1_70;TAAACGCGTCGACTAT-1_70;TTTGCTATCGTTATTC-1_70;ATGTCTTTCGGCTACG-1_58;CTAGCCTAGACGAGGG-1_70;TCCGTCACATAGGATA-1_70;CCAATCCAGGAGTAGA-1_44;TACACCCGTAGAAAGG-1_70_70;TCACCTGCACGGAGTA-1_70;GTTCATTTCTCATACT-1_70:68251116:161:255
+chr17	1733880	.	G	A	449.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=-1.53;ClippingRankSum=0;DP=33;ExcessHet=3.0103;FS=3.784;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=13.63;ReadPosRankSum=0.649;SOR=0.191;MUMAP_REF=60;MUMAP_ALT=60;AO=14;RO=23;MMD=1.46542;RESCUED=0;NOT_RESCUED=37;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	1|0:18,15:33:99:478,0,652:CTATTTGGTCCTAGGC-1_70;GGGAGATGTGATAAGT-1_70_70;TTGTTGTAGGAAACTT-1_70;GTCTACCAGGTGCTTT-1_70;CGAACATAGGATGGTC-1_70;CACAGGCGTTAACCAC-1_70;CTGGCGATCTAGAGTC-1_70;AGCGTCGTCTCTAGGA-1_70;CCCTCCTTCGCGCGAT-1_70;GTAATGCCATCTACGA-1_70;GTCGTAACAGCACTAT-1_70;CGGTGTGAGTGATGAT-1_70;AAGAAGTAGCGAGAAA-1_70;AGTCGATCATCGCATA-1_70;GGCGAAAGTCCGTTAA-1_70;CCACAAACATCTACGA-1_70_70;AGAGCTTGTTCGCTAA-1_70;AGGTTGTAGTGGACCA-1_70,CGTGAGCAGGCGTAGT-1_70;ATCGTTTGTTCAGACT-1_70;TCTGGCTGTCTGGATT-1_70;AAGTGGGGTACCCAAT-1_70;TAGTTGGTCAACTGAC-1_70;GTCCCATCAAGAATCA-1_70;TGCGTGGTCCAGTACA-1_70;TACTAGGCACCTCCAT-1_70;CGTGTAACACCCAAAT-1_70;TATATCCGTATCGCTA-1_70;TTCGCTGGTGGTTCTA-1_70;ATAACGCCATCCGGCA-1_70;ACTAGTGAGTAAGGCC-1_70:64101:117:255
+chr17	11598539	.	A	ACGCGGATGGGGAACCCGGCGCCGAC	1242.73	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=-0.694;ClippingRankSum=0;DP=90;ExcessHet=3.0103;FS=0.935;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=16.14;ReadPosRankSum=-2.624;SOR=0.888;POSTHPC=1;POSTHPB=G;MUMAP_REF=60;MUMAP_ALT=60;AO=41;RO=48;MMD=0.765448;RESCUED=0;NOT_RESCUED=89;POSTDNB=GC;POSTDNC=1;POSTTNB=GCG;POSTTNC=1;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	1|0:46,31:77:99:1280,0,1658:AGGCTCGTCGCGCCAA-1_43;TGGATACAGTGCTGCC-1_43;TACTCGCAGGAATTAC-1_43;GTGGTCGCAGATTCTG-1_43;AGTGAGGCACCTGGCA-1_43;AGTCGTATCTAAAGCC-1_43;AGGTCATTCGCTAGCG-1_43;GTTGGATCAGTAGTTC-1_43;GACACATTCGAGAGGT-1_43;GTACGATTCCAAGGGA-1_43_43_43;TGCTTGCGTTCTGGTA-1_43;CGGCTAGTCAGCTCTC-1_43;GACACCGCACCTCGGA-1_43;TTGTGCCGTCGCGTGT-1_43;TCCCTTTGTGAAGTAT-1_43;CACATCCAGGTCTCGC-1_43;TTTGCTAAGCAGCCTC-1_43;TCGGTAAGTGTTCGAT-1_43;GTGGATTCACAGTGAG-1_43;TACTCGCAGGAATACT-1_43_43;GGAAAGCTCTCGGAAT-1_43;TTGCTTACAGTCCCTT-1_43;GTCGAATAGATCAGAT-1_43;TAGACACAGGCTCATT-1_43;CCATCACAGTACGTGG-1_43_43;TAGACTGCAAGCGAGT-1_43;ACTGGGCTCGGTGGCT-1_43;TACTAGGCACGAAACG-1_43;TAGCGTACAATACTCG-1_43;AATGTGCAGTGGGTTG-1_43_43;GCCGACAGTCGTGTAT-1_43;GCAAACTAGTACGACG-1_43_43;GCCAAATAGGGTCGAT-1_43;GTCCTCAAGGCTAGAC-1_43;TCCCACAGTAGTTCTG-1_43;GCCGGATGTGCTTCTC-1_43;CTAAGTGAGTCTCTCC-1_43;ATTGGTGGTTATGACC-1_43;GCGCTAGGTCAAAGAT-1_43,ATCATCTTCAAACGGG-1_43;ATCTTACTCGTAAGTC-1_43;TATCGAGAGTTGAGAT-1_43;CACCAAAGTAGCCTCG-1_43;AAAGAACCATGGTCTA-1_43;TACCTATAGCGCTTAT-1_43;TTTCGGCGTATGAAAC-1_43;CGTTCTGGTAGTTGGG-1_43;CTTCGCATCAAGAGGC-1_43;TCACTGCCAATAGGAT-1_43;GAACCCGTCAAGGTAA-1_43;CTAGAGTGTGCTAGGA-1_43_43;ACATGCAAGGAGCGGA-1_43;TAGGCCGCAGAATTCC-1_43;CAACGTAGTCAACCGC-1_43;CTAGTGACAAAGAATC-1_43;CTTCATAGTCTAGTCA-1_43_43_43_43;GACGGCTCATATACCG-1_43;TCACGAAGTAAGGGAA-1_43_43;CAGTACACAGCTCGCA-1_43;CAACGTATCCAAGGAG-1_43;ACGTACACATTGAAGA-1_43:2269339:182:255
+chr17	50194806	.	G	A	1233.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=0.465;ClippingRankSum=0;DP=70;ExcessHet=3.0103;FS=0.907;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=17.88;ReadPosRankSum=-0.509;SOR=0.828;MUMAP_REF=60;MUMAP_ALT=58.6977;AO=42;RO=33;MMD=1.10743;RESCUED=1;NOT_RESCUED=75;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	1|0:32,37:69:99:1262,0,977:GTATCTTCATCCCAAA-1_70;TGAACTGAGCTCAGAG-1_70;GTGCAGCTCTTGTACT-1_70;CCTTACGTCTTTACGT-1_44;TGATTTCTCGCGTAGC-1_70;AGCATACGTGTGCTTA-1_70_70;TCAAGACGTCAGTGCC-1_70;GGGACCTGTTTGGGCC-1_70_70;GGGCTCAGTCTTTCAT-1_44;AAACCTGTCACCTTAT-1_70_70;TCATTTGCAGAAGAAG-1_70;TTTGGTTCACTAGTAC-1_70;ATGTGTGCAAGCGAGT-1_70;CCCTCCTCAAGAACTA-1_70;AAGTGGGCATTGGGCC-1_70;ATGCGATTCGTGTCAA-1_70;CTGGCGAAGGATGTAT-1_70;GACTAACGTCGCAGCT-1_70;AGGTTGTAGCTCACTA-1_70_70;TTTGCTACACTCATGA-1_70;CAGCAGCCAACATCCA-1_70;CGAATCATCCGGATTA-1_70;CCGTCATGTTTATGCG-1_58;CAGGAGAGTTACTACG-1_70;CAGTACAAGTGGACCA-1_70,CTTAACTTCATCTCCG-1_70;GAGGAACTCTACACCC-1_70;ACGGGCTAGTGGGATC-1_70;GATGAGGTCCGATATG-1_70_70;TATCGAGGTTTCTAGG-1_70;AGCCAATTCTGTGGTA-1_58;CCGTGGACAATCCAAC-1_70;CTGAATGCAGCTCGAC-1_70;AATCCGAAGGATTCGG-1_58;TTGAACGAGAGCAATT-1_44;CTTACCGAGGGAGCGA-1_58;GTACTCCTCTACTTAC-1_58;ACGCAGCGTTCGAGCC-1_70;TCCACACGTTAACCCA-1_70;ACTGAACTCTCTCCAG-1_70;CGCGTTTTCTACTTAC-1_70;GGACGTCGTGGAAGTC-1_70;CGATGTATCGGGCTCA-1_70_70;CATTCATCACAGCCAC-1_70;TGTCTTAAGGTTCATC-1_58;CTTACATCAACATAAG-1_70_70;GCGAGAAAGTTACCCA-1_70;AGAATCCTCGACCCTT-1_70;GCGTGTGCACAAGCCC-1_70_70;GAATGAAAGTGCAAAT-1_70;AGCCGTGGTCCTCGGA-1_58;GTAGCTAGTTTCCTGC-1_70;GTAACTGTCTCGGTTC-1_70;GTCCAAATCTGCACTC-1_70;TTCCTAATCTGCGACG-1_70_70;TCAGGTACATCTACGA-1_70;ACTTGTTTCTGTTGTT-1_70;CACGGGTGTGGCTCCA-1_70;AGGCACCCATCAGCAT-1_70;GTACTTTGTTTCTAGG-1_70:46300860:221:255
+chr2	178722538	.	G	A	1116.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=-3.697;ClippingRankSum=0;DP=70;ExcessHet=3.0103;FS=6.427;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=16.19;ReadPosRankSum=-0.958;SOR=0.36;MUMAP_REF=59.9697;MUMAP_ALT=60;AO=38;RO=33;MMD=0.564006;RESCUED=0;NOT_RESCUED=71;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	1|0:28,41:69:99:1145,0,968:GATTCAGCAAACGTGG-1_70;TAGCCGGCATCTGTAG-1_70;ATCGTTTAGCCCAATT-1_70;TTATGCTCACATAACC-1_70;GCTCTCATCCAGTAGT-1_70;AGCAATCGTAAGCGCA-1_70_70_70;GGCGAAAGTTTGGCTA-1_70;CTCTATATCTAAGACC-1_70;ATGCGATAGACGTGGT-1_70;CTCTGTGCATACCAGT-1_70;TCACCTGCAGCCTGTG-1_70;GATCTAGAGGCTAGTG-1_70;AGCGGTCTCAAAGCGG-1_70;CTCGTCACAAGAGACC-1_70;TTCTACAAGCTTACTG-1_70;ACCTTCGTCCCTAATT-1_70;GAAGTTCTCGGACAAG-1_70;CGAGAAGAGGTAGACC-1_70_70;TTGGGTACAGGCAAAC-1_70;ACGGGCTAGTCGACTT-1_70;GGTACTAGTCGCGTGT-1_70;GCGCTGACACGGGATA-1_70;CGTGAATGTTCAAGGG-1_70_70;TTGCGTCTCCGGTGCA-1_70;TAGTCAGCAGATGGGT-1_70;CGGTGACGTCTCATCC-1_70;TTCGCTGAGCCATGCC-1_70;CCTATTACATCCGTGG-1_70_70,AGGGAACTCAGCCACG-1_70;GTGCGACTCAAGCCAT-1_58;GTCCTCACAAACCGAG-1_44;ACTGTAGAGGAAAGGT-1_70;CACTACCAGCTGTCTA-1_70;AATCCGACATGCCACG-1_70;AGCCTAACACGGCGTT-1_70;AGTTACGTCCACAGAT-1_70;TGGTAGTAGGCCTATT-1_70;ATATGCGAGAGCTGGT-1_44;TGGTGCGTCGCAAGAG-1_70;CAAGCGCTCCAGAAGG-1_70;TCAGCTCCACACTAAC-1_70;GACGGCTCAACATGGG-1_70_70;GTTCTTAAGATAGGCC-1_44;GAGCAGAGTCCGTGAC-1_70;CTCGCATTCTTACCGC-1_70;TACGGGCTCTACGAGT-1_70;AGCATACCAACATCCA-1_70;TGAATCGAGAGCTCCC-1_58;GAGGAACCAAGAACTA-1_70;CCGCTATCACCAGTGC-1_70;CTACAAGGTCGGTGCT-1_70;AGTCATGCACGAGGTA-1_44;CAGAGCCAGAGTCGGT-1_70;TGAGAGGGTATACAAG-1_70;AGGCACCTCTCATGCC-1_58_70;AGCGCCATCGCCTGAG-1_58_70;GTACGTATCCCTTGCA-1_70;GAGGTCCTCGCTAGCG-1_70;AGGCCGTCATGAGACG-1_58:177579046:221:255
+chr21	6112126	.	G	A	450.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=0.932;ClippingRankSum=0;DP=28;ExcessHet=3.0103;FS=0;MLEAC=1;MLEAF=0.5;MQ=46.84;MQRankSum=1.428;QD=16.1;ReadPosRankSum=2.624;SOR=0.941;MUMAP_REF=37.0667;MUMAP_ALT=42.2353;AO=14;RO=11;MMD=1.21318;RESCUED=0;NOT_RESCUED=32;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	0|1:13,15:28:99:479,0,365:TTAGTCTCAGCCTACG-1_70_44;CGGACGTGTCTAACAC-1_70;TAGGCATAGACCCAAG-1_70;CCCTCCTCAAGGTTCT-1_58;TTAGTCTAGAACTCCT-1_70;TAACTCTCATAGTAAG-1_70;TCATCGCAGTGCAAAT-1_70;ACTTACTAGTCGCGTC-1_70;ACTGGATCACCCAAGC-1_70_70,GAGCTTACACGGCGTT-1_44;CACCTTGTCGGCACCA-1_70;AGGCTATGTGAACAAT-1_70_70_70;TCATGTTAGCTGCATT-1_70;AGTCGATTCCGTACAA-1_70_70_70_70;ATATTCCTCACGAGTT-1_70;CGATGGCTCGTCCTAC-1_70;CTGATGACATCAGGGA-1_70;GTGGTGCGTGCCTGGT-1_70:5951002:101:255
+chr3	44828239	.	A	G	471.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=1.493;ClippingRankSum=0;DP=28;ExcessHet=3.0103;FS=6.805;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=16.85;ReadPosRankSum=1.41;SOR=2.514;MUMAP_REF=60;MUMAP_ALT=60;AO=16;RO=16;MMD=0.571868;RESCUED=0;NOT_RESCUED=32;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	1|0:14,14:28:99:500,0,476:CGTCCATCAACATAGA-1_70;TGCACGGTCTGGGCTG-1_58;CATCGAAAGGCAGTCA-1_70;GATGAAAAGGCTAGCA-1_70;CAAAGCTGTCTATCCC-1_70;CGTCGTTCAGTCAGCC-1_70;ATTGGTGCAAAGGCCA-1_70;CGTCCATGTGCAATGG-1_70;TCTTCGGTCGATAGAA-1_70;TTCTACACATCTCGCT-1_58;TACCTTACATGAAGTA-1_70;AGGCACCGTCCGAACC-1_70;TGCCCTATCGCTTAGA-1_70;TTGTCCGAGACCGATG-1_70;GACACCGTCATTACTC-1_70;GGGCACTGTGCATCTA-1_70,CACACCTAGCAGGGTT-1_70;AAACCTGCATACGTTG-1_70;TCGTACCAGCAGGCTA-1_70;GACACCGAGAAGTGAG-1_70;CCAGACGTCAACCAAC-1_70;GGACCACGTACGTGCC-1_70;CTACTTACATATTGCG-1_70;GTAGCGCCAGACACTT-1_70;CATTGGAAGCGCCCTA-1_70;CTAATGGTCAGTACCA-1_70;GAGATGGGTACTCGCG-1_70;TCCCTTTCATACAGCT-1_70;CCGGGATCACAATGTC-1_70;TACTCGCTCACTGCGG-1_70;AAGCCCGGTTGGAGCA-1_70;CCGGGATCACCGAAAG-1_70:39484810:90:255
+chr3	52356773	.	C	T	724.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=1.142;ClippingRankSum=0;DP=35;ExcessHet=3.0103;FS=0;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=21.32;ReadPosRankSum=1.152;SOR=0.512;MUMAP_REF=57.6923;MUMAP_ALT=60;AO=24;RO=13;MMD=1.13871;RESCUED=0;NOT_RESCUED=37;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	1|0:12,22:34:99:753,0,334:TTGCTTATCGAGAATA-1_70;GGACGTCAGGATATAC-1_70;TGCAACATCTTCCTCT-1_70;CCCAATCAGGAGTCTG-1_70;ATCAGCATCGTCACAA-1_70;TTAAGGCCAGAGAGGG-1_70;TTTGGTTGTACTCACA-1_70;AGTTACGAGTGTTTGC-1_70;CCCGGAATCTAGCCTC-1_70;ACCCAAACAGAATGGC-1_70;CTCGTTGCAAAGCGGT-1_44;ACTTTCAGTTACCGAT-1_70;GTTGGGCTCCGCAAGC-1_70,GTCGACGTCGCAAACT-1_70;GTCTCGTTCTGGTAGT-1_70;TCTCATAAGGATGACC-1_70;GTACTTTGTCATACGT-1_70;GCGAGAACACATCCGG-1_70;TTTCCTCCATCAGTCA-1_70;GTCTTGCGTAGCGCTC-1_70;CCTCATGCAGCCTGGT-1_70;GTACGTAGTGCAATGG-1_70;AAGGCAGTCTCATACT-1_70;TCGAGATGTCTTTCGC-1_70_70;CGGACTGAGTGCAAAT-1_70;CAGCAGCCACGTTTAG-1_70;AACTCCCTCTCGCTTG-1_70;GCCATGGCATTCTTGT-1_70;CTTATTGTCAGGCGAA-1_70;TGAGAGGAGCAAATCA-1_70;GATCAGTGTCTCAACA-1_44:50469490:102:255
+chr3	101564816	.	A	G	719.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=1.024;ClippingRankSum=0;DP=43;ExcessHet=3.0103;FS=4.461;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=16.74;ReadPosRankSum=0.427;SOR=0.26;MUMAP_REF=60;MUMAP_ALT=60;AO=21;RO=26;MMD=0.717068;RESCUED=0;NOT_RESCUED=47;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	1|0:22,21:43:99:748,0,777:TTTCCGGCACGGCTGT-1_70;CTTCGCAGTAGTGACG-1_70;CCATCGTAGCGCCAAA-1_70;CTATTTGCACGCGAAA-1_70;CTGGACGTCCGCTGAG-1_70;CTATCTATCTGTGCAA-1_70;TTAGTCTCACAAGCGA-1_70;TCACATTAGGTAGACC-1_70;TCGGGCAGTCTAGTGT-1_70;AACGTTGCATGGTTGT-1_70_70;TCTTCGGTCTGTCCGT-1_58_70_70;CGAACGCTCGAGTTGT-1_70;TTTCCGGTCAAAGCGG-1_70;TAGGTCACAGACAAGC-1_70_70;TTTGCTATCTGTCCGT-1_70_70_70;GGATGGATCTCGGTCT-1_70;TCTGCCAAGACCATCT-1_70;CTCCACATCATCGAGT-1_70;CCATCGTCACGTCCGA-1_70,TTATGCTCACGCATCG-1_70;CTATGAGGTAGCCTTA-1_70_70;AGAAATGAGGCTTATC-1_70;TTCCATATCGAGGTAG-1_70;GTAGATCCACGATAGG-1_70;CGTTTGCGTAAGTGGC-1_70;CTCGGTTAGGACATTA-1_70;TTATGCTGTTGCACTA-1_70;GGGACCTTCTTCGGTC-1_70;CCGGGATCAGCTCGCA-1_70;CTCGATCAGTATCTCG-1_70;TTTGCGCGTGGAGCTA-1_70;GGTGTTACATGATGCT-1_70;TGATTTCAGACACGAC-1_70;TAATCTCTCATAAAGG-1_70_70_70;ACCTCTGAGTCCCGCA-1_70;CTTTCGGAGCCCTAAT-1_70:98445501:152:255
+chr3	197194489	.	T	C	416.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=0.565;ClippingRankSum=0;DP=36;ExcessHet=3.0103;FS=0;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=11.58;ReadPosRankSum=-0.02;SOR=0.54;MUMAP_REF=58.2917;MUMAP_ALT=60;AO=16;RO=23;MMD=0.581487;RESCUED=0;NOT_RESCUED=40;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	1|0:22,14:36:99:445,0,749:GATAACCAGTCACCCG-1_70;CTCGCATAGTAAGCGC-1_70;TTGTGAGAGGGAATGA-1_70;GGAAAGCGTACACCGC-1_70_70;TTCTCCTTCTGTTGAG-1_58;GATAACCGTCATTGAC-1_70;AGGGTTTAGGTCTCCG-1_70;ACACGATTCGTGTCAA-1_70;CTAACGACAACTCCGG-1_70;ACGCAGCTCCTGCCAT-1_70;CAGCTAATCTCGAGCG-1_70;ATGCGGCGTAAAGCAT-1_70;AGTGGCCCATCCACGG-1_70;GCCGGATTCGTGGGAA-1_70;TTGTGAGAGCTCTGGC-1_70;GTAAGTCGTGCAACCC-1_70;GATGGTTAGAGTTAGT-1_70;TAGCGTAGTTTACGGT-1_70;ATTAGCGCAGATATCC-1_70;GAATGTCAGAGGGCTT-1_70_70;GCATCTCAGTAGCCTT-1_70,CTCACACCACCCATGG-1_70;CTACCGTAGACCAGGT-1_70;AAGACGGGTGCAACCC-1_70;TTTGGTTGTAGGCTGA-1_70;CAGTATGAGTAGCTAA-1_70;ACTATCTCAAGTCGGA-1_70;CCTTACGTCATGAGAA-1_70;GACGTGCTCTCTAACT-1_70;GAACGGATCAAGAAAC-1_70;TCCGGAGTCCACAAGT-1_70;ACCGCTTCAGCTGTTA-1_70;TTGTAGGGTGAACACG-1_70;GCAGAGAAGCGCCCTA-1_70;TCAACGAAGTGCGCCT-1_44;CCCTCCTAGTGGAGTC-1_70;AGCCTAATCTTGTGGA-1_70:196074588:137:255
+chr4	1841597	.	C	T	1220.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=-0.61;ClippingRankSum=0;DP=73;ExcessHet=3.0103;FS=0;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=16.96;ReadPosRankSum=-0.344;SOR=0.775;MUMAP_REF=60;MUMAP_ALT=60;AO=44;RO=40;MMD=1.02688;RESCUED=0;NOT_RESCUED=84;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	1|0:34,38:72:99:1249,0,1149:TCGGGACTCAGCTGGC-1_70_70;CACTCCAAGGTTCATC-1_58;CATCGGGAGCTGCACC-1_70;CAGCGACTCAGCAACT-1_70;CTACACCGTTCAGCGC-1_70;CGCAAGCCATGGGCCT-1_70;AACTCAGAGGGTTCGA-1_70;GAGCCGTCAATAGCGG-1_70;TTCTCCTGTACTCCGG-1_70;GTGCCTTGTGTGGCTC-1_70;GTCTGAATCCTCAGCT-1_70;TGTCTCGAGGGATACC-1_58;CGCCAAGAGACGCAAC-1_70;CAGTCCTGTCTCGAGC-1_70_58_70;GAGCTTAGTCATATGC-1_70;AGCTCTCTCAAGATCC-1_70_70;TACACCCCATGTAGGG-1_70;CTATGAGTCGTGCTAA-1_70;GACCTGGCACGGTTTA-1_70_70_70_70;GGAAGCAGTTTAAAGG-1_70_70;TTGCGTCGTACGAGAC-1_70;GAGCTTATCTCATTAC-1_70;GCTATTTTCACACGTA-1_70;AAGGGTGGTCTAGGGA-1_70;CCAGCGAGTTCACGGC-1_70;ACCTTTAGTAAAGGAG-1_70_70;ACGACTAAGTGGCCCT-1_70;ATAGGCTAGAGGGACG-1_44,AGCCACGGTCCGCAAC-1_70;CTGCATCAGACCACAG-1_70;GATGAAATCGCGCGAT-1_70;CGTGTGGCACAACGGA-1_58;AGGTTTGCAGACTCGC-1_70_70;CGGTCTTAGGTAGCCA-1_70_70;TGCCATCCAGGGATCA-1_70;ATGCGATCAGGCATAG-1_44;AGGTTGTAGAGTTAGT-1_70;GTAGTCAGTCGCCAAC-1_70_70;TCTGGAACACGTCATA-1_70;ACACGTATCGTGTGGC-1_70;CGGGCATCACATGGGA-1_70;TTGTTGTCAGAACAGC-1_44;ACCCACTGTCCAGTGC-1_70_70_70;AAGGTTCCAAGACTTC-1_70_70;CTTCGCATCTTGAGAC-1_70;TACCATTGTCCAGGTC-1_70;GAGCAGAGTCAAGAGC-1_58;TGGGCTGAGAATATGC-1_70_70;TGGGAAGCACACCGCA-1_70_44;CCGGAACAGTAACAGT-1_70;GGATTTGTCGATTCAG-1_70;TACTCTAAGAGACGAA-1_70;GCATCTCTCGCCTGGA-1_70;ACCACCTGTCGCCATG-1_70;TCACCTGTCATGCTGA-1_58_70_70;TTTAGTCCAATGGCCC-1_70;CCTTCCCTCGTCGTTC-1_44;CAGAATCCAAGGCTGA-1_70;GACCAATAGAGCTCCC-1_70;CATTCTACACGAGATG-1_70;AGTATCGGTAGTATGA-1_70;CTGTTGCAGCGCTGAA-1_70:78502:192:255
+chr4	3212602	.	C	T	914.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=-1.41;ClippingRankSum=0;DP=66;ExcessHet=3.0103;FS=0.917;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=13.86;ReadPosRankSum=-1.354;SOR=0.826;MUMAP_REF=60;MUMAP_ALT=60;AO=29;RO=37;MMD=0.740935;RESCUED=0;NOT_RESCUED=66;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	0|1:36,30:66:99:943,0,1200:GTCACGGAGTTAACGA-1_70;GTACGATCATGGTTCA-1_58;GCAGTTAAGGAATACT-1_70;ATCATGGGTCCAGGTC-1_70;GTTGCCTAGCTTTCAG-1_70;TTGCGGGCAGGAGCAT-1_58;ACCATCCTCTCCAACC-1_70;CCCAAGGAGAGGTCGT-1_70;GGGTATTCAATGGGCA-1_70;AAACGGGCAAGGACAC-1_70;GTCTCGTGTCTCCATC-1_44_70;GTCGGACGTGGCTAAG-1_70;GCAGAGAAGTAGGCCA-1_70_70;AGTATCGCATACTCTT-1_70;GGCCGATTCTCCGGTT-1_70;GGTGGTCAGTCAGTCT-1_70_70;TTTACTGTCAAGACAA-1_70;CGGAAAGGTACGCGAA-1_70;CAACTAGCACCAACAT-1_70;GCTAATGGTAAAGCAT-1_70;CTCTCAGGTAGTTGGG-1_70;CCATGAATCAACAGCT-1_70;CAGGCGTAGCTAGGAC-1_70;TCGAGATCACCACACG-1_70;TTACCCGTCGAGCACC-1_70;AAGCAGGGTCGAATCT-1_70;ACGATACTCAGCCACG-1_70;ACGCCGAGTAGCTGCC-1_58;CGGTCTTAGGGAACGG-1_70;GGTGGCTAGATGTGTA-1_70;CTTAGGATCGGTGCCA-1_70_70;TTTACTGAGAAGGACA-1_70;CCTACGTCAGCATCCG-1_70,CTTAGGAAGCTGGAAC-1_70_70;ATCTCCGTCAAAGACA-1_70;TCAGGTAAGTGGACCA-1_70;CAGAATCCAAAGTCAA-1_70;GGTGGTCAGACGTCGA-1_70;AAACGGGCAGGACCAA-1_70;GTCACCTTCTTGTACT-1_70;AGCTCCTCAATTGAAG-1_70;GTCACGGGTGTGACCC-1_70_70;GTAATGCTCTCGGACG-1_70;TCATGTTGTTGGTGGA-1_70;TCCGTCAGTGCAGACA-1_70;TGGGTTAGTTCTGTCC-1_70;CGCTTCAGTTCGTTGA-1_70;AGCTTCCCACGTCCGA-1_70;ACGTTGACACACATAC-1_70;GTCGGTGTCGCAAACT-1_70;TGCTCACCACTCGGAC-1_70;CCCAGTTAGGAACTGC-1_70;CGAGTATGTCCGTCAG-1_70_70;TTGTCCGGTTAAGACA-1_70;GAATAGAAGGAGGACG-1_70;GTAAGCTCAAGGGTCA-1_70;GTATCTTTCAACCGGC-1_70_58_70:78502:170:255
+chr5	148827322	.	C	T	1471.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=-1.081;ClippingRankSum=0;DP=65;ExcessHet=3.0103;FS=2.13;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=22.64;ReadPosRankSum=0.203;SOR=1.085;MUMAP_REF=60;MUMAP_ALT=60;AO=38;RO=27;MMD=0.801969;RESCUED=0;NOT_RESCUED=65;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	0|1:28,37:65:99:1500,0,1862:CCTGGTTGTAGTTGGG-1_70;ATGCGATTCATGCACA-1_70;TACTAGGTCTTCGGTC-1_70;TCTGCTGTCCGTACAA-1_70;GCTAGCGTCATGGTCA-1_70;GACGCGTTCCAATGGT-1_70;ACCATTTAGTATTGGA-1_70;TGGTAGTGTTCGATTG-1_70;CGACTTCCAAACAGTA-1_70;GAACGCCCACCACATA-1_70;GTGCAGCGTGGAAAGA-1_70;ACTACGATCTGAAGTC-1_70;GACCAATGTCCAGCAC-1_70;TCCCTTTCATAGTGTC-1_70;TGCCAAAGTCCTTGGG-1_70;CCGATTCCAACCCACG-1_70;TGTACGAGTAAGAGGA-1_70_70;GTTGGGCTCGTGACAT-1_70;TGTGCAAGTAGGAGTC-1_70;AACTCCCAGCCCATGC-1_70_70;CTTCGCACACCGAAAG-1_70_70;GTTCTTAGTGAGCTCC-1_70,CGTAGGCAGCTGGACA-1_58;TCGAATGTCAGCAACT-1_70_70;TCTTAGTGTAGGACTG-1_70;TCTGAGAGTTCACGAT-1_70;CAGGTATTCGACCCTT-1_70;ATTTACCTCTGCCAGG-1_70;GCGGATCAGCATGTTC-1_70_70_70;GTTACAGTCTAGCAGT-1_70;AAGACAAAGAGACTTA-1_58;CCTTCCCTCGATAGGG-1_70;TAAGAGATCGAACAAA-1_70;ACACTGATCTTGCGGG-1_70_70;AGCCGGTCATGCCGGT-1_70;CGCAGACTCCTGAAGT-1_70;AGGAGACGTACATCCA-1_70;CGAGCACTCCCTTCGA-1_70;ACTGAACTCTGCCTGT-1_70;CGTCACTTCTTTCGCG-1_70;AGGTTGTAGCGCCACT-1_70_70;GTACGTAAGTAAGGCC-1_70;CATATGGCAATGGCTT-1_70;AGTCGATCAGATCGGA-1_44;CGATATGCATATGCGT-1_70;TACACGACAGTCGAAG-1_70_70;CAACTAGCAGGCCGTT-1_70_70;CGCTATCAGGGACTTG-1_44;GATCTAGGTTGTCGCG-1_70;AGAATAGAGGAAGGCG-1_70:147873050:209:255
+chr5	150542913	.	G	C	323.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=0.796;ClippingRankSum=0;DP=30;ExcessHet=3.0103;FS=3.431;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=10.79;ReadPosRankSum=-1.221;SOR=0.554;MUMAP_REF=60;MUMAP_ALT=60;AO=11;RO=22;MMD=0.876932;RESCUED=0;NOT_RESCUED=33;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	0|1:19,11:30:99:352,0,645:CTACCGTGTAACTGTC-1_70;TGAGCTATCTATCCCG-1_70;CGCCAAGTCGGGTCAC-1_70;GCTCCTACACCGGTCA-1_70;ATACTTCAGTGGTCCC-1_58;GTACTCCAGGGATCTG-1_70;AGGCTCGTCGCGATCG-1_70;ACTGAACGTCTAGCTA-1_70;CCCGAAGTCTTACCTA-1_70;CTTCTCTTCCGCTTGT-1_70;CCGCTATTCGCGATCG-1_70;AGGGTGACACCATGAT-1_44;GTGTCTCCAAGCCGCT-1_58;CGATGTAAGGTCGCTC-1_70;GCTATTTGTCGTAATC-1_70;AATCTTCTCACGACGC-1_70_70,CGACCTTCAGATGGCA-1_70;GAACGGACAAATACGA-1_70;AGTCTGAGTAGGTCGA-1_70;TCATGTTCATGGCACC-1_70;GGAAGCACACGCCTGA-1_70;CGTCACTCACACTAAC-1_70;CATTATCTCGAGCTCG-1_70;AGGGATGCATTCGCCT-1_70;GAATTGCTCACATGCA-1_70;ACCTCTGCAAGAGTCG-1_70:147873050:104:255
+chr5	177294255	.	T	C	542.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=0.688;ClippingRankSum=0;DP=33;ExcessHet=3.0103;FS=0;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=16.96;ReadPosRankSum=0.189;SOR=0.892;MUMAP_REF=60;MUMAP_ALT=60;AO=19;RO=19;MMD=0.834652;RESCUED=0;NOT_RESCUED=38;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	0|1:15,17:32:99:571,0,462:GTGAAGGAGGAATCGC-1_70;ACCACCTCAGCCTTGG-1_70;TGGCCAGCAGTTGCCG-1_70;CTCTCAGTCAGCAACT-1_70_70;CATTTCAAGGCATTGG-1_58;CTCGAAAGTATAGGGC-1_44;GGGCTCATCTTAGCTT-1_70;GAGCCGTCAAACTGCT-1_70;GCGCTGACATACAGAA-1_44;CGCGTGAGTTGATTCG-1_70;ATACTTCAGAGCTGGT-1_70;CGTGAGCGTTCCATGA-1_58;TCGGGACCAGTCTGAT-1_70_70;CGGCTAGCATAGAGCG-1_70;AAAGAACCACGCTGAC-1_70,CGTGTCTTCCTCTAGC-1_70;CTACCCAAGACAGATT-1_70;TTACTCACAAGACACG-1_70;GATCGGCTCTCATCCG-1_70;GCTCTGTTCCCAGGTG-1_70;GTGGCACAGACATTAG-1_70;CATGTAGGTTGCGTCG-1_70;CTGCGGAGTTTGCCTC-1_44;ACATGGTCAGTAGAGC-1_70;ATCCGGGCATGCATAC-1_70;GGAAGCACACACACGC-1_58;TAGTGGTGTCGATTTG-1_70;GAATGTCGTATAGGGC-1_70;AGGTTGTAGATGTCGG-1_70;CACACCTGTACGCACC-1_70;CAATCCCTCTAGCACA-1_70:176207935:107:255
+chr6	146433996	.	G	A	885.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=-1.257;ClippingRankSum=0;DP=51;ExcessHet=3.0103;FS=0;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=17.72;ReadPosRankSum=-0.604;SOR=0.716;MUMAP_REF=60;MUMAP_ALT=60;AO=25;RO=27;MMD=0.687042;RESCUED=0;NOT_RESCUED=52;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	1|0:26,24:50:99:914,0,1780:GGATGTTTCTTACCGC-1_70;CAGAGAGAGGGTCGAT-1_70;CAGTAACAGTCGTAAA-1_70;CGTGTCTAGAAGCTCG-1_70;TTTGTCACAGACGAGT-1_70;CTACCTGGTGAAAGAG-1_70_70;TTCGAAGGTTAGGGTG-1_70;TCACGAAAGTCCTATG-1_70;CATCTTAAGACCGGAT-1_70;ACTGGATCATGCCCGA-1_70;CGGAGTCGTCACCAGC-1_70;GGGTTGCTCTAACGTG-1_70;GAGATAAAGAGTGACC-1_70;CAGAGGACATCTCCCA-1_70;CGAATCAAGGTCCGTC-1_70;CATCTTAAGGGTCATG-1_70;TCAAGTGTCCAAACCA-1_70;GATCGATTCGTTACCC-1_70_70_70;TCTGGCTAGTGGCGTA-1_58_70;CAGAATCTCAGATGTC-1_70;AATTCTCTCACCCTCA-1_70;AGGAAGCGTCAAACTC-1_70;ATAGACCCAAGCCAGA-1_70,CAGTAACCACGGCTAC-1_58;CTACCTGAGCGAGAAA-1_44;CTCGGTTTCACCGGGT-1_70;GTAATGCGTTCTGCAA-1_70;GCTATAGAGCGACTAG-1_70;TCTCTAAAGTGAAGAG-1_70;CTTTCCTCAACGACTT-1_70;CTAGCCTTCGCTGACG-1_70;TAGAAAGTCATTGCTT-1_70;TCTTCGGCACCAGCAC-1_70_70;ACGACCGGTAAAGGAG-1_70;CCTCCCTAGAGGTCGT-1_70;GTTGGGCCACCTTGTC-1_58;GGATGTTCACTAAGTC-1_70;GACACGCCATAGTGAA-1_70;CGACTTCTCTGGGACC-1_70;ACACCCTGTTGGTGTT-1_70;AAACGGGCAAAGCGCA-1_58;TACACGAAGAGGGACG-1_70;TAGGCATTCACGGCGT-1_58;AACAAGATCCCGTTGT-1_70;CGTGTAACACGAAACG-1_70_70:121322723:183:255
+chr6	157196248	.	G	A	568.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=0.442;ClippingRankSum=0;DP=27;ExcessHet=3.0103;FS=7.223;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=21.07;ReadPosRankSum=-0.489;SOR=0.073;MUMAP_REF=60;MUMAP_ALT=60;AO=19;RO=10;MMD=0.756437;RESCUED=0;NOT_RESCUED=29;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	1|0:10,17:27:99:597,0,308:CATCCACTCCAAAGAA-1_70;TGCATAGTCTTGCATT-1_70;GAGGAACAGTCTTGCA-1_70;AAGCCCGTCTCGGTCT-1_70;GAAGTTCGTGCTATTG-1_70;ATCTTACTCTGTGGCG-1_70;TTGTTGTCAAACCCAT-1_70;ACAGCTACACACCGAC-1_44;AGGCCGTGTGTAAGTA-1_70,TATCTACTCGGACAAG-1_70;CGGCTAGTCGTAACCA-1_70;AGGTAAATCCAGACCG-1_70;AAGACAATCATGCACA-1_70;CTATCTACACGGACAA-1_70;TGTGTTTGTTGTGGAG-1_70;TGACCAAAGGTATCGG-1_70;CTCTGACGTCACTGGC-1_44;TCACGTCTCACGTTAG-1_70;TAGAAAGCATGGTTGT-1_44;TCGCGTTGTCGATTGT-1_70;ACACTGATCGTTCAAG-1_70;TACTTACGTCAACACT-1_70;CCGGGATTCAGAGCTT-1_70;CTACACCCAAGCACGA-1_70;TTTCCTCCATACTAGC-1_70;CCGTATCGTAGGACAC-1_70;CGACGTGCAGATAATG-1_70:121322723:63:255
+chr7	21705516	.	T	A	725.77	PASS	AC=1;AF=0.5;AN=2;BaseQRankSum=0;ClippingRankSum=0;DP=42;ExcessHet=3.0103;FS=1.216;MLEAC=1;MLEAF=0.5;MQ=60;MQRankSum=0;QD=17.7;ReadPosRankSum=-0.88;SOR=0.451;MUMAP_REF=60;MUMAP_ALT=60;AO=22;RO=22;MMD=0.788123;RESCUED=0;NOT_RESCUED=44;HAPLOCALLED=0	GT:AD:DP:GQ:PL:BX:PS:PQ:JQ	1|0:20,21:41:99:754,0,712:TAAGCGTAGTCGTCCG-1_70;TTCGACCGTGTGACCC-1_70;TGGTCTCAGTACGGTG-1_70;ATCGTTTGTGCAACGA-1_70_70;CTTCTGGTCCACAAGT-1_44;CACGACGTCGTAGGGA-1_70;GTCACCTTCGCTCTGT-1_70;AGCCGGTTCCTCTGCA-1_70;CGGAGCTTCATGGTCA-1_70;CGAACGCCAAGTGTTC-1_70;TTTCCGGGTTAAGACA-1_70;TGCGGGTCACATCTTT-1_70;CCATTTAAGCGGATCA-1_70_70;GTACATGTCGGTGACC-1_70;TAACTCTTCCAGTCTC-1_70;TCTTTCCAGGGTACGT-1_70_70;AGAATCCCAGCTAACT-1_70_70,AAGCGAGTCTTCCTTC-1_70;CCCAATCCAAAGGTGC-1_70;CGTCTCAAGAATATGC-1_70;CCTAGCTGTGAGCGAT-1_70;GGTATTGCATCTATGG-1_70;GATCGATTCTTGTGGA-1_70;TGCTGCTCATTCGCCT-1_70;ACCCAAATCTATTCCA-1_70;TAGTCAGAGAGTGACC-1_70;ACCGTAACAGCCTGTG-1_70;AGCCTAATCCCTTCGA-1_70;TCTCTAAAGCTGGCTC-1_70;CAAGTTGCAAGTAAGT-1_70;TGAACTGAGAAACGCC-1_70;GGCGACTGTTATGTGC-1_70_70;GTGCGACGTAGGTTTC-1_70_70;GCAGCCACACGTCCGA-1_70;GAAGTTCTCACGCTCT-1_70:2650964:153:255

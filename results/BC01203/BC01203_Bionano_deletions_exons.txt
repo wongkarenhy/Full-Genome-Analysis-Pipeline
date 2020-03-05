@@ -1,0 +1,3 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+3259	11	11	119028335.0	119045908.0	274052.4	289666.7	0.99	deletion	heterozygous	1	1959.0	True	False	SLC37A4	['Glycogen storage disease Ib, 232220 (3)', 'Glycogen storage disease Ic, 232240 (3)']	5.360873426000023	62.884386202868384
+3259	11	11	119028335.0	119045908.0	274052.4	289666.7	0.99	deletion	heterozygous	1	1959.0	True	False	HYOU1	['?Immunodeficiency 59 and hypoglycemia, 233600 (3)']	3.476653872000015	40.78201953439401

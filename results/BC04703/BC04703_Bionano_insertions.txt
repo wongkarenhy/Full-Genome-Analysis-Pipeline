@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+12625	11	11	45929201.0	45952589.0	43937293.3	44058914.3	1.0	insertion	heterozygous	1	98233.0	False	False	PHF21A	.	1.2304556410000094	18.82949657800164

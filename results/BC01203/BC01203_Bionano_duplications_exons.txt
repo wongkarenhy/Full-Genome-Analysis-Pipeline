@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+4440	18	18	47023618.0	47224347.0	20.0	490205.8	-1.0	duplication_inverted	unknown	-1	289457.0	False	False	IER3IP1	['Microcephaly, epilepsy, and diabetes syndrome, 614231 (3)']	1.3683089220000015	16.050605910328432

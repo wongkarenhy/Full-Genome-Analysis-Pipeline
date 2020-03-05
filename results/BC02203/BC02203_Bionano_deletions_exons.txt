@@ -1,0 +1,3 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+12202	X	23	488261.0	3861713.0	5569457.8	8794232.4	1.0	deletion	heterozygous	1	148677.0	False	False	CSF2RA	['Surfactant metabolism dysfunction, pulmonary, 4, 300770 (3)']	8.774919760000017	74.45740422699778
+12202	X	23	488261.0	3861713.0	5569457.8	8794232.4	1.0	deletion	heterozygous	1	148677.0	False	False	SHOX	['Langer mesomelic dysplasia, 249700 (3)', 'Leri-Weill dyschondrosteosis, 127300 (3)', 'Short stature, idiopathic familial, 300582 (3)']	6.120926202999998	51.9376004573736

@@ -1,0 +1,23 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+2	46831799	call_3993	A	<DUP:TANDEM>			2.0	False	46909343	77544	False	False	MCFD2	['Factor V and factor VIII, combined deficiency of, 613625 (3)']	272.4722861289968	83.36833152284399
+1	171620390	call_3639	T	<DUP:TANDEM>			2.0	False	171803583	183193	False	False	MYOC	['Glaucoma 1A, primary open angle, 137750 (3)']	265.49823122800103	81.23448029964298
+2	120923689	call_4023	A	<DUP:TANDEM>			2.0	False	121073902	150213	False	False	GLI2	['Culler-Jones syndrome, 615849 (3)', 'Holoprosencephaly 9, 610829 (3)']	244.9092719360049	74.9348774726867
+4	93252234	call_4195	A	<DUP:TANDEM>			2.0	False	93385372	133138	False	False	GRID2	['Spinocerebellar ataxia, autosomal recessive 18, 616204 (3)']	238.43956910300471	72.95534282606766
+1	237304021	call_2140	A	<DUP:TANDEM>			4.0	False	237371749	67728	False	False	RYR2	['Arrhythmogenic right ventricular dysplasia 2, 600996 (3)', 'Ventricular tachycardia, catecholaminergic polymorphic, 1, 604772 (3)']	226.26499982200437	69.23029048263135
+2	80286603	call_4006	T	<DUP:TANDEM>			2.0	False	80379978	93375	False	False	CTNNA2	['Cortical dysplasia, complex, with other brain malformations 9, 618174 (3)']	207.2677421070031	63.41770050619857
+15	38237266	call_3843	C	<DUP:TANDEM>			2.0	False	38315496	78230	False	False	SPRED1	['Legius syndrome, 611431 (3)']	171.16686296400172	52.371916351713985
+17	77262379	call_3120	G	<DUP:TANDEM>			3.0	False	77308216	45837	False	False	SEPTIN9	.	167.34438480800154	51.20235290481949
+19	53813901	call_3160	T	<DUP:TANDEM>			3.0	False	53892680	78779	False	False	NLRP12	['Familial cold autoinflammatory syndrome 2, 611762 (3)']	165.50807443400137	50.64049711312255
+1	116300268	call_3631	A	<DUP:TANDEM>			2.0	False	116417594	117326	False	False	ATP1A1	['Charcot-Marie-Tooth disease, axonal, type 2DD, 618036 (3)', 'Hypomagnesemia, seizures, and mental retardation 2, 618314 (3)']	121.74010201300078	37.248812818488695
+10	100266041	call_3690	T	<DUP:TANDEM>			2.0	False	100363967	97926	False	False	CWF19L1	['Spinocerebellar ataxia, autosomal recessive 17, 616127 (3)']	117.00033803400058	35.79858747500459
+10	77435748	call_3681	G	<DUP:TANDEM>			2.0	False	77573115	137367	False	False	KCNMA1	['Cerebellar atrophy, developmental delay, and seizures, 617643 (3)', 'Paroxysmal nonkinesigenic dyskinesia, 3, with or without generalized epilepsy, 609446 (3)', '{Epilepsy, idiopathic generalized, susceptibility to, 16}, 618596 (3)']	103.0314970610004	31.52454191326395
+13	110274306	call_2270	C	<DUP:TANDEM>			4.0	False	110331101	56795	False	False	COL4A1	['?Retinal arteries, tortuosity of, 180000 (3)', 'Angiopathy, hereditary, with nephropathy, aneurysms, and muscle cramps, 611773 (3)', 'Brain small vessel disease with or without ocular anomalies, 175780 (3)', 'Microangiopathy and leukoencephalopathy, pontine, autosomal dominant, 618564 (3)', '{Hemorrhage, intracerebral, susceptibility to}, 614519 (3)']	96.62428762900036	29.56412836936912
+12	112421354	call_3767	A	<DUP:TANDEM>			2.0	False	112531483	110129	False	False	PTPN11	['LEOPARD syndrome 1, 151100 (3)', 'Leukemia, juvenile myelomonocytic, somatic, 607785 (3)', 'Metachondromatosis, 156250 (3)', 'Noonan syndrome 1, 163950 (3)']	74.90471145800012	22.918590753472444
+19	53813901	call_3160	T	<DUP:TANDEM>			3.0	False	53892680	78779	False	False	PRKCG	['Spinocerebellar ataxia 14, 605361 (3)']	64.4667337359999	19.724883240981445
+8	106748494	call_3529	C	<DUP:TANDEM>			3.0	False	106799060	50566	False	False	OXR1	.	53.308999896999886	16.31095198599494
+19	11535410	call_3951	T	<DUP:TANDEM>			2.0	False	11595977	60567	False	False	ACP5	['Spondyloenchondrodysplasia with immune dysregulation, 607944 (3)']	50.78244225299993	15.537901272217603
+11	9150519	call_3702	T	<DUP:TANDEM>			2.0	False	9290209	139690	False	False	DENND5A	['Epileptic encephalopathy, early infantile, 49, 617281 (3)']	24.237869543999988	7.416059711096586
+5	16479744	call_4225	T	<DUP:TANDEM>			2.0	False	16591743	111999	False	False	RETREG1	.	21.990504572999992	6.728433565271051
+18	9015992	call_3927	T	<DUP:TANDEM>			2.0	False	9179193	163201	False	False	NDUFV2	['Mitochondrial complex I deficiency, nuclear type 7, 618229 (3)']	15.363751299000011	4.70084620321042
+13	110274306	call_2270	C	<DUP:TANDEM>			4.0	False	110331101	56795	False	False	COL4A2	['Brain small vessel disease 2, 614483 (3)', '{Hemorrhage, intracerebral, susceptibility to}, 614519 (3)']	5.117787430999997	1.5658891598577374
+17	74286017	call_3922	C	<DUP:TANDEM>			2.0	False	74384077	98060	False	False	DNAI2	['Ciliary dyskinesia, primary, 9, with or without situs inversus, 612444 (3)']	5.117333504999998	1.5657502721426142

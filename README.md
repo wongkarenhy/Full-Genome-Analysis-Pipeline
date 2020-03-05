@@ -131,15 +131,15 @@ To get started, pull the github repo and create two additional directories (bion
 Score and normalized scores are two important indicators that show how relevant the variants are based on the proband's clinical phenome. The raw scores are normalized between 0-100 among all variants. 100 is assigned to highest ranking variant found in the proband. <br>
 
 **Files of highest priority:**<br>
-$SAMPLEID_confident_deletion_exons.txt
-$SAMPLEID_confident_deletion_syndrome.txt
-$SAMPLEID_confident_duplication_exons.txt
-$SAMPLEID_confident_duplication_syndrome.txt
-$SAMPLEID_smallVariants_compoundhet_candidates.txt
-$SAMPLEID_smallVariants_denovo_candidates.txt
-$SAMPLEID_smallVariants_recessive_candidates.txt
-$SAMPLEID_Bionano_translocations.txt
-$SAMPLEID_Bionano_inversions.txt/$SAMPLEID_10x_inversions_largeSV.txt
+$SAMPLEID_confident_deletion_exons.txt<br>
+$SAMPLEID_confident_deletion_syndrome.txt<br>
+$SAMPLEID_confident_duplication_exons.txt<br>
+$SAMPLEID_confident_duplication_syndrome.txt<br>
+$SAMPLEID_smallVariants_compoundhet_candidates.txt<br>
+$SAMPLEID_smallVariants_denovo_candidates.txt<br>
+$SAMPLEID_smallVariants_recessive_candidates.txt<br>
+$SAMPLEID_Bionano_translocations.txt<br>
+$SAMPLEID_Bionano_inversions.txt/$SAMPLEID_10x_inversions_largeSV.txt<br>
 
 ```
 .
@@ -173,9 +173,9 @@ $SAMPLEID_Bionano_inversions.txt/$SAMPLEID_10x_inversions_largeSV.txt
 └── misc
 ```
 
-** Things to watch out for:**<br>
+**Things to watch out for:**<br>
 Small indels in the phased_variants.vcf.gz (specifically insertions larger than 5bp) are likely to be false positives. These are usually reported as de novo variants. Similar clipped read signature can be found in the parents usually. <br>
-
+Large number of false positives in 10x SV calls. <br>
 
 ## Pre-processing step for SNPs and indels (must run this separately before running the clinical interpretation pipeline):<br>
 **Step 1.** Change directory to the InterVar installation location<br>

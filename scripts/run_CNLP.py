@@ -4,6 +4,7 @@ import networkx
 import argparse
 import pandas as pd
 import os
+import subprocess
 from datetime import datetime
 
 
@@ -87,26 +88,27 @@ def getGeneList(args, relatives):
 def run_clinphen(args):
 
     # Extract text from clinical notes
-    cmd = 'cat ' + args.json + " | jq-linux64 '.features[].notes' | grep -v null | sed -e 's/$/\./g' > " + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_tmp.txt'
-    os.system(cmd)
-    cmd = 'cat ' + args.json + " | jq-linux64 '.notes.medical_history' >> " + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_tmp.txt'
-    os.system(cmd)
-    cmd = 'cat ' + args.json + " | jq-linux64 '.features[].id' | tr -d '\"' > " + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt'
-    os.system(cmd)
+    #cmd1 = ['cat' , "{}".format(args.json) , '|','jq-linux64', '.features[].notes','|','grep', '-v', 'null', '|', 'sed', '-e', "'s/$/\./g'", '>',  "{}".format(args.workdir),  '/results/',  "{}".format(args.sampleid),  '/',  "{}".format(args.sampleid), '_tmp.txt']
+
+    cmd1 = 'cat ' + args.json + " | jq-linux64 '.features[].notes' | grep -v null | sed -e 's/$/\./g' > " + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_tmp.txt'
+    cmd2 = 'cat ' + args.json + " | jq-linux64 '.notes.medical_history' >> " + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_tmp.txt'
+    cmd3 = 'cat ' + args.json + " | jq-linux64 '.features[].id' | tr -d '\"' > " + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt'
 
     # clean up the file
-    cmd = 'cat ' + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + "_tmp.txt | tr -d '[]\"\n' | tr '\' '!' | sed 's/!r!n/\./g' > " + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '.txt'
-    os.system(cmd)
+    cmd4 = 'cat ' + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + "_tmp.txt | tr -d '[]\"\n' | tr '\' '!' | sed 's/!r!n/\./g' > " + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '.txt'
 
     # extract HPO terms
-    cmd = 'clinphen ' + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + ".txt | awk -F'\t' '{print $1}' | tail -n +2 > " + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt'
-    os.system(cmd)
+    cmd5 = 'clinphen ' + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + ".txt | awk -F'\t' '{print $1}' | tail -n +2 > " + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt'
 
     # rm tmp files
-    cmd = 'rm ' + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_tmp.txt'
-    os.system(cmd)
+    cmd6 = 'rm ' + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_tmp.txt'
 
-
+    cmds = [cmd1, cmd2, cmd3, cmd4, cmd5, cmd6]
+    for cmd in cmds:
+        p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, stderr = p.communicate()
+        if p.returncode !=0:
+            raise Exception(stderr)
 
 
 def main():

@@ -149,7 +149,7 @@ def exonOverlap(args, df):
     if exon_overlap.df.empty:
         exon_calls = pd.DataFrame()
     else:
-        exon_calls = exon_overlap.df.drop(columns = ['Chromosome', 'Start', 'End']).rename(columns = {'Name':'gene', 'Score':'Phenotype'}).drop_duplicates()
+        exon_calls = exon_overlap.df.drop(columns = ['Chromosome', 'Start', 'End']).rename(columns = {'Name':'gene', 'Score':'OMIM_syndrome'}).drop_duplicates()
 
         # if args.genelist:
         #     #gene_list = pd.read_csv(args.genelist, sep='\t', names=['Gene'], header=None)

@@ -8,7 +8,7 @@ from io import StringIO
 import numpy as np
 import argparse
 pd.set_option('display.max_columns', None)
-from .BioNanoTranslocations import checkParentsOverlapTransloInv, exonOverlapTransloInv
+from .BioNanoTranslocations import checkParentsOverlapTransloInv, geneOverlapTransloInv
 
 def readsmapInv(input):
 
@@ -50,8 +50,8 @@ def BN_inversion(args):
         df['Start'], df['End'], df['Chromosome'] = df.RefEndPos - 20000, df.RefEndPos + 20000, df['RefcontigID2']
 
 
-    #overlap start and end points with exons separately  
-    sample_frame = exonOverlapTransloInv(args, sample_start, sample_end, sample_frame)
+    #overlap start and end points with genes separately  
+    sample_frame = geneOverlapTransloInv(args, sample_start, sample_end, sample_frame)
 
     #remove anything that overlaps with the reference
     overlap_start = PyRanges(sample_start).overlap(PyRanges(ref_start))
@@ -69,11 +69,17 @@ def BN_inversion(args):
     #add column based on overlap with parents
     if not args.singleton:
         calls = checkParentsOverlapTransloInv(filtered_sample_frame, sample_start, father_start, mother_start, sample_end, father_end, mother_end)
+        cols = ['SmapEntryID', 'RefcontigID1', 'RefcontigID2', 'RefStartPos', 'RefEndPos', 'QryStartPos', 'QryEndPos',
+                'Confidence', 'Type', 'Zygosity', 'Genotype', 'Gene', 'OMIM_syndrome', 'Gene2', 'OMIM_syndrome2',
+                'Found_in_Father', 'Found_in_Mother']
     else:
         calls = filtered_sample_frame
+        cols = ['SmapEntryID', 'RefcontigID1', 'RefcontigID2', 'RefStartPos', 'RefEndPos', 'QryStartPos', 'QryEndPos',
+                'Confidence', 'Type', 'Zygosity', 'Genotype', 'Gene', 'OMIM_syndrome', 'Gene2', 'OMIM_syndrome2']
 
     # Write output
-    calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_Bionano_inversions.txt', sep='\t', index = False)
+    calls = calls[cols].drop_duplicates()
+    calls.to_csv(args.outputdirectory + '/confident_set/' + args.sampleID + '_Bionano_inversions.txt', sep='\t', index = False)
 
 
 
@@ -87,7 +93,7 @@ def main():
     parser.add_argument("-r", "--referencepath", help="Give the full path to the reference file", dest="referencepath", type=str, required=True)
     parser.add_argument("-o", "--outputdirectory", help="Give the directory path for the output file", dest="outputdirectory", type=str, required=True)
     parser.add_argument("-c", "--confidence", help="Give the confidence level cutoff for the sample here", dest="confidence", type=str, default=0.5)
-    parser.add_argument("-e", "--exons", help="Give the file with exons intervals, names, and phenotypes here", dest="exons", type=str, required=True)
+    parser.add_argument("-e", "--genes", help="Give the file with genes intervals, names, and phenotypes here", dest="genes", type=str, required=True)
     parser.add_argument("-S", help="Set this flag if this is a singleton case", dest="singleton", action='store_true')
     args = parser.parse_args()
 

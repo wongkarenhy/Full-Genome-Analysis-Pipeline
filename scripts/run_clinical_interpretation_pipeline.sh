@@ -55,6 +55,9 @@ fi
 if [[ ! -d ${WORKDIR}/results/${SAMPLEID}/confident_set ]]; then
     mkdir ${WORKDIR}/results/${SAMPLEID}/confident_set
 fi
+if [[ ! -d ${WORKDIR}/results/${SAMPLEID}/misc ]]; then
+    mkdir ${WORKDIR}/results/${SAMPLEID}/misc
+fi
 
 additional_var=''
 if [[ ${BIONANO} = true ]]; then

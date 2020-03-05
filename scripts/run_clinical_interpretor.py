@@ -5,6 +5,7 @@ from collections import defaultdict, Counter
 import argparse
 import sys
 import os
+import subprocess
 import re
 import numpy as np
 from datetime import datetime
@@ -147,9 +148,7 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
 
 
     # Create a bed file and write it out
-    pd.DataFrame(filtered_intervar).to_csv(
-        './results/' + args.sampleid + "/" + args.sampleid + '_smallVariant_candidates.txt', index=False, sep='\t',
-        header=False)  # Write out a subset of the variant first
+    pd.DataFrame(filtered_intervar).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_smallVariant_candidates.txt', index=False, sep='\t',header=False)  # Write out a subset of the variant first
     filtered_intervar_bed = filtered_intervar[['Chr', 'Start', 'End']]
     filtered_intervar_bed.loc[:,'Chr'] = 'chr' + filtered_intervar_bed.loc[:,'Chr'].astype(str)
     filtered_intervar_bed.loc[:,'Start'] -= 1
@@ -159,10 +158,14 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
 
         # Get overlapping variants from the parents so we know which variants are inherited
         print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Comparing small variants (SNPs/indels) inheritance')
-        cmd = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed /media/KwokRaid04/CIAPM/CIAPM_longranger/BC0" + famid + "01_longranger/outs/phased_variants.vcf.gz > ./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf"
-        os.system(cmd)
-        cmd = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed /media/KwokRaid04/CIAPM/CIAPM_longranger/BC0" + famid + "02_longranger/outs/phased_variants.vcf.gz > ./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf"
-        os.system(cmd)
+        cmd1 = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed /media/KwokRaid04/CIAPM/CIAPM_longranger/BC0" + famid + "01_longranger/outs/phased_variants.vcf.gz > ./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf"
+        cmd2 = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed /media/KwokRaid04/CIAPM/CIAPM_longranger/BC0" + famid + "02_longranger/outs/phased_variants.vcf.gz > ./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf"
+        cmds = [cmd1, cmd2]
+        for cmd in cmds:
+            p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            stdout, stderr = p.communicate()
+            if p.returncode != 0:
+                raise Exception(stderr)
 
         # Go through every row in filtered_intervar and see if the same variant is found in either of the parents
         # We will only compare allele start position (we always assume the alt allele is the same)
@@ -273,16 +276,14 @@ def findGenomicLocation(cytoband_key, cytobandDict):
         cytoband_key = cytoband_key[:-1]
         keys = [key for key in cytobandDict if key.startswith(cytoband_key)]
 
-    print('shortened list')
-    print(cytoband_key)
+    #print(cytoband_key)
     genomic_coords_list = []
-    print('in genomic_coords_list')
-    print(keys)
+    #print(keys)
     for key in keys:
         genomic_coords_list.append(cytobandDict[key].split('-'))
-    print(genomic_coords_list)
+    #print(genomic_coords_list)
     genomic_coords_list = list(chain.from_iterable(genomic_coords_list))
-    print(genomic_coords_list)
+    #print(genomic_coords_list)
     min_coords = min(genomic_coords_list)
     max_coords = max(genomic_coords_list)
 
@@ -324,7 +325,6 @@ def parseSyndromeNameToCytoband(df, cytobandDict):
     df['cytoband_start'] = np.where(df['cytoband_start'].str.count('p|q')>1, df['cytoband_start'].str.split('p|q').str[0] + df['arm'] + df['cytoband_start'].str.split('p|q').str[1], df['cytoband_start'])
 
 
-    print(df)
     for idx, row in df.iterrows():
         cytoband_start_key = row['cytoband_start'].replace(" ","")
         if cytoband_start_key in cytobandDict:
@@ -377,7 +377,7 @@ def createCytobandDict(args):
 
 def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, cyto_BN_del, cyto_BN_dup):
 
-    print(syndrome_score_result_r)
+    #print(syndrome_score_result_r)
     syndrome_score_result_r.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_syndrome_score_result_r.txt', sep='\t', index=False)
     # Create cytoband <-> genomic coordinates dict
     cytobandDict = createCytobandDict(args)
@@ -387,7 +387,7 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
 
     del_df = syndrome_score_result_r[del_cond]
     dup_df = syndrome_score_result_r[dup_cond]
-    print(del_df)
+
     del_df = parseSyndromeNameToCytoband(del_df, cytobandDict)
     dup_df = parseSyndromeNameToCytoband(dup_df, cytobandDict)
     # print(dup_df)
@@ -429,8 +429,8 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
         else:
             cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'syndrome', 'cytoband', 'score', 'normalized_score']
 
-        dup_df.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_input1.txt', sep='\t', index=False)
-        cyto_10x_dup_largeSV.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_input2.txt', sep='\t', index=False)
+        # dup_df.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_input1.txt', sep='\t', index=False)
+        # cyto_10x_dup_largeSV.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_input2.txt', sep='\t', index=False)
 
         overlap_dup_largeSV_10x = delDupSyndromeSVOverlap(dup_df, cyto_10x_dup_largeSV, cols)
         overlap_dup_largeSV_10x.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_10x_duplication_largeSV_syndrome.txt', sep='\t', index=False)
@@ -478,12 +478,6 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
 
 def delDupSyndromeSVOverlap(del_df, cyto_BN_del, cols):
 
-    print(del_df)
-    print(cyto_BN_del)
-
-
-
-
     if del_df.empty:
         return pd.DataFrame()
 
@@ -491,13 +485,8 @@ def delDupSyndromeSVOverlap(del_df, cyto_BN_del, cols):
     overlap_del_BN = PyRanges(cyto_BN_del).join(PyRanges(del_df))
 
     if not overlap_del_BN.df.empty:
-        print('df not empty')
         overlap_del_BN = overlap_del_BN.df
-        print(overlap_del_BN)
-        # print(overlap_del_BN)
-        # print(np.maximum(0, np.minimum(overlap_del_BN.End, overlap_del_BN.End_b) - np.maximum(overlap_del_BN.Start,overlap_del_BN.Start_b)))
         overlap_del_BN['overlap_len'] = np.maximum(0, np.minimum(overlap_del_BN.End, overlap_del_BN.End_b) - np.maximum(overlap_del_BN.Start,overlap_del_BN.Start_b))
-        # print(overlap_del_BN)
         #overlap_del_BN = overlap_del_BN.drop(like="_b")
         overlap_del_BN = overlap_del_BN.sort_values(by='score', ascending=False)
         overlap_del_BN = overlap_del_BN.loc[overlap_del_BN['overlap_len'] > 0]
@@ -552,7 +541,10 @@ def bionanoSV(args, famid, gene_score_result_r, all_small_variants):
 
     for path in full_paths:
         cmd = "cat " + path + "/exp_refineFinal1_merged_filter.smap | gzip >> " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz"
-        os.system(cmd)
+        p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, stderr = p.communicate()
+        if p.returncode != 0:
+            raise Exception(stderr)
 
     # Create a BN arg object
     BN_args = Namespace(sampleID = args.sampleid,
@@ -561,7 +553,8 @@ def bionanoSV(args, famid, gene_score_result_r, all_small_variants):
                         mpath = args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap",
                         referencepath = args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz",
                         outputdirectory = args.workdir + '/results/' + args.sampleid,
-                        exons = args.workdir + '/annotatedexonsphenotypes.bed',
+                        exons = args.workdir + '/annotatedExon.bed',
+                        genes=args.workdir + '/annotatedGene.bed',
                         genelist = gene_score_result_r,
                         singleton = args.singleton)
 
@@ -611,7 +604,10 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
 
     for path in full_paths:
         cmd = "zcat " + path + "/dels.vcf.gz | gzip >> " + args.workdir + "/results/" + args.sampleid + "/10x_del_control.vcf.gz"
-        os.system(cmd)
+        p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, stderr = p.communicate()
+        if p.returncode != 0:
+            raise Exception(stderr)
 
 
     # Need to generate another reference file for large SVs
@@ -620,7 +616,10 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
 
     for path in full_paths:
         cmd = "zcat " + path + "/large_svs.vcf.gz | gzip >> " + args.workdir + "/results/" + args.sampleid + "/10x_largeSV_control.vcf.gz"
-        os.system(cmd)
+        p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, stderr = p.communicate()
+        if p.returncode != 0:
+            raise Exception(stderr)
 
     tenx_args_del = Namespace(sampleID = args.sampleid,
                         samplepath = args.workdir + "/linkedRead_sv/cases/" + args.sampleid + "/dels.vcf.gz",
@@ -628,7 +627,8 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
                         mpath = args.workdir + "/linkedRead_sv/cases/BC0" + famid + "02/dels.vcf.gz",
                         referencepath = args.workdir + "/results/" + args.sampleid + "/10x_del_control.vcf.gz",
                         outputdirectory = args.workdir + '/results/' + args.sampleid,
-                        exons = args.workdir + '/annotatedexonsphenotypes.bed',
+                        exons = args.workdir + '/annotatedExon.bed',
+                        genes = args.workdir + '/annotatedGene.bed',
                         genelist = gene_score_result_r,
                         singleton = args.singleton)
 
@@ -638,7 +638,8 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
                         mpath = args.workdir + "/linkedRead_sv/cases/BC0" + famid + "02/large_svs.vcf.gz",
                         referencepath = args.workdir + "/results/" + args.sampleid + "/10x_largeSV_control.vcf.gz",
                         outputdirectory = args.workdir + '/results/' + args.sampleid,
-                        exons = args.workdir + '/annotatedexonsphenotypes.bed',
+                        exons = args.workdir + '/annotatedExon.bed',
+                        genes=args.workdir + '/annotatedGene.bed',
                         genelist = gene_score_result_r,
                         singleton = args.singleton)
 
@@ -772,10 +773,16 @@ def main():
 
     if not os.path.exists(weights_gene):
         cmd = 'grep -v ^# ' + args.database + '/phenotype_to_genes.txt |cut -f-1 | uniq -c |awk \'{print $2, 1/$1}\' > ' + args.workdir + '/HPO_weight_gene.txt'
-        os.system(cmd)
+        p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, stderr = p.communicate()
+        if p.returncode != 0:
+            raise Exception(stderr)
     if not os.path.exists(weights_syndrome):
         cmd = 'cat ' + args.database + '/phenotype_annotation.tab | awk -F"\t" \'{print $5}\'| sort | uniq -c | awk \'{print $2, 1/$1}\' > ' + args.workdir + '/HPO_weight_syndrome.txt'
-        os.system(cmd)
+        p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, stderr = p.communicate()
+        if p.returncode != 0:
+            raise Exception(stderr)
 
     weightGeneDict = createWeightDict(weights_gene)
     weightSyndromeDict = createWeightDict(weights_syndrome)
@@ -807,8 +814,11 @@ def main():
         cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup = linkedreadSV(args, famid, gene_score_result_r, all_small_variants)
 
         # Remove control files
-        # cmd = 'rm ./results/' + args.sampleid + '/10x_del_control.vcf.gz ./results/' + args.sampleid + '/10x_largeSV_control.vcf.gz'
-        # os.system(cmd)
+        cmd = 'rm ./results/' + args.sampleid + '/10x_del_control.vcf.gz ./results/' + args.sampleid + '/10x_largeSV_control.vcf.gz'
+        p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, stderr = p.communicate()
+        if p.returncode != 0:
+            raise Exception(stderr)
 
     # Get differential diagnosis
     if args.bionano or args.linkedreadSV:
@@ -820,12 +830,22 @@ def main():
         syndrome_score_result_r = differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenome, args, cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, cyto_BN_del, cyto_BN_dup)
 
         # Remove control files
-        # cmd = 'rm ./results/' + args.sampleid + '/bionano_control.smap.gz'
-        # os.system(cmd)
+        cmd = 'rm ./results/' + args.sampleid + '/bionano_control.smap.gz'
+        p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, stderr = p.communicate()
+        if p.returncode != 0:
+            raise Exception(stderr)
 
     if args.bionano and args.linkedreadSV:
         print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Searching for confident large dels and dups on ' + args.sampleid + '...')
         findConfDelDup(args, exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup, exon_calls_BN_del, exon_calls_BN_dup)
+
+    # Move all the intermediate files to the misc folder
+    cmd = 'mv ./results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_maternal_inherited_smallVariants.vcf ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt ./results/' + args.sampleid + '/' + args.sampleid + '_paternal_inherited_smallVariants.vcf ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariant_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariants_ALL_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_syndrome_score_result_r.txt ./results/' + args.sampleid + '/' + args.sampleid + '_target.bed ./results/' + args.sampleid + '/' + args.sampleid + '.txt ./results/' + args.sampleid + '/misc/'
+    p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    stdout, stderr = p.communicate()
+    if p.returncode != 0:
+        raise Exception(stderr)
 
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Pipeline finished successfully')
 

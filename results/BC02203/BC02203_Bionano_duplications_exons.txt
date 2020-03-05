@@ -1,3 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-2365	3	3	81650023.0	83320017.0	0.0	614988.1	-1.0	duplication_split	unknown	-1	1055006.0	False	False	GBE1	['Glycogen storage disease IV, 232500 (3)' 'Polyglucosan body disease, adult form, 263570 (3)']	13.281149461999991	97.50340901661822
-5305	7	7	74731468.0	74975342.0	372047.3	872339.1	-1.0	duplication	unknown	-1	256418.0	False	False	NCF1	['onic granulomatous disease due to deficiency of NCF-1, 233700 (3)']	12.068046698999982	88.59742876103816

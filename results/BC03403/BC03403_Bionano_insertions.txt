@@ -1,2 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-15792	17	17	80265784.0	80324502.0	2901434.7	2962061.8	1.0	insertion	heterozygous	1	1909.0	False	False	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	96.97331146999979	66.71877594087701

@@ -1,2 +1,0 @@
-Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-22	21641798	21648328	12273	0.99	deletion	heterozygous	1	1149.0	False	False	22Q11.2 DISTAL DELETION SYNDROME	22q11.2 	0.030302999999999997	1.6229052694866495

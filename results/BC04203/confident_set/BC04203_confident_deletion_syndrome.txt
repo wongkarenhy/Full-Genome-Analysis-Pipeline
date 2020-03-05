@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
-11	35021421	35059595	call_4152	T	<DEL>	3.0	True	-28348	True	False	CHROMOSOME 11P13 DELETION SYNDROME, DISTAL	11p13 	0.001759633	0.11268075986493675	11580	1.0	deletion	heterozygous	1	28457.0	True	False

@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-10	87439201	87497010	call_2792	G	<DEL>	4.0	False	-57809	False	False	CHROMOSOME 10Q22.3-Q23.2 DELETION SYNDROME	10q22.3-q23.2 	0.000843882	0.07665773628744207

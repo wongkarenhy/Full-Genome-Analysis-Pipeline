@@ -1,2 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-4174	4	4	16153966.0	16180753.0	33321406.5	33379458.6	-1.0	duplication	unknown	-1	31265.0	False	False	TAPT1	['Osteochondrodysplasia, complex lethal, Symoens-Barnes-Gistelinck type, 616897 (3)']	26.891631471000053	43.90991332240935

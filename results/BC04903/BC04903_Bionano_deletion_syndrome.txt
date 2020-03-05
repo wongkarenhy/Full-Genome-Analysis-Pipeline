@@ -1,3 +1,0 @@
-Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-3	194720574	194724355	4803	1.0	deletion	heterozygous	1	2362.0	False	False	#609425 CHROMOSOME 3Q29 DELETION SYNDROME;;MICRODELETION 3Q29 SYNDROME	3q29 	0.002120105	0.2077702825202698
-3	194720574	194724355	4803	1.0	deletion	heterozygous	1	2362.0	False	False	3Q29 MICRODELETION SYNDROME	3q29 	0.000844595	0.08277030702026893

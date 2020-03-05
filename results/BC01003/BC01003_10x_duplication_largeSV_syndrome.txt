@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-8	94469811	94621745	call_4394	T	<DUP:TANDEM>	2.0	False	151934	False	False	CHROMOSOME 8Q22.1 DUPLICATION SYNDROME	8q22.1 	1.00653512	5.730759390210265

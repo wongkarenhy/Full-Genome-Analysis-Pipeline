@@ -1,3 +1,0 @@
-SmapEntryID	Name	Phenotype	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Name2	Phenotype2	Found_in_Father	Found_in_Mother
-2178			2	2	90277250.0	91434682.0	578203.4	578203.4	0.15	inversion	heterozygous	1			False	False
-18292			21	21	46086582.0	46104030.0	606074.8	623944.4	0.11	inversion	homozygous	1	COL6A2	['?Myosclerosis, congenital, 255600 (3)' 'Bethlem myopathy 1, 158810 (3)' 'Ullrich congenital muscular dystrophy 1, 254090 (3)']	False	False

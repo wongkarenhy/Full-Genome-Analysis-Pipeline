@@ -1,2 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-5752	4	4	150353906.5	150364401.0	39786503.6	39795886.7	0.99	deletion	heterozygous	1	1111.0	False	False	LRBA	['Immunodeficiency, common variable, 8, with autoimmunity, 614700 (3)']	0.089904353	0.386036240020762

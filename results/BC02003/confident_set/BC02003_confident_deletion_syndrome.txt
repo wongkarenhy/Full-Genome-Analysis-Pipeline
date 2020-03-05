@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
-6	86361254	86377820	call_3192	C	<DEL>	7.0	True	-8853	False	False	CHROMOSOME 6Q11-Q14 DELETION SYNDROME	6q11-q14 	0.009879849999999999	0.39519399999999993	1839	1.0	deletion	heterozygous	1	8781.0	False	True

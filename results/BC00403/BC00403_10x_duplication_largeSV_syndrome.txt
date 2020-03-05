@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-16	4318686	4349576	call_1405	C	<DUP:TANDEM>	4.0	False	30890	False	False	CHROMOSOME 16P13.3 DUPLICATION SYNDROME	16p13.3 	0.00862069	0.4596181872375781

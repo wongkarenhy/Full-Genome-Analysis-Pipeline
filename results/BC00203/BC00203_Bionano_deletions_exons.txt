@@ -1,4 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-4281	16	16	8829679.0	8851964.0	143915.7	159091.7	1.0	deletion	heterozygous	1	7109.0	True	False	PMM2	['Congenital disorder of glycosylation, type Ia, 212065 (3)']	5.433539988000094	46.466087688353916
-3426	11	11	119218353.0	119250400.0	1829209.1	1854867.3	1.0	deletion	heterozygous	1	6389.0	True	False	CBL	['?Juvenile myelomonocytic leukemia, 607785 (3)' 'Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia, 613563 (3)']	4.666235192000045	39.904315434285024
-4267	16	16	5053857.0	5075961.0	2778453.8	2796345.8	1.0	deletion	heterozygous	1	4212.0	True	False	ALG1	['Congenital disorder of glycosylation, type Ik, 608540 (3)']	3.9705167880000025	33.95472963238386

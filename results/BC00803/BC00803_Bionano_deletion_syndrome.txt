@@ -1,3 +1,0 @@
-Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-5	63462783	63520657	1380	1.0	deletion	heterozygous	1	27257.0	False	False	CHROMOSOME 5Q12 DELETION SYNDROME	5q12 	0.001759633	0.11458370708327746
-15	23338958	23363340	3659	0.98	deletion	heterozygous	1	1546.0	False	False	CHROMOSOME 15Q11.2 DELETION SYNDROME	15q11.2 	0.001759633	0.11458370708327746

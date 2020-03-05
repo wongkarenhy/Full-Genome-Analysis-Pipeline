@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-X	123174179	123223715	call_4131	T	<DUP:TANDEM>	3.0	False	49536	False	False	XQ25 DUPLICATION SYNDROME	Xq25 	0.00121359	1.0347461338237223

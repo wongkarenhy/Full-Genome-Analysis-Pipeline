@@ -1,2 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-13775	15	15	75297230.0	75386804.0	12319613.5	12432608.8	1.0	insertion	heterozygous	1	23421.0	False	False	SIN3A	['Witteveen-Kolk syndrome, 613406 (3)']	18.35404869900042	53.767552510168116

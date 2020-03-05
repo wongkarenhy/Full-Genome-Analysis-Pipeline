@@ -1,3 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-7	142307742	call_4399	A	<DEL>			2.0	False	142797003	-489261	False	False	PRSS2	['{Pancreatitis, onic, protection against}, 167800 (3)']	79.17390940799787	88.18384617353918
-7	142307742	call_4399	A	<DEL>			2.0	False	142797003	-489261	False	False	PRSS1	['Pancreatitis, hereditary, 167800 (3)' 'Trypsinogen deficiency, 614044 (1)']	58.63194271499871	65.3042177138333

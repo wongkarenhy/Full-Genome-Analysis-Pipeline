@@ -1,3 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-7502	6	6	168197312.0	170250471.0	514644.0	2853626.4	1.0	insertion	heterozygous	1	285823.0	False	False	ERMARD	['?Periventricular nodular heterotopia 6, 615544 (3)']	16.017341848000104	25.497715748292954
-7502	6	6	168197312.0	170250471.0	514644.0	2853626.4	1.0	insertion	heterozygous	1	285823.0	False	False	SMOC2	['Dentin dysplasia, type I, with microdontia and misshapen teeth, 125400 (3)']	3.5177102639999926	5.599779117377292

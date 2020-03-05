@@ -1,3 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-9	133718381	call_1404	G	<DEL>			77.0	True	133718862	-481	False	True	SARDH	['[Sarcosinemia], 268900 (3)']	11.393294951000588	97.43221609147086
-12	7190513	call_2088	G	<DEL>			54.0	True	7190558	-45	False	False	PEX5	['Peroxisome biogenesis disorder 2A (Zellweger), 214110 (3)' 'Peroxisome biogenesis disorder 2B, 202370 (3)' 'Rhizomelic chondrodysplasia punctata, type 5, 616716 (3)']	9.937825149000389	84.98545254563292

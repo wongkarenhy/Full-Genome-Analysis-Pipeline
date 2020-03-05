@@ -1,2 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-19	3094774	call_4312	G	<DEL>			3.0	True	3110143	-15369	False	False	GNA11	['Hypocalcemia, autosomal dominant 2, 615361 (3)' 'Hypocalciuric hypercalcemia, type II, 145981 (3)']	1.8374459340000004	25.7217154981885

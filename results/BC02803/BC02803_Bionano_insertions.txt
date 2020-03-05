@@ -1,2 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-10301	10	10	195028.0	202252.0	195009.4	203284.9	1.0	insertion	heterozygous	1	1052.0	True	False	ZMYND11	['Mental retardation, autosomal dominant 30, 616083 (3)']	4.578130739999995	57.86183821176357

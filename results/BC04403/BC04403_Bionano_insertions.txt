@@ -1,3 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-17260	19	19	18780058.0	18796414.0	5712433.2	5971528.3	1.0	insertion	heterozygous	1	242739.0	False	False	COMP	['Epiphyseal dysplasia, multiple, 1, 132400 (3)' 'Pseudoachondroplasia, 177170 (3)']	9.823397658999983	92.8361106529042
-3594	3	3	33076681.0	33086399.5	33201443.7	33215247.1	1.0	insertion	heterozygous	1	4085.0	False	False	GLB1	['GM1-gangliosidosis, type I, 230500 (3)' 'GM1-gangliosidosis, type II, 230600 (3)' 'GM1-gangliosidosis, type III, 230650 (3)' 'Mucopolysaccharidosis type IVB (Morquio), 253010 (3)']	6.083096794999994	57.488362659894165

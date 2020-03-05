@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-5	33487728	33526776	call_3636	G	<DUP:TANDEM>	3.0	False	39048	False	False	CHROMOSOME 5P13 DUPLICATION SYNDROME	5p13 	0.00185874	0.16728661672866166

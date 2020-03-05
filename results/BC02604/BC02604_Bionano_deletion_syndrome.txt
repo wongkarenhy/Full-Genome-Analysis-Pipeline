@@ -1,2 +1,0 @@
-Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-4	4385425	4416474	4350	0.98	deletion	heterozygous	1	1599.0	False	False	#194190 WOLF-HIRSCHHORN SYNDROME; WHS;;CHROMOSOME 4P16.3 DELETION SYNDROME;;PITT-ROGERS-DANKS SYNDROME; PRDS;;PITT SYNDROME	4p16.3 	0.00111359	1.01747066545244

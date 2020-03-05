@@ -1,3 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
-4	3345727	3365826	call_3772	T	<DEL>	10.0	True	-12828	False	False	#194190 WOLF-HIRSCHHORN SYNDROME; WHS;;CHROMOSOME 4P16.3 DELETION SYNDROME;;PITT-ROGERS-DANKS SYNDROME; PRDS;;PITT SYNDROME	4p16.3 	0.000915751	0.06032095521677053	4337	1.0	deletion	heterozygous	1	12857.0	False	False
-6	6247440	6290274	call_4287	A	<DEL>	4.0	True	-3696	False	False	CHROMOSOME 6PTER-P24 DELETION SYNDROME	6pter-p24 	0.000915751	0.06032095521677053	6910	0.99	deletion	heterozygous	1	1348.0	False	False

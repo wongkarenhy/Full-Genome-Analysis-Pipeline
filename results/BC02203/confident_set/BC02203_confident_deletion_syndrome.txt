@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
-11	6340141	6351203	call_3157	A	<DEL>	7.0	True	-3818	False	False	HOMOZYGOUS 11P15-P14 DELETION SYNDROME	11p15-p14 	0.0111111	1.11111	7606	1.0	deletion	heterozygous	1	3902.0	False	True

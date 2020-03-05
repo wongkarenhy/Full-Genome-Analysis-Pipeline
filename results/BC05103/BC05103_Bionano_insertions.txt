@@ -1,2 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-18321	21	21	42813682.0	42850768.0	29894959.7	30053898.5	1.0	insertion	heterozygous	1	121853.0	False	False	WDR4	['Galloway-Mowat syndrome 6, 618347 (3)' 'Microcephaly, growth deficiency, seizures, and brain malformations, 618346 (3)']	84.47374502599975	23.763466122454624

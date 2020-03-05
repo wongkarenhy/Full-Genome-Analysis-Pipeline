@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
-17	38377847	38391418	call_3901	T	<DEL>	8.0	True	-3851	False	False	CHROMOSOME 17Q12 DELETION SYNDROME	17q12 	0.05	0.9149934319026477	16568	1.0	deletion	heterozygous	1	3914.0	False	True

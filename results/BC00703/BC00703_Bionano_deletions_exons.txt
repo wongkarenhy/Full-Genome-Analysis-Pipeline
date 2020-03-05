@@ -1,2 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-1530	5	5	897036.0	901113.0	21119.3	23687.6	0.98	deletion	unknown	-1	1509.0	False	False	TRIP13	['Mosaic variegated aneuploidy syndrome 3, 617598 (3)']	3.2198063659999887	52.66050392541358

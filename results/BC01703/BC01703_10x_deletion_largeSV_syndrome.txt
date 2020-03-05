@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-1	223394724	223612033	call_3731	G	<DEL>	2.0	False	-217309	False	False	CHROMOSOME 1Q41-Q42 DELETION SYNDROME	1q41-q42 	0.000843882	0.036166376595196656

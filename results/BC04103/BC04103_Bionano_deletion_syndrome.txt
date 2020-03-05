@@ -1,3 +1,0 @@
-Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-2	202064682	202071801	2793	0.99	deletion	heterozygous	1	1381.0	True	False	2Q33.1 DELETION SYNDROME	2q33.1 	0.00121359	1.0347461338237223
-8	140619521	140645813	9649	0.99	deletion	heterozygous	1	1982.0	True	False	#615583 VERHEIJ SYNDROME; VRJS;;CHROMOSOME 8Q24.3 DELETION SYNDROME	8q24.3 	0.00121359	1.0347461338237223

@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-1	145264046	145352237	call_4836	G	<DUP:TANDEM>	2.0	False	88191	False	False	#612475 CHROMOSOME 1Q21.1 DUPLICATION SYNDROME	1q21.1 	0.00358423	0.1792115

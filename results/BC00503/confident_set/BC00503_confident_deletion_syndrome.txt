@@ -1,3 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
-1	32767906	32791169	call_2964	A	<DEL>	6.0	True	-2453	True	False	CHROMOSOME 1P35 DELETION SYNDROME	1p35 	0.004323733	0.2848063552890173	137	0.98	deletion	homozygous	1	1292.0	True	False
-1	32767906	32791169	call_2964	A	<DEL>	6.0	True	-2453	True	False	CHROMOSOME 1P35 DELETION SYNDROME	1p35 	0.004323733	0.2848063552890173	139	0.98	deletion	homozygous	1	1292.0	True	False

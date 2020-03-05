@@ -1,2 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-424	1	1	52665062.0	52697342.0	36454090.4	36658574.8	1.0	insertion	heterozygous	1	172204.0	False	False	COA7	['Spinocerebellar ataxia, autosomal recessive, with axonal neuropathy 3, 618387 (3)']	37.285039955999466	36.632274750228376

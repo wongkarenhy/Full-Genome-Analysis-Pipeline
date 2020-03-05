@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-X	151629296	151686369	call_4591	T	<DUP:TANDEM>	3.0	False	57073	False	False	CHROMOSOME XQ27.3-Q28 DUPLICATION SYNDROME	Xq27.3-q28 	0.02204689	2.1960431561338694

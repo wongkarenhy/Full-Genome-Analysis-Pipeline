@@ -1,1 +1,0 @@
-Name	Phenotype	Name2	Phenotype2	Found_in_Father	SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Found_in_Mother

@@ -1,3 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-19	14424687	call_3954	A	<DEL>			2.0	False	14765096	-340409	False	False	TECR	['Mental retardation, autosomal recessive 14, 614020 (3)']	175.14358793799616	48.95661302184189
-19	14424687	call_3954	A	<DEL>			2.0	False	14765096	-340409	False	False	ADGRE2	['Vibratory urticaria, 125630 (3)']	162.201424754997	45.33898429746103

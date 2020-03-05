@@ -1,3 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	Phenotype	score	normalized_score
-3034	3	3	46963350.0	46987679.0	43528652.7	43548883.5	1.0	deletion	heterozygous	1	4098.0	True	False	NBEAL2	['Gray platelet syndrome, 139090 (3)']	3.5498101120000256	55.94276755678694
-10376	9	9	109142203.0	109148943.0	26960885.0	26966444.4	0.99	deletion	heterozygous	1	1181.0	True	False	FRRS1L	['Epileptic encephalopathy, early infantile, 37, 616981 (3)']	2.655064736000012	41.84214498464686

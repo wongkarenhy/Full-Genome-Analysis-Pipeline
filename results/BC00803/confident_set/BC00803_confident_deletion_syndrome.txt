@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
-5	63462783	63520657	call_3285	A	<DEL>	4.0	True	-27124	False	False	CHROMOSOME 5Q12 DELETION SYNDROME	5q12 	0.001759633	0.11458370708327746	1380	1.0	deletion	heterozygous	1	27257.0	False	True

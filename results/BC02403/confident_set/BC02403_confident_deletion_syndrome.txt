@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
-15	34637503	34693201	call_139	G	<DEL>	81.0	True	-53299	False	False	CHROMOSOME 15Q14 DELETION SYNDROME	15q14 	0.000843882	0.0843882	13824	1.0	deletion	heterozygous	1	53333.0	False	True

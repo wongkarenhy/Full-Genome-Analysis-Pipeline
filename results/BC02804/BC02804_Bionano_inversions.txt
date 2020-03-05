@@ -1,7 +1,0 @@
-SmapEntryID	Name	Phenotype	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Name2	Phenotype2	Found_in_Father	Found_in_Mother
-15032	ABCC6	['Arterial calcification, generalized, of infancy, 2, 614473 (3)' 'Pseudoxanthoma elasticum, 264800 (3)' 'Pseudoxanthoma elasticum, forme fruste, 177850 (3)']	16	16	16210691.0	16218121.0	894195.9	907149.1	0.0	inversion	heterozygous	1	ABCC6	['Arterial calcification, generalized, of infancy, 2, 614473 (3)' 'Pseudoxanthoma elasticum, 264800 (3)' 'Pseudoxanthoma elasticum, forme fruste, 177850 (3)']	False	False
-794			1	1	144064700.0	144201874.0	609743.9	729166.6	0.0	inversion	homozygous	1			False	True
-8207			7	7	65166009.0	65478440.0	62513.6	62513.6	0.23	inversion	homozygous	1			True	True
-14442			15	15	21634278.0	22364656.0	395717.8	436510.9	0.01	inversion	homozygous	1			True	False
-15693			17	17	16844847.0	17532450.0	927846.7	927846.7	0.0	inversion	unknown	-1			False	False
-17184			20	20	25917478.0	26016243.5	84008.5	84008.5	0.17	inversion	unknown	-1			False	True

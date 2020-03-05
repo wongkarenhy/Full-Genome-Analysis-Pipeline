@@ -20,7 +20,7 @@ def main():
     # workdir="../results/BC05103/confident_set/"
     print('[generate_report.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Generating variants report')
 
-    files = os.listdir(workdir)
+    files = os.listdir(args.workdir)
     files = [file for file in files if 'report.html' not in file]
 
     html_string = '''
@@ -32,11 +32,11 @@ def main():
         <body>
         '''
 
-    html_string = html_string + "<h1>" + sampleid + " Variants Report</h1>" + "<h2>Generated on: " + str(today) + "<h2/>"
+    html_string = html_string + "<h1>" + args.sampleid + " Variants Report</h1>" + "<h2>Generated on: " + str(today) + "<h2/> <hr style='border:1.5px solid grey'/>"
 
     for idx, file in enumerate(files):
         try:
-            df = pd.read_csv(workdir+file, sep='\t')
+            df = pd.read_csv(args.workdir+file, sep='\t')
             summary_table = df.to_html().replace('<table border="1" class="dataframe">', '<table class="table table-striped">')
             html_string = html_string + "<h3>" + file + "</h3>"
             html_string = html_string + summary_table
@@ -48,7 +48,7 @@ def main():
     html_string = html_string + "</html>"
 
     # Write the html report
-    f = open(workdir + '/report.html','w')
+    f = open(args.workdir + '/report.html','w')
     f.write(html_string)
     f.close()
 

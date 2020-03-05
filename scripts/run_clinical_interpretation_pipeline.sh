@@ -77,7 +77,7 @@ python3.6 ${WORKDIR}/scripts/run_CNLP.py -s ${SAMPLEID} -w ${WORKDIR} -d ${DATAB
 python3.6 ${WORKDIR}/scripts/run_clinical_interpretor.py -s ${SAMPLEID} -w ${WORKDIR} -d ${DATABASE} -i ${INTERVAR} ${additional_var}
 
 # generate an html report
-python3.6 ${WORKDIR}/scripts/generate_report.py -s ${SAMPLEID} -w ${WORKDIR}/results/{$SAMPLEID}/confident_set/
+python3.6 ${WORKDIR}/scripts/generate_report.py -s ${SAMPLEID} -w ${WORKDIR}/results/${SAMPLEID}/confident_set/
 
 } # end of pipeline
 

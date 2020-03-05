@@ -494,7 +494,7 @@ def delDupSyndromeSVOverlap(del_df, cyto_BN_del, cols):
         # print(overlap_del_BN)
         #overlap_del_BN = overlap_del_BN.df.sort_values(by='score', ascending=False)
         # Rearrange the column
-        overlap_del_BN = overlap_del_BN[cols]
+        overlap_del_BN = overlap_del_BN[cols].drop_duplicates()
         return overlap_del_BN
     else:
         return overlap_del_BN.df
@@ -848,7 +848,7 @@ def main():
     if p.returncode != 0:
         raise Exception(stderr)
 
-    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Pipeline finished successfully')
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Clinical interpretor finished successfully')
 
 
     # del_df_name = args.workdir + '/results/' + args.sampleid + "/" + args.sampleid + '_input1.txt'

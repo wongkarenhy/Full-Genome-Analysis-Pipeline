@@ -49,7 +49,7 @@ def tenxlargesvbreakends(args):
     #remove anything that overlaps with the reference
     filtered_sample_frame = checkRefOverlapINVBND(sample_start, sample_end, ref_start, ref_end, sample_frame)
     if filtered_sample_frame.empty:
-        filtered_sample_frame.to_csv(args.outputdirectory + '/' + args.sampleID + '_10x_breakends_largeSV.txt', sep='\t', index=False)
+        filtered_sample_frame.to_csv(args.outputdirectory + '/confident_set/' + args.sampleID + '_10x_breakends_largeSV.txt', sep='\t', index=False)
         return None
 
     #add column based on overlap with parent
@@ -58,7 +58,7 @@ def tenxlargesvbreakends(args):
         cols = ['CHROM_x', 'POS_x', 'ID', 'REF', 'ALT_1', 'ALT_2', 'ALT_3', 'QUAL', 'FILTER_PASS', 'SVTYPE', 'MATEID_x', 'Gene', 'OMIM_syndrome', 'Gene2', 'OMIM_syndrome2', 'Found_in_Father', 'Found_in_Mother']
     else:
         calls = filtered_sample_frame.rename(columns={'Name':'Gene', 'Name2':'Gene2', 'Score': 'OMIM_syndrome', 'Score2': 'OMIM_syndrome2'})
-    cols = ['CHROM_x', 'POS_x', 'ID', 'REF', 'ALT_1', 'ALT_2', 'ALT_3', 'QUAL', 'FILTER_PASS', 'SVTYPE', 'MATEID_x','Gene', 'OMIM_syndrome', 'Gene2', 'OMIM_syndrome2']
+        cols = ['CHROM_x', 'POS_x', 'ID', 'REF', 'ALT_1', 'ALT_2', 'ALT_3', 'QUAL', 'FILTER_PASS', 'SVTYPE', 'MATEID_x','Gene', 'OMIM_syndrome', 'Gene2', 'OMIM_syndrome2']
 
     # Write final output
     calls = calls[cols]

@@ -41,7 +41,7 @@ def tenxlargesvunknown(args):
     #remove anything that overlaps with the reference
     filtered_sample_frame = checkRefOverlapINVBND(sample_start, sample_end, ref_start, ref_end, sample_frame)
     if filtered_sample_frame.empty:
-        filtered_sample_frame.to_csv(args.outputdirectory + '/' + args.sampleID + '_10x_unknown_largeSV.txt', sep='\t', index=False)
+        filtered_sample_frame.to_csv(args.outputdirectory + '/confident_set/' + args.sampleID + '_10x_unknown_largeSV.txt', sep='\t', index=False)
         return None
 
     #add column based on overlap with parent

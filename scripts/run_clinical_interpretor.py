@@ -312,6 +312,7 @@ def parseSyndromeNameToCytoband(df, cytobandDict):
     df['cytoband'] = df['cytoband'].astype(str)
     df['cytoband'] = df['cytoband'].str.lower()
     df['cytoband'] = df['cytoband'].str.replace('x', 'X')
+    df['cytoband'] = df['cytoband'].str.strip('\(\)')
     df[['Chromosome', 'discard']] = df.cytoband.str.split('p|q', 1, expand=True)
     df = df.drop('discard', axis=1)
     if df.cytoband.str.contains('-').any():

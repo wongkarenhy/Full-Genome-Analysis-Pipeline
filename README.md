@@ -14,11 +14,23 @@
 **Required python packages:** allel,argparse,collections,datetime,io,itertools,networkx,numpy,obonet,os,subprocess,pandas,pyranges,re,sys
 
 **Descriptions:** <br>
-This tool parses SNPs, indels, and SVs from 10x Genomics linked-read and Bionano optical mapping data based on trio sequencing (singleton is allowed). SNPs/indels analysis can be done alone or in combination with SV analysis. In general, this tool parses a patient's electronic health record in JSON format and outputs a clinically relevant gene list. This gene list is then used to inform how genetic variants are prioritized. Genetic variants (SNPs, indels, and SVs) are vetted against a set of controls and parents. For SNPs and indels, variants are filtered based on allele frequencies reported by gnomad(?). Small variants reported as likely benign or benign by either Clinvar or Intervar are discarded from the pipeline. For SVs, the prevalent of these variants are compared against a set of 1KGP + CIAPM control sequenced previously by the Kwok lab. See below for more details. <br>
+This tool parses SNPs, indels, and structural variations (SVs) from 10x Genomics linked-read and Bionano optical mapping data based on trio sequencing (singleton is allowed). SNPs/indels analysis can be done alone or in combination with SV analysis. In general, this tool parses a patient's electronic health record in JSON format and outputs a clinically relevant gene list. This gene list is then used to inform how genetic variants are prioritized. Genetic variants (SNPs, indels, and SVs) are vetted against a set of controls and parents. For SNPs and indels, variants are filtered based on allele frequencies reported by gnomad(?). Small variants reported as likely benign or benign by either Clinvar or Intervar are discarded from the pipeline. For SVs, the prevalent of these variants are compared against a set of 1KGP + CIAPM control sequenced previously by the Kwok lab. See below for more details. <br>
 
 A pre-processing step is required in order to run this software. This pre-processing step takes the 10xG GATK output and applies filters based on GQ, DP, and PASS. This step removes the bulk of the variants that are likely to be artifacts. Remaining variants are annotated using Intervar, which is a wrapper for Annovar and it assigns ACMG pathogeneicity to all variants. Variants are additionally filtered for frameshift, nonframeshift, nonsynonymous, stopgain, stoploss, and splicing. Filtered variants are overlapped with the ranked gene list generated previously. Remaining variatns are ready for manual evaluation. <br>
 
 For SVs, insertions, deletions, and duplications are annotated with known exons (exon-level not gene-level). Duplications and deletions are additionally used to search for known microdeletion and microduplication syndromes. Inversions and translocations are annotated with known genes (gene-level) and every call in these two categories are always reported. <br>
+
+SV scripts have been designed to analyze BioNano Optical Mapping Data (.smap file format) and 10x Linked Reads Data (.vcf file format). All SV scripts read a proband file, mother file, father file, and a reference file which consists of SV calls from the 1000 Genome Project cohort as well as SV calls from all other parents in the study other than the parents of the proband being analyzed. The scripts output filtered proband calls with additional descriptor columns as a tab-delimited txt file. <br>
+
+BioNanoDeletions, BioNanoInsertions, BioNanoDuplications selects calls of the SV type and eliminates calls below the inputted confidence threshold (default: 0.5). It performs a 50% reciprocal overlap with the reference file and removes calls that overlap. It performs a 50% reciprocal overlap with the inputted mother and father file separately and appends columns (Found_in_Mother, Found_in_Father) to describe overlap (True/False). It overlaps with exons and phenotypes and appends columns (Gene, Phenotype) with gene name and phenotype if found. <br>
+
+BioNanoInversions, BioNanoTranslocations selects calls of the SV type and does not filter for confidence. It creates 20kb intervals around the start point and end point of the call. It overlaps the start and end intervals with reference file and removes calls that overlap. It overlaps the start and end intervals with the mother and father file separately and appends columns (Found_in_Mother, Found_in_Father) to describe overlap (True/False). It overlaps start and end intervals with exons and phenotypes and appends columns (Gene, Phenotype for start point; Gene2, Phenotype2 for end point) with gene name and phenotype if found. <br>
+
+tenxDeletions reads the 10x Deletion calls (“dels.vcf”) and performs a 50% reciprocal overlap with reference file and removes calls that overlap. It performs a 50% reciprocal overlap with the inputted mother and father file separately and appends columns (Found_in_Mother, Found_in_Father) to describe overlap (True/False). It overlaps with exons and phenotypes and appends columns (Gene, Phenotype) with gene name and phenotype if found. <br>
+
+tenxLargeSvDeletions, tenxLargeSvDuplications reads the 10x Large SV calls (“large_svs.vcf”) and selects calls of the SV type. It performs a 50% reciprocal overlap with reference file and removes calls that overlap. It performs a 50% reciprocal overlap with the inputted mother and father file separately and appends columns (Found_in_Mother, Found_in_Father) to describe overlap (True/False). It overlaps with exons and phenotypes and appends columns (Gene, Phenotype) with gene name and phenotype if found. <br>
+
+tenxLargeSVInversions, tenxLargeSvUnknown, tenxLargeSvBreakends reads the 10x Large SV calls (“large_svs.vcf”) and selects calls of the SV type. It creates 10kb intervals around the start point and end point of the call. It overlaps the start and end intervals with reference file and removes calls that overlap. It overlaps the start and end intervals with the mother and father file separately and appends columns (Found_in_Mother, Found_in_Father) to describe overlap (True/False). It overlaps start and end intervals with exons and phenotypes and appends columns (Gene, Phenotype for start point; Gene2, Phenotype2 for end point) with gene name and phenotype if one is found. For unknwon and breakends types, only variants with quality score > 1 standard deviation above the mean are reported. <br>
 
 All coordinates are based on hg38.<br>
 
@@ -128,7 +140,7 @@ To get started, pull the github repo and create two additional directories (bion
     
     
 **Output files explanations:**<br>
-Score and normalized scores are two important indicators that show how relevant the variants are based on the proband's clinical phenome. The raw scores are normalized between 0-100 among all variants. 100 is assigned to highest ranking variant found in the proband. <br>
+Score and normalized scores are two important indicators that show how relevant the variants are based on the proband's clinical phenome. The raw scores are normalized between 0-100 among all variants. 100 is assigned to highest ranking variant found in the proband. An html report combining all the result files in confident_set is generated for quick review. <br>
 
 **Files of highest priority:**<br>
 $SAMPLEID_confident_deletion_exons.txt<br>
@@ -169,7 +181,8 @@ $SAMPLEID_Bionano_inversions.txt/$SAMPLEID_10x_inversions_largeSV.txt<br>
 │   ├── BC05303_dominant_inherited_smallVariants_candidates.txt
 │   ├── BC05303_smallVariants_compoundhet_candidates.txt
 │   ├── BC05303_smallVariants_denovo_candidates.txt
-│   └── BC05303_smallVariants_recessive_candidates.txt 
+│   ├── BC05303_smallVariants_recessive_candidates.txt 
+│   └── report.html
 └── misc
 ```
 

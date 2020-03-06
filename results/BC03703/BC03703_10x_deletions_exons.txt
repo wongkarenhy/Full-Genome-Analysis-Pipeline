@@ -1,3 +1,3 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-17	11742162	call_4472	T	<DEL>			2.0	True	11742541	-379	False	False	DNAH9	['Ciliary dyskinesia, primary, 40, 618300 (3)']	23.713750573999818	35.33167018962088
-7	76057121	call_4564	G	<DEL>			2.0	True	76057447	-326	False	False	MDH2	['Epileptic encephalopathy, early infantile, 51, 617339 (3)']	16.583482526999898	24.70811748697891
+17	11742162	call_4472	T	<DEL>			2.0	True	11742541	-379	False	False	DNAH9	['Ciliary dyskinesia, primary, 40, 618300 (3)']	44.67193341199994	66.55775572574312
+7	76057121	call_4564	G	<DEL>			2.0	True	76057447	-326	False	False	MDH2	['Epileptic encephalopathy, early infantile, 51, 617339 (3)']	14.01976359299993	20.888372839150428

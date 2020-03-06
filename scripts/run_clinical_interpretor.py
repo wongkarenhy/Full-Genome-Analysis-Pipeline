@@ -199,7 +199,7 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
         denovo = filtered_intervar[(filtered_intervar['paternal'] == 0) & (filtered_intervar['maternal'] == 0)]
         #Compound het
         filtered_intervar_compoundhet = filtered_intervar[(filtered_intervar['Otherinfo'] == 'het')]
-        filtered_intervar_compoundhet = filtered_intervar_compoundhet[(filtered_intervar_compoundhet['maternal'] != 2) & (filtered_intervar_compoundhet['paternal'] != 2) & ((filtered_intervar_compoundhet['paternal'] == 1) & (filtered_intervar_compoundhet['maternal'] == 0)) | ((filtered_intervar_compoundhet['maternal'] == 1) & (filtered_intervar_compoundhet['paternal'] == 0))]
+        filtered_intervar_compoundhet = filtered_intervar_compoundhet[(filtered_intervar_compoundhet['maternal'] != 2) & (filtered_intervar_compoundhet['paternal'] != 2) & ((filtered_intervar_compoundhet['paternal'] == 1) & (filtered_intervar_compoundhet['maternal'] == 0)) | ((filtered_intervar_compoundhet['maternal'] == 1) & (filtered_intervar_compoundhet['paternal'] == 0)) | ((filtered_intervar_compoundhet['maternal'] == 0) & (filtered_intervar_compoundhet['paternal'] == 0))]
         count = Counter(filtered_intervar_compoundhet['Ref_Gene'])
         compoundhet_genes = [x for x, cnt in count.items() if cnt > 1]
         compoundhet = filtered_intervar_compoundhet[filtered_intervar_compoundhet['Ref_Gene'].isin(compoundhet_genes)]
@@ -231,6 +231,8 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
     filtered_intervar = rerankSmallVariant(filtered_intervar)
     pd.DataFrame(filtered_intervar).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_smallVariants_ALL_candidates.txt', index=False, sep='\t', header=True)
 
+    # We want to return everything except recessive variants
+    filtered_intervar = filtered_intervar.loc[~filtered_intervar['Start'].isin(recessive['Start'])]
     return filtered_intervar
 
 

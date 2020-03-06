@@ -1,2 +1,2 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-5	179124880	call_220	T	<DEL>			204.0	True	179125090	-210	False	False	ADAMTS2	['Ehlers-Danlos syndrome, dermatosparaxis type, 225410 (3)']	16.744271787000166	28.915676632435627
+5	179124880	call_220	T	<DEL>			204.0	True	179125090	-210	False	False	ADAMTS2	['Ehlers-Danlos syndrome, dermatosparaxis type, 225410 (3)']	38.78038554599942	66.96983317004546

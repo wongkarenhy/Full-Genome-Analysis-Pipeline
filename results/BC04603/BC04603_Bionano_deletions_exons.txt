@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-15029	17	17	1267841.0	1315080.0	17110180.8	17156190.8	0.99	deletion	heterozygous	2	1229.0	False	False	BHLHA9	['?Camptosynpolydactyly, complex, 607539 (3)', 'Syndactyly, mesoaxial synostotic, with phalangeal reduction, 609432 (3)']	16.315036650000163	42.93878664283014
+15029	17	17	1267841.0	1315080.0	17110180.8	17156190.8	0.99	deletion	heterozygous	2	1229.0	False	False	BHLHA9	['?Camptosynpolydactyly, complex, 607539 (3)', 'Syndactyly, mesoaxial synostotic, with phalangeal reduction, 609432 (3)']	23.42091675299974	61.64042220748131

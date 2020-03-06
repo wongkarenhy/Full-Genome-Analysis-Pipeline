@@ -1,3 +1,3 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-12	7190513	call_2088	G	<DEL>			54.0	True	7190558	-45	False	False	PEX5	['Peroxisome biogenesis disorder 2A (Zellweger), 214110 (3)', 'Peroxisome biogenesis disorder 2B, 202370 (3)', 'Rhizomelic chondrodysplasia punctata, type 5, 616716 (3)']	3.8856300460000037	39.90193077952942
-9	133718381	call_1404	G	<DEL>			77.0	True	133718862	-481	False	True	SARDH	['[Sarcosinemia], 268900 (3)']	0.7247564760000017	7.442598084482621
+12	7190513	call_2088	G	<DEL>			54.0	True	7190558	-45	False	False	PEX5	['Peroxisome biogenesis disorder 2A (Zellweger), 214110 (3)', 'Peroxisome biogenesis disorder 2B, 202370 (3)', 'Rhizomelic chondrodysplasia punctata, type 5, 616716 (3)']	7.629825304999731	78.35145332309921
+9	133718381	call_1404	G	<DEL>			77.0	True	133718862	-481	False	True	SARDH	['[Sarcosinemia], 268900 (3)']	1.1593383450000052	11.905363568995922

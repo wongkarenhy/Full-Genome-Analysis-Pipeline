@@ -1,18 +1,18 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-19	38702514	call_3896	C	<DUP:TANDEM>			2.0	False	38741389	38875	False	False	ACTN4	['Glomerulosclerosis, focal segmental, 1, 603278 (3)']	112.05635257700116	95.22182535268446
-2	203959568	call_2814	T	<DUP:TANDEM>			3.0	False	204007439	47871	False	False	ICOS	['Immunodeficiency, common variable, 1, 607594 (3)']	107.42208893100108	91.2837795981211
-9	77600828	call_4616	G	<DUP:TANDEM>			2.0	False	77654210	53382	False	False	GNA14	.	105.57689018700106	89.71579002411256
-20	50925908	call_4056	C	<DUP:TANDEM>			2.0	False	51056595	130687	False	False	DPM1	['Congenital disorder of glycosylation, type Ie, 608799 (3)']	104.74832127900106	89.01169925160572
-10	71814481	call_1573	T	<DUP:TANDEM>			4.0	False	71855238	40757	False	False	PSAP	['Combined SAP deficiency, 611721 (3)', 'Gaucher disease, atypical, 610539 (3)', 'Krabbe disease, atypical, 611722 (3)', 'Metachromatic leukodystrophy due to SAP-b deficiency, 249900 (3)']	90.96630096000102	77.30018891200966
-X	47954306	call_4662	G	<DUP:TANDEM>			2.0	False	48030452	76146	False	False	ZNF81	.	87.99009071800107	74.7711027392124
-4	94232241	call_4262	A	<DUP:TANDEM>			2.0	False	94279483	47242	False	False	SMARCAD1	['Adermatoglyphia, 136000 (3)', 'Basan syndrome, 129200 (3)', 'Huriez syndrome, 181600 (3)']	81.65220393800094	69.38537373598115
-6	87437507	call_4420	T	<DUP:TANDEM>			2.0	False	87513344	75837	False	False	SLC35A1	['Congenital disorder of glycosylation, type IIf, 603585 (3)']	77.20692003500085	65.607916789364
-3	187288606	call_4211	A	<DUP:TANDEM>			2.0	False	187364113	75507	False	False	MASP1	['3MC syndrome 1, 257920 (3)']	74.2084500240008	63.059914992531375
-16	28970510	call_2610	T	<DUP:TANDEM>			3.0	False	29011604	41094	False	False	LAT	['Immunodeficiency 52, 617514 (3)']	61.540195639000714	52.29484653518591
-15	43345308	call_3739	A	<DUP:TANDEM>			2.0	False	43382240	36932	False	False	TUBGCP4	['Microcephaly and chorioretinopathy, autosomal recessive, 3, 616335 (3)']	49.602421823000455	42.150516586324684
-9	69213325	call_4608	A	<DUP:TANDEM>			2.0	False	69251720	38395	False	False	TJP2	['Cholestasis, progressive familial intrahepatic 4, 615878 (3)', 'Hypercholanemia, familial, 607748 (3)']	44.07072948800029	37.4498652683531
-8	47905001	call_4547	T	<DUP:TANDEM>			2.0	False	47998932	93931	False	False	PRKDC	['Immunodeficiency 26, with or without neurologic abnormalities, 615966 (3)']	41.71478628400025	35.44786174822264
-20	50925908	call_4056	C	<DUP:TANDEM>			2.0	False	51056595	130687	False	False	ADNP	['Helsmoortel-van der Aa syndrome, 615873 (3)']	41.668635973000235	35.40864472256588
-17	69297583	call_2657	T	<DUP:TANDEM>			3.0	False	69360929	63346	False	False	ABCA5	['?Hypertrichosis, congenital generalized, with gingival hyperplasia, 135400 (3)']	18.775549863000013	15.954848510053582
-10	71814481	call_1573	T	<DUP:TANDEM>			4.0	False	71855238	40757	False	False	CDH23	['Deafness, autosomal recessive 12, 601386 (3)', 'Usher syndrome, type 1D, 601067 (3)', 'Usher syndrome, type 1D/F digenic, 601067 (3)', '{Pituitary adenoma 5, multiple types}, 617540 (3)']	16.693117423000007	14.18526549623752
-8	47905001	call_4547	T	<DUP:TANDEM>			2.0	False	47998932	93931	False	False	MCM4	['Immunodeficiency 54, 609981 (3)']	10.086647119	8.571302994174967
+8	47905001	call_4547	T	<DUP:TANDEM>			2.0	False	47998932	93931	False	False	MCM4	['Immunodeficiency 54, 609981 (3)']	113.95027073600144	96.83121509294622
+10	71814481	call_1573	T	<DUP:TANDEM>			4.0	False	71855238	40757	False	False	CDH23	['Deafness, autosomal recessive 12, 601386 (3)', 'Usher syndrome, type 1D, 601067 (3)', 'Usher syndrome, type 1D/F digenic, 601067 (3)', '{Pituitary adenoma 5, multiple types}, 617540 (3)']	94.79951941700132	80.5575326507355
+19	38702514	call_3896	C	<DUP:TANDEM>			2.0	False	38741389	38875	False	False	ACTN4	['Glomerulosclerosis, focal segmental, 1, 603278 (3)']	86.97157831900114	73.90560419721326
+X	47954306	call_4662	G	<DUP:TANDEM>			2.0	False	48030452	76146	False	False	ZNF81	.	78.49837862900108	66.7053560853967
+9	77600828	call_4616	G	<DUP:TANDEM>			2.0	False	77654210	53382	False	False	GNA14	.	77.8029711590011	66.11442154992014
+4	94232241	call_4262	A	<DUP:TANDEM>			2.0	False	94279483	47242	False	False	SMARCAD1	['Adermatoglyphia, 136000 (3)', 'Basan syndrome, 129200 (3)', 'Huriez syndrome, 181600 (3)']	75.5077529860011	64.164020176062
+17	69297583	call_2657	T	<DUP:TANDEM>			3.0	False	69360929	63346	False	False	ABCA5	['?Hypertrichosis, congenital generalized, with gingival hyperplasia, 135400 (3)']	68.04336484600088	57.82102714188011
+6	87437507	call_4420	T	<DUP:TANDEM>			2.0	False	87513344	75837	False	False	SLC35A1	['Congenital disorder of glycosylation, type IIf, 603585 (3)']	52.37661213100056	44.50793282314143
+20	50925908	call_4056	C	<DUP:TANDEM>			2.0	False	51056595	130687	False	False	DPM1	['Congenital disorder of glycosylation, type Ie, 608799 (3)']	45.21762114200034	38.42445630459614
+3	187288606	call_4211	A	<DUP:TANDEM>			2.0	False	187364113	75507	False	False	MASP1	['3MC syndrome 1, 257920 (3)']	45.03821036000035	38.271998886903084
+16	28970510	call_2610	T	<DUP:TANDEM>			3.0	False	29011604	41094	False	False	LAT	['Immunodeficiency 52, 617514 (3)']	44.76506719800033	38.039890756751575
+10	71814481	call_1573	T	<DUP:TANDEM>			4.0	False	71855238	40757	False	False	PSAP	['Combined SAP deficiency, 611721 (3)', 'Gaucher disease, atypical, 610539 (3)', 'Krabbe disease, atypical, 611722 (3)', 'Metachromatic leukodystrophy due to SAP-b deficiency, 249900 (3)']	40.349017763000234	34.287276305380395
+8	47905001	call_4547	T	<DUP:TANDEM>			2.0	False	47998932	93931	False	False	PRKDC	['Immunodeficiency 26, with or without neurologic abnormalities, 615966 (3)']	38.48603568100019	32.70417503206804
+20	50925908	call_4056	C	<DUP:TANDEM>			2.0	False	51056595	130687	False	False	ADNP	['Helsmoortel-van der Aa syndrome, 615873 (3)']	24.193381916000043	20.558745082418227
+9	69213325	call_4608	A	<DUP:TANDEM>			2.0	False	69251720	38395	False	False	TJP2	['Cholestasis, progressive familial intrahepatic 4, 615878 (3)', 'Hypercholanemia, familial, 607748 (3)']	15.545207337000003	13.20980902977285
+15	43345308	call_3739	A	<DUP:TANDEM>			2.0	False	43382240	36932	False	False	TUBGCP4	['Microcephaly and chorioretinopathy, autosomal recessive, 3, 616335 (3)']	15.170655158000002	12.891526831985828
+2	203959568	call_2814	T	<DUP:TANDEM>			3.0	False	204007439	47871	False	False	ICOS	['Immunodeficiency, common variable, 1, 607594 (3)']	8.823477937999998	7.497903116542645

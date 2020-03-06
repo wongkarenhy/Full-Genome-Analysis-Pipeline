@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-12909	12	12	827356.0	1179249.0	0.0	532948.4	-1.0	duplication_split	unknown	-1	181055.0	False	True	WNK1	['Neuropathy, hereditary sensory and autonomic, type II, 201300 (3)', 'Pseudohypoaldosteronism, type IIC, 614492 (3)']	192.69817020600783	60.37831713383274
+12909	12	12	827356.0	1179249.0	0.0	532948.4	-1.0	duplication_split	unknown	-1	181055.0	False	True	WNK1	['Neuropathy, hereditary sensory and autonomic, type II, 201300 (3)', 'Pseudohypoaldosteronism, type IIC, 614492 (3)']	155.94854768100325	48.86351986828967

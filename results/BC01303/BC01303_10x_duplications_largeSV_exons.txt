@@ -1,7 +1,7 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-2	88506706	call_2963	T	<DUP:TANDEM>			2.0	False	88577244	70538	False	False	EIF2AK3	['Wolcott-Rallison syndrome, 226980 (3)']	7.062032473999911	78.64640338431025
-5	37219220	call_3140	A	<DUP:TANDEM>			2.0	False	37326019	106799	False	False	CPLANE1	['Joubert syndrome 17, 614615 (3)', 'Orofaciodigital syndrome VI, 277170 (3)']	6.719440201999918	74.83112072747505
-14	90301011	call_2812	C	<DUP:TANDEM>			2.0	False	90402474	101463	False	False	CALM1	['Long QT syndrome 14, 616247 (3)', 'Ventricular tachycardia, catecholaminergic polymorphic, 4, 614916 (3)']	5.688393253999961	63.348854895491634
-6	80247959	call_1855	A	<DUP:TANDEM>			4.0	False	80285855	37896	False	False	BCKDHB	['Maple syrup urine disease, type Ib, 248600 (3)']	3.2475575050000334	36.166460362835764
-18	69982050	call_2920	A	<DUP:TANDEM>			2.0	False	70024584	42534	False	False	RTTN	['Microcephaly, short stature, and polymicrogyria with seizures, 614833 (3)']	1.473808851000004	16.413088701284636
-3	180617377	call_1779	A	<DUP:TANDEM>			4.0	False	180670301	52924	False	False	CCDC39	['Ciliary dyskinesia, primary, 14, 613807 (3)']	0.06006778099999999	0.6689455128277941
+3	180617377	call_1779	A	<DUP:TANDEM>			4.0	False	180670301	52924	False	False	CCDC39	['Ciliary dyskinesia, primary, 14, 613807 (3)']	8.606163114999825	95.84263148397669
+2	88506706	call_2963	T	<DUP:TANDEM>			2.0	False	88577244	70538	False	False	EIF2AK3	['Wolcott-Rallison syndrome, 226980 (3)']	8.539575825999828	95.10108139761815
+5	37219220	call_3140	A	<DUP:TANDEM>			2.0	False	37326019	106799	False	False	CPLANE1	['Joubert syndrome 17, 614615 (3)', 'Orofaciodigital syndrome VI, 277170 (3)']	7.838615037999849	87.29482376674576
+14	90301011	call_2812	C	<DUP:TANDEM>			2.0	False	90402474	101463	False	False	CALM1	['Long QT syndrome 14, 616247 (3)', 'Ventricular tachycardia, catecholaminergic polymorphic, 4, 614916 (3)']	4.293868370000014	47.81871297667397
+6	80247959	call_1855	A	<DUP:TANDEM>			4.0	False	80285855	37896	False	False	BCKDHB	['Maple syrup urine disease, type Ib, 248600 (3)']	3.2581616640000335	36.28455369776963
+18	69982050	call_2920	A	<DUP:TANDEM>			2.0	False	70024584	42534	False	False	RTTN	['Microcephaly, short stature, and polymicrogyria with seizures, 614833 (3)']	1.4502313380000056	16.15051746488444

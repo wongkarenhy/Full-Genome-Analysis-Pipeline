@@ -1,25 +1,25 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-17	67922864	call_3801	G	<DUP:TANDEM>			4.0	False	67962846	39982	False	False	BPTF	['Neurodevelopmental disorder with dysmorphic facies and distal limb anomalies, 617755 (3)']	26.742588407000163	89.59778293040854
-1	180759173	call_579	T	<DUP:TANDEM>			10.0	False	180792107	32934	False	False	XPR1	['Basal ganglia calcification, idiopathic, 6, 616413 (3)']	26.213292257000145	87.82444069323046
-2	44420746	call_4951	T	<DUP:TANDEM>			3.0	False	44481039	60293	False	False	CAMKMT	.	24.380921962000123	81.68530735875615
-7	17328286	call_4235	G	<DUP:TANDEM>			4.0	False	17405096	76810	False	False	AHR	['?Retinitis pigmentosa 85, 618345 (3)']	23.749660016000117	79.5703411502073
-15	42806535	call_4757	C	<DUP:TANDEM>			3.0	False	42865033	58498	False	False	TTBK2	['Spinocerebellar ataxia 11, 604432 (3)']	23.0146736280001	77.10785884121762
-17	78958029	call_4874	T	<DUP:TANDEM>			3.0	False	79008822	50793	False	False	CANT1	['Desbuquois dysplasia 1, 251450 (3)', 'Epiphyseal dysplasia, multiple, 7, 617719 (3)']	21.561587370000087	72.23947044357973
-6	137862903	call_4219	G	<DUP:TANDEM>			4.0	False	137973169	110266	False	False	TNFAIP3	['Autoinflammatory syndrome, familial, Behcet-like, 616744 (3)']	21.05853756900008	70.5540633996832
-7	147011344	call_5407	G	<DUP:TANDEM>			3.0	False	147075943	64599	False	False	CNTNAP2	['Cortical dysplasia-focal epilepsy syndrome, 610042 (3)', 'Pitt-Hopkins like syndrome 1, 610042 (3)', '{Autism susceptibility 15}, 612100 (3)']	18.49450254400007	61.96357656648718
-5	83578924	call_5253	A	<DUP:TANDEM>			3.0	False	83660127	81203	False	False	VCAN	['Wagner syndrome 1, 143200 (3)']	17.459253327000066	58.495100246544936
-1	2983280	call_4454	C	<DUP:TANDEM>			3.0	False	3072627	89347	False	False	PRDM16	['Cardiomyopathy, dilated, 1LL, 615373 (3)', 'Left ventricular noncompaction 8, 615373 (3)']	17.418838899000065	58.35969663145386
-21	34861980	call_5062	A	<DUP:TANDEM>			3.0	False	34908881	46901	False	False	RUNX1	['Leukemia, acute myeloid, 601626 (3)', 'Platelet disorder, familial, with associated myeloid malignancy, 601399 (3)']	15.01179490700003	50.29518911943194
-8	103299213	call_4323	G	<DUP:TANDEM>			4.0	False	103358308	59095	False	False	FZD6	['Nail disorder, nonsyndromic congenital, 10, (claw-shaped nails), 614157 (3)']	14.526124026000023	48.668008028761285
-11	77348027	call_4600	A	<DUP:TANDEM>			3.0	False	77390038	42011	False	False	PAK1	['Intellectual developmental disorder with macrocephaly, seizures, and speech delay, 618158 (3)']	14.431915735000018	48.35237463236747
-19	41990888	call_2888	C	<DUP:TANDEM>			5.0	False	42037319	46431	False	False	ATP1A3	['Alternating hemiplegia of childhood 2, 614820 (3)', 'CAPOS syndrome, 601338 (3)', 'Dystonia-12, 128235 (3)']	13.144762088	44.03992322314624
-2	174699673	call_5002	A	<DUP:TANDEM>			3.0	False	174791511	91838	False	False	CHRNA1	['Multiple pterygium syndrome, lethal type, 253290 (3)', 'Myasthenic syndrome, congenital, 1A, slow-channel, 601462 (3)', 'Myasthenic syndrome, congenital, 1B, fast-channel, 608930 (3)']	12.503657373999987	41.891980020101656
-6	116550840	call_5329	T	<DUP:TANDEM>			3.0	False	116636621	85781	False	True	RSPH4A	['Ciliary dyskinesia, primary, 11, 612649 (3)']	11.958056061999972	40.06400932500143
-1	244832277	call_2604	C	<DUP:TANDEM>			5.0	False	244884762	52485	False	False	COX20	['Mitochondrial complex IV deficiency, 220110 (3)']	11.291757348999955	37.83165669908436
-1	161059900	call_4498	C	<DUP:TANDEM>			3.0	False	161121315	61415	False	False	NECTIN4	.	10.007394377999946	33.52855510965889
-X	151212051	call_5577	T	<DUP:TANDEM>			3.0	False	151480261	268210	False	False	VMA21	['Myopathy, X-linked, with excessive autophagy, 310440 (3)']	9.346663306999938	31.314856189649387
-18	52851610	call_3824	G	<DUP:TANDEM>			4.0	False	52927526	75916	False	False	DCC	['Colorectal cancer, somatic, 114500 (3)', 'Esophageal carcinoma, somatic, 133239 (3)', 'Gaze palsy, familial horizontal, with progressive scoliosis, 2, 617542 (3)', 'Mirror movements 1 and/or agenesis of the corpus callosum, 157600 (3)']	6.674656575999942	22.36262331565948
-3	49350773	call_3029	G	<DUP:TANDEM>			5.0	False	49417450	66677	False	False	AMT	['Glycine encephalopathy, 605899 (3)']	6.387126387999945	21.399288466456188
-4	101040651	call_5197	C	<DUP:TANDEM>			3.0	False	101125602	84951	False	False	PPP3CA	['Arthrogryposis, cleft palate, craniosynostosis, and impaired intellectual development, 618265 (3)', 'Epileptic encephalopathy, infantile or early childhood, 1, 617711 (3)']	5.507699991999966	18.45287751577004
-18	59664074	call_4898	T	<DUP:TANDEM>			3.0	False	59718444	54370	False	False	CCBE1	['Hennekam lymphangiectasia-lymphedema syndrome 1, 235510 (3)']	2.599251301999999	8.708474676939534
-1	244832277	call_2604	C	<DUP:TANDEM>			5.0	False	244884762	52485	False	False	HNRNPU	['Epileptic encephalopathy, early infantile, 54, 617391 (3)']	0.18009095400000003	0.6033727909448916
+7	147011344	call_5407	G	<DUP:TANDEM>			3.0	False	147075943	64599	False	False	CNTNAP2	['Cortical dysplasia-focal epilepsy syndrome, 610042 (3)', 'Pitt-Hopkins like syndrome 1, 610042 (3)', '{Autism susceptibility 15}, 612100 (3)']	29.45237561000028	98.6765946709521
+18	52851610	call_3824	G	<DUP:TANDEM>			4.0	False	52927526	75916	False	False	DCC	['Colorectal cancer, somatic, 114500 (3)', 'Esophageal carcinoma, somatic, 133239 (3)', 'Gaze palsy, familial horizontal, with progressive scoliosis, 2, 617542 (3)', 'Mirror movements 1 and/or agenesis of the corpus callosum, 157600 (3)']	29.331971566000277	98.27319559700786
+15	42806535	call_4757	C	<DUP:TANDEM>			3.0	False	42865033	58498	False	False	TTBK2	['Spinocerebellar ataxia 11, 604432 (3)']	28.52053872500027	95.55458876493724
+X	151212051	call_5577	T	<DUP:TANDEM>			3.0	False	151480261	268210	False	False	VMA21	['Myopathy, X-linked, with excessive autophagy, 310440 (3)']	26.303382716000264	88.12627779541144
+2	174699673	call_5002	A	<DUP:TANDEM>			3.0	False	174791511	91838	False	False	CHRNA1	['Multiple pterygium syndrome, lethal type, 253290 (3)', 'Myasthenic syndrome, congenital, 1A, slow-channel, 601462 (3)', 'Myasthenic syndrome, congenital, 1B, fast-channel, 608930 (3)']	24.583960822000243	82.36556431174283
+6	116550840	call_5329	T	<DUP:TANDEM>			3.0	False	116636621	85781	False	True	RSPH4A	['Ciliary dyskinesia, primary, 11, 612649 (3)']	21.280967105000204	71.29928644917041
+4	101040651	call_5197	C	<DUP:TANDEM>			3.0	False	101125602	84951	False	False	PPP3CA	['Arthrogryposis, cleft palate, craniosynostosis, and impaired intellectual development, 618265 (3)', 'Epileptic encephalopathy, infantile or early childhood, 1, 617711 (3)']	20.4199555730002	68.41457225581576
+1	244832277	call_2604	C	<DUP:TANDEM>			5.0	False	244884762	52485	False	False	COX20	['Mitochondrial complex IV deficiency, 220110 (3)']	20.3228757280002	68.08931806774507
+2	44420746	call_4951	T	<DUP:TANDEM>			3.0	False	44481039	60293	False	False	CAMKMT	.	19.546901384000183	65.4895106080049
+1	2983280	call_4454	C	<DUP:TANDEM>			3.0	False	3072627	89347	False	False	PRDM16	['Cardiomyopathy, dilated, 1LL, 615373 (3)', 'Left ventricular noncompaction 8, 615373 (3)']	18.553831984000176	62.16235262382337
+6	137862903	call_4219	G	<DUP:TANDEM>			4.0	False	137973169	110266	False	False	TNFAIP3	['Autoinflammatory syndrome, familial, Behcet-like, 616744 (3)']	17.387596840000167	58.25502392072093
+19	41990888	call_2888	C	<DUP:TANDEM>			5.0	False	42037319	46431	False	False	ATP1A3	['Alternating hemiplegia of childhood 2, 614820 (3)', 'CAPOS syndrome, 601338 (3)', 'Dystonia-12, 128235 (3)']	16.486184549000136	55.234951908593565
+1	244832277	call_2604	C	<DUP:TANDEM>			5.0	False	244884762	52485	False	False	HNRNPU	['Epileptic encephalopathy, early infantile, 54, 617391 (3)']	13.296693540000067	44.54895103486836
+17	78958029	call_4874	T	<DUP:TANDEM>			3.0	False	79008822	50793	False	False	CANT1	['Desbuquois dysplasia 1, 251450 (3)', 'Epiphyseal dysplasia, multiple, 7, 617719 (3)']	13.14609550800007	44.04439068433212
+8	103299213	call_4323	G	<DUP:TANDEM>			4.0	False	103358308	59095	False	False	FZD6	['Nail disorder, nonsyndromic congenital, 10, (claw-shaped nails), 614157 (3)']	12.998640602000066	43.55036099435814
+1	161059900	call_4498	C	<DUP:TANDEM>			3.0	False	161121315	61415	False	False	NECTIN4	.	10.869021262000034	36.415330964887396
+18	59664074	call_4898	T	<DUP:TANDEM>			3.0	False	59718444	54370	False	False	CCBE1	['Hennekam lymphangiectasia-lymphedema syndrome 1, 235510 (3)']	8.706339512999994	29.16952936388233
+11	77348027	call_4600	A	<DUP:TANDEM>			3.0	False	77390038	42011	False	False	PAK1	['Intellectual developmental disorder with macrocephaly, seizures, and speech delay, 618158 (3)']	8.679571505999993	29.079846419054224
+17	67922864	call_3801	G	<DUP:TANDEM>			4.0	False	67962846	39982	False	False	BPTF	['Neurodevelopmental disorder with dysmorphic facies and distal limb anomalies, 617755 (3)']	8.051728428999981	26.976334714380123
+5	83578924	call_5253	A	<DUP:TANDEM>			3.0	False	83660127	81203	False	False	VCAN	['Wagner syndrome 1, 143200 (3)']	6.910838867999994	23.15392329786637
+3	49350773	call_3029	G	<DUP:TANDEM>			5.0	False	49417450	66677	False	False	AMT	['Glycine encephalopathy, 605899 (3)']	5.539434040000003	18.559198575681542
+7	17328286	call_4235	G	<DUP:TANDEM>			4.0	False	17405096	76810	False	False	AHR	['?Retinitis pigmentosa 85, 618345 (3)']	3.7715529560000123	12.636128482378842
+21	34861980	call_5062	A	<DUP:TANDEM>			3.0	False	34908881	46901	False	False	RUNX1	['Leukemia, acute myeloid, 601626 (3)', 'Platelet disorder, familial, with associated myeloid malignancy, 601399 (3)']	3.4428506950000104	11.534851620857706
+1	180759173	call_579	T	<DUP:TANDEM>			10.0	False	180792107	32934	False	False	XPR1	['Basal ganglia calcification, idiopathic, 6, 616413 (3)']	3.2657893740000095	10.941629246011718

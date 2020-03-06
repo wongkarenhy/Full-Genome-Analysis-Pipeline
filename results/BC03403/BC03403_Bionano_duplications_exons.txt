@@ -1,3 +1,3 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-241	1	1	35215704.0	36747411.0	0.0	618700.3	-1.0	duplication_split	unknown	-1	913007.0	False	False	KIAA0319L	.	113.28748962400252	87.72874270827703
-10996	10	10	73552164.0	73795655.0	26064426.5	26553354.3	-1.0	duplication	unknown	-1	245437.0	True	False	SEC24C	.	42.044850846999616	32.55912823566364
+10996	10	10	73552164.0	73795655.0	26064426.5	26553354.3	-1.0	duplication	unknown	-1	245437.0	True	False	SEC24C	.	120.53956043800254	93.34467661814826
+241	1	1	35215704.0	36747411.0	0.0	618700.3	-1.0	duplication_split	unknown	-1	913007.0	False	False	KIAA0319L	.	16.391896429999946	12.693726987692996

@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-9480	8	8	91064768.0	91087645.0	53948319.9	53975308.2	1.0	insertion	heterozygous	1	4111.0	False	False	OTUD6B	['Intellectual developmental disorder with dysmorphic facies, seizures, and distal limb anomalies, 617452 (3)']	0.11860895600000002	1.1169731839235917
+9480	8	8	91064768.0	91087645.0	53948319.9	53975308.2	1.0	insertion	heterozygous	1	4111.0	False	False	OTUD6B	['Intellectual developmental disorder with dysmorphic facies, seizures, and distal limb anomalies, 617452 (3)']	4.141553259999996	39.00214694758232

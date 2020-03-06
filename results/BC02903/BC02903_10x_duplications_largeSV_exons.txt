@@ -1,14 +1,14 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-2	71417891	call_843	T	<DUP:TANDEM>			7.0	False	71462166	44275	False	False	DYSF	['Miyoshi muscular dystrophy 1, 254130 (3)', 'Muscular dystrophy, limb-girdle, autosomal recessive 2, 253601 (3)', 'Myopathy, distal, with anterior tibial onset, 606768 (3)']	278.9858965419954	99.16734807197797
-9	120554047	call_3425	G	<DUP:TANDEM>			4.0	False	120588728	34681	False	False	CDK5RAP2	['Microcephaly 3, primary, autosomal recessive, 604804 (3)']	276.01664375799646	98.11190789383912
-5	34945066	call_3103	A	<DUP:TANDEM>			4.0	False	34976779	31713	False	False	DNAJC21	['Bone marrow failure syndrome 3, 617052 (3)']	235.52056747200123	83.71731468185519
-1	28968055	call_2308	C	<DUP:TANDEM>			4.0	False	29011523	43468	False	False	EPB41	['Elliptocytosis-1, 611804 (3)']	192.42136822800185	68.39742451525727
-2	126622742	call_2835	A	<DUP:TANDEM>			4.0	False	126699469	76727	False	False	GYPC	['[Blood group, Gerbich], 616089 (3)', '{Malaria, resistance to}, 611162 (3)']	159.87325138600238	56.8279850849307
-19	11108423	call_1836	A	<DUP:TANDEM>			5.0	False	11153132	44709	False	False	LDLR	['Hypercholesterolemia, familial, 1, 143890 (3)', 'LDL cholesterol level QTL2, 143890 (3)']	146.14527522900232	51.94828683939549
-5	172402235	call_4652	G	<DUP:TANDEM>			3.0	False	172442329	40094	False	False	SH3PXD2B	['Frank-ter Haar syndrome, 249420 (3)']	136.1327109560026	48.38925586807846
-10	93546644	call_3656	T	<DUP:TANDEM>			3.0	False	93642779	96135	False	False	PDE6C	['Cone dystrophy 4, 613093 (3)']	115.11509675100207	40.91840845484337
-5	440942	call_3090	T	<DUP:TANDEM>			4.0	False	483069	42127	False	False	SLC9A3	['Diarrhea 8, secretory sodium, congenital, 616868 (3)']	87.18114787000043	30.98910498093051
-1	225810134	call_3589	C	<DUP:TANDEM>			3.0	False	225867517	57383	False	False	EPHX1	['?Hypercholanemia, familial, 607748 (3)']	77.33550614199986	27.48940771187644
-6	138964442	call_4713	T	<DUP:TANDEM>			3.0	False	139002238	37796	False	False	REPS1	['?Neurodegeneration with brain iron accumulation 7, 617916 (3)']	60.0899999409993	21.359380576778435
-16	78333161	call_4005	C	<DUP:TANDEM>			3.0	False	78527546	194385	False	False	WWOX	['Epileptic encephalopathy, early infantile, 28, 616211 (3)', 'Esophageal squamous cell carcinoma, somatic, 133239 (3)', 'Spinocerebellar ataxia, autosomal recessive 12, 614322 (3)']	38.79794542699972	13.790981574072973
-2	70444643	call_4188	T	<DUP:TANDEM>			3.0	False	70487393	42750	False	False	TGFA	.	13.472581667000002	4.7889166160714005
+6	138964442	call_4713	T	<DUP:TANDEM>			3.0	False	139002238	37796	False	False	REPS1	['?Neurodegeneration with brain iron accumulation 7, 617916 (3)']	276.74009266299936	98.36906250367264
+9	120554047	call_3425	G	<DUP:TANDEM>			4.0	False	120588728	34681	False	False	CDK5RAP2	['Microcephaly 3, primary, autosomal recessive, 604804 (3)']	276.74009266299936	98.36906250367264
+19	11108423	call_1836	A	<DUP:TANDEM>			5.0	False	11153132	44709	False	False	LDLR	['Hypercholesterolemia, familial, 1, 143890 (3)', 'LDL cholesterol level QTL2, 143890 (3)']	209.1702427390048	74.35092069206556
+5	34945066	call_3103	A	<DUP:TANDEM>			4.0	False	34976779	31713	False	False	DNAJC21	['Bone marrow failure syndrome 3, 617052 (3)']	205.16205503400494	72.92618435160433
+1	28968055	call_2308	C	<DUP:TANDEM>			4.0	False	29011523	43468	False	False	EPB41	['Elliptocytosis-1, 611804 (3)']	172.63606564500498	61.36461026809563
+1	225810134	call_3589	C	<DUP:TANDEM>			3.0	False	225867517	57383	False	False	EPHX1	['?Hypercholanemia, familial, 607748 (3)']	159.55092856100504	56.7134133442998
+5	172402235	call_4652	G	<DUP:TANDEM>			3.0	False	172442329	40094	False	False	SH3PXD2B	['Frank-ter Haar syndrome, 249420 (3)']	153.56542203200502	54.585826191308776
+10	93546644	call_3656	T	<DUP:TANDEM>			3.0	False	93642779	96135	False	False	PDE6C	['Cone dystrophy 4, 613093 (3)']	128.48864865300519	45.672124298055486
+16	78333161	call_4005	C	<DUP:TANDEM>			3.0	False	78527546	194385	False	False	WWOX	['Epileptic encephalopathy, early infantile, 28, 616211 (3)', 'Esophageal squamous cell carcinoma, somatic, 133239 (3)', 'Spinocerebellar ataxia, autosomal recessive 12, 614322 (3)']	127.25592185700515	45.23394355568887
+2	71417891	call_843	T	<DUP:TANDEM>			7.0	False	71462166	44275	False	False	DYSF	['Miyoshi muscular dystrophy 1, 254130 (3)', 'Muscular dystrophy, limb-girdle, autosomal recessive 2, 253601 (3)', 'Myopathy, distal, with anterior tibial onset, 606768 (3)']	95.9687478830027	34.11271445369609
+5	440942	call_3090	T	<DUP:TANDEM>			4.0	False	483069	42127	False	False	SLC9A3	['Diarrhea 8, secretory sodium, congenital, 616868 (3)']	89.25452382100205	31.726099922844952
+2	126622742	call_2835	A	<DUP:TANDEM>			4.0	False	126699469	76727	False	False	GYPC	['[Blood group, Gerbich], 616089 (3)', '{Malaria, resistance to}, 611162 (3)']	78.19823427600056	27.796070027843882
+2	70444643	call_4188	T	<DUP:TANDEM>			3.0	False	70487393	42750	False	False	TGFA	.	42.75321538099965	15.196907956404784

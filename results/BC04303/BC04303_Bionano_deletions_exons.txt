@@ -1,4 +1,4 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-18425	22	22	37225355.0	37254840.0	16003131.8	16028301.3	1.0	deletion	heterozygous	1	4316.0	True	False	RAC2	['Neutrophil immunodeficiency syndrome, 608203 (3)']	22.530978558999998	60.69779509294708
-6225	5	5	60170889.0	60201972.0	114818352.3	114842369.0	1.0	deletion	heterozygous	1	7066.0	False	False	PDE4D	['Acrodysostosis 2, with or without hormone resistance, 614613 (3)']	21.51128115800002	57.95076021647102
-11037	10	10	26706185.0	26725720.0	12001457.2	12017824.8	1.0	deletion	heterozygous	1	3167.0	False	False	PDSS1	['Coenzyme Q10 deficiency, primary, 2, 614651 (3)']	5.91916261300002	15.946050388574623
+6225	5	5	60170889.0	60201972.0	114818352.3	114842369.0	1.0	deletion	heterozygous	1	7066.0	False	False	PDE4D	['Acrodysostosis 2, with or without hormone resistance, 614613 (3)']	23.844904718999928	64.2374736123729
+18425	22	22	37225355.0	37254840.0	16003131.8	16028301.3	1.0	deletion	heterozygous	1	4316.0	True	False	RAC2	['Neutrophil immunodeficiency syndrome, 608203 (3)']	23.620929287999942	63.63409037355387
+11037	10	10	26706185.0	26725720.0	12001457.2	12017824.8	1.0	deletion	heterozygous	1	3167.0	False	False	PDSS1	['Coenzyme Q10 deficiency, primary, 2, 614651 (3)']	15.817503215000116	42.61188951522925

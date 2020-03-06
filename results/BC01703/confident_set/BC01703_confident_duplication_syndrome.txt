@@ -1,2 +1,2 @@
 Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
-2	219108259	219132372	call_125	G	<DUP:TANDEM>	27.0	False	32035	False	False	CHROMOSOME 2Q35 DUPLICATION SYNDROME	 2q35 	0.20011450000000003	9.227939959893236	784	-1.0	duplication	unknown	-1	32088.0	False	False
+2	219108259	219132372	call_125	G	<DUP:TANDEM>	27.0	False	32035	False	False	CHROMOSOME 2Q35 DUPLICATION SYNDROME	 2q35 	0.2001145	9.227939959893234	784	-1.0	duplication	unknown	-1	32088.0	False	False

@@ -1,10 +1,10 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3	101531055	call_4219	C	<DUP:TANDEM>			3.0	False	101747353	216298	False	False	ZBTB11	['Intellectual developmental disorder, autosomal recessive 69, 618383 (3)']	6.815044300000058	99.58059854221014
-10	71432275	call_3515	A	<DUP:TANDEM>			3.0	False	71466661	34386	False	False	CDH23	['Deafness, autosomal recessive 12, 601386 (3)', 'Usher syndrome, type 1D, 601067 (3)', 'Usher syndrome, type 1D/F digenic, 601067 (3)', '{Pituitary adenoma 5, multiple types}, 617540 (3)']	5.5754235600000435	81.46741103812629
-2	98965072	call_4016	T	<DUP:TANDEM>			3.0	False	99217689	252617	False	False	LIPT1	['Lipoyltransferase 1 deficiency, 616299 (3)']	5.491521100000042	80.24143849588413
-9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	IL11RA	['Craniosynostosis and dental anomalies, 614188 (3)']	5.132361955000032	74.99344874605829
-13	38754308	call_3678	A	<DUP:TANDEM>			3.0	False	38799018	44710	False	False	FREM2	['Cryptophthalmos, unilateral or bilateral, isolated, 123570 (3)', 'Fraser syndrome 2, 617666 (3)']	5.04042566000003	73.65008678378118
-9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	SIGMAR1	['?Amyotrophic lateral sclerosis 16, juvenile, 614373 (3)', '?Spinal muscular atrophy, distal, autosomal recessive, 2, 605726 (3)']	3.692262265000003	53.95088720457968
-20	51727061	call_2837	A	<DUP:TANDEM>			4.0	False	51794191	67130	True	False	SALL4	['Duane-radial ray syndrome, 607323 (3)', 'IVIC syndrome, 147750 (3)']	3.1269165200000018	45.690123929659904
-X	9763361	call_4752	C	<DUP:TANDEM>			3.0	False	9816812	53451	False	False	GPR143	['Nystagmus 6, congenital, X-linked, 300814 (3)', 'Ocular albinism, type I, Nettleship-Falls type, 300500 (3)']	2.7174670949999986	39.707298724214986
-1	235646454	call_3480	T	<DUP:TANDEM>			3.0	False	235736000	89546	False	False	LYST	['Chediak-Higashi syndrome, 214500 (3)']	2.1359085999999965	31.20963671790834
+X	9763361	call_4752	C	<DUP:TANDEM>			3.0	False	9816812	53451	False	False	GPR143	['Nystagmus 6, congenital, X-linked, 300814 (3)', 'Ocular albinism, type I, Nettleship-Falls type, 300500 (3)']	6.613430355000068	96.6346400959009
+9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	SIGMAR1	['?Amyotrophic lateral sclerosis 16, juvenile, 614373 (3)', '?Spinal muscular atrophy, distal, autosomal recessive, 2, 605726 (3)']	5.64744052000005	82.51971409974978
+9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	IL11RA	['Craniosynostosis and dental anomalies, 614188 (3)']	4.403226720000022	64.33941336150232
+3	101531055	call_4219	C	<DUP:TANDEM>			3.0	False	101747353	216298	False	False	ZBTB11	['Intellectual developmental disorder, autosomal recessive 69, 618383 (3)']	3.8666785850000074	56.499437261859434
+1	235646454	call_3480	T	<DUP:TANDEM>			3.0	False	235736000	89546	False	False	LYST	['Chediak-Higashi syndrome, 214500 (3)']	3.6157961800000047	52.83357406950877
+20	51727061	call_2837	A	<DUP:TANDEM>			4.0	False	51794191	67130	True	False	SALL4	['Duane-radial ray syndrome, 607323 (3)', 'IVIC syndrome, 147750 (3)']	2.0380067349999975	29.779106572257056
+2	98965072	call_4016	T	<DUP:TANDEM>			3.0	False	99217689	252617	False	False	LIPT1	['Lipoyltransferase 1 deficiency, 616299 (3)']	0.8249727950000003	12.054402156584539
+10	71432275	call_3515	A	<DUP:TANDEM>			3.0	False	71466661	34386	False	False	CDH23	['Deafness, autosomal recessive 12, 601386 (3)', 'Usher syndrome, type 1D, 601067 (3)', 'Usher syndrome, type 1D/F digenic, 601067 (3)', '{Pituitary adenoma 5, multiple types}, 617540 (3)']	0.7583614350000003	11.081085064792404
+13	38754308	call_3678	A	<DUP:TANDEM>			3.0	False	38799018	44710	False	False	FREM2	['Cryptophthalmos, unilateral or bilateral, isolated, 123570 (3)', 'Fraser syndrome 2, 617666 (3)']	0.6722488100000005	9.822817860345797

@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-14664	16	16	14620469.0	14629975.0	13425454.9	13433279.3	0.99	deletion	heterozygous	1	1682.0	True	False	PARN	['Dyskeratosis congenita, autosomal recessive 6, 616353 (3)', 'Pulmonary fibrosis and/or bone marrow failure, telomere-related, 4, 616371 (3)']	8.080182160999703	43.74506225849668
+14664	16	16	14620469.0	14629975.0	13425454.9	13433279.3	0.99	deletion	heterozygous	1	1682.0	True	False	PARN	['Dyskeratosis congenita, autosomal recessive 6, 616353 (3)', 'Pulmonary fibrosis and/or bone marrow failure, telomere-related, 4, 616371 (3)']	7.887882075999702	42.703974443516415

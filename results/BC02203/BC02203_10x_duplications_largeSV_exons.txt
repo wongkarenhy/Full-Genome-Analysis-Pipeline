@@ -1,20 +1,20 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-19	50783711	call_1776	T	<DUP:TANDEM>			2.0	False	50825322	41611	False	False	ACP4	['Amelogenesis imperfecta, type IJ, 617297 (3)']	11.132148034000085	94.45907982665383
-19	5672197	call_1761	A	<DUP:TANDEM>			2.0	False	5714863	42666	False	False	MICOS13	['Combined oxidative phosphorylation deficiency 37, 618329 (3)']	10.975993154000077	93.13406634047024
-1	236488893	call_933	T	<DUP:TANDEM>			3.0	False	236532793	43900	False	False	EDARADD	['Ectodermal dysplasia 11A, hypohidrotic/hair/tooth type, autosomal dominant, 614940 (3)', 'Ectodermal dysplasia 11B, hypohidrotic/hair/tooth type, autosomal recessive, 614941 (3)']	10.16008889900006	86.21091324202371
-2	151702699	call_1148	T	<DUP:TANDEM>			3.0	False	151746093	43394	False	True	NEB	['Nemaline myopathy 2, autosomal recessive, 256030 (3)']	10.086988335000052	85.59063654527473
-X	123760207	call_130	A	<DUP:TANDEM>			16.0	False	124200537	440330	True	False	XIAP	['Lymphoproliferative syndrome, X-linked, 2, 300635 (3)']	9.763479119000044	82.84557936803716
-X	123760207	call_130	A	<DUP:TANDEM>			16.0	False	124200537	440330	True	False	STAG2	['Mullegama-Klein-Martinez syndrome, 301022 (3)']	9.538123271000039	80.93337823932232
-1	243479251	call_1512	G	<DUP:TANDEM>			2.0	False	243528820	49569	False	False	SDCCAG8	['Bardet-Biedl syndrome 16, 615993 (3)', 'Senior-Loken syndrome 7, 613615 (3)']	9.511491140000038	80.70739790018206
-2	240460106	call_1839	C	<DUP:TANDEM>			2.0	False	240511154	51048	False	False	GPC1	.	9.377089840000032	79.56696901918515
-16	53636951	call_1055	A	<DUP:TANDEM>			3.0	False	53670512	33561	False	False	RPGRIP1L	['COACH syndrome, 216360 (3)', 'Joubert syndrome 7, 611560 (3)', 'Meckel syndrome 5, 611561 (3)']	9.196648429000021	78.03587820062732
-19	50223733	call_673	G	<DUP:TANDEM>			4.0	False	50261907	38174	False	False	MYH14	['?Peripheral neuropathy, myopathy, hoarseness, and hearing loss, 614369 (3)', 'Deafness, autosomal dominant 4A, 600652 (3)']	7.765133618999995	65.88911449448196
-1	243479251	call_1512	G	<DUP:TANDEM>			2.0	False	243528820	49569	False	False	AKT3	['Megalencephaly-polymicrogyria-polydactyly-hydrocephalus syndrome 2, 615937 (3)']	7.497038785999997	63.614262313742444
-10	88919672	call_946	C	<DUP:TANDEM>			3.0	False	88958248	38576	False	False	ACTA2	['Aortic aneurysm, familial thoracic 6, 611788 (3)', 'Moyamoya disease 5, 614042 (3)', 'Multisystemic smooth muscle dysfunction syndrome, 613834 (3)']	5.257056333999999	44.60744704345154
-19	5672197	call_1761	A	<DUP:TANDEM>			2.0	False	5714863	42666	False	False	LONP1	['CODAS syndrome, 600373 (3)']	4.784719439000001	40.599549525954494
-8	99328189	call_2099	C	<DUP:TANDEM>			2.0	False	99421465	93276	False	False	VPS13B	['Cohen syndrome, 216550 (3)']	3.925953196999997	33.3127016725339
-14	64716386	call_617	A	<DUP:TANDEM>			4.0	False	64766215	49829	False	False	SPTB	['Anemia, neonatal hemolytic, fatal or near-fatal, 617948 (3)', 'Elliptocytosis-3, 617948 (3)', 'Spherocytosis, type 2, 616649 (3)']	2.621029214000003	22.240093016824154
-3	197239788	call_1935	C	<DUP:TANDEM>			2.0	False	197329072	89284	False	False	DLG1	.	2.457652786000005	20.8538028770316
-16	71126345	call_1059	A	<DUP:TANDEM>			3.0	False	71166210	39865	False	False	HYDIN	['Ciliary dyskinesia, primary, 5, 608647 (3)']	2.0930387970000086	17.759961348184298
-8	22360425	call_1372	A	<DUP:TANDEM>			3.0	False	22415476	55051	False	False	SLC39A14	['?Hyperostosis cranalis interna, 144755 (3)', 'Hypermanganesemia with dystonia 2, 617013 (3)']	1.6228172720000043	13.770013277917197
-16	64940560	call_423	A	<DUP:TANDEM>			5.0	False	64975816	35256	False	False	CDH11	['Elsahy-Waters syndrome, 211380 (3)']	0.20401831299999998	1.7311467701388004
+19	50223733	call_673	G	<DUP:TANDEM>			4.0	False	50261907	38174	False	False	MYH14	['?Peripheral neuropathy, myopathy, hoarseness, and hearing loss, 614369 (3)', 'Deafness, autosomal dominant 4A, 600652 (3)']	11.29394332800005	95.83195364622964
+X	123760207	call_130	A	<DUP:TANDEM>			16.0	False	124200537	440330	True	False	STAG2	['Mullegama-Klein-Martinez syndrome, 301022 (3)']	11.004711930000036	93.37775238798055
+1	243479251	call_1512	G	<DUP:TANDEM>			2.0	False	243528820	49569	False	False	AKT3	['Megalencephaly-polymicrogyria-polydactyly-hydrocephalus syndrome 2, 615937 (3)']	10.560529133000028	89.60874948294337
+19	5672197	call_1761	A	<DUP:TANDEM>			2.0	False	5714863	42666	False	False	LONP1	['CODAS syndrome, 600373 (3)']	8.746888719000003	74.21955378417616
+19	50783711	call_1776	T	<DUP:TANDEM>			2.0	False	50825322	41611	False	False	ACP4	['Amelogenesis imperfecta, type IJ, 617297 (3)']	7.2511676299999905	61.52798362963387
+16	64940560	call_423	A	<DUP:TANDEM>			5.0	False	64975816	35256	False	False	CDH11	['Elsahy-Waters syndrome, 211380 (3)']	7.080433456999987	60.07926117038447
+14	64716386	call_617	A	<DUP:TANDEM>			4.0	False	64766215	49829	False	False	SPTB	['Anemia, neonatal hemolytic, fatal or near-fatal, 617948 (3)', 'Elliptocytosis-3, 617948 (3)', 'Spherocytosis, type 2, 616649 (3)']	6.74483166599999	57.23159544861937
+16	53636951	call_1055	A	<DUP:TANDEM>			3.0	False	53670512	33561	False	False	RPGRIP1L	['COACH syndrome, 216360 (3)', 'Joubert syndrome 7, 611560 (3)', 'Meckel syndrome 5, 611561 (3)']	5.00377969999999	42.458331013359036
+3	197239788	call_1935	C	<DUP:TANDEM>			2.0	False	197329072	89284	False	False	DLG1	.	4.329835845999991	36.739747671740105
+16	71126345	call_1059	A	<DUP:TANDEM>			3.0	False	71166210	39865	False	False	HYDIN	['Ciliary dyskinesia, primary, 5, 608647 (3)']	3.417666628999994	28.99976212529759
+19	5672197	call_1761	A	<DUP:TANDEM>			2.0	False	5714863	42666	False	False	MICOS13	['Combined oxidative phosphorylation deficiency 37, 618329 (3)']	2.873933214999999	24.386047162059782
+8	99328189	call_2099	C	<DUP:TANDEM>			2.0	False	99421465	93276	False	False	VPS13B	['Cohen syndrome, 216550 (3)']	2.6904631489999997	22.82925744302582
+8	22360425	call_1372	A	<DUP:TANDEM>			3.0	False	22415476	55051	False	False	SLC39A14	['?Hyperostosis cranalis interna, 144755 (3)', 'Hypermanganesemia with dystonia 2, 617013 (3)']	2.3353439500000013	19.815981598699405
+1	243479251	call_1512	G	<DUP:TANDEM>			2.0	False	243528820	49569	False	False	SDCCAG8	['Bardet-Biedl syndrome 16, 615993 (3)', 'Senior-Loken syndrome 7, 613615 (3)']	2.2958957710000023	19.481253864411624
+2	240460106	call_1839	C	<DUP:TANDEM>			2.0	False	240511154	51048	False	False	GPC1	.	2.0881826080000057	17.71875536143283
+10	88919672	call_946	C	<DUP:TANDEM>			3.0	False	88958248	38576	False	False	ACTA2	['Aortic aneurysm, familial thoracic 6, 611788 (3)', 'Moyamoya disease 5, 614042 (3)', 'Multisystemic smooth muscle dysfunction syndrome, 613834 (3)']	1.476239775000003	12.52626629866157
+1	236488893	call_933	T	<DUP:TANDEM>			3.0	False	236532793	43900	False	False	EDARADD	['Ectodermal dysplasia 11A, hypohidrotic/hair/tooth type, autosomal dominant, 614940 (3)', 'Ectodermal dysplasia 11B, hypohidrotic/hair/tooth type, autosomal recessive, 614941 (3)']	1.357110428000002	11.51542378528486
+2	151702699	call_1148	T	<DUP:TANDEM>			3.0	False	151746093	43394	False	True	NEB	['Nemaline myopathy 2, autosomal recessive, 256030 (3)']	0.18318812699999992	1.5543973956094161
+X	123760207	call_130	A	<DUP:TANDEM>			16.0	False	124200537	440330	True	False	XIAP	['Lymphoproliferative syndrome, X-linked, 2, 300635 (3)']	0	0.0

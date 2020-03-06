@@ -1,16 +1,16 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-20	19857706	call_2679	A	<DUP:TANDEM>			3.0	False	19957741	100035	False	False	RIN2	['Macrocephaly, alopecia, cutis laxa, and scoliosis, 613075 (3)']	70.80954506799964	86.29025676588175
-10	125791387	call_2461	T	<DUP:TANDEM>			3.0	False	125858428	67041	False	False	UROS	['Porphyria, congenital erythropoietic, 263700 (3)']	61.405420735999336	74.83015908431496
-16	54012818	call_2009	A	<DUP:TANDEM>			4.0	False	54061661	48843	False	False	FTO	['Growth retardation, developmental delay, facial dysmorphism, 612938 (3)', '{Obesity, susceptibility to, BMIQ14}, 612460 (3)']	59.41003560299938	72.39853358371275
-14	58585513	call_3121	C	<DUP:TANDEM>			2.0	False	58677074	91561	False	False	DACT1	['?Townes-Brocks syndrome 2, 617466 (3)']	54.22808484699939	66.08368067999776
-11	121490981	call_3072	T	<DUP:TANDEM>			2.0	False	121546377	55396	False	False	SORL1	.	50.179436486999414	61.14989800700263
-2	189853898	call_817	T	<DUP:TANDEM>			7.0	False	189894960	41062	False	False	PMS1	.	45.38760506299952	55.31045413600062
-11	116758811	call_2480	T	<DUP:TANDEM>			3.0	False	116813549	54738	False	False	APOA5	['Hyperchylomicronemia, late-onset, 144650 (3)', '{Hypertriglyceridemia, susceptibility to}, 145750 (3)']	44.26732940799957	53.945258612915715
-X	136651029	call_2963	G	<DUP:TANDEM>			3.0	False	136698235	47206	False	False	ARHGEF6	.	31.222011849999692	38.04791312663613
-1	75699116	call_2401	A	<DUP:TANDEM>			3.0	False	75819974	120858	False	False	ACADM	['Acyl-CoA dehydrogenase, medium chain, deficiency of, 201450 (3)']	27.495643397999732	33.50686869232196
-2	29477357	call_3237	C	<DUP:TANDEM>			2.0	False	29607399	130042	False	False	ALK	['{Neuroblastoma, susceptibility to, 3}, 613014 (3)']	27.056389826999762	32.971583465019364
-1	2196560	call_1801	G	<DUP:TANDEM>			4.0	False	2279930	83370	False	False	SKI	['Shprintzen-Goldberg syndrome, 182212 (3)']	14.490559010999986	17.65855233979508
-8	99152392	call_2910	G	<DUP:TANDEM>			3.0	False	99249932	97540	False	False	VPS13B	['Cohen syndrome, 216550 (3)']	9.206746766999968	11.21956851636248
-2	209950390	call_2668	C	<DUP:TANDEM>			3.0	False	210031125	80735	False	False	UNC80	['Hypotonia, infantile, with psychomotor retardation and characteristic facies 2, 616801 (3)']	8.927335954999966	10.87907161460312
-5	138527982	call_3407	A	<DUP:TANDEM>			2.0	False	138629121	101139	False	False	HSPA9	['Anemia, sideroblastic, 4, 182170 (3)', 'Even-plus syndrome, 616854 (3)']	6.556625003999981	7.990064822043939
-4	41240213	call_2766	A	<DUP:TANDEM>			3.0	False	41278237	38024	False	False	UCHL1	['Spastic paraplegia 79, autosomal recessive, 615491 (3)', '{?Parkinson disease 5, susceptibility to}, 613643 (3)']	2.525783500000003	3.077982022631639
+2	189853898	call_817	T	<DUP:TANDEM>			7.0	False	189894960	41062	False	False	PMS1	.	81.68027630200011	99.53759776368096
+11	121490981	call_3072	T	<DUP:TANDEM>			2.0	False	121546377	55396	False	False	SORL1	.	77.75497566999982	94.754129672009
+10	125791387	call_2461	T	<DUP:TANDEM>			3.0	False	125858428	67041	False	False	UROS	['Porphyria, congenital erythropoietic, 263700 (3)']	50.60769748699909	61.671787416365696
+4	41240213	call_2766	A	<DUP:TANDEM>			3.0	False	41278237	38024	False	False	UCHL1	['Spastic paraplegia 79, autosomal recessive, 615491 (3)', '{?Parkinson disease 5, susceptibility to}, 613643 (3)']	42.285058738999204	51.529614721357895
+8	99152392	call_2910	G	<DUP:TANDEM>			3.0	False	99249932	97540	False	False	VPS13B	['Cohen syndrome, 216550 (3)']	38.26285378399937	46.62805663341036
+5	138527982	call_3407	A	<DUP:TANDEM>			2.0	False	138629121	101139	False	False	HSPA9	['Anemia, sideroblastic, 4, 182170 (3)', 'Even-plus syndrome, 616854 (3)']	37.8764909239994	46.15722533005738
+16	54012818	call_2009	A	<DUP:TANDEM>			4.0	False	54061661	48843	False	False	FTO	['Growth retardation, developmental delay, facial dysmorphism, 612938 (3)', '{Obesity, susceptibility to, BMIQ14}, 612460 (3)']	33.33102326399946	40.618006413656445
+1	2196560	call_1801	G	<DUP:TANDEM>			4.0	False	2279930	83370	False	False	SKI	['Shprintzen-Goldberg syndrome, 182212 (3)']	33.16043194999948	40.41011963408525
+11	116758811	call_2480	T	<DUP:TANDEM>			3.0	False	116813549	54738	False	False	APOA5	['Hyperchylomicronemia, late-onset, 144650 (3)', '{Hypertriglyceridemia, susceptibility to}, 145750 (3)']	30.411464247999536	37.06015984238068
+20	19857706	call_2679	A	<DUP:TANDEM>			3.0	False	19957741	100035	False	False	RIN2	['Macrocephaly, alopecia, cutis laxa, and scoliosis, 613075 (3)']	27.976365145999583	34.09268806212622
+2	209950390	call_2668	C	<DUP:TANDEM>			3.0	False	210031125	80735	False	False	UNC80	['Hypotonia, infantile, with psychomotor retardation and characteristic facies 2, 616801 (3)']	16.157715018999948	19.69018973925803
+14	58585513	call_3121	C	<DUP:TANDEM>			2.0	False	58677074	91561	False	False	DACT1	['?Townes-Brocks syndrome 2, 617466 (3)']	16.103586924999956	19.624227909888532
+2	29477357	call_3237	C	<DUP:TANDEM>			2.0	False	29607399	130042	False	False	ALK	['{Neuroblastoma, susceptibility to, 3}, 613014 (3)']	7.3138775499999715	8.912871437567443
+1	75699116	call_2401	A	<DUP:TANDEM>			3.0	False	75819974	120858	False	False	ACADM	['Acyl-CoA dehydrogenase, medium chain, deficiency of, 201450 (3)']	2.8210621440000074	3.4378158555389726
+X	136651029	call_2963	G	<DUP:TANDEM>			3.0	False	136698235	47206	False	False	ARHGEF6	.	1.2291749410000004	1.497902876896345

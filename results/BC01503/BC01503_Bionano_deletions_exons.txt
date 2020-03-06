@@ -1,4 +1,4 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3313	12	12	8868554.0	8916897.0	435136.0	481220.0	1.0	deletion	homozygous	1	2259.0	False	False	A2ML1	['{Otitis media, susceptibility to}, 166760 (3)']	68.12459808499871	87.70179130966741
-189	1	1	39185340.0	39210599.0	1028385.7	1049672.5	1.0	deletion	heterozygous	1	3972.0	True	False	MACF1	['Lissencephaly 9 with complex brainstem malformation, 618325 (3)']	57.44382850399876	73.95165331030987
-2878	10	10	30346925.0	30387010.0	20948.7	59459.3	0.98	deletion	homozygous	1	1574.0	False	False	MTPAP	['?Spastic ataxia 4, autosomal recessive, 613672 (3)']	15.80643301400004	20.348780448061486
+2878	10	10	30346925.0	30387010.0	20948.7	59459.3	0.98	deletion	homozygous	1	1574.0	False	False	MTPAP	['?Spastic ataxia 4, autosomal recessive, 613672 (3)']	66.60769187799882	85.74896670090148
+189	1	1	39185340.0	39210599.0	1028385.7	1049672.5	1.0	deletion	heterozygous	1	3972.0	True	False	MACF1	['Lissencephaly 9 with complex brainstem malformation, 618325 (3)']	43.319170371999355	55.76794500765776
+3313	12	12	8868554.0	8916897.0	435136.0	481220.0	1.0	deletion	homozygous	1	2259.0	False	False	A2ML1	['{Otitis media, susceptibility to}, 166760 (3)']	24.996676036999983	32.18005429546993

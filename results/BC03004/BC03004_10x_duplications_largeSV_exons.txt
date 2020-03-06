@@ -1,16 +1,16 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-2	170781547	call_971	T	<DUP:TANDEM>			6.0	False	170820069	38522	False	False	GAD1	['?Cerebral palsy, spastic quadriplegic, 1, 603513 (3)']	83.49413554799966	96.52435639658341
-7	138879909	call_3018	A	<DUP:TANDEM>			3.0	False	138915522	35613	False	False	KIAA1549	['Retinitis pigmentosa 86, 618613 (3)']	76.57812208599985	88.5290194322781
-3	149920643	call_1427	A	<DUP:TANDEM>			5.0	False	149955334	34691	False	False	RNF13	['Epileptic encephalopathy, early infantile, 73, 618379 (3)']	72.77922003599994	84.13725499297688
-1	173799883	call_2309	G	<DUP:TANDEM>			3.0	False	173844478	44595	False	False	DARS2	['Leukoencephalopathy with brain stem and spinal cord involvement and lactate elevation, 611105 (3)']	59.82736389800002	69.16411263206369
-15	84758781	call_2531	G	<DUP:TANDEM>			3.0	False	84806984	48203	False	False	ZNF592	.	57.542953528999995	66.5231937319974
-X	152851901	call_3112	T	<DUP:TANDEM>			3.0	False	152893951	42050	False	False	NSDHL	['CHILD syndrome, 308050 (3)', 'CK syndrome, 300831 (3)']	46.35670610799988	53.59120365008025
-3	132451182	call_2802	C	<DUP:TANDEM>			3.0	False	132497380	46198	False	False	DNAJC13	.	43.85479517599983	50.69884072078149
-13	60089657	call_1236	T	<DUP:TANDEM>			5.0	False	60128996	39339	False	False	DIAPH3	['Auditory neuropathy, autosomal dominant, 1, 609129 (3)']	38.41231778199982	44.407002087913675
-12	102407185	call_1222	T	<DUP:TANDEM>			5.0	False	102469133	61948	False	False	IGF1	['Growth retardation with deafness and mental retardation due to IGF1 deficiency, 608747 (3)']	26.61809014199982	30.77214947612364
-2	49039189	call_2653	T	<DUP:TANDEM>			3.0	False	49073703	34514	False	False	FSHR	['Ovarian dysgenesis 1, 233300 (3)', 'Ovarian hyperstimulation syndrome, 608115 (3)', 'Ovarian response to FSH stimulation, 276400 (3)']	17.02760918799994	19.684963585249324
-12	6595308	call_2410	C	<DUP:TANDEM>			3.0	False	6627531	32223	False	False	CHD4	['Sifrim-Hitz-Weiss syndrome, 617159 (3)']	9.62990748599997	11.132765386982403
-9	84843835	call_3070	A	<DUP:TANDEM>			3.0	False	84897396	53561	False	False	NTRK2	['Epileptic encephalopathy, early infantile, 58, 617830 (3)', 'Obesity, hyperphagia, and developmental delay, 613886 (3)']	7.120692783999979	8.23195885031066
-11	27622774	call_2370	G	<DUP:TANDEM>			3.0	False	27672384	49610	False	False	BDNF	.	4.041536293000001	4.672264548580079
-X	10153881	call_3094	G	<DUP:TANDEM>			3.0	False	10185929	32048	False	False	CLCN4	['Raynaud-Claes syndrome, 300114 (3)']	2.0405242470000013	2.358971541660771
-7	40002393	call_2988	C	<DUP:TANDEM>			3.0	False	40052827	50434	False	False	CDK13	['Congenital heart defects, dysmorphic facial features, and intellectual developmental disorder, 617360 (3)']	0.000388199	0.0004487819220220071
+15	84758781	call_2531	G	<DUP:TANDEM>			3.0	False	84806984	48203	False	False	ZNF592	.	72.62333719599964	83.95704484162266
+X	10153881	call_3094	G	<DUP:TANDEM>			3.0	False	10185929	32048	False	False	CLCN4	['Raynaud-Claes syndrome, 300114 (3)']	70.83949717199965	81.89481605033134
+13	60089657	call_1236	T	<DUP:TANDEM>			5.0	False	60128996	39339	False	False	DIAPH3	['Auditory neuropathy, autosomal dominant, 1, 609129 (3)']	69.8879850029997	80.79480945569527
+12	6595308	call_2410	C	<DUP:TANDEM>			3.0	False	6627531	32223	False	False	CHD4	['Sifrim-Hitz-Weiss syndrome, 617159 (3)']	66.71143843299983	77.12252623220176
+3	132451182	call_2802	C	<DUP:TANDEM>			3.0	False	132497380	46198	False	False	DNAJC13	.	59.943281818999914	69.29812087882155
+2	49039189	call_2653	T	<DUP:TANDEM>			3.0	False	49073703	34514	False	False	FSHR	['Ovarian dysgenesis 1, 233300 (3)', 'Ovarian hyperstimulation syndrome, 608115 (3)', 'Ovarian response to FSH stimulation, 276400 (3)']	56.335204037999894	65.12696103203656
+2	170781547	call_971	T	<DUP:TANDEM>			6.0	False	170820069	38522	False	False	GAD1	['?Cerebral palsy, spastic quadriplegic, 1, 603513 (3)']	49.193558230999834	56.870779198322666
+12	102407185	call_1222	T	<DUP:TANDEM>			5.0	False	102469133	61948	False	False	IGF1	['Growth retardation with deafness and mental retardation due to IGF1 deficiency, 608747 (3)']	45.901902775999815	53.06542302345066
+7	138879909	call_3018	A	<DUP:TANDEM>			3.0	False	138915522	35613	False	False	KIAA1549	['Retinitis pigmentosa 86, 618613 (3)']	44.47244388899982	51.41288062442517
+1	173799883	call_2309	G	<DUP:TANDEM>			3.0	False	173844478	44595	False	False	DARS2	['Leukoencephalopathy with brain stem and spinal cord involvement and lactate elevation, 611105 (3)']	41.5037465939998	47.98088394758766
+X	152851901	call_3112	T	<DUP:TANDEM>			3.0	False	152893951	42050	False	False	NSDHL	['CHILD syndrome, 308050 (3)', 'CK syndrome, 300831 (3)']	39.62848807599977	45.812969754103925
+3	149920643	call_1427	A	<DUP:TANDEM>			5.0	False	149955334	34691	False	False	RNF13	['Epileptic encephalopathy, early infantile, 73, 618379 (3)']	39.16054625299977	45.27200022373311
+9	84843835	call_3070	A	<DUP:TANDEM>			3.0	False	84897396	53561	False	False	NTRK2	['Epileptic encephalopathy, early infantile, 58, 617830 (3)', 'Obesity, hyperphagia, and developmental delay, 613886 (3)']	32.5449879559997	37.624007911088476
+7	40002393	call_2988	C	<DUP:TANDEM>			3.0	False	40052827	50434	False	False	CDK13	['Congenital heart defects, dysmorphic facial features, and intellectual developmental disorder, 617360 (3)']	25.26847899499978	29.21191597595236
+11	27622774	call_2370	G	<DUP:TANDEM>			3.0	False	27672384	49610	False	False	BDNF	.	16.192390471999953	18.71939937546202

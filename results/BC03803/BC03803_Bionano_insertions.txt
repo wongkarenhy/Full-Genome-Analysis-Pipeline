@@ -1,3 +1,3 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-2903	3	3	79526186.0	79539681.0	10996736.4	11011316.5	1.0	insertion	homozygous	1	1085.0	False	False	ROBO1	.	13.208541212	44.253607404373355
-13775	15	15	75297230.0	75386804.0	12319613.5	12432608.8	1.0	insertion	heterozygous	1	23421.0	False	False	SIN3A	['Witteveen-Kolk syndrome, 613406 (3)']	4.513864667999988	15.123153396581424
+2903	3	3	79526186.0	79539681.0	10996736.4	11011316.5	1.0	insertion	homozygous	1	1085.0	False	False	ROBO1	.	24.429729447000238	81.84883088833601
+13775	15	15	75297230.0	75386804.0	12319613.5	12432608.8	1.0	insertion	heterozygous	1	23421.0	False	False	SIN3A	['Witteveen-Kolk syndrome, 613406 (3)']	24.229999458000236	81.17965990433244

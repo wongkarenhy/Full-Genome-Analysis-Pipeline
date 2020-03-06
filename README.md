@@ -140,7 +140,7 @@ To get started, pull the github repo and create two additional directories (bion
     
     
 **Output files explanations:**<br>
-Score and normalized scores are two important indicators that show how relevant the variants are based on the proband's clinical phenome. The raw scores are normalized between 0-100 among all variants. 100 is assigned to highest ranking variant found in the proband. An html report combining all the result files in confident_set is generated for quick review. <br>
+Score and normalized scores are two important indicators that show how relevant the variants are based on the proband's clinical phenome. The raw scores are normalized between 0-100 among all variants. 100 is assigned to highest ranking variant found in the proband. An html report combining all the result files in confident_set is generated for quick review. The easiest way to view the html report is to download the entire repository as a zipped file and open it with Chrome or Safari.<br>
 
 **Files of highest priority:**<br>
 $SAMPLEID_confident_deletion_exons.txt<br>

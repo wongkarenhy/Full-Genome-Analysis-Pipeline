@@ -1,4 +1,4 @@
-CHROM_x	POS_x	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	SVTYPE	MATEID_x	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2
-13	113672398	call_121_1	T	[chr13:113751183[T			26.0	False	BND	call_121_2	GRK1	['Oguchi disease-2, 613411 (3)']	LOC105377805	.
-13	113672398	call_121_1	T	[chr13:113751183[T			26.0	False	BND	call_121_2	GRK1	['Oguchi disease-2, 613411 (3)']	LINC00552	.
-13	113672398	call_121_1	T	[chr13:113751183[T			26.0	False	BND	call_121_2	GRK1	['Oguchi disease-2, 613411 (3)']	TMEM255B	.
+CHROM_x	POS_x	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	SVTYPE	MATEID_x	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+13	113672398	call_121_1	T	[chr13:113751183[T			26.0	False	BND	call_121_2	GRK1	['Oguchi disease-2, 613411 (3)']	LOC105377805	.	False	False
+13	113672398	call_121_1	T	[chr13:113751183[T			26.0	False	BND	call_121_2	GRK1	['Oguchi disease-2, 613411 (3)']	LINC00552	.	False	False
+13	113672398	call_121_1	T	[chr13:113751183[T			26.0	False	BND	call_121_2	GRK1	['Oguchi disease-2, 613411 (3)']	TMEM255B	.	False	False

@@ -1,2 +1,2 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3	46977318	call_4516	C	<DEL>			2.0	True	46981158	-3840	True	False	NBEAL2	['Gray platelet syndrome, 139090 (3)']	4.699771154000114	91.32213417363901
+3	46977318	call_4516	C	<DEL>			2.0	True	46981158	-3840	True	False	NBEAL2	['Gray platelet syndrome, 139090 (3)']	1.1623187260000036	22.585233018838043

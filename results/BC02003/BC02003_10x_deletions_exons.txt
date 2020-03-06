@@ -1,2 +1,2 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-22	20887409	call_3735	G	<DEL>			2.0	True	20887713	-304	False	False	SNAP29	['Cerebral dysgenesis, neuropathy, ichthyosis, and palmoplantar keratoderma syndrome, 609528 (3)']	61.285264792000845	52.07821463496972
+22	20887409	call_3735	G	<DEL>			2.0	True	20887713	-304	False	False	SNAP29	['Cerebral dysgenesis, neuropathy, ichthyosis, and palmoplantar keratoderma syndrome, 609528 (3)']	41.75331654500026	35.4806035044851

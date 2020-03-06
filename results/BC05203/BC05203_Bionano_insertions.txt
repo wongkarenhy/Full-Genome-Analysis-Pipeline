@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-17169	20	20	31643773.0	31652293.0	457978.2	469951.9	1.0	insertion	heterozygous	1	3454.0	False	True	COX4I2	['Exocrine pancreatic insufficiency, dyserythropoietic anemia, and calvarial hyperostosis, 612714 (3)']	16.19990383000011	76.37507710265871
+17169	20	20	31643773.0	31652293.0	457978.2	469951.9	1.0	insertion	heterozygous	1	3454.0	False	True	COX4I2	['Exocrine pancreatic insufficiency, dyserythropoietic anemia, and calvarial hyperostosis, 612714 (3)']	17.688611547000196	83.3936475745802

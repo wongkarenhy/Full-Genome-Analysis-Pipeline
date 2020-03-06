@@ -1,4 +1,4 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-X	155532641	call_3401	A	<DEL>			15.0	True	155548566	-15925	False	True	TMLHE	['{Autism, susceptibility to, X-linked 6}, 300872 (3)']	127.13327726400269	76.31811225896352
-7	107691939	call_3929	T	<DEL>			7.0	True	107695996	-4057	True	False	SLC26A4	['Deafness, autosomal recessive 4, with enlarged vestibular aqueduct, 600791 (3)', 'Pendred syndrome, 274600 (3)']	111.17488389300152	66.73828797557259
-10	13112096	call_981	A	<DEL>			149.0	True	13113273	-1177	False	True	OPTN	['Amyotrophic lateral sclerosis 12, 613435 (3)', 'Glaucoma 1, open angle, E, 137760 (3)', '{Glaucoma, normal tension, susceptibility to}, 606657 (3)']	53.85333486299927	32.32815942484682
+X	155532641	call_3401	A	<DEL>			15.0	True	155548566	-15925	False	True	TMLHE	['{Autism, susceptibility to, X-linked 6}, 300872 (3)']	44.328970396999345	26.610682992598207
+7	107691939	call_3929	T	<DEL>			7.0	True	107695996	-4057	True	False	SLC26A4	['Deafness, autosomal recessive 4, with enlarged vestibular aqueduct, 600791 (3)', 'Pendred syndrome, 274600 (3)']	44.25152964399936	26.564195304967857
+10	13112096	call_981	A	<DEL>			149.0	True	13113273	-1177	False	True	OPTN	['Amyotrophic lateral sclerosis 12, 613435 (3)', 'Glaucoma 1, open angle, E, 137760 (3)', '{Glaucoma, normal tension, susceptibility to}, 606657 (3)']	27.309331764999744	16.39379312963454

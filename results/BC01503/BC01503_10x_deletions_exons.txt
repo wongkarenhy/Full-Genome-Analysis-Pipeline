@@ -1,2 +1,2 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-11	17573025	call_3911	A	<DEL>			2.0	True	17573332	-307	False	False	OTOG	['Deafness, autosomal recessive 18B, 614945 (3)']	75.69432827199978	97.44686013638515
+11	17573025	call_3911	A	<DEL>			2.0	True	17573332	-307	False	False	OTOG	['Deafness, autosomal recessive 18B, 614945 (3)']	34.84114845599958	44.853565624926276

@@ -1,3 +1,3 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3034	3	3	46963350.0	46987679.0	43528652.7	43548883.5	1.0	deletion	heterozygous	1	4098.0	True	False	NBEAL2	['Gray platelet syndrome, 139090 (3)']	4.699771154000114	91.32213417363901
-10376	9	9	109142203.0	109148943.0	26960885.0	26966444.4	0.99	deletion	heterozygous	1	1181.0	True	False	FRRS1L	['Epileptic encephalopathy, early infantile, 37, 616981 (3)']	0.001452432	0.028222478421995875
+10376	9	9	109142203.0	109148943.0	26960885.0	26966444.4	0.99	deletion	heterozygous	1	1181.0	True	False	FRRS1L	['Epileptic encephalopathy, early infantile, 37, 616981 (3)']	2.2141159649999977	43.0229023086859
+3034	3	3	46963350.0	46987679.0	43528652.7	43548883.5	1.0	deletion	heterozygous	1	4098.0	True	False	NBEAL2	['Gray platelet syndrome, 139090 (3)']	1.1623187260000036	22.585233018838043

@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3119	11	11	10193693.0	10212111.0	1313633.6	1325217.5	1.0	deletion	heterozygous	1	6834.0	False	True	SBF2	['Charcot-Marie-Tooth disease, type 4B2, 604563 (3)']	38.22716446599946	93.78641675786692
+3119	11	11	10193693.0	10212111.0	1313633.6	1325217.5	1.0	deletion	heterozygous	1	6834.0	False	True	SBF2	['Charcot-Marie-Tooth disease, type 4B2, 604563 (3)']	38.15958129499947	93.62060839803254

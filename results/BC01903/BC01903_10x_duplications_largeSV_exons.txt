@@ -1,21 +1,21 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-1	65563990	call_1989	G	<DUP:TANDEM>			3.0	False	65630087	66097	False	False	LEPR	['Obesity, morbid, due to leptin receptor deficiency, 614963 (3)']	56.76793648999873	98.03252810969423
-15	76616056	call_2213	A	<DUP:TANDEM>			3.0	False	76647846	31790	False	False	SCAPER	['Intellectual developmental disorder and retinitis pigmentosa, 618195 (3)']	54.679382973998806	94.42580583079062
-10	77936411	call_2063	C	<DUP:TANDEM>			3.0	False	77979154	42743	False	False	POLR3A	['Leukodystrophy, hypomyelinating, 7, with or without oligodontia and/or hypogonadotropic hypogonadism, 607694 (3)', 'Wiedemann-Rautenstrauch syndrome, 264090 (3)']	54.40220794599882	93.94715237949772
-3	149062798	call_3569	C	<DUP:TANDEM>			2.0	False	149130422	67624	False	False	HPS3	['Hermansky-Pudlak syndrome 3, 614072 (3)']	52.04471428399882	89.87599746392037
-6	73073973	call_2638	T	<DUP:TANDEM>			3.0	False	73142857	68884	False	False	KCNQ5	['Mental retardation, autosomal dominant 46, 617601 (3)']	49.0276942929989	84.66590677958986
-18	23919646	call_1597	G	<DUP:TANDEM>			4.0	False	23952347	32701	False	False	LAMA3	['Cardiomyopathy, dilated, 1JJ, 615235 (3)', 'Epidermolysis bullosa, generalized atrophic benign, 226650 (3)', 'Epidermolysis bullosa, junctional, Herlitz type, 226700 (3)', 'Laryngoonychocutaneous syndrome, 245660 (3)']	45.36639992899907	78.343218923569
-14	67595623	call_2190	G	<DUP:TANDEM>			3.0	False	67654836	59213	False	False	PIGH	['Glycosylphosphatidylinositol biosynthesis defect 17, 618010 (3)']	40.70382494199923	70.29141993740808
-6	32579123	call_2631	G	<DUP:TANDEM>			3.0	False	32621579	42456	False	False	HLA-DRB1	['{Multiple sclerosis, susceptibility to, 1}, 126200 (3)', '{Sarcoidosis, susceptibility to, 1}, 181000 (3)']	40.598801377999244	70.11005478435513
-8	132520308	call_2748	T	<DUP:TANDEM>			3.0	False	132592537	72229	False	False	LRRC6	['Ciliary dyskinesia, primary, 19, 614935 (3)']	36.14217085399937	62.41390121365927
-19	45010752	call_3341	C	<DUP:TANDEM>			2.0	False	45081020	70268	False	False	RELB	['?Immunodeficiency 53, 617585 (3)']	32.82599739399945	56.687202516563985
-19	5672210	call_1611	A	<DUP:TANDEM>			4.0	False	5717681	45471	False	False	MICOS13	['Combined oxidative phosphorylation deficiency 37, 618329 (3)']	31.328724404999523	54.10156235668463
-14	73908670	call_3161	C	<DUP:TANDEM>			2.0	False	73962857	54187	False	False	COQ6	['Coenzyme Q10 deficiency, primary, 6, 614650 (3)']	31.241536272999536	53.950997204424326
-17	78120554	call_2282	G	<DUP:TANDEM>			3.0	False	78166927	46373	False	False	TMC6	['Epidermodysplasia verruciformis, 226400 (3)']	29.04251253299965	50.15350393736847
-20	34507220	call_3469	A	<DUP:TANDEM>			2.0	False	34555859	48639	False	False	ITCH	['Autoimmune disease, multisystem, with facial dysmorphism, 613385 (3)']	27.565816913999758	47.60339882997967
-7	144469246	call_3826	A	<DUP:TANDEM>			2.0	False	144547722	78476	False	False	TPK1	['Thiamine metabolism dysfunction syndrome 5 (episodic encephalopathy type), 614458 (3)']	23.188627583999956	40.0444322272345
-5	56154782	call_3670	G	<DUP:TANDEM>			2.0	False	56215399	60617	False	False	ANKRD55	.	22.26155748900001	38.4434752299029
-17	78120554	call_2282	G	<DUP:TANDEM>			3.0	False	78166927	46373	False	False	TMC8	['Epidermodysplasia verruciformis 2, 618231 (3)']	10.988673464000078	18.976336059663296
-12	7159389	call_3057	C	<DUP:TANDEM>			2.0	False	7201569	42180	False	False	PEX5	['Peroxisome biogenesis disorder 2A (Zellweger), 214110 (3)', 'Peroxisome biogenesis disorder 2B, 202370 (3)', 'Rhizomelic chondrodysplasia punctata, type 5, 616716 (3)']	8.881135252000002	15.336829116398732
-19	5672210	call_1611	A	<DUP:TANDEM>			4.0	False	5717681	45471	False	False	LONP1	['CODAS syndrome, 600373 (3)']	7.688519913999975	13.277302139103405
-1	33025149	call_2860	G	<DUP:TANDEM>			2.0	False	33095770	70621	False	False	AK2	['Reticular dysgenesis, 267500 (3)']	2.544074242999998	4.393360850521413
+14	73908670	call_3161	C	<DUP:TANDEM>			2.0	False	73962857	54187	False	False	COQ6	['Coenzyme Q10 deficiency, primary, 6, 614650 (3)']	54.694329209999026	94.45161648010071
+8	132520308	call_2748	T	<DUP:TANDEM>			3.0	False	132592537	72229	False	False	LRRC6	['Ciliary dyskinesia, primary, 19, 614935 (3)']	51.7221137919991	89.31889879598202
+19	45010752	call_3341	C	<DUP:TANDEM>			2.0	False	45081020	70268	False	False	RELB	['?Immunodeficiency 53, 617585 (3)']	51.43776870999912	88.82786338114134
+15	76616056	call_2213	A	<DUP:TANDEM>			3.0	False	76647846	31790	False	False	SCAPER	['Intellectual developmental disorder and retinitis pigmentosa, 618195 (3)']	46.749387147999265	80.7314990303481
+7	144469246	call_3826	A	<DUP:TANDEM>			2.0	False	144547722	78476	False	False	TPK1	['Thiamine metabolism dysfunction syndrome 5 (episodic encephalopathy type), 614458 (3)']	45.36094717599932	78.33380256647034
+1	33025149	call_2860	G	<DUP:TANDEM>			2.0	False	33095770	70621	False	False	AK2	['Reticular dysgenesis, 267500 (3)']	39.83983773199947	68.79940075038587
+3	149062798	call_3569	C	<DUP:TANDEM>			2.0	False	149130422	67624	False	False	HPS3	['Hermansky-Pudlak syndrome 3, 614072 (3)']	39.83870537999947	68.79744529214423
+6	73073973	call_2638	T	<DUP:TANDEM>			3.0	False	73142857	68884	False	False	KCNQ5	['Mental retardation, autosomal dominant 46, 617601 (3)']	35.18860020699965	60.76718042307594
+20	34507220	call_3469	A	<DUP:TANDEM>			2.0	False	34555859	48639	False	False	ITCH	['Autoimmune disease, multisystem, with facial dysmorphism, 613385 (3)']	35.15121813499966	60.702625337041006
+5	56154782	call_3670	G	<DUP:TANDEM>			2.0	False	56215399	60617	False	False	ANKRD55	.	33.183643786999696	57.304821937718906
+1	65563990	call_1989	G	<DUP:TANDEM>			3.0	False	65630087	66097	False	False	LEPR	['Obesity, morbid, due to leptin receptor deficiency, 614963 (3)']	31.449450368999717	54.31004397837419
+14	67595623	call_2190	G	<DUP:TANDEM>			3.0	False	67654836	59213	False	False	PIGH	['Glycosylphosphatidylinositol biosynthesis defect 17, 618010 (3)']	29.73481187199979	51.34903540472765
+18	23919646	call_1597	G	<DUP:TANDEM>			4.0	False	23952347	32701	False	False	LAMA3	['Cardiomyopathy, dilated, 1JJ, 615235 (3)', 'Epidermolysis bullosa, generalized atrophic benign, 226650 (3)', 'Epidermolysis bullosa, junctional, Herlitz type, 226700 (3)', 'Laryngoonychocutaneous syndrome, 245660 (3)']	28.799293832999805	49.73348965608926
+19	5672210	call_1611	A	<DUP:TANDEM>			4.0	False	5717681	45471	False	False	MICOS13	['Combined oxidative phosphorylation deficiency 37, 618329 (3)']	26.76632876399989	46.222763045340045
+6	32579123	call_2631	G	<DUP:TANDEM>			3.0	False	32621579	42456	False	False	HLA-DRB1	['{Multiple sclerosis, susceptibility to, 1}, 126200 (3)', '{Sarcoidosis, susceptibility to, 1}, 181000 (3)']	22.73119216999999	39.254487183358684
+12	7159389	call_3057	C	<DUP:TANDEM>			2.0	False	7201569	42180	False	False	PEX5	['Peroxisome biogenesis disorder 2A (Zellweger), 214110 (3)', 'Peroxisome biogenesis disorder 2B, 202370 (3)', 'Rhizomelic chondrodysplasia punctata, type 5, 616716 (3)']	19.580822266000055	33.81411458457279
+17	78120554	call_2282	G	<DUP:TANDEM>			3.0	False	78166927	46373	False	False	TMC6	['Epidermodysplasia verruciformis, 226400 (3)']	18.148704237000125	31.34099050053868
+10	77936411	call_2063	C	<DUP:TANDEM>			3.0	False	77979154	42743	False	False	POLR3A	['Leukodystrophy, hypomyelinating, 7, with or without oligodontia and/or hypogonadotropic hypogonadism, 607694 (3)', 'Wiedemann-Rautenstrauch syndrome, 264090 (3)']	10.328176729000013	17.83572449715446
+19	5672210	call_1611	A	<DUP:TANDEM>			4.0	False	5717681	45471	False	False	LONP1	['CODAS syndrome, 600373 (3)']	7.012758880999974	12.110330666136743
+17	78120554	call_2282	G	<DUP:TANDEM>			3.0	False	78166927	46373	False	False	TMC8	['Epidermodysplasia verruciformis 2, 618231 (3)']	6.298562318999981	10.876984892639301

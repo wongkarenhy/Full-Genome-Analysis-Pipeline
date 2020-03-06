@@ -1,20 +1,20 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-20	8770640	call_5908	C	<DUP:TANDEM>			3.0	False	8860931	90291	False	False	PLCB1	['Epileptic encephalopathy, early infantile, 12, 613722 (3)']	158.41585183100793	95.09704322757543
-11	68004233	call_4024	G	<DUP:TANDEM>			4.0	False	68045735	41502	False	False	TCIRG1	['Osteopetrosis, autosomal recessive 1, 259700 (3)']	150.0199264920068	90.05696885578706
-4	146386464	call_4706	T	<DUP:TANDEM>			4.0	False	146481954	95490	False	False	SLC10A7	['Short stature, amelogenesis imperfecta, and skeletal dysplasia with scoliosis, 618363 (3)']	145.70431039100595	87.46630430948711
-8	76755154	call_6489	A	<DUP:TANDEM>			3.0	False	76810809	55655	False	False	ZFHX4	['?Ptosis, congenital, 178300 (2)']	144.76829846700576	86.90441630794339
-13	20666992	call_4125	T	<DUP:TANDEM>			4.0	False	20712802	45810	False	False	IFT88	.	135.5264797880042	81.35655212478089
-10	6010359	call_3913	C	<DUP:TANDEM>			4.0	False	6062256	51897	False	False	IL2RA	['Immunodeficiency 41 with lymphoproliferation and autoimmunity, 606367 (3)', '{Diabetes, mellitus, insulin-dependent, susceptibility to, 10}, 601942 (3)']	127.13288906500269	76.31787922308575
-16	2049882	call_5588	A	<DUP:TANDEM>			3.0	False	2136447	86565	False	False	TSC2	['?Focal cortical dysplasia, type II, somatic, 607341 (3)', 'Lymphangioleiomyomatosis, somatic, 606690 (3)', 'Tuberous sclerosis-2, 613254 (3)']	119.40768237000208	71.68043728450931
-15	59138516	call_5564	T	<DUP:TANDEM>			3.0	False	59177209	38693	False	False	MYO1E	['Glomerulosclerosis, focal segmental, 6, 614131 (3)']	116.35297467700187	69.84669611422078
-10	93799539	call_5293	C	<DUP:TANDEM>			3.0	False	93890876	91337	False	False	LGI1	['Epilepsy, familial temporal lobe, 1, 600512 (3)']	114.59386827900173	68.79070446162417
-1	119416772	call_5184	C	<DUP:TANDEM>			3.0	False	119469311	52539	False	False	HSD3B2	['Adrenal hyperplasia, congenital, due to 3-beta-hydroxysteroid dehydrogenase 2 deficiency, 201810 (3)']	112.81025737300166	67.72000275173467
-7	103614164	call_6409	G	<DUP:TANDEM>			3.0	False	103691527	77363	False	False	RELN	['Lissencephaly 2 (Norman-Roberts type), 257320 (3)', '{Epilepsy, familial temporal lobe, 7}, 616436 (3)']	109.31127830900137	65.61956545675629
-20	63607670	call_4513	T	<DUP:TANDEM>			4.0	False	63664329	56659	False	False	RTEL1	['Dyskeratosis congenita, autosomal dominant 4, 615190 (3)', 'Dyskeratosis congenita, autosomal recessive 5, 615190 (3)', 'Pulmonary fibrosis and/or bone marrow failure, telomere-related, 3, 616373 (3)']	108.83218907000135	65.3319681642855
-16	2049882	call_5588	A	<DUP:TANDEM>			3.0	False	2136447	86565	False	False	PKD1	['Polycystic kidney disease 1, 173900 (3)']	105.80519371300115	63.514862710587636
-15	25305631	call_2995	T	<DUP:TANDEM>			5.0	False	25340997	35366	False	False	UBE3A	['Angelman syndrome, 105830 (3)']	64.44181516799905	38.68442464477603
-12	6463335	call_2868	G	<DUP:TANDEM>			5.0	False	6509502	46167	False	False	NCAPD2	['?Microcephaly 21, primary, autosomal recessive, 617983 (3)']	53.768869201999294	32.277454684617105
-4	1162362	call_6103	T	<DUP:TANDEM>			3.0	False	1224507	62145	False	False	CTBP1	['Hypotonia, ataxia, developmental delay, and tooth enamel defect syndrome, 617915 (3)']	30.913482562999725	18.557365021428105
-11	68004233	call_4024	G	<DUP:TANDEM>			4.0	False	68045735	41502	False	False	NDUFS8	['Mitochondrial complex I deficiency, nuclear type 2, 618222 (3)']	29.03470631799978	17.429535554107524
-12	6463335	call_2868	G	<DUP:TANDEM>			5.0	False	6509502	46167	False	False	VAMP1	['Myasthenic syndrome, congenital, 25, 618323 (3)', 'Spastic ataxia 1, autosomal dominant, 108600 (3)']	14.798498367000015	8.883539258502063
-15	84598778	call_5576	T	<DUP:TANDEM>			3.0	False	84685537	86759	False	False	WDR73	['Galloway-Mowat syndrome 1, 251300 (3)']	6.665358083999986	4.001214768062413
+8	76755154	call_6489	A	<DUP:TANDEM>			3.0	False	76810809	55655	False	False	ZFHX4	['?Ptosis, congenital, 178300 (2)']	155.91692978700658	93.59694020824985
+13	20666992	call_4125	T	<DUP:TANDEM>			4.0	False	20712802	45810	False	False	IFT88	.	148.83086256200508	89.34317372326242
+12	6463335	call_2868	G	<DUP:TANDEM>			5.0	False	6509502	46167	False	False	VAMP1	['Myasthenic syndrome, congenital, 25, 618323 (3)', 'Spastic ataxia 1, autosomal dominant, 108600 (3)']	132.5990284040022	79.59920292270714
+4	146386464	call_4706	T	<DUP:TANDEM>			4.0	False	146481954	95490	False	False	SLC10A7	['Short stature, amelogenesis imperfecta, and skeletal dysplasia with scoliosis, 618363 (3)']	123.27640345700082	74.00283073310324
+15	59138516	call_5564	T	<DUP:TANDEM>			3.0	False	59177209	38693	False	False	MYO1E	['Glomerulosclerosis, focal segmental, 6, 614131 (3)']	123.27594953100082	74.0025582413043
+16	2049882	call_5588	A	<DUP:TANDEM>			3.0	False	2136447	86565	False	False	PKD1	['Polycystic kidney disease 1, 173900 (3)']	105.01071594700024	63.03793767067858
+10	93799539	call_5293	C	<DUP:TANDEM>			3.0	False	93890876	91337	False	False	LGI1	['Epilepsy, familial temporal lobe, 1, 600512 (3)']	104.65456975100025	62.824143092643055
+7	103614164	call_6409	G	<DUP:TANDEM>			3.0	False	103691527	77363	False	False	RELN	['Lissencephaly 2 (Norman-Roberts type), 257320 (3)', '{Epilepsy, familial temporal lobe, 7}, 616436 (3)']	96.238471974	57.7719592053849
+20	63607670	call_4513	T	<DUP:TANDEM>			4.0	False	63664329	56659	False	False	RTEL1	['Dyskeratosis congenita, autosomal dominant 4, 615190 (3)', 'Dyskeratosis congenita, autosomal recessive 5, 615190 (3)', 'Pulmonary fibrosis and/or bone marrow failure, telomere-related, 3, 616373 (3)']	84.59401617599937	50.78179184785719
+11	68004233	call_4024	G	<DUP:TANDEM>			4.0	False	68045735	41502	False	False	TCIRG1	['Osteopetrosis, autosomal recessive 1, 259700 (3)']	68.32582151099871	41.01599383325873
+4	1162362	call_6103	T	<DUP:TANDEM>			3.0	False	1224507	62145	False	False	CTBP1	['Hypotonia, ataxia, developmental delay, and tooth enamel defect syndrome, 617915 (3)']	62.19532409499864	37.33585594909161
+15	25305631	call_2995	T	<DUP:TANDEM>			5.0	False	25340997	35366	False	False	UBE3A	['Angelman syndrome, 105830 (3)']	47.949892355999125	28.784322613120572
+11	68004233	call_4024	G	<DUP:TANDEM>			4.0	False	68045735	41502	False	False	NDUFS8	['Mitochondrial complex I deficiency, nuclear type 2, 618222 (3)']	45.518587222999294	27.32481002861636
+15	84598778	call_5576	T	<DUP:TANDEM>			3.0	False	84685537	86759	False	False	WDR73	['Galloway-Mowat syndrome 1, 251300 (3)']	41.69677971099944	25.030578801277887
+12	6463335	call_2868	G	<DUP:TANDEM>			5.0	False	6509502	46167	False	False	NCAPD2	['?Microcephaly 21, primary, autosomal recessive, 617983 (3)']	41.66033026999944	25.00869820014906
+1	119416772	call_5184	C	<DUP:TANDEM>			3.0	False	119469311	52539	False	False	HSD3B2	['Adrenal hyperplasia, congenital, due to 3-beta-hydroxysteroid dehydrogenase 2 deficiency, 201810 (3)']	35.01117197799966	21.017208167978378
+20	8770640	call_5908	C	<DUP:TANDEM>			3.0	False	8860931	90291	False	False	PLCB1	['Epileptic encephalopathy, early infantile, 12, 613722 (3)']	32.30079373999966	19.390167985553187
+16	2049882	call_5588	A	<DUP:TANDEM>			3.0	False	2136447	86565	False	False	TSC2	['?Focal cortical dysplasia, type II, somatic, 607341 (3)', 'Lymphangioleiomyomatosis, somatic, 606690 (3)', 'Tuberous sclerosis-2, 613254 (3)']	21.43237004299988	12.865852734376485
+10	6010359	call_3913	C	<DUP:TANDEM>			4.0	False	6062256	51897	False	False	IL2RA	['Immunodeficiency 41 with lymphoproliferation and autoimmunity, 606367 (3)', '{Diabetes, mellitus, insulin-dependent, susceptibility to, 10}, 601942 (3)']	4.6863920949999995	2.813241392755306

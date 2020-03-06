@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-4325	16	16	47493238.0	47509603.0	701736.4	721102.6	1.0	insertion	heterozygous	1	3001.0	False	True	PHKB	['Phosphorylase kinase deficiency of liver and muscle, autosomal recessive, 261750 (3)']	7.167906478999759	73.60796184228083
+4325	16	16	47493238.0	47509603.0	701736.4	721102.6	1.0	insertion	heterozygous	1	3001.0	False	True	PHKB	['Phosphorylase kinase deficiency of liver and muscle, autosomal recessive, 261750 (3)']	0.20385107199999997	2.0933674250975924

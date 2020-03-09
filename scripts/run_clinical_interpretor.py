@@ -60,7 +60,7 @@ def getClinicalPhenome(args):
 
 
 
-def calculateGeneSumScore(args, hpo_gene_dict, weightDict, clinical_phenome):
+def calculateGeneSumScore(args, hpo_gene_dict, weightDict, clinical_phenome, omim_gene):
 
     # Go through genes in genelist found in the patients
     try:
@@ -86,6 +86,7 @@ def calculateGeneSumScore(args, hpo_gene_dict, weightDict, clinical_phenome):
             gene_score_result = gene_score_result.append({'gene':query, 'score':gene_sum_score}, ignore_index=True)
 
         gene_score_result_r = gene_score_result.iloc[::-1]
+        gene_score_result_r = pd.concat([gene_score_result_r, omim_gene])
         gene_score_result_r = normalizeRawScore(args, gene_score_result_r, 'gene')
 
     return(gene_score_result_r)
@@ -142,6 +143,7 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
 
     # Overlap gene_score_result_r with small variants genes found in the proband
     gene_score_result_r = gene_score_result_r[gene_score_result_r.gene.isin(smallVariantFile.gene)]
+
 
     # Subset the intervar files further to store entries relevant to these set of genes
     filtered_intervar = pd.merge(interVarFinalFile, gene_score_result_r, left_on='Ref_Gene', right_on='gene',how='inner')
@@ -585,10 +587,10 @@ def bionanoSV(args, famid, gene_score_result_r, all_small_variants):
     # Check potential compoundhets with SNPs and indels
     BN_exons = pd.concat([exon_calls_BN_del, exon_calls_BN_dup])
     if BN_exons.empty:
-        pd.DataFrame().to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_Bionano_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
+        pd.DataFrame().to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_Bionano_SV_SNPsIndels_compoundhet_candidates.txt', sep='\t', index=False)
     else:
         BN_exons = pd.merge(BN_exons, all_small_variants, left_on='gene', right_on='Ref_Gene', how='inner')
-        BN_exons.to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_Bionano_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
+        BN_exons.to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_Bionano_SV_SNPsIndels_compoundhet_candidates.txt', sep='\t', index=False)
 
     return cyto_BN_del, cyto_BN_dup, exon_calls_BN_del, exon_calls_BN_dup
 
@@ -673,10 +675,10 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
     # Check potential compoundhets with SNPs and indels
     tenx_exons = pd.concat([exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup])
     if tenx_exons.empty:
-        pd.DataFrame().to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_10x_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
+        pd.DataFrame().to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_10x_SV_SNPsIndels_compoundhet_candidates.txt', sep='\t', index=False)
     else:
         tenx_exons = pd.merge(tenx_exons, all_small_variants, left_on='gene', right_on='Ref_Gene', how='inner')
-        tenx_exons.to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_10x_SV_SNPsIndels_compounthet_candidates.txt', sep='\t', index=False)
+        tenx_exons.to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_10x_SV_SNPsIndels_compoundhet_candidates.txt', sep='\t', index=False)
 
     return cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup
 
@@ -740,6 +742,7 @@ def main():
     ## Read the database files
     hpo_genes = args.database + "/genes_to_phenotype.txt"
     hpo_syndromes = args.database + "/phenotype_annotation.tab"
+    omim_gene = args.workdir + "/annotatedGene.bed"
     smallVariantFileName = args.intervar + "/example/" + args.sampleid + "_smallVariant_geneList.txt"
     interVarFinalFileName = args.intervar + "/example/" + args.sampleid +  ".hg38_multianno.txt.intervar.FINAL"
 
@@ -771,6 +774,18 @@ def main():
     hpo_gene_dict = createGeneSyndromeDict(hpo_genes_df)
     hpo_syndrome_dict = createGeneSyndromeDict(hpo_syndromes_df)
 
+
+    try:
+        omim_gene = pd.read_csv(omim_gene, sep='\t', usecols=['Name', 'Score'])
+        omim_gene.columns = ['gene', 'syndrome_name']
+        omim_gene = omim_gene.loc[omim_gene['syndrome_name']!='.']
+        omim_gene = omim_gene.loc[~omim_gene['gene'].isin(hpo_gene_dict.keys())] # This is a list of genes with OMIM disease pheno but not annotated by HPO
+        omim_gene = pd.DataFrame({'gene':omim_gene['gene'], 'score':np.zeros(len(omim_gene['gene']))})
+    except OSError:
+        print("Could not open/read the input file: " + omim_gene)
+        sys.exit()
+
+
     weights_gene = args.workdir + "/HPO_weight_gene.txt"
     weights_syndrome = args.workdir + "/HPO_weight_syndrome.txt"
 
@@ -796,7 +811,7 @@ def main():
 
     # Get gene sum score
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Generating a clinically relevant primary gene list for ' + args.sampleid + '...')
-    gene_score_result_r = calculateGeneSumScore(args, hpo_gene_dict, weightGeneDict, clinical_phenome)
+    gene_score_result_r = calculateGeneSumScore(args, hpo_gene_dict, weightGeneDict, clinical_phenome, omim_gene)
 
     # Overlap important genes (gene_score_result_r) with all the SNPs and indels
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting SNPs and indels on ' + args.sampleid + '...')

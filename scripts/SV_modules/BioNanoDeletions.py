@@ -162,6 +162,7 @@ def BN_deletion(args):
 
 
     #describe exon overlap
+    df.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNano_deletions_raw.txt', sep='\t', index = False)
     df['Start'], df['End'], df['Chromosome'] = df.RefStartPos, df.RefEndPos, df['RefcontigID1']
     exon_calls = exonOverlap(args, df)
 

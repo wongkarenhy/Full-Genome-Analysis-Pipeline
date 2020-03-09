@@ -20,7 +20,7 @@ def readsmapInv(input):
     raw_df = pd.read_csv(input, sep='\t', comment='#', names=colnames, header=None, skiprows=lambda x: x in [0])
     raw_df = raw_df[['SmapEntryID', 'RefcontigID1', 'RefcontigID2', 'RefStartPos','RefEndPos', 'QryStartPos', 'QryEndPos', 'Confidence', 'Type', 'Zygosity', 'Genotype']]
     #confident_df = raw_df.loc[raw_df['Confidence'] > 0.5] #modulate confidence threshold here
-    confident_df  = raw_df[raw_df['Type']=='inversion']
+    confident_df  = raw_df[(raw_df['Type']=='inversion') | (raw_df['Type']=='inversion_paired')]
     confident_df['RefcontigID1'] = confident_df['RefcontigID1'].astype(str).str.replace("23", "X")
     confident_df['RefcontigID2'] = confident_df['RefcontigID2'].astype(str).str.replace("24", "Y")
 

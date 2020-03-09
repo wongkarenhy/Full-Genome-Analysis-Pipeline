@@ -26,7 +26,7 @@ def readsmapDup(input):
 
 
     # calculate SV size
-    confident_df['SV_size'] = confident_df['RefEndPos'] - confident_df['RefStartPos'] - confident_df['QryEndPos'] + confident_df['QryStartPos']
+    confident_df['SV_size'] = confident_df['RefEndPos'] - confident_df['RefStartPos']
     confident_df['SV_size'] = confident_df['SV_size'].abs().round(0)
     confident_df = confident_df.loc[confident_df['SV_size'] >= 1000]
 
@@ -66,11 +66,11 @@ def BN_duplication(args):
         df = filtered_sample_frame
 
     #describe exon overlap
+    df.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNano_duplications_raw.txt', sep='\t', index = False)
     df['Start'], df['End'], df['Chromosome'] = df.RefStartPos, df.RefEndPos, df['RefcontigID1']
     exon_calls = exonOverlap(args, df)
 
 
-    #df.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNanoDuplications_cytobands.txt', sep='\t', index = False)
     exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_Bionano_duplications_exons.txt', sep='\t', index = False)
 
     return df, exon_calls

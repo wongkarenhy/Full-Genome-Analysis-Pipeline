@@ -1,3 +1,4 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	B4GALT7	['Ehlers-Danlos syndrome, spondylodysplastic type, 1, 130070 (3)']	11.852437890000374	93.21522613947685
-6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	NSD1	['Leukemia, acute myeloid, 601626 (1)', 'Sotos syndrome 1, 117550 (3)']	10.903234332000208	85.750076342233
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	NSD1	['Leukemia, acute myeloid, 601626 (1)', 'Sotos syndrome 1, 117550 (3)']	7.697377077999744	60.537144481636716
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	B4GALT7	['Ehlers-Danlos syndrome, spondylodysplastic type, 1, 130070 (3)']	1.053908064000002	8.288613652965212
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	FGFR4	['{Cancer progression/metastasis} (3)']	0.0	0.0

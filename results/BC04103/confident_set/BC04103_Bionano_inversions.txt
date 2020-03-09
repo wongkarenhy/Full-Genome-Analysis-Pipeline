@@ -1,4 +1,18 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+11229	10	10	126386556.0	126386556.0	78741977.7	78741977.7	0.99	inversion_paired	heterozygous	1	ADAM12	.	ADAM12	.	False	False
+11230	10	10	126402453.0	126403605.0	78757637.9	78758500.3	0.99	inversion_paired	heterozygous	1	ADAM12	.	ADAM12	.	False	False
+11230	10	10	126402453.0	126403605.0	78757637.9	78758500.3	0.99	inversion_paired	heterozygous	1	ADAM12	.	LINC00601	.	False	False
+11230	10	10	126402453.0	126403605.0	78757637.9	78758500.3	0.99	inversion_paired	heterozygous	1	ADAM12	.	LOC112267914	.	False	False
+11230	10	10	126402453.0	126403605.0	78757637.9	78758500.3	0.99	inversion_paired	heterozygous	1	LINC00601	.	ADAM12	.	False	False
+11230	10	10	126402453.0	126403605.0	78757637.9	78758500.3	0.99	inversion_paired	heterozygous	1	LINC00601	.	LINC00601	.	False	False
+11230	10	10	126402453.0	126403605.0	78757637.9	78758500.3	0.99	inversion_paired	heterozygous	1	LINC00601	.	LOC112267914	.	False	False
+11230	10	10	126402453.0	126403605.0	78757637.9	78758500.3	0.99	inversion_paired	heterozygous	1	LOC112267914	.	ADAM12	.	False	False
+11230	10	10	126402453.0	126403605.0	78757637.9	78758500.3	0.99	inversion_paired	heterozygous	1	LOC112267914	.	LINC00601	.	False	False
+11230	10	10	126402453.0	126403605.0	78757637.9	78758500.3	0.99	inversion_paired	heterozygous	1	LOC112267914	.	LOC112267914	.	False	False
 15907	17	17	19342159.0	20380311.0	1513310.7	1513310.7	0.07	inversion	homozygous	1	EPN2	.	CCDC144CP	.	False	False
 15907	17	17	19342159.0	20380311.0	1513310.7	1513310.7	0.07	inversion	homozygous	1	B9D1	['?Meckel syndrome 9, 614209 (3)', 'Joubert syndrome 27, 617120 (3)']	CCDC144CP	.	False	False
 15907	17	17	19342159.0	20380311.0	1513310.7	1513310.7	0.07	inversion	homozygous	1	MIR1180	.	CCDC144CP	.	False	False
+18123	21	21	31909047.0	31916658.0	18944295.0	18944839.5	0.99	inversion_paired	heterozygous	1	HUNK	.	HUNK	.	False	False
+18124	21	21	31916658.0	31916658.0	18944839.5	18952656.0	0.99	inversion_paired	heterozygous	1	HUNK	.	HUNK	.	False	False
+18568	X	23	19337446.0	19339929.0	38864821.6	38861655.4	0.99	inversion_paired	heterozygous	1	PDHA1	['Pyruvate dehydrogenase E1-alpha deficiency, 312170 (3)']			False	False
+18567	X	23	19321308.0	19324129.5	38880621.3	38877633.5	0.99	inversion_paired	heterozygous	1					False	False

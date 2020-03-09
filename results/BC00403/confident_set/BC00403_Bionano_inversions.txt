@@ -15,5 +15,3 @@ SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPo
 5178	22	22	19329537.0	21181136.0	616857.2	651870.2	-1.0	inversion	unknown	-1	LOC105372859	.	LOC105372935	.	False	False
 5178	22	22	19329537.0	21181136.0	616857.2	651870.2	-1.0	inversion	unknown	-1	HIRA	.	FAM230B	.	False	False
 5178	22	22	19329537.0	21181136.0	616857.2	651870.2	-1.0	inversion	unknown	-1	HIRA	.	LOC105372935	.	False	False
-5618	24	Y	21681131.0	21891573.0	408102.6	453966.1	-1.0	inversion	unknown	-1			RBMY1D	.	False	False
-5618	24	Y	21681131.0	21891573.0	408102.6	453966.1	-1.0	inversion	unknown	-1			RBMY1E	.	False	False

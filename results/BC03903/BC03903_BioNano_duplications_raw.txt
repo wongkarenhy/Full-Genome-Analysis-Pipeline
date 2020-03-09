@@ -1,0 +1,9 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother
+5767	5	5	13145832.0	13191030.0	33457531.1	33560038.7	-1.0	duplication	unknown	-1	45198.0	False	True
+8364	7	7	76485710.0	76994527.0	0.0	721094.5	-1.0	duplication_split	unknown	-1	508817.0	False	False
+8720	7	7	144221520.0	144244274.0	15274.2	147010.1	-1.0	duplication_inverted	unknown	-1	22754.0	False	False
+9922	9	9	1722889.0	1758943.0	37614526.3	37530655.2	-1.0	duplication	unknown	-1	36054.0	False	True
+11148	10	10	96712868.5	96935428.0	63830.1	529273.6	-1.0	duplication	unknown	-1	222560.0	False	True
+12155	11	11	134940433.0	135069565.0	17146.4	302879.8	-1.0	duplication	unknown	-1	129132.0	True	False
+12156	11	11	134921348.0	135069565.0	173896.7	478619.9	-1.0	duplication	unknown	-1	148217.0	True	False
+12157	11	11	134921348.0	135069565.0	17073.0	321688.2	-1.0	duplication_split	unknown	-1	148217.0	True	False

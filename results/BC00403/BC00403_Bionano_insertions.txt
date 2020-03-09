@@ -1,3 +1,3 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-1753	6	6	32026323.0	32029517.0	452270.5	488490.3	0.99	insertion	heterozygous	1	33026.0	False	False	C4B	['C4B deficiency, 614379 (3)']	6.9077191800000595	16.947378622288717
-3003	10	10	119667561.0	119672973.0	217992.8	224495.3	1.0	insertion	heterozygous	1	1090.0	False	False	BAG3	['Cardiomyopathy, dilated, 1HH, 613881 (3)', 'Myopathy, myofibrillar, 6, 612954 (3)']	3.843832678	9.43044817794568
+1753	6	6	32026323.0	32029517.0	452270.5	488490.3	0.99	insertion	heterozygous	1	33026.0	False	False	C4B	['C4B deficiency, 614379 (3)']	38.45296080399952	94.3403848523852
+3003	10	10	119667561.0	119672973.0	217992.8	224495.3	1.0	insertion	heterozygous	1	1090.0	False	False	BAG3	['Cardiomyopathy, dilated, 1HH, 613881 (3)', 'Myopathy, myofibrillar, 6, 612954 (3)']	28.08780094499976	68.91053108536853

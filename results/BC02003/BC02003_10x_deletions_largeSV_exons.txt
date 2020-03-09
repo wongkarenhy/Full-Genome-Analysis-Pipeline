@@ -1,4 +1,4 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-19	50136989	call_296	A	<DEL>			9.0	False	50604094	-467105	False	False	SPIB	.	98.3176613100014	83.54713462507259
-19	50136989	call_296	A	<DEL>			9.0	False	50604094	-467105	False	False	POLD1	['Mandibular hypoplasia, deafness, progeroid features, and lipodystrophy syndrome, 615381 (3)', '{Colorectal cancer, susceptibility to, 10}, 612591 (3)']	18.964147437000022	16.115112563276487
-19	50136989	call_296	A	<DEL>			9.0	False	50604094	-467105	False	False	KCNC3	['Spinocerebellar ataxia 13, 605259 (3)']	15.838116367000008	13.458713548414208
+19	50136989	call_296	A	<DEL>			9.0	False	50604094	-467105	False	False	KCNC3	['Spinocerebellar ataxia 13, 605259 (3)']	117.65371763300146	99.97828320215267
+19	50136989	call_296	A	<DEL>			9.0	False	50604094	-467105	False	False	SPIB	.	54.77960702800063	46.54991933388652
+19	50136989	call_296	A	<DEL>			9.0	False	50604094	-467105	False	False	POLD1	['Mandibular hypoplasia, deafness, progeroid features, and lipodystrophy syndrome, 615381 (3)', '{Colorectal cancer, susceptibility to, 10}, 612591 (3)']	34.09648919100005	28.974081916989537

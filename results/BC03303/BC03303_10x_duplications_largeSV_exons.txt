@@ -1,30 +1,35 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-10	88761494	call_2669	C	<DUP:TANDEM>			3.0	False	88813285	51791	False	False	LIPN	['Ichthyosis, congenital, autosomal recessive 8, 613943 (3)']	52.80847476700043	99.28209838107972
-5	78965538	call_2346	A	<DUP:TANDEM>			4.0	False	79020570	55032	False	False	ARSB	['Mucopolysaccharidosis type VI (Maroteaux-Lamy), 253200 (3)']	49.12811745000037	92.36287568366035
-12	102404277	call_2767	C	<DUP:TANDEM>			3.0	False	102451067	46790	False	False	IGF1	['Growth retardation with deafness and mental retardation due to IGF1 deficiency, 608747 (3)']	47.0843351590003	88.5204811555121
-2	50148131	call_3015	T	<DUP:TANDEM>			3.0	False	50206372	58241	False	False	NRXN1	['Pitt-Hopkins-like syndrome 2, 614325 (3)', '{Schizophrenia, susceptibility to, 17}, 614332 (3)']	45.339966871000286	85.24099723278623
-12	108513827	call_1932	A	<DUP:TANDEM>			4.0	False	108573603	59776	False	False	ISCU	['Myopathy with lactic acidosis, hereditary, 255125 (3)']	41.58151327400025	78.17495032602618
-4	16149388	call_231	G	<DUP:TANDEM>			40.0	True	16180785	31397	False	True	TAPT1	['Osteochondrodysplasia, complex lethal, Symoens-Barnes-Gistelinck type, 616897 (3)']	41.37162567900027	77.78035303936531
-15	67030695	call_2002	G	<DUP:TANDEM>			4.0	False	67073251	42556	False	False	SMAD3	['Loeys-Dietz syndrome 3, 613795 (3)']	40.68065354800026	76.48129709443968
-19	53861348	call_1431	C	<DUP:TANDEM>			5.0	False	53907911	46563	False	False	PRKCG	['Spinocerebellar ataxia 14, 605361 (3)']	39.21501674100018	73.7258397875295
-17	16332616	call_2903	C	<DUP:TANDEM>			3.0	False	16390860	58244	False	False	PIGL	['CHIME syndrome, 280000 (3)']	38.90568617800019	73.14428564260216
-10	30267174	call_2643	A	<DUP:TANDEM>			3.0	False	30315591	48417	False	False	MTPAP	['?Spastic ataxia 4, autosomal recessive, 613672 (3)']	37.34277143500013	70.20594182637939
-4	139323111	call_3244	C	<DUP:TANDEM>			3.0	False	139363686	40575	False	False	NAA15	['Mental retardation, autosomal dominant 50, 617787 (3)']	27.341541215000124	51.403218835138034
-5	43662310	call_3273	A	<DUP:TANDEM>			3.0	False	43716036	53726	False	False	NNT	['Glucocorticoid deficiency 4, with or without mineralocorticoid deficiency, 614736 (3)']	26.494683057000127	49.811090766142655
-6	80309140	call_1646	T	<DUP:TANDEM>			5.0	False	80343749	34609	False	False	BCKDHB	['Maple syrup urine disease, type Ib, 248600 (3)']	25.908474676000125	48.70899496786324
-5	78965538	call_2346	A	<DUP:TANDEM>			4.0	False	79020570	55032	False	False	DMGDH	['Dimethylglycine dehydrogenase deficiency, 605850 (3)']	24.51641861900011	46.09187248869978
-2	47388506	call_3013	A	<DUP:TANDEM>			3.0	False	47443219	54713	False	False	MSH2	['Colorectal cancer, hereditary nonpolyposis, type 1, 120435 (3)', 'Mismatch repair cancer syndrome, 276300 (3)', 'Muir-Torre syndrome, 158320 (3)']	24.40994669200011	45.89170089923658
-4	147468683	call_1068	C	<DUP:TANDEM>			6.0	False	147500955	32272	False	False	EDNRA	['Mandibulofacial dysostosis with alopecia, 616367 (3)', '{Migraine, resistance to}, 157300 (3)']	24.203145442000103	45.50290606775509
-1	210550405	call_2623	A	<DUP:TANDEM>			3.0	False	210593327	42922	False	False	HHAT	.	22.585621681000102	42.46189505802814
-14	103920438	call_2836	T	<DUP:TANDEM>			3.0	False	103979372	58934	False	False	TDRD9	['?Spermatogenic failure 30, 618110 (3)']	17.096477246000095	32.14207839549168
-1	54954215	call_2579	C	<DUP:TANDEM>			3.0	False	55001555	47340	False	False	BSND	['Bartter syndrome, type 4a, 602522 (3)', 'Sensorineural deafness with mild renal dysfunction, 602522 (3)']	15.432923447000073	29.014529026507695
-17	16332616	call_2903	C	<DUP:TANDEM>			3.0	False	16390860	58244	False	False	UBB	.	14.648469307000068	27.539723070710732
-1	111739365	call_2598	A	<DUP:TANDEM>			3.0	False	111777862	38497	False	False	KCND3	['Brugada syndrome 9, 616399 (3)', 'Spinocerebellar ataxia 19, 607346 (3)']	14.508499280000065	27.276573679399384
-19	4076167	call_2948	C	<DUP:TANDEM>			3.0	False	4125695	49528	False	False	MAP2K2	['Cardiofaciocutaneous syndrome 4, 615280 (3)']	12.644186179000046	23.771588588970634
-6	46060023	call_3331	T	<DUP:TANDEM>			3.0	False	46112243	52220	False	False	CLIC5	['?Deafness, autosomal recessive 103, 616042 (3)']	12.297032321000042	23.118925098207114
-16	23571429	call_2875	C	<DUP:TANDEM>			3.0	False	23615203	43774	False	False	PALB2	['Fanconi anemia, complementation group N, 610832 (3)', '{Breast cancer, susceptibility to}, 114480 (3)', '{Pancreatic cancer, susceptibility to, 3}, 613348 (3)']	11.408196868000024	21.447877993008703
-8	41690201	call_3469	A	<DUP:TANDEM>			3.0	False	41738033	47832	False	False	ANK1	['Spherocytosis, type 1, 182900 (3)']	7.797586147999995	14.659781758446968
-13	48403110	call_898	T	<DUP:TANDEM>			6.0	False	48436143	33033	False	False	LPAR6	['Hypotrichosis 8, 278150 (3)', 'Woolly hair, autosomal recessive 1, with or without hypotrichosis, 278150 (3)']	6.456160072999998	12.137845721916745
-6	106036820	call_3361	T	<DUP:TANDEM>			3.0	False	106074603	37783	False	False	ATG5	['?Spinocerebellar ataxia, autosomal recessive 25, 617584 (3)']	3.6822091629999965	6.9227042438484725
-15	26940915	call_1989	G	<DUP:TANDEM>			4.0	False	26987804	46889	False	False	GABRA5	['Epileptic encephalopathy, early infantile, 79, 618559 (3)']	2.098549111999997	3.9453583977643354
-1	117903748	call_1797	T	<DUP:TANDEM>			4.0	False	117938072	34324	False	False	GDAP2	['Spinocerebellar ataxia, autosomal recessive 27, 618369 (3)']	1.6408742569999988	3.0849108998742696
+12	108513827	call_1932	A	<DUP:TANDEM>			4.0	False	108573603	59776	False	False	ISCU	['Myopathy with lactic acidosis, hereditary, 255125 (3)']	52.78986724300024	99.24711547281464
+4	139323111	call_3244	C	<DUP:TANDEM>			3.0	False	139363686	40575	False	False	NAA15	['Mental retardation, autosomal dominant 50, 617787 (3)']	51.24330878100023	96.3395221356875
+5	78965538	call_2346	A	<DUP:TANDEM>			4.0	False	79020570	55032	False	False	DMGDH	['Dimethylglycine dehydrogenase deficiency, 605850 (3)']	48.66633055900027	91.49469738944474
+5	78965538	call_2346	A	<DUP:TANDEM>			4.0	False	79020570	55032	False	False	ARSB	['Mucopolysaccharidosis type VI (Maroteaux-Lamy), 253200 (3)']	48.235430688000235	90.68458795958948
+1	111739365	call_2598	A	<DUP:TANDEM>			3.0	False	111777862	38497	False	False	KCND3	['Brugada syndrome 9, 616399 (3)', 'Spinocerebellar ataxia 19, 607346 (3)']	48.04515275700021	90.32685764549417
+15	26940915	call_1989	G	<DUP:TANDEM>			4.0	False	26987804	46889	False	False	GABRA5	['Epileptic encephalopathy, early infantile, 79, 618559 (3)']	47.1821452960002	88.70436822453195
+12	102404277	call_2767	C	<DUP:TANDEM>			3.0	False	102451067	46790	False	False	IGF1	['Growth retardation with deafness and mental retardation due to IGF1 deficiency, 608747 (3)']	47.03403935400018	88.42592297934458
+6	46060023	call_3331	T	<DUP:TANDEM>			3.0	False	46112243	52220	False	False	CLIC5	['?Deafness, autosomal recessive 103, 616042 (3)']	45.008985637000144	84.6187389384261
+2	50148131	call_3015	T	<DUP:TANDEM>			3.0	False	50206372	58241	False	False	NRXN1	['Pitt-Hopkins-like syndrome 2, 614325 (3)', '{Schizophrenia, susceptibility to, 17}, 614332 (3)']	44.78850247600015	84.20422155313226
+17	16332616	call_2903	C	<DUP:TANDEM>			3.0	False	16390860	58244	False	False	PIGL	['CHIME syndrome, 280000 (3)']	44.10722450800013	82.92339103223058
+13	48403110	call_898	T	<DUP:TANDEM>			6.0	False	48436143	33033	False	False	LPAR6	['Hypotrichosis 8, 278150 (3)', 'Woolly hair, autosomal recessive 1, with or without hypotrichosis, 278150 (3)']	42.13821354300014	79.22156966353782
+16	23571429	call_2875	C	<DUP:TANDEM>			3.0	False	23615203	43774	False	False	PALB2	['Fanconi anemia, complementation group N, 610832 (3)', '{Breast cancer, susceptibility to}, 114480 (3)', '{Pancreatic cancer, susceptibility to, 3}, 613348 (3)']	37.06276786100014	69.67952362355192
+4	16149388	call_231	G	<DUP:TANDEM>			40.0	True	16180785	31397	False	True	TAPT1	['Osteochondrodysplasia, complex lethal, Symoens-Barnes-Gistelinck type, 616897 (3)']	36.225615572000095	68.10564298634051
+6	106036820	call_3361	T	<DUP:TANDEM>			3.0	False	106074603	37783	False	False	ATG5	['?Spinocerebellar ataxia, autosomal recessive 25, 617584 (3)']	36.21713231700009	68.08969411901916
+6	80309140	call_1646	T	<DUP:TANDEM>			5.0	False	80343749	34609	False	False	BCKDHB	['Maple syrup urine disease, type Ib, 248600 (3)']	35.745969055000074	67.2038878627728
+1	117903748	call_1797	T	<DUP:TANDEM>			4.0	False	117938072	34324	False	False	GDAP2	['Spinocerebellar ataxia, autosomal recessive 27, 618369 (3)']	30.926496975000045	58.143082692720164
+5	43662310	call_3273	A	<DUP:TANDEM>			3.0	False	43716036	53726	False	False	NNT	['Glucocorticoid deficiency 4, with or without mineralocorticoid deficiency, 614736 (3)']	29.83182696200005	56.08505817288689
+4	147468683	call_1068	C	<DUP:TANDEM>			6.0	False	147500955	32272	False	False	EDNRA	['Mandibulofacial dysostosis with alopecia, 616367 (3)', '{Migraine, resistance to}, 157300 (3)']	29.810826336000048	56.04557613471412
+15	67030695	call_2002	G	<DUP:TANDEM>			4.0	False	67073251	42556	False	False	SMAD3	['Loeys-Dietz syndrome 3, 613795 (3)']	29.786638927000052	56.00010281380272
+1	210550405	call_2623	A	<DUP:TANDEM>			3.0	False	210593327	42922	False	False	HHAT	.	29.51948664100005	55.49784555948117
+8	41690201	call_3469	A	<DUP:TANDEM>			3.0	False	41738033	47832	False	False	ANK1	['Spherocytosis, type 1, 182900 (3)']	20.320280593000028	38.20296090479144
+2	47388506	call_3013	A	<DUP:TANDEM>			3.0	False	47443219	54713	False	False	MSH2	['Colorectal cancer, hereditary nonpolyposis, type 1, 120435 (3)', 'Mismatch repair cancer syndrome, 276300 (3)', 'Muir-Torre syndrome, 158320 (3)']	19.457896008000034	36.58164251625507
+1	54954215	call_2579	C	<DUP:TANDEM>			3.0	False	55001555	47340	False	False	BSND	['Bartter syndrome, type 4a, 602522 (3)', 'Sensorineural deafness with mild renal dysfunction, 602522 (3)']	17.537281992000047	32.97080939657277
+19	4076167	call_2948	C	<DUP:TANDEM>			3.0	False	4125695	49528	False	False	MAP2K2	['Cardiofaciocutaneous syndrome 4, 615280 (3)']	17.509566536000044	32.91870320260657
+10	88761494	call_2669	C	<DUP:TANDEM>			3.0	False	88813285	51791	False	False	LIPN	['Ichthyosis, congenital, autosomal recessive 8, 613943 (3)']	13.491651356000025	25.36485787858159
+14	103920438	call_2836	T	<DUP:TANDEM>			3.0	False	103979372	58934	False	False	TDRD9	['?Spermatogenic failure 30, 618110 (3)']	13.473256358000025	25.33027452791271
+10	30267174	call_2643	A	<DUP:TANDEM>			3.0	False	30315591	48417	False	False	MTPAP	['?Spastic ataxia 4, autosomal recessive, 613672 (3)']	12.396831108000015	23.30655091078674
+17	16332616	call_2903	C	<DUP:TANDEM>			3.0	False	16390860	58244	False	False	UBB	.	6.383699774999993	12.001617389882972
+19	53861348	call_1431	C	<DUP:TANDEM>			5.0	False	53907911	46563	False	False	PRKCG	['Spinocerebellar ataxia 14, 605361 (3)']	0.19042032800000003	0.35799802629534255
+12	14807559	call_1909	T	<DUP:TANDEM>			4.0	False	14849439	41880	False	False	ART4	['[Blood group, Dombrock], 616060 (3)']	0.0	0.0
+12	122498394	call_1312	G	<DUP:TANDEM>			5.0	False	122539310	40916	False	False	ZCCHC8	['?Pulmonary fibrosis and/or bone marrow failure, telomere-related, 5, 618674 (3)']	0.0	0.0
+3	28312666	call_3137	A	<DUP:TANDEM>			3.0	False	28372440	59774	False	False	CMC1	['Capillary malformations, congenital, 1, somatic, mosaic, 163000 (3)', 'Sturge-Weber syndrome, somatic, mosaic, 185300 (3)']	0.0	0.0
+2	62924434	call_2124	T	<DUP:TANDEM>			4.0	False	62959162	34728	False	False	EHBP1	['{Prostate cancer, hereditary, 12}, 611868 (3)']	0.0	0.0
+2	62867081	call_3020	G	<DUP:TANDEM>			3.0	False	62913024	45943	False	False	EHBP1	['{Prostate cancer, hereditary, 12}, 611868 (3)']	0.0	0.0

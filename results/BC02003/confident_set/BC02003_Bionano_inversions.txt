@@ -1,7 +1,8 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
 298	1	1	146145645.0	148623756.0	1198010.4	1418749.2	0.0	inversion	heterozygous	1	NBPF10	.	NOTCH2NLB	.	True	False
 298	1	1	146145645.0	148623756.0	1198010.4	1418749.2	0.0	inversion	heterozygous	1	NOTCH2NLA	.	NOTCH2NLB	.	True	False
-2351	8	8	977303.0	986131.0	767196.5	790286.6	0.08	inversion	homozygous	1	DLGAP2	.	DLGAP2	.	True	True
+1996	6	6	160774937.0	160802817.0	1536673.9	1499975.7	0.99	inversion_paired	heterozygous	1	LOC105378091	.	LOC105378091	.	False	False
+1997	6	6	160870036.0	160870036.0	1431209.3	1431209.3	0.99	inversion_paired	heterozygous	1	LOC112267969	.	LOC112267969	.	False	False
 4060	15	15	28710617.0	29678797.0	459551.3	459551.3	0.01	inversion	homozygous	1	GOLGA8M	.	LOC100130111	.	False	False
 4060	15	15	28710617.0	29678797.0	459551.3	459551.3	0.01	inversion	homozygous	1	GOLGA8M	.	LOC105370743	.	False	False
 4060	15	15	28710617.0	29678797.0	459551.3	459551.3	0.01	inversion	homozygous	1	LOC107984746	.	LOC100130111	.	False	False

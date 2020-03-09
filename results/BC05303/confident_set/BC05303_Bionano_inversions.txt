@@ -1,3 +1,16 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+485	1	1	26240108.0	26245633.0	57152070.2	57147045.3	0.99	inversion_paired	heterozygous	1	LOC101928303	.	LOC101928303	.	False	False
+485	1	1	26240108.0	26245633.0	57152070.2	57147045.3	0.99	inversion_paired	heterozygous	1	LOC101928303	.	CEP85	.	False	False
+485	1	1	26240108.0	26245633.0	57152070.2	57147045.3	0.99	inversion_paired	heterozygous	1	CEP85	.	LOC101928303	.	False	False
+485	1	1	26240108.0	26245633.0	57152070.2	57147045.3	0.99	inversion_paired	heterozygous	1	CEP85	.	CEP85	.	False	False
+486	1	1	26254828.0	26259419.0	57138100.9	57132651.3	0.99	inversion_paired	heterozygous	1	CEP85	.	CEP85	.	False	False
+7701	7	7	23439159.0	23441195.0	32852053.6	32848932.4	0.99	inversion_paired	heterozygous	1	IGF2BP3	.	IGF2BP3	.	False	False
+7702	7	7	23442315.0	23445566.0	32847875.6	32845347.7	0.99	inversion_paired	heterozygous	1	IGF2BP3	.	IGF2BP3	.	False	False
+1021	1	1	175774170.5	175774170.5	14327673.5	14327673.5	0.99	inversion_paired	homozygous	1					False	False
+1022	1	1	175793107.0	175794625.0	14346845.4	14347981.2	0.99	inversion_paired	homozygous	1					False	False
+1213	1	1	175774170.5	175774170.5	14320224.4	14320224.4	0.99	inversion_paired	homozygous	1					False	False
+1214	1	1	175793107.0	175794625.0	14339396.4	14340532.1	0.99	inversion_paired	homozygous	1					False	False
+9973	9	9	104334354.0	104345836.0	36093517.5	36106168.3	0.99	inversion_paired	heterozygous	1					False	False
+9974	9	9	104348979.0	104362110.0	36109423.2	36121838.9	0.99	inversion_paired	heterozygous	1					False	False
 14050	14	14	106352992.0	106453324.0	468501.5	605193.7	0.03	inversion	heterozygous	1					False	False
 17236	22	22	10784271.0	10960224.0	119077.4	119077.4	0.25	inversion	homozygous	1			FRG1FP	.	False	False

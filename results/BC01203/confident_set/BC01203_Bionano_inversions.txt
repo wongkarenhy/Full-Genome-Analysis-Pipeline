@@ -3,3 +3,19 @@ SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPo
 678	2	2	130137133.0	130968568.0	232840.3	232840.3	0.12	inversion	unknown	-1	MED15P9	.	ARHGEF4	.	False	False
 678	2	2	130137133.0	130968568.0	232840.3	232840.3	0.12	inversion	unknown	-1	CCDC74B	.	ARHGEF4	.	False	False
 678	2	2	130137133.0	130968568.0	232840.3	232840.3	0.12	inversion	unknown	-1	SMPD4	['Neurodevelopmental disorder with microcephaly, arthrogryposis, and structural brain anomalies, 618622 (3)']	ARHGEF4	.	False	False
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF816-ZNF321P	.	ZNF816-ZNF321P	.	False	True
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF816-ZNF321P	.	ZNF816	.	False	True
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF816-ZNF321P	.	ZNF702P	.	False	True
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF816-ZNF321P	.	LOC105372453	.	False	True
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF321P	.	ZNF816-ZNF321P	.	False	True
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF321P	.	ZNF816	.	False	True
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF321P	.	ZNF702P	.	False	True
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF321P	.	LOC105372453	.	False	True
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF816	.	ZNF816-ZNF321P	.	False	True
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF816	.	ZNF816	.	False	True
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF816	.	ZNF702P	.	False	True
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF816	.	LOC105372453	.	False	True
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF702P	.	ZNF816-ZNF321P	.	False	True
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF702P	.	ZNF816	.	False	True
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF702P	.	ZNF702P	.	False	True
+4674	19	19	52956046.0	52980910.5	2262172.8	2262172.8	0.99	inversion_paired	heterozygous	1	ZNF702P	.	LOC105372453	.	False	True

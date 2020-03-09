@@ -8,3 +8,6 @@ SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPo
 902	1	1	144453902.0	144639419.0	378065.4	378065.4	0.0	inversion	heterozygous	1	LOC105371211	.	LINC01632	.	False	False
 902	1	1	144453902.0	144639419.0	378065.4	378065.4	0.0	inversion	heterozygous	1	LOC105371211	.	LOC105371214	.	False	False
 902	1	1	144453902.0	144639419.0	378065.4	378065.4	0.0	inversion	heterozygous	1	LOC105371211	.	LOC105371215	.	False	False
+15809	17	17	80265784.0	80280050.0	2962061.8	2947068.6	0.99	inversion_paired	heterozygous	1	SLC26A11	.	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	False	False
+15809	17	17	80265784.0	80280050.0	2962061.8	2947068.6	0.99	inversion_paired	heterozygous	1	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	False	False
+15810	17	17	80309100.0	80324173.0	2918540.5	2901434.7	0.99	inversion_paired	heterozygous	1	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	False	False

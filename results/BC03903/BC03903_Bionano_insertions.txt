@@ -1,12 +1,14 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-8735	7	7	147464797.0	147492922.0	70768689.9	70802723.5	1.0	insertion	heterozygous	1	5909.0	False	True	CNTNAP2	['Cortical dysplasia-focal epilepsy syndrome, 610042 (3)', 'Pitt-Hopkins like syndrome 1, 610042 (3)', '{Autism susceptibility 15}, 612100 (3)']	57.35970947599772	99.64389877153525
-5768	5	5	13191030.0	17602767.0	28933623.6	33515025.2	1.0	insertion	heterozygous	1	169665.0	False	False	DNAH5	['Ciliary dyskinesia, primary, 3, with or without situs inversus, 608644 (3)']	43.239064997998305	75.11385700862519
-5768	5	5	13191030.0	17602767.0	28933623.6	33515025.2	1.0	insertion	heterozygous	1	169665.0	False	False	TRIO	['Mental retardation, autosomal dominant 44, 617061 (3)']	37.94347989299853	65.9144947566345
-5768	5	5	13191030.0	17602767.0	28933623.6	33515025.2	1.0	insertion	heterozygous	1	169665.0	False	False	ANKH	['Chondrocalcinosis 2, 118600 (3)', 'Craniometaphyseal dysplasia, 123000 (3)']	29.532580279998996	51.303283555051024
-9505	8	8	144305705.0	144356043.0	59626092.5	59798008.2	1.0	insertion	heterozygous	1	121578.0	False	False	DGAT1	['?Diarrhea 7, protein-losing enteropathy type, 615863 (3)']	22.93540786199948	39.8428353309786
-14696	15	15	84265985.0	85255817.0	1169500.1	3126810.9	1.0	insertion	heterozygous	1	967479.0	False	False	ZNF592	.	19.128479710999816	33.22953190294341
-14697	15	15	84499615.0	85255817.0	1289101.6	3126810.9	1.0	insertion	heterozygous	1	1081507.0	False	False	ZNF592	.	19.128479710999816	33.22953190294341
-14696	15	15	84265985.0	85255817.0	1169500.1	3126810.9	1.0	insertion	heterozygous	1	967479.0	False	False	WDR73	['Galloway-Mowat syndrome 1, 251300 (3)']	6.345333722999953	11.022960139482443
-14697	15	15	84499615.0	85255817.0	1289101.6	3126810.9	1.0	insertion	heterozygous	1	1081507.0	False	False	WDR73	['Galloway-Mowat syndrome 1, 251300 (3)']	6.345333722999953	11.022960139482443
-5768	5	5	13191030.0	17602767.0	28933623.6	33515025.2	1.0	insertion	heterozygous	1	169665.0	False	False	RETREG1	.	3.226099469000005	5.604301902025082
-5768	5	5	13191030.0	17602767.0	28933623.6	33515025.2	1.0	insertion	heterozygous	1	169665.0	False	False	OTULIN	['Autoinflammation, panniculitis, and dermatosis syndrome, 617099 (3)']	1.6390185540000024	2.8472633556100058
+5768	5	5	13191030.0	17602767.0	28933623.6	33515025.2	1.0	insertion	heterozygous	1	169665.0	False	False	DNAH5	['Ciliary dyskinesia, primary, 3, with or without situs inversus, 608644 (3)']	50.234914285997796	87.26687704032626
+8735	7	7	147464797.0	147492922.0	70768689.9	70802723.5	1.0	insertion	heterozygous	1	5909.0	False	True	CNTNAP2	['Cortical dysplasia-focal epilepsy syndrome, 610042 (3)', 'Pitt-Hopkins like syndrome 1, 610042 (3)', '{Autism susceptibility 15}, 612100 (3)']	48.78339125099784	84.74532636154169
+14696	15	15	84265985.0	85255817.0	1169500.1	3126810.9	1.0	insertion	heterozygous	1	967479.0	False	False	ZNF592	.	39.369498183998246	68.3917392115459
+14697	15	15	84499615.0	85255817.0	1289101.6	3126810.9	1.0	insertion	heterozygous	1	1081507.0	False	False	ZNF592	.	39.369498183998246	68.3917392115459
+5768	5	5	13191030.0	17602767.0	28933623.6	33515025.2	1.0	insertion	heterozygous	1	169665.0	False	False	OTULIN	['Autoinflammation, panniculitis, and dermatosis syndrome, 617099 (3)']	38.95565696999825	67.67282427261023
+5768	5	5	13191030.0	17602767.0	28933623.6	33515025.2	1.0	insertion	heterozygous	1	169665.0	False	False	ANKH	['Chondrocalcinosis 2, 118600 (3)', 'Craniometaphyseal dysplasia, 123000 (3)']	34.69428640199852	60.2700744786377
+9505	8	8	144305705.0	144356043.0	59626092.5	59798008.2	1.0	insertion	heterozygous	1	121578.0	False	False	DGAT1	['?Diarrhea 7, protein-losing enteropathy type, 615863 (3)']	29.736899176998907	51.65822139688754
+5768	5	5	13191030.0	17602767.0	28933623.6	33515025.2	1.0	insertion	heterozygous	1	169665.0	False	False	TRIO	['Mental retardation, autosomal dominant 44, 617061 (3)']	11.49968127499998	19.976967933397813
+5768	5	5	13191030.0	17602767.0	28933623.6	33515025.2	1.0	insertion	heterozygous	1	169665.0	False	False	RETREG1	.	7.956219734999934	13.821352324146114
+14696	15	15	84265985.0	85255817.0	1169500.1	3126810.9	1.0	insertion	heterozygous	1	967479.0	False	False	WDR73	['Galloway-Mowat syndrome 1, 251300 (3)']	5.929288386999977	10.300216253164526
+14697	15	15	84499615.0	85255817.0	1289101.6	3126810.9	1.0	insertion	heterozygous	1	1081507.0	False	False	WDR73	['Galloway-Mowat syndrome 1, 251300 (3)']	5.929288386999977	10.300216253164526
+14696	15	15	84265985.0	85255817.0	1169500.1	3126810.9	1.0	insertion	heterozygous	1	967479.0	False	False	SLC28A1	['[Uridine-cytidineuria], 618477 (3)']	0.0	0.0
+14697	15	15	84499615.0	85255817.0	1289101.6	3126810.9	1.0	insertion	heterozygous	1	1081507.0	False	False	SLC28A1	['[Uridine-cytidineuria], 618477 (3)']	0.0	0.0

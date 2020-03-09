@@ -1,4 +1,4 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-14690	15	15	23367636.0	24478886.0	764516.1	2075135.9	1.0	insertion	heterozygous	1	199370.0	False	False	MKRN3	['Precocious puberty, central, 2, 615346 (3)']	2.631097742000008	82.31916516632357
-14690	15	15	23367636.0	24478886.0	764516.1	2075135.9	1.0	insertion	heterozygous	1	199370.0	False	False	NDN	['Prader-Willi syndrome, 176270 (3)']	1.7408168250000131	54.46494269443626
-14690	15	15	23367636.0	24478886.0	764516.1	2075135.9	1.0	insertion	heterozygous	1	199370.0	False	False	MAGEL2	['Schaaf-Yang syndrome, 615547 (3)']	1.0813186180000023	33.83121975730944
+14690	15	15	23367636.0	24478886.0	764516.1	2075135.9	1.0	insertion	heterozygous	1	199370.0	False	False	NDN	['Prader-Willi syndrome, 176270 (3)']	2.849881427000009	89.16425115979246
+14690	15	15	23367636.0	24478886.0	764516.1	2075135.9	1.0	insertion	heterozygous	1	199370.0	False	False	MAGEL2	['Schaaf-Yang syndrome, 615547 (3)']	2.7421457250000105	85.79352383724678
+14690	15	15	23367636.0	24478886.0	764516.1	2075135.9	1.0	insertion	heterozygous	1	199370.0	False	False	MKRN3	['Precocious puberty, central, 2, 615346 (3)']	0.9318949610000009	29.156201226455032

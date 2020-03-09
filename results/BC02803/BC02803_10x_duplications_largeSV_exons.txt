@@ -1,10 +1,11 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-X	9763361	call_4752	C	<DUP:TANDEM>			3.0	False	9816812	53451	False	False	GPR143	['Nystagmus 6, congenital, X-linked, 300814 (3)', 'Ocular albinism, type I, Nettleship-Falls type, 300500 (3)']	6.613430355000068	96.6346400959009
-9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	SIGMAR1	['?Amyotrophic lateral sclerosis 16, juvenile, 614373 (3)', '?Spinal muscular atrophy, distal, autosomal recessive, 2, 605726 (3)']	5.64744052000005	82.51971409974978
-9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	IL11RA	['Craniosynostosis and dental anomalies, 614188 (3)']	4.403226720000022	64.33941336150232
-3	101531055	call_4219	C	<DUP:TANDEM>			3.0	False	101747353	216298	False	False	ZBTB11	['Intellectual developmental disorder, autosomal recessive 69, 618383 (3)']	3.8666785850000074	56.499437261859434
-1	235646454	call_3480	T	<DUP:TANDEM>			3.0	False	235736000	89546	False	False	LYST	['Chediak-Higashi syndrome, 214500 (3)']	3.6157961800000047	52.83357406950877
-20	51727061	call_2837	A	<DUP:TANDEM>			4.0	False	51794191	67130	True	False	SALL4	['Duane-radial ray syndrome, 607323 (3)', 'IVIC syndrome, 147750 (3)']	2.0380067349999975	29.779106572257056
-2	98965072	call_4016	T	<DUP:TANDEM>			3.0	False	99217689	252617	False	False	LIPT1	['Lipoyltransferase 1 deficiency, 616299 (3)']	0.8249727950000003	12.054402156584539
-10	71432275	call_3515	A	<DUP:TANDEM>			3.0	False	71466661	34386	False	False	CDH23	['Deafness, autosomal recessive 12, 601386 (3)', 'Usher syndrome, type 1D, 601067 (3)', 'Usher syndrome, type 1D/F digenic, 601067 (3)', '{Pituitary adenoma 5, multiple types}, 617540 (3)']	0.7583614350000003	11.081085064792404
-13	38754308	call_3678	A	<DUP:TANDEM>			3.0	False	38799018	44710	False	False	FREM2	['Cryptophthalmos, unilateral or bilateral, isolated, 123570 (3)', 'Fraser syndrome 2, 617666 (3)']	0.6722488100000005	9.822817860345797
+9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	IL11RA	['Craniosynostosis and dental anomalies, 614188 (3)']	6.132237430000058	89.60350759309725
+20	51727061	call_2837	A	<DUP:TANDEM>			4.0	False	51794191	67130	True	False	SALL4	['Duane-radial ray syndrome, 607323 (3)', 'IVIC syndrome, 147750 (3)']	5.951842425000052	86.96759771765808
+3	101531055	call_4219	C	<DUP:TANDEM>			3.0	False	101747353	216298	False	False	ZBTB11	['Intellectual developmental disorder, autosomal recessive 69, 618383 (3)']	5.140458820000034	75.11175915278811
+1	235646454	call_3480	T	<DUP:TANDEM>			3.0	False	235736000	89546	False	False	LYST	['Chediak-Higashi syndrome, 214500 (3)']	3.708158850000006	54.18316617143494
+9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	SIGMAR1	['?Amyotrophic lateral sclerosis 16, juvenile, 614373 (3)', '?Spinal muscular atrophy, distal, autosomal recessive, 2, 605726 (3)']	2.8572079250000004	41.74917473845965
+2	98965072	call_4016	T	<DUP:TANDEM>			3.0	False	99217689	252617	False	False	LIPT1	['Lipoyltransferase 1 deficiency, 616299 (3)']	2.628917619999999	38.41342456391073
+X	9763361	call_4752	C	<DUP:TANDEM>			3.0	False	9816812	53451	False	False	GPR143	['Nystagmus 6, congenital, X-linked, 300814 (3)', 'Ocular albinism, type I, Nettleship-Falls type, 300500 (3)']	1.9803276049999963	28.936306138987117
+13	38754308	call_3678	A	<DUP:TANDEM>			3.0	False	38799018	44710	False	False	FREM2	['Cryptophthalmos, unilateral or bilateral, isolated, 123570 (3)', 'Fraser syndrome 2, 617666 (3)']	1.4064306049999988	20.550592965915307
+10	71432275	call_3515	A	<DUP:TANDEM>			3.0	False	71466661	34386	False	False	CDH23	['Deafness, autosomal recessive 12, 601386 (3)', 'Usher syndrome, type 1D, 601067 (3)', 'Usher syndrome, type 1D/F digenic, 601067 (3)', '{Pituitary adenoma 5, multiple types}, 617540 (3)']	0.33297800500000024	4.865434116002845
+12	50174099	call_2470	C	<DUP:TANDEM>			4.0	False	50208961	34862	False	False	LIMA1	['[Low density lipoprotein cholesterol level QTL 8], 618079 (3)']	0.0	0.0

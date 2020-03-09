@@ -1,2 +1,2 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-8	16087957	call_37	G	<DEL>			74.0	True	16166347	-78390	True	False	MSR1	['Barrett esophagus/esophageal adenocarcinoma, 614266 (3)']	27.735648959000184	38.74795076432383
+8	16087957	call_37	G	<DEL>			74.0	True	16166347	-78390	True	False	MSR1	['Barrett esophagus/esophageal adenocarcinoma, 614266 (3)']	61.470832472000346	85.87752150988139

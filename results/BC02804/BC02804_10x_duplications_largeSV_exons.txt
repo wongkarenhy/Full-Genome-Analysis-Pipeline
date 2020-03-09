@@ -1,17 +1,18 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3	136273810	call_2970	G	<DUP:TANDEM>			3.0	False	136311659	37849	False	False	PCCB	['Propionicacidemia, 606054 (3)']	46.307473016999275	94.29114493453541
-13	25453547	call_2620	A	<DUP:TANDEM>			3.0	False	25499973	46426	False	False	ATP8A2	['?Cerebellar ataxia, mental retardation, and dysequilibrium syndrome 4, 615268 (3)']	44.04609792699927	89.68653940392778
-9	77497980	call_1662	G	<DUP:TANDEM>			5.0	False	77536224	38244	True	False	GNA14	.	43.41416909399927	88.39980771034473
-12	111087422	call_2603	G	<DUP:TANDEM>			3.0	False	111132626	45204	False	False	CUX2	['Epileptic encephalopathy, early infantile, 67, 618141 (3)']	40.238058505999206	81.93262035872031
-14	90018811	call_1905	T	<DUP:TANDEM>			4.0	False	90073241	54430	False	False	TDP1	['?Spinocerebellar ataxia, autosomal recessive, with axonal neuropathy 1, 607250 (3)']	37.12271803499922	75.58917294660068
-15	90787565	call_2687	G	<DUP:TANDEM>			3.0	False	90832511	44946	False	False	BLM	['Bloom syndrome, 210900 (3)']	36.36970230199919	74.05588445141058
-19	39408205	call_2787	C	<DUP:TANDEM>			3.0	False	39446920	38715	False	False	PLEKHG2	['Leukodystrophy and acquired microcephaly with or without dystonia, 616763 (3)']	36.18817449799919	73.68625805287382
-7	141522211	call_2288	A	<DUP:TANDEM>			4.0	False	141561854	39643	False	False	AGK	['Cataract 38, autosomal recessive, 614691 (3)', 'Sengers syndrome, 212350 (3)']	32.46758913899918	66.11041272013462
-22	17605287	call_1467	T	<DUP:TANDEM>			5.0	False	17640539	35252	False	False	ATP6V1E1	['Cutis laxa, autosomal recessive, type IIC, 617402 (3)']	31.539472740999248	64.22058474857147
-1	155108641	call_2441	T	<DUP:TANDEM>			3.0	False	155169278	60637	False	False	DPM3	['Muscular dystrophy-dystroglycanopathy (limb-girdle), type C, 15, 612937 (3)']	25.41211372799967	51.74407374248433
-X	111159774	call_1693	G	<DUP:TANDEM>			5.0	False	111193309	33535	False	False	PAK3	['Mental retardation, X-linked 30/47, 300558 (3)']	20.372884703999866	41.48320992713738
-14	56456384	call_2650	G	<DUP:TANDEM>			3.0	False	56511362	54978	False	False	TMEM260	['Structural heart defects and renal anomalies syndrome, 617478 (3)']	18.167306168999925	36.992217183226785
-22	50669671	call_2093	T	<DUP:TANDEM>			4.0	False	50709486	39815	False	False	SHANK3	['Phelan-McDermid syndrome, 606232 (3)', '{Schizophrenia 15}, 613950 (3)']	6.076514110999971	12.372980761155251
-5	132875083	call_2203	A	<DUP:TANDEM>			4.0	False	132911486	36403	False	False	AFF4	['CHOPS syndrome, 616368 (3)']	5.508040169999984	11.215455738300747
-18	44677124	call_1974	G	<DUP:TANDEM>			4.0	False	44727459	50335	False	False	SETBP1	['Mental retardation, autosomal dominant 29, 616078 (3)', 'Schinzel-Giedion midface retraction syndrome, 269150 (3)']	2.862454202000002	5.828521109976601
-17	50537834	call_2734	C	<DUP:TANDEM>			3.0	False	50572979	35145	False	False	CACNA1G	['Spinocerebellar ataxia 42, 616795 (3)', 'Spinocerebellar ataxia 42, early-onset, severe, with neurodevelopmental deficits, 618087 (3)']	2.5009566140000037	5.092440748798611
+14	56456384	call_2650	G	<DUP:TANDEM>			3.0	False	56511362	54978	False	False	TMEM260	['Structural heart defects and renal anomalies syndrome, 617478 (3)']	48.79165380799924	99.34942680022442
+15	90787565	call_2687	G	<DUP:TANDEM>			3.0	False	90832511	44946	False	False	BLM	['Bloom syndrome, 210900 (3)']	45.97118142799924	93.60638895687663
+3	136273810	call_2970	G	<DUP:TANDEM>			3.0	False	136311659	37849	False	False	PCCB	['Propionicacidemia, 606054 (3)']	35.62635225999915	72.54227720876133
+19	39408205	call_2787	C	<DUP:TANDEM>			3.0	False	39446920	38715	False	False	PLEKHG2	['Leukodystrophy and acquired microcephaly with or without dystonia, 616763 (3)']	35.239407414999164	71.75438121521032
+X	111159774	call_1693	G	<DUP:TANDEM>			5.0	False	111193309	33535	False	False	PAK3	['Mental retardation, X-linked 30/47, 300558 (3)']	30.573492063999296	62.25365763973261
+17	50537834	call_2734	C	<DUP:TANDEM>			3.0	False	50572979	35145	False	False	CACNA1G	['Spinocerebellar ataxia 42, 616795 (3)', 'Spinocerebellar ataxia 42, early-onset, severe, with neurodevelopmental deficits, 618087 (3)']	29.531756577999392	60.1324788041307
+18	44677124	call_1974	G	<DUP:TANDEM>			4.0	False	44727459	50335	False	False	SETBP1	['Mental retardation, autosomal dominant 29, 616078 (3)', 'Schinzel-Giedion midface retraction syndrome, 269150 (3)']	27.14240653799941	55.26729104408445
+22	17605287	call_1467	T	<DUP:TANDEM>			5.0	False	17640539	35252	False	False	ATP6V1E1	['Cutis laxa, autosomal recessive, type IIC, 617402 (3)']	26.978771994999423	54.93409885273676
+5	132875083	call_2203	A	<DUP:TANDEM>			4.0	False	132911486	36403	False	False	AFF4	['CHOPS syndrome, 616368 (3)']	25.71888124199954	52.368712882546085
+13	25453547	call_2620	A	<DUP:TANDEM>			3.0	False	25499973	46426	False	False	ATP8A2	['?Cerebellar ataxia, mental retardation, and dysequilibrium syndrome 4, 615268 (3)']	25.620253136999565	52.167886615482075
+1	155108641	call_2441	T	<DUP:TANDEM>			3.0	False	155169278	60637	False	False	DPM3	['Muscular dystrophy-dystroglycanopathy (limb-girdle), type C, 15, 612937 (3)']	22.61957440999977	46.05791312058526
+14	90018811	call_1905	T	<DUP:TANDEM>			4.0	False	90073241	54430	False	False	TDP1	['?Spinocerebellar ataxia, autosomal recessive, with axonal neuropathy 1, 607250 (3)']	22.24759344399979	45.30048653492128
+12	111087422	call_2603	G	<DUP:TANDEM>			3.0	False	111132626	45204	False	False	CUX2	['Epileptic encephalopathy, early infantile, 67, 618141 (3)']	17.727134658000047	36.09594120365637
+7	141522211	call_2288	A	<DUP:TANDEM>			4.0	False	141561854	39643	False	False	AGK	['Cataract 38, autosomal recessive, 614691 (3)', 'Sengers syndrome, 212350 (3)']	10.788511295000013	21.967536034006592
+9	77497980	call_1662	G	<DUP:TANDEM>			5.0	False	77536224	38244	True	False	GNA14	.	4.360373569	8.878580267430431
+22	50669671	call_2093	T	<DUP:TANDEM>			4.0	False	50709486	39815	False	False	SHANK3	['Phelan-McDermid syndrome, 606232 (3)', '{Schizophrenia 15}, 613950 (3)']	1.4607148530000023	2.974303431795791
+15	36576028	call_676	A	<DUP:TANDEM>			7.0	False	36613163	37135	False	False	C15orf41	['Dyserythropoietic anemia, congenital, type Ib, 615631 (3)']	0.0	0.0

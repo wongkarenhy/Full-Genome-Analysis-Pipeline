@@ -1,1 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+18318	X	23	1703717.0	3861713.0	1565263.7	3505006.2	0.97	deletion	heterozygous	2	218253.0	False	False	XG	['[Blood group, XG system] (3)']	0.0	0.0

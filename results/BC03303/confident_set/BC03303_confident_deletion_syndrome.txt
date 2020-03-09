@@ -1,3 +1,3 @@
 Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b
-X	30097360	30123378	call_3989	G	<DEL>	7.0	True	-5215	False	False	XP21 MICRODELETION SYNDROME	 Xp21 	0.01549268	0.3565665328388726	17837	1.0	deletion	homozygous	1	5088.0	False	True
-X	30097360	30123378	call_3989	G	<DEL>	7.0	True	-5215	False	False	XP21 MICRODELETION SYNDROME	 Xp21 	0.01549268	0.3565665328388726	17937	1.0	deletion	homozygous	1	5088.0	False	True
+X	30097360	30123378	call_3989	G	<DEL>	7.0	True	-5215	False	False	XP21 MICRODELETION SYNDROME	 Xp21 	0.015492680000000002	0.35656653283887246	17837	1.0	deletion	homozygous	1	5088.0	False	True
+X	30097360	30123378	call_3989	G	<DEL>	7.0	True	-5215	False	False	XP21 MICRODELETION SYNDROME	 Xp21 	0.015492680000000002	0.35656653283887246	17937	1.0	deletion	homozygous	1	5088.0	False	True

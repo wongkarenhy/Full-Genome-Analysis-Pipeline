@@ -1,1 +1,3 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+3	143629066	call_2086	T	<DUP:TANDEM>			3.0	False	143677880	48814	False	False	SLC9A9	['{?Autism susceptibility 16}, 613410 (3)']	0.0	0.0
+4	147673243	call_1655	T	<DUP:TANDEM>			4.0	False	147706046	32803	False	False	PRMT9	['Intellectual developmental disorder with dysmorphic facies and behavioral abnormalities, 618089 (3)']	0.0	0.0

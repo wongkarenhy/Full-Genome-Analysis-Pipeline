@@ -1,19 +1,20 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-7	114546188	call_3268	A	<DUP:TANDEM>			3.0	False	114606453	60265	False	False	FOXP2	['Speech-language disorder-1, 602081 (3)']	66.27549201899961	96.22887801111933
-10	110804848	call_3493	A	<DUP:TANDEM>			2.0	False	110934196	129348	False	False	BBIP1	['?Bardet-Biedl syndrome 18, 615995 (3)']	63.498522541000206	92.19684974549138
-9	32926652	call_4144	C	<DUP:TANDEM>			2.0	False	32999805	73153	False	False	APTX	['Ataxia, early-onset, with oculomotor apraxia and hypoalbuminemia, 208920 (3)']	58.7180086570002	85.25576981745371
-X	7256802	call_3365	T	<DUP:TANDEM>			3.0	False	7319580	62778	False	False	STS	['Ichthyosis, X-linked, 308100 (3)']	57.89250131900018	84.05717222872642
-12	6979241	call_2063	A	<DUP:TANDEM>			4.0	False	7070404	91163	False	False	EMG1	['Bowen-Conradi syndrome, 211180 (3)']	57.47279986500016	83.44778557933753
-7	101768812	call_3262	A	<DUP:TANDEM>			3.0	False	101831281	62469	False	False	CUX1	['Global developmental delay with or without impaired intellectual development, 618330 (3)']	52.5480980710001	76.29735162948293
-10	110804848	call_3493	A	<DUP:TANDEM>			2.0	False	110934196	129348	False	False	RBM20	['Cardiomyopathy, dilated, 1DD, 613172 (3)']	49.75818286600005	72.24652678088954
-14	96889745	call_2145	C	<DUP:TANDEM>			4.0	False	96960305	70560	False	False	VRK1	['Pontocerebellar hypoplasia type 1A, 607596 (3)']	47.36968415600002	68.77853968652866
-22	33298963	call_1710	A	<DUP:TANDEM>			5.0	False	33354868	55905	False	False	LARGE1	.	46.61806740700003	67.6872277362545
-11	3798120	call_2740	T	<DUP:TANDEM>			3.0	False	3842082	43962	False	False	PGAP2	['Hyperphosphatasia with mental retardation syndrome 3, 614207 (3)']	37.12205027499994	53.89946024710823
-2	88736839	call_1195	T	<DUP:TANDEM>			6.0	False	88771553	34714	False	False	RPIA	['Ribose 5-phosphate isomerase deficiency, 608611 (3)']	28.557481666999916	41.46411193523406
-11	70036022	call_3515	A	<DUP:TANDEM>			2.0	False	70285557	249535	False	False	FADD	['Infections, recurrent, with encephalopathy, hepatic dysfunction, and cardiovascular malformations, 613759 (3)']	26.41826549599992	38.35807129053302
-22	23163127	call_3856	C	<DUP:TANDEM>			2.0	False	23215970	52843	False	False	BCR	['Leukemia, acute lymphocytic, Philadelphia chromosome positive, somatic, 613065 (4)', 'Leukemia, chronic myeloid, Philadelphia chromosome positive, somatic, 608232 (4)']	25.72609690499993	37.35307525236899
-4	189928771	call_933	C	<DUP:TANDEM>			7.0	False	189960003	31232	False	False	FRG1	.	23.91440696099996	34.72258718952418
-3	79118136	call_2372	T	<DUP:TANDEM>			4.0	False	79149669	31533	False	False	ROBO1	.	18.29659770399997	26.565794003792526
-17	68336828	call_3689	G	<DUP:TANDEM>			2.0	False	68407513	70685	False	False	ARSG	['Usher syndrome, type IV, 618144 (3)']	12.662260869999985	18.38500355840271
-9	16389010	call_3326	A	<DUP:TANDEM>			3.0	False	16462219	73209	False	False	BNC2	['Lower urinary tract obstruction, congenital, 618612 (3)']	12.653146727999983	18.371770255533487
-12	6979241	call_2063	A	<DUP:TANDEM>			4.0	False	7070404	91163	False	False	C1S	['C1s deficiency, 613783 (3)', 'Ehlers-Danlos syndrome, periodontal type, 2, 617174 (3)']	0.4611147770000001	0.6695168345538188
+2	88736839	call_1195	T	<DUP:TANDEM>			6.0	False	88771553	34714	False	False	RPIA	['Ribose 5-phosphate isomerase deficiency, 608611 (3)']	67.61876102299944	98.17924103648835
+4	189928771	call_933	C	<DUP:TANDEM>			7.0	False	189960003	31232	False	False	FRG1	.	62.287704396000215	90.43879909932687
+11	70036022	call_3515	A	<DUP:TANDEM>			2.0	False	70285557	249535	False	False	FADD	['Infections, recurrent, with encephalopathy, hepatic dysfunction, and cardiovascular malformations, 613759 (3)']	53.72791102700007	78.01038420849866
+14	96889745	call_2145	C	<DUP:TANDEM>			4.0	False	96960305	70560	False	False	VRK1	['Pontocerebellar hypoplasia type 1A, 607596 (3)']	53.678346716000064	77.93841917449247
+12	6979241	call_2063	A	<DUP:TANDEM>			4.0	False	7070404	91163	False	False	C1S	['C1s deficiency, 613783 (3)', 'Ehlers-Danlos syndrome, periodontal type, 2, 617174 (3)']	43.1083691019999	62.591311889249056
+22	23163127	call_3856	C	<DUP:TANDEM>			2.0	False	23215970	52843	False	False	BCR	['Leukemia, acute lymphocytic, Philadelphia chromosome positive, somatic, 613065 (4)', 'Leukemia, chronic myeloid, Philadelphia chromosome positive, somatic, 608232 (4)']	42.9443971719999	62.353232406644935
+17	68336828	call_3689	G	<DUP:TANDEM>			2.0	False	68407513	70685	False	False	ARSG	['Usher syndrome, type IV, 618144 (3)']	41.46243108499987	60.20148778041629
+11	3798120	call_2740	T	<DUP:TANDEM>			3.0	False	3842082	43962	False	False	PGAP2	['Hyperphosphatasia with mental retardation syndrome 3, 614207 (3)']	36.434567639999905	52.901267995299264
+9	16389010	call_3326	A	<DUP:TANDEM>			3.0	False	16462219	73209	False	False	BNC2	['Lower urinary tract obstruction, congenital, 618612 (3)']	34.98538244499992	50.7971196729421
+3	79118136	call_2372	T	<DUP:TANDEM>			4.0	False	79149669	31533	False	False	ROBO1	.	22.797744085999888	33.10124553962546
+7	114546188	call_3268	A	<DUP:TANDEM>			3.0	False	114606453	60265	False	False	FOXP2	['Speech-language disorder-1, 602081 (3)']	22.78510121599989	33.082888690692656
+9	32926652	call_4144	C	<DUP:TANDEM>			2.0	False	32999805	73153	False	False	APTX	['Ataxia, early-onset, with oculomotor apraxia and hypoalbuminemia, 208920 (3)']	21.3814070049999	31.044791124302517
+10	110804848	call_3493	A	<DUP:TANDEM>			2.0	False	110934196	129348	False	False	BBIP1	['?Bardet-Biedl syndrome 18, 615995 (3)']	19.81788092599993	28.774625249409286
+12	6979241	call_2063	A	<DUP:TANDEM>			4.0	False	7070404	91163	False	False	EMG1	['Bowen-Conradi syndrome, 211180 (3)']	12.93838525799994	18.785923102555195
+10	110804848	call_3493	A	<DUP:TANDEM>			2.0	False	110934196	129348	False	False	RBM20	['Cardiomyopathy, dilated, 1DD, 613172 (3)']	9.429348736999957	13.690968134600121
+22	33298963	call_1710	A	<DUP:TANDEM>			5.0	False	33354868	55905	False	False	LARGE1	.	9.088006415999965	13.195355238084405
+7	101768812	call_3262	A	<DUP:TANDEM>			3.0	False	101831281	62469	False	False	CUX1	['Global developmental delay with or without impaired intellectual development, 618330 (3)']	5.638062172	8.186199459869089
+X	7256802	call_3365	T	<DUP:TANDEM>			3.0	False	7319580	62778	False	False	STS	['Ichthyosis, X-linked, 308100 (3)']	2.926038222000005	4.248469027434619
+3	143442083	call_3904	C	<DUP:TANDEM>			2.0	False	143575758	133675	False	False	SLC9A9	['{?Autism susceptibility 16}, 613410 (3)']	0.0	0.0

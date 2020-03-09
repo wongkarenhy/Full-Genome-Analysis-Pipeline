@@ -1,3 +1,3 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-12464	11	11	134165327.0	134170281.0	45239228.1	45242554.5	0.99	deletion	heterozygous	2	1628.0	False	True	NCAPD3	['Microcephaly 22, primary, autosomal recessive, 617984 (3)']	63.378972222000066	94.4298092584322
-3712	3	3	101228541.0	101239532.0	31921138.1	31929901.6	1.0	deletion	heterozygous	1	2228.0	True	False	IMPG2	['Macular dystrophy, vitelliform, 5, 616152 (3)', 'Retinitis pigmentosa 56, 613581 (3)']	61.900824723000035	92.2274828165094
+12464	11	11	134165327.0	134170281.0	45239228.1	45242554.5	0.99	deletion	heterozygous	2	1628.0	False	True	NCAPD3	['Microcephaly 22, primary, autosomal recessive, 617984 (3)']	41.91077549699988	62.44384213414125
+3712	3	3	101228541.0	101239532.0	31921138.1	31929901.6	1.0	deletion	heterozygous	1	2228.0	True	False	IMPG2	['Macular dystrophy, vitelliform, 5, 616152 (3)', 'Retinitis pigmentosa 56, 613581 (3)']	20.881281662999896	31.111508681490328

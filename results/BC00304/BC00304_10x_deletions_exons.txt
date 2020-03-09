@@ -1,2 +1,2 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-16	89649131	call_3468	T	<DEL>			2.0	True	89649438	-307	False	False	CHMP1A	['Pontocerebellar hypoplasia, type 8, 614961 (3)']	20.421659142999765	45.745844785215475
+16	89649131	call_3468	T	<DEL>			2.0	True	89649438	-307	False	False	CHMP1A	['Pontocerebellar hypoplasia, type 8, 614961 (3)']	21.083142295999824	47.227610073397095

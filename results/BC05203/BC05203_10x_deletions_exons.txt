@@ -1,14 +1,14 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-1	155188614	call_2773	G	<DEL>			68.0	True	155188692	-78	False	False	MUC1	['Medullary cystic kidney disease 1, 174000 (3)']	20.85647450700033	98.32866079191909
-5	96662500	call_4446	G	<DEL>			3.0	True	96675499	-12999	False	False	CAST	['Peeling skin with leukonychia, acral punctate keratoses, cheilitis, and knuckle pads, 616295 (3)']	16.776905534000186	79.09537409292643
-19	52190174	call_3824	G	<DEL>			7.0	True	52201939	-11765	False	False	PPP2R1A	['Mental retardation, autosomal dominant 36, 616362 (3)']	16.56215887600017	78.08294261590022
-1	17308310	call_4493	T	<DEL>			2.0	True	17330929	-22619	False	False	PADI4	['{Rheumatoid arthritis, susceptibility to}, 180300 (3)']	15.0248411270001	70.83519825622487
-13	27622010	call_4361	G	<DEL>			3.0	True	27648374	-26364	False	False	POLR1D	['Treacher Collins syndrome 2, 613717 (3)']	14.46648618100009	68.2028121322758
-16	88810559	call_4564	G	<DEL>			2.0	True	88811545	-986	False	False	APRT	['Adenine phosphoribosyltransferase deficiency, 614723 (3)']	12.107794676000056	57.08266923228161
-2	73927056	call_4073	A	<DEL>			5.0	True	73946690	-19634	False	False	DGUOK	['Mitochondrial DNA depletion syndrome 3 (hepatocerebral type), 251880 (3)', 'Portal hypertension, noncirrhotic, 617068 (3)', 'Progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal recessive 4, 617070 (3)']	11.997316950000057	56.561817693289704
-6	33305393	call_4454	G	<DEL>			3.0	True	33313214	-7821	False	False	TAPBP	['Bare lymphocyte syndrome, type I, 604571 (3)']	11.862933429000053	55.92826135336284
-7	26365148	call_4460	G	<DEL>			3.0	True	26371883	-6735	False	False	SNX10	['Osteopetrosis, autosomal recessive 8, 615085 (3)']	11.52407730400004	54.330710963856355
-8	38428415	call_4661	C	<DEL>			2.0	True	38457353	-28938	False	False	FGFR1	['Encephalocraniocutaneous lipomatosis, somatic mosaic, 613001 (3)', 'Hartsfield syndrome, 615465 (3)', 'Hypogonadotropic hypogonadism 2 with or without anosmia, 147950 (3)', 'Jackson-Weiss syndrome, 123150 (3)', 'Osteoglophonic dysplasia, 166250 (3)', 'Pfeiffer syndrome, 101600 (3)', 'Trigonocephaly 1, 190440 (3)']	2.468769953999996	11.639112032029656
-4	82428177	call_3264	A	<DEL>			22.0	True	82428275	-98	False	False	HNRNPDL	['Muscular dystrophy, limb-girdle, autosomal dominant 3, 609115 (3)']	1.4153476869999952	6.672711755332313
-9	2161893	call_4666	T	<DEL>			2.0	True	2181566	-19673	False	False	SMARCA2	['Nicolaides-Baraitser syndrome, 601358 (3)']	1.3536753059999964	6.381954914834487
-14	74484585	call_4550	T	<DEL>			2.0	True	74486326	-1741	False	False	NPC2	['Niemann-pick disease, type C2, 607625 (3)']	1.076902306	5.077097834399965
+7	26365148	call_4460	G	<DEL>			3.0	True	26371883	-6735	False	False	SNX10	['Osteopetrosis, autosomal recessive 8, 615085 (3)']	18.028646079000204	84.99675360975182
+5	96662500	call_4446	G	<DEL>			3.0	True	96675499	-12999	False	False	CAST	['Peeling skin with leukonychia, acral punctate keratoses, cheilitis, and knuckle pads, 616295 (3)']	14.58786028400011	68.77503506471867
+4	82428177	call_3264	A	<DEL>			22.0	True	82428275	-98	False	False	HNRNPDL	['Muscular dystrophy, limb-girdle, autosomal dominant 3, 609115 (3)']	13.645964444000095	64.33443046869282
+13	27622010	call_4361	G	<DEL>			3.0	True	27648374	-26364	False	False	POLR1D	['Treacher Collins syndrome 2, 613717 (3)']	13.422841262000086	63.28250754325646
+1	155188614	call_2773	G	<DEL>			68.0	True	155188692	-78	False	False	MUC1	['Medullary cystic kidney disease 1, 174000 (3)']	8.259423803000038	38.93937497391069
+19	52190174	call_3824	G	<DEL>			7.0	True	52201939	-11765	False	False	PPP2R1A	['Mental retardation, autosomal dominant 36, 616362 (3)']	7.824491417000028	36.888869312656155
+9	2161893	call_4666	T	<DEL>			2.0	True	2181566	-19673	False	False	SMARCA2	['Nicolaides-Baraitser syndrome, 601358 (3)']	6.0476914890000275	28.512076899500304
+16	88810559	call_4564	G	<DEL>			2.0	True	88811545	-986	False	False	APRT	['Adenine phosphoribosyltransferase deficiency, 614723 (3)']	3.8102044820000307	17.963357322575405
+2	73927056	call_4073	A	<DEL>			5.0	True	73946690	-19634	False	False	DGUOK	['Mitochondrial DNA depletion syndrome 3 (hepatocerebral type), 251880 (3)', 'Portal hypertension, noncirrhotic, 617068 (3)', 'Progressive external ophthalmoplegia with mitochondrial DNA deletions, autosomal recessive 4, 617070 (3)']	3.480074297000024	16.406945716810306
+8	38428415	call_4661	C	<DEL>			2.0	True	38457353	-28938	False	False	FGFR1	['Encephalocraniocutaneous lipomatosis, somatic mosaic, 613001 (3)', 'Hartsfield syndrome, 615465 (3)', 'Hypogonadotropic hypogonadism 2 with or without anosmia, 147950 (3)', 'Jackson-Weiss syndrome, 123150 (3)', 'Osteoglophonic dysplasia, 166250 (3)', 'Pfeiffer syndrome, 101600 (3)', 'Trigonocephaly 1, 190440 (3)']	2.2071668370000035	10.405773955406652
+6	33305393	call_4454	G	<DEL>			3.0	True	33313214	-7821	False	False	TAPBP	['Bare lymphocyte syndrome, type I, 604571 (3)']	2.1262809690000024	10.024434382663301
+1	17308310	call_4493	T	<DEL>			2.0	True	17330929	-22619	False	False	PADI4	['{Rheumatoid arthritis, susceptibility to}, 180300 (3)']	0.6559836650000005	3.092660519359369
+14	74484585	call_4550	T	<DEL>			2.0	True	74486326	-1741	False	False	NPC2	['Niemann-pick disease, type C2, 607625 (3)']	0.39388379000000007	1.8569804578116071

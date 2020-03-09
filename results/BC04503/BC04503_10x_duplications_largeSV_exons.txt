@@ -1,11 +1,14 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-16	88679542	call_4546	A	<DUP:TANDEM>			3.0	False	88748678	69136	False	False	CTU2	['Microcephaly, facial dysmorphism, renal agenesis, and ambiguous genitalia syndrome, 618142 (3)']	12.166407666000445	95.68448722672534
-6	152247977	call_1195	C	<DUP:TANDEM>			7.0	False	152280103	32126	False	False	SYNE1	['Arthrogryposis multiplex congenita, myogenic type, 618484 (3)', 'Emery-Dreifuss muscular dystrophy 4, autosomal dominant, 612998 (3)', 'Spinocerebellar ataxia, autosomal recessive 8, 610743 (3)']	10.304091908000158	81.03803338016546
-15	36858217	call_4471	G	<DUP:TANDEM>			3.0	False	36900501	42284	False	False	MEIS2	['Cleft palate, cardiac defects, and mental retardation, 600987 (3)']	5.855974385999897	46.05516449223487
-16	88679542	call_4546	A	<DUP:TANDEM>			3.0	False	88748678	69136	False	False	PIEZO1	['Dehydrated hereditary stomatocytosis with or without pseudohyperkalemia and/or perinatal edema, 194380 (3)', 'Lymphatic malformation 6, 616843 (3)']	5.676339485999907	44.642399626352855
-4	109258020	call_5034	A	<DUP:TANDEM>			3.0	False	109329598	71578	False	False	COL25A1	['Fibrosis of extraocular muscles, congenital, 5, 616219 (3)']	4.796301683999949	37.72121400310453
-1	58686906	call_4081	A	<DUP:TANDEM>			3.0	False	58764291	77385	False	False	MYSM1	['Bone marrow failure syndrome 4, 618116 (3)']	3.234837764000012	25.440853307502227
-17	77351091	call_4590	A	<DUP:TANDEM>			3.0	False	77412344	61253	False	False	SEPTIN9	.	2.9715222160000136	23.36996978289265
-15	55435311	call_4480	C	<DUP:TANDEM>			3.0	False	55469696	34385	False	False	DNAAF4	['Ciliary dyskinesia, primary, 25, 615482 (3)', '{Dyslexia, susceptibility to, 1}, 127700 (3)']	2.432942026000016	19.134227341462264
-11	111850655	call_3009	A	<DUP:TANDEM>			4.0	False	111922516	71861	False	False	ALG9	['Congenital disorder of glycosylation, type Il, 608776 (3)', 'Gillessen-Kaesbach-Nishimura syndrome, 263210 (3)']	1.8414893720000147	14.482661696902523
-5	157313789	call_5165	A	<DUP:TANDEM>			3.0	False	157348669	34880	False	False	CYFIP2	['Epileptic encephalopathy, early infantile, 65, 618008 (3)']	1.7078759280000122	13.43183928270178
+1	58686906	call_4081	A	<DUP:TANDEM>			3.0	False	58764291	77385	False	False	MYSM1	['Bone marrow failure syndrome 4, 618116 (3)']	11.969190636000324	94.13344513558583
+15	55435311	call_4480	C	<DUP:TANDEM>			3.0	False	55469696	34385	False	False	DNAAF4	['Ciliary dyskinesia, primary, 25, 615482 (3)', '{Dyslexia, susceptibility to, 1}, 127700 (3)']	11.81185454800029	92.89605252834868
+16	88679542	call_4546	A	<DUP:TANDEM>			3.0	False	88748678	69136	False	False	CTU2	['Microcephaly, facial dysmorphism, renal agenesis, and ambiguous genitalia syndrome, 618142 (3)']	10.177314296000068	80.0409723635477
+16	88679542	call_4546	A	<DUP:TANDEM>			3.0	False	88748678	69136	False	False	PIEZO1	['Dehydrated hereditary stomatocytosis with or without pseudohyperkalemia and/or perinatal edema, 194380 (3)', 'Lymphatic malformation 6, 616843 (3)']	9.80905980999999	77.14478125856537
+11	111850655	call_3009	A	<DUP:TANDEM>			4.0	False	111922516	71861	False	False	ALG9	['Congenital disorder of glycosylation, type Il, 608776 (3)', 'Gillessen-Kaesbach-Nishimura syndrome, 263210 (3)']	8.566212719999774	67.37022908403732
+17	77351091	call_4590	A	<DUP:TANDEM>			3.0	False	77412344	61253	False	False	SEPTIN9	.	8.197418029999728	64.4697894659233
+4	109258020	call_5034	A	<DUP:TANDEM>			3.0	False	109329598	71578	False	False	COL25A1	['Fibrosis of extraocular muscles, congenital, 5, 616219 (3)']	7.694265687999745	60.51267450127068
+15	36858217	call_4471	G	<DUP:TANDEM>			3.0	False	36900501	42284	False	False	MEIS2	['Cleft palate, cardiac defects, and mental retardation, 600987 (3)']	5.091763557999926	40.04491699620284
+6	152247977	call_1195	C	<DUP:TANDEM>			7.0	False	152280103	32126	False	False	SYNE1	['Arthrogryposis multiplex congenita, myogenic type, 618484 (3)', 'Emery-Dreifuss muscular dystrophy 4, autosomal dominant, 612998 (3)', 'Spinocerebellar ataxia, autosomal recessive 8, 610743 (3)']	3.4680312040000083	27.27483712126127
+5	157313789	call_5165	A	<DUP:TANDEM>			3.0	False	157348669	34880	False	False	CYFIP2	['Epileptic encephalopathy, early infantile, 65, 618008 (3)']	1.0844871720000024	8.529107506956922
+3	143520839	call_4949	T	<DUP:TANDEM>			3.0	False	143634130	113291	False	False	SLC9A9	['{?Autism susceptibility 16}, 613410 (3)']	0.0	0.0
+11	61852347	call_4273	A	<DUP:TANDEM>			3.0	False	61911124	58777	False	False	FADS2	['Fetal akinesia deformation sequence 2, 618388 (3)', 'Myasthenic syndrome, congenital, 11, associated with acetylcholine receptor deficiency, 616326 (3)']	0.0	0.0
+11	61852347	call_4273	A	<DUP:TANDEM>			3.0	False	61911124	58777	False	False	FADS3	['?Fetal akinesia deformation sequence 3, 618389 (3)', 'Myasthenic syndrome, congenital, 10, 254300 (3)']	0.0	0.0

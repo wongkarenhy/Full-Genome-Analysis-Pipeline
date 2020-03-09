@@ -1,2 +1,1 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-2588	X	23	51689302.0	51689302.0	496736.2	496736.2	0.04	inversion	homozygous	1	CENPVL2	.			False	False

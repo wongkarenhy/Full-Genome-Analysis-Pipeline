@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-7663	7	7	16880724.0	17382362.0	0.0	665353.2	-1.0	duplication_split	unknown	-1	163715.0	True	False	AHR	['?Retinitis pigmentosa 85, 618345 (3)']	16.084962975999638	85.25379238432768
+7663	7	7	16880724.0	17382362.0	0.0	665353.2	-1.0	duplication_split	unknown	-1	501638.0	True	False	AHR	['?Retinitis pigmentosa 85, 618345 (3)']	11.952650695999743	63.35164105752808

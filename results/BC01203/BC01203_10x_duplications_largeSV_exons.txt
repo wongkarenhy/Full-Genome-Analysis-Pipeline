@@ -1,9 +1,10 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-19	33639436	call_3302	T	<DUP:TANDEM>			2.0	False	33708711	69275	False	False	CHST8	['?Peeling skin syndrome 3, 616265 (3)']	8.145272978000026	95.54608941000944
-19	17769472	call_3294	C	<DUP:TANDEM>			2.0	False	17827338	57866	False	False	JAK3	['SCID, autosomal recessive, T-negative/B-positive type, 600802 (3)']	7.7397100440000255	90.78873475068599
-1	2324410	call_2892	A	<DUP:TANDEM>			2.0	False	2435743	111333	False	False	PEX10	['Peroxisome biogenesis disorder 6A (Zellweger), 614870 (3)', 'Peroxisome biogenesis disorder 6B, 614871 (3)']	4.577053818000022	53.68998614413949
-10	69958612	call_2162	A	<DUP:TANDEM>			3.0	False	69997467	38855	False	False	COL13A1	['Myasthenic syndrome, congenital, 19, 616720 (3)']	3.4537090880000196	40.51287147889263
-2	231559372	call_3399	A	<DUP:TANDEM>			2.0	False	231753538	194166	False	False	PDE6D	['?Joubert syndrome 22, 615665 (3)']	1.989936184000017	23.342449181287343
-2	189505936	call_3384	T	<DUP:TANDEM>			2.0	False	189610152	104216	False	False	SLC40A1	['Hemochromatosis, type 4, 606069 (3)']	1.9886524840000168	23.327391059195314
-6	42948793	call_2691	G	<DUP:TANDEM>			3.0	False	42988068	39275	False	False	PEX6	['Heimler syndrome 2, 616617 (3)', 'Peroxisome biogenesis disorder 4A (Zellweger), 614862 (3)', 'Peroxisome biogenesis disorder 4B, 614863 (3)']	1.8507519280000144	21.709783044233312
-11	94068241	call_3039	T	<DUP:TANDEM>			2.0	False	94147425	79184	False	False	HEPHL1	['?Abnormal hair, joint laxity, and developmental delay, 261990 (3)']	0.10194302999999999	1.1958172409218477
+19	33639436	call_3302	T	<DUP:TANDEM>			2.0	False	33708711	69275	False	False	CHST8	['?Peeling skin syndrome 3, 616265 (3)']	8.496726104000025	99.66872248700038
+10	69958612	call_2162	A	<DUP:TANDEM>			3.0	False	69997467	38855	False	False	COL13A1	['Myasthenic syndrome, congenital, 19, 616720 (3)']	8.458374364000024	99.21884698387522
+11	94068241	call_3039	T	<DUP:TANDEM>			2.0	False	94147425	79184	False	False	HEPHL1	['?Abnormal hair, joint laxity, and developmental delay, 261990 (3)']	7.701063582000022	90.33540208478198
+6	42948793	call_2691	G	<DUP:TANDEM>			3.0	False	42988068	39275	False	False	PEX6	['Heimler syndrome 2, 616617 (3)', 'Peroxisome biogenesis disorder 4A (Zellweger), 614862 (3)', 'Peroxisome biogenesis disorder 4B, 614863 (3)']	4.716592264000018	55.32680701848703
+19	17769472	call_3294	C	<DUP:TANDEM>			2.0	False	17827338	57866	False	False	JAK3	['SCID, autosomal recessive, T-negative/B-positive type, 600802 (3)']	3.055280436000015	35.83920373192792
+2	189505936	call_3384	T	<DUP:TANDEM>			2.0	False	189610152	104216	False	False	SLC40A1	['Hemochromatosis, type 4, 606069 (3)']	2.547576308000012	29.883707318395803
+1	2324410	call_2892	A	<DUP:TANDEM>			2.0	False	2435743	111333	False	False	PEX10	['Peroxisome biogenesis disorder 6A (Zellweger), 614870 (3)', 'Peroxisome biogenesis disorder 6B, 614871 (3)']	1.0836027640000025	12.710931463404332
+2	231559372	call_3399	A	<DUP:TANDEM>			2.0	False	231753538	194166	False	False	PDE6D	['?Joubert syndrome 22, 615665 (3)']	0.027508597999999992	0.32268273526878943
+4	68530638	call_3548	C	<DUP:TANDEM>			2.0	False	68585223	54585	False	False	UGT2B17	['{Bone mineral density QTL 12, osteoporosis}, 612560 (3)']	0.0	0.0

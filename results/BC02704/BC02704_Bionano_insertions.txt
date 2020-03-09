@@ -1,3 +1,4 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-7502	6	6	168197312.0	170250471.0	514644.0	2853626.4	1.0	insertion	heterozygous	1	285823.0	False	False	SMOC2	['Dentin dysplasia, type I, with microdontia and misshapen teeth, 125400 (3)']	22.99107531099974	41.3964136095528
-7502	6	6	168197312.0	170250471.0	514644.0	2853626.4	1.0	insertion	heterozygous	1	285823.0	False	False	ERMARD	['?Periventricular nodular heterotopia 6, 615544 (3)']	0.11545695899999994	0.2078851886748635
+7502	6	6	168197312.0	170250471.0	514644.0	2853626.4	1.0	insertion	heterozygous	1	285823.0	False	False	SMOC2	['Dentin dysplasia, type I, with microdontia and misshapen teeth, 125400 (3)']	38.92139322499914	70.07963178787244
+7502	6	6	168197312.0	170250471.0	514644.0	2853626.4	1.0	insertion	heterozygous	1	285823.0	False	False	ERMARD	['?Periventricular nodular heterotopia 6, 615544 (3)']	26.282670198999504	47.323070870056554
+7502	6	6	168197312.0	170250471.0	514644.0	2853626.4	1.0	insertion	heterozygous	1	285823.0	False	False	THBS2	['{Lumbar disc herniation, susceptibility to}, 603932 (3)']	0.0	0.0

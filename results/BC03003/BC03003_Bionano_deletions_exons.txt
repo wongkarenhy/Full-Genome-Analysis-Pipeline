@@ -1,5 +1,6 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-8989	7	7	142078528.0	143824783.0	15591487.0	17199331.0	1.0	deletion	heterozygous	1	138411.0	False	False	PRSS1	['Pancreatitis, hereditary, 167800 (3)', 'Trypsinogen deficiency, 614044 (1)']	445.5742652809766	71.13674548660757
-8989	7	7	142078528.0	143824783.0	15591487.0	17199331.0	1.0	deletion	heterozygous	1	138411.0	False	False	CLCN1	['Myotonia congenita, dominant, 160800 (3)', 'Myotonia congenita, recessive, 255700 (3)', 'Myotonia levior, recessive (3)']	287.21991452399584	45.855184085405924
-8989	7	7	142078528.0	143824783.0	15591487.0	17199331.0	1.0	deletion	heterozygous	1	138411.0	False	False	TRPV6	['Hyperparathyroidism, transient neonatal, 618188 (3)']	92.07032988400013	14.699196372339829
-8989	7	7	142078528.0	143824783.0	15591487.0	17199331.0	1.0	deletion	heterozygous	1	138411.0	False	False	PRSS2	['{Pancreatitis, chronic, protection against}, 167800 (3)']	49.725032023000026	7.938692206792906
+8989	7	7	142078528.0	143824783.0	15591487.0	17199331.0	1.0	deletion	heterozygous	1	138411.0	False	False	PRSS1	['Pancreatitis, hereditary, 167800 (3)', 'Trypsinogen deficiency, 614044 (1)']	468.85173006897605	74.85303526638907
+8989	7	7	142078528.0	143824783.0	15591487.0	17199331.0	1.0	deletion	heterozygous	1	138411.0	False	False	TRPV6	['Hyperparathyroidism, transient neonatal, 618188 (3)']	312.12241228599163	49.830913348312954
+8989	7	7	142078528.0	143824783.0	15591487.0	17199331.0	1.0	deletion	heterozygous	1	138411.0	False	False	PRSS2	['{Pancreatitis, chronic, protection against}, 167800 (3)']	304.02173494499317	48.53762541142469
+8989	7	7	142078528.0	143824783.0	15591487.0	17199331.0	1.0	deletion	heterozygous	1	138411.0	False	False	CLCN1	['Myotonia congenita, dominant, 160800 (3)', 'Myotonia congenita, recessive, 255700 (3)', 'Myotonia levior, recessive (3)']	276.0162244409965	44.0664944952596
+8989	7	7	142078528.0	143824783.0	15591487.0	17199331.0	1.0	deletion	heterozygous	1	138411.0	False	False	KEL	['[Blood group, Kell], 110900 (3)']	0.0	0.0

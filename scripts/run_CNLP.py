@@ -19,47 +19,58 @@ def queryHPO(args):
         print("Count not open/read the obo file:" + args.database + "/hp.obo")
         sys.exit()
 
-    # Read the file containing query HPO terms
-    try:
-        hpo_exact = open(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt', 'r')
-    except OSError:
-        print("Count not open/read the input file:", args.workdir + '/results' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt')
-        sys.exit()
-
     # Read the file containing manual HPO terms
     try:
-        hpo_manual = open(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt', 'r')
+        #hpo_manual = open(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt', 'r')
+        hpo_manual = pd.read_csv(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt', sep='\t', names = ["HPO_id"])
     except OSError:
         print("Count not open/read the input file:", args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt')
         sys.exit()
 
-    with hpo_manual:
 
-        hpo_manual_file = hpo_manual.read().splitlines()
+    if args.manual:
+        all_hpo = set(hpo_manual['HPO_id'])
+    else:
+        # Read the file containing query HPO terms
+        try:
+            #hpo_exact = open(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt', 'r')
+            hpo_exact = pd.read_csv(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt', sep='\t', names = ["HPO_id"])
+            all_hpo = set(hpo_exact['HPO_id'].append(hpo_manual['HPO_id']))
+        except OSError:
+            print("Count not open/read the input file:", args.workdir + '/results' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt')
+            sys.exit()
 
-        for manual_term in hpo_manual_file:
 
-            relatives.add(manual_term)
+    # with hpo_manual:
+    #
+    #     hpo_manual_file = hpo_manual.read().splitlines()
+    #
+    #     for manual_term in hpo_manual_file:
+    #
+    #         relatives.add(manual_term)
 
-    with hpo_exact:
+    # with hpo_exact:
+    #
+    #     hpo_exact_file = hpo_exact.read().splitlines()
 
-        hpo_exact_file = hpo_exact.read().splitlines()
+    for query in all_hpo:
 
-        for query in hpo_exact_file:
+        # Get the parents and children terms
+        # Relatives include self
+        relatives.add(query)
+        relatives = relatives.union(networkx.ancestors(hpo, query))
+        relatives = relatives.union(networkx.descendants(hpo, query))
 
-            # Get the parents and children terms
-            # Relatives include self
-            relatives.add(query)
-            relatives = relatives.union(networkx.ancestors(hpo, query))
-            relatives = relatives.union(networkx.descendants(hpo, query))
+    with open(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt', 'w') as out:
 
-        with open(args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt', 'w') as out:
+        for terms in relatives:
 
-            for terms in relatives:
-
-                out.write(terms + '\n')
+            out.write(terms + '\n')
 
     return(relatives)
+
+
+
 
 def getGeneList(args, relatives):
 
@@ -104,11 +115,13 @@ def run_clinphen(args):
     cmd6 = 'rm ' + args.workdir + '/results/' + args.sampleid + '/' + args.sampleid + '_tmp.txt'
 
     cmds = [cmd1, cmd2, cmd3, cmd4, cmd5, cmd6]
+
     for cmd in cmds:
         p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, stderr = p.communicate()
         if p.returncode !=0:
             raise Exception(stderr)
+
 
 
 def main():
@@ -118,16 +131,23 @@ def main():
     parser.add_argument("-w","--workdir",help="This is the base work directory (folder/directory).",dest="workdir",type=str, required = True)
     parser.add_argument("-d", "--database", help="Path to the HPO database", dest="database", type=str, required = True)
     parser.add_argument("-j", "--json", help="Medical history JSON file", dest = "json", type=str, required = True)
+    parser.add_argument("-m", "--manual", help="Indicate this flag to NOT run CNLP and just use a list of manually curated HPO terms", dest = "manual", action='store_true')
     args=parser.parse_args()
 
 
     # run query
-    print('[run_CNLP.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Running CNLP on ' + args.sampleid + '...')
-    run_clinphen(args)
+    if not args.manual:
+        print('[run_CNLP.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Running CNLP on ' + args.sampleid + '...')
+        run_clinphen(args)
+
     print('[run_CNLP.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Gathering additional HPO terms for ' + args.sampleid + '...')
     relatives = queryHPO(args)
+
     print('[run_CNLP.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Finding clinically relevant genes for ' + args.sampleid + '...')
     getGeneList(args, relatives)
+
+
+
 
 if __name__=="__main__":
     main()

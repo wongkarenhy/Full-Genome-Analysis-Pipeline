@@ -148,6 +148,14 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
     # Subset the intervar files further to store entries relevant to these set of genes
     filtered_intervar = pd.merge(interVarFinalFile, gene_score_result_r, left_on='Ref_Gene', right_on='gene',how='inner')
 
+    # Remove common artifacts
+    try:
+        artifacts = pd.read_csv("./common_artifacts_20.txt", names = ["gene"])
+    except OSError:
+        print("Could not open/read the input file: common_artifacts_20.txt")
+        sys.exit()
+
+    filtered_intervar = filtered_intervar.loc[~filtered_intervar['Ref_Gene'].isin(artifacts['gene'])]
 
     # Create a bed file and write it out
     pd.DataFrame(filtered_intervar).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_smallVariant_candidates.txt', index=False, sep='\t',header=False)  # Write out a subset of the variant first

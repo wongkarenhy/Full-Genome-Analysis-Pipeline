@@ -1,40 +1,41 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-2	68973363	call_5701	G	<DUP:TANDEM>			2.0	False	69022406	49043	False	False	ANTXR1	['GAPO syndrome, 230740 (3)', '{?Hemangioma, capillary infantile, susceptibility to}, 602089 (3)']	69.0469859580003	96.4617491474765
-7	103499414	call_6530	C	<DUP:TANDEM>			2.0	False	103537079	37665	False	False	RELN	['Lissencephaly 2 (Norman-Roberts type), 257320 (3)', '{Epilepsy, familial temporal lobe, 7}, 616436 (3)']	60.933787033000335	85.1272448439437
-4	80296655	call_6156	A	<DUP:TANDEM>			2.0	False	80395127	98472	False	False	FGF5	['Trichomegaly, 190330 (3)']	59.526651014000315	83.16141245027886
-X	108614680	call_6841	T	<DUP:TANDEM>			2.0	False	108671028	56348	False	False	COL4A5	['Alport syndrome 1, X-linked, 301050 (3)']	54.50405372500028	76.14461782791808
-2	173080368	call_3918	A	<DUP:TANDEM>			3.0	False	173121021	40653	False	False	MAP3K20	.	53.74660236000026	75.08642415663329
-7	129120881	call_6548	G	<DUP:TANDEM>			2.0	False	129204722	83841	False	False	SMO	['Basal cell carcinoma, somatic, 605462 (3)', 'Curry-Jones syndrome, somatic mosaic, 601707 (3)']	50.294999018000276	70.26437883324844
-4	103125268	call_6172	G	<DUP:TANDEM>			2.0	False	103184683	59415	False	False	CENPE	['?Microcephaly 13, primary, autosomal recessive, 616051 (3)']	50.28249901800028	70.24691577026874
-9	91943189	call_1817	G	<DUP:TANDEM>			5.0	False	91977498	34309	False	False	ROR2	['Brachydactyly, type B1, 113000 (3)', 'Robinow syndrome, autosomal recessive, 268310 (3)']	48.93809012600026	68.36871599815086
-13	48312546	call_3469	G	<DUP:TANDEM>			3.0	False	48373378	60832	False	False	RB1	['Bladder cancer, somatic, 109800 (3)', 'Osteosarcoma, somatic, 259500 (3)', 'Retinoblastoma, 180200 (3)', 'Retinoblastoma, trilateral, 180200 (3)', 'Small cell cancer of the lung, somatic, 182280 (3)']	48.39149874300023	67.60510321851132
-19	42179417	call_5624	A	<DUP:TANDEM>			2.0	False	42268793	89376	False	False	ERF	['Chitayat syndrome, 617180 (3)', 'Craniosynostosis 4, 600775 (3)']	48.38590561200023	67.59728936259877
-2	42700047	call_5689	G	<DUP:TANDEM>			2.0	False	42810095	110048	False	False	HAAO	['Vertebral, cardiac, renal, and limb defects syndrome 1, 617660 (3)']	46.60627609000022	65.11106676874033
-13	112986333	call_3506	C	<DUP:TANDEM>			3.0	False	113335868	349535	False	False	F7	['Factor VII deficiency, 227500 (3)', '{Myocardial infarction, decreased susceptibility to}, 608446 (3)']	45.862382212000206	64.07181351740175
-15	45092634	call_5369	T	<DUP:TANDEM>			2.0	False	45158161	65527	False	False	DUOXA2	['Thyroid dyshormonogenesis 5, 274900 (3)']	43.88913999300024	61.31510526583279
-11	65687772	call_5072	C	<DUP:TANDEM>			2.0	False	65817481	129709	False	False	RNASEH2C	['Aicardi-Goutieres syndrome 3, 610329 (3)']	43.11969101200023	60.240150384642874
-1	155862474	call_4849	A	<DUP:TANDEM>			2.0	False	155929480	67006	False	False	RIT1	['Noonan syndrome 8, 615355 (3)']	41.82687208500021	58.43402411715826
-1	231266493	call_3199	T	<DUP:TANDEM>			3.0	False	231298288	31795	False	False	GNPAT	['Rhizomelic chondrodysplasia punctata, type 2, 222765 (3)']	39.797233783000166	55.59852799765018
-7	39195594	call_6486	C	<DUP:TANDEM>			2.0	False	39277698	82104	False	False	POU6F2	['{Wilms tumor susceptibility-5}, 601583 (3)']	30.10638740700015	42.05997915039043
-10	7994805	call_4930	A	<DUP:TANDEM>			2.0	False	8107046	112241	False	False	GATA3	['Hypoparathyroidism, sensorineural deafness, and renal dysplasia, 146255 (3)']	28.025736962000128	39.15321676960728
-2	215281008	call_2491	C	<DUP:TANDEM>			4.0	False	215328577	47569	False	False	ATIC	['AICA-ribosiduria due to ATIC deficiency, 608688 (3)']	23.94420505200008	33.45113286576634
-5	90904930	call_6275	G	<DUP:TANDEM>			2.0	False	90977229	72299	False	False	ADGRV1	['?Febrile seizures, familial, 4, 604352 (3)', 'Usher syndrome, type 2C, 605472 (3)', 'Usher syndrome, type 2C, GPR98/PDZD7 digenic, 605472 (3)']	22.633930740000068	31.620620639274538
-13	112986333	call_3506	C	<DUP:TANDEM>			3.0	False	113335868	349535	False	False	F10	['Factor X deficiency, 227600 (3)']	17.172900413000008	23.991315316515486
-1	91323065	call_1910	A	<DUP:TANDEM>			4.0	False	91363397	40332	False	False	HFM1	['Premature ovarian failure 9, 615724 (3)']	17.00972466800001	23.76335145157985
-15	45092634	call_5369	T	<DUP:TANDEM>			2.0	False	45158161	65527	False	False	DUOX2	['Thyroid dyshormonogenesis 6, 607200 (3)']	15.039769029	21.01123470029307
-4	1382558	call_2633	G	<DUP:TANDEM>			4.0	False	1420543	37985	False	False	UVSSA	['UV-sensitive syndrome 3, 614640 (3)']	11.506161475999985	16.074625800804657
-2	241819063	call_2499	T	<DUP:TANDEM>			4.0	False	241897096	78033	False	False	PDCD1	['{Multiple sclerosis, disease progression, modifier of}, 126200 (3)', '{Systemic lupus erythematosus, susceptibility to, 2}, 605218 (3)']	10.748368543999982	15.015954945037269
-16	89482309	call_3669	A	<DUP:TANDEM>			3.0	False	89535318	53009	True	False	SPG7	['Spastic paraplegia 7, autosomal recessive, 607259 (3)']	6.404297841999986	8.947092524451435
-2	199428864	call_5799	T	<DUP:TANDEM>			2.0	False	199485500	56636	False	False	SATB2	['Glass syndrome, 612313 (3)']	6.368485272999987	8.89706075261847
-X	132916174	call_4734	C	<DUP:TANDEM>			3.0	False	132974178	58004	False	False	HS6ST2	['?Paganini-Miozzo syndrome, 301025 (3)']	6.332526822999988	8.846825178458262
-10	87495794	call_3279	T	<DUP:TANDEM>			3.0	False	87525850	30056	False	False	MINPP1	['{Thyroid carcinoma, follicular}, 188470 (3)']	6.294347921999988	8.793487534245543
-12	1926332	call_5136	G	<DUP:TANDEM>			2.0	False	2026138	99806	False	False	CACNA1C	['Brugada syndrome 3, 611875 (3)', 'Long QT syndrome 8, 618447 (3)', 'Timothy syndrome, 601005 (3)']	6.287968750999988	8.784575545051037
-2	181589416	call_2471	C	<DUP:TANDEM>			4.0	False	181620167	30751	False	False	CERKL	['Retinitis pigmentosa 26, 608380 (3)']	4.082461473000003	5.70338254521789
-16	72029955	call_5451	C	<DUP:TANDEM>			2.0	False	72105650	75695	False	False	DHX38	['Retinitis pigmentosa 84, 618220 (3)']	2.361407945999999	3.298993254542151
-1	237365907	call_3204	A	<DUP:TANDEM>			3.0	False	237417867	51960	False	False	RYR2	['Arrhythmogenic right ventricular dysplasia 2, 600996 (3)', 'Ventricular tachycardia, catecholaminergic polymorphic, 1, 604772 (3)']	1.4569579409999993	2.035435862597297
-2	174553035	call_5785	C	<DUP:TANDEM>			2.0	False	174591632	38597	False	False	WIPF1	['?Wiskott-Aldrich syndrome 2, 614493 (3)']	0.23429609600000004	0.3273221984277852
-8	119105270	call_6656	C	<DUP:TANDEM>			2.0	False	119174175	68905	False	False	COLEC10	['3MC syndrome 3, 248340 (3)']	0.087326052	0.12199842766760863
+1	231266493	call_3199	T	<DUP:TANDEM>			3.0	False	231298288	31795	False	False	GNPAT	['Rhizomelic chondrodysplasia punctata, type 2, 222765 (3)']	74.80963610599987	96.11355048822874
+5	90904930	call_6275	G	<DUP:TANDEM>			2.0	False	90977229	72299	False	False	ADGRV1	['?Febrile seizures, familial, 4, 604352 (3)', 'Usher syndrome, type 2C, 605472 (3)', 'Usher syndrome, type 2C, GPR98/PDZD7 digenic, 605472 (3)']	73.33109764599995	94.21396123314088
+16	72029955	call_5451	C	<DUP:TANDEM>			2.0	False	72105650	75695	False	False	DHX38	['Retinitis pigmentosa 84, 618220 (3)']	70.08953568800003	90.04928345727933
+9	91943189	call_1817	G	<DUP:TANDEM>			5.0	False	91977498	34309	False	False	ROR2	['Brachydactyly, type B1, 113000 (3)', 'Robinow syndrome, autosomal recessive, 268310 (3)']	69.51591400700003	89.31230866007786
+7	129120881	call_6548	G	<DUP:TANDEM>			2.0	False	129204722	83841	False	False	SMO	['Basal cell carcinoma, somatic, 605462 (3)', 'Curry-Jones syndrome, somatic mosaic, 601707 (3)']	65.76599896200017	84.4945115450982
+2	181589416	call_2471	C	<DUP:TANDEM>			4.0	False	181620167	30751	False	False	CERKL	['Retinitis pigmentosa 26, 608380 (3)']	65.34302124800016	83.95108035112298
+4	80296655	call_6156	A	<DUP:TANDEM>			2.0	False	80395127	98472	False	False	FGF5	['Trichomegaly, 190330 (3)']	65.32094418100014	83.92271628729127
+4	1382558	call_2633	G	<DUP:TANDEM>			4.0	False	1420543	37985	False	False	UVSSA	['UV-sensitive syndrome 3, 614640 (3)']	65.21401194800015	83.78533242726685
+1	155862474	call_4849	A	<DUP:TANDEM>			2.0	False	155929480	67006	False	False	RIT1	['Noonan syndrome 8, 615355 (3)']	59.609941620000185	76.58536295212312
+2	174553035	call_5785	C	<DUP:TANDEM>			2.0	False	174591632	38597	False	False	WIPF1	['?Wiskott-Aldrich syndrome 2, 614493 (3)']	58.22597702500017	74.80727983476939
+13	48312546	call_3469	G	<DUP:TANDEM>			3.0	False	48373378	60832	False	False	RB1	['Bladder cancer, somatic, 109800 (3)', 'Osteosarcoma, somatic, 259500 (3)', 'Retinoblastoma, 180200 (3)', 'Retinoblastoma, trilateral, 180200 (3)', 'Small cell cancer of the lung, somatic, 182280 (3)']	58.10850990100017	74.6563610101238
+2	241819063	call_2499	T	<DUP:TANDEM>			4.0	False	241897096	78033	False	False	PDCD1	['{Multiple sclerosis, disease progression, modifier of}, 126200 (3)', '{Systemic lupus erythematosus, susceptibility to, 2}, 605218 (3)']	58.102492322000174	74.64862977504316
+7	39195594	call_6486	C	<DUP:TANDEM>			2.0	False	39277698	82104	False	False	POU6F2	['{Wilms tumor susceptibility-5}, 601583 (3)']	56.257884502000174	72.27872375668824
+12	1926332	call_5136	G	<DUP:TANDEM>			2.0	False	2026138	99806	False	False	CACNA1C	['Brugada syndrome 3, 611875 (3)', 'Long QT syndrome 8, 618447 (3)', 'Timothy syndrome, 601005 (3)']	49.06382992800021	63.03598226636085
+13	112986333	call_3506	C	<DUP:TANDEM>			3.0	False	113335868	349535	False	False	F10	['Factor X deficiency, 227600 (3)']	48.8869033200002	62.8086713829524
+7	103499414	call_6530	C	<DUP:TANDEM>			2.0	False	103537079	37665	False	False	RELN	['Lissencephaly 2 (Norman-Roberts type), 257320 (3)', '{Epilepsy, familial temporal lobe, 7}, 616436 (3)']	47.9542027200002	61.610360966344025
+10	7994805	call_4930	A	<DUP:TANDEM>			2.0	False	8107046	112241	False	False	GATA3	['Hypoparathyroidism, sensorineural deafness, and renal dysplasia, 146255 (3)']	38.269870902000164	49.16817352119677
+4	103125268	call_6172	G	<DUP:TANDEM>			2.0	False	103184683	59415	False	False	CENPE	['?Microcephaly 13, primary, autosomal recessive, 616051 (3)']	37.94976514200017	48.75690964227964
+10	87495794	call_3279	T	<DUP:TANDEM>			3.0	False	87525850	30056	False	False	MINPP1	['{Thyroid carcinoma, follicular}, 188470 (3)']	36.67384885400016	47.117644288927565
+1	91323065	call_1910	A	<DUP:TANDEM>			4.0	False	91363397	40332	False	False	HFM1	['Premature ovarian failure 9, 615724 (3)']	36.57331265200017	46.98847788965342
+2	199428864	call_5799	T	<DUP:TANDEM>			2.0	False	199485500	56636	False	False	SATB2	['Glass syndrome, 612313 (3)']	33.32534895400019	42.81557531826104
+2	68973363	call_5701	G	<DUP:TANDEM>			2.0	False	69022406	49043	False	False	ANTXR1	['GAPO syndrome, 230740 (3)', '{?Hemangioma, capillary infantile, susceptibility to}, 602089 (3)']	32.6749990320002	41.98002199496198
+19	42179417	call_5624	A	<DUP:TANDEM>			2.0	False	42268793	89376	False	False	ERF	['Chitayat syndrome, 617180 (3)', 'Craniosynostosis 4, 600775 (3)']	27.84334900600017	35.77243881600623
+8	119105270	call_6656	C	<DUP:TANDEM>			2.0	False	119174175	68905	False	False	COLEC10	['3MC syndrome 3, 248340 (3)']	24.900957590000143	31.992127874282932
+11	65687772	call_5072	C	<DUP:TANDEM>			2.0	False	65817481	129709	False	False	RNASEH2C	['Aicardi-Goutieres syndrome 3, 610329 (3)']	23.22121880700013	29.834041473512972
+13	112986333	call_3506	C	<DUP:TANDEM>			3.0	False	113335868	349535	False	False	F7	['Factor VII deficiency, 227500 (3)', '{Myocardial infarction, decreased susceptibility to}, 608446 (3)']	22.132966674000116	28.435882335553597
+2	42700047	call_5689	G	<DUP:TANDEM>			2.0	False	42810095	110048	False	False	HAAO	['Vertebral, cardiac, renal, and limb defects syndrome 1, 617660 (3)']	21.788096844000115	27.9928021985161
+2	173080368	call_3918	A	<DUP:TANDEM>			3.0	False	173121021	40653	False	False	MAP3K20	.	14.098220235000026	18.113040951447257
+X	132916174	call_4734	C	<DUP:TANDEM>			3.0	False	132974178	58004	False	False	HS6ST2	['?Paganini-Miozzo syndrome, 301025 (3)']	11.43092165400001	14.686162407767705
+16	89482309	call_3669	A	<DUP:TANDEM>			3.0	False	89535318	53009	True	False	SPG7	['Spastic paraplegia 7, autosomal recessive, 607259 (3)']	11.367969649000006	14.605283245324918
+X	108614680	call_6841	T	<DUP:TANDEM>			2.0	False	108671028	56348	False	False	COL4A5	['Alport syndrome 1, X-linked, 301050 (3)']	10.414478089000003	13.380261123010245
+2	215281008	call_2491	C	<DUP:TANDEM>			4.0	False	215328577	47569	False	False	ATIC	['AICA-ribosiduria due to ATIC deficiency, 608688 (3)']	8.702119656999992	11.180265812582883
+1	237365907	call_3204	A	<DUP:TANDEM>			3.0	False	237417867	51960	False	False	RYR2	['Arrhythmogenic right ventricular dysplasia 2, 600996 (3)', 'Ventricular tachycardia, catecholaminergic polymorphic, 1, 604772 (3)']	6.731228074999995	8.648113573465267
+15	45092634	call_5369	T	<DUP:TANDEM>			2.0	False	45158161	65527	False	False	DUOXA2	['Thyroid dyshormonogenesis 5, 274900 (3)']	5.185665375000001	6.66241325019824
+15	45092634	call_5369	T	<DUP:TANDEM>			2.0	False	45158161	65527	False	False	DUOX2	['Thyroid dyshormonogenesis 6, 607200 (3)']	3.3003927010000016	4.240262043904051
+19	41146879	call_5623	C	<DUP:TANDEM>			2.0	False	41259972	113093	False	False	AXL	.	0.8283874060000004	1.0642914324242818
 13	112986333	call_3506	C	<DUP:TANDEM>			3.0	False	113335868	349535	False	False	PROZ	['[Protein Z deficiency], 614024 (3)']	0.0	0.0
-15	36334141	call_5363	G	<DUP:TANDEM>			2.0	False	36630778	296637	False	False	C15orf41	['Dyserythropoietic anemia, congenital, type Ib, 615631 (3)']	0.0	0.0
-10	45799005	call_314	G	<DUP:TANDEM>			9.0	False	46130363	331358	True	False	MSMB	['{Prostate cancer, hereditary, 13}, 611928 (3)']	0.0	0.0
 16	72029955	call_5451	C	<DUP:TANDEM>			2.0	False	72105650	75695	False	False	HP	['[Anhaptoglobinemia], 614081 (3)', '[Hypohaptoglobinemia], 614081 (3)']	0.0	0.0
+10	45799005	call_314	G	<DUP:TANDEM>			9.0	False	46130363	331358	True	False	MSMB	['{Prostate cancer, hereditary, 13}, 611928 (3)']	0.0	0.0
+15	36334141	call_5363	G	<DUP:TANDEM>			2.0	False	36630778	296637	False	False	C15orf41	['Dyserythropoietic anemia, congenital, type Ib, 615631 (3)']	0.0	0.0

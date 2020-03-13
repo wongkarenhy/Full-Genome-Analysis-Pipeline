@@ -1,16 +1,18 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3	68935189	call_3808	G	<DUP:TANDEM>			3.0	False	68989176	53987	False	False	EOGT	['Adams-Oliver syndrome 4, 615297 (3)']	54.83883693199989	99.96866391526021
-9	37397531	call_4191	A	<DUP:TANDEM>			3.0	False	37605549	208018	False	False	GRHPR	['Hyperoxaluria, primary, type II, 260000 (3)']	52.36362361299988	95.45646449147377
-5	132383057	call_3962	C	<DUP:TANDEM>			3.0	False	132609598	226541	False	False	SLC22A5	['Carnitine deficiency, systemic primary, 212140 (3)']	52.17961189099989	95.12101963118441
-7	114478025	call_2010	C	<DUP:TANDEM>			5.0	False	114522273	44248	False	False	FOXP2	['Speech-language disorder-1, 602081 (3)']	50.582363019999875	92.20930879800197
-2	201630016	call_3675	C	<DUP:TANDEM>			3.0	False	201872473	242457	False	False	ALS2	['Amyotrophic lateral sclerosis 2, juvenile, 205100 (3)', 'Primary lateral sclerosis, juvenile, 606353 (3)', 'Spastic paralysis, infantile onset ascending, 607225 (3)']	50.01465973899988	91.1744119680008
-X	48834644	call_4251	A	<DUP:TANDEM>			3.0	False	48904336	69692	False	False	PQBP1	['Renpenning syndrome, 309500 (3)']	49.63718352699989	90.48629028846509
-5	132383057	call_3962	C	<DUP:TANDEM>			3.0	False	132609598	226541	False	False	IRF1	['Gastric cancer, somatic, 613659 (3)', 'Myelodysplastic syndrome, preleukemic (3)', 'Myelogenous leukemia, acute (3)', 'Nonsmall cell lung cancer, somatic, 211980 (3)']	46.85876385499989	85.42135970377505
-X	48834644	call_4251	A	<DUP:TANDEM>			3.0	False	48904336	69692	False	False	SLC35A2	['Congenital disorder of glycosylation, type IIm, 300896 (3)']	41.6285563889999	75.88693334415004
-2	201630016	call_3675	C	<DUP:TANDEM>			3.0	False	201872473	242457	False	False	TMEM237	['Joubert syndrome 14, 614424 (3)']	39.924371718999915	72.78028349422671
-X	130130037	call_4290	A	<DUP:TANDEM>			3.0	False	130291411	161374	False	False	AIFM1	['Combined oxidative phosphorylation deficiency 6, 300816 (3)', 'Cowchock syndrome, 310490 (3)', 'Deafness, X-linked 5, 300614 (3)', 'Spondyloepimetaphyseal dysplasia, X-linked, with hypomyelinating leukodystrophy, 300232 (3)']	37.79475035999992	68.89808223294503
-5	132383057	call_3962	C	<DUP:TANDEM>			3.0	False	132609598	226541	False	False	RAD50	['Nijmegen breakage syndrome-like disorder, 613078 (3)']	32.38300703399996	59.03272439496995
-2	210258756	call_2588	G	<DUP:TANDEM>			4.0	False	210296671	37915	False	False	MYL1	['Myopathy, congenital, with fast-twitch (type II) fiber atrophy, 618414 (3)']	27.88059502899998	50.825035506637036
-7	74302302	call_2927	G	<DUP:TANDEM>			4.0	False	74333308	31006	False	False	CLIP2	.	22.434664042999994	40.897355145359185
-19	35853105	call_2522	T	<DUP:TANDEM>			4.0	False	35908662	55557	False	False	TYROBP	['Polycystic lipomembranous osteodysplasia with sclerosing leukoencephalopathy 1, 221770 (3)']	16.525082042000022	30.12446042350002
-1	62530157	call_2136	A	<DUP:TANDEM>			4.0	False	62595001	64844	False	False	DOCK7	['Epileptic encephalopathy, early infantile, 23, 615859 (3)']	12.394793746000003	22.595135849239746
+5	132383057	call_3962	C	<DUP:TANDEM>			3.0	False	132609598	226541	False	False	RAD50	['Nijmegen breakage syndrome-like disorder, 613078 (3)']	79.51510358000029	88.36485755771919
+7	96504993	call_2933	C	<DUP:TANDEM>			4.0	False	96565389	60396	False	False	SEM1	.	70.18905529800014	78.00085259624377
+7	74302302	call_2927	G	<DUP:TANDEM>			4.0	False	74333308	31006	False	False	CLIP2	.	65.94047214200009	73.27941693811935
+7	114478025	call_2010	C	<DUP:TANDEM>			5.0	False	114522273	44248	False	False	FOXP2	['Speech-language disorder-1, 602081 (3)']	62.03040357200009	68.93417135994635
+5	132383057	call_3962	C	<DUP:TANDEM>			3.0	False	132609598	226541	False	False	IRF1	['Gastric cancer, somatic, 613659 (3)', 'Myelodysplastic syndrome, preleukemic (3)', 'Myelogenous leukemia, acute (3)', 'Nonsmall cell lung cancer, somatic, 211980 (3)']	60.13008154500009	66.8223501125439
+X	48834644	call_4251	A	<DUP:TANDEM>			3.0	False	48904336	69692	False	False	PQBP1	['Renpenning syndrome, 309500 (3)']	55.33448180400006	61.493016829453175
+X	48834644	call_4251	A	<DUP:TANDEM>			3.0	False	48904336	69692	False	False	SLC35A2	['Congenital disorder of glycosylation, type IIm, 300896 (3)']	52.223364042000036	58.03564250046382
+19	35853105	call_2522	T	<DUP:TANDEM>			4.0	False	35908662	55557	False	False	TYROBP	['Polycystic lipomembranous osteodysplasia with sclerosing leukoencephalopathy 1, 221770 (3)']	43.36007329400003	48.185898374158455
+1	62530157	call_2136	A	<DUP:TANDEM>			4.0	False	62595001	64844	False	False	DOCK7	['Epileptic encephalopathy, early infantile, 23, 615859 (3)']	38.547155253000014	42.837319324619074
+2	210258756	call_2588	G	<DUP:TANDEM>			4.0	False	210296671	37915	False	False	MYL1	['Myopathy, congenital, with fast-twitch (type II) fiber atrophy, 618414 (3)']	38.249452458000015	42.506483245807416
+5	132383057	call_3962	C	<DUP:TANDEM>			3.0	False	132609598	226541	False	False	SLC22A5	['Carnitine deficiency, systemic primary, 212140 (3)']	30.738618000000034	34.159719082279246
+1	173202580	call_1460	A	<DUP:TANDEM>			5.0	False	173242054	39474	False	False	TNFSF4	['{Myocardial infarction, susceptibility to}, 608446 (3)']	30.541611739000036	33.94078671084959
+3	68935189	call_3808	G	<DUP:TANDEM>			3.0	False	68989176	53987	False	False	EOGT	['Adams-Oliver syndrome 4, 615297 (3)']	21.54360864100002	23.941337219361113
+2	201630016	call_3675	C	<DUP:TANDEM>			3.0	False	201872473	242457	False	False	TMEM237	['Joubert syndrome 14, 614424 (3)']	5.663657976999994	6.2940033762230145
+2	201630016	call_3675	C	<DUP:TANDEM>			3.0	False	201872473	242457	False	False	ALS2	['Amyotrophic lateral sclerosis 2, juvenile, 205100 (3)', 'Primary lateral sclerosis, juvenile, 606353 (3)', 'Spastic paralysis, infantile onset ascending, 607225 (3)']	5.660694406999995	6.290709971207844
+9	37397531	call_4191	A	<DUP:TANDEM>			3.0	False	37605549	208018	False	False	GRHPR	['Hyperoxaluria, primary, type II, 260000 (3)']	4.4953391789999975	4.995654766723851
+X	130130037	call_4290	A	<DUP:TANDEM>			3.0	False	130291411	161374	False	False	AIFM1	['Combined oxidative phosphorylation deficiency 6, 300816 (3)', 'Cowchock syndrome, 310490 (3)', 'Deafness, X-linked 5, 300614 (3)', 'Spondyloepimetaphyseal dysplasia, X-linked, with hypomyelinating leukodystrophy, 300232 (3)']	2.130434802000001	2.367544772488833

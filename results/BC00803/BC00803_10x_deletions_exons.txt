@@ -1,3 +1,4 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-4	103158362	call_2622	A	<DEL>			19.0	True	103158411	-49	False	False	CENPE	['?Microcephaly 13, primary, autosomal recessive, 616051 (3)']	71.46151668499951	87.08476544661103
-16	88803433	call_2994	C	<DEL>			6.0	True	88812349	-8916	True	False	CDT1	['Meier-Gorlin syndrome 4, 613804 (3)']	19.366370350999844	23.600336206172912
+4	103158362	call_2622	A	<DEL>			19.0	True	103158411	-49	False	False	CENPE	['?Microcephaly 13, primary, autosomal recessive, 616051 (3)']	100.56411928000226	92.00572905264454
+16	88803433	call_2994	C	<DEL>			6.0	True	88812349	-8916	True	False	APRT	['Adenine phosphoribosyltransferase deficiency, 614723 (3)']	62.35487896899849	57.04824086967323
+16	88803433	call_2994	C	<DEL>			6.0	True	88812349	-8916	True	False	CDT1	['Meier-Gorlin syndrome 4, 613804 (3)']	31.395879179999653	28.72397007884925

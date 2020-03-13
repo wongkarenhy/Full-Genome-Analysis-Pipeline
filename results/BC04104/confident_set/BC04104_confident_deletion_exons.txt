@@ -1,1 +1,2 @@
-
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score	SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	gene_b	OMIM_syndrome_b	score_b	normalized_score_b	Start_b	End_b	overlap_len
+3	46977311	call_3794	A	<DEL>			7.0	True	46981162	-3851	True	False	NBEAL2	['Gray platelet syndrome, 139090 (3)']	18.155224244999975	81.78838699482995	3476	3	3	46959367.0	46987679.0	46926359.3	46951236.5	1.0	deletion	heterozygous	2	3435.0	True	False	NBEAL2	['Gray platelet syndrome, 139090 (3)']	18.155224244999975	81.78838699482995	46959367	46987679	3851

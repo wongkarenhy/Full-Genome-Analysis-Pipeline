@@ -1,1 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+7477	6	6	108875964.0	108877478.0	51766559.2	51770798.5	1.0	insertion	heterozygous	1	2725.0	False	True	ARMC2	['Spermatogenic failure 38, 618433 (3)']	111.63542300300278	31.429251671332743

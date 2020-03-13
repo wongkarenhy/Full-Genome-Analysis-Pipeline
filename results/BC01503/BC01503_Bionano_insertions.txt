@@ -1,5 +1,5 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-1747	6	6	3110922.0	3114903.0	1527700.1	1533977.8	1.0	insertion	heterozygous	1	2297.0	False	True	RIPK1	['Immunodeficiency 57, 618108 (3)']	61.70334626399879	79.43524291183999
-4620	19	19	13591003.0	13603666.0	2581952.9	2596759.9	1.0	insertion	heterozygous	1	2144.0	False	True	CACNA1A	['Epileptic encephalopathy, early infantile, 42, 617106 (3)', 'Episodic ataxia, type 2, 108500 (3)', 'Migraine, familial hemiplegic, 1, 141500 (3)', 'Migraine, familial hemiplegic, 1, with progressive cerebellar ataxia, 141500 (3)', 'Spinocerebellar ataxia 6, 183086 (3)']	14.838883445999997	19.103182929986875
-4347	17	17	77356011.0	77383619.0	4622.1	33324.9	1.0	insertion	homozygous	1	1095.0	False	False	SEPTIN9	.	14.23411985399999	18.32462640520426
-4350	17	17	77356011.0	77383619.0	4622.1	33324.9	1.0	insertion	homozygous	1	1095.0	False	False	SEPTIN9	.	14.23411985399999	18.32462640520426
+1747	6	6	3110922.0	3114903.0	1527700.1	1533977.8	1.0	insertion	heterozygous	1	2297.0	False	True	RIPK1	['Immunodeficiency 57, 618108 (3)']	79.92796765600036	78.62817600569136
+4620	19	19	13591003.0	13603666.0	2581952.9	2596759.9	1.0	insertion	heterozygous	1	2144.0	False	True	CACNA1A	['Epileptic encephalopathy, early infantile, 42, 617106 (3)', 'Episodic ataxia, type 2, 108500 (3)', 'Migraine, familial hemiplegic, 1, 141500 (3)', 'Migraine, familial hemiplegic, 1, with progressive cerebellar ataxia, 141500 (3)', 'Spinocerebellar ataxia 6, 183086 (3)']	40.024117929999726	39.37324420179114
+4347	17	17	77356011.0	77383619.0	4622.1	33324.9	1.0	insertion	homozygous	1	1095.0	False	False	SEPTIN9	.	34.54155273299981	33.97983668856976
+4350	17	17	77356011.0	77383619.0	4622.1	33324.9	1.0	insertion	homozygous	1	1095.0	False	False	SEPTIN9	.	34.54155273299981	33.97983668856976

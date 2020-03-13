@@ -1,18 +1,18 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-4	53301695	call_4484	A	<DUP:TANDEM>			3.0	False	53383308	81613	False	False	FIP1L1	.	35.60353741199911	93.70329527662005
-7	144656041	call_3548	G	<DUP:TANDEM>			4.0	False	144698552	42511	False	False	TPK1	['Thiamine metabolism dysfunction syndrome 5 (episodic encephalopathy type), 614458 (3)']	35.432276448999126	93.25256150824069
-7	42013135	call_3487	T	<DUP:TANDEM>			4.0	False	42091396	78261	False	False	GLI3	['Greig cephalopolysyndactyly syndrome, 175700 (3)', 'Pallister-Hall syndrome, 146510 (3)', 'Polydactyly, postaxial, types A1 and B, 174200 (3)', 'Polydactyly, preaxial, type IV, 174700 (3)', '{Hypothalamic hamartomas, somatic}, 241800 (3)']	32.63401206399913	85.88793953555617
-7	99585641	call_4736	A	<DUP:TANDEM>			3.0	False	99659962	74321	False	False	CYP3A5	['{Hypertension, salt-sensitive essential, susceptibility to}, 145500 (3)']	32.59998243799913	85.79837854457001
-8	119017720	call_4807	G	<DUP:TANDEM>			3.0	False	119108979	91259	False	False	COLEC10	['3MC syndrome 3, 248340 (3)']	30.723740913999247	80.86038568450199
-2	135757650	call_4264	A	<DUP:TANDEM>			3.0	False	135811959	54309	False	False	LCT	['Lactase deficiency, congenital, 223000 (3)']	29.937932646999304	78.7922534306353
-6	170249008	call_4689	C	<DUP:TANDEM>			3.0	False	170317166	68158	False	False	DLL1	.	24.77994403499963	65.21718294393808
-5	151558060	call_2468	A	<DUP:TANDEM>			5.0	False	151619446	61386	False	False	FAT2	['Spinocerebellar ataxia 45, 617769 (3)']	17.814559067000182	46.88530999493677
-7	2458786	call_3478	A	<DUP:TANDEM>			4.0	False	2526226	67440	False	False	LFNG	['Spondylocostal dysostosis 3, autosomal recessive, 609813 (3)']	16.259540006000314	42.792727604948304
-12	8056597	call_3863	A	<DUP:TANDEM>			3.0	False	8090517	33920	False	False	NECAP1	['?Epileptic encephalopathy, early infantile, 21, 615833 (3)']	16.004166553000363	42.120622083652556
-17	721797	call_2139	T	<DUP:TANDEM>			5.0	False	754173	32376	False	False	GEMIN4	['Neurodevelopmental disorder with microcephaly, cataracts, and renal abnormalities, 617913 (3)']	13.41721735300027	35.312150724524926
-3	121755401	call_3268	T	<DUP:TANDEM>			4.0	False	121794588	39187	False	False	IQCB1	['Senior-Loken syndrome 5, 609254 (3)']	13.404754906000269	35.27935138951512
-5	36659685	call_4562	T	<DUP:TANDEM>			3.0	False	36698391	38706	False	False	SLC1A3	['Episodic ataxia, type 6, 612656 (3)']	13.24120875400026	34.84892187362531
-6	85501175	call_4648	G	<DUP:TANDEM>			3.0	False	85555544	54369	False	False	SNX14	['Spinocerebellar ataxia, autosomal recessive 20, 616354 (3)']	9.427956038000062	24.812999288828497
-17	60580564	call_4123	A	<DUP:TANDEM>			3.0	False	60658736	78172	False	False	PPM1D	['Breast cancer, somatic, 114480 (3)', 'Jansen de Vries syndrome, 617450 (3)']	8.955092324000027	23.568491258466
-9	95412870	call_4862	C	<DUP:TANDEM>			3.0	False	95471892	59022	False	False	PTCH1	['Basal cell carcinoma, somatic, 605462 (3)', 'Basal cell nevus syndrome, 109400 (3)', 'Holoprosencephaly 7, 610828 (3)']	5.166855238999995	13.598406150182116
-14	45115552	call_2925	G	<DUP:TANDEM>			4.0	False	45148440	32888	False	False	FANCM	['?Premature ovarian failure 15, 618096 (3)', 'Spermatogenic failure 28, 618086 (3)']	0.23269754599999995	0.6124258556295675
+12	8056597	call_3863	A	<DUP:TANDEM>			3.0	False	8090517	33920	False	False	NECAP1	['?Epileptic encephalopathy, early infantile, 21, 615833 (3)']	72.16346752999976	99.32329829015455
+7	144656041	call_3548	G	<DUP:TANDEM>			4.0	False	144698552	42511	False	False	TPK1	['Thiamine metabolism dysfunction syndrome 5 (episodic encephalopathy type), 614458 (3)']	67.10487530699947	92.36082709121389
+7	42013135	call_3487	T	<DUP:TANDEM>			4.0	False	42091396	78261	False	False	GLI3	['Greig cephalopolysyndactyly syndrome, 175700 (3)', 'Pallister-Hall syndrome, 146510 (3)', 'Polydactyly, postaxial, types A1 and B, 174200 (3)', 'Polydactyly, preaxial, type IV, 174700 (3)', '{Hypothalamic hamartomas, somatic}, 241800 (3)']	65.80196778199947	90.56755028260896
+9	95412870	call_4862	C	<DUP:TANDEM>			3.0	False	95471892	59022	False	False	PTCH1	['Basal cell carcinoma, somatic, 605462 (3)', 'Basal cell nevus syndrome, 109400 (3)', 'Holoprosencephaly 7, 610828 (3)']	60.9083932279994	83.83220369009663
+5	151558060	call_2468	A	<DUP:TANDEM>			5.0	False	151619446	61386	False	False	FAT2	['Spinocerebellar ataxia 45, 617769 (3)']	55.967037910999466	77.03109330964001
+3	121755401	call_3268	T	<DUP:TANDEM>			4.0	False	121794588	39187	False	False	IQCB1	['Senior-Loken syndrome 5, 609254 (3)']	49.81228659599952	68.55990668730472
+7	2458786	call_3478	A	<DUP:TANDEM>			4.0	False	2526226	67440	False	False	LFNG	['Spondylocostal dysostosis 3, autosomal recessive, 609813 (3)']	43.97271159499955	60.52251783163576
+6	170249008	call_4689	C	<DUP:TANDEM>			3.0	False	170317166	68158	False	False	DLL1	.	43.93813125799955	60.474922653017195
+7	99585641	call_4736	A	<DUP:TANDEM>			3.0	False	99659962	74321	False	False	CYP3A5	['{Hypertension, salt-sensitive essential, susceptibility to}, 145500 (3)']	40.92961732699958	56.334108238097734
+2	135757650	call_4264	A	<DUP:TANDEM>			3.0	False	135811959	54309	False	False	LCT	['Lactase deficiency, congenital, 223000 (3)']	37.46562822299961	51.56639356436197
+4	53301695	call_4484	A	<DUP:TANDEM>			3.0	False	53383308	81613	False	False	FIP1L1	.	35.891301591999635	49.399544895235316
+17	60580564	call_4123	A	<DUP:TANDEM>			3.0	False	60658736	78172	False	False	PPM1D	['Breast cancer, somatic, 114480 (3)', 'Jansen de Vries syndrome, 617450 (3)']	9.66478809100001	13.30227971756571
+14	45115552	call_2925	G	<DUP:TANDEM>			4.0	False	45148440	32888	False	False	FANCM	['?Premature ovarian failure 15, 618096 (3)', 'Spermatogenic failure 28, 618086 (3)']	9.314062912999987	12.81955372524997
+17	721797	call_2139	T	<DUP:TANDEM>			5.0	False	754173	32376	False	False	GEMIN4	['Neurodevelopmental disorder with microcephaly, cataracts, and renal abnormalities, 617913 (3)']	7.615076464999971	10.481127599932702
+6	85501175	call_4648	G	<DUP:TANDEM>			3.0	False	85555544	54369	False	False	SNX14	['Spinocerebellar ataxia, autosomal recessive 20, 616354 (3)']	5.429471119999992	7.472936072332617
+5	36659685	call_4562	T	<DUP:TANDEM>			3.0	False	36698391	38706	False	False	SLC1A3	['Episodic ataxia, type 6, 612656 (3)']	0.7307062500000003	1.0057187842457675
+8	119017720	call_4807	G	<DUP:TANDEM>			3.0	False	119108979	91259	False	False	COLEC10	['3MC syndrome 3, 248340 (3)']	0.7295010090000003	1.0040599322607966

@@ -1,2 +1,4 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-12625	11	11	45929201.0	45952589.0	43937293.3	44058914.3	1.0	insertion	heterozygous	1	98233.0	False	False	PHF21A	.	4.206203729000024	64.36696787965168
+17025	17	17	45428384.0	45450344.0	2145630.5	2278920.0	1.0	insertion	heterozygous	1	111330.0	False	False	PLEKHM1	['?Osteopetrosis, autosomal recessive 6, 611497 (3)', 'Osteopetrosis, autosomal dominant 3, 618107 (3)']	71.40488904899728	89.3018707418117
+12625	11	11	45929201.0	45952589.0	43937293.3	44058914.3	1.0	insertion	heterozygous	1	98233.0	False	False	PHF21A	.	20.318081417999803	25.41062250326827
+6066	5	5	375544.0	679283.0	378621.7	779925.0	1.0	insertion	heterozygous	1	97564.0	False	False	SLC9A3	['Diarrhea 8, secretory sodium, congenital, 616868 (3)']	12.627629270999877	15.792628935541837

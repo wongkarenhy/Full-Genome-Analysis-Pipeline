@@ -1,16 +1,16 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-18	58368946	call_2895	T	<DUP:TANDEM>			3.0	False	58435750	66804	False	False	NEDD4L	['Periventricular nodular heterotopia 7, 617201 (3)']	53.38861086799913	96.12847540339985
-6	33117159	call_3254	G	<DUP:TANDEM>			3.0	False	33164911	47752	False	False	COL11A2	['Deafness, autosomal dominant 13, 601868 (3)', 'Deafness, autosomal recessive 53, 609706 (3)', 'Fibrochondrogenesis 2, 614524 (3)', 'Otospondylomegaepiphyseal dysplasia, autosomal dominant, 184840 (3)', 'Otospondylomegaepiphyseal dysplasia, autosomal recessive, 215150 (3)']	53.22493789799914	95.83377522643242
-11	93749938	call_2643	T	<DUP:TANDEM>			3.0	False	93813960	64022	False	False	MED17	['Microcephaly, postnatal progressive, with seizures and brain atrophy, 613668 (3)']	52.94089888599913	95.32235084706137
-22	29330578	call_2167	C	<DUP:TANDEM>			4.0	False	29375721	45143	False	False	AP1B1	.	52.842731154999136	95.14559565224701
-19	40599775	call_2920	T	<DUP:TANDEM>			3.0	False	40641077	41302	False	False	LTBP4	['Cutis laxa, autosomal recessive, type IC, 613177 (3)']	45.380634645999145	81.70977199883258
-2	199428163	call_3009	G	<DUP:TANDEM>			3.0	False	199495737	67574	False	False	SATB2	['Glass syndrome, 612313 (3)']	45.078057271999114	81.16496850645288
-16	49760487	call_1989	C	<DUP:TANDEM>			4.0	False	49810767	50280	False	False	ZNF423	['Joubert syndrome 19, 614844 (3)', 'Nephronophthisis 14, 614844 (3)']	42.89955250899909	77.24247758336051
-1	181558123	call_2553	A	<DUP:TANDEM>			3.0	False	181594880	36757	False	False	CACNA1E	['Epileptic encephalopathy, early infantile, 69, 618285 (3)']	37.14946588899912	66.88920089697645
-7	73540684	call_3310	G	<DUP:TANDEM>			3.0	False	73587352	46668	False	False	TBL2	.	35.83978446799918	64.53106352988596
-8	31160705	call_3352	C	<DUP:TANDEM>			3.0	False	31216759	56054	False	False	WRN	['Werner syndrome, 277700 (3)']	29.149651116999358	52.48519253191005
-8	143182452	call_1696	C	<DUP:TANDEM>			5.0	False	143218566	36114	False	False	GPIHBP1	['Hyperlipoproteinemia, type 1D, 615947 (3)']	26.190914466999526	47.1578607534553
-17	31980332	call_2006	G	<DUP:TANDEM>			4.0	False	32021547	41215	False	False	SUZ12	.	24.172201236999612	43.523081314140825
-7	78179142	call_1650	C	<DUP:TANDEM>			5.0	False	78212398	33256	False	False	MAGI2	['Nephrotic syndrome, type 15, 617609 (3)']	22.27036287299975	40.09874006564836
-3	53805750	call_1053	T	<DUP:TANDEM>			6.0	False	53837351	31601	False	False	CACNA1D	['Primary aldosteronism, seizures, and neurologic abnormalities, 615474 (3)', 'Sinoatrial node dysfunction and deafness, 614896 (3)']	17.88617541899998	32.20482319866496
-22	37180381	call_2168	C	<DUP:TANDEM>			4.0	False	37231350	50969	False	False	RAC2	['Neutrophil immunodeficiency syndrome, 608203 (3)']	9.141356818000014	16.459403602117906
+6	33117159	call_3254	G	<DUP:TANDEM>			3.0	False	33164911	47752	False	False	COL11A2	['Deafness, autosomal dominant 13, 601868 (3)', 'Deafness, autosomal recessive 53, 609706 (3)', 'Fibrochondrogenesis 2, 614524 (3)', 'Otospondylomegaepiphyseal dysplasia, autosomal dominant, 184840 (3)', 'Otospondylomegaepiphyseal dysplasia, autosomal recessive, 215150 (3)']	117.55968844100633	96.41420531873156
+17	31980332	call_2006	G	<DUP:TANDEM>			4.0	False	32021547	41215	False	False	SUZ12	.	116.36389274100614	95.43349761468784
+2	199428163	call_3009	G	<DUP:TANDEM>			3.0	False	199495737	67574	False	False	SATB2	['Glass syndrome, 612313 (3)']	116.18407301800607	95.28602209885754
+22	29330578	call_2167	C	<DUP:TANDEM>			4.0	False	29375721	45143	False	False	AP1B1	.	112.24075600300564	92.05199025203203
+22	37180381	call_2168	C	<DUP:TANDEM>			4.0	False	37231350	50969	False	False	RAC2	['Neutrophil immunodeficiency syndrome, 608203 (3)']	102.08237082700401	83.72079571541782
+8	143182452	call_1696	C	<DUP:TANDEM>			5.0	False	143218566	36114	False	False	GPIHBP1	['Hyperlipoproteinemia, type 1D, 615947 (3)']	93.02327490500244	76.2911610693185
+19	40599775	call_2920	T	<DUP:TANDEM>			3.0	False	40641077	41302	False	False	LTBP4	['Cutis laxa, autosomal recessive, type IC, 613177 (3)']	88.41737002000174	72.51372115645371
+1	181558123	call_2553	A	<DUP:TANDEM>			3.0	False	181594880	36757	False	False	CACNA1E	['Epileptic encephalopathy, early infantile, 69, 618285 (3)']	59.153948119999086	48.51391642056963
+7	78179142	call_1650	C	<DUP:TANDEM>			5.0	False	78212398	33256	False	False	MAGI2	['Nephrotic syndrome, type 15, 617609 (3)']	56.63279576599911	46.446244211482956
+3	53805750	call_1053	T	<DUP:TANDEM>			6.0	False	53837351	31601	False	False	CACNA1D	['Primary aldosteronism, seizures, and neurologic abnormalities, 615474 (3)', 'Sinoatrial node dysfunction and deafness, 614896 (3)']	47.65891477399917	39.08649687000609
+18	58368946	call_2895	T	<DUP:TANDEM>			3.0	False	58435750	66804	False	False	NEDD4L	['Periventricular nodular heterotopia 7, 617201 (3)']	28.465637370999413	23.34551785915402
+7	73540684	call_3310	G	<DUP:TANDEM>			3.0	False	73587352	46668	False	False	TBL2	.	23.469746855999677	19.248239104414875
+8	31160705	call_3352	C	<DUP:TANDEM>			3.0	False	31216759	56054	False	False	WRN	['Werner syndrome, 277700 (3)']	23.2879015419997	19.09910234101625
+11	93749938	call_2643	T	<DUP:TANDEM>			3.0	False	93813960	64022	False	False	MED17	['Microcephaly, postnatal progressive, with seizures and brain atrophy, 613668 (3)']	21.9463409949998	17.998848540234302
+16	49760487	call_1989	C	<DUP:TANDEM>			4.0	False	49810767	50280	False	False	ZNF423	['Joubert syndrome 19, 614844 (3)', 'Nephronophthisis 14, 614844 (3)']	20.42538962299987	16.751470975658712

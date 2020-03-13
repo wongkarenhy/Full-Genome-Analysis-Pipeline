@@ -1,30 +1,33 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-12	50599934	call_3714	C	<DUP:TANDEM>			3.0	False	50642459	42525	False	False	DIP2B	['Mental retardation, FRA12A type, 136630 (3)']	18.33346665999923	99.25501980966712
-1	155417670	call_2524	C	<DUP:TANDEM>			4.0	False	155452180	34510	False	False	ASH1L	['Mental retardation, autosomal dominant 52, 617796 (3)']	18.21990766799926	98.6402260988238
-20	18546084	call_4122	A	<DUP:TANDEM>			3.0	False	18607461	61377	False	False	SEC23B	['?Cowden syndrome 7, 616858 (3)', 'Dyserythropoietic anemia, congenital, type II, 224100 (3)']	18.0059185029993	97.48171640695705
-3	58397024	call_3086	C	<DUP:TANDEM>			4.0	False	58428524	31500	False	False	PDHB	['Pyruvate dehydrogenase E1-beta deficiency, 614111 (3)']	16.495661170999682	89.30537833706126
-9	680173	call_4589	C	<DUP:TANDEM>			3.0	False	728682	48509	False	False	KANK1	['Cerebral palsy, spastic quadriplegic, 2, 612900 (3)']	15.643089088999792	84.6896632375978
-7	21878894	call_4472	T	<DUP:TANDEM>			3.0	False	21920300	41406	False	False	DNAH11	['Ciliary dyskinesia, primary, 7, with or without situs inversus, 611884 (3)']	15.60557499199979	84.48656676326864
-18	62096706	call_3965	A	<DUP:TANDEM>			3.0	False	62146794	50088	False	False	PIGN	['Multiple congenital anomalies-hypotonia-seizures syndrome 1, 614080 (3)']	15.410845361999787	83.43232570555588
-12	80473581	call_847	T	<DUP:TANDEM>			7.0	False	80511205	37624	False	False	PTPRQ	['Deafness, autosomal dominant 73, 617663 (3)', 'Deafness, autosomal recessive 84A, 613391 (3)']	15.117487251999782	81.84412279994248
-1	243403459	call_3565	T	<DUP:TANDEM>			3.0	False	243475445	71986	False	False	SDCCAG8	['Bardet-Biedl syndrome 16, 615993 (3)', 'Senior-Loken syndrome 7, 613615 (3)']	14.483761049999773	78.41321101986681
-11	94390293	call_1766	C	<DUP:TANDEM>			5.0	False	94425548	35255	False	False	MRE11	['Ataxia-telangiectasia-like disorder 1, 604391 (3)']	13.67081691999976	74.01203653259135
-2	160134625	call_2043	T	<DUP:TANDEM>			5.0	False	160188290	53665	False	False	ITGB6	['Amelogenesis imperfecta, type IH, 616221 (3)']	13.61646375399976	73.71777551430729
-3	45880399	call_2121	A	<DUP:TANDEM>			5.0	False	45920808	40409	False	False	LZTFL1	['Bardet-Biedl syndrome 17, 615994 (3)']	12.978938741999746	70.2662974676986
-10	13721630	call_2560	C	<DUP:TANDEM>			4.0	False	13762601	40971	False	False	FRMD4A	['?Corpus callosum, agenesis of, with facial anomalies and cerebellar ataxia, 616819 (3)']	9.900749365999722	53.60137788871911
-9	18804910	call_3400	A	<DUP:TANDEM>			4.0	False	18850136	45226	False	False	ADAMTSL1	.	9.797250415999716	53.04104794550416
-3	197010113	call_4250	T	<DUP:TANDEM>			3.0	False	197070746	60633	False	False	DLG1	.	9.382926072999703	50.79794948329028
-7	96233921	call_3325	G	<DUP:TANDEM>			4.0	False	96277041	43120	False	False	SLC25A13	['Citrullinemia, adult-onset type II, 603471 (3)', 'Citrullinemia, type II, neonatal-onset, 605814 (3)']	8.015880599999694	43.396941915017464
-16	88775046	call_3910	C	<DUP:TANDEM>			3.0	False	88821701	46655	False	False	CDT1	['Meier-Gorlin syndrome 4, 613804 (3)']	7.7142827789997215	41.76413027862257
-19	16331902	call_2904	C	<DUP:TANDEM>			4.0	False	16375228	43326	False	False	EPS15L1	.	7.517353960999739	40.69798310121344
-3	169341623	call_2161	C	<DUP:TANDEM>			5.0	False	169405743	64120	False	False	MECOM	['Radioulnar synostosis with amegakaryocytic thrombocytopenia 2, 616738 (3)']	6.373984448999847	34.507928286816245
-5	58993472	call_4358	A	<DUP:TANDEM>			3.0	False	59038736	45264	False	False	PDE4D	['Acrodysostosis 2, with or without hormone resistance, 614613 (3)']	6.078917897999868	32.91047610235991
-4	5790813	call_3132	G	<DUP:TANDEM>			4.0	False	5835919	45106	False	False	EVC	['?Weyers acrofacial dysostosis, 193530 (3)', 'Ellis-van Creveld syndrome, 225500 (3)']	5.635725659999908	30.511090586354143
-16	88775046	call_3910	C	<DUP:TANDEM>			3.0	False	88821701	46655	False	False	PIEZO1	['Dehydrated hereditary stomatocytosis with or without pseudohyperkalemia and/or perinatal edema, 194380 (3)', 'Lymphatic malformation 6, 616843 (3)']	5.485321265999917	29.69682062951606
-10	26682144	call_3580	C	<DUP:TANDEM>			3.0	False	26725441	43297	False	False	PDSS1	['Coenzyme Q10 deficiency, primary, 2, 614651 (3)']	2.894943887000029	15.672852176887458
-19	55001940	call_1356	A	<DUP:TANDEM>			6.0	False	55034264	32324	False	False	GP6	['Bleeding disorder, platelet-type, 11, 614201 (3)']	2.065676771000016	11.183307152341063
-16	88775046	call_3910	C	<DUP:TANDEM>			3.0	False	88821701	46655	False	False	GALNS	['Mucopolysaccharidosis IVA, 253000 (3)']	1.780211034000012	9.637832534453501
-13	101686938	call_3785	T	<DUP:TANDEM>			3.0	False	101756637	69699	False	False	FGF14	['Spinocerebellar ataxia 27, 609307 (3)']	0.5449914060000001	2.950513059085063
-13	95676465	call_1846	G	<DUP:TANDEM>			5.0	False	95708974	32509	False	False	DNAJC3	['?Ataxia, combined cerebellar and peripheral, with hearing loss and diabetes mellitus, 616192 (3)']	0.531710283	2.878610775086817
-5	11694358	call_4339	C	<DUP:TANDEM>			3.0	False	11733398	39040	False	False	CTNND2	.	0.44531641599999994	2.4108855412537573
+16	88775046	call_3910	C	<DUP:TANDEM>			3.0	False	88821701	46655	False	False	CDT1	['Meier-Gorlin syndrome 4, 613804 (3)']	86.12858294500197	98.98887971954761
+13	95676465	call_1846	G	<DUP:TANDEM>			5.0	False	95708974	32509	False	False	DNAJC3	['?Ataxia, combined cerebellar and peripheral, with hearing loss and diabetes mellitus, 616192 (3)']	85.9753823590019	98.81280397486469
+19	16331902	call_2904	C	<DUP:TANDEM>			4.0	False	16375228	43326	False	False	EPS15L1	.	85.10325502300175	97.81045487063555
+4	5790813	call_3132	G	<DUP:TANDEM>			4.0	False	5835919	45106	False	False	EVC	['?Weyers acrofacial dysostosis, 193530 (3)', 'Ellis-van Creveld syndrome, 225500 (3)']	81.97411007500082	94.21408137543376
+19	55001940	call_1356	A	<DUP:TANDEM>			6.0	False	55034264	32324	False	False	GP6	['Bleeding disorder, platelet-type, 11, 614201 (3)']	80.32978432300038	92.32423298226486
+1	155417670	call_2524	C	<DUP:TANDEM>			4.0	False	155452180	34510	False	False	ASH1L	['Mental retardation, autosomal dominant 52, 617796 (3)']	75.73921849199938	87.04822641914988
+16	88775046	call_3910	C	<DUP:TANDEM>			3.0	False	88821701	46655	False	False	APRT	['Adenine phosphoribosyltransferase deficiency, 614723 (3)']	74.73176088699898	85.89034019515837
+2	160134625	call_2043	T	<DUP:TANDEM>			5.0	False	160188290	53665	False	False	ITGB6	['Amelogenesis imperfecta, type IH, 616221 (3)']	70.28658139199847	80.78142834131555
+5	11694358	call_4339	C	<DUP:TANDEM>			3.0	False	11733398	39040	False	False	CTNND2	.	69.2198462619982	79.55541356357747
+16	88775046	call_3910	C	<DUP:TANDEM>			3.0	False	88821701	46655	False	False	GALNS	['Mucopolysaccharidosis IVA, 253000 (3)']	68.73153795699794	78.99419346199292
+13	101686938	call_3785	T	<DUP:TANDEM>			3.0	False	101756637	69699	False	False	FGF14	['Spinocerebellar ataxia 27, 609307 (3)']	64.82653717999712	74.50611715791499
+10	13721630	call_2560	C	<DUP:TANDEM>			4.0	False	13762601	40971	False	False	FRMD4A	['?Corpus callosum, agenesis of, with facial anomalies and cerebellar ataxia, 616819 (3)']	63.65130099999669	73.15540048655852
+7	96233921	call_3325	G	<DUP:TANDEM>			4.0	False	96277041	43120	False	False	SLC25A13	['Citrullinemia, adult-onset type II, 603471 (3)', 'Citrullinemia, type II, neonatal-onset, 605814 (3)']	50.723116249997894	58.29684271803106
+3	169341623	call_2161	C	<DUP:TANDEM>			5.0	False	169405743	64120	False	False	MECOM	['Radioulnar synostosis with amegakaryocytic thrombocytopenia 2, 616738 (3)']	50.08950794399801	57.568627133293305
+12	50599934	call_3714	C	<DUP:TANDEM>			3.0	False	50642459	42525	False	False	DIP2B	['Mental retardation, FRA12A type, 136630 (3)']	49.983047562998024	57.44627061134246
+7	21878894	call_4472	T	<DUP:TANDEM>			3.0	False	21920300	41406	False	False	DNAH11	['Ciliary dyskinesia, primary, 7, with or without situs inversus, 611884 (3)']	46.089248676998466	52.971068809584665
+11	94390293	call_1766	C	<DUP:TANDEM>			5.0	False	94425548	35255	False	False	MRE11	['Ataxia-telangiectasia-like disorder 1, 604391 (3)']	46.08849961299847	52.97020789902904
+12	80473581	call_847	T	<DUP:TANDEM>			7.0	False	80511205	37624	False	False	PTPRQ	['Deafness, autosomal dominant 73, 617663 (3)', 'Deafness, autosomal recessive 84A, 613391 (3)']	35.23720764799931	40.49865434042811
+20	18546084	call_4122	A	<DUP:TANDEM>			3.0	False	18607461	61377	False	False	SEC23B	['?Cowden syndrome 7, 616858 (3)', 'Dyserythropoietic anemia, congenital, type II, 224100 (3)']	32.752855755999526	37.64335123187432
+3	197010113	call_4250	T	<DUP:TANDEM>			3.0	False	197070746	60633	False	False	DLG1	.	32.501263573999566	37.35419254156734
+20	33824792	call_1394	G	<DUP:TANDEM>			6.0	False	33856444	31652	False	False	CHMP4B	['Cataract 31, multiple types, 605387 (3)']	29.47001143999963	33.87032873431363
+3	45880399	call_2121	A	<DUP:TANDEM>			5.0	False	45920808	40409	False	False	LZTFL1	['Bardet-Biedl syndrome 17, 615994 (3)']	29.188845668999647	33.54718067202003
+9	18804910	call_3400	A	<DUP:TANDEM>			4.0	False	18850136	45226	False	False	ADAMTSL1	.	26.7912975319997	30.791642428614097
+16	88775046	call_3910	C	<DUP:TANDEM>			3.0	False	88821701	46655	False	False	PIEZO1	['Dehydrated hereditary stomatocytosis with or without pseudohyperkalemia and/or perinatal edema, 194380 (3)', 'Lymphatic malformation 6, 616843 (3)']	25.02939007399975	28.76665560689544
+10	26682144	call_3580	C	<DUP:TANDEM>			3.0	False	26725441	43297	False	False	PDSS1	['Coenzyme Q10 deficiency, primary, 2, 614651 (3)']	22.632723920999805	26.01213104100637
+9	680173	call_4589	C	<DUP:TANDEM>			3.0	False	728682	48509	False	False	KANK1	['Cerebral palsy, spastic quadriplegic, 2, 612900 (3)']	12.75899240699993	14.664102456273245
+5	58993472	call_4358	A	<DUP:TANDEM>			3.0	False	59038736	45264	False	False	PDE4D	['Acrodysostosis 2, with or without hormone resistance, 614613 (3)']	12.656540604999934	14.54635305464075
+18	62096706	call_3965	A	<DUP:TANDEM>			3.0	False	62146794	50088	False	False	PIGN	['Multiple congenital anomalies-hypotonia-seizures syndrome 1, 614080 (3)']	12.458239927999928	14.318443094988995
+1	243403459	call_3565	T	<DUP:TANDEM>			3.0	False	243475445	71986	False	False	SDCCAG8	['Bardet-Biedl syndrome 16, 615993 (3)', 'Senior-Loken syndrome 7, 613615 (3)']	12.423914466999928	14.278992324825776
+5	142923691	call_4390	C	<DUP:TANDEM>			3.0	False	142974156	50465	False	False	ARHGAP26	['Leukemia, juvenile myelomonocytic, somatic, 607785 (3)']	7.004141696999963	8.049965717254743
+3	58397024	call_3086	C	<DUP:TANDEM>			4.0	False	58428524	31500	False	False	PDHB	['Pyruvate dehydrogenase E1-beta deficiency, 614111 (3)']	1.744828081000001	2.0053572360721277
 17	48684997	call_2855	A	<DUP:TANDEM>			4.0	False	48734947	49950	False	False	HOXB13	['{Prostate cancer, hereditary, 9}, 610997 (3)']	0.0	0.0

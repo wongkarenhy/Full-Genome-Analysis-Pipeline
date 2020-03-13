@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-2806	10	10	27534384.0	27547856.0	835653.3	847790.4	0.99	deletion	heterozygous	1	1335.0	False	False	RAB18	['Warburg micro syndrome 3, 614222 (3)']	10.71036395000003	68.65180547895915
+2806	10	10	27534384.0	27547856.0	835653.3	847790.4	0.99	deletion	heterozygous	1	1335.0	False	False	RAB18	['Warburg micro syndrome 3, 614222 (3)']	9.384245505000008	6.97910783414856

@@ -1,4 +1,9 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	NSD1	['Leukemia, acute myeloid, 601626 (1)', 'Sotos syndrome 1, 117550 (3)']	7.697377077999744	60.537144481636716
-6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	B4GALT7	['Ehlers-Danlos syndrome, spondylodysplastic type, 1, 130070 (3)']	1.053908064000002	8.288613652965212
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	B4GALT7	['Ehlers-Danlos syndrome, spondylodysplastic type, 1, 130070 (3)']	34.86292300399935	92.9224997832254
+6962	6	6	63771696.0	63781633.0	2427905.4	2436321.3	0.99	deletion	heterozygous	1	1521.0	False	True	EYS	['Retinitis pigmentosa 25, 602772 (3)']	34.66952002999937	92.40700979383104
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	NSD1	['Leukemia, acute myeloid, 601626 (1)', 'Sotos syndrome 1, 117550 (3)']	19.921228012000135	53.09739247665238
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	DDX41	['{Myeloproliferative/lymphoproliferative neoplasms, familial (multiple types), susceptibility to}, 616871 (3)']	11.88972387400013	31.69048286564054
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	F12	['Angioedema, hereditary, type III, 610618 (3)', 'Factor XII deficiency, 234000 (3)']	11.776053635000123	31.38750991189178
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	SNCB	['Dementia, Lewy body, 127750 (3)']	5.835558780999952	15.553908359900332
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	SLC34A1	['?Fanconi renotubular syndrome 2, 613388 (3)', 'Hypercalcemia, infantile, 2, 616963 (3)', 'Nephrolithiasis/osteoporosis, hypophosphatemic, 1, 612286 (3)']	1.191200422000002	3.174986817438553
 6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	FGFR4	['{Cancer progression/metastasis} (3)']	0.0	0.0

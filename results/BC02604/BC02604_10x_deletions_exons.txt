@@ -1,2 +1,2 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-22	50454976	call_4096	T	<DEL>			5.0	True	50455846	-870	True	False	SBF1	['Charcot-Marie-Tooth disease, type 4B3, 615284 (3)']	1.7298950830000115	54.12323411050552
+22	50454976	call_4096	T	<DEL>			5.0	True	50455846	-870	True	False	SBF1	['Charcot-Marie-Tooth disease, type 4B3, 615284 (3)']	7.595767786000028	29.656577283518505

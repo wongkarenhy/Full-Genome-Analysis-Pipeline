@@ -1,2 +1,2 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-11	66715028	call_3850	A	<DEL>			2.0	True	66715381	-353	False	False	SPTBN2	['Spinocerebellar ataxia 5, 600224 (3)', 'Spinocerebellar ataxia, autosomal recessive 14, 615386 (3)']	0.26510929599999994	1.6993103039841841
+11	66715028	call_3850	A	<DEL>			2.0	True	66715381	-353	False	False	SPTBN2	['Spinocerebellar ataxia 5, 600224 (3)', 'Spinocerebellar ataxia, autosomal recessive 14, 615386 (3)']	112.33095075200316	83.54106017292017

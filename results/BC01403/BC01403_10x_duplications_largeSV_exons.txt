@@ -1,23 +1,23 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-4	463620	call_4287	A	<DUP:TANDEM>			2.0	False	546910	83290	False	False	PIGG	['Mental retardation, autosomal recessive 53, 616917 (3)']	144.4000002230043	91.6183182176968
-7	673455	call_4421	C	<DUP:TANDEM>			2.0	False	741534	68079	True	False	DNAAF5	['Ciliary dyskinesia, primary, 18, 614874 (3)']	136.38698317000302	86.5342521158136
-7	153873485	call_4471	T	<DUP:TANDEM>			2.0	False	153937276	63791	False	False	DPP6	['Mental retardation, autosomal dominant 33, 616311 (3)', '{Ventricular fibrillation, paroxysmal familial, 2}, 612956 (3)']	124.96502677900119	79.28729620387898
-18	10693547	call_2508	T	<DUP:TANDEM>			4.0	False	10727619	34072	False	False	PIEZO2	['?Marden-Walker syndrome, 248700 (3)', 'Arthrogryposis, distal, type 3, 114300 (3)', 'Arthrogryposis, distal, type 5, 108145 (3)', 'Arthrogryposis, distal, with impaired proprioception and touch, 617146 (3)']	121.54485593000102	77.11728027092424
-2	218250026	call_4167	A	<DUP:TANDEM>			2.0	False	218338550	88524	False	False	PNKD	.	119.65339845100101	75.9171961092993
-3	108109203	call_4261	C	<DUP:TANDEM>			2.0	False	108193855	84652	False	False	IFT57	['?Orofaciodigital syndrome XVIII, 617927 (3)']	113.97339447700091	72.31337054999145
-10	74945131	call_1727	A	<DUP:TANDEM>			5.0	False	75004934	59803	False	False	KAT6B	['Genitopatellar syndrome, 606170 (3)', 'SBBYSS syndrome, 603736 (3)']	112.28554090200083	71.24246815594421
-X	67631174	call_4557	C	<DUP:TANDEM>			2.0	False	67696917	65743	False	False	AR	['Androgen insensitivity, 300068 (3)', 'Androgen insensitivity, partial, with or without breast cancer, 312300 (3)', 'Hypospadias 1, X-linked, 300633 (3)', 'Spinal and bulbar muscular atrophy of Kennedy, 313200 (3)', '{Prostate cancer, susceptibility to}, 176807 (3)']	110.13112917500072	69.875545864591
-21	45474364	call_3420	T	<DUP:TANDEM>			3.0	False	45500594	26230	False	False	COL18A1	['Knobloch syndrome, type 1, 267750 (3)']	100.68766113900053	63.883893106524866
-4	47795279	call_3521	T	<DUP:TANDEM>			3.0	False	47854315	59036	False	False	CORIN	['Preeclampsia/eclampsia 5, 614595 (3)']	86.78960600900025	55.0659122509777
-18	62100913	call_4094	T	<DUP:TANDEM>			2.0	False	62144750	43837	False	False	PIGN	['Multiple congenital anomalies-hypotonia-seizures syndrome 1, 614080 (3)']	73.89228405599992	46.88287246551221
-8	118960661	call_4495	C	<DUP:TANDEM>			2.0	False	119081394	120733	False	False	COLEC10	['3MC syndrome 3, 248340 (3)']	62.32339136099957	39.54268901177233
-2	178823211	call_4158	A	<DUP:TANDEM>			2.0	False	178893696	70485	False	False	CCDC141	.	59.06943423099955	37.47813167560418
-2	221559194	call_4171	A	<DUP:TANDEM>			2.0	False	221624134	64940	False	False	EPHA4	.	58.05237269499957	36.83283065546346
-3	188584754	call_4281	T	<DUP:TANDEM>			2.0	False	188678694	93940	False	False	LPP	['Leukemia, acute myeloid, 601626 (3)', 'Lipoma (3)']	50.48211386999962	32.02968397299774
-3	69844718	call_2665	T	<DUP:TANDEM>			4.0	False	69889026	44308	False	False	MITF	['COMMAD syndrome, 617306 (3)', 'Tietz albinism-deafness syndrome, 103500 (3)', 'Waardenburg syndrome, type 2A, 193510 (3)', 'Waardenburg syndrome/ocular albinism, digenic, 103470 (3)', '{Melanoma, cutaneous malignant, susceptibility to, 8}, 614456 (3)']	39.81238377899977	25.259997509947247
-9	35735340	call_3708	T	<DUP:TANDEM>			3.0	False	35784792	49452	False	False	GBA2	['Spastic paraplegia 46, autosomal recessive, 614409 (3)']	31.000897734999835	19.66932208679465
-7	673455	call_4421	C	<DUP:TANDEM>			2.0	False	741534	68079	True	False	PRKAR1B	.	24.893691875999917	15.794447232592965
-16	14580698	call_2469	A	<DUP:TANDEM>			4.0	False	14634592	53894	False	False	PARN	['Dyskeratosis congenita, autosomal recessive 6, 616353 (3)', 'Pulmonary fibrosis and/or bone marrow failure, telomere-related, 4, 616371 (3)']	9.759623510999996	6.192245783482101
-19	54896099	call_4124	G	<DUP:TANDEM>			2.0	False	55007965	111866	False	False	NLRP7	.	3.2620638200000056	2.069700835496149
-12	106401178	call_3121	C	<DUP:TANDEM>			3.0	False	106473022	71844	False	False	POLR3B	['Leukodystrophy, hypomyelinating, 8, with or without oligodontia and/or hypogonadotropic hypogonadism, 614381 (3)']	1.7388347110000029	1.1032486955287113
+12	106401178	call_3121	C	<DUP:TANDEM>			3.0	False	106473022	71844	False	False	POLR3B	['Leukodystrophy, hypomyelinating, 8, with or without oligodontia and/or hypogonadotropic hypogonadism, 614381 (3)']	193.10346395700802	93.82340431676238
+7	673455	call_4421	C	<DUP:TANDEM>			2.0	False	741534	68079	True	False	PRKAR1B	.	192.86823560600797	93.70911364465121
+18	10693547	call_2508	T	<DUP:TANDEM>			4.0	False	10727619	34072	False	False	PIEZO2	['?Marden-Walker syndrome, 248700 (3)', 'Arthrogryposis, distal, type 3, 114300 (3)', 'Arthrogryposis, distal, type 5, 108145 (3)', 'Arthrogryposis, distal, with impaired proprioception and touch, 617146 (3)']	192.86745920800794	93.70873641525317
+10	74945131	call_1727	A	<DUP:TANDEM>			5.0	False	75004934	59803	False	False	KAT6B	['Genitopatellar syndrome, 606170 (3)', 'SBBYSS syndrome, 603736 (3)']	190.33958950700745	92.48051742758206
+7	153873485	call_4471	T	<DUP:TANDEM>			2.0	False	153937276	63791	False	False	DPP6	['Mental retardation, autosomal dominant 33, 616311 (3)', '{Ventricular fibrillation, paroxysmal familial, 2}, 612956 (3)']	174.4786427590052	84.77414080910893
+18	62100913	call_4094	T	<DUP:TANDEM>			2.0	False	62144750	43837	False	False	PIGN	['Multiple congenital anomalies-hypotonia-seizures syndrome 1, 614080 (3)']	160.86787487100395	78.16106120686081
+19	54896099	call_4124	G	<DUP:TANDEM>			2.0	False	55007965	111866	False	False	NLRP7	.	158.13486469800353	76.83317037979448
+7	673455	call_4421	C	<DUP:TANDEM>			2.0	False	741534	68079	True	False	DNAAF5	['Ciliary dyskinesia, primary, 18, 614874 (3)']	152.02249595900284	73.86334668124043
+4	47795279	call_3521	T	<DUP:TANDEM>			3.0	False	47854315	59036	False	False	CORIN	['Preeclampsia/eclampsia 5, 614595 (3)']	101.81618729100018	49.469549175573086
+3	188584754	call_4281	T	<DUP:TANDEM>			2.0	False	188678694	93940	False	False	LPP	['Leukemia, acute myeloid, 601626 (3)', 'Lipoma (3)']	93.95482087100011	45.64993794234271
+21	45474364	call_3420	T	<DUP:TANDEM>			3.0	False	45500594	26230	False	False	COL18A1	['Knobloch syndrome, type 1, 267750 (3)']	85.8106842269998	41.692936811948066
+9	35735340	call_3708	T	<DUP:TANDEM>			3.0	False	35784792	49452	False	False	GBA2	['Spastic paraplegia 46, autosomal recessive, 614409 (3)']	76.09456368899976	36.97215404116291
+4	463620	call_4287	A	<DUP:TANDEM>			2.0	False	546910	83290	False	False	PIGG	['Mental retardation, autosomal recessive 53, 616917 (3)']	54.438070713999686	26.44988864602257
+3	69844718	call_2665	T	<DUP:TANDEM>			4.0	False	69889026	44308	False	False	MITF	['COMMAD syndrome, 617306 (3)', 'Tietz albinism-deafness syndrome, 103500 (3)', 'Waardenburg syndrome, type 2A, 193510 (3)', 'Waardenburg syndrome/ocular albinism, digenic, 103470 (3)', '{Melanoma, cutaneous malignant, susceptibility to, 8}, 614456 (3)']	48.93813755499971	23.777629734049302
+8	118960661	call_4495	C	<DUP:TANDEM>			2.0	False	119081394	120733	False	False	COLEC10	['3MC syndrome 3, 248340 (3)']	46.86650480999971	22.771083126095895
+2	178823211	call_4158	A	<DUP:TANDEM>			2.0	False	178893696	70485	False	False	CCDC141	.	43.43097515099975	21.101858340411336
+3	108109203	call_4261	C	<DUP:TANDEM>			2.0	False	108193855	84652	False	False	IFT57	['?Orofaciodigital syndrome XVIII, 617927 (3)']	42.614975400999775	20.705387594119237
+X	67631174	call_4557	C	<DUP:TANDEM>			2.0	False	67696917	65743	False	False	AR	['Androgen insensitivity, 300068 (3)', 'Androgen insensitivity, partial, with or without breast cancer, 312300 (3)', 'Hypospadias 1, X-linked, 300633 (3)', 'Spinal and bulbar muscular atrophy of Kennedy, 313200 (3)', '{Prostate cancer, susceptibility to}, 176807 (3)']	32.701606359999914	15.888767464083243
+2	221559194	call_4171	A	<DUP:TANDEM>			2.0	False	221624134	64940	False	False	EPHA4	.	28.849996744999928	14.017381426912372
+16	14580698	call_2469	A	<DUP:TANDEM>			4.0	False	14634592	53894	False	False	PARN	['Dyskeratosis congenita, autosomal recessive 6, 616353 (3)', 'Pulmonary fibrosis and/or bone marrow failure, telomere-related, 4, 616371 (3)']	23.976932815999962	11.649700195809311
+2	218250026	call_4167	A	<DUP:TANDEM>			2.0	False	218338550	88524	False	False	PNKD	.	8.271251977999981	4.018762805365768
 2	104819459	call_4149	A	<DUP:TANDEM>			2.0	False	104931088	111629	False	False	POU3F3	['Snijders Blok-Fisher syndrome, 618604 (3)']	0.0	0.0

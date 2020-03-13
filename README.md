@@ -76,6 +76,7 @@ To get started, pull the github repo and create two additional directories (bion
 ├── annotatedExon.bed
 ├── annotatedGene.bed
 ├── bionano_sv
+├── common_artifacts_20.txt
 ├── cytoband.txt
 ├── human_pheno_ontology_b1270 
 ├── linkedRead_sv

@@ -29,9 +29,14 @@ def tenxlargesvdeletions(args):
     #load sample data
     sample_frame = read10xlargeSVs(args.samplepath, '<DEL>', False)
 
-    #load parent data
-    father_frame = read10xlargeSVs(args.fpath, '<DEL>', False)
-    mother_frame = read10xlargeSVs(args.mpath, '<DEL>', False)
+    if not args.singleton:
+        #load parent data
+        father_frame = read10xlargeSVs(args.fpath, '<DEL>', False)
+        mother_frame = read10xlargeSVs(args.mpath, '<DEL>', False)
+    else:
+        mother_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
+        father_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
+
 
     #load reference data
     ref_frame = read10xlargeSVs(args.referencepath, '<DEL>', False)
@@ -45,9 +50,11 @@ def tenxlargesvdeletions(args):
     #remove anything that overlaps with the reference
     filtered_sample_frame = checkRefOverlap(sample_copy, ref_copy, sample_frame)
 
-    #add column based on overlap with parents 
-    df = checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_frame)
-    #df.to_csv(args.outputdirectory + '/' + args.sampleID + '_10xLargeSVDeletions_cytobands.txt', sep='\t', index = False)
+    #add column based on overlap with parents
+    if not args.singleton:
+        df = checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_frame)
+    else:
+        df = filtered_sample_frame
 
     #describe exon overlap
     df['Start'], df['End'], df['Chromosome'] = df.POS, df.END, df['CHROM']

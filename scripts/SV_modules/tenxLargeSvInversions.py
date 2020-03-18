@@ -87,9 +87,14 @@ def tenxlargesvinversions(args):
     #load sample data
     sample_frame = read10xlargeSVs(args.samplepath, '<INV>', False)
 
-    #load parent data
-    father_frame = read10xlargeSVs(args.fpath, '<INV>', False)
-    mother_frame = read10xlargeSVs(args.mpath, '<INV>', False)
+    if not args.singleton:
+        #load parent data
+        father_frame = read10xlargeSVs(args.fpath, '<INV>', False)
+        mother_frame = read10xlargeSVs(args.mpath, '<INV>', False)
+    else:
+        mother_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
+        father_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
+
 
     #load reference data
     ref_frame = read10xlargeSVs(args.referencepath, '<INV>', False)

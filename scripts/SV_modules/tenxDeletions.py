@@ -166,9 +166,14 @@ def tenxdeletions(args):
     #load sample data
     sample_frame = read10x(args.samplepath)
 
-    #load parent data
-    father_frame = read10x(args.fpath)
-    mother_frame = read10x(args.mpath)
+    if not args.singleton:
+        # load parent data
+        father_frame = read10x(args.fpath)
+        mother_frame = read10x(args.mpath)
+    else:
+        mother_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
+        father_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
+
 
     #load reference data
     ref_frame = read10x(args.referencepath)

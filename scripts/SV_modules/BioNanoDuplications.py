@@ -43,9 +43,14 @@ def BN_duplication(args):
     if sample_frame.empty:
         return None, None
 
-    #loadparent
-    father_frame = readsmapDup(args.fpath)
-    mother_frame = readsmapDup(args.mpath)
+    if not args.singleton:
+        #loadparent
+        father_frame = readsmapDup(args.fpath)
+        mother_frame = readsmapDup(args.mpath)
+    else:
+        mother_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1'])
+        father_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1'])
+
 
     #load reference
     ref_frame = readsmapDup(args.referencepath)

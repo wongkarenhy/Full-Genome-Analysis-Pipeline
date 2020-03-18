@@ -16,9 +16,14 @@ def BN_insertion(args):
     #loadsample
     sample_frame = readsmap(args.samplepath, args, 'insertion')
 
-    #loadparent
-    mother_frame = readsmap(args.mpath, args, 'insertion')
-    father_frame = readsmap(args.fpath, args, 'insertion')
+    if not args.singleton:
+        #loadparent
+        mother_frame = readsmap(args.mpath, args, 'insertion')
+        father_frame = readsmap(args.fpath, args, 'insertion')
+    else:
+        mother_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1'])
+        father_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1'])
+
 
     #load reference
     ref_frame = readsmap(args.referencepath, args, 'insertion')

@@ -32,8 +32,14 @@ def read_breakend(path, qual_filter):
 def tenxlargesvbreakends(args):
 
     sample_frame = read_breakend(args.samplepath, True)
-    mother_frame = read_breakend(args.mpath, False)
-    father_frame = read_breakend(args.fpath, False)
+
+    if not args.singleton:
+        mother_frame = read_breakend(args.mpath, False)
+        father_frame = read_breakend(args.fpath, False)
+    else:
+        mother_frame = pd.DataFrame(columns=['POS_x', 'POS_y', 'CHROM_x', 'CHROM_y'])
+        father_frame = pd.DataFrame(columns=['POS_x', 'POS_y', 'CHROM_x', 'CHROM_y'])
+
     ref_frame = read_breakend(args.referencepath, False)
 
     sample_start, sample_end, mother_start, mother_end, father_start, father_end, ref_start, ref_end = sample_frame.copy(), sample_frame.copy(), mother_frame.copy(),  mother_frame.copy(), father_frame.copy(), father_frame.copy(), ref_frame.copy(), ref_frame.copy()

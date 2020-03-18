@@ -136,9 +136,14 @@ def BN_deletion(args):
     #loadsample
     sample_frame = readsmap(args.samplepath, args, 'deletion')
 
-    #loadparent
-    mother_frame = readsmap(args.mpath, args, 'deletion')
-    father_frame = readsmap(args.fpath, args, 'deletion')
+    if not args.singleton:
+        #loadparent
+        mother_frame = readsmap(args.mpath, args, 'deletion')
+        father_frame = readsmap(args.fpath, args, 'deletion')
+    else:
+        mother_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1'])
+        father_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1'])
+
 
     # #load reference
     ref_frame = readsmap(args.referencepath, args, 'deletion')

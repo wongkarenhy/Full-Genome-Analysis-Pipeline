@@ -19,9 +19,14 @@ def tenxlargesvunknown(args):
     #load sample data
     sample_frame = read10xlargeSVs(args.samplepath, '<UNK>', True)
 
-    #load parent data
-    father_frame = read10xlargeSVs(args.fpath, '<UNK>', False)
-    mother_frame = read10xlargeSVs(args.mpath, '<UNK>', False)
+    if not args.singleton:
+        #load parent data
+        father_frame = read10xlargeSVs(args.fpath, '<UNK>', False)
+        mother_frame = read10xlargeSVs(args.mpath, '<UNK>', False)
+    else:
+        mother_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
+        father_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
+
 
     #load reference data
     ref_frame = read10xlargeSVs(args.referencepath, '<UNK>', False)

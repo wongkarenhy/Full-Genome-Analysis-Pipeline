@@ -49,8 +49,8 @@ def checkParentsOverlapTransloInv(filtered_sample_frame, sample_start, father_st
         m_filtered_sample_frame = m_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
         f_filtered_sample_frame['Found_in_Mother'] = m_filtered_sample_frame['Found_in_Mother']
         filtered_sample_frame = f_filtered_sample_frame
-    calls = filtered_sample_frame.drop(columns=['Chromosome', 'Start', 'End']).rename(
-        columns={'Score': 'OMIM_syndrome', 'Score2': 'OMIM_syndrome2', 'Name': 'Gene', 'Name2': 'Gene2'}).drop_duplicates()
+
+    calls = filtered_sample_frame.drop(columns=['Chromosome', 'Start', 'End']).rename(columns={'Score': 'OMIM_syndrome', 'Score2': 'OMIM_syndrome2', 'Name': 'Gene', 'Name2': 'Gene2'}).drop_duplicates()
 
     # denovo_start_f, denovo_start_m = PyRanges(sample_start).overlap(PyRanges(father_start)), PyRanges(sample_start).overlap(PyRanges(mother_start))
     # denovo_end_f, denovo_end_m = PyRanges(sample_end).overlap(PyRanges(father_end)), PyRanges(sample_end).overlap(PyRanges(mother_end))
@@ -110,10 +110,14 @@ def BN_translocation(args):
 
     #loadsample
     sample_frame = readsmapTranslo(args.samplepath, args)
-    #print(sample_frame)
-    #loadparent
-    mother_frame = readsmapTranslo(args.mpath, args)
-    father_frame = readsmapTranslo(args.fpath, args)
+
+    if not args.singleton:
+        #loadparent
+        mother_frame = readsmapTranslo(args.mpath, args)
+        father_frame = readsmapTranslo(args.fpath, args)
+    else:
+        mother_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1','RefcontigID2'])
+        father_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1','RefcontigID2'])
 
     #load reference
     ref_frame = readsmapTranslo(args.referencepath, args)
@@ -152,7 +156,7 @@ def BN_translocation(args):
                 'Found_in_Father', 'Found_in_Mother']
 
     else:
-        calls = filtered_sample_frame
+        calls = filtered_sample_frame.rename(columns={'Score': 'OMIM_syndrome', 'Score2': 'OMIM_syndrome2', 'Name': 'Gene', 'Name2': 'Gene2'})
         cols = ['SmapEntryID', 'RefcontigID1', 'RefcontigID2', 'RefStartPos', 'RefEndPos', 'QryStartPos', 'QryEndPos',
                 'Confidence', 'Type', 'Zygosity', 'Genotype', 'Gene', 'OMIM_syndrome', 'Gene2', 'OMIM_syndrome2']
 

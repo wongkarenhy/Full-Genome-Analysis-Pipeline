@@ -32,9 +32,13 @@ def BN_inversion(args):
     #loadsample
     sample_frame = readsmapInv(args.samplepath)
 
-    #loadparent
-    father_frame = readsmapInv(args.fpath)
-    mother_frame = readsmapInv(args.mpath)
+    if not args.singleton:
+        #loadparent
+        father_frame = readsmapInv(args.fpath)
+        mother_frame = readsmapInv(args.mpath)
+    else:
+        mother_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1','RefcontigID2'])
+        father_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1','RefcontigID2'])
 
     #load reference
     ref_frame = readsmapInv(args.referencepath)
@@ -73,7 +77,7 @@ def BN_inversion(args):
                 'Confidence', 'Type', 'Zygosity', 'Genotype', 'Gene', 'OMIM_syndrome', 'Gene2', 'OMIM_syndrome2',
                 'Found_in_Father', 'Found_in_Mother']
     else:
-        calls = filtered_sample_frame
+        calls = filtered_sample_frame.rename(columns={'Score': 'OMIM_syndrome', 'Score2': 'OMIM_syndrome2', 'Name': 'Gene', 'Name2': 'Gene2'})
         cols = ['SmapEntryID', 'RefcontigID1', 'RefcontigID2', 'RefStartPos', 'RefEndPos', 'QryStartPos', 'QryEndPos',
                 'Confidence', 'Type', 'Zygosity', 'Genotype', 'Gene', 'OMIM_syndrome', 'Gene2', 'OMIM_syndrome2']
 

@@ -27,9 +27,14 @@ def tenxlargesvduplications(args):
     #load sample data
     sample_frame = read10xlargeSVs(args.samplepath, 'DUP')
 
-    #load parent data
-    father_frame = read10xlargeSVs(args.fpath, 'DUP')
-    mother_frame = read10xlargeSVs(args.mpath, 'DUP')
+    if not args.singleton:
+        #load parent data
+        father_frame = read10xlargeSVs(args.fpath, 'DUP')
+        mother_frame = read10xlargeSVs(args.mpath, 'DUP')
+    else:
+        mother_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
+        father_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
+
 
     #load reference data
     ref_frame = read10xlargeSVs(args.referencepath, 'DUP')

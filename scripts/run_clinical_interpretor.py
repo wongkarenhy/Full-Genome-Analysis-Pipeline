@@ -331,7 +331,6 @@ def parseSyndromeNameToCytoband(df, cytobandDict, type, hpo_syndromes_mim_df,arg
             df = df.loc[~df['cytoband'].astype(str).str.contains("Chr")]
             end_string = ('p','q')
             df = df.loc[~df['cytoband'].str.endswith(end_string)] #Remove cytoband entries that span the whole chromosomal arm like 2p
-            print(df)
 
         except OSError:
             print("Could not open/read the input file: " + args.workdir + '/morbidmap.txt')
@@ -582,21 +581,21 @@ def compileControlFiles(control_files_path, famid):
 
 def bionanoSV(args, famid, gene_score_result_r, all_small_variants):
 
-    # # Generate controls files (1KGP BN samples + CIAPM parents (excluding  parents of the proband of interest)
-    # print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Generating bionano control file...')
-    # control_files_path = [args.workdir + "/bionano_sv/controls/DLE", args.workdir + "/bionano_sv/controls/BspQI", args.workdir + "/bionano_sv/cases/DLE", args.workdir + "/bionano_sv/cases/BspQI"]
-    # full_paths = compileControlFiles(control_files_path, famid)
-    #
-    # ## Write an empty file
-    # with open(args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz", 'w'):  # So it will overwrite the old file
-    #     pass
-    #
-    # for path in full_paths:
-    #     cmd = "cat " + path + "/exp_refineFinal1_merged_filter.smap | gzip >> " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz"
-    #     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    #     stdout, stderr = p.communicate()
-    #     if p.returncode != 0:
-    #         raise Exception(stderr)
+    # Generate controls files (1KGP BN samples + CIAPM parents (excluding  parents of the proband of interest)
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Generating bionano control file...')
+    control_files_path = [args.workdir + "/bionano_sv/controls/DLE", args.workdir + "/bionano_sv/controls/BspQI", args.workdir + "/bionano_sv/cases/DLE", args.workdir + "/bionano_sv/cases/BspQI"]
+    full_paths = compileControlFiles(control_files_path, famid)
+
+    ## Write an empty file
+    with open(args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz", 'w'):  # So it will overwrite the old file
+        pass
+
+    for path in full_paths:
+        cmd = "cat " + path + "/exp_refineFinal1_merged_filter.smap | gzip >> " + args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz"
+        p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, stderr = p.communicate()
+        if p.returncode != 0:
+            raise Exception(stderr)
 
     # Create a BN arg object
     BN_args = Namespace(sampleID = args.sampleid,
@@ -707,17 +706,17 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large duplications on ' + args.sampleid + '...')
     cyto_10x_dup_largeSV, exon_calls_10x_largeSV_dup = tenxlargesvduplications(tenx_args_largeSV)
 
-    # # Call large inversions
-    # print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large inversions on ' + args.sampleid + '...')
-    # tenxlargesvinversions(tenx_args_largeSV)
-    #
-    # # Call large breakends
-    # print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large breakends on ' + args.sampleid + '...')
-    # tenxlargesvbreakends(tenx_args_largeSV)
-    #
-    # # Call large unknwon calls
-    # print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large unknown on ' + args.sampleid + '...')
-    # tenxlargesvunknown(tenx_args_largeSV)
+    # Call large inversions
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large inversions on ' + args.sampleid + '...')
+    tenxlargesvinversions(tenx_args_largeSV)
+
+    # Call large breakends
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large breakends on ' + args.sampleid + '...')
+    tenxlargesvbreakends(tenx_args_largeSV)
+
+    # Call large unknwon calls
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large unknown on ' + args.sampleid + '...')
+    tenxlargesvunknown(tenx_args_largeSV)
 
     # Check potential compoundhets with SNPs and indels
     tenx_exons = pd.concat([exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup])

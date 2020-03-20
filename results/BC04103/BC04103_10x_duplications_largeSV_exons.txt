@@ -1,18 +1,18 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-20	63383589	call_3674	A	<DUP:TANDEM>			3.0	False	63421486	37897	False	False	KCNQ2	['Epileptic encephalopathy, early infantile, 7, 613720 (3)', 'Myokymia, 121200 (3)', 'Seizures, benign neonatal, 1, 121200 (3)']	48.07910690099909	91.02772722735205
-19	53726928	call_3569	C	<DUP:TANDEM>			3.0	False	53795445	68517	False	False	NLRP12	['Familial cold autoinflammatory syndrome 2, 611762 (3)']	48.040272128999106	90.95420171366413
-1	62399125	call_3177	A	<DUP:TANDEM>			3.0	False	62458789	59664	False	False	DOCK7	['Epileptic encephalopathy, early infantile, 23, 615859 (3)']	43.37608323999921	82.12353614412741
-3	38015895	call_1963	G	<DUP:TANDEM>			5.0	False	38054502	38607	False	False	PLCD1	['Nail disorder, nonsyndromic congenital, 3, (leukonychia), 151600 (3)']	39.7584390469993	75.27428394224911
-1	151825110	call_2301	G	<DUP:TANDEM>			4.0	False	151861875	36765	False	False	RORC	['Immunodeficiency 42, 616622 (3)']	39.274546603999326	74.35813486736139
-X	123174179	call_4131	T	<DUP:TANDEM>			3.0	False	123223715	49536	False	False	GRIA3	['Mental retardation, X-linked 94, 300699 (3)']	34.19600079799951	64.74297118946541
-17	59050836	call_3520	C	<DUP:TANDEM>			3.0	False	59094974	44138	False	False	TRIM37	['Mulibrey nanism, 253250 (3)']	31.756300225999585	60.12390872140179
-3	128837390	call_3753	T	<DUP:TANDEM>			3.0	False	128887241	49851	False	False	ACAD9	['Mitochondrial complex I deficiency, nuclear type 20, 611126 (3)']	26.083346443999748	49.38335793487032
-19	7457343	call_3543	A	<DUP:TANDEM>			3.0	False	7504915	47572	False	False	ARHGEF18	['Retinitis pigmentosa 78, 617433 (3)']	25.69036262899977	48.63932532232113
-16	70990345	call_1277	A	<DUP:TANDEM>			6.0	False	71028753	38408	False	False	HYDIN	['Ciliary dyskinesia, primary, 5, 608647 (3)']	25.51402664199978	48.305470033410444
-3	38015895	call_1963	G	<DUP:TANDEM>			5.0	False	38054502	38607	False	False	DLEC1	.	21.455160929999963	40.620857221338966
-12	11745481	call_3335	G	<DUP:TANDEM>			3.0	False	11817145	71664	False	False	ETV6	['Leukemia, acute myeloid, somatic, 601626 (3)', 'Thrombocytopenia 5, 616216 (3)']	20.094200544999985	38.04416354547463
-10	63416437	call_3258	A	<DUP:TANDEM>			3.0	False	63470494	54057	False	False	JMJD1C	.	4.778674067000022	9.047419295350092
-12	85233018	call_3350	C	<DUP:TANDEM>			3.0	False	85284182	51164	False	False	ALX1	['?Frontonasal dysplasia 3, 613456 (3)']	2.8297099830000016	5.357463669103357
-11	64761976	call_1696	G	<DUP:TANDEM>			5.0	False	64793394	31418	False	False	SF1	['46, XX sex reversal 4, 617480 (3)', '46XY sex reversal 3, 612965 (3)', 'Adrenocortical insufficiency, 612964 (3)', 'Premature ovarian failure 7, 612964 (3)', 'Spermatogenic failure 8, 613957 (3)']	0.0	0.0
+12	85233018	call_3350	C	<DUP:TANDEM>			3.0	False	85284182	51164	False	False	ALX1	['?Frontonasal dysplasia 3, 613456 (3)']	50.786546002998655	96.15369657135393
+3	38015895	call_1963	G	<DUP:TANDEM>			5.0	False	38054502	38607	False	False	DLEC1	.	44.64918702099893	84.53389172638906
+1	151825110	call_2301	G	<DUP:TANDEM>			4.0	False	151861875	36765	False	False	RORC	['Immunodeficiency 42, 616622 (3)']	43.191226561998974	81.77354870996426
+3	128837390	call_3753	T	<DUP:TANDEM>			3.0	False	128887241	49851	False	False	ACAD9	['Mitochondrial complex I deficiency, nuclear type 20, 611126 (3)']	43.11510999099899	81.62943791196764
+20	63383589	call_3674	A	<DUP:TANDEM>			3.0	False	63421486	37897	False	False	KCNQ2	['Epileptic encephalopathy, early infantile, 7, 613720 (3)', 'Myokymia, 121200 (3)', 'Seizures, benign neonatal, 1, 121200 (3)']	41.70753032499907	78.9644803837165
+X	123174179	call_4131	T	<DUP:TANDEM>			3.0	False	123223715	49536	False	False	GRIA3	['Mental retardation, X-linked 94, 300699 (3)']	29.549637907999646	55.94605541852389
+17	59050836	call_3520	C	<DUP:TANDEM>			3.0	False	59094974	44138	False	False	TRIM37	['Mulibrey nanism, 253250 (3)']	27.604603660999746	52.26354011622557
+3	38015895	call_1963	G	<DUP:TANDEM>			5.0	False	38054502	38607	False	False	PLCD1	['Nail disorder, nonsyndromic congenital, 3, (leukonychia), 151600 (3)']	27.185260746999795	51.46960206598451
+1	62399125	call_3177	A	<DUP:TANDEM>			3.0	False	62458789	59664	False	False	DOCK7	['Epileptic encephalopathy, early infantile, 23, 615859 (3)']	17.05906273000007	32.29776526710971
+16	70990345	call_1277	A	<DUP:TANDEM>			6.0	False	71028753	38408	False	False	HYDIN	['Ciliary dyskinesia, primary, 5, 608647 (3)']	15.81395137900011	29.940407492975396
+10	63416437	call_3258	A	<DUP:TANDEM>			3.0	False	63470494	54057	False	False	JMJD1C	.	11.09333387100006	21.002906142384294
+19	7457343	call_3543	A	<DUP:TANDEM>			3.0	False	7504915	47572	False	False	ARHGEF18	['Retinitis pigmentosa 78, 617433 (3)']	6.817353428000025	12.90723202355383
+19	53726928	call_3569	C	<DUP:TANDEM>			3.0	False	53795445	68517	False	False	NLRP12	['Familial cold autoinflammatory syndrome 2, 611762 (3)']	3.3462653630000054	6.335453179708976
+12	11745481	call_3335	G	<DUP:TANDEM>			3.0	False	11817145	71664	False	False	ETV6	['Leukemia, acute myeloid, somatic, 601626 (3)', 'Thrombocytopenia 5, 616216 (3)']	2.2735772910000023	4.3045428007139375
 12	24929264	call_3339	T	<DUP:TANDEM>			3.0	False	24989360	60096	False	False	BCAT1	['?Hyperleucinemia-isoleucinemia or hypervalinemia (1)']	0.0	0.0
+11	64761976	call_1696	G	<DUP:TANDEM>			5.0	False	64793394	31418	False	False	SF1	['46, XX sex reversal 4, 617480 (3)', '46XY sex reversal 3, 612965 (3)', 'Adrenocortical insufficiency, 612964 (3)', 'Premature ovarian failure 7, 612964 (3)', 'Spermatogenic failure 8, 613957 (3)']	0.0	0.0
 1	153238146	call_3204	T	<DUP:TANDEM>			3.0	False	153307975	69829	False	False	LOR	['Vohwinkel syndrome with ichthyosis, 604117 (3)']	0.0	0.0

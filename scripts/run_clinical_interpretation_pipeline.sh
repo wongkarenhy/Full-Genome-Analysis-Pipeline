@@ -3,28 +3,74 @@
 # exit immediately upon error 
 set -e
 
-usage() {
-    NAME=$(basename $0)
-    cat <<EOF
-Usage:
- 
-  ${NAME} [path_to_json] [work_dir] [sample_id] [hpo_database_path][path_to_intervar] [bionano:true or false] [DLE/BspQI/None] [linkedReadSV:true or false]
+while getopts 'j:w:s:i:b:e:l:t:f:m:r:' OPTION; do
+  case "$OPTION" in
+    j)
+      JSON="$OPTARG"
+      ;;
+    w)
+      WORKDIR="$OPTARG"
+      ;;
+    s)
+      SAMPLEID="$OPTARG"
+      ;;
+    i)
+      INTERVAR="$OPTARG"
+      ;;
+    b)
+      BIONANO="$OPTARG"
+      [[ ! $BIONANO =~ true|false ]] && {
+          echo "Bionano flag can be either true or false"
+          exit 1
+      }
 
-This software extracts HPO terms from json files using clinical natural language processing, searches for inexact terms, and finds clinically relevant genes. It then identifies genetic variants from the proband and ranks them based on clinical relevance.
+      ;;
+    e)
+      ENZYME="$OPTARG"
+      [[ ! $ENZYME =~ BspQI|DLE|None ]] && {
+          echo "Incorrect options provided in ENZYME"
+          exit 1
+      }
 
-EOF
-}
+      ;;
+    l)
+      LINKEDREADSV="$OPTARG"
+      [[ ! $LINKEDREADSV =~ true|false ]] && {
+          echo "LINKEDREADSV can be either true or false"
+          exit 1
+      }
 
-# declare variable 
-JSON=${1}
-WORKDIR=${2}
-SAMPLEID=${3}
-DATABASE=${4}
-INTERVAR=${5}
-BIONANO=${6}
-ENZYME=${7}
-LINKEDREADSV=${8}
-TYPE=${9}
+      ;;
+    t)
+      TYPE="$OPTARG"
+      [[ ! $TYPE =~ trio|singleton ]] && {
+	  echo "Incorrect options provided in TYPE"
+          exit 1
+      }
+      ;;
+    f)
+      FATHERVCF="$OPTARG"
+      ;;
+    m)
+      MOTHERVCF="$OPTARG"
+      ;;
+    r)
+      REF="$OPTARG"
+      [[ ! $REF =~ hg19|hg38 ]] && {
+          echo "Incorrect options provided in REF"
+          exit 1
+      }
+
+      ;;
+
+    ?)
+      echo "script usage: $(basename $0) [-j path_to_json/None] [-w work_dir] [-s sample_id] [-i path_to_intervar] [-b true/false] [-e DLE/BspQI/None] [-l true/false] [-t trio/singleton] [-f father_SNP_vcf_file_path or None if singleton] [-m mother_SNP_vcf_file_path or None if singleton] [-r hg19/hg38]" >&2
+      exit 1
+      ;;
+  esac
+  
+done
+shift $(( OPTIND - 1 ))
 
 if [[ ! -d ${WORKDIR}/log ]]; then
     mkdir ${WORKDIR}/log
@@ -38,9 +84,9 @@ if [[ -f ${LOGFILE} ]]; then
 fi
 
 
-## main pipeline
+# main pipeline
 pipeline(){
-echo [`date +"%Y-%m-%d %H:%M:%S"`] "#> START:  ${0} $JSON $WORKDIR $SAMPLEID $DATABASE $INTERVAR $BIONANO $ENZYME $LINKEDREADSV $TYPE"
+echo [`date +"%Y-%m-%d %H:%M:%S"`] "#> START:  ${0} -j $JSON -w $WORKDIR -s $SAMPLEID -i $INTERVAR -b $BIONANO -e $ENZYME -l $LINKEDREADSV -t $TYPE -f $FATHERVCF -m $MOTHERVCF -r $REF"
 
 if [[ ! -d ${WORKDIR}/results ]];
     then
@@ -68,17 +114,25 @@ if [[ ${LINKEDREADSV} = true ]]; then
 fi
 if [[ ${TYPE} == 'singleton' ]]; then
     additional_var+=" -S"
+else
+    additional_var+=" -f ${FATHERVCF} -m ${MOTHERVCF}"
 fi
 
+additional_var_CNLP=''
+if [[ ${JSON} = None ]]; then
+    additional_var_CNLP+=" -m"
+fi
+
+
 # extract exact and inexact HPO terms then run CNLP
-python3.6 ${WORKDIR}/scripts/run_CNLP.py -s ${SAMPLEID} -w ${WORKDIR} -d ${DATABASE} -j ${JSON}
+python3.6 ${WORKDIR}/scripts/run_CNLP.py -s ${SAMPLEID} -w ${WORKDIR} -j ${JSON} ${additional_var_CNLP}
 
 # identify variants and rank them 
-python3.6 ${WORKDIR}/scripts/run_clinical_interpretor.py -s ${SAMPLEID} -w ${WORKDIR} -d ${DATABASE} -i ${INTERVAR} ${additional_var}
+python3.6 ${WORKDIR}/scripts/run_clinical_interpretor.py -s ${SAMPLEID} -w ${WORKDIR} -i ${INTERVAR} -r ${REF} ${additional_var}
 
 # generate an html report
 python3.6 ${WORKDIR}/scripts/generate_report.py -s ${SAMPLEID} -w ${WORKDIR}/results/${SAMPLEID}/confident_set/
 
 } # end of pipeline
-
 pipeline 2>&1 | tee $LOGFILE
+

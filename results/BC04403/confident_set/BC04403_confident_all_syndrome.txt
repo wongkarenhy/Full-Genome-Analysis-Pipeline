@@ -1,0 +1,4 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	score	normalized_score
+9	109036907	109049074	call_4940	A	<DEL>	7.0	True	-1253	False	False	SPONDYLOARTHROPATHY, SUSCEPTIBILITY TO, 2	9q31-q34	10986	0.99	deletion	heterozygous	1	1443.0	False	True	0.00378788	0.37109262259778003
+9	126706776	126734459	call_5407	G	<DEL>	3.0	True	-2590	False	True	SPONDYLOARTHROPATHY, SUSCEPTIBILITY TO, 2	9q31-q34	11043	1.0	deletion	heterozygous	2	3001.0	False	True	0.00378788	0.37109262259778003
+18	48780857	48789818	call_5212	A	<DEL>	4.0	True	-3858	False	True	CONE-ROD DYSTROPHY 1; CORD1	18q21.1-q21.3	16938	1.0	deletion	heterozygous	1	3862.0	False	True	0.00378788	0.37109262259778003

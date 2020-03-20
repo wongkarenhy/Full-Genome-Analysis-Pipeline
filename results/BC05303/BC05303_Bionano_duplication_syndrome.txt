@@ -1,5 +1,3 @@
 Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-15	22887795	23220838	14104	-1.0	duplication_inverted	unknown	-1	333043.0	False	False	DUPLICATION/INVERSION 15Q11	" 15q11
-"	0.014698916999999999	0.5514467784450359
 15	22887795	23220838	14104	-1.0	duplication_inverted	unknown	-1	333043.0	False	False	15Q11Q13 MICRODUPLICATION SYNDROME	 15q11q13 	0.002313963	0.0868109835432781
 15	22887795	23220838	14104	-1.0	duplication_inverted	unknown	-1	333043.0	False	False	CHROMOSOME 15Q11-Q13 DUPLICATION SYNDROME	 15q11-q13 	0.000541419	0.020311956543392476

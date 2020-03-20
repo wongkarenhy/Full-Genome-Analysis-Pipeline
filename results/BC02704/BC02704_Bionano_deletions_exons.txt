@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-8950	8	8	47282609.0	47299334.0	1326217.6	1335143.5	1.0	deletion	heterozygous	1	7799.0	False	True	SPIDR	.	3.267049121000003	2.6794043852586733
+8950	8	8	47282609.0	47299334.0	1326217.6	1335143.5	1.0	deletion	heterozygous	1	7799.0	False	True	SPIDR	.	88.54736099500232	72.62033063049624

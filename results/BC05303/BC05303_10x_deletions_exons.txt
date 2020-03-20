@@ -1,28 +1,28 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-7	22991343	call_4573	C	<DEL>			2.0	True	23013965	-22622	False	False	FAM126A	['Leukodystrophy, hypomyelinating, 5, 610532 (3)']	83.09609537500127	95.50359600706035
-13	27622118	call_4276	A	<DEL>			3.0	True	27648374	-26256	False	False	POLR1D	['Treacher Collins syndrome 2, 613717 (3)']	75.53613435099933	86.81481875215925
-11	1761471	call_3105	G	<DEL>			25.0	True	1763777	-2306	True	True	CTSD	['Ceroid lipofuscinosis, neuronal, 10, 610127 (3)']	70.45343359399857	80.97319409421637
-19	46846143	call_3125	C	<DEL>			23.0	True	46850761	-4618	True	True	AP2S1	['Hypocalciuric hypercalcemia, type III, 600740 (3)']	70.11884919099832	80.58865119228825
-6	31271347	call_2502	C	<DEL>			77.0	True	31271597	-250	False	False	HLA-C	['{HIV-1 viremia, susceptibility to}, 609423 (3)', '{Psoriasis susceptibility 1}, 177900 (3)']	68.27143609599793	78.46539145202193
-6	43521047	call_3186	C	<DEL>			20.0	True	43521179	-132	False	False	POLR1C	['Leukodystrophy, hypomyelinating, 11, 616494 (3)', 'Treacher Collins syndrome 3, 248390 (3)']	67.00500530499751	77.00986343847592
-15	76295746	call_4138	A	<DEL>			4.0	True	76311346	-15600	False	False	ETFA	['Glutaric acidemia IIA, 231680 (3)']	61.255012647996956	70.40131013305852
-2	144517424	call_3809	C	<DEL>			7.0	True	144519910	-2486	False	False	ZEB2	['Mowat-Wilson syndrome, 235730 (3)']	57.503096982997235	66.08917685765444
-6	137207083	call_3851	A	<DEL>			7.0	True	137219240	-12157	True	True	IFNGR1	['Immunodeficiency 27A, mycobacteriosis, AR, 209950 (3)', 'Immunodeficiency 27B, mycobacteriosis, AD, 615978 (3)', '{H. pylori infection, susceptibility to}, 600263 (3)', '{Hepatitis B virus infection, susceptibility to}, 610424 (3)', '{Tuberculosis infection, protection against}, 607948 (3)', '{Tuberculosis, susceptibility to}, 607948 (3)']	57.05497445999734	65.57414288156797
-4	39327759	call_4192	T	<DEL>			4.0	True	39342342	-14583	False	False	RFC1	['Cerebellar ataxia, neuropathy, and vestibular areflexia syndrome, 614575 (3)']	56.40910827199745	64.83183912812449
-19	51354310	call_3537	T	<DEL>			10.0	True	51366237	-11927	True	True	ETFB	['Glutaric acidemia IIB, 231680 (3)']	55.54559136599758	63.83938612099212
-1	17044893	call_3583	A	<DEL>			9.0	True	17053946	-9053	False	True	SDHB	['Gastrointestinal stromal tumor, 606764 (3)', 'Paraganglioma and gastric stromal sarcoma, 606864 (3)', 'Paragangliomas 4, 115310 (3)', 'Pheochromocytoma, 171300 (3)']	54.513053391997715	62.65267465054559
-1	32251374	call_3870	A	<DEL>			6.0	True	32274282	-22908	True	True	LCK	['?Immunodeficiency 22, 615758 (3)']	50.355299923997975	57.874105865660674
-19	52190294	call_3805	C	<DEL>			7.0	True	52201925	-11631	False	False	PPP2R1A	['Mental retardation, autosomal dominant 36, 616362 (3)']	48.678504047998175	55.946939069133116
-7	76048226	call_3269	G	<DEL>			16.0	True	76054824	-6598	True	False	MDH2	['Epileptic encephalopathy, early infantile, 51, 617339 (3)']	46.753268647998375	53.73423697969911
-7	99374782	call_3968	G	<DEL>			6.0	True	99386682	-11900	True	True	ARPC1B	['Platelet abnormalities with eosinophilia and immune-mediated inflammatory disease, 617718 (3)']	45.1931175279986	51.94113176095202
-11	747603	call_3192	G	<DEL>			19.0	True	755858	-8255	True	True	TALDO1	['Transaldolase deficiency, 606003 (3)']	43.85352532199876	50.40151822942976
-1	155189218	call_2899	C	<DEL>			44.0	True	155189278	-60	False	False	MUC1	['Medullary cystic kidney disease 1, 174000 (3)']	36.59158215599917	42.055257394645665
-19	19516339	call_3080	A	<DEL>			27.0	True	19526178	-9839	True	False	NDUFA13	['?Mitochondrial complex I deficiency, nuclear type 28, 618249 (3)', '{Thyroid carcinoma, Hurthle cell}, 607464 (3)']	33.11360684599945	38.05796790192335
-6	158789404	call_4570	C	<DEL>			2.0	True	158818029	-28625	True	True	EZR	.	28.069318711999667	32.26049145109058
-4	121686392	call_3734	G	<DEL>			8.0	True	121696858	-10466	True	True	ANXA5	['{Pregnancy loss, recurrent, susceptibility to, 3}, 614391 (3)']	21.11171618099983	24.264013899412372
-20	44966604	call_3811	G	<DEL>			7.0	True	44978418	-11814	False	False	STK4	['T-cell immunodeficiency, recurrent infections, autoimmunity, and cardiac malformations, 614868 (3)']	16.166549026999924	18.580458686238384
-17	35809596	call_3604	A	<DEL>			9.0	True	35820161	-10565	False	True	TAF15	['Chondrosarcoma, extraskeletal myxoid, 612237 (1)']	13.499294204999925	15.51494248095101
-21	44910374	call_4174	T	<DEL>			4.0	True	44920704	-10330	True	True	ITGB2	['Leukocyte adhesion deficiency, 116920 (3)']	12.996520848999925	14.937097478031856
-X	78104410	call_4599	T	<DEL>			2.0	True	78113738	-9328	True	False	PGK1	['Phosphoglycerate kinase 1 deficiency, 300653 (3)']	1.743914004000001	2.0043066735862083
+6	43521047	call_3186	C	<DEL>			20.0	True	43521179	-132	False	False	POLR1C	['Leukodystrophy, hypomyelinating, 11, 616494 (3)', 'Treacher Collins syndrome 3, 248390 (3)']	86.63085339000219	99.56614671926762
+6	31271347	call_2502	C	<DEL>			77.0	True	31271597	-250	False	False	HLA-C	['{HIV-1 viremia, susceptibility to}, 609423 (3)', '{Psoriasis susceptibility 1}, 177900 (3)']	80.83324825400065	92.90287167344975
+6	137207083	call_3851	A	<DEL>			7.0	True	137219240	-12157	True	True	IFNGR1	['Immunodeficiency 27A, mycobacteriosis, AR, 209950 (3)', 'Immunodeficiency 27B, mycobacteriosis, AD, 615978 (3)', '{H. pylori infection, susceptibility to}, 600263 (3)', '{Hepatitis B virus infection, susceptibility to}, 610424 (3)', '{Tuberculosis infection, protection against}, 607948 (3)', '{Tuberculosis, susceptibility to}, 607948 (3)']	78.33126747499989	90.02730741911532
+19	52190294	call_3805	C	<DEL>			7.0	True	52201925	-11631	False	False	PPP2R1A	['Mental retardation, autosomal dominant 36, 616362 (3)']	74.48013722699913	85.60114532671112
+19	51354310	call_3537	T	<DEL>			10.0	True	51366237	-11927	True	True	ETFB	['Glutaric acidemia IIB, 231680 (3)']	70.36457067699811	80.87106260311646
+13	27622118	call_4276	A	<DEL>			3.0	True	27648374	-26256	False	False	POLR1D	['Treacher Collins syndrome 2, 613717 (3)']	70.3510382989981	80.8555096369308
+1	17044893	call_3583	A	<DEL>			9.0	True	17053946	-9053	False	True	SDHB	['Gastrointestinal stromal tumor, 606764 (3)', 'Paraganglioma and gastric stromal sarcoma, 606864 (3)', 'Paragangliomas 4, 115310 (3)', 'Pheochromocytoma, 171300 (3)']	66.81866507799718	76.79569980444472
+19	19516339	call_3080	A	<DEL>			27.0	True	19526178	-9839	True	False	NDUFA13	['?Mitochondrial complex I deficiency, nuclear type 28, 618249 (3)', '{Thyroid carcinoma, Hurthle cell}, 607464 (3)']	55.509825780997325	63.79828019458951
+11	747603	call_3192	G	<DEL>			19.0	True	755858	-8255	True	True	TALDO1	['Transaldolase deficiency, 606003 (3)']	55.50237211599734	63.7897135849586
+19	46846143	call_3125	C	<DEL>			23.0	True	46850761	-4618	True	True	AP2S1	['Hypocalciuric hypercalcemia, type III, 600740 (3)']	44.558528002998486	51.211788446414495
+7	22991343	call_4573	C	<DEL>			2.0	True	23013965	-22622	False	False	FAM126A	['Leukodystrophy, hypomyelinating, 5, 610532 (3)']	42.19325790899877	48.493347844777176
+4	121686392	call_3734	G	<DEL>			8.0	True	121696858	-10466	True	True	ANXA5	['{Pregnancy loss, recurrent, susceptibility to, 3}, 614391 (3)']	41.86025849699884	48.11062659691699
+X	78104410	call_4599	T	<DEL>			2.0	True	78113738	-9328	True	False	PGK1	['Phosphoglycerate kinase 1 deficiency, 300653 (3)']	41.82701206999885	48.07241597680835
+21	44910374	call_4174	T	<DEL>			4.0	True	44920704	-10330	True	True	ITGB2	['Leukocyte adhesion deficiency, 116920 (3)']	40.34123549999896	46.36479055039495
+11	1761471	call_3105	G	<DEL>			25.0	True	1763777	-2306	True	True	CTSD	['Ceroid lipofuscinosis, neuronal, 10, 610127 (3)']	27.62058778099969	31.7447582225111
+20	44966604	call_3811	G	<DEL>			7.0	True	44978418	-11814	False	False	STK4	['T-cell immunodeficiency, recurrent infections, autoimmunity, and cardiac malformations, 614868 (3)']	20.877031229999837	23.9942869447571
+15	76295746	call_4138	A	<DEL>			4.0	True	76311346	-15600	False	False	ETFA	['Glutaric acidemia IIA, 231680 (3)']	18.767594101999862	21.569879030454427
+1	32251374	call_3870	A	<DEL>			6.0	True	32274282	-22908	True	True	LCK	['?Immunodeficiency 22, 615758 (3)']	14.966622109999925	17.20136457836237
+4	39327759	call_4192	T	<DEL>			4.0	True	39342342	-14583	False	False	RFC1	['Cerebellar ataxia, neuropathy, and vestibular areflexia syndrome, 614575 (3)']	14.858838425999924	17.077487164310188
+2	144517424	call_3809	C	<DEL>			7.0	True	144519910	-2486	False	False	ZEB2	['Mowat-Wilson syndrome, 235730 (3)']	13.976943175999915	16.063911649161682
+1	155189218	call_2899	C	<DEL>			44.0	True	155189278	-60	False	False	MUC1	['Medullary cystic kidney disease 1, 174000 (3)']	11.369844029999921	13.067533269813175
+17	35809596	call_3604	A	<DEL>			9.0	True	35820161	-10565	False	True	TAF15	['Chondrosarcoma, extraskeletal myxoid, 612237 (1)']	4.393162590999997	5.049128041344953
+6	158789404	call_4570	C	<DEL>			2.0	True	158818029	-28625	True	True	EZR	.	3.2145013320000078	3.6944748750233436
+7	76048226	call_3269	G	<DEL>			16.0	True	76054824	-6598	True	False	MDH2	['Epileptic encephalopathy, early infantile, 51, 617339 (3)']	0.4318674089999999	0.4963517283407759
+7	99374782	call_3968	G	<DEL>			6.0	True	99386682	-11900	True	True	ARPC1B	['Platelet abnormalities with eosinophilia and immune-mediated inflammatory disease, 617718 (3)']	0.04823490700000001	0.05543710628973764
 19	572701	call_3228	G	<DEL>			17.0	True	579496	-6795	True	True	BSG	['[Blood group, OK], 111380 (3)']	0.0	0.0
 5	55941824	call_4370	G	<DEL>			3.0	True	55947301	-5477	False	False	IL6ST	['Hyper-IgE recurrent infection syndrome 4, autosomal recessive, 618523 (3)']	0.0	0.0

@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-4174	4	4	16153966.0	16180753.0	33321406.5	33379458.6	-1.0	duplication	unknown	-1	26787.0	False	True	TAPT1	['Osteochondrodysplasia, complex lethal, Symoens-Barnes-Gistelinck type, 616897 (3)']	90.01994782900054	65.56443672563817
+4174	4	4	16153966.0	16180753.0	33321406.5	33379458.6	-1.0	duplication	unknown	-1	26787.0	False	True	TAPT1	['Osteochondrodysplasia, complex lethal, Symoens-Barnes-Gistelinck type, 616897 (3)']	66.28201606399986	48.27533400186929

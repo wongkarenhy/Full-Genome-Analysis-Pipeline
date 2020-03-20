@@ -101,7 +101,9 @@ def getParentsGeno(filtered_intervar, inheritance_mode, ov_allele):
 
     for idx, row in enumerate(filtered_intervar.itertuples(index=False)):
         if int(getattr(row, 'Start')) in set(ov_allele['Start']):
-            parents_geno = ov_allele.loc[ov_allele['Start']==getattr(row,'Start'),'geno'].item()
+            #parents_geno = ov_allele.loc[ov_allele['Start'] == getattr(row, 'Start'), 'geno'].head(1)
+            #print(parents_geno)
+            parents_geno = ov_allele.loc[ov_allele['Start']==getattr(row,'Start'),'geno'].head(1).item()
             filtered_intervar.loc[idx, inheritance_mode] = parents_geno
 
     return(filtered_intervar)
@@ -168,8 +170,8 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
 
         # Get overlapping variants from the parents so we know which variants are inherited
         print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Comparing small variants (SNPs/indels) inheritance')
-        cmd1 = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed /media/KwokRaid04/CIAPM/CIAPM_longranger/BC0" + famid + "01_longranger/outs/phased_variants.vcf.gz > ./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf"
-        cmd2 = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed /media/KwokRaid04/CIAPM/CIAPM_longranger/BC0" + famid + "02_longranger/outs/phased_variants.vcf.gz > ./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf"
+        cmd1 = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed " + args.fathervcf + " > ./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf"
+        cmd2 = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed " + args.mothervcf + " > ./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf"
         cmds = [cmd1, cmd2]
         for cmd in cmds:
             p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
@@ -773,11 +775,13 @@ def main():
     parser = argparse.ArgumentParser(description="This software ranks genes based on the clinical phenome.")
     parser.add_argument("-s", "--sampleid",help="Sample ID",dest="sampleid", type=str, required = True)
     parser.add_argument("-w", "--workdir", help="This is the base work directory.", dest="workdir", type=str, required = True)
-    parser.add_argument("-d", "--database", help="Path to HPO database", dest="database", type=str, required = True)
     parser.add_argument("-i", "--intervar", help="Path to InterVar output folder", dest="intervar", type=str, required = True)
     parser.add_argument("-b", "--bionano", help="Set this flag to evaluate bionano SVs.", dest="bionano", action='store_true')
     parser.add_argument("-l", "--linkedreadSV", help="Set this flag to evaluate linkedread SVs.", dest="linkedreadSV", action='store_true')
     parser.add_argument("-e", "--enzyme", help="Bionano enzyme used (BspQI or DLE). Only set this flag if -b is set", dest="enzyme", type=str)
+    parser.add_argument("-f", "--fathervcf", help="Path to father SNP VCF file. Only set this flag if -S is not set", dest="fathervcf", type=str)
+    parser.add_argument("-m", "--mothervcf", help="Path to mather SNP VCF file. Only set this flag if -S is not set", dest="mothervcf", type=str)
+    parser.add_argument("-r", "--ref", help="Reference version. Either hg19 or hg38", dest="ref", type=str)
     parser.add_argument("-S", help="Set this flag if this is a singleton case", dest="singleton", action='store_true')
     args = parser.parse_args()
 
@@ -786,11 +790,11 @@ def main():
 
     # Define variables
     ## Read the database files
-    hpo_genes = args.database + "/genes_to_phenotype.txt"
-    hpo_syndromes = args.database + "/phenotype_annotation.tab"
+    hpo_genes = args.workdir + "/human_pheno_ontology_b1270/genes_to_phenotype.txt"
+    hpo_syndromes = args.workdir + "/human_pheno_ontology_b1270/phenotype_annotation.tab"
     omim_gene = args.workdir + "/annotatedGene.bed"
     smallVariantFileName = args.intervar + "/example/" + args.sampleid + "_smallVariant_geneList.txt"
-    interVarFinalFileName = args.intervar + "/example/" + args.sampleid +  ".hg38_multianno.txt.intervar.FINAL"
+    interVarFinalFileName = args.intervar + "/example/" + args.sampleid + "." + args.ref + "_multianno.txt.intervar.FINAL"
 
     try:
         hpo_genes_df = pd.read_csv(hpo_genes, sep='\t', usecols=[1, 2], names=["gene_name", "HPO_id"], comment='#')
@@ -839,13 +843,13 @@ def main():
     weights_syndrome = args.workdir + "/HPO_weight_syndrome.txt"
 
     if not os.path.exists(weights_gene):
-        cmd = 'grep -v ^# ' + args.database + '/phenotype_to_genes.txt |cut -f-1 | uniq -c |awk \'{print $2, 1/$1}\' > ' + args.workdir + '/HPO_weight_gene.txt'
+        cmd = 'grep -v ^# ' + args.workdir + '/human_pheno_ontology_b1270/phenotype_to_genes.txt |cut -f-1 | uniq -c |awk \'{print $2, 1/$1}\' > ' + args.workdir + '/HPO_weight_gene.txt'
         p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, stderr = p.communicate()
         if p.returncode != 0:
             raise Exception(stderr)
     if not os.path.exists(weights_syndrome):
-        cmd = 'cat ' + args.database + '/phenotype_annotation.tab | awk -F"\t" \'{print $5}\'| sort | uniq -c | awk \'{print $2, 1/$1}\' > ' + args.workdir + '/HPO_weight_syndrome.txt'
+        cmd = 'cat ' + args.workdir + '/human_pheno_ontology_b1270/phenotype_annotation.tab | awk -F"\t" \'{print $5}\'| sort | uniq -c | awk \'{print $2, 1/$1}\' > ' + args.workdir + '/HPO_weight_syndrome.txt'
         p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         stdout, stderr = p.communicate()
         if p.returncode != 0:
@@ -908,10 +912,10 @@ def main():
         findConfDelDup(args, exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup, exon_calls_BN_del, exon_calls_BN_dup)
 
     # Move all the intermediate files to the misc folder
-    if not args.singleton:
-        cmd = 'mv ./results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_maternal_inherited_smallVariants.vcf ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt ./results/' + args.sampleid + '/' + args.sampleid + '_paternal_inherited_smallVariants.vcf ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariant_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariants_ALL_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_syndrome_score_result_r.txt ./results/' + args.sampleid + '/' + args.sampleid + '_target.bed ./results/' + args.sampleid + '/' + args.sampleid + '.txt ./results/' + args.sampleid + '/misc/'
-    else:
-        cmd = 'mv ./results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariant_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariants_ALL_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_syndrome_score_result_r.txt ./results/' + args.sampleid + '/' + args.sampleid + '_target.bed ./results/' + args.sampleid + '/' + args.sampleid + '.txt ./results/' + args.sampleid + '/misc/'
+    #if not args.singleton:
+    cmd = 'mv ./results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_maternal_inherited_smallVariants.vcf ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt ./results/' + args.sampleid + '/' + args.sampleid + '_paternal_inherited_smallVariants.vcf ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariant_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariants_ALL_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_syndrome_score_result_r.txt ./results/' + args.sampleid + '/' + args.sampleid + '_target.bed ./results/' + args.sampleid + '/' + args.sampleid + '.txt ./results/' + args.sampleid + '/misc/'
+    #else:
+    #    cmd = 'mv ./results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariant_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariants_ALL_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_syndrome_score_result_r.txt ./results/' + args.sampleid + '/' + args.sampleid + '_target.bed ./results/' + args.sampleid + '/' + args.sampleid + '.txt ./results/' + args.sampleid + '/misc/'
 
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     stdout, stderr = p.communicate()

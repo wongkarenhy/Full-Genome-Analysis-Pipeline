@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	gene	OMIM_syndrome	score	normalized_score
+3187	14	14	105262417.0	105275882.0	1568831.2	1584276.0	1.0	insertion	heterozygous	1	1980.0	BRF1	['Cerebellofaciodental syndrome, 616202 (3)']	23.917652508000057	33.0906696571612

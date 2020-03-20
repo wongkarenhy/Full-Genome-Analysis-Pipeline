@@ -1,6 +1,6 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-5305	7	7	74731468.0	74975342.0	372047.3	872339.1	-1.0	duplication	unknown	-1	243874.0	False	False	GTF2I	.	25.530965042999927	82.99878407833948
-2365	3	3	81650023.0	83320017.0	0.0	614988.1	-1.0	duplication_split	unknown	-1	1669994.0	False	False	GBE1	['Glycogen storage disease IV, 232500 (3)', 'Polyglucosan body disease, adult form, 263570 (3)']	16.220405635000034	52.73102456938148
-12710	X	23	123768869.0	124194479.0	0.0	629617.9	-1.0	duplication_split	unknown	-1	425610.0	False	False	XIAP	['Lymphoproliferative syndrome, X-linked, 2, 300635 (3)']	14.488007859000021	47.09916111628243
-12710	X	23	123768869.0	124194479.0	0.0	629617.9	-1.0	duplication_split	unknown	-1	425610.0	False	False	STAG2	['Mullegama-Klein-Martinez syndrome, 301022 (3)']	10.031537266999983	32.61159122638926
-5305	7	7	74731468.0	74975342.0	372047.3	872339.1	-1.0	duplication	unknown	-1	243874.0	False	False	NCF1	['Chronic granulomatous disease due to deficiency of NCF-1, 233700 (3)']	1.8500258750000032	6.014261422545271
+12710	X	23	123768869.0	124194479.0	0.0	629617.9	-1.0	duplication_split	unknown	-1	425610.0	False	False	XIAP	['Lymphoproliferative syndrome, X-linked, 2, 300635 (3)']	30.01823471399986	97.58647889901445
+5305	7	7	74731468.0	74975342.0	372047.3	872339.1	-1.0	duplication	unknown	-1	243874.0	False	False	GTF2I	.	28.99575137199985	94.26248100142514
+12710	X	23	123768869.0	124194479.0	0.0	629617.9	-1.0	duplication_split	unknown	-1	425610.0	False	False	STAG2	['Mullegama-Klein-Martinez syndrome, 301022 (3)']	23.454629079999922	76.24880968540599
+2365	3	3	81650023.0	83320017.0	0.0	614988.1	-1.0	duplication_split	unknown	-1	1669994.0	False	False	GBE1	['Glycogen storage disease IV, 232500 (3)', 'Polyglucosan body disease, adult form, 263570 (3)']	22.00557283799995	71.5380631098432
+5305	7	7	74731468.0	74975342.0	372047.3	872339.1	-1.0	duplication	unknown	-1	243874.0	False	False	NCF1	['Chronic granulomatous disease due to deficiency of NCF-1, 233700 (3)']	12.83786503800001	41.734700843514396

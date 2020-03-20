@@ -1,0 +1,22 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+6	73073973	call_2638	T	<DUP:TANDEM>			3.0	False	73142857	68884	False	False	KCNQ5	['Mental retardation, autosomal dominant 46, 617601 (3)']	68.82230564099929	90.97726213539987
+14	67595623	call_2190	G	<DUP:TANDEM>			3.0	False	67654836	59213	False	False	PIGH	['Glycosylphosphatidylinositol biosynthesis defect 17, 618010 (3)']	63.99550102399891	84.59663502871949
+1	33025149	call_2860	G	<DUP:TANDEM>			2.0	False	33095770	70621	False	False	AK2	['Reticular dysgenesis, 267500 (3)']	61.445547158999005	81.22581187700179
+8	132520308	call_2748	T	<DUP:TANDEM>			3.0	False	132592537	72229	False	False	LRRC6	['Ciliary dyskinesia, primary, 19, 614935 (3)']	60.15689739199904	79.52232597136198
+7	144469246	call_3826	A	<DUP:TANDEM>			2.0	False	144547722	78476	False	False	TPK1	['Thiamine metabolism dysfunction syndrome 5 (episodic encephalopathy type), 614458 (3)']	57.004641484999055	75.35531050598419
+19	5672210	call_1611	A	<DUP:TANDEM>			4.0	False	5717681	45471	False	False	MICOS13	['Combined oxidative phosphorylation deficiency 37, 618329 (3)']	49.27274509199921	65.13439799225624
+17	78120554	call_2282	G	<DUP:TANDEM>			3.0	False	78166927	46373	False	False	TMC6	['Epidermodysplasia verruciformis, 226400 (3)']	47.430148509999285	62.698641289700575
+3	149062798	call_3569	C	<DUP:TANDEM>			2.0	False	149130422	67624	False	False	HPS3	['Hermansky-Pudlak syndrome 3, 614072 (3)']	44.058885891999374	58.242117491661205
+5	56154782	call_3670	G	<DUP:TANDEM>			2.0	False	56215399	60617	False	False	ANKRD55	.	30.995830569999622	40.973864165216185
+19	45010752	call_3341	C	<DUP:TANDEM>			2.0	False	45081020	70268	False	False	RELB	['?Immunodeficiency 53, 617585 (3)']	29.132361520999694	38.510515828175365
+14	73908670	call_3161	C	<DUP:TANDEM>			2.0	False	73962857	54187	False	False	COQ6	['Coenzyme Q10 deficiency, primary, 6, 614650 (3)']	28.454647930999734	37.614635831771714
+10	77936411	call_2063	C	<DUP:TANDEM>			3.0	False	77979154	42743	False	False	POLR3A	['Leukodystrophy, hypomyelinating, 7, with or without oligodontia and/or hypogonadotropic hypogonadism, 607694 (3)', 'Wiedemann-Rautenstrauch syndrome, 264090 (3)']	28.309802540999744	37.42316248759356
+17	78120554	call_2282	G	<DUP:TANDEM>			3.0	False	78166927	46373	False	False	TMC8	['Epidermodysplasia verruciformis 2, 618231 (3)']	25.35562802099984	33.51799384791286
+12	7159389	call_3057	C	<DUP:TANDEM>			2.0	False	7201569	42180	False	False	PEX5	['Peroxisome biogenesis disorder 2A (Zellweger), 214110 (3)', 'Peroxisome biogenesis disorder 2B, 202370 (3)', 'Rhizomelic chondrodysplasia punctata, type 5, 616716 (3)']	20.94418914100002	27.68644508415059
+1	65563990	call_1989	G	<DUP:TANDEM>			3.0	False	65630087	66097	False	False	LEPR	['Obesity, morbid, due to leptin receptor deficiency, 614963 (3)']	12.129985137000078	16.034813527809863
+15	76616056	call_2213	A	<DUP:TANDEM>			3.0	False	76647846	31790	False	False	SCAPER	['Intellectual developmental disorder and retinitis pigmentosa, 618195 (3)']	11.766671971000054	15.554544277418234
+18	23919646	call_1597	G	<DUP:TANDEM>			4.0	False	23952347	32701	False	False	LAMA3	['Cardiomyopathy, dilated, 1JJ, 615235 (3)', 'Epidermolysis bullosa, generalized atrophic benign, 226650 (3)', 'Epidermolysis bullosa, junctional, Herlitz type, 226700 (3)', 'Laryngoonychocutaneous syndrome, 245660 (3)']	6.601038510999992	8.726014122714243
+19	5672210	call_1611	A	<DUP:TANDEM>			4.0	False	5717681	45471	False	False	LONP1	['CODAS syndrome, 600373 (3)']	5.542912781999994	7.327261481069293
+6	32579123	call_2631	G	<DUP:TANDEM>			3.0	False	32621579	42456	False	False	HLA-DRB1	['{Multiple sclerosis, susceptibility to, 1}, 126200 (3)', '{Sarcoidosis, susceptibility to, 1}, 181000 (3)']	4.958121601999995	6.5542170446498975
+20	34507220	call_3469	A	<DUP:TANDEM>			2.0	False	34555859	48639	False	False	ITCH	['Autoimmune disease, multisystem, with facial dysmorphism, 613385 (3)']	3.031526790999999	4.007421793945146
+4	88129790	call_3629	A	<DUP:TANDEM>			2.0	False	88185028	55238	False	False	ABCG2	['[Junior blood group system], 614490 (3)', '[Uric acid concentration, serum, QTL1], 138900 (3)']	0.0	0.0

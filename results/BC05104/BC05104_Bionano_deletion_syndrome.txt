@@ -1,4 +1,1 @@
-Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-1	6290178	6311672	89	1.0	deletion	heterozygous	1	5337.0	False	True	1P36 DELETION SYNDROME	 1p36 	0.035714300000000004	1.7823393561997196
-22	20036490	20076036	18613	1.0	deletion	heterozygous	1	36154.0	True	True	DISTAL 22Q11.2 MICRODELETION SYNDROME	 22q11.2 	0.00840336	0.4193737313153127
-22	20036490	20076036	18641	1.0	deletion	heterozygous	2	33802.0	True	True	DISTAL 22Q11.2 MICRODELETION SYNDROME	 22q11.2 	0.00840336	0.4193737313153127
+

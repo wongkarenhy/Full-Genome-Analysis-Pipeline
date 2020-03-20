@@ -14,9 +14,9 @@ def queryHPO(args):
 
     # Read the hpo file in obo format
     try:
-        hpo = obonet.read_obo(args.database + "/hp.obo")
+        hpo = obonet.read_obo(args.workdir + "/human_pheno_ontology_b1270/hp.obo")
     except OSError:
-        print("Count not open/read the obo file:" + args.database + "/hp.obo")
+        print("Count not open/read the obo file:" + args.workdir + "/human_pheno_ontology_b1270/hp.obo")
         sys.exit()
 
     # Read the file containing manual HPO terms
@@ -78,9 +78,9 @@ def getGeneList(args, relatives):
 
     try:
         # Read the gene phenotype file into a pandas dataframe
-        df = pd.read_csv(args.database + "/phenotype_to_genes.txt", sep = '\t', usecols=[*range(0,4)], names=["HPO_id", "HPO_name", "gene_id", "gene_name"], comment = '#')
+        df = pd.read_csv(args.workdir + "/human_pheno_ontology_b1270/phenotype_to_genes.txt", sep = '\t', usecols=[*range(0,4)], names=["HPO_id", "HPO_name", "gene_id", "gene_name"], comment = '#')
     except OSError:
-        print("Count not open/read the gene-phenotype file:", args.database + "/phenotype_to_genes.txt")
+        print("Count not open/read the gene-phenotype file:", args.workdir + "/human_pheno_ontology_b1270/phenotype_to_genes.txt")
         sys.exit()
 
     for hpo in relatives:
@@ -129,7 +129,6 @@ def main():
     parser=argparse.ArgumentParser(description="This software extracts inexact HPO terms and generate a gene list.")
     parser.add_argument("-s","--sampleid",help="Sample ID." ,dest="sampleid", type=str, required = True)
     parser.add_argument("-w","--workdir",help="This is the base work directory (folder/directory).",dest="workdir",type=str, required = True)
-    parser.add_argument("-d", "--database", help="Path to the HPO database", dest="database", type=str, required = True)
     parser.add_argument("-j", "--json", help="Medical history JSON file", dest = "json", type=str, required = True)
     parser.add_argument("-m", "--manual", help="Indicate this flag to NOT run CNLP and just use a list of manually curated HPO terms", dest = "manual", action='store_true')
     args=parser.parse_args()

@@ -1,2 +1,2 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-13	99985507	call_3171	A	<DEL>			44.0	True	99985581	-74	False	False	ZIC2	['Holoprosencephaly 5, 609637 (3)']	140.62503909400473	77.04572995460445
+13	99985507	call_3171	A	<DEL>			44.0	True	99985581	-74	False	False	ZIC2	['Holoprosencephaly 5, 609637 (3)']	70.24125434699938	38.483820157190635

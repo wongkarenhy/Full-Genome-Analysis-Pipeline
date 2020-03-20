@@ -1,4 +1,4 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-16610	18	18	62003833.0	62031939.0	41222574.4	41249118.6	0.99	deletion	heterozygous	1	1562.0	False	False	PIGN	['Multiple congenital anomalies-hypotonia-seizures syndrome 1, 614080 (3)']	129.1297534830038	95.75316402290758
-9622	9	9	17804671.0	17914796.0	17723360.1	17737846.5	1.0	deletion	heterozygous	2	95639.0	True	False	ADAMTSL1	.	122.1401235280027	90.5701665688875
-10508	10	10	28609727.0	28620448.5	28631946.6	28641171.1	0.99	deletion	heterozygous	1	1497.0	False	False	WAC	['Desanto-Shinawi syndrome, 616708 (3)']	15.865306611999966	11.76454895418433
+9622	9	9	17804671.0	17914796.0	17723360.1	17737846.5	1.0	deletion	heterozygous	2	95639.0	True	False	ADAMTSL1	.	20.93628296699991	15.524813475563734
+16610	18	18	62003833.0	62031939.0	41222574.4	41249118.6	0.99	deletion	heterozygous	1	1562.0	False	False	PIGN	['Multiple congenital anomalies-hypotonia-seizures syndrome 1, 614080 (3)']	17.402379011999948	12.90432922683593
+10508	10	10	28609727.0	28620448.5	28631946.6	28641171.1	0.99	deletion	heterozygous	1	1497.0	False	False	WAC	['Desanto-Shinawi syndrome, 616708 (3)']	9.570491774999994	7.096775483522361

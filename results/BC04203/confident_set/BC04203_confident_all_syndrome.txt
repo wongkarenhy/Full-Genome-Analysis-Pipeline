@@ -1,0 +1,4 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	score	normalized_score
+11	35021421	35059595	call_4152	T	<DEL>	3.0	True	-28348	True	False	%613364 SPASTIC PARAPLEGIA 41, AUTOSOMAL DOMINANT; SPG41	11p14.1-p11.2	11580	1.0	deletion	heterozygous	1	28457.0	True	False	0.01768055	0.6610100077241552
+9	17804671	17914796	call_182	G	<DEL>	58.0	True	-92274	True	False	%601992 FRIEDREICH ATAXIA 2; FRDA2	9p23-p11	9622	1.0	deletion	heterozygous	2	95639.0	True	False	0.00168634	0.06304598083348945
+9	17804671	17914796	call_182	G	<DEL>	58.0	True	-92274	True	False	MENTAL RETARDATION, AUTOSOMAL RECESSIVE 16	9p23-p13.3	9622	1.0	deletion	heterozygous	2	95639.0	True	False	0.000541419	0.020241642786678265

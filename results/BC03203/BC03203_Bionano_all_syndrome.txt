@@ -1,0 +1,2 @@
+Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+5	153287576	153302322	7241	1.0	deletion	heterozygous	1	9850.0	False	False	SCHISTOSOMA MANSONI INFECTION, SUSCEPTIBILITY/RESISTANCE TO	5q31-q33	0.0294118	2.9411799999999997

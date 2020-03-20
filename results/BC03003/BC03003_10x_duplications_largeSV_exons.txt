@@ -1,13 +1,13 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-17	63312005	call_3100	G	<DUP:TANDEM>			3.0	False	63532683	220678	False	False	ACE	['Renal tubular dysgenesis, 267430 (3)', '[Angiotensin I-converting enzyme, benign serum increase] (3)', '{Microvascular complications of diabetes 3}, 612624 (3)', '{Myocardial infarction, susceptibility to} (3)', '{SARS, progression of} (3)', '{Stroke, hemorrhagic}, 614519 (3)']	600.6277274769541	92.99998270961342
-9	91738548	call_2724	T	<DUP:TANDEM>			4.0	False	91783492	44944	False	False	ROR2	['Brachydactyly, type B1, 113000 (3)', 'Robinow syndrome, autosomal recessive, 268310 (3)']	503.6282293179739	77.98077657086175
-3	128771443	call_2477	G	<DUP:TANDEM>			4.0	False	128811257	39814	False	False	RAB7A	.	503.6000703479739	77.97641649289112
-17	63312005	call_3100	G	<DUP:TANDEM>			3.0	False	63532683	220678	False	False	CYB561	['Orthostatic hypotension 2, 618182 (3)']	483.70210517497577	74.8954558039487
-7	78180800	call_1918	T	<DUP:TANDEM>			5.0	False	78223595	42795	False	False	MAGI2	['Nephrotic syndrome, type 15, 617609 (3)']	446.10651532597984	69.07423069900464
-4	92582963	call_1315	G	<DUP:TANDEM>			6.0	False	92616640	33677	False	False	GRID2	['Spinocerebellar ataxia, autosomal recessive 18, 616204 (3)']	408.7623171859833	63.291930577907905
-9	99129436	call_3604	C	<DUP:TANDEM>			3.0	False	99204263	74827	False	False	TGFBR1	['Loeys-Dietz syndrome 1, 609192 (3)', '{Multiple self-healing squamous epithelioma, susceptibility to}, 132800 (3)']	369.30039597498757	57.18172649904019
-X	64973045	call_3638	T	<DUP:TANDEM>			3.0	False	65032103	59058	False	False	ZC4H2	['Wieacker-Wolff syndrome, 314580 (3)']	360.54435866998784	55.82595938953566
-16	56473549	call_2273	A	<DUP:TANDEM>			4.0	False	56519774	46225	False	False	BBS2	['Bardet-Biedl syndrome 2, 615981 (3)', 'Retinitis pigmentosa 74, 616562 (3)']	211.67413134199973	32.77519444127519
-22	25855994	call_3276	T	<DUP:TANDEM>			3.0	False	25923360	67366	False	False	MYO18B	['Klippel-Feil syndrome 4, autosomal recessive, with myopathy and facial dysmorphism, 616549 (3)']	103.44573139500042	16.017327857191688
-6	158752708	call_3476	G	<DUP:TANDEM>			3.0	False	158815530	62822	False	False	EZR	.	81.60928713300042	12.636216986176565
-10	18247948	call_2868	A	<DUP:TANDEM>			3.0	False	18292377	44429	False	False	CACNB2	['Brugada syndrome 4, 611876 (3)']	41.16225019300016	6.373479579969407
+17	63312005	call_3100	G	<DUP:TANDEM>			3.0	False	63532683	220678	False	False	ACE	['Renal tubular dysgenesis, 267430 (3)', '[Angiotensin I-converting enzyme, benign serum increase] (3)', '{Microvascular complications of diabetes 3}, 612624 (3)', '{Myocardial infarction, susceptibility to} (3)', '{SARS, progression of} (3)', '{Stroke, hemorrhagic}, 614519 (3)']	640.1153742299388	99.1141700793813
+10	18247948	call_2868	A	<DUP:TANDEM>			3.0	False	18292377	44429	False	False	CACNB2	['Brugada syndrome 4, 611876 (3)']	572.6221975159538	88.66366308433345
+6	158752708	call_3476	G	<DUP:TANDEM>			3.0	False	158815530	62822	False	False	EZR	.	469.42733192297374	72.68517878061566
+17	63312005	call_3100	G	<DUP:TANDEM>			3.0	False	63532683	220678	False	False	CYB561	['Orthostatic hypotension 2, 618182 (3)']	389.1402037139834	60.253682208511016
+9	91738548	call_2724	T	<DUP:TANDEM>			4.0	False	91783492	44944	False	False	ROR2	['Brachydactyly, type B1, 113000 (3)', 'Robinow syndrome, autosomal recessive, 268310 (3)']	365.19393032398636	56.54588966189588
+3	128771443	call_2477	G	<DUP:TANDEM>			4.0	False	128811257	39814	False	False	RAB7A	.	361.90949969298697	56.0373350648962
+7	78180800	call_1918	T	<DUP:TANDEM>			5.0	False	78223595	42795	False	False	MAGI2	['Nephrotic syndrome, type 15, 617609 (3)']	295.5956211699947	45.76942821691867
+X	64973045	call_3638	T	<DUP:TANDEM>			3.0	False	65032103	59058	False	False	ZC4H2	['Wieacker-Wolff syndrome, 314580 (3)']	291.0781289489952	45.06994885686883
+16	56473549	call_2273	A	<DUP:TANDEM>			4.0	False	56519774	46225	False	False	BBS2	['Bardet-Biedl syndrome 2, 615981 (3)', 'Retinitis pigmentosa 74, 616562 (3)']	275.4049705459967	42.643148704623364
+22	25855994	call_3276	T	<DUP:TANDEM>			3.0	False	25923360	67366	False	False	MYO18B	['Klippel-Feil syndrome 4, autosomal recessive, with myopathy and facial dysmorphism, 616549 (3)']	265.58977218099824	41.123383238465586
+9	99129436	call_3604	C	<DUP:TANDEM>			3.0	False	99204263	74827	False	False	TGFBR1	['Loeys-Dietz syndrome 1, 609192 (3)', '{Multiple self-healing squamous epithelioma, susceptibility to}, 132800 (3)']	192.20868980599985	29.761204837619875
+4	92582963	call_1315	G	<DUP:TANDEM>			6.0	False	92616640	33677	False	False	GRID2	['Spinocerebellar ataxia, autosomal recessive 18, 616204 (3)']	171.94904731700012	26.624242764465745

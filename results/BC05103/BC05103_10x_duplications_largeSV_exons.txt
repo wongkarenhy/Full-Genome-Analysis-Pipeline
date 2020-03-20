@@ -1,29 +1,29 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-5	10969900	call_1936	A	<DUP:TANDEM>			6.0	False	11003630	33730	False	False	CTNND2	.	366.9622549569982	99.24284857525677
-14	64202135	call_3978	C	<DUP:TANDEM>			3.0	False	64381426	179291	False	False	ESR2	['?Ovarian dysgenesis 8, 618187 (3)']	359.94602715199903	97.3453497883512
-4	78336622	call_1399	T	<DUP:TANDEM>			7.0	False	78368188	31566	False	False	FRAS1	['Fraser syndrome 1, 219000 (3)']	356.6944252559995	96.46597260382437
-2	29274518	call_3253	G	<DUP:TANDEM>			4.0	False	29335746	61228	False	False	ALK	['{Neuroblastoma, susceptibility to, 3}, 613014 (3)']	355.5228246099994	96.14911989232334
-14	64202135	call_3978	C	<DUP:TANDEM>			3.0	False	64381426	179291	False	False	SYNE2	['Emery-Dreifuss muscular dystrophy 5, autosomal dominant, 612999 (3)']	336.3623794330015	90.96728679191865
-8	133214945	call_2818	A	<DUP:TANDEM>			5.0	False	133258236	43291	False	False	NDRG1	['Charcot-Marie-Tooth disease, type 4D, 601455 (3)']	311.50762243200575	84.24545954101059
-22	29431729	call_4291	A	<DUP:TANDEM>			3.0	False	29514431	82702	False	False	NEFH	['?{Amyotrophic lateral sclerosis, susceptibility to}, 105400 (3)', 'Charcot-Marie-Tooth disease, axonal, type 2CC, 616924 (3)']	304.8147197000067	82.43540217574142
-6	72110251	call_4518	A	<DUP:TANDEM>			3.0	False	72282888	172637	False	False	RIMS1	['Cone-rod dystrophy 7, 603649 (3)']	299.43756350900713	80.9811809570185
-12	79202409	call_3050	C	<DUP:TANDEM>			4.0	False	79256041	53632	False	False	SYT1	['Baker-Gordon syndrome, 618218 (3)']	295.55185205300785	79.93031245916694
-10	62550302	call_3815	C	<DUP:TANDEM>			3.0	False	62647471	97169	False	False	ZNF365	['{Nephrolithiasis, uric acid, susceptibility to}, 605990 (3)']	293.4158762090085	79.35264997649206
-10	28573814	call_3806	C	<DUP:TANDEM>			3.0	False	28646562	72748	False	False	WAC	['Desanto-Shinawi syndrome, 616708 (3)']	288.67715834400906	78.07109076116592
-5	151634402	call_4480	G	<DUP:TANDEM>			3.0	False	151685620	51218	False	False	SPARC	['Osteogenesis imperfecta, type XVII, 616507 (3)']	287.6384414250097	77.79017569561813
-5	36224898	call_3471	C	<DUP:TANDEM>			4.0	False	36271517	46619	False	False	NADK2	['?2,4-dienoyl-CoA reductase deficiency, 616034 (3)']	277.8291978530105	75.13732172684195
-6	46646271	call_4511	T	<DUP:TANDEM>			3.0	False	46823254	176983	False	False	PLA2G7	['Platelet-activating factor acetylhydrolase deficiency, 614278 (3)', '{Asthma, susceptibility to}, 600807 (3)', '{Atopy, susceptibility to}, 147050 (3)']	251.16327799601305	67.9256758130189
-9	3879111	call_4649	T	<DUP:TANDEM>			3.0	False	3938517	59406	False	False	GLIS3	['Diabetes mellitus, neonatal, with congenital hypothyroidism, 610199 (3)']	184.05744924800558	49.777287222655474
-22	19063918	call_2542	T	<DUP:TANDEM>			5.0	False	19099117	35199	False	False	DGCR2	['DiGeorge syndrome/velocardiofacial syndrome complex-2 (2)']	146.20830850300132	39.54120301257722
-19	48980986	call_2431	C	<DUP:TANDEM>			5.0	False	49013249	32263	False	False	GYS1	['Glycogen storage disease 0, muscle, 611556 (3)']	132.2065976289999	35.75452017723798
-22	18081134	call_4279	G	<DUP:TANDEM>			3.0	False	18154440	73306	False	False	PEX26	['Peroxisome biogenesis disorder 7A (Zellweger), 614872 (3)', 'Peroxisome biogenesis disorder 7B, 614873 (3)']	124.27306609499966	33.6089418294374
-6	100422128	call_3531	A	<DUP:TANDEM>			4.0	False	100462195	40067	False	False	SIM1	.	116.86534197999968	31.605565098720582
-1	201923557	call_3774	G	<DUP:TANDEM>			3.0	False	201985133	61576	False	False	LMOD1	.	98.28761304799956	26.58132428276335
-22	18081134	call_4279	G	<DUP:TANDEM>			3.0	False	18154440	73306	False	False	TUBA8	['Cortical dysplasia, complex, with other brain malformations 8, 613180 (3)']	70.55240410599946	19.080495235490975
-22	50158651	call_4297	G	<DUP:TANDEM>			3.0	False	50219448	60797	False	False	TUBGCP6	['Microcephaly and chorioretinopathy, autosomal recessive, 1, 251270 (3)']	63.09150431499947	17.06273744653215
-18	33651257	call_2401	G	<DUP:TANDEM>			5.0	False	33683620	32363	False	False	ASXL3	['Bainbridge-Ropers syndrome, 615485 (3)']	59.21163209999957	16.013448138099864
-14	103957981	call_3997	C	<DUP:TANDEM>			3.0	False	104010902	52921	False	False	TDRD9	['?Spermatogenic failure 30, 618110 (3)']	42.395393403999776	11.465592308327816
-2	69051428	call_4177	A	<DUP:TANDEM>			3.0	False	69087071	35643	False	False	ANTXR1	['GAPO syndrome, 230740 (3)', '{?Hemangioma, capillary infantile, susceptibility to}, 602089 (3)']	3.5010938250000008	0.946850853537942
+10	62550302	call_3815	C	<DUP:TANDEM>			3.0	False	62647471	97169	False	False	ZNF365	['{Nephrolithiasis, uric acid, susceptibility to}, 605990 (3)']	358.7865381279979	97.03177259593116
+5	10969900	call_1936	A	<DUP:TANDEM>			6.0	False	11003630	33730	False	False	CTNND2	.	349.97093732299953	94.6476436454131
+12	79202409	call_3050	C	<DUP:TANDEM>			4.0	False	79256041	53632	False	False	SYT1	['Baker-Gordon syndrome, 618218 (3)']	329.42854391900215	89.09207053012044
+14	64202135	call_3978	C	<DUP:TANDEM>			3.0	False	64381426	179291	False	False	SYNE2	['Emery-Dreifuss muscular dystrophy 5, autosomal dominant, 612999 (3)']	322.66000649200316	87.2615581930346
+2	69051428	call_4177	A	<DUP:TANDEM>			3.0	False	69087071	35643	False	False	ANTXR1	['GAPO syndrome, 230740 (3)', '{?Hemangioma, capillary infantile, susceptibility to}, 602089 (3)']	304.1749791580055	82.2623879954556
+5	36224898	call_3471	C	<DUP:TANDEM>			4.0	False	36271517	46619	False	False	NADK2	['?2,4-dienoyl-CoA reductase deficiency, 616034 (3)']	298.1654998750065	80.63715860348802
+6	100422128	call_3531	A	<DUP:TANDEM>			4.0	False	100462195	40067	False	False	SIM1	.	284.18184857900854	76.8553598780018
+22	18081134	call_4279	G	<DUP:TANDEM>			3.0	False	18154440	73306	False	False	TUBA8	['Cortical dysplasia, complex, with other brain malformations 8, 613180 (3)']	273.0308197200099	73.83962773235754
+2	29274518	call_3253	G	<DUP:TANDEM>			4.0	False	29335746	61228	False	False	ALK	['{Neuroblastoma, susceptibility to, 3}, 613014 (3)']	264.68251214901085	71.58187557137464
+1	201923557	call_3774	G	<DUP:TANDEM>			3.0	False	201985133	61576	False	False	LMOD1	.	262.3247482540114	70.94423177546145
+5	151634402	call_4480	G	<DUP:TANDEM>			3.0	False	151685620	51218	False	False	SPARC	['Osteogenesis imperfecta, type XVII, 616507 (3)']	251.11711945501204	67.91319249890937
+22	19063918	call_2542	T	<DUP:TANDEM>			5.0	False	19099117	35199	False	False	DGCR2	['DiGeorge syndrome/velocardiofacial syndrome complex-2 (2)']	236.78316353201035	64.03665588530707
+18	33651257	call_2401	G	<DUP:TANDEM>			5.0	False	33683620	32363	False	False	ASXL3	['Bainbridge-Ropers syndrome, 615485 (3)']	197.21484948800725	53.335631063265424
+19	48980986	call_2431	C	<DUP:TANDEM>			5.0	False	49013249	32263	False	False	GYS1	['Glycogen storage disease 0, muscle, 611556 (3)']	143.387107917001	38.77822540718389
+8	133214945	call_2818	A	<DUP:TANDEM>			5.0	False	133258236	43291	False	False	NDRG1	['Charcot-Marie-Tooth disease, type 4D, 601455 (3)']	116.58904544699953	31.53084227746042
+14	103957981	call_3997	C	<DUP:TANDEM>			3.0	False	104010902	52921	False	False	TDRD9	['?Spermatogenic failure 30, 618110 (3)']	115.79043440999956	31.314862478053517
+10	28573814	call_3806	C	<DUP:TANDEM>			3.0	False	28646562	72748	False	False	WAC	['Desanto-Shinawi syndrome, 616708 (3)']	110.94321694099956	30.003960163744164
+22	29431729	call_4291	A	<DUP:TANDEM>			3.0	False	29514431	82702	False	False	NEFH	['?{Amyotrophic lateral sclerosis, susceptibility to}, 105400 (3)', 'Charcot-Marie-Tooth disease, axonal, type 2CC, 616924 (3)']	108.20199085099955	29.262611204592236
+6	72110251	call_4518	A	<DUP:TANDEM>			3.0	False	72282888	172637	False	False	RIMS1	['Cone-rod dystrophy 7, 603649 (3)']	83.27956515299958	22.522483340584692
+4	78336622	call_1399	T	<DUP:TANDEM>			7.0	False	78368188	31566	False	False	FRAS1	['Fraser syndrome 1, 219000 (3)']	64.96238686299948	17.568706959486626
+9	3879111	call_4649	T	<DUP:TANDEM>			3.0	False	3938517	59406	False	False	GLIS3	['Diabetes mellitus, neonatal, with congenital hypothyroidism, 610199 (3)']	61.51319220999953	16.635891940965518
+6	46646271	call_4511	T	<DUP:TANDEM>			3.0	False	46823254	176983	False	False	PLA2G7	['Platelet-activating factor acetylhydrolase deficiency, 614278 (3)', '{Asthma, susceptibility to}, 600807 (3)', '{Atopy, susceptibility to}, 147050 (3)']	50.18774965499969	13.572990606152949
+22	50158651	call_4297	G	<DUP:TANDEM>			3.0	False	50219448	60797	False	False	TUBGCP6	['Microcephaly and chorioretinopathy, autosomal recessive, 1, 251270 (3)']	31.844437762999945	8.612146541469057
+14	64202135	call_3978	C	<DUP:TANDEM>			3.0	False	64381426	179291	False	False	ESR2	['?Ovarian dysgenesis 8, 618187 (3)']	31.289967706999953	8.462193277710172
+22	18081134	call_4279	G	<DUP:TANDEM>			3.0	False	18154440	73306	False	False	PEX26	['Peroxisome biogenesis disorder 7A (Zellweger), 614872 (3)', 'Peroxisome biogenesis disorder 7B, 614873 (3)']	17.42822447599998	4.713363892997487
 1	154439908	call_2919	T	<DUP:TANDEM>			4.0	False	154486465	46557	False	False	IL6R	['[Interleukin 6, serum level of, QTL], 614752 (3)', '[Interleukin-6 receptor, soluble, serum level of, QTL], 614689 (3)']	0.0	0.0
 7	4955500	call_4556	G	<DUP:TANDEM>			3.0	False	4992344	36844	False	False	MMD2	['Miyoshi muscular dystrophy 2 (2)']	0.0	0.0
 1	8806377	call_3708	A	<DUP:TANDEM>			3.0	False	8880905	74528	False	False	ENO1	['Enolase deficiency (1)']	0.0	0.0

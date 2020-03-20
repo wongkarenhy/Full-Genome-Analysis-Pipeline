@@ -1,2 +1,2 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-11	118678954	call_5433	G	<DEL>			2.0	False	118691861	-12907	False	False	TREH	['Trehalase deficiency, 612119 (3)']	4.855409570000014	52.387796527265984
+11	118678954	call_5433	G	<DEL>			2.0	False	118691861	-12907	False	False	TREH	['Trehalase deficiency, 612119 (3)']	8.237719124000007	88.88147273575488

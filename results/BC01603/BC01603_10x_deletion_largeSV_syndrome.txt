@@ -1,2 +1,1 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-3	108752033	108784964	call_35	A	<DEL>	83.0	True	-32931	True	False	3Q13 MICRODELETION SYNDROME	 3q13 	0.04	1.991323812107268
+

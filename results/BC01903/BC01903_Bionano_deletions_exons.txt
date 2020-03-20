@@ -1,0 +1,4 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	gene	OMIM_syndrome	score	normalized_score
+9004	8	8	16145554.0	16213349.0	3717958.4	3777089.4	1.0	deletion	heterozygous	2	8664.0	MSR1	['Barrett esophagus/esophageal adenocarcinoma, 614266 (3)']	65.67330911199888	86.81455529182597
+14383	13	13	112740482.0	112785852.0	1538986.7	1579002.8	1.0	deletion	heterozygous	1	5354.0	ATP11A	.	42.55036881099937	56.24798560904524
+12832	12	12	10085430.0	10102690.5	10085085.6	10101118.4	0.99	deletion	heterozygous	1	1228.0	CLEC1A	['{Aspergillosis, susceptibility to}, 614079 (3)']	0.0	0.0

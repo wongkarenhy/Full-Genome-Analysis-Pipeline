@@ -1,4 +1,4 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-16660	19	19	54963177.0	55022633.0	3607827.9	3661609.9	1.0	deletion	heterozygous	2	5674.0	False	False	GP6	['Bleeding disorder, platelet-type, 11, 614201 (3)']	178.406828970006	97.74563943546234
-14103	14	14	65079714.5	65094196.0	45120835.6	45133472.6	0.99	deletion	heterozygous	1	1844.0	False	True	MAX	['{Pheochromocytoma, susceptibility to}, 171300 (3)']	13.143603246999946	7.201125154687994
+14103	14	14	65079714.5	65094196.0	45120835.6	45133472.6	0.99	deletion	heterozygous	1	1844.0	False	True	MAX	['{Pheochromocytoma, susceptibility to}, 171300 (3)']	63.16514130899897	34.60695514249301
+16660	19	19	54963177.0	55022633.0	3607827.9	3661609.9	1.0	deletion	heterozygous	2	5674.0	False	False	GP6	['Bleeding disorder, platelet-type, 11, 614201 (3)']	5.476126323999999	3.000263343387689
 15104	16	16	69722532.0	69739437.0	1333868.6	1347022.0	1.0	deletion	heterozygous	1	3752.0	False	True	NQO1	['{Benzene toxicity, susceptibility to} (3)', '{Breast cancer, poor survival after chemotherapy for} (3)', '{Leukemia, post-chemotherapy, susceptibility to} (3)']	0.0	0.0

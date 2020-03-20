@@ -1,2 +1,2 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-2	206770988	call_3858	A	<DEL>			2.0	True	206771300	-312	False	False	FASTKD2	['?Mitochondrial complex IV deficiency, 220110 (3)']	16.411517970000055	17.59476964915251
+2	206770988	call_3858	A	<DEL>			2.0	True	206771300	-312	False	False	FASTKD2	['?Mitochondrial complex IV deficiency, 220110 (3)']	1.7016964800000014	1.8243868503270266

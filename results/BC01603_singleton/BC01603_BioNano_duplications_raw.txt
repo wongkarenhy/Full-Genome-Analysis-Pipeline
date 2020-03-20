@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size
+4583	X	23	149544060.0	149653235.0	589073.4	904699.3	-1.0	duplication_inverted	unknown	-1	109175.0

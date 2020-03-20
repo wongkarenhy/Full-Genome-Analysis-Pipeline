@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-13282	12	12	17770250.0	19320023.0	17725688.8	19382866.6	1.0	insertion	heterozygous	2	107405.0	False	True	PLCZ1	['?Spermatogenic failure 17, 617214 (3)']	476.62801256497687	73.80011760972366
+13282	12	12	17770250.0	19320023.0	17725688.8	19382866.6	1.0	insertion	heterozygous	2	107405.0	False	True	PLCZ1	['?Spermatogenic failure 17, 617214 (3)']	364.4042828779867	56.42362224821328

@@ -1,0 +1,4 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	score	normalized_score
+9	11773645	11798297	call_3909	A	<DEL>	7.0	True	-3922	False	True	%601992 FRIEDREICH ATAXIA 2; FRDA2	9p23-p11	9996	1.0	deletion	heterozygous	2	4022.0	False	True	0.0243902	1.951216
+12	111571098	111591863	call_3344	C	<DEL>	16.0	True	-14598	True	False	SPASTIC PARAPLEGIA 36, AUTOSOMAL DOMINANT; SPG36	12q23-q24	13324	1.0	deletion	heterozygous	1	14505.0	True	False	0.0188679	1.5094319999999999
+8	111806481	111825332	call_3822	A	<DEL>	8.0	True	-12723	False	True	CHARCOT-MARIE-TOOTH DISEASE, AXONAL, TYPE 2H; CMT2H	8q13-q23	9415	1.0	deletion	heterozygous	1	12740.0	False	True	0.00735294	0.5882352

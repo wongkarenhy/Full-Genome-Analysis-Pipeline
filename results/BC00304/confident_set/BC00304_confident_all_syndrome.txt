@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	score	normalized_score
+14	50350401	50363670	call_3005	A	<DEL>	6.0	True	-2249	False	True	CHROMOSOME 14Q11-Q22 DELETION SYNDROME	14q11-q22	3801	1.0	deletion	heterozygous	1	2210.0	False	True	0.001086973	0.04031582368549607

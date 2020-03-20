@@ -1,2 +1,2 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-14	88445450	call_3943	C	<DEL>			4.0	True	88457671	-12221	True	False	SPATA7	['Leber congenital amaurosis 3, 604232 (3)', 'Retinitis pigmentosa, juvenile, autosomal recessive, 604232 (3)']	39.37478775599957	25.484404780787845
+14	88445450	call_3943	C	<DEL>			4.0	True	88457671	-12221	True	False	SPATA7	['Leber congenital amaurosis 3, 604232 (3)', 'Retinitis pigmentosa, juvenile, autosomal recessive, 604232 (3)']	77.89266195900011	50.41419242987002

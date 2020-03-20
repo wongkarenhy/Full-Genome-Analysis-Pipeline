@@ -1,3 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-9786	9	9	39145947.0	62375573.0	301989.6	751170.5	0.0	translocation_intrachr	heterozygous	1	CNTNAP3	.	LOC102724238	.	False	False
-9786	9	9	39145947.0	62375573.0	301989.6	751170.5	0.0	translocation_intrachr	heterozygous	1	CNTNAP3	.	FGF7P6	.	False	False

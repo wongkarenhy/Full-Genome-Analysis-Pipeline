@@ -37,29 +37,33 @@ All coordinates are based on hg38.<br>
 
 **Command (must run pre-processing before this):**<br>
 ```
-bash run_clinical_interpretation_pipeline.sh [path_to_json] [work_dir] [sample_id] [hpo_database_path][path_to_intervar] [bionano:true or false] [DLE/BspQI/None] [linkedReadSV:true or false] [trio or singleton]
+bash run_clinical_interpretation_pipeline.sh [-j path_to_json/None] [-w work_dir] [-s sample_id] [-i path_to_intervar] [-b true/false] [-e DLE/BspQI/None] [-l true/false] [-t trio/singleton] [-f father_SNP_vcf_file_path or None if singleton] [-m mother_SNP_vcf_file_path or None if singleton] [-r hg19/hg38]
 ```
 
 **General assumptions about this program:**
 1. All samples must be named BC0XX01, BC0XX02, and BC0XX03, where XX is the family ID shared acorss a trio<br>
     The last two digits (01/02/03) indicates father, mother, and proband respectively. Please use 04 and onward if there are more than one probands.<br>  
-2. **[path_to_json]**<br>
-    This is the path to the EHR file in JSON format. 
-3. **[work_dir]**<br>
+2. **[-j path_to_json]**<br>
+    This is the path to the EHR file in JSON format. Input 'None' if only using a list of manually curated HPO terms. For now, the file containing manually curated HPO terms (one term per line) must be placed in $WORKDIR/results/$SAMPLEID/$SAMPLEID_hpo_manual.txt for the pipeline for work.
+3. **[-w work_dir]**<br>
     By default, all output are written to this work directory. <br>
-4. **[hpo_database_path]** <br>
-    This is the HPO database path. Please refer to "Database files from HPO" section  <br>
-5. **[path_to_intervar]** <br>
+4. **[-i path_to_intervar]** <br>
     This is the Intervar directory. There should be a folder named 'example' in this directory. <br>
-6. **[bionano:true or false]** <br>
+5. **[-b bionano:true or false]** <br>
     Indicate true to analyze bionano data for SVs <br>
-7. **[DLE/BspQI/None]** <br>
+6. **[-e DLE/BspQI/None]** <br>
     Must use this option if bionano is true. BssSI is not supported as we don't have a large control database using this label. <br>
-8. **[linkedReadSV:true or false]** <br>
-    Indicate true to analyze linked-read SVs <br>
-9. **[trio or singleton]** <br>
+7. **[-l linkedReadSV:true or false]** <br>
+    Indicate true to analyze linked-read SVs. <br>
+8. **[-t trio or singleton]** <br>
     Indicate whether this is a trio or a singleton case. If this is a singleton case, name the file as BC0XX03. For quad cases, submit each proband as a separate job.<br>
-    
+9. **[-f father_SNP_vcf_file_path or None if singleton]** <br>
+    Specify the path to the father's SNP/indel vcf file. Input 'None' if running in singleton mode.
+10. **[-m mother_SNP_vcf_file_path or None if singleton]** <br>
+    Specify the path to the mother's SNP/indel vcf file. Input 'None' if running in singleton mode.
+11. **[-r hg19/hg38]** <br>
+    Specific the reference version
+   
 **Database files from HPO**<br>
 http://purl.obolibrary.org/obo/hp.obo
 http://compbio.charite.de/jenkins/job/hpo.annotations/lastStableBuild/artifact/misc/phenotype_annotation.tab (build 1270)<br>
@@ -80,6 +84,7 @@ To get started, pull the github repo and create two additional directories (bion
 ├── cytoband.txt
 ├── human_pheno_ontology_b1270 
 ├── linkedRead_sv
+├── morbidmap.txt
 ├── README.md
 └── scripts
 ```
@@ -156,25 +161,28 @@ $SAMPLEID_Bionano_inversions.txt/$SAMPLEID_10x_inversions_largeSV.txt<br>
 
 ```
 .
+├── BC05303_10x_all_syndrome.txt
 ├── BC05303_10x_deletion_largeSV_syndrome.txt
 ├── BC05303_10x_deletions_exons.txt
 ├── BC05303_10x_deletions_largeSV_exons.txt
 ├── BC05303_10x_deletion_syndrome.txt
 ├── BC05303_10x_duplication_largeSV_syndrome.txt
 ├── BC05303_10x_duplications_largeSV_exons.txt
+├── BC05303_Bionano_all_syndrome.txt
 ├── BC05303_Bionano_deletions_exons.txt
+├── BC05303_BioNano_deletions_raw.txt
 ├── BC05303_Bionano_deletion_syndrome.txt
 ├── BC05303_Bionano_duplications_exons.txt
+├── BC05303_BioNano_duplications_raw.txt
 ├── BC05303_Bionano_duplication_syndrome.txt
 ├── BC05303_Bionano_insertions.txt
 ├── confident_set
 │   ├── BC05303_10x_breakends_largeSV.txt
 │   ├── BC05303_10x_inversions_largeSV.txt
-│   ├── BC05303_10x_SV_SNPsIndels_compounthet_candidates.txt
+│   ├── BC05303_10x_SV_SNPsIndels_compoundhet_candidates.txt
 │   ├── BC05303_10x_unknown_largeSV.txt
-│   ├── BC05303_Bionano_inversions.txt
-│   ├── BC05303_Bionano_SV_SNPsIndels_compounthet_candidates.txt
-│   ├── BC05303_Bionano_translocations.txt
+│   ├── BC05303_Bionano_SV_SNPsIndels_compoundhet_candidates.txt
+│   ├── BC05303_confident_all_syndrome.txt
 │   ├── BC05303_confident_deletion_exons.txt
 │   ├── BC05303_confident_deletion_syndrome.txt
 │   ├── BC05303_confident_duplication_exons.txt
@@ -182,7 +190,7 @@ $SAMPLEID_Bionano_inversions.txt/$SAMPLEID_10x_inversions_largeSV.txt<br>
 │   ├── BC05303_dominant_inherited_smallVariants_candidates.txt
 │   ├── BC05303_smallVariants_compoundhet_candidates.txt
 │   ├── BC05303_smallVariants_denovo_candidates.txt
-│   ├── BC05303_smallVariants_recessive_candidates.txt 
+│   ├── BC05303_smallVariants_recessive_candidates.txt
 │   └── report.html
 └── misc
 ```
@@ -219,12 +227,14 @@ awk '{print $6}' ./example/BC00103.hg38_multianno.txt.intervar.FINAL | \
 **Example command** <br>
 ```
 bash /media/KwokRaid05/karen/ciapm/FGA/scripts/run_clinical_interpretation_pipeline.sh \
-    /media/KwokRaid05/karen/ciapm/jsons/BC00103.json \
-    /media/KwokRaid05/karen/ciapm/FGA \
-    BC00103\
-    /media/KwokRaid05/karen/ciapm/FGA/human_pheno_ontology_b1270/ \
-    /media/KwokRaid02/karen/software/InterVar/ \
-    true DLE true trio 
+    -j /media/KwokRaid05/karen/ciapm/jsons/BC00103.json \
+    -w /media/KwokRaid05/karen/ciapm/FGA \
+    -s BC00103\
+    -i /media/KwokRaid02/karen/software/InterVar/ \
+    -b true -e BspQI -l true -t trio \
+    -f /media/KwokRaid04/CIAPM/CIAPM_longranger/BC00101_longranger/outs/phased_variants.vcf.gz\
+    -m /media/KwokRaid04/CIAPM/CIAPM_longranger/BC00102_longranger/outs/phased_variants.vcf.gz\
+    -r hg38
 ```
 
 

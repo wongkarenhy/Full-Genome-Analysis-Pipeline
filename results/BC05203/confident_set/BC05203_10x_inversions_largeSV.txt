@@ -1,0 +1,83 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+1	204170339	call_4220	T	<INV>			3.0	False	204239434	69095	REN	['Hyperuricemic nephropathy, familial juvenile 2, 613092 (3)', 'Renal tubular dysgenesis, 267430 (3)', '[Hyperproreninemia] (3)']	PLEKHA6	.	False	False
+1	228702541	call_1401	A	<INV>			6.0	False	228737579	35038	RHOU	.	RHOU	.	False	False
+10	179786	call_2083	A	<INV>			5.0	False	211172	31386	ZMYND11	['Mental retardation, autosomal dominant 30, 616083 (3)']	ZMYND11	['Mental retardation, autosomal dominant 30, 616083 (3)']	False	False
+10	27170780	call_4256	A	<INV>			3.0	False	27219063	48283	MASTL	.	ACBD5	.	False	False
+10	35633234	call_3046	C	<INV>			4.0	False	35679956	46722	FZD8	.			False	False
+10	35633234	call_3046	C	<INV>			4.0	False	35679956	46722	MIR4683	.			False	False
+10	111913030	call_2128	G	<INV>			5.0	False	111957214	44184	LOC105378486	.	LOC105378486	.	False	False
+11	17213007	call_2146	G	<INV>			5.0	False	17247760	34753	PIK3C2A	['Oculoskeletodental syndrome, 618440 (3)']			False	False
+11	96355664	call_4359	T	<INV>			3.0	False	96390514	34850	CCDC82	.	CCDC82	.	False	False
+11	96355664	call_4359	T	<INV>			3.0	False	96390514	34850	CCDC82	.	JRKL	.	False	False
+15	62825071	call_798	A	<INV>			8.0	False	62859496	34425	TLN2	.	LOC105370854	.	False	False
+15	62825071	call_798	A	<INV>			8.0	False	62859496	34425	MIR190A	.	LOC105370854	.	False	False
+15	62825071	call_798	A	<INV>			8.0	False	62859496	34425	LOC105370854	.	LOC105370854	.	False	False
+15	64141176	call_1075	A	<INV>			7.0	False	64175944	34768	SNX1	.	CSNK1G1	.	False	False
+15	67352344	call_4549	T	<INV>			3.0	False	67390941	38597	IQCH	.	IQCH	.	False	False
+19	23568953	call_3409	T	<INV>			4.0	False	23622993	54040	LOC105372339	.			False	False
+2	16908966	call_2409	G	<INV>			5.0	False	16955561	46595					False	False
+2	21678240	call_2411	A	<INV>			5.0	False	21708732	30492	LINC01822	.	LINC01822	.	False	False
+2	120720279	call_3485	G	<INV>			4.0	False	120752578	32299			GLI2	['Culler-Jones syndrome, 615849 (3)', 'Holoprosencephaly 9, 610829 (3)']	False	False
+2	209475998	call_4793	C	<INV>			3.0	False	209538269	62271	MAP2	.	MAP2	.	False	False
+2	210026257	call_3523	A	<INV>			4.0	False	210070412	44155	RPE	.	KANSL1L	.	False	False
+2	210026257	call_3523	A	<INV>			4.0	False	210070412	44155	RPE	.	KANSL1L-AS1	.	False	False
+2	210026257	call_3523	A	<INV>			4.0	False	210070412	44155	KANSL1L	.	KANSL1L	.	False	False
+2	210026257	call_3523	A	<INV>			4.0	False	210070412	44155	KANSL1L	.	KANSL1L-AS1	.	False	False
+2	210026257	call_3523	A	<INV>			4.0	False	210070412	44155	KANSL1L-AS1	.	KANSL1L	.	False	False
+2	210026257	call_3523	A	<INV>			4.0	False	210070412	44155	KANSL1L-AS1	.	KANSL1L-AS1	.	False	False
+2	213288029	call_1153	C	<INV>			7.0	False	213323315	35286	SPAG16-DT	.	SPAG16	.	False	False
+2	213288029	call_1153	C	<INV>			7.0	False	213323315	35286	SPAG16	.	SPAG16	.	False	False
+20	20216730	call_2475	C	<INV>			5.0	False	20264971	48241	CFAP61	.	CFAP61	.	False	False
+20	20216730	call_2475	C	<INV>			5.0	False	20264971	48241	CFAP61	.	CFAP61-AS1	.	False	False
+3	162240546	call_4962	T	<INV>			3.0	False	162297330	56784					False	False
+3	165748746	call_1201	G	<INV>			7.0	False	165780509	31763			BCHE	['Butyrylcholinesterase deficiency, 617936 (3)', '{Apnea, postanesthetic, susceptibility to, due to BCHE deficiency}, 617936 (3)']	False	False
+4	3609344	call_1796	A	<INV>			6.0	False	3640236	30892			LOC112268461	.	False	False
+4	3609344	call_1796	A	<INV>			6.0	False	3640236	30892			LOC105374357	.	False	False
+4	102223993	call_3727	T	<INV>			4.0	False	102270350	46357			SLC39A8	['Congenital disorder of glycosylation, type IIn, 616721 (3)']	False	False
+5	6425538	call_3772	T	<INV>			4.0	False	6495385	69847			UBE2QL1	.	False	False
+5	158620880	call_3833	T	<INV>			4.0	False	158653453	32573					False	False
+6	49588472	call_5152	C	<INV>			3.0	False	49637060	48588			RHAG	['Anemia, hemolytic, Rh-null, regulator type, 268150 (3)', 'Overhydrated hereditary stomatocytosis, 185000 (3)']	False	False
+7	37277007	call_5220	G	<INV>			3.0	False	37321794	44787	ELMO1	.	ELMO1	.	False	False
+7	145380659	call_3993	A	<INV>			4.0	False	145431810	51151					False	False
+8	78762545	call_2836	C	<INV>			5.0	False	78813128	50583	IL7	['{?Epidermodysplasia verruciformis, susceptibility to, 5}, 618309 (3)']	IL7	['{?Epidermodysplasia verruciformis, susceptibility to, 5}, 618309 (3)']	False	False
+8	78762545	call_2836	C	<INV>			5.0	False	78813128	50583	IL7	['{?Epidermodysplasia verruciformis, susceptibility to, 5}, 618309 (3)']	LOC105375914	.	False	False
+8	80183449	call_1327	T	<INV>			7.0	False	80223022	39573	LOC105375920	.	LOC105375920	.	False	False
+8	125066109	call_5324	G	<INV>			3.0	False	125122336	56227	WASHC5	.	NSMCE2	['Seckel syndrome 10, 617253 (3)']	False	False
+9	70486387	call_5361	A	<INV>			3.0	False	70526418	40031	LOC101927086	.	LOC101927086	.	False	False
+9	70486387	call_5361	A	<INV>			3.0	False	70526418	40031	LOC101927086	.	TRPM3	.	False	False
+9	109255391	call_5380	G	<INV>			3.0	False	109294685	39294	EPB41L4B	.	EPB41L4B	.	False	False
+X	15709122	call_1995	T	<INV>			6.0	False	15747438	38316	CA5BP1	.	CA5BP1-CA5B	.	False	False
+X	15709122	call_1995	T	<INV>			6.0	False	15747438	38316	CA5BP1	.	CA5B	.	False	False
+X	15709122	call_1995	T	<INV>			6.0	False	15747438	38316	CA5BP1-CA5B	.	CA5BP1-CA5B	.	False	False
+X	15709122	call_1995	T	<INV>			6.0	False	15747438	38316	CA5BP1-CA5B	.	CA5B	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	SPRY3	.	SPRY3	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	SPRY3	.	VAMP7	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	SPRY3	.	IL9R	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	SPRY3	.	WASIR1	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	SPRY3	.	DDX11L16	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	SPRY3	.	SLC25A43	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	VAMP7	.	SPRY3	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	VAMP7	.	VAMP7	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	VAMP7	.	IL9R	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	VAMP7	.	WASIR1	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	VAMP7	.	DDX11L16	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	VAMP7	.	SLC25A43	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	IL9R	.	SPRY3	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	IL9R	.	VAMP7	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	IL9R	.	IL9R	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	IL9R	.	WASIR1	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	IL9R	.	DDX11L16	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	IL9R	.	SLC25A43	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	WASIR1	.	SPRY3	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	WASIR1	.	VAMP7	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	WASIR1	.	IL9R	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	WASIR1	.	WASIR1	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	WASIR1	.	DDX11L16	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	WASIR1	.	SLC25A43	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	DDX11L16	.	SPRY3	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	DDX11L16	.	VAMP7	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	DDX11L16	.	IL9R	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	DDX11L16	.	WASIR1	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	DDX11L16	.	DDX11L16	.	False	False
+X	119355146	call_5431	A	<INV>			3.0	False	119400792	45646	DDX11L16	.	SLC25A43	.	False	False
+Y	12728875	call_5443	T	<INV>			3.0	False	12767812	38937	USP9Y	['Spermatogenic failure, Y-linked, 2, 415000 (3)']	USP9Y	['Spermatogenic failure, Y-linked, 2, 415000 (3)']	False	False

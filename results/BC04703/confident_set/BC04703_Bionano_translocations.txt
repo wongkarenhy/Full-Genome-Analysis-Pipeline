@@ -1,0 +1,7 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+902	1	1	120320189.0	146464504.0	728116.6	566566.2	0.0	translocation_intrachr	heterozygous	1	LOC107985522	.	LOC105371235	.	False	False
+902	1	1	120320189.0	146464504.0	728116.6	566566.2	0.0	translocation_intrachr	heterozygous	1	LOC107985522	.	LOC105371233	.	False	False
+902	1	1	120320189.0	146464504.0	728116.6	566566.2	0.0	translocation_intrachr	heterozygous	1	LOC107985522	.	LOC107985591	.	False	False
+902	1	1	120320189.0	146464504.0	728116.6	566566.2	0.0	translocation_intrachr	heterozygous	1	LOC105378941	.	LOC105371235	.	False	False
+902	1	1	120320189.0	146464504.0	728116.6	566566.2	0.0	translocation_intrachr	heterozygous	1	LOC105378941	.	LOC105371233	.	False	False
+902	1	1	120320189.0	146464504.0	728116.6	566566.2	0.0	translocation_intrachr	heterozygous	1	LOC105378941	.	LOC107985591	.	False	False

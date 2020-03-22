@@ -1,0 +1,76 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+4546	4	4	30817205.0	30817205.0	18817493.1	18817493.1	0.99	inversion_paired	heterozygous	1	PCDH7	.	PCDH7	.	False	False
+4547	4	4	30821563.0	30825908.5	18813061.9	18808473.3	0.99	inversion_paired	heterozygous	1	PCDH7	.	PCDH7	.	False	False
+16757	20	20	32167630.0	32181312.0	973908.1	986813.9	0.99	inversion_paired	heterozygous	1	TM9SF4	.	TM9SF4	.	False	False
+16757	20	20	32167630.0	32181312.0	973908.1	986813.9	0.99	inversion_paired	heterozygous	1	TM9SF4	.	TSPY26P	.	False	False
+16757	20	20	32167630.0	32181312.0	973908.1	986813.9	0.99	inversion_paired	heterozygous	1	TM9SF4	.	PLAGL2	.	False	False
+16757	20	20	32167630.0	32181312.0	973908.1	986813.9	0.99	inversion_paired	heterozygous	1	LOC107985403	.	TM9SF4	.	False	False
+16757	20	20	32167630.0	32181312.0	973908.1	986813.9	0.99	inversion_paired	heterozygous	1	LOC107985403	.	TSPY26P	.	False	False
+16757	20	20	32167630.0	32181312.0	973908.1	986813.9	0.99	inversion_paired	heterozygous	1	LOC107985403	.	PLAGL2	.	False	False
+16758	20	20	32191834.0	32205417.0	997097.7	1011534.9	0.99	inversion_paired	heterozygous	1	TSPY26P	.	TSPY26P	.	False	False
+16758	20	20	32191834.0	32205417.0	997097.7	1011534.9	0.99	inversion_paired	heterozygous	1	TSPY26P	.	PLAGL2	.	False	False
+16758	20	20	32191834.0	32205417.0	997097.7	1011534.9	0.99	inversion_paired	heterozygous	1	TSPY26P	.	POFUT1	['Dowling-Degos disease 2, 615327 (3)']	False	False
+16758	20	20	32191834.0	32205417.0	997097.7	1011534.9	0.99	inversion_paired	heterozygous	1	PLAGL2	.	TSPY26P	.	False	False
+16758	20	20	32191834.0	32205417.0	997097.7	1011534.9	0.99	inversion_paired	heterozygous	1	PLAGL2	.	PLAGL2	.	False	False
+16758	20	20	32191834.0	32205417.0	997097.7	1011534.9	0.99	inversion_paired	heterozygous	1	PLAGL2	.	POFUT1	['Dowling-Degos disease 2, 615327 (3)']	False	False
+16758	20	20	32191834.0	32205417.0	997097.7	1011534.9	0.99	inversion_paired	heterozygous	1	POFUT1	['Dowling-Degos disease 2, 615327 (3)']	TSPY26P	.	False	False
+16758	20	20	32191834.0	32205417.0	997097.7	1011534.9	0.99	inversion_paired	heterozygous	1	POFUT1	['Dowling-Degos disease 2, 615327 (3)']	PLAGL2	.	False	False
+16758	20	20	32191834.0	32205417.0	997097.7	1011534.9	0.99	inversion_paired	heterozygous	1	POFUT1	['Dowling-Degos disease 2, 615327 (3)']	POFUT1	['Dowling-Degos disease 2, 615327 (3)']	False	False
+18133	X	23	120965188.0	120965188.0	8939866.0	8939866.0	0.99	inversion_paired	homozygous	1	SPRY3	.			False	False
+18133	X	23	120965188.0	120965188.0	8939866.0	8939866.0	0.99	inversion_paired	homozygous	1	VAMP7	.			False	False
+18133	X	23	120965188.0	120965188.0	8939866.0	8939866.0	0.99	inversion_paired	homozygous	1	IL9R	.			False	False
+18133	X	23	120965188.0	120965188.0	8939866.0	8939866.0	0.99	inversion_paired	homozygous	1	WASIR1	.			False	False
+18133	X	23	120965188.0	120965188.0	8939866.0	8939866.0	0.99	inversion_paired	homozygous	1	DDX11L16	.			False	False
+18133	X	23	120965188.0	120965188.0	8939866.0	8939866.0	0.99	inversion_paired	homozygous	1	CT47A9	.			False	False
+18133	X	23	120965188.0	120965188.0	8939866.0	8939866.0	0.99	inversion_paired	homozygous	1	CT47A8	.			False	False
+18133	X	23	120965188.0	120965188.0	8939866.0	8939866.0	0.99	inversion_paired	homozygous	1	CT47A7	.			False	False
+18133	X	23	120965188.0	120965188.0	8939866.0	8939866.0	0.99	inversion_paired	homozygous	1	CT47A6	.			False	False
+18133	X	23	120965188.0	120965188.0	8939866.0	8939866.0	0.99	inversion_paired	homozygous	1	CT47A5	.			False	False
+18133	X	23	120965188.0	120965188.0	8939866.0	8939866.0	0.99	inversion_paired	homozygous	1	CT47A4	.			False	False
+18133	X	23	120965188.0	120965188.0	8939866.0	8939866.0	0.99	inversion_paired	homozygous	1	CT47A3	.			False	False
+18133	X	23	120965188.0	120965188.0	8939866.0	8939866.0	0.99	inversion_paired	homozygous	1	CT47A2	.			False	False
+18133	X	23	120965188.0	120965188.0	8939866.0	8939866.0	0.99	inversion_paired	homozygous	1	CT47A1	.			False	False
+18134	X	23	120965188.0	120966462.0	8939866.0	8938543.9	0.99	inversion_paired	homozygous	1	SPRY3	.			False	False
+18134	X	23	120965188.0	120966462.0	8939866.0	8938543.9	0.99	inversion_paired	homozygous	1	VAMP7	.			False	False
+18134	X	23	120965188.0	120966462.0	8939866.0	8938543.9	0.99	inversion_paired	homozygous	1	IL9R	.			False	False
+18134	X	23	120965188.0	120966462.0	8939866.0	8938543.9	0.99	inversion_paired	homozygous	1	WASIR1	.			False	False
+18134	X	23	120965188.0	120966462.0	8939866.0	8938543.9	0.99	inversion_paired	homozygous	1	DDX11L16	.			False	False
+18134	X	23	120965188.0	120966462.0	8939866.0	8938543.9	0.99	inversion_paired	homozygous	1	CT47A9	.			False	False
+18134	X	23	120965188.0	120966462.0	8939866.0	8938543.9	0.99	inversion_paired	homozygous	1	CT47A8	.			False	False
+18134	X	23	120965188.0	120966462.0	8939866.0	8938543.9	0.99	inversion_paired	homozygous	1	CT47A7	.			False	False
+18134	X	23	120965188.0	120966462.0	8939866.0	8938543.9	0.99	inversion_paired	homozygous	1	CT47A6	.			False	False
+18134	X	23	120965188.0	120966462.0	8939866.0	8938543.9	0.99	inversion_paired	homozygous	1	CT47A5	.			False	False
+18134	X	23	120965188.0	120966462.0	8939866.0	8938543.9	0.99	inversion_paired	homozygous	1	CT47A4	.			False	False
+18134	X	23	120965188.0	120966462.0	8939866.0	8938543.9	0.99	inversion_paired	homozygous	1	CT47A3	.			False	False
+18134	X	23	120965188.0	120966462.0	8939866.0	8938543.9	0.99	inversion_paired	homozygous	1	CT47A2	.			False	False
+18134	X	23	120965188.0	120966462.0	8939866.0	8938543.9	0.99	inversion_paired	homozygous	1	CT47A1	.			False	False
+18170	X	23	120965188.0	120965188.0	19742276.7	19742276.7	0.99	inversion_paired	homozygous	1	SPRY3	.			False	False
+18170	X	23	120965188.0	120965188.0	19742276.7	19742276.7	0.99	inversion_paired	homozygous	1	VAMP7	.			False	False
+18170	X	23	120965188.0	120965188.0	19742276.7	19742276.7	0.99	inversion_paired	homozygous	1	IL9R	.			False	False
+18170	X	23	120965188.0	120965188.0	19742276.7	19742276.7	0.99	inversion_paired	homozygous	1	WASIR1	.			False	False
+18170	X	23	120965188.0	120965188.0	19742276.7	19742276.7	0.99	inversion_paired	homozygous	1	DDX11L16	.			False	False
+18170	X	23	120965188.0	120965188.0	19742276.7	19742276.7	0.99	inversion_paired	homozygous	1	CT47A9	.			False	False
+18170	X	23	120965188.0	120965188.0	19742276.7	19742276.7	0.99	inversion_paired	homozygous	1	CT47A8	.			False	False
+18170	X	23	120965188.0	120965188.0	19742276.7	19742276.7	0.99	inversion_paired	homozygous	1	CT47A7	.			False	False
+18170	X	23	120965188.0	120965188.0	19742276.7	19742276.7	0.99	inversion_paired	homozygous	1	CT47A6	.			False	False
+18170	X	23	120965188.0	120965188.0	19742276.7	19742276.7	0.99	inversion_paired	homozygous	1	CT47A5	.			False	False
+18170	X	23	120965188.0	120965188.0	19742276.7	19742276.7	0.99	inversion_paired	homozygous	1	CT47A4	.			False	False
+18170	X	23	120965188.0	120965188.0	19742276.7	19742276.7	0.99	inversion_paired	homozygous	1	CT47A3	.			False	False
+18170	X	23	120965188.0	120965188.0	19742276.7	19742276.7	0.99	inversion_paired	homozygous	1	CT47A2	.			False	False
+18170	X	23	120965188.0	120965188.0	19742276.7	19742276.7	0.99	inversion_paired	homozygous	1	CT47A1	.			False	False
+18171	X	23	120965188.0	120966462.0	19742276.7	19740954.6	0.99	inversion_paired	homozygous	1	SPRY3	.			False	False
+18171	X	23	120965188.0	120966462.0	19742276.7	19740954.6	0.99	inversion_paired	homozygous	1	VAMP7	.			False	False
+18171	X	23	120965188.0	120966462.0	19742276.7	19740954.6	0.99	inversion_paired	homozygous	1	IL9R	.			False	False
+18171	X	23	120965188.0	120966462.0	19742276.7	19740954.6	0.99	inversion_paired	homozygous	1	WASIR1	.			False	False
+18171	X	23	120965188.0	120966462.0	19742276.7	19740954.6	0.99	inversion_paired	homozygous	1	DDX11L16	.			False	False
+18171	X	23	120965188.0	120966462.0	19742276.7	19740954.6	0.99	inversion_paired	homozygous	1	CT47A9	.			False	False
+18171	X	23	120965188.0	120966462.0	19742276.7	19740954.6	0.99	inversion_paired	homozygous	1	CT47A8	.			False	False
+18171	X	23	120965188.0	120966462.0	19742276.7	19740954.6	0.99	inversion_paired	homozygous	1	CT47A7	.			False	False
+18171	X	23	120965188.0	120966462.0	19742276.7	19740954.6	0.99	inversion_paired	homozygous	1	CT47A6	.			False	False
+18171	X	23	120965188.0	120966462.0	19742276.7	19740954.6	0.99	inversion_paired	homozygous	1	CT47A5	.			False	False
+18171	X	23	120965188.0	120966462.0	19742276.7	19740954.6	0.99	inversion_paired	homozygous	1	CT47A4	.			False	False
+18171	X	23	120965188.0	120966462.0	19742276.7	19740954.6	0.99	inversion_paired	homozygous	1	CT47A3	.			False	False
+18171	X	23	120965188.0	120966462.0	19742276.7	19740954.6	0.99	inversion_paired	homozygous	1	CT47A2	.			False	False
+18171	X	23	120965188.0	120966462.0	19742276.7	19740954.6	0.99	inversion_paired	homozygous	1	CT47A1	.			False	False
+3711	3	3	80451533.0	80451533.0	10042647.6	10042647.6	0.99	inversion_paired	heterozygous	1					False	False
+3712	3	3	80451533.0	80452354.0	10042647.6	10041230.5	0.99	inversion_paired	heterozygous	1					False	False

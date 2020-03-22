@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+19409	X	23	593660.0	632378.0	202081.1	238852.5	0.99	deletion	homozygous	1	1947.0	False	True	SHOX	['Langer mesomelic dysplasia, 249700 (3)', 'Leri-Weill dyschondrosteosis, 127300 (3)', 'Short stature, idiopathic familial, 300582 (3)']	13.555496311999804	16.95305735528355

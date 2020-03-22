@@ -1,0 +1,19 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+1999	7	7	150140242.0	153678973.0	301550.8	301550.8	0.15	inversion	heterozygous	1	ACTR3C	.			False	False
+2003	7	7	150389313.0	153960460.0	249146.2	249146.2	0.17	inversion	unknown	-1	REPIN1	.	DPP6	['Mental retardation, autosomal dominant 33, 616311 (3)', '{Ventricular fibrillation, paroxysmal familial, 2}, 612956 (3)']	False	False
+2003	7	7	150389313.0	153960460.0	249146.2	249146.2	0.17	inversion	unknown	-1	ZNF775	.	DPP6	['Mental retardation, autosomal dominant 33, 616311 (3)', '{Ventricular fibrillation, paroxysmal familial, 2}, 612956 (3)']	False	False
+2003	7	7	150389313.0	153960460.0	249146.2	249146.2	0.17	inversion	unknown	-1	LOC105375564	.	DPP6	['Mental retardation, autosomal dominant 33, 616311 (3)', '{Ventricular fibrillation, paroxysmal familial, 2}, 612956 (3)']	False	False
+2003	7	7	150389313.0	153960460.0	249146.2	249146.2	0.17	inversion	unknown	-1	LOC107986859	.	DPP6	['Mental retardation, autosomal dominant 33, 616311 (3)', '{Ventricular fibrillation, paroxysmal familial, 2}, 612956 (3)']	False	False
+2003	7	7	150389313.0	153960460.0	249146.2	249146.2	0.17	inversion	unknown	-1	LOC728743	.	DPP6	['Mental retardation, autosomal dominant 33, 616311 (3)', '{Ventricular fibrillation, paroxysmal familial, 2}, 612956 (3)']	False	False
+2005	7	7	150392471.0	153960460.0	252349.5	252349.5	0.34	inversion	unknown	-1	REPIN1	.	DPP6	['Mental retardation, autosomal dominant 33, 616311 (3)', '{Ventricular fibrillation, paroxysmal familial, 2}, 612956 (3)']	False	False
+2005	7	7	150392471.0	153960460.0	252349.5	252349.5	0.34	inversion	unknown	-1	ZNF775	.	DPP6	['Mental retardation, autosomal dominant 33, 616311 (3)', '{Ventricular fibrillation, paroxysmal familial, 2}, 612956 (3)']	False	False
+2005	7	7	150392471.0	153960460.0	252349.5	252349.5	0.34	inversion	unknown	-1	LOC105375564	.	DPP6	['Mental retardation, autosomal dominant 33, 616311 (3)', '{Ventricular fibrillation, paroxysmal familial, 2}, 612956 (3)']	False	False
+2005	7	7	150392471.0	153960460.0	252349.5	252349.5	0.34	inversion	unknown	-1	LOC107986859	.	DPP6	['Mental retardation, autosomal dominant 33, 616311 (3)', '{Ventricular fibrillation, paroxysmal familial, 2}, 612956 (3)']	False	False
+2005	7	7	150392471.0	153960460.0	252349.5	252349.5	0.34	inversion	unknown	-1	LOC728743	.	DPP6	['Mental retardation, autosomal dominant 33, 616311 (3)', '{Ventricular fibrillation, paroxysmal familial, 2}, 612956 (3)']	False	False
+3475	15	15	20682295.0	22609818.0	122887.8	122887.8	0.71	inversion	heterozygous	2	NBEAP1	.	HERC2P2	.	False	True
+3475	15	15	20682295.0	22609818.0	122887.8	122887.8	0.71	inversion	heterozygous	2	NBEAP1	.	LOC101927846	.	False	True
+3475	15	15	20682295.0	22609818.0	122887.8	122887.8	0.71	inversion	heterozygous	2	NBEAP1	.	GOLGA8IP	.	False	True
+3728	16	16	70195952.0	74251593.0	1032539.1	1032539.1	0.12	inversion	heterozygous	1	CLEC18C	.			False	False
+3728	16	16	70195952.0	74251593.0	1032539.1	1032539.1	0.12	inversion	heterozygous	1	LOC105371328	.			False	False
+4834	24	Y	6293246.0	9913864.0	53065.2	53065.2	0.72	inversion	heterozygous	2			TTTY23	.	False	False
+4849	24	Y	21916461.0	26018202.0	94499.1	196990.1	0.01	inversion	heterozygous	1			LOC107987352	.	True	False

@@ -1,0 +1,13 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother
+1036	1	1	168055456.0	168057044.0	38192081.1	38192569.7	0.99	deletion	heterozygous	1	1099.0	False	False
+3504	3	3	3913060.0	4276539.0	3904907.4	3919113.5	1.0	deletion	heterozygous	1	349273.0	False	True
+3702	3	3	26657146.0	26668304.0	26280885.4	26284142.0	1.0	deletion	heterozygous	1	7901.0	True	False
+4074	3	3	116917155.0	117062649.0	23159232.2	23161214.9	1.0	deletion	heterozygous	1	143511.0	False	True
+4244	3	3	125171117.0	125172848.0	31256597.7	31257299.2	0.99	deletion	heterozygous	1	1030.0	False	False
+4419	3	3	195925590.0	195933670.0	101906162.4	101913010.3	0.99	deletion	heterozygous	1	1232.0	True	False
+4879	4	4	62240134.0	62300585.0	10380418.5	10386077.6	1.0	deletion	heterozygous	1	54792.0	False	True
+7022	6	6	34431436.5	34446826.0	34380116.7	34389597.6	1.0	deletion	heterozygous	1	5909.0	True	False
+11413	11	11	9333036.0	9348082.0	9384653.1	9395215.7	1.0	deletion	heterozygous	1	4483.0	False	True
+13174	13	13	61624861.0	61635060.0	43272095.3	43275586.7	1.0	deletion	heterozygous	1	6708.0	False	False
+14177	14	14	96869693.0	96888164.0	77173272.8	77188711.0	1.0	deletion	heterozygous	2	3033.0	False	True
+16396	19	19	20198836.0	20203292.0	11655480.9	11657868.9	1.0	deletion	heterozygous	1	2068.0	True	False

@@ -1,0 +1,3 @@
+Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+14	53239437	53246078	14713	0.99	deletion	heterozygous	1	1616.0	True	False	CHROMOSOME 14Q11-Q22 DELETION SYNDROME	 14q11-q22 	0.034533023	1.2809831970712309
+14	53239437	53246078	14713	0.99	deletion	heterozygous	1	1616.0	True	False	14Q22Q23 MICRODELETION SYNDROME	 14q22q23 	0.0044825640000000005	0.1662782074942123

@@ -1,0 +1,5 @@
+CHROM_x	POS_x	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	SVTYPE	MATEID_x	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+12	63135103	call_58_1	A	A[chr12:63513559[			54.0	True	BND	call_58_2	AVPR1A	.			True	False
+22	20309064	call_147_1	C	C]chr8:72601291]			22.0	False	BND	call_147_2	DGCR6L	.	KCNB2	.	False	False
+22	20339145	call_60_1	T	T]chr8:72599893]			54.0	True	BND	call_60_2	FAM230G	.	KCNB2	.	False	False
+22	20339780	call_50_1	T	[chr8:72900747[T			60.0	True	BND	call_50_2	FAM230G	.	KCNB2	.	False	False

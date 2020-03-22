@@ -1,0 +1,3 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+1530	5	5	897036.0	901113.0	21119.3	23687.6	0.98	deletion	unknown	-1	1509.0	False	True	TRIP13	['Mosaic variegated aneuploidy syndrome 3, 617598 (3)']	128.55953357900395	72.93674147154428
+5941	X	23	111297701.0	111329229.0	2433824.7	2464042.3	0.99	deletion	homozygous	1	1310.0	False	False	DCX	['Lissencephaly, X-linked, 300067 (3)', 'Subcortical laminal heterotopia, X-linked, 300067 (3)']	127.1984452670039	72.1645440034251

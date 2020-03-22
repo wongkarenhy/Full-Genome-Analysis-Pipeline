@@ -1,0 +1,9 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+613	1	1	120723365.0	148603601.0	487839.1	564841.7	0.0	translocation_intrachr	heterozygous	1	LOC105378944	.	NBPF14	.	False	False
+613	1	1	120723365.0	148603601.0	487839.1	564841.7	0.0	translocation_intrachr	heterozygous	1	LOC105378944	.	NOTCH2NLB	.	False	False
+613	1	1	120723365.0	148603601.0	487839.1	564841.7	0.0	translocation_intrachr	heterozygous	1	LOC105378943	.	NBPF14	.	False	False
+613	1	1	120723365.0	148603601.0	487839.1	564841.7	0.0	translocation_intrachr	heterozygous	1	LOC105378943	.	NOTCH2NLB	.	False	False
+613	1	1	120723365.0	148603601.0	487839.1	564841.7	0.0	translocation_intrachr	heterozygous	1	NOTCH2NLR	.	NBPF14	.	False	False
+613	1	1	120723365.0	148603601.0	487839.1	564841.7	0.0	translocation_intrachr	heterozygous	1	NOTCH2NLR	.	NOTCH2NLB	.	False	False
+3820	5	6	71137199.0	26972167.0	527342.5	74279.6	0.0	translocation_interchr	heterozygous	1			GUSBP2	.	False	False
+3820	5	6	71137199.0	26972167.0	527342.5	74279.6	0.0	translocation_interchr	heterozygous	1			LINC00240	.	False	False

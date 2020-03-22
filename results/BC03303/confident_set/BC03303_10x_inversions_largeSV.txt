@@ -1,0 +1,38 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+1	143945604	call_441	C	<INV>			9.0	False	143981506	35902	FAM72C	.	FAM72C	.	False	False
+1	143945604	call_441	C	<INV>			9.0	False	143981506	35902	FAM72C	.	SRGAP2D	.	False	False
+14	19683733	call_524	A	<INV>			8.0	False	19716316	32583			OR11H2	.	False	False
+16	78448009	call_2044	G	<INV>			4.0	False	78483758	35749	WWOX	['Epileptic encephalopathy, early infantile, 28, 616211 (3)', 'Esophageal squamous cell carcinoma, somatic, 133239 (3)', 'Spinocerebellar ataxia, autosomal recessive 12, 614322 (3)']	WWOX	['Epileptic encephalopathy, early infantile, 28, 616211 (3)', 'Esophageal squamous cell carcinoma, somatic, 133239 (3)', 'Spinocerebellar ataxia, autosomal recessive 12, 614322 (3)']	False	False
+17	41486883	call_941	G	<INV>			6.0	False	41522763	35880	KRT35	.	KRT15	.	False	False
+17	41486883	call_941	G	<INV>			6.0	False	41522763	35880	KRT35	.	MIR6510	.	False	False
+17	41486883	call_941	G	<INV>			6.0	False	41522763	35880	KRT35	.	KRT19	.	False	False
+17	41486883	call_941	G	<INV>			6.0	False	41522763	35880	KRT36	.	KRT15	.	False	False
+17	41486883	call_941	G	<INV>			6.0	False	41522763	35880	KRT36	.	MIR6510	.	False	False
+17	41486883	call_941	G	<INV>			6.0	False	41522763	35880	KRT36	.	KRT19	.	False	False
+18	56080877	call_2942	G	<INV>			3.0	False	56118800	37923	LOC642484	.	LOC642484	.	False	False
+18	56080877	call_2942	G	<INV>			3.0	False	56118800	37923	LOC642484	.	LINC01539	.	False	False
+18	56080877	call_2942	G	<INV>			3.0	False	56118800	37923	LINC01905	.	LOC642484	.	False	False
+18	56080877	call_2942	G	<INV>			3.0	False	56118800	37923	LINC01905	.	LINC01539	.	False	False
+18	56080877	call_2942	G	<INV>			3.0	False	56118800	37923	LINC01539	.	LOC642484	.	False	False
+18	56080877	call_2942	G	<INV>			3.0	False	56118800	37923	LINC01539	.	LINC01539	.	False	False
+2	56232745	call_1447	A	<INV>			5.0	False	56280083	47338	CCDC85A	.	CCDC85A	.	False	False
+2	162362541	call_1474	T	<INV>			5.0	False	162395743	33202	GCA	.	KCNH7	.	False	False
+2	162362541	call_1474	T	<INV>			5.0	False	162395743	33202	KCNH7	.	KCNH7	.	False	False
+20	23199304	call_731	A	<INV>			7.0	False	23232138	32834	LOC100505664	.			False	False
+3	94124016	call_2252	T	<INV>			4.0	False	94177493	53477	NSUN3	.			False	False
+3	175508362	call_3185	C	<INV>			3.0	False	175541720	33358	NAALADL2	.	NAALADL2	.	False	False
+4	37363172	call_2293	T	<INV>			4.0	False	37399039	35867	NWD2	.	NWD2	.	False	False
+5	8117368	call_1076	A	<INV>			6.0	False	8151879	34511					False	False
+5	14385961	call_2340	T	<INV>			4.0	False	14446057	60096	TRIO	['Mental retardation, autosomal dominant 44, 617061 (3)']	TRIO	['Mental retardation, autosomal dominant 44, 617061 (3)']	False	False
+5	114398801	call_585	G	<INV>			8.0	False	114428960	30159	KCNN2	.	KCNN2	.	False	False
+5	147538890	call_1622	G	<INV>			5.0	False	147593213	54323			JAKMIP2-AS1	.	False	False
+5	147538890	call_1622	G	<INV>			5.0	False	147593213	54323			JAKMIP2	.	False	False
+7	13056262	call_1670	G	<INV>			5.0	False	13101279	45017	LOC105375158	.			False	False
+7	124195161	call_609	G	<INV>			8.0	False	124226403	31242					False	False
+9	70490631	call_2516	C	<INV>			4.0	False	70529509	38878	LOC101927086	.	LOC101927086	.	False	False
+9	70490631	call_2516	C	<INV>			4.0	False	70529509	38878	LOC101927086	.	TRPM3	.	False	False
+9	75208440	call_1735	T	<INV>			5.0	False	75245030	36590			LOC107987080	.	False	False
+9	127721229	call_1744	T	<INV>			5.0	False	127760729	39500	PTRH1	.	SH2D3C	.	False	False
+9	127721229	call_1744	T	<INV>			5.0	False	127760729	39500	CFAP157	.	SH2D3C	.	False	False
+9	127721229	call_1744	T	<INV>			5.0	False	127760729	39500	TTC16	.	SH2D3C	.	False	False
+Y	17096526	call_3599	C	<INV>			3.0	False	17144983	48457					False	False

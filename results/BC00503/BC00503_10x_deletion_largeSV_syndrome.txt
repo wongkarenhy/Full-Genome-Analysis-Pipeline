@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+9	103313836	103369581	call_10617	T	<DEL>	2.0	False	-55745	False	False	9Q31.1Q31.3 MICRODELETION SYNDROME	 9q31.1q31.3 	0.038709709999999994	1.4230402418282193

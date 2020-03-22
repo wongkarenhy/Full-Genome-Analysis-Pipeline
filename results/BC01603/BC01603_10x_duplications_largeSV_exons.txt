@@ -1,0 +1,20 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+19	11425457	call_1972	T	<DUP:TANDEM>			3.0	False	11482657	57200	False	False	CCDC151	['Ciliary dyskinesia, primary, 30, 616037 (3)']	72.14184096499929	99.81003892559117
+11	92946312	call_1758	A	<DUP:TANDEM>			3.0	False	92995426	49114	False	False	MTNR1B	['{Diabetes mellitus, type 2, susceptibility to}, 125853 (3)']	69.62156267399928	96.32317095877457
+2	44353515	call_2003	G	<DUP:TANDEM>			3.0	False	44391716	38201	False	False	CAMKMT	.	69.45165350399928	96.08809737810809
+15	71792689	call_1883	G	<DUP:TANDEM>			3.0	False	71858014	65325	False	False	NR2E3	['Enhanced S-cone syndrome, 268100 (3)', 'Retinitis pigmentosa 37, 611131 (3)']	69.26647682399928	95.83190081600651
+1	115737507	call_1666	A	<DUP:TANDEM>			3.0	False	115803452	65945	False	False	CASQ2	['Ventricular tachycardia, catecholaminergic polymorphic, 2, 611938 (3)']	63.33845587899925	87.63033576918113
+8	139871102	call_1573	T	<DUP:TANDEM>			4.0	False	139928937	57835	False	False	TRAPPC9	['Mental retardation, autosomal recessive 13, 613192 (3)']	56.71236744299943	78.46297691230893
+8	99753336	call_995	A	<DUP:TANDEM>			5.0	False	99789781	36445	False	False	VPS13B	['Cohen syndrome, 216550 (3)']	50.41975971399953	69.75699694321345
+10	51841007	call_2576	A	<DUP:TANDEM>			2.0	False	51926716	85709	False	False	PRKG1	['Aortic aneurysm, familial thoracic 8, 615436 (3)']	49.757825673999534	68.84119466516199
+19	11425457	call_1972	T	<DUP:TANDEM>			3.0	False	11482657	57200	False	False	PRKCSH	['Polycystic liver disease 1, 174050 (3)']	49.541775865999554	68.54228435932703
+3	10050973	call_1359	G	<DUP:TANDEM>			4.0	False	10089196	38223	False	False	FANCD2	['Fanconi anemia, complementation group D2, 227646 (3)']	40.5475930209999	56.09860773761679
+20	3056925	call_2052	T	<DUP:TANDEM>			3.0	False	3112541	55616	False	False	AVP	['Diabetes insipidus, neurohypophyseal, 125700 (3)']	33.179926246000086	45.90525672568058
+2	44353515	call_2003	G	<DUP:TANDEM>			3.0	False	44391716	38201	False	False	PREPL	['Myasthenic syndrome, congenital, 22, 616224 (3)']	33.139043533000105	45.84869447108146
+7	5642075	call_2307	T	<DUP:TANDEM>			3.0	False	5703697	61622	False	False	RNF216	['Cerebellar ataxia and hypogonadotropic hypogonadism, 212840 (3)']	20.478245741000038	28.33216448591437
+15	71792689	call_1883	G	<DUP:TANDEM>			3.0	False	71858014	65325	False	False	MYO9A	['Myasthenic syndrome, congenital, 24, presynaptic, 618198 (3)']	19.694996805000027	27.248520019057516
+10	92541854	call_2588	C	<DUP:TANDEM>			2.0	False	92625543	83689	False	False	KIF11	['Microcephaly with or without chorioretinopathy, lymphedema, or mental retardation, 152950 (3)']	16.20276950199999	22.41693631690948
+17	44143139	call_2824	T	<DUP:TANDEM>			2.0	False	44236812	93673	False	False	UBTF	['Neurodegeneration, childhood-onset, with brain atrophy, 617672 (3)']	15.74362980899999	21.781705083306118
+4	122291537	call_2179	T	<DUP:TANDEM>			3.0	False	122355319	63782	False	False	KIAA1109	['Alkuraya-Kucinskas syndrome, 617822 (3)']	15.408659685999991	21.31826555129084
+8	118352251	call_3354	C	<DUP:TANDEM>			2.0	False	118389262	37011	False	False	SAMD12	['Epilepsy, familial adult myoclonic, 1, 601068 (3)']	4.561211435000002	6.310549949731328
+3	143287467	call_3092	C	<DUP:TANDEM>			2.0	False	143378789	91322	False	False	SLC9A9	['{?Autism susceptibility 16}, 613410 (3)']	0.0	0.0

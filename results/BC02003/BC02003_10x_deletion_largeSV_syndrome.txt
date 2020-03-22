@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+2	194046916	194123643	call_46	T	<DEL>	59.0	True	-76727	True	False	2Q32Q33 MICRODELETION SYNDROME	 2q32q33 	0.01143539	0.3811796666666667

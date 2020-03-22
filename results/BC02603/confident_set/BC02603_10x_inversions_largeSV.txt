@@ -1,0 +1,34 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+1	108266358	call_2589	A	<INV>			3.0	False	108334959	68601					False	False
+1	246610201	call_2631	A	<INV>			3.0	False	246647695	37494	CNST	.	CNST	.	False	False
+1	246610201	call_2631	A	<INV>			3.0	False	246647695	37494	LOC105373271	.	CNST	.	False	False
+13	19476162	call_2787	G	<INV>			3.0	False	19525905	49743	TPTE2	.	TPTE2	.	False	False
+14	59707720	call_843	C	<INV>			6.0	False	59747648	39928	RTN1	.	RTN1	.	False	False
+18	8025895	call_341	T	<INV>			15.0	False	8056993	31098	PTPRM	.	PTPRM	.	False	False
+18	15062026	call_885	C	<INV>			6.0	False	15093328	31302					False	False
+19	18875787	call_3008	A	<INV>			3.0	False	18921304	45517	UPF1	.	COPE	.	False	False
+19	18875787	call_3008	A	<INV>			3.0	False	18921304	45517	UPF1	.	DDX49	.	False	False
+19	18875787	call_3008	A	<INV>			3.0	False	18921304	45517	UPF1	.	HOMER3	.	False	False
+19	18875787	call_3008	A	<INV>			3.0	False	18921304	45517	CERS1	['?Epilepsy, progressive myoclonic, 8, 616230 (3)']	COPE	.	False	False
+19	18875787	call_3008	A	<INV>			3.0	False	18921304	45517	CERS1	['?Epilepsy, progressive myoclonic, 8, 616230 (3)']	DDX49	.	False	False
+19	18875787	call_3008	A	<INV>			3.0	False	18921304	45517	CERS1	['?Epilepsy, progressive myoclonic, 8, 616230 (3)']	HOMER3	.	False	False
+19	18875787	call_3008	A	<INV>			3.0	False	18921304	45517	GDF1	['Congenital heart defects, multiple types, 6, 613854 (3)', 'Right atrial isomerism (Ivemark), 208530 (3)']	COPE	.	False	False
+19	18875787	call_3008	A	<INV>			3.0	False	18921304	45517	GDF1	['Congenital heart defects, multiple types, 6, 613854 (3)', 'Right atrial isomerism (Ivemark), 208530 (3)']	DDX49	.	False	False
+19	18875787	call_3008	A	<INV>			3.0	False	18921304	45517	GDF1	['Congenital heart defects, multiple types, 6, 613854 (3)', 'Right atrial isomerism (Ivemark), 208530 (3)']	HOMER3	.	False	False
+20	11484893	call_939	G	<INV>			6.0	False	11522902	38009					False	False
+3	46291772	call_969	T	<INV>			6.0	False	46333137	41365					False	False
+4	32224988	call_3265	A	<INV>			3.0	False	32275153	50165	LOC102723846	.			False	False
+4	99163318	call_3290	C	<INV>			3.0	False	99208755	45437	LOC100507053	.	LOC100507053	.	False	False
+4	99163318	call_3290	C	<INV>			3.0	False	99208755	45437	LOC100507053	.	ADH6	.	False	False
+4	99163318	call_3290	C	<INV>			3.0	False	99208755	45437	PCNAP1	.	LOC100507053	.	False	False
+4	99163318	call_3290	C	<INV>			3.0	False	99208755	45437	PCNAP1	.	ADH6	.	False	False
+4	121643319	call_721	T	<INV>			7.0	False	121676767	33448	LOC105377402	.	ANXA5	['{Pregnancy loss, recurrent, susceptibility to, 3}, 614391 (3)']	False	False
+4	142506887	call_550	G	<INV>			8.0	False	142542902	36015	INPP4B	.	INPP4B	.	False	False
+4	181179782	call_2285	C	<INV>			4.0	False	181213827	34045					False	False
+5	8888486	call_1522	T	<INV>			5.0	False	8923584	35098	LINC02199	.			False	False
+5	67957984	call_1009	A	<INV>			6.0	False	67999409	41425	LOC105379007	.			False	True
+5	67957984	call_1009	A	<INV>			6.0	False	67999409	41425	LOC107986420	.			False	True
+9	117245491	call_2504	T	<INV>			4.0	False	117284452	38961	ASTN2	.	ASTN2	.	False	False
+9	117245491	call_2504	T	<INV>			4.0	False	117284452	38961	LOC105376237	.	ASTN2	.	False	False
+Y	8542157	call_3649	A	<INV>			3.0	False	8670828	128671	LOC105377232	.	LOC107987340	.	False	False
+Y	12177518	call_3654	A	<INV>			3.0	False	12223418	45900					False	False

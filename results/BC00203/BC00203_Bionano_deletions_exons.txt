@@ -1,0 +1,6 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+3426	11	11	119218353.0	119250400.0	1829209.1	1854867.3	1.0	deletion	heterozygous	1	6389.0	True	False	CBL	['?Juvenile myelomonocytic leukemia, 607785 (3)', 'Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia, 613563 (3)']	36.14921040499895	64.48691895410606
+4281	16	16	8829679.0	8851964.0	143915.7	159091.7	1.0	deletion	heterozygous	1	7109.0	True	False	PMM2	['Congenital disorder of glycosylation, type Ia, 212065 (3)']	32.22515894799924	57.486766379700484
+5608	X	23	129743318.2	129751987.0	156665.0	162288.7	1.0	deletion	heterozygous	1	3045.0	True	False	XPNPEP2	['{Angioedema induced by ACE inhibitors, susceptibility to}, 300909 (3)']	26.391393848999385	47.079857544854335
+5614	X	23	129738449.0	129743318.2	151452.7	152730.4	1.0	deletion	heterozygous	1	3592.0	False	False	XPNPEP2	['{Angioedema induced by ACE inhibitors, susceptibility to}, 300909 (3)']	26.391393848999385	47.079857544854335
+4267	16	16	5053857.0	5075961.0	2778453.8	2796345.8	1.0	deletion	heterozygous	1	4212.0	True	False	ALG1	['Congenital disorder of glycosylation, type Ik, 608540 (3)']	21.982355202999614	39.21453172875323

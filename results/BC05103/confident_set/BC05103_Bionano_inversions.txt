@@ -1,0 +1,5 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+9966	9	9	39875145.0	42326003.0	737973.1	737973.1	0.0	inversion	unknown	-1	FGF7P3	.			False	False
+9966	9	9	39875145.0	42326003.0	737973.1	737973.1	0.0	inversion	unknown	-1	LOC554249	.			False	False
+9970	9	9	39875145.0	42326003.0	674273.9	674273.9	0.0	inversion	unknown	-1	FGF7P3	.			False	False
+9970	9	9	39875145.0	42326003.0	674273.9	674273.9	0.0	inversion	unknown	-1	LOC554249	.			False	False

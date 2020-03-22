@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+3159	2	2	214763652.5	214769425.0	82590178.0	82598339.5	1.0	insertion	heterozygous	1	2389.0	False	True	BARD1	['{Breast cancer, susceptibility to}, 114480 (3)']	37.856324260998875	72.25914826312786

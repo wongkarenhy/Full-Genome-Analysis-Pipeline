@@ -1,0 +1,2 @@
+Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+11	1077810	1085028	2796	1.0	deletion	heterozygous	1	2278.0	True	False	HOMOZYGOUS 11P15-P14 DELETION SYNDROME	 11p15-p14 	0.00401606	0.401606

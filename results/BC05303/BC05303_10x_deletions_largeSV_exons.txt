@@ -1,0 +1,2 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+Y	23200000	call_44	A	<DEL>			171.0	True	23610000	-410000	True	False	DAZ2	.	48.69289752599816	55.96348171053885

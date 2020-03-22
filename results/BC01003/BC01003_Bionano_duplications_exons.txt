@@ -1,0 +1,4 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+2792	12	12	6388400.5	6556090.0	21049.7	245366.9	-1.0	duplication_inverted	unknown	-1	167690.0	False	False	CD27	['Lymphoproliferative syndrome 2, 615122 (3)']	145.304058654001	36.39088823205911
+2792	12	12	6388400.5	6556090.0	21049.7	245366.9	-1.0	duplication_inverted	unknown	-1	167690.0	False	False	VAMP1	['Myasthenic syndrome, congenital, 25, 618323 (3)', 'Spastic ataxia 1, autosomal dominant, 108600 (3)']	136.16710006200063	34.102569227190884
+2792	12	12	6388400.5	6556090.0	21049.7	245366.9	-1.0	duplication_inverted	unknown	-1	167690.0	False	False	NCAPD2	['?Microcephaly 21, primary, autosomal recessive, 617983 (3)']	34.469552763999936	8.63277773286924

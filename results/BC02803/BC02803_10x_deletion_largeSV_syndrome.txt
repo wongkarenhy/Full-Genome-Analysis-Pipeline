@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+6	81434705	81469366	call_1366	A	<DEL>	6.0	False	-34661	False	True	CHROMOSOME 6Q11-Q14 DELETION SYNDROME	 6q11-q14 	0.00728555	0.09017421902201939

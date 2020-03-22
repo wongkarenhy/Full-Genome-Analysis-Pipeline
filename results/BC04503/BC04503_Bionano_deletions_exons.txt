@@ -1,0 +1,9 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	SNCB	['Dementia, Lewy body, 127750 (3)']	36.757467209999334	97.97215622055695
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	SLC34A1	['?Fanconi renotubular syndrome 2, 613388 (3)', 'Hypercalcemia, infantile, 2, 616963 (3)', 'Nephrolithiasis/osteoporosis, hypophosphatemic, 1, 612286 (3)']	33.24623069299964	88.61342073953237
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	F12	['Angioedema, hereditary, type III, 610618 (3)', 'Factor XII deficiency, 234000 (3)']	29.058776943999835	77.45231786703191
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	B4GALT7	['Ehlers-Danlos syndrome, spondylodysplastic type, 1, 130070 (3)']	26.342581441	70.21265881693603
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	DDX41	['{Myeloproliferative/lymphoproliferative neoplasms, familial (multiple types), susceptibility to}, 616871 (3)']	23.387778663000212	62.33702370548363
+6962	6	6	63771696.0	63781633.0	2427905.4	2436321.3	0.99	deletion	heterozygous	1	1521.0	False	True	EYS	['Retinitis pigmentosa 25, 602772 (3)']	18.760280000000414	50.00303944776243
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	NSD1	['Leukemia, acute myeloid, 601626 (1)', 'Sotos syndrome 1, 117550 (3)']	6.442312421999965	17.171129757768387
+6526	5	5	176267700.0	177644606.0	3933959.2	5309646.7	0.99	deletion	heterozygous	2	1218.0	True	False	FGFR4	['{Cancer progression/metastasis} (3)']	0.0	0.0

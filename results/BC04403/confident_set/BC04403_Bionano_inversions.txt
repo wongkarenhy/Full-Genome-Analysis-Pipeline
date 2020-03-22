@@ -1,0 +1,13 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+9326	8	8	23972257.0	23977616.0	19960862.7	19955249.0	0.99	inversion_paired	heterozygous	1	LOC107986931	.	LOC107986931	.	False	False
+9327	8	8	23978463.0	23983732.0	19954397.6	19949124.9	0.99	inversion_paired	heterozygous	1	LOC107986931	.	LOC107986931	.	False	False
+11623	10	10	63198053.0	63199109.0	70673322.7	70672693.9	0.99	inversion_paired	homozygous	1	JMJD1C	.	JMJD1C	.	False	False
+11624	10	10	63199109.0	63199887.0	70672693.9	70671530.9	0.99	inversion_paired	homozygous	1	JMJD1C	.	JMJD1C	.	False	False
+16209	17	17	9574187.0	9581386.0	8936293.2	8929196.0	0.99	inversion_paired	heterozygous	1	STX8	.	STX8	.	False	False
+16209	17	17	9574187.0	9581386.0	8936293.2	8929196.0	0.99	inversion_paired	heterozygous	1	STX8	.	CFAP52	.	False	False
+16209	17	17	9574187.0	9581386.0	8936293.2	8929196.0	0.99	inversion_paired	heterozygous	1	CFAP52	.	STX8	.	False	False
+16209	17	17	9574187.0	9581386.0	8936293.2	8929196.0	0.99	inversion_paired	heterozygous	1	CFAP52	.	CFAP52	.	False	False
+16210	17	17	9584574.0	9595574.0	8926130.0	8914566.2	0.99	inversion_paired	heterozygous	1	STX8	.	STX8	.	False	False
+16210	17	17	9584574.0	9595574.0	8926130.0	8914566.2	0.99	inversion_paired	heterozygous	1	STX8	.	CFAP52	.	False	False
+16210	17	17	9584574.0	9595574.0	8926130.0	8914566.2	0.99	inversion_paired	heterozygous	1	CFAP52	.	STX8	.	False	False
+16210	17	17	9584574.0	9595574.0	8926130.0	8914566.2	0.99	inversion_paired	heterozygous	1	CFAP52	.	CFAP52	.	False	False

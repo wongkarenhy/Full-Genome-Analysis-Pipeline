@@ -1,0 +1,2 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+5	70042122	call_689	G	<DEL>			11.0	False	70074463	-32341	False	False	SMN2	['{Spinal muscular atrophy, type III, modifier of}, 253400 (3)']	28.609511887999336	51.0367793312248

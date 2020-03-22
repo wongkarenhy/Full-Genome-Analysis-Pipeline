@@ -1,0 +1,7 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+199	1	1	74719020.0	75624325.5	53701.1	56020.3	0.11	inversion	homozygous	1	CRYZ	.	SLC44A5	.	False	False
+199	1	1	74719020.0	75624325.5	53701.1	56020.3	0.11	inversion	homozygous	1	TYW3	.	SLC44A5	.	False	False
+203	1	1	75966340.0	75966340.0	1301872.1	1372549.3	0.0	inversion	homozygous	1	LOC105378806	.	LOC105378806	.	False	False
+206	1	1	75966340.0	75966340.0	1296369.7	1367046.9	0.0	inversion	homozygous	1	LOC105378806	.	LOC105378806	.	False	False
+3268	15	15	28404963.0	28864627.0	266280.7	279532.8	0.32	inversion	unknown	-1	GOLGA8F	.	PDCD6IPP2	.	False	True
+3268	15	15	28404963.0	28864627.0	266280.7	279532.8	0.32	inversion	unknown	-1	GOLGA8F	.	GOLGA6L7	.	False	True

@@ -1,0 +1,3 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+19	14424687	call_3954	A	<DEL>			2.0	False	14765096	-340409	False	False	TECR	['Mental retardation, autosomal recessive 14, 614020 (3)']	126.16180282700043	31.596777876417786
+19	14424687	call_3954	A	<DEL>			2.0	False	14765096	-340409	False	False	ADGRE2	['Vibratory urticaria, 125630 (3)']	18.795165929	4.707182916713462

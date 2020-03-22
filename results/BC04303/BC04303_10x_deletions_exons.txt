@@ -1,0 +1,2 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+10	104037593	call_4511	A	<DEL>			2.0	True	104037967	-374	False	False	COL17A1	['Epidermolysis bullosa, junctional, localisata variant, 226650 (3)', 'Epidermolysis bullosa, junctional, non-Herlitz type, 226650 (3)', 'Epithelial recurrent erosion dystrophy, 122400 (3)']	27.498077853999813	45.118431223993596

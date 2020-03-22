@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+3	3926740	4275765	call_221	G	<DEL>	38.0	True	-349025	False	True	CHROMOSOME 3PTER-P25 DELETION SYNDROME	 3pter-p25 	0.028372483000000004	1.0644263347317728

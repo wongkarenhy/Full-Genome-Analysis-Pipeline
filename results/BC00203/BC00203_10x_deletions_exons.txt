@@ -1,0 +1,5 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+9	133718381	call_1404	G	<DEL>			77.0	True	133718862	-481	False	True	SARDH	['[Sarcosinemia], 268900 (3)']	28.81488524799931	51.40314681403486
+X	129742136	call_3359	T	<DEL>			7.0	True	129745200	-3064	True	False	XPNPEP2	['{Angioedema induced by ACE inhibitors, susceptibility to}, 300909 (3)']	26.391393848999385	47.079857544854335
+12	7190513	call_2088	G	<DEL>			54.0	True	7190558	-45	False	False	PEX5	['Peroxisome biogenesis disorder 2A (Zellweger), 214110 (3)', 'Peroxisome biogenesis disorder 2B, 202370 (3)', 'Rhizomelic chondrodysplasia punctata, type 5, 616716 (3)']	21.260573182999693	37.926937944413496
+12	52303281	call_3865	C	<DEL>			2.0	True	52303672	-391	False	False	KRT86	['Monilethrix, 158000 (3)']	2.125639167000002	3.791947850375368

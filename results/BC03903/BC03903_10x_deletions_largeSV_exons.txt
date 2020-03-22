@@ -1,0 +1,2 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+3	3926740	call_221	G	<DEL>			38.0	True	4275765	-349025	False	True	SUMF1	['Multiple sulfatase deficiency, 272200 (3)']	89.39645178800075	98.98206609513154

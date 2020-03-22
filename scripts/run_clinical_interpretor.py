@@ -612,9 +612,9 @@ def bionanoSV(args, famid, gene_score_result_r, all_small_variants):
                         singleton = args.singleton)
 
 
-    # # Call bionano translocation
-    # print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting bionano translocations on ' + args.sampleid + '...')
-    # BN_translocation(BN_args)
+    # Call bionano translocation
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting bionano translocations on ' + args.sampleid + '...')
+    BN_translocation(BN_args)
 
     # Call bionano deletion
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting bionano deletions on ' + args.sampleid + '...')
@@ -628,9 +628,9 @@ def bionanoSV(args, famid, gene_score_result_r, all_small_variants):
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting bionano duplications on ' + args.sampleid + '...')
     cyto_BN_dup, exon_calls_BN_dup = BN_duplication(BN_args)
 
-    # # Call bionano inversions
-    # print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting bionano inversions on ' + args.sampleid + '...')
-    # BN_inversion(BN_args)
+    # Call bionano inversions
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting bionano inversions on ' + args.sampleid + '...')
+    BN_inversion(BN_args)
 
     # Check potential compoundhets with SNPs and indels
     BN_exons = pd.concat([exon_calls_BN_del, exon_calls_BN_dup])
@@ -912,15 +912,15 @@ def main():
         findConfDelDup(args, exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup, exon_calls_BN_del, exon_calls_BN_dup)
 
     # Move all the intermediate files to the misc folder
-    #if not args.singleton:
-    cmd = 'mv ./results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_maternal_inherited_smallVariants.vcf ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt ./results/' + args.sampleid + '/' + args.sampleid + '_paternal_inherited_smallVariants.vcf ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariant_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariants_ALL_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_syndrome_score_result_r.txt ./results/' + args.sampleid + '/' + args.sampleid + '_target.bed ./results/' + args.sampleid + '/' + args.sampleid + '.txt ./results/' + args.sampleid + '/misc/'
-    #else:
-    #    cmd = 'mv ./results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariant_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariants_ALL_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_syndrome_score_result_r.txt ./results/' + args.sampleid + '/' + args.sampleid + '_target.bed ./results/' + args.sampleid + '/' + args.sampleid + '.txt ./results/' + args.sampleid + '/misc/'
+    if not args.singleton:
+        cmd = 'mv ./results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_maternal_inherited_smallVariants.vcf ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt ./results/' + args.sampleid + '/' + args.sampleid + '_paternal_inherited_smallVariants.vcf ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariant_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariants_ALL_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_syndrome_score_result_r.txt ./results/' + args.sampleid + '/' + args.sampleid + '_target.bed ./results/' + args.sampleid + '/' + args.sampleid + '.txt ./results/' + args.sampleid + '/misc/'
+    else:
+        cmd = 'mv ./results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariant_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariants_ALL_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_syndrome_score_result_r.txt ./results/' + args.sampleid + '/' + args.sampleid + '_target.bed ./results/' + args.sampleid + '/' + args.sampleid + '.txt ./results/' + args.sampleid + '/misc/'
 
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    stdout, stderr = p.communicate()
-    if p.returncode != 0:
-        raise Exception(stderr)
+    # stdout, stderr = p.communicate()
+    # if p.returncode != 0:
+    #     raise Exception(stderr)
 
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Clinical interpretor finished successfully')
 

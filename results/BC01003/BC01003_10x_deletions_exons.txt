@@ -1,2 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-12	109591583	call_2957	A	<DEL>			5.0	True	109601250	-9667	True	False	MVK	['Hyper-IgD syndrome, 260920 (3)', 'Mevalonic aciduria, 610377 (3)', 'Porokeratosis 3, multiple types, 175900 (3)']	178.74241565100144	44.76540662757789

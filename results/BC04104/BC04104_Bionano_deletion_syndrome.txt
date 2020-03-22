@@ -1,3 +1,0 @@
-Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-2	202064682	202071317	2776	0.99	deletion	homozygous	1	1070.0	True	False	2Q32Q33 MICRODELETION SYNDROME	 2q32q33 	0.00065189	0.0644220681629339
-9	107771034	107815617	10101	1.0	deletion	heterozygous	1	2726.0	False	True	9Q31.1Q31.3 MICRODELETION SYNDROME	 9q31.1q31.3 	0.00065189	0.0644220681629339

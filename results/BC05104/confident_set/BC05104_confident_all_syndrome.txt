@@ -1,3 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	score	normalized_score
-7	15005949	15018712	call_1320	T	<DEL>	123.0	True	-1730	True	False	%153880 MACULAR EDEMA, CYSTOID;;CYSTOID MACULAR DYSTROPHY; CYMD;;MACULAR DYSTROPHY, DOMINANT CYSTOID; MDDC;;DCMD	7p21-p15	8314	0.99	deletion	heterozygous	1	1731.0	True	False	0.00862069	0.4302196897208501
-8	78449117	78463081	call_4606	G	<DEL>	2.0	True	-1043	False	False	BOR-DUANE HYDROCEPHALUS CONTIGUOUS GENE SYNDROME	8q12.2-q21.2	9674	0.99	deletion	heterozygous	1	1083.0	True	False	0.00378788	0.1890359772013393

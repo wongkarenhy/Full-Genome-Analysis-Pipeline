@@ -1,2 +1,0 @@
-Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-6	62219246	62225342	7123	1.0	deletion	heterozygous	1	5099.0	False	False	CHROMOSOME 6Q11-Q14 DELETION SYNDROME	 6q11-q14 	0.008588400000000001	0.5725600000000001

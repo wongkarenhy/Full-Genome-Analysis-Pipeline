@@ -1,3 +1,0 @@
-Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-9	113099143	113107597	2722	0.99	deletion	heterozygous	1	1515.0	False	True	EPILEPSY, IDIOPATHIC GENERALIZED, SUSCEPTIBILITY TO, 3; EIG3	9q32-q33	0.0075836689999999995	0.28127824913145244
-14	50350401	50363670	3801	1.0	deletion	heterozygous	1	2210.0	False	True	CHROMOSOME 14Q11-Q22 DELETION SYNDROME	14q11-q22	0.001086973	0.04031582368549607

@@ -1,5 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	score	normalized_score
-2	206839781	206856503	call_4845	A	<DEL>	2.0	True	-1771	False	True	2Q32Q33 MICRODELETION SYNDROME	 2q32q33 	2861	0.99	deletion	heterozygous	1	1828.0	False	True	0.004026784	0.10066960000000001
-6	70640979	70658384	call_3538	T	<DEL>	32.0	True	-1488	False	True	CHROMOSOME 6Q11-Q14 DELETION SYNDROME	 6q11-q14 	6757	0.99	deletion	heterozygous	1	1618.0	False	True	0.000545554	0.01363885
-6	81437481	81465540	call_168	C	<DEL>	56.0	True	-30494	False	True	CHROMOSOME 6Q11-Q14 DELETION SYNDROME	 6q11-q14 	6794	1.0	deletion	heterozygous	1	25004.0	False	True	0.000545554	0.01363885
-6	65706958	65715764	call_4108	C	<DEL>	9.0	True	-3113	True	False	CHROMOSOME 6Q11-Q14 DELETION SYNDROME	 6q11-q14 	6868	1.0	deletion	heterozygous	1	3131.0	True	False	0.000545554	0.01363885

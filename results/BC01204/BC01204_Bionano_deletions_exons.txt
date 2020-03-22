@@ -1,2 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-5304	22	22	17591927.0	17606821.0	173387.3	186880.4	0.99	deletion	heterozygous	1	1401.0	True	False	ATP6V1E1	['Cutis laxa, autosomal recessive, type IIC, 617402 (3)']	2.277319216000002	13.33931173204918

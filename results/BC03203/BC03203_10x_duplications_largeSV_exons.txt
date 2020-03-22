@@ -1,6 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-18	12831634	call_1098	C	<DUP:TANDEM>			5.0	False	12870729	39095	False	False	PTPN2	.	4.547357117000001	52.31646228958521
-7	73705608	call_904	C	<DUP:TANDEM>			6.0	False	73736283	30675	False	False	STX1A	.	4.2525033220000035	48.92422652490545
-1	100193021	call_1833	C	<DUP:TANDEM>			3.0	False	100237984	44963	False	False	DBT	['Maple syrup urine disease, type II, 248600 (3)']	0.37811982799999994	4.350195336221367
-3	143629066	call_2086	T	<DUP:TANDEM>			3.0	False	143677880	48814	False	False	SLC9A9	['{?Autism susceptibility 16}, 613410 (3)']	0.0	0.0
-4	147673243	call_1655	T	<DUP:TANDEM>			4.0	False	147706046	32803	False	False	PRMT9	['Intellectual developmental disorder with dysmorphic facies and behavioral abnormalities, 618089 (3)']	0.0	0.0

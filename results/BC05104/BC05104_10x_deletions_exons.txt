@@ -1,2 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-1	10629616	call_4460	G	<DEL>			2.0	True	10630027	-411	False	False	PEX14	['Peroxisome biogenesis disorder 13A (Zellweger), 614887 (3)']	27.77991779000001	30.871725847766214

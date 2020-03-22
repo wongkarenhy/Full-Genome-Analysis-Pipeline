@@ -1,3 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-4440	18	18	47023618.0	47224347.0	20.0	490205.8	-1.0	duplication_inverted	unknown	-1	200729.0	False	False	IER3IP1	['Microcephaly, epilepsy, and diabetes syndrome, 614231 (3)']	14.406715505999967	59.48406827141882
-3406	12	12	40223727.0	40283171.0	2691007.7	2823575.7	-1.0	duplication	unknown	-1	59444.0	False	True	LRRK2	['{Parkinson disease 8}, 607060 (3)']	5.581052428999999	23.043677344412227

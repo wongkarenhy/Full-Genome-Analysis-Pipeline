@@ -1,9 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	gene	OMIM_syndrome	score	normalized_score
-15848	16	16	29447936.0	30238376.0	2029436.1	2823506.6	1.0	insertion	heterozygous	1	3630.0	PRRT2	['Convulsions, familial infantile, with paroxysmal choreoathetosis, 602066 (3)', 'Episodic kinesigenic dyskinesia 1, 128200 (3)', 'Seizures, benign familial infantile, 2, 605751 (3)']	65.74098666999888	86.90401929448474
-11891	11	11	4089013.0	4091787.0	45296671.2	45307275.6	1.0	insertion	heterozygous	1	7830.0	STIM1	['Immunodeficiency 10, 612783 (3)', 'Myopathy, tubular aggregate, 1, 160565 (3)', 'Stormorken syndrome, 185070 (3)']	61.54678783999876	81.35964348709254
-15848	16	16	29447936.0	30238376.0	2029436.1	2823506.6	1.0	insertion	heterozygous	1	3630.0	TBX6	['Spondylocostal dysostosis 5, 122600 (3)']	7.474919364999988	9.881210636242612
-15848	16	16	29447936.0	30238376.0	2029436.1	2823506.6	1.0	insertion	heterozygous	1	3630.0	KIF22	['Spondyloepimetaphyseal dysplasia with joint laxity, type 2, 603546 (3)']	7.470799116999988	9.875764017172418
-15848	16	16	29447936.0	30238376.0	2029436.1	2823506.6	1.0	insertion	heterozygous	1	3630.0	CORO1A	['Immunodeficiency 8, 615401 (3)']	6.725919703999993	8.891096488460727
-15848	16	16	29447936.0	30238376.0	2029436.1	2823506.6	1.0	insertion	heterozygous	1	3630.0	ALDOA	['Glycogen storage disease XII, 611881 (3)']	5.456222376999993	7.212664104145472
-15848	16	16	29447936.0	30238376.0	2029436.1	2823506.6	1.0	insertion	heterozygous	1	3630.0	SPN	['?Dyskinesia, seizures, and intellectual developmental disorder, 617171 (3)', 'Mental retardation, autosomal dominant 24, 615828 (3)']	0.0	0.0
-15848	16	16	29447936.0	30238376.0	2029436.1	2823506.6	1.0	insertion	heterozygous	1	3630.0	MVP	['Mitral valve prolapse, myxomatous 1 (2)']	0.0	0.0

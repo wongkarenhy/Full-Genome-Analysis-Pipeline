@@ -1,6 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-3947	15	15	20421494.0	21538137.0	612640.7	708904.5	-1.0	inversion	unknown	-1	HERC2P3	.	LINC02203	.	False	False
-4692	19	19	20132996.0	21963132.0	135220.3	190998.5	-1.0	inversion	unknown	-1	ZNF90	.	ZNF208	.	False	True
-4692	19	19	20132996.0	21963132.0	135220.3	190998.5	-1.0	inversion	unknown	-1	LOC105372310	.	ZNF208	.	False	True
-4703	19	19	20132996.0	21963132.0	135220.3	190998.5	-1.0	inversion	unknown	-1	ZNF90	.	ZNF208	.	False	True
-4703	19	19	20132996.0	21963132.0	135220.3	190998.5	-1.0	inversion	unknown	-1	LOC105372310	.	ZNF208	.	False	True

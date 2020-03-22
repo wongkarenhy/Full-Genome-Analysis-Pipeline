@@ -1,3 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-323	1	1	164559792.0	164574159.0	338667.3	350632.0	1.0	deletion	heterozygous	1	2402.0	False	True	PBX1	['Congenital anomalies of kidney and urinary tract syndrome with or without hearing loss, abnormal ears, or developmental delay, 617641 (3)']	3.655102364000017	62.48054328747199
-924	3	3	146107013.0	146131544.0	104724.3	125681.0	1.0	deletion	heterozygous	1	3574.0	False	True	PLOD2	['Bruck syndrome 2, 609220 (3)']	0.818341614	13.988781584084373

@@ -1,3 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-1822	6	6	64268852.0	64328233.0	796083.6	854242.9	0.99	deletion	heterozygous	1	1222.0	True	False	EYS	['Retinitis pigmentosa 25, 602772 (3)']	84.0233923739998	90.08138288385791
-5507	X	23	10552287.0	10581406.0	3080218.4	3107130.8	1.0	deletion	heterozygous	1	2207.0	False	True	MID1	['Opitz GBBB syndrome, type I, 300000 (3)']	0.5162689529999999	0.5534913541604674

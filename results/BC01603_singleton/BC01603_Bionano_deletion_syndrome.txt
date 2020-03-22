@@ -1,2 +1,0 @@
-Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	syndrome	cytoband	score	normalized_score
-9	123913054	123942714	2288	1.0	deletion	heterozygous	1	6090.0	9Q33.3Q34.11 MICRODELETION SYNDROME	 9q33.3q34.11 	0.00877193	0.4366938271784526

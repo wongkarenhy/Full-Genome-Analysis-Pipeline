@@ -1,3 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-14177	14	14	96869693.0	96888164.0	77173272.8	77188711.0	1.0	deletion	heterozygous	2	3033.0	False	True	VRK1	['Pontocerebellar hypoplasia type 1A, 607596 (3)']	37.13567729699902	41.11758342955205
-3504	3	3	3913060.0	4276539.0	3904907.4	3919113.5	1.0	deletion	heterozygous	1	349273.0	False	True	SUMF1	['Multiple sulfatase deficiency, 272200 (3)']	33.052051860999114	36.59608761255409

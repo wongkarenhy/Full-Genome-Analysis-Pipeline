@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-15	24104271	24137574	call_832	T	<DUP:TANDEM>	6.0	False	33303	False	False	15Q11Q13 MICRODUPLICATION SYNDROME	 15q11q13 	0.00065189	0.03246036630056183

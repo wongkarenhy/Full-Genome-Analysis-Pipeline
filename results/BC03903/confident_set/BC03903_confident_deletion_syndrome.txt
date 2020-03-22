@@ -1,3 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	score	normalized_score
-3	3913060	4276539	call_221	G	<DEL>	38.0	True	-349025	False	True	CHROMOSOME 3PTER-P25 DELETION SYNDROME	 3pter-p25 	3504	1.0	deletion	heterozygous	1	349273.0	False	True	0.028372483	1.0644263347317728
-11	9333036	9348082	call_4229	C	<DEL>	5.0	True	-4400	False	True	HOMOZYGOUS 11P15-P14 DELETION SYNDROME	 11p15-p14 	11413	1.0	deletion	heterozygous	1	4483.0	False	True	0.001287	0.04828328535080245

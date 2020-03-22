@@ -1,3 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-6910	6	6	6247440.0	6290274.0	52111738.7	52153224.6	0.99	deletion	heterozygous	1	1348.0	False	False	F13A1	['Factor XIIIA deficiency, 613225 (3)', '{Myocardial infarction, protection against}, 608446 (3)', '{Venous thrombosis, protection against}, 188050 (3)']	26.06711239899987	28.95095881513166
-11895	11	11	1210227.0	1266115.0	48448403.6	48502733.6	0.99	deletion	heterozygous	1	1558.0	False	False	MUC5B	['{Pulmonary fibrosis, idiopathic, susceptibility to}, 178500 (3)']	5.0490833059999956	5.607671483082379

@@ -1,2 +1,0 @@
-CHROM_x	POS_x	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	SVTYPE	MATEID_x	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-20	1580457	call_46_1	G	G[chr20:1613506[			194.0	True	BND	call_46_2	SIRPB1	.	SIRPB1	.	False	False

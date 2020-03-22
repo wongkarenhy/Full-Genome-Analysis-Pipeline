@@ -1,5 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-5752	4	4	150353906.5	150364401.0	39786503.6	39795886.7	0.99	deletion	heterozygous	1	1111.0	False	False	LRBA	['Immunodeficiency, common variable, 8, with autoimmunity, 614700 (3)']	195.6437365289963	96.06744201096986
-18695	X	23	435462.0	3861713.0	54391984.0	57628415.3	1.0	deletion	heterozygous	1	189820.0	False	False	CSF2RA	['Surfactant metabolism dysfunction, pulmonary, 4, 300770 (3)']	143.37629697199773	70.40242810463586
-18695	X	23	435462.0	3861713.0	54391984.0	57628415.3	1.0	deletion	heterozygous	1	189820.0	False	False	SHOX	['Langer mesomelic dysplasia, 249700 (3)', 'Leri-Weill dyschondrosteosis, 127300 (3)', 'Short stature, idiopathic familial, 300582 (3)']	77.7546791349989	38.18007804086277
-18695	X	23	435462.0	3861713.0	54391984.0	57628415.3	1.0	deletion	heterozygous	1	189820.0	False	False	XG	['[Blood group, XG system] (3)']	0.0	0.0

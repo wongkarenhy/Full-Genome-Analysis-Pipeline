@@ -1,3 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-Y	12648425	call_256	T	<DEL>			27.0	False	12963367	-314942	True	False	DDX3Y	.	46.70040566499959	18.340933972303144
-Y	12648425	call_256	T	<DEL>			27.0	False	12963367	-314942	True	False	USP9Y	['Spermatogenic failure, Y-linked, 2, 415000 (3)']	5.37727785699999	2.111850994045652

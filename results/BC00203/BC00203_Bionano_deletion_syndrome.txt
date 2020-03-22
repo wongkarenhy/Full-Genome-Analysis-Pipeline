@@ -1,3 +1,0 @@
-Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-3	3434365	3443742	919	0.99	deletion	heterozygous	1	2201.0	False	True	CHROMOSOME 3PTER-P25 DELETION SYNDROME	 3pter-p25 	0.033290304	1.6372280924135754
-9	107490238	107514962	2830	1.0	deletion	heterozygous	1	2312.0	True	False	9Q31.1Q31.3 MICRODELETION SYNDROME	 9q31.1q31.3 	0.03290999	1.6185241248938382

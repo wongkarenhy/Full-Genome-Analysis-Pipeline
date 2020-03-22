@@ -1,2 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	gene	OMIM_syndrome	score	normalized_score
-5	179124880	call_220	T	<DEL>			204.0	True	179125090	-210	ADAMTS2	['Ehlers-Danlos syndrome, dermatosparaxis type, 225410 (3)']	53.35088388599911	70.5253522567303

@@ -138,6 +138,8 @@ def main():
     if not args.manual:
         print('[run_CNLP.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Running CNLP on ' + args.sampleid + '...')
         run_clinphen(args)
+    else:
+        print('[run_CNLP.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Skipping CNLP on ' + args.sampleid + '...')
 
     print('[run_CNLP.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Gathering additional HPO terms for ' + args.sampleid + '...')
     relatives = queryHPO(args)

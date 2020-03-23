@@ -3,7 +3,7 @@
 # exit immediately upon error 
 set -e
 
-while getopts 'j:w:s:i:b:e:l:t:f:m:r:' OPTION; do
+while getopts 'j:w:s:i:b:e:l:t:f:m:r:a:' OPTION; do
   case "$OPTION" in
     j)
       JSON="$OPTARG"
@@ -62,9 +62,12 @@ while getopts 'j:w:s:i:b:e:l:t:f:m:r:' OPTION; do
       }
 
       ;;
+    a)
+      ARTIFACT="$OPTARG"
+      ;;
 
     ?)
-      echo "script usage: $(basename $0) [-j path_to_json/None] [-w work_dir] [-s sample_id] [-i path_to_intervar] [-b true/false] [-e DLE/BspQI/None] [-l true/false] [-t trio/singleton] [-f father_SNP_vcf_file_path or None if singleton] [-m mother_SNP_vcf_file_path or None if singleton] [-r hg19/hg38]" >&2
+      echo "script usage: $(basename $0) [-j path_to_json/None] [-w work_dir] [-s sample_id] [-i path_to_intervar] [-b true/false] [-e DLE/BspQI/None] [-l true/false] [-t trio/singleton] [-f father_SNP_vcf_file_path or None if singleton] [-m mother_SNP_vcf_file_path or None if singleton] [-r hg19/hg38] [-a path_to_custom_artifact_file or None]" >&2
       exit 1
       ;;
   esac
@@ -86,7 +89,7 @@ fi
 
 # main pipeline
 pipeline(){
-echo [`date +"%Y-%m-%d %H:%M:%S"`] "#> START:  ${0} -j $JSON -w $WORKDIR -s $SAMPLEID -i $INTERVAR -b $BIONANO -e $ENZYME -l $LINKEDREADSV -t $TYPE -f $FATHERVCF -m $MOTHERVCF -r $REF"
+echo [`date +"%Y-%m-%d %H:%M:%S"`] "#> START:  ${0} -j $JSON -w $WORKDIR -s $SAMPLEID -i $INTERVAR -b $BIONANO -e $ENZYME -l $LINKEDREADSV -t $TYPE -f $FATHERVCF -m $MOTHERVCF -r $REF -a $ARTIFACT"
 
 if [[ ! -d ${WORKDIR}/results ]];
     then
@@ -128,7 +131,7 @@ fi
 python3.6 ${WORKDIR}/scripts/run_CNLP.py -s ${SAMPLEID} -w ${WORKDIR} -j ${JSON} ${additional_var_CNLP}
 
 # identify variants and rank them 
-python3.6 ${WORKDIR}/scripts/run_clinical_interpretor.py -s ${SAMPLEID} -w ${WORKDIR} -i ${INTERVAR} -r ${REF} ${additional_var}
+python3.6 ${WORKDIR}/scripts/run_clinical_interpretor.py -s ${SAMPLEID} -w ${WORKDIR} -i ${INTERVAR} -r ${REF} -a ${ARTIFACT} ${additional_var}
 
 # generate an html report
 python3.6 ${WORKDIR}/scripts/generate_report.py -s ${SAMPLEID} -w ${WORKDIR}/results/${SAMPLEID}/confident_set/

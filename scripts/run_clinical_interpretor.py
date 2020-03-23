@@ -153,11 +153,19 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
     # Remove common artifacts
     try:
         artifacts = pd.read_csv("./common_artifacts_20.txt", names = ["gene"])
+        filtered_intervar = filtered_intervar.loc[~filtered_intervar['Ref_Gene'].isin(artifacts['gene'])]
     except OSError:
         print("Could not open/read the input file: common_artifacts_20.txt")
         sys.exit()
 
-    filtered_intervar = filtered_intervar.loc[~filtered_intervar['Ref_Gene'].isin(artifacts['gene'])]
+    # If custom artifact bed file is provided, filter dataframe
+    if os.path.exists(args.artifact):
+        custom_artifact = pd.read_csv(args.artifact, sep='\t', usecols=[0, 2] ,names=["chr", "pos"])
+        keys = list(custom_artifact.columns.values)
+        i1 = filtered_intervar.set_index(keys).index
+        i2 = custom_artifact.set_index(keys).index
+        filtered_intervar = filtered_intervar.loc[~i1.isin(i2)]
+
 
     # Create a bed file and write it out
     pd.DataFrame(filtered_intervar).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_smallVariant_candidates.txt', index=False, sep='\t',header=False)  # Write out a subset of the variant first
@@ -571,7 +579,7 @@ def compileControlFiles(control_files_path, famid):
     for path in control_files_path:
         control_files = os.listdir(path)
         for file in control_files:
-            if not (re.match('BC0..0[34]{1}', file) or re.match(rf"BC0{famid}..", file)):  # Discard trio of interest and all probands
+            if not (re.match('BC...0[34]{1}', file) or re.match(rf"BC{famid}..", file)):  # Discard trio of interest and all probands
                 full_paths.append(os.path.join(path, file))
                 full_paths.append(os.path.join(path, file))
 
@@ -602,8 +610,8 @@ def bionanoSV(args, famid, gene_score_result_r, all_small_variants):
     # Create a BN arg object
     BN_args = Namespace(sampleID = args.sampleid,
                         samplepath = args.workdir + "/bionano_sv/cases/" + args.enzyme + "/" + args.sampleid + "/exp_refineFinal1_merged_filter.smap",
-                        fpath = args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "01/exp_refineFinal1_merged_filter.smap",
-                        mpath = args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC0" + famid + "02/exp_refineFinal1_merged_filter.smap",
+                        fpath = args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC" + famid + "01/exp_refineFinal1_merged_filter.smap",
+                        mpath = args.workdir + "/bionano_sv/cases/" + args.enzyme + "/BC" + famid + "02/exp_refineFinal1_merged_filter.smap",
                         referencepath = args.workdir + "/results/" + args.sampleid + "/bionano_control.smap.gz",
                         outputdirectory = args.workdir + '/results/' + args.sampleid,
                         exons = args.workdir + '/annotatedExon.bed',
@@ -676,8 +684,8 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
 
     tenx_args_del = Namespace(sampleID = args.sampleid,
                         samplepath = args.workdir + "/linkedRead_sv/cases/" + args.sampleid + "/dels.vcf.gz",
-                        fpath = args.workdir + "/linkedRead_sv/cases/BC0" + famid + "01/dels.vcf.gz",
-                        mpath = args.workdir + "/linkedRead_sv/cases/BC0" + famid + "02/dels.vcf.gz",
+                        fpath = args.workdir + "/linkedRead_sv/cases/BC" + famid + "01/dels.vcf.gz",
+                        mpath = args.workdir + "/linkedRead_sv/cases/BC" + famid + "02/dels.vcf.gz",
                         referencepath = args.workdir + "/results/" + args.sampleid + "/10x_del_control.vcf.gz",
                         outputdirectory = args.workdir + '/results/' + args.sampleid,
                         exons = args.workdir + '/annotatedExon.bed',
@@ -687,8 +695,8 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
 
     tenx_args_largeSV = Namespace(sampleID = args.sampleid,
                         samplepath = args.workdir + "/linkedRead_sv/cases/" + args.sampleid + "/large_svs.vcf.gz",
-                        fpath = args.workdir + "/linkedRead_sv/cases/BC0" + famid + "01/large_svs.vcf.gz",
-                        mpath = args.workdir + "/linkedRead_sv/cases/BC0" + famid + "02/large_svs.vcf.gz",
+                        fpath = args.workdir + "/linkedRead_sv/cases/BC" + famid + "01/large_svs.vcf.gz",
+                        mpath = args.workdir + "/linkedRead_sv/cases/BC" + famid + "02/large_svs.vcf.gz",
                         referencepath = args.workdir + "/results/" + args.sampleid + "/10x_largeSV_control.vcf.gz",
                         outputdirectory = args.workdir + '/results/' + args.sampleid,
                         exons = args.workdir + '/annotatedExon.bed',
@@ -782,6 +790,7 @@ def main():
     parser.add_argument("-f", "--fathervcf", help="Path to father SNP VCF file. Only set this flag if -S is not set", dest="fathervcf", type=str)
     parser.add_argument("-m", "--mothervcf", help="Path to mather SNP VCF file. Only set this flag if -S is not set", dest="mothervcf", type=str)
     parser.add_argument("-r", "--ref", help="Reference version. Either hg19 or hg38", dest="ref", type=str)
+    parser.add_argument("-a", "--artifact", help="Custom artifact tab-delimited bed file. Can be None", dest="artifact", type=str)
     parser.add_argument("-S", help="Set this flag if this is a singleton case", dest="singleton", action='store_true')
     args = parser.parse_args()
 
@@ -821,7 +830,7 @@ def main():
     except OSError:
         print ("Could not open/read the input file: " + interVarFinalFileName)
 
-    famid = args.sampleid[3:5]
+    famid = args.sampleid[2:5]
 
 
     hpo_gene_dict = createGeneSyndromeDict(hpo_genes_df)

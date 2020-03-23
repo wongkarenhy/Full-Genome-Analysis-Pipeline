@@ -181,7 +181,9 @@ $SAMPLEID_Bionano_inversions.txt/$SAMPLEID_10x_inversions_largeSV.txt<br>
 │   ├── BC05303_10x_inversions_largeSV.txt
 │   ├── BC05303_10x_SV_SNPsIndels_compoundhet_candidates.txt
 │   ├── BC05303_10x_unknown_largeSV.txt
+│   ├── BC05303_Bionano_inversions.txt
 │   ├── BC05303_Bionano_SV_SNPsIndels_compoundhet_candidates.txt
+│   ├── BC05303_Bionano_translocations.txt
 │   ├── BC05303_confident_all_syndrome.txt
 │   ├── BC05303_confident_deletion_exons.txt
 │   ├── BC05303_confident_deletion_syndrome.txt

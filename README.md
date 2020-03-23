@@ -62,7 +62,7 @@ bash run_clinical_interpretation_pipeline.sh [-j path_to_json/None] [-w work_dir
 10. **[-m mother_SNP_vcf_file_path or None if singleton]** <br>
     Specify the path to the mother's SNP/indel vcf file. Input 'None' if running in singleton mode.
 11. **[-r hg19/hg38]** <br>
-    Specific the reference version.
+    Specific the reference version.<br>
 12, **[-a path_to_custom_artifact_file or None]** <br>
     Specific a acustom SNV artifact tab-delimited bed file. Use None if no such file is provided.
    

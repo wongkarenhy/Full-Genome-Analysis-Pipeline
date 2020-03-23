@@ -37,7 +37,7 @@ All coordinates are based on hg38.<br>
 
 **Command (must run pre-processing before this):**<br>
 ```
-bash run_clinical_interpretation_pipeline.sh [-j path_to_json/None] [-w work_dir] [-s sample_id] [-i path_to_intervar] [-b true/false] [-e DLE/BspQI/None] [-l true/false] [-t trio/singleton] [-f father_SNP_vcf_file_path or None if singleton] [-m mother_SNP_vcf_file_path or None if singleton] [-r hg19/hg38]
+bash run_clinical_interpretation_pipeline.sh [-j path_to_json/None] [-w work_dir] [-s sample_id] [-i path_to_intervar] [-b true/false] [-e DLE/BspQI/None] [-l true/false] [-t trio/singleton] [-f father_SNP_vcf_file_path or None if singleton] [-m mother_SNP_vcf_file_path or None if singleton] [-r hg19/hg38] [-a path_to_custom_artifact_file or None]
 ```
 
 **General assumptions about this program:**
@@ -62,7 +62,9 @@ bash run_clinical_interpretation_pipeline.sh [-j path_to_json/None] [-w work_dir
 10. **[-m mother_SNP_vcf_file_path or None if singleton]** <br>
     Specify the path to the mother's SNP/indel vcf file. Input 'None' if running in singleton mode.
 11. **[-r hg19/hg38]** <br>
-    Specific the reference version
+    Specific the reference version.
+12, **[-a path_to_custom_artifact_file or None]** <br>
+    Specific a acustom SNV artifact tab-delimited bed file. Use None if no such file is provided.
    
 **Database files from HPO**<br>
 http://purl.obolibrary.org/obo/hp.obo
@@ -231,12 +233,13 @@ awk '{print $6}' ./example/BC00103.hg38_multianno.txt.intervar.FINAL | \
 bash /media/KwokRaid05/karen/ciapm/FGA/scripts/run_clinical_interpretation_pipeline.sh \
     -j /media/KwokRaid05/karen/ciapm/jsons/BC00103.json \
     -w /media/KwokRaid05/karen/ciapm/FGA \
-    -s BC00103\
+    -s BC00103 \
     -i /media/KwokRaid02/karen/software/InterVar/ \
     -b true -e BspQI -l true -t trio \
-    -f /media/KwokRaid04/CIAPM/CIAPM_longranger/BC00101_longranger/outs/phased_variants.vcf.gz\
-    -m /media/KwokRaid04/CIAPM/CIAPM_longranger/BC00102_longranger/outs/phased_variants.vcf.gz\
-    -r hg38
+    -f /media/KwokRaid04/CIAPM/CIAPM_longranger/BC00101_longranger/outs/phased_variants.vcf.gz \
+    -m /media/KwokRaid04/CIAPM/CIAPM_longranger/BC00102_longranger/outs/phased_variants.vcf.gz \
+    -r hg38 \
+    -a None
 ```
 
 

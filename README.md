@@ -37,14 +37,14 @@ All coordinates are based on hg38.<br>
 
 **Command (must run pre-processing before this):**<br>
 ```
-bash run_clinical_interpretation_pipeline.sh [-j path_to_json/None] [-w work_dir] [-s sample_id] [-i path_to_intervar] [-b true/false] [-e DLE/BspQI/None] [-l true/false] [-t trio/singleton] [-f father_SNP_vcf_file_path or None if singleton] [-m mother_SNP_vcf_file_path or None if singleton] [-r hg19/hg38] [-a path_to_custom_artifact_file or None]
+bash run_clinical_interpretation_pipeline.sh [-j path_to_json or None] [-w work_dir] [-s sample_id] [-i path_to_intervar] [-b true/false] [-e DLE/BspQI/None] [-l true/false] [-t trio/singleton/duo] [-f father_SNP_vcf_file_path or None if singleton or duo] [-m mother_SNP_vcf_file_path or None if singleton or duo] [-r hg19/hg38] [-a path_to_custom_artifact_file or None]
 ```
 
 **General assumptions about this program:**
 1. All samples must be named BC0XX01, BC0XX02, and BC0XX03, where XX is the family ID shared acorss a trio<br>
     The last two digits (01/02/03) indicates father, mother, and proband respectively. Please use 04 and onward if there are more than one probands.<br>  
 2. **[-j path_to_json]**<br>
-    This is the path to the EHR file in JSON format. Input 'None' if only using a list of manually curated HPO terms. For now, the file containing manually curated HPO terms (one term per line) must be placed in $WORKDIR/results/$SAMPLEID/$SAMPLEID_hpo_manual.txt for the pipeline for work.
+    This is the path to the EHR file in JSON format for natural language processing (NPL). Input 'None' if user wants to skip NLP and only use a list of manually curated HPO terms instead. For now, the file containing manually curated HPO terms (one term per line) must be placed in $WORKDIR/results/$SAMPLEID/$SAMPLEID_hpo_manual.txt for the pipeline for work.
 3. **[-w work_dir]**<br>
     By default, all output are written to this work directory. <br>
 4. **[-i path_to_intervar]** <br>
@@ -55,16 +55,19 @@ bash run_clinical_interpretation_pipeline.sh [-j path_to_json/None] [-w work_dir
     Must use this option if bionano is true. BssSI is not supported as we don't have a large control database using this label. <br>
 7. **[-l linkedReadSV:true or false]** <br>
     Indicate true to analyze linked-read SVs. <br>
-8. **[-t trio or singleton]** <br>
-    Indicate whether this is a trio or a singleton case. If this is a singleton case, name the file as BC0XX03. For quad cases, submit each proband as a separate job.<br>
-9. **[-f father_SNP_vcf_file_path or None if singleton]** <br>
-    Specify the path to the father's SNP/indel vcf file. Input 'None' if running in singleton mode.
-10. **[-m mother_SNP_vcf_file_path or None if singleton]** <br>
-    Specify the path to the mother's SNP/indel vcf file. Input 'None' if running in singleton mode.
+8. **[-t trio, duo, or singleton]** <br>
+    Indicate whether this is a trio, duo or a singleton case. If this is a singleton case, name the file as BC0XX03. For quad cases, submit each proband as a separate job.<br>
+    If singleton, -f and -m must be None. <br>
+    If duo, either -f or -m path must be specified. Missing parent should be None. <br>
+    if trio, both -f and -m paths must be specified. <br>
+9. **[-f father_SNP_vcf_file_path or None if singleton or duo]** <br>
+    Specify the path to the father's SNP/indel vcf file. Input 'None' if running in singleton mode (or duo if father is missing). <br>
+10. **[-m mother_SNP_vcf_file_path or None if singleton or duo]** <br>
+    Specify the path to the mother's SNP/indel vcf file. Input 'None' if running in singleton mode (or duo if mother is missing). <br>
 11. **[-r hg19/hg38]** <br>
     Specific the reference version.<br>
 12, **[-a path_to_custom_artifact_file or None]** <br>
-    Specific a acustom SNV artifact tab-delimited bed file. Use None if no such file is provided.
+    Specific a custom SNV artifact tab-delimited bed file. Use None if no such file is provided.
    
 **Database files from HPO**<br>
 http://purl.obolibrary.org/obo/hp.obo
@@ -149,6 +152,17 @@ To get started, pull the github repo and create two additional directories (bion
     
 **Output files explanations:**<br>
 Score and normalized scores are two important indicators that show how relevant the variants are based on the proband's clinical phenome. The raw scores are normalized between 0-100 among all variants. 100 is assigned to highest ranking variant found in the proband. An html report combining all the result files in confident_set is generated for quick review. The easiest way to view the html report is to download the entire repository as a zipped file and open it with Chrome or Safari.<br>
+
+Parents genotypes are encoded as -1/0/1/2 for SNPs and indels. <br>
+*-1: Parents genotype file missing (in singleton or duo mode)<br>
+0: Reference allele<br>
+1: Heterozygous alt allele<br>
+2: Homozygous alt allele<br>*
+    
+Parents genotypes are encoded as None/True/False for SVs. <br>
+*None: Parents genotype file missing (in singleton or duo mode)<br>
+False: Reference allele<br>
+True: Heterozygous or homozygous alt allele<br>*
 
 **Files of highest priority:**<br>
 $SAMPLEID_confident_deletion_exons.txt<br>

@@ -27,18 +27,19 @@ def tenxlargesvduplications(args):
     #load sample data
     sample_frame = read10xlargeSVs(args.samplepath, 'DUP')
 
-    if not args.singleton:
-        #load parent data
+    # Load parent data
+    if args.type == 'trio' or args.father_duo:
         father_frame = read10xlargeSVs(args.fpath, 'DUP')
+    else:
+        father_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
+
+    if args.type == 'trio' or args.mother_duo:
         mother_frame = read10xlargeSVs(args.mpath, 'DUP')
     else:
         mother_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
-        father_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
-
 
     #load reference data
     ref_frame = read10xlargeSVs(args.referencepath, 'DUP')
-
 
 
     sample_copy, mother_copy, father_copy, ref_copy = sample_frame.copy(), mother_frame.copy(), father_frame.copy(), ref_frame.copy()
@@ -49,20 +50,18 @@ def tenxlargesvduplications(args):
     #remove anything that overlaps with the reference
     filtered_sample_frame = checkRefOverlap(sample_copy, ref_copy, sample_frame)
 
-    #add column based on overlap with parents
-    if not args.singleton:
-        df = checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_frame)
-    else:
-        df = filtered_sample_frame
+    # Add column based on overlap with parents
+    filtered_sample_frame = checkParentsOverlap(sample_copy, father_copy, filtered_sample_frame, args, 'Found_in_Father')
+    filtered_sample_frame = checkParentsOverlap(sample_copy, mother_copy, filtered_sample_frame, args, 'Found_in_Mother')
 
     #describe exon overlap
-    df['Start'], df['End'], df['Chromosome'] = df.POS, df.END, df['CHROM']
-    exon_calls = exonOverlap(args, df)
+    filtered_sample_frame['Start'], filtered_sample_frame['End'], filtered_sample_frame['Chromosome'] = filtered_sample_frame.POS, filtered_sample_frame.END, filtered_sample_frame['CHROM']
+    exon_calls = exonOverlap(args, filtered_sample_frame)
 
     # Write final output
     exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_10x_duplications_largeSV_exons.txt', sep='\t', index = False)
 
-    return df, exon_calls
+    return filtered_sample_frame, exon_calls
 
 
 def main():
@@ -76,7 +75,9 @@ def main():
     parser.add_argument("-o", "--outputdirectory", help="Give the directory path for the output file", dest="outputdirectory", type=str, required=True)
     parser.add_argument("-e", "--exons", help="Give the file with exons intervals, names, and phenotypes here", dest="exons", type=str, required=True)
     parser.add_argument("-g", "--genelist", help="Primary genelist with scores", dest="genelist", type=str)
-    parser.add_argument("-S", help="Set this flag if this is a singleton case", dest="singleton", action='store_true')
+    parser.add_argument("-t", "--type", help="Specify whether this is a trio, duo, or singleton case", dest="type", type=str)
+    parser.add_argument("-F", help="Set this flag if this is a duo case AND only father is sequenced", dest="father_duo", action='store_true')
+    parser.add_argument("-M", help="Set this flag if this is a duo case AND only mother is sequenced", dest="mother_duo", action='store_true')
     args = parser.parse_args()
 
     # Actual function

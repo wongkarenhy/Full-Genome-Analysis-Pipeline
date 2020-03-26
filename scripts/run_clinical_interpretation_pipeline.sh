@@ -20,7 +20,7 @@ while getopts 'j:w:s:i:b:e:l:t:f:m:r:a:' OPTION; do
     b)
       BIONANO="$OPTARG"
       [[ ! $BIONANO =~ true|false ]] && {
-          echo "Bionano flag can be either true or false"
+          echo "ERROR! Pipeline aborted! Bionano flag has to be either true or false"
           exit 1
       }
 
@@ -28,7 +28,7 @@ while getopts 'j:w:s:i:b:e:l:t:f:m:r:a:' OPTION; do
     e)
       ENZYME="$OPTARG"
       [[ ! $ENZYME =~ BspQI|DLE|None ]] && {
-          echo "Incorrect options provided in ENZYME"
+          echo "ERROR! Pipeline aborted! Incorrect option provided in ENZYME"
           exit 1
       }
 
@@ -36,15 +36,15 @@ while getopts 'j:w:s:i:b:e:l:t:f:m:r:a:' OPTION; do
     l)
       LINKEDREADSV="$OPTARG"
       [[ ! $LINKEDREADSV =~ true|false ]] && {
-          echo "LINKEDREADSV can be either true or false"
+          echo "ERROR! Pipeline aborted! LINKEDREADSV has to be either true or false"
           exit 1
       }
 
       ;;
     t)
       TYPE="$OPTARG"
-      [[ ! $TYPE =~ trio|singleton ]] && {
-	  echo "Incorrect options provided in TYPE"
+      [[ ! $TYPE =~ trio|singleton|duo ]] && {
+	  echo "ERROR! Pipeline aborted! Incorrect option provided in TYPE"
           exit 1
       }
       ;;
@@ -57,7 +57,7 @@ while getopts 'j:w:s:i:b:e:l:t:f:m:r:a:' OPTION; do
     r)
       REF="$OPTARG"
       [[ ! $REF =~ hg19|hg38 ]] && {
-          echo "Incorrect options provided in REF"
+          echo "ERROR! Pipeline aborted! Incorrect option provided in REF"
           exit 1
       }
 
@@ -108,21 +108,43 @@ if [[ ! -d ${WORKDIR}/results/${SAMPLEID}/misc ]]; then
     mkdir ${WORKDIR}/results/${SAMPLEID}/misc
 fi
 
+# If type is trio, both FATHERVCF and MOTHERVCF cannot be None
+# If type is duo, either FATHERVCF or MOTHERVCF must be specified 
+if [[ ${TYPE} == 'trio' && (${FATHERVCF} == 'None' || ${MOTHERVCF} == 'None') ]]; then
+    echo 'ERROR! Pipeline aborted! If type is trio, father and mother VCF files must both be specified.'
+    exit 1
+elif [[ ${TYPE} == 'duo' && ${FATHERVCF} == 'None' && ${MOTHERVCF} == 'None' ]]; then
+    echo 'ERROR! Pipeline aborted! If type is duo, either father or mother VCF file must be specified.'
+    exit 1
+elif [[ ${TYPE} == 'duo' && ${FATHERVCF} != 'None' && ${MOTHERVCF} != 'None' ]]; then
+    echo 'ERROR! Pipeline aborted! If type is duo, either father or mother VCF file has to be None.'
+    exit 1
+elif [[ ${TYPE} == 'singleton' && (${FATHERVCF} != 'None' || ${MOTHERVCF} != 'None') ]]; then
+    echo 'ERROR! Pipeline aborted! If type is singleton, both father or mother VCF files have to be None.'
+    exit 1
+fi
+
+
 additional_var=''
-if [[ ${BIONANO} = true ]]; then
+if [[ ${BIONANO} == 'true' ]]; then
     additional_var+=" -b -e ${ENZYME}"
 fi
-if [[ ${LINKEDREADSV} = true ]]; then
+if [[ ${LINKEDREADSV} == 'true' ]]; then
     additional_var+=" -l"
 fi
-if [[ ${TYPE} == 'singleton' ]]; then
-    additional_var+=" -S"
-else
-    additional_var+=" -f ${FATHERVCF} -m ${MOTHERVCF}"
+
+# Parse type if duo
+if [[ ${TYPE} == 'duo' ]]; then
+
+    if [[ ${FATHERVCF} != 'None' ]]; then
+	additional_var+=" -F"
+    else
+	additional_var+=" -M"
+    fi
 fi
 
 additional_var_CNLP=''
-if [[ ${JSON} = None ]]; then
+if [[ ${JSON} == 'None' ]]; then
     additional_var_CNLP+=" -m"
 fi
 
@@ -130,8 +152,8 @@ fi
 # extract exact and inexact HPO terms then run CNLP
 python3.6 ${WORKDIR}/scripts/run_CNLP.py -s ${SAMPLEID} -w ${WORKDIR} -j ${JSON} ${additional_var_CNLP}
 
-# identify variants and rank them 
-python3.6 ${WORKDIR}/scripts/run_clinical_interpretor.py -s ${SAMPLEID} -w ${WORKDIR} -i ${INTERVAR} -r ${REF} -a ${ARTIFACT} ${additional_var}
+# identify variants and rank them
+python3.6 ${WORKDIR}/scripts/run_clinical_interpretor.py -s ${SAMPLEID} -w ${WORKDIR} -i ${INTERVAR} -r ${REF} -a ${ARTIFACT} -t ${TYPE} -f ${FATHERVCF} -m ${MOTHERVCF} ${additional_var}
 
 # generate an html report
 python3.6 ${WORKDIR}/scripts/generate_report.py -s ${SAMPLEID} -w ${WORKDIR}/results/${SAMPLEID}/confident_set/

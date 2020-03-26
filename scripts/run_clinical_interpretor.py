@@ -160,7 +160,8 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
 
     # If custom artifact bed file is provided, filter dataframe
     if os.path.exists(args.artifact):
-        custom_artifact = pd.read_csv(args.artifact, sep='\t', usecols=[0, 2] ,names=["chr", "pos"])
+        #print(filtered_intervar)
+        custom_artifact = pd.read_csv(args.artifact, sep='\t', usecols=[0, 2] ,names=["Chr", "End"])
         keys = list(custom_artifact.columns.values)
         i1 = filtered_intervar.set_index(keys).index
         i2 = custom_artifact.set_index(keys).index
@@ -174,13 +175,25 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
     filtered_intervar_bed.loc[:,'Start'] -= 1
     pd.DataFrame(filtered_intervar_bed).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_target.bed', index=False, sep='\t', header=False)
 
-    if not args.singleton:
+    # Create two new columns and initialize to -1
+    # will later get overwritten to 0/1/2 if parents vcf files are provided
+    filtered_intervar['paternal'] = -1
+    filtered_intervar['maternal'] = -1
+
+    if args.type != 'singleton':
 
         # Get overlapping variants from the parents so we know which variants are inherited
         print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Comparing small variants (SNPs/indels) inheritance')
         cmd1 = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed " + args.fathervcf + " > ./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf"
         cmd2 = "bcftools view -R ./results/" + args.sampleid + "/" + args.sampleid + "_target.bed " + args.mothervcf + " > ./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf"
-        cmds = [cmd1, cmd2]
+
+        if args.type == 'duo':
+            if args.father_duo:
+                cmds = [cmd1]
+            else:
+                cmds = [cmd2]
+        else:
+            cmds = [cmd1, cmd2]
         for cmd in cmds:
             p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             stdout, stderr = p.communicate()
@@ -189,71 +202,77 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
 
         # Go through every row in filtered_intervar and see if the same variant is found in either of the parents
         # We will only compare allele start position (we always assume the alt allele is the same)
-        try:
-            paternal_ov_allele = pd.read_csv("./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf", sep='\t',usecols=[1,9], names=["Start", "geno"], comment='#')
-            paternal_ov_allele['geno'] = paternal_ov_allele['geno'].str[:1].astype(int) + paternal_ov_allele['geno'].str[2:3].astype(int)
-        except OSError:
-            print("Could not open/read the input file: ./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf")
-            sys.exit()
-        try:
-            maternal_ov_allele = pd.read_csv("./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf", sep='\t',usecols=[1,9], names=["Start", "geno"], comment='#')
-            maternal_ov_allele['geno'] = maternal_ov_allele['geno'].str[:1].astype(int) + maternal_ov_allele['geno'].str[2:3].astype(int)
-        except OSError:
-            print(
-                "Could not open/read the input file: ./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf")
-            sys.exit()
+        if args.type=='trio' or args.father_duo:
+            try:
+                paternal_ov_allele = pd.read_csv("./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf", sep='\t',usecols=[1,9], names=["Start", "geno"], comment='#')
+                paternal_ov_allele['geno'] = paternal_ov_allele['geno'].str[:1].astype(int) + paternal_ov_allele['geno'].str[2:3].astype(int)
+                filtered_intervar = getParentsGeno(filtered_intervar, 'paternal', paternal_ov_allele)
+
+            except OSError:
+                print("Could not open/read the input file: ./results/" + args.sampleid + "/" + args.sampleid + "_paternal_inherited_smallVariants.vcf")
+                sys.exit()
+        if args.type=="trio" or args.mother_duo:
+            try:
+                maternal_ov_allele = pd.read_csv("./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf", sep='\t',usecols=[1,9], names=["Start", "geno"], comment='#')
+                maternal_ov_allele['geno'] = maternal_ov_allele['geno'].str[:1].astype(int) + maternal_ov_allele['geno'].str[2:3].astype(int)
+                filtered_intervar = getParentsGeno(filtered_intervar, 'maternal', maternal_ov_allele)
+
+            except OSError:
+                print("Could not open/read the input file: ./results/" + args.sampleid + "/" + args.sampleid + "_maternal_inherited_smallVariants.vcf")
+                sys.exit()
 
 
-        filtered_intervar = getParentsGeno(filtered_intervar, 'paternal', paternal_ov_allele)
-        filtered_intervar = getParentsGeno(filtered_intervar, 'maternal', maternal_ov_allele)
 
         # Rerank variants based on reported or predicted pathogeneicity
         filtered_intervar = rerankSmallVariant(filtered_intervar)
 
-        # Divide the dataset into recessive, dominant, de novo, compound het
-        ## Recessive
-        recessive = filtered_intervar[(filtered_intervar['paternal'] == 1) & (filtered_intervar['maternal'] == 1) & (filtered_intervar['Otherinfo'] == 'hom')]
-        ## Dominant
-        dominant_inherited = filtered_intervar[((filtered_intervar['paternal'] == 1) & (filtered_intervar['maternal'] == 0)) | ((filtered_intervar['maternal'] == 1) & (filtered_intervar['paternal'] == 0))]
-        ## De novo
-        denovo = filtered_intervar[(filtered_intervar['paternal'] == 0) & (filtered_intervar['maternal'] == 0)]
-        #Compound het
-        filtered_intervar_compoundhet = filtered_intervar[(filtered_intervar['Otherinfo'] == 'het')]
-        filtered_intervar_compoundhet = filtered_intervar_compoundhet[(filtered_intervar_compoundhet['maternal'] != 2) & (filtered_intervar_compoundhet['paternal'] != 2) & ((filtered_intervar_compoundhet['paternal'] == 1) & (filtered_intervar_compoundhet['maternal'] == 0)) | ((filtered_intervar_compoundhet['maternal'] == 1) & (filtered_intervar_compoundhet['paternal'] == 0)) | ((filtered_intervar_compoundhet['maternal'] == 0) & (filtered_intervar_compoundhet['paternal'] == 0))]
-        count = Counter(filtered_intervar_compoundhet['Ref_Gene'])
-        compoundhet_genes = [x for x, cnt in count.items() if cnt > 1]
-        compoundhet = filtered_intervar_compoundhet[filtered_intervar_compoundhet['Ref_Gene'].isin(compoundhet_genes)]
 
-        discard = []
-        for gene in compoundhet_genes:
+        if args.type=='trio':
 
-            df = compoundhet[compoundhet['Ref_Gene'].str.contains(gene)]
-            row_count = len(df.index)
-            col_list = ['paternal', 'maternal']
-            res = df[col_list].sum(axis=0)
-            if ((res[0] == 0) & (res[1] == row_count)) or (res[1] == 0 & (res[0] == row_count)):
-                discard.append(gene)
+            # Divide the dataset into recessive, dominant, de novo, compound het
+            ## Recessive
+            recessive = filtered_intervar[(filtered_intervar['paternal'] == 1) & (filtered_intervar['maternal'] == 1) & (filtered_intervar['Otherinfo'] == 'hom')]
+            ## Dominant
+            dominant_inherited = filtered_intervar[((filtered_intervar['paternal'] == 1) & (filtered_intervar['maternal'] == 0)) | ((filtered_intervar['maternal'] == 1) & (filtered_intervar['paternal'] == 0))]
+            ## De novo
+            denovo = filtered_intervar[(filtered_intervar['paternal'] == 0) & (filtered_intervar['maternal'] == 0)]
+            #Compound het
+            filtered_intervar_compoundhet = filtered_intervar[(filtered_intervar['Otherinfo'] == 'het')]
+            filtered_intervar_compoundhet = filtered_intervar_compoundhet[(filtered_intervar_compoundhet['maternal'] != 2) & (filtered_intervar_compoundhet['paternal'] != 2) & ((filtered_intervar_compoundhet['paternal'] == 1) & (filtered_intervar_compoundhet['maternal'] == 0)) | ((filtered_intervar_compoundhet['maternal'] == 1) & (filtered_intervar_compoundhet['paternal'] == 0)) | ((filtered_intervar_compoundhet['maternal'] == 0) & (filtered_intervar_compoundhet['paternal'] == 0))]
+            count = Counter(filtered_intervar_compoundhet['Ref_Gene'])
+            compoundhet_genes = [x for x, cnt in count.items() if cnt > 1]
+            compoundhet = filtered_intervar_compoundhet[filtered_intervar_compoundhet['Ref_Gene'].isin(compoundhet_genes)]
 
-        compoundhet = compoundhet[~compoundhet['Ref_Gene'].isin(discard)]
+            discard = []
+            for gene in compoundhet_genes:
+
+                df = compoundhet[compoundhet['Ref_Gene'].str.contains(gene)]
+                row_count = len(df.index)
+                col_list = ['paternal', 'maternal']
+                res = df[col_list].sum(axis=0)
+                if ((res[0] == 0) & (res[1] == row_count)) or (res[1] == 0 & (res[0] == row_count)):
+                    discard.append(gene)
+
+            compoundhet = compoundhet[~compoundhet['Ref_Gene'].isin(discard)]
 
 
-        # Print all the variants according to inheritance mode
-        # Recessive
-        pd.DataFrame(recessive).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_recessive_candidates.txt', index=False, sep='\t', header=True)
-        # Dominant
-        pd.DataFrame(dominant_inherited).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_dominant_inherited_smallVariants_candidates.txt', index=False, sep='\t', header=True)
-        # De novo
-        pd.DataFrame(denovo).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_denovo_candidates.txt', index=False, sep='\t', header=True)
-        # Compound het
-        pd.DataFrame(compoundhet).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_compoundhet_candidates.txt', index=False, sep='\t', header=True)
+            # Print all the variants according to inheritance mode
+            # Recessive
+            pd.DataFrame(recessive).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_recessive_candidates.txt', index=False, sep='\t', header=True)
+            # Dominant
+            pd.DataFrame(dominant_inherited).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_dominant_inherited_smallVariants_candidates.txt', index=False, sep='\t', header=True)
+            # De novo
+            pd.DataFrame(denovo).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_denovo_candidates.txt', index=False, sep='\t', header=True)
+            # Compound het
+            pd.DataFrame(compoundhet).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_compoundhet_candidates.txt', index=False, sep='\t', header=True)
 
     # All
     filtered_intervar = rerankSmallVariant(filtered_intervar)
     pd.DataFrame(filtered_intervar).to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_smallVariants_ALL_candidates.txt', index=False, sep='\t', header=True)
 
-    if not args.singleton:
+    if args.type=='trio':
         # We want to return everything except recessive variants
-        filtered_intervar = filtered_intervar.loc[~filtered_intervar['Start'].isin(recessive['Start'])] # don't have recessive if singleton
+        filtered_intervar = filtered_intervar.loc[~filtered_intervar['Start'].isin(recessive['Start'])] # don't have recessive if singleton or duo
 
     return filtered_intervar
 
@@ -431,22 +450,9 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
 
     all_omim_syndromes = parseSyndromeNameToCytoband(syndrome_score_result_r, cytobandDict,'all', hpo_syndromes_mim_df, args)
 
-    # print(dup_df)
-    #
-    # if del_df.empty:
-    #     del_df = None
-    # else:
-    #     del_df = parseSyndromeNameToCytoband(del_df, cytobandDict)
-    # if dup_df.empty:
-    #     dup_df = None
-    # else:
-    #     dup_df = parseSyndromeNameToCytoband(dup_df, cytobandDict)
-
     if args.bionano:
-        if not args.singleton:
-            cols = ['Chromosome', 'Start', 'End', 'SmapEntryID', 'Confidence', 'Type', 'Zygosity', 'Genotype', 'SV_size', 'Found_in_Father', 'Found_in_Mother', 'syndrome', 'cytoband', 'score', 'normalized_score']
-        else:
-            cols = ['Chromosome', 'Start', 'End', 'SmapEntryID', 'Confidence', 'Type', 'Zygosity', 'Genotype', 'SV_size', 'syndrome', 'cytoband', 'score', 'normalized_score']
+
+        cols = ['Chromosome', 'Start', 'End', 'SmapEntryID', 'Confidence', 'Type', 'Zygosity', 'Genotype', 'SV_size', 'Found_in_Father', 'Found_in_Mother', 'syndrome', 'cytoband', 'score', 'normalized_score']
 
         # Overlap with del/dup syndromes
         if cyto_BN_dup is not None: # It can be None because old Bionano pipeline doesn't call duplications...
@@ -469,10 +475,7 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
 
     if args.linkedreadSV:
 
-        if not args.singleton:
-            cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'Found_in_Father', 'Found_in_Mother', 'syndrome', 'cytoband', 'score', 'normalized_score']
-        else:
-            cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'syndrome', 'cytoband', 'score', 'normalized_score']
+        cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'Found_in_Father', 'Found_in_Mother', 'syndrome', 'cytoband', 'score', 'normalized_score']
 
         # dup_df.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_input1.txt', sep='\t', index=False)
         # cyto_10x_dup_largeSV.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_input2.txt', sep='\t', index=False)
@@ -494,10 +497,7 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
 
     if args.linkedreadSV and args.bionano:
 
-        if not args.singleton:
-            cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'Found_in_Father', 'Found_in_Mother', 'syndrome', 'cytoband', 'SmapEntryID', 'Confidence', 'Type', 'Zygosity', 'Genotype', 'SV_size', 'Found_in_Father_b', 'Found_in_Mother_b', 'score', 'normalized_score',]
-        else:
-            cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'syndrome', 'cytoband', 'SmapEntryID', 'Confidence', 'Type', 'Zygosity', 'Genotype', 'SV_size', 'score', 'normalized_score',]
+        cols = ['Chromosome', 'Start', 'End', 'ID', 'REF', 'ALT_1', 'QUAL', 'FILTER_PASS', 'SVLEN', 'Found_in_Father', 'Found_in_Mother', 'syndrome', 'cytoband', 'SmapEntryID', 'Confidence', 'Type', 'Zygosity', 'Genotype', 'SV_size', 'Found_in_Father_b', 'Found_in_Mother_b', 'score', 'normalized_score',]
 
         # syndrome appearing in both 10x and bionano --> confident set
         ## for duplications
@@ -617,7 +617,9 @@ def bionanoSV(args, famid, gene_score_result_r, all_small_variants):
                         exons = args.workdir + '/annotatedExon.bed',
                         genes=args.workdir + '/annotatedGene.bed',
                         genelist = gene_score_result_r,
-                        singleton = args.singleton)
+                        type = args.type,
+                        father_duo = args.father_duo,
+                        mother_duo = args.mother_duo)
 
 
     # Call bionano translocation
@@ -691,7 +693,9 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
                         exons = args.workdir + '/annotatedExon.bed',
                         genes = args.workdir + '/annotatedGene.bed',
                         genelist = gene_score_result_r,
-                        singleton = args.singleton)
+                        type = args.type,
+                        father_duo = args.father_duo,
+                        mother_duo = args.mother_duo)
 
     tenx_args_largeSV = Namespace(sampleID = args.sampleid,
                         samplepath = args.workdir + "/linkedRead_sv/cases/" + args.sampleid + "/large_svs.vcf.gz",
@@ -702,7 +706,9 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
                         exons = args.workdir + '/annotatedExon.bed',
                         genes=args.workdir + '/annotatedGene.bed',
                         genelist = gene_score_result_r,
-                        singleton = args.singleton)
+                        type = args.type,
+                        father_duo = args.father_duo,
+                        mother_duo = args.mother_duo)
 
     # Call medium size deletions
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads medium deletions on ' + args.sampleid + '...')
@@ -720,13 +726,13 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large inversions on ' + args.sampleid + '...')
     tenxlargesvinversions(tenx_args_largeSV)
 
-    # Call large breakends
-    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large breakends on ' + args.sampleid + '...')
-    tenxlargesvbreakends(tenx_args_largeSV)
-
-    # Call large unknwon calls
-    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large unknown on ' + args.sampleid + '...')
-    tenxlargesvunknown(tenx_args_largeSV)
+    # # Call large breakends
+    # print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large breakends on ' + args.sampleid + '...')
+    # tenxlargesvbreakends(tenx_args_largeSV)
+    #
+    # # Call large unknwon calls
+    # print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large unknown on ' + args.sampleid + '...')
+    # tenxlargesvunknown(tenx_args_largeSV)
 
     # Check potential compoundhets with SNPs and indels
     tenx_exons = pd.concat([exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup])
@@ -791,7 +797,9 @@ def main():
     parser.add_argument("-m", "--mothervcf", help="Path to mather SNP VCF file. Only set this flag if -S is not set", dest="mothervcf", type=str)
     parser.add_argument("-r", "--ref", help="Reference version. Either hg19 or hg38", dest="ref", type=str)
     parser.add_argument("-a", "--artifact", help="Custom artifact tab-delimited bed file. Can be None", dest="artifact", type=str)
-    parser.add_argument("-S", help="Set this flag if this is a singleton case", dest="singleton", action='store_true')
+    parser.add_argument("-t", "--type", help="Specify whether this is a trio, duo, or singleton case", dest="type", type=str)
+    parser.add_argument("-F", help="Set this flag if this is a duo case AND only father is sequenced", dest="father_duo", action='store_true')
+    parser.add_argument("-M", help="Set this flag if this is a duo case AND only mother is sequenced", dest="mother_duo", action='store_true')
     args = parser.parse_args()
 
     # Change work dir
@@ -921,10 +929,10 @@ def main():
         findConfDelDup(args, exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup, exon_calls_BN_del, exon_calls_BN_dup)
 
     # Move all the intermediate files to the misc folder
-    if not args.singleton:
-        cmd = 'mv ./results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_maternal_inherited_smallVariants.vcf ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt ./results/' + args.sampleid + '/' + args.sampleid + '_paternal_inherited_smallVariants.vcf ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariant_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariants_ALL_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_syndrome_score_result_r.txt ./results/' + args.sampleid + '/' + args.sampleid + '_target.bed ./results/' + args.sampleid + '/' + args.sampleid + '.txt ./results/' + args.sampleid + '/misc/'
-    else:
-        cmd = 'mv ./results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariant_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariants_ALL_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_syndrome_score_result_r.txt ./results/' + args.sampleid + '/' + args.sampleid + '_target.bed ./results/' + args.sampleid + '/' + args.sampleid + '.txt ./results/' + args.sampleid + '/misc/'
+    #if not args.singleton:
+    cmd = 'mv ./results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_maternal_inherited_smallVariants.vcf ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt ./results/' + args.sampleid + '/' + args.sampleid + '_paternal_inherited_smallVariants.vcf ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariant_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariants_ALL_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_syndrome_score_result_r.txt ./results/' + args.sampleid + '/' + args.sampleid + '_target.bed ./results/' + args.sampleid + '/' + args.sampleid + '.txt ./results/' + args.sampleid + '/misc/'
+    #else:
+        #cmd = 'mv ./results/' + args.sampleid + '/' + args.sampleid + '_gene_list.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_exact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_inexact.txt ./results/' + args.sampleid + '/' + args.sampleid + '_hpo_manual.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariant_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_smallVariants_ALL_candidates.txt ./results/' + args.sampleid + '/' + args.sampleid + '_syndrome_score_result_r.txt ./results/' + args.sampleid + '/' + args.sampleid + '_target.bed ./results/' + args.sampleid + '/' + args.sampleid + '.txt ./results/' + args.sampleid + '/misc/'
 
     p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     # stdout, stderr = p.communicate()

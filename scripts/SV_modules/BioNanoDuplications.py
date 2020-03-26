@@ -36,23 +36,25 @@ def readsmapDup(input):
 
 def BN_duplication(args):
 
-    #loadsample
+    # Load Sample
     sample_frame = readsmapDup(args.samplepath)
 
     # Some old BN pipeline doesn't call duplication
     if sample_frame.empty:
         return None, None
 
-    if not args.singleton:
-        #loadparent
-        father_frame = readsmapDup(args.fpath)
+    # Load parent data
+    if args.type == 'trio' or args.father_duo:
+        father_frame = eadsmapDup(args.fpath)
+    else:
+        father_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1'])
+
+    if args.type == 'trio' or args.mother_duo:
         mother_frame = readsmapDup(args.mpath)
     else:
         mother_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1'])
-        father_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1'])
 
-
-    #load reference
+    # Load reference
     ref_frame = readsmapDup(args.referencepath)
 
     # Actual fun
@@ -61,24 +63,22 @@ def BN_duplication(args):
     for df in [sample_copy, mother_copy, father_copy, ref_copy]:
         df['Start'], df['End'], df['Chromosome']  = df.RefStartPos, df.RefEndPos, df['RefcontigID1']
 
-    #remove anything that overlaps with the reference
+    # Remove anything that overlaps with the reference
     filtered_sample_frame = checkRefOverlap(sample_copy, ref_copy, sample_frame)
 
-    #add column based on overlap with parents
-    if not args.singleton:
-        df = checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_frame)
-    else:
-        df = filtered_sample_frame
+    # Add column based on overlap with parents
+    filtered_sample_frame = checkParentsOverlap(sample_copy, father_copy, filtered_sample_frame, args, 'Found_in_Father')
+    filtered_sample_frame = checkParentsOverlap(sample_copy, mother_copy, filtered_sample_frame, args, 'Found_in_Mother')
+    filtered_sample_frame.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNano_duplications_raw.txt', sep='\t', index = False)
 
-    #describe exon overlap
-    df.to_csv(args.outputdirectory + '/' + args.sampleID + '_BioNano_duplications_raw.txt', sep='\t', index = False)
-    df['Start'], df['End'], df['Chromosome'] = df.RefStartPos, df.RefEndPos, df['RefcontigID1']
-    exon_calls = exonOverlap(args, df)
+    # Describe exon overlap
+    filtered_sample_frame['Start'], filtered_sample_frame['End'], filtered_sample_frame['Chromosome'] = filtered_sample_frame.RefStartPos, filtered_sample_frame.RefEndPos, filtered_sample_frame['RefcontigID1']
+    exon_calls = exonOverlap(args, filtered_sample_frame)
 
 
     exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_Bionano_duplications_exons.txt', sep='\t', index = False)
 
-    return df, exon_calls
+    return filtered_sample_frame, exon_calls
 
 
                 
@@ -94,7 +94,9 @@ def main():
     parser.add_argument("-c", "--confidence", help="Give the confidence level cutoff for the sample here", dest="confidence", type=str, default=0.5)
     parser.add_argument("-e", "--exons", help="Give the file with exons intervals, names, and phenotypes here", dest="exons", type=str, required=True)
     parser.add_argument("-g", "--genelist", help="Primary genelist with scores", dest="genelist", type=str)
-    parser.add_argument("-S", help="Set this flag if this is a singleton case", dest="singleton", action='store_true')
+    parser.add_argument("-t", "--type", help="Specify whether this is a trio, duo, or singleton case", dest="type", type=str)
+    parser.add_argument("-F", help="Set this flag if this is a duo case AND only father is sequenced", dest="father_duo", action='store_true')
+    parser.add_argument("-M", help="Set this flag if this is a duo case AND only mother is sequenced", dest="mother_duo", action='store_true')
     args = parser.parse_args()
 
 

@@ -75,70 +75,33 @@ def checkRefOverlap(sample_copy, ref_copy, sample_frame):
 
 
 
-def checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_frame):
+def checkParentsOverlap(sample_copy, parent_copy, filtered_sample_frame, args, inheritance):
+
+    if args.type == 'singleton' or (args.type == 'duo' and inheritance == 'Found_in_Father' and args.mother_duo) or  (args.type == 'duo' and inheritance == 'Found_in_Mother' and args.father_duo):
+        # Initialize columns and set to -1 if parents file not provided
+        filtered_sample_frame[inheritance] = 'None'
+        return filtered_sample_frame
 
     colnames = ['CHROM', 'POS', 'ID', 'REF', "ALT_1", 'ALT_2', "ALT_3", "QUAL", 'FILTER_PASS', "END", "SVLEN"]
 
-    sample_copy_py, father_copy_py, mother_copy_py = PyRanges(sample_copy), PyRanges(father_copy), PyRanges(mother_copy)
-    sample_copy_py.Length, father_copy_py.Length_b, mother_copy_py.Length_b = sample_copy_py.lengths(), father_copy_py.lengths(), mother_copy_py.lengths()
+    sample_copy_py, parent_copy_py = PyRanges(sample_copy), PyRanges(parent_copy)
+    sample_copy_py.Length, parent_copy_py.Length_b, = sample_copy_py.lengths(), parent_copy_py.lengths()
 
-    overlap_sample_father = sample_copy_py.join(father_copy_py)
-    overlap_sample_mother = sample_copy_py.join(mother_copy_py)
+    overlap_sample_parent = sample_copy_py.join(parent_copy_py)
 
-    #denovo_f_frame, denovo_m_frame = reciprocal_overlap(PyRanges(sample_copy), PyRanges(father_copy))[colnames], reciprocal_overlap(PyRanges(sample_copy), PyRanges(mother_copy))[colnames]
+    denovo_parent_frame = reciprocal_overlap(overlap_sample_parent)[colnames]
 
-    denovo_f_frame = reciprocal_overlap(overlap_sample_father)[colnames]
-    denovo_m_frame = reciprocal_overlap(overlap_sample_mother)[colnames]
+    if denovo_parent_frame.empty:
+        filtered_sample_frame[inheritance] = 'False'
 
-    if denovo_f_frame.empty:
-        filtered_sample_frame["Found_in_Father"] = "False"
-    if denovo_m_frame.empty:
-        filtered_sample_frame["Found_in_Mother"] = "False"
-
-    elif not (denovo_f_frame.empty and denovo_m_frame.empty):
-        f_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_f_frame, on=None, how='left',
-                                           indicator='Found_in_Father')
-        f_filtered_sample_frame['Found_in_Father'] = np.where(f_filtered_sample_frame.Found_in_Father == 'both', True, False)
-        f_filtered_sample_frame = f_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
-
-        m_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_m_frame, on=None, how='left',
-                                           indicator='Found_in_Mother')
-        m_filtered_sample_frame['Found_in_Mother'] = np.where(m_filtered_sample_frame.Found_in_Mother == 'both', True,False)
-        m_filtered_sample_frame = m_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
-        f_filtered_sample_frame['Found_in_Mother'] = m_filtered_sample_frame['Found_in_Mother']
-        filtered_sample_frame = f_filtered_sample_frame
-
-    # df = filtered_sample_frame
-    # df['Start'], df['End'], df['Chromosome'] = df.POS, df.END, df['CHROM']
+    else:
+        parent_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_parent_frame, on=None, how='left',
+                                           indicator=inheritance)
+        parent_filtered_sample_frame[inheritance] = np.where(parent_filtered_sample_frame[inheritance] == 'both', 'True', 'False')
+        parent_filtered_sample_frame = parent_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
 
 
-    # denovo_f_frame = reciprocal_overlap(overlap_sample_father)
-    # denovo_m_frame = reciprocal_overlap(overlap_sample_mother)
-    #
-    # if denovo_f_frame.empty:
-    #     filtered_sample_frame["Found_in_Father"] = "False"
-    # else:
-    #     filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_f_frame, on=None, how='left', indicator='Found_in_Father')
-    #     filtered_sample_frame['Found_in_Father'] = np.where(filtered_sample_frame.Found_in_Father == 'both', True, False)
-    #     filtered_sample_frame = filtered_sample_frame.drop(columns=['Start', 'End', 'Chromosome', 'Length', 'Length_b', 'Overlap', 'Fraction', 'Fraction_b', 'CHROM_b', 'POS_b', 'ID_b', 'REF_b', 'ALT_1_b','ALT_2_b','ALT_3_b', 'QUAL_b','FILTER_PASS_b', 'END_b','SVLEN_b','Start_b', 'End_b']).drop_duplicates()
-    #
-    #
-    # if denovo_m_frame.empty:
-    #     filtered_sample_frame["Found_in_Mother"] = "False"
-    #     denovo_filtered_sample_frame = filtered_sample_frame
-    #
-    # else:
-    #     denovo_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_m_frame, on=None, how='left', indicator='Found_in_Mother')
-    #     denovo_filtered_sample_frame['Found_in_Mother'] = np.where(denovo_filtered_sample_frame.Found_in_Mother == 'both', True, False)
-    #     denovo_filtered_sample_frame = denovo_filtered_sample_frame.drop(columns=['Start', 'End', 'Chromosome', 'Length', 'Length_b', 'Overlap', 'Fraction', 'Fraction_b', 'CHROM_b', 'POS_b', 'ID_b', 'REF_b', 'ALT_1_b','ALT_2_b','ALT_3_b', 'QUAL_b','FILTER_PASS_b', 'END_b','SVLEN_b','Start_b', 'End_b']).drop_duplicates()
-    #
-    # df = denovo_filtered_sample_frame
-    #
-    # # Make proper columns for the next step (exon overlap)
-    # df['CHROM'] = df['CHROM'].map(lambda x: x.lstrip('chr'))
-    # df['Start'], df['End'], df['Chromosome'] = df.POS, df.END, df['CHROM']
-
-    return filtered_sample_frame
+    return parent_filtered_sample_frame
 
 
 
@@ -163,19 +126,21 @@ def exonOverlap(args, df):
 
 def tenxdeletions(args):
 
-    #load sample data
+    # Load sample data
     sample_frame = read10x(args.samplepath)
 
-    if not args.singleton:
-        # load parent data
+    # Load parent data
+    if args.type == 'trio' or args.father_duo:
         father_frame = read10x(args.fpath)
+    else:
+        father_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
+
+    if args.type == 'trio' or args.mother_duo:
         mother_frame = read10x(args.mpath)
     else:
         mother_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
-        father_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
 
-
-    #load reference data
+    # Load reference data
     ref_frame = read10x(args.referencepath)
 
     sample_copy, mother_copy, father_copy, ref_copy = sample_frame.copy(), mother_frame.copy(), father_frame.copy(), ref_frame.copy()
@@ -183,23 +148,21 @@ def tenxdeletions(args):
     for df in [sample_copy, mother_copy, father_copy, ref_copy]:
         df['Start'], df['End'], df['Chromosome'] = df.POS, df.END, df['CHROM']
 
-    #remove anything that overlaps with the reference
+    # Remove anything that overlaps with the reference
     filtered_sample_frame = checkRefOverlap(sample_copy, ref_copy, sample_frame)
 
-    #add column based on overlap with parents
-    if not args.singleton:
-        df = checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_frame)
-    else:
-        df = filtered_sample_frame
+    # Add column based on overlap with parents
+    filtered_sample_frame = checkParentsOverlap(sample_copy, father_copy, filtered_sample_frame, args, 'Found_in_Father')
+    filtered_sample_frame = checkParentsOverlap(sample_copy, mother_copy, filtered_sample_frame, args, 'Found_in_Mother')
 
-    #describe exon overlap
-    df['Start'], df['End'], df['Chromosome'] = df.POS, df.END, df['CHROM']
-    exon_calls = exonOverlap(args, df)
+    # Describe exon overlap
+    filtered_sample_frame['Start'], filtered_sample_frame['End'], filtered_sample_frame['Chromosome'] = filtered_sample_frame.POS, filtered_sample_frame.END, filtered_sample_frame['CHROM']
+    exon_calls = exonOverlap(args, filtered_sample_frame)
 
     # Write final output
     exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_10x_deletions_exons.txt', sep='\t', index = False)
 
-    return df, exon_calls
+    return filtered_sample_frame, exon_calls
 
 
 def main():
@@ -213,7 +176,9 @@ def main():
     parser.add_argument("-o", "--outputdirectory", help="Give the directory path for the output file", dest="outputdirectory", type=str, required=True)
     parser.add_argument("-e", "--exons", help="Give the file with exons intervals, names, and phenotypes here", dest="exons", type=str, required=True)
     parser.add_argument("-g", "--genelist", help="Primary genelist with scores", dest="genelist", type=str)
-    parser.add_argument("-S", help="Set this flag if this is a singleton case", dest="singleton", action='store_true')
+    parser.add_argument("-t", "--type", help="Specify whether this is a trio, duo, or singleton case", dest="type", type=str)
+    parser.add_argument("-F", help="Set this flag if this is a duo case AND only father is sequenced", dest="father_duo", action='store_true')
+    parser.add_argument("-M", help="Set this flag if this is a duo case AND only mother is sequenced", dest="mother_duo", action='store_true')
     args = parser.parse_args()
 
     # Actual function

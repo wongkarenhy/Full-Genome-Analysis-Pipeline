@@ -27,58 +27,27 @@ def readsmapTranslo(input, args):
     return(confident_df)
 
 
-def checkParentsOverlapTransloInv(filtered_sample_frame, sample_start, father_start, mother_start, sample_end, father_end, mother_end):
+
+def checkParentsOverlapTransloInv(filtered_sample_frame, sample_start, parent_start, sample_end, parent_end, args, inheritance):
+
+    if args.type == 'singleton' or (args.type == 'duo' and inheritance == 'Found_in_Father' and args.mother_duo) or  (args.type == 'duo' and inheritance == 'Found_in_Mother' and args.father_duo):
+        # Initialize columns and set to -1 if parents file not provided
+        filtered_sample_frame[inheritance] = 'None'
+        return filtered_sample_frame
 
     # new michelle's breakend script
-    denovo_start_f, denovo_start_m = PyRanges(sample_start).overlap(PyRanges(father_start)), PyRanges(sample_start).overlap(PyRanges(mother_start))
-    denovo_end_f, denovo_end_m = PyRanges(sample_end).overlap(PyRanges(father_end)), PyRanges(sample_end).overlap(PyRanges(mother_end))
-    denovo_f_frame = pd.merge(denovo_start_f.df, denovo_end_f.df['SmapEntryID'], on=['SmapEntryID']).drop_duplicates()
-    denovo_m_frame = pd.merge(denovo_start_m.df, denovo_end_m.df['SmapEntryID'], on=['SmapEntryID']).drop_duplicates()
-    if denovo_f_frame.empty:
-        filtered_sample_frame["Found_in_Father"] = "False"
-    if denovo_m_frame.empty:
-        filtered_sample_frame["Found_in_Mother"] = "False"
-    elif not (denovo_f_frame.empty and denovo_m_frame.empty):
-        f_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_f_frame, on=None, how='left',
-                                           indicator='Found_in_Father')
-        f_filtered_sample_frame['Found_in_Father'] = np.where(f_filtered_sample_frame.Found_in_Father == 'both', True,False)
-        f_filtered_sample_frame = f_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
-        m_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_m_frame, on=None, how='left',
-                                           indicator='Found_in_Mother')
-        m_filtered_sample_frame['Found_in_Mother'] = np.where(m_filtered_sample_frame.Found_in_Mother == 'both', True,False)
-        m_filtered_sample_frame = m_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
-        f_filtered_sample_frame['Found_in_Mother'] = m_filtered_sample_frame['Found_in_Mother']
-        filtered_sample_frame = f_filtered_sample_frame
+    denovo_start_parent = PyRanges(sample_start).overlap(PyRanges(parent_start))
+    denovo_end_parent = PyRanges(sample_end).overlap(PyRanges(parent_end))
+    denovo_parent_frame = pd.merge(denovo_start_parent.df, denovo_end_parent.df['SmapEntryID'], on=['SmapEntryID']).drop_duplicates()
+    if denovo_parent_frame.empty:
+        filtered_sample_frame[inheritance] = "False"
+    else:
+        parent_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_parent_frame, on=None, how='left',
+                                           indicator=inheritance)
+        parent_filtered_sample_frame[inheritance] = np.where(parent_filtered_sample_frame[inheritance] == 'both', 'True', 'False')
+        parent_filtered_sample_frame = parent_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
 
-    calls = filtered_sample_frame.drop(columns=['Chromosome', 'Start', 'End']).rename(columns={'Score': 'OMIM_syndrome', 'Score2': 'OMIM_syndrome2', 'Name': 'Gene', 'Name2': 'Gene2'}).drop_duplicates()
-
-    # denovo_start_f, denovo_start_m = PyRanges(sample_start).overlap(PyRanges(father_start)), PyRanges(sample_start).overlap(PyRanges(mother_start))
-    # denovo_end_f, denovo_end_m = PyRanges(sample_end).overlap(PyRanges(father_end)), PyRanges(sample_end).overlap(PyRanges(mother_end))
-    # denovo_f_frame = pd.concat([denovo_start_f.df, denovo_end_f.df], axis=0)
-    # denovo_m_frame = pd.concat([denovo_start_m.df, denovo_end_m.df], axis=0)
-    #
-    #
-    # if denovo_f_frame.empty:
-    #     filtered_sample_frame["Found_in_Father"] = "False"
-    #     filtered_sample_frame = filtered_sample_frame.rename(columns = {'Score':'OMIM_syndrome', 'Score2':'OMIM_syndrome2'}).drop_duplicates()
-    # else:
-    #     filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_f_frame, on=None, how='left', indicator='Found_in_Father')
-    #     filtered_sample_frame['Found_in_Father'] = np.where(filtered_sample_frame.Found_in_Father == 'both', True,False)
-    #     filtered_sample_frame = filtered_sample_frame.drop(columns = ['Chromosome', 'Start', 'End'])#.rename(columns = {'Score':'OMIM_syndrome', 'Score2':'OMIM_syndrome2'}).drop_duplicates()
-    #
-    #
-    # if denovo_m_frame.empty:
-    #     filtered_sample_frame["Found_in_Mother"] = "False"
-    #     calls = filtered_sample_frame.rename(columns = {'Score':'OMIM_syndrome', 'Score2':'OMIM_syndrome2'}).drop_duplicates()
-    #
-    # else:
-    #     # filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_f_frame, on=None, how='left', indicator='Found_in_Father')
-    #     # filtered_sample_frame['Found_in_Father'] = np.where(filtered_sample_frame.Found_in_Father == 'both', True,False)
-    #     denovo_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_m_frame, on=None, how='left',indicator='Found_in_Mother')
-    #     denovo_filtered_sample_frame['Found_in_Mother'] = np.where(denovo_filtered_sample_frame.Found_in_Mother == 'both', True, False)
-    #     calls = denovo_filtered_sample_frame.drop(columns = ['Chromosome', 'Start', 'End']).rename(columns = {'Score':'OMIM_syndrome', 'Score2':'OMIM_syndrome2'}).drop_duplicates()
-
-    return calls
+    return parent_filtered_sample_frame
 
 
 
@@ -100,26 +69,27 @@ def geneOverlapTransloInv(args, sample_start, sample_end, sample_frame):
         sample_frame = gene_start.df.filter(items=['SmapEntryID', 'Name', 'Score']).drop_duplicates().merge(sample_frame, on=['SmapEntryID'], how='right')
         sample_frame = sample_frame.merge(gene_end.df.rename(columns = {'Name':'Name2', 'Score':'Score2'}).filter(items=['SmapEntryID', 'Name2', 'Score2']), on=['SmapEntryID'], how='left')
 
-
     return (sample_frame)
-
 
 
 
 def BN_translocation(args):
 
-    #loadsample
+    # Loadsample
     sample_frame = readsmapTranslo(args.samplepath, args)
 
-    if not args.singleton:
-        #loadparent
-        mother_frame = readsmapTranslo(args.mpath, args)
+    # Load parent data
+    if args.type == 'trio' or args.father_duo:
         father_frame = readsmapTranslo(args.fpath, args)
     else:
-        mother_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1','RefcontigID2'])
         father_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1','RefcontigID2'])
 
-    #load reference
+    if args.type == 'trio' or args.mother_duo:
+        mother_frame = readsmapTranslo(args.mpath, args)
+    else:
+        mother_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1','RefcontigID2'])
+
+    # Load reference
     ref_frame = readsmapTranslo(args.referencepath, args)
 
     sample_start, sample_end, mother_start, mother_end, father_start, father_end, ref_start, ref_end = sample_frame.copy(), sample_frame.copy(), mother_frame.copy(), mother_frame.copy(), father_frame.copy(), father_frame.copy(), ref_frame.copy(), ref_frame.copy()
@@ -130,11 +100,10 @@ def BN_translocation(args):
     for df in [sample_end, mother_end, father_end, ref_end]: #create an interval for the translocation end point
         df['Start'], df['End'], df['Chromosome'] = df.RefEndPos - 20000, df.RefEndPos + 20000, df['RefcontigID2']
                     
-    #overlap start and end points with genes separately
+    # Overlap start and end points with genes separately
     sample_frame = geneOverlapTransloInv(args, sample_start, sample_end, sample_frame)
 
-
-    #remove anything that overlaps with the reference
+    # Remove anything that overlaps with the reference
     overlap_start = PyRanges(sample_start).overlap(PyRanges(ref_start))
     overlap_end = PyRanges(sample_end).overlap(PyRanges(ref_end))
     if overlap_start.df.empty and overlap_end.df.empty:
@@ -148,20 +117,17 @@ def BN_translocation(args):
             common = sample_frame.merge(overlap_frame,on=['SmapEntryID'])
             filtered_sample_frame = sample_frame[(~sample_frame.SmapEntryID.isin(common.SmapEntryID))]
 
-    #add column based on overlap with parents
-    if not args.singleton:
-        calls = checkParentsOverlapTransloInv(filtered_sample_frame, sample_start, father_start, mother_start, sample_end, father_end, mother_end)
-        cols = ['SmapEntryID', 'RefcontigID1', 'RefcontigID2', 'RefStartPos', 'RefEndPos', 'QryStartPos', 'QryEndPos',
-                'Confidence', 'Type', 'Zygosity', 'Genotype', 'Gene', 'OMIM_syndrome', 'Gene2', 'OMIM_syndrome2',
-                'Found_in_Father', 'Found_in_Mother']
+    # Add column based on overlap with parent
+    filtered_sample_frame = checkParentsOverlapTransloInv(filtered_sample_frame, sample_start, father_start, sample_end, father_end, args, 'Found_in_Father')
+    filtered_sample_frame = checkParentsOverlapTransloInv(filtered_sample_frame, sample_start, mother_start, sample_end, mother_end, args, 'Found_in_Mother')
 
+    # Clean up dataframe
+    if 'Chromosome' in list(filtered_sample_frame.columns):
+        calls = filtered_sample_frame.drop(columns=['Chromosome', 'Start', 'End']).rename(columns={'Name': 'Gene', 'Name2': 'Gene2', 'Score': 'OMIM_syndrome','Score2': 'OMIM_syndrome2'}).drop_duplicates()
     else:
-        calls = filtered_sample_frame.rename(columns={'Score': 'OMIM_syndrome', 'Score2': 'OMIM_syndrome2', 'Name': 'Gene', 'Name2': 'Gene2'})
-        cols = ['SmapEntryID', 'RefcontigID1', 'RefcontigID2', 'RefStartPos', 'RefEndPos', 'QryStartPos', 'QryEndPos',
-                'Confidence', 'Type', 'Zygosity', 'Genotype', 'Gene', 'OMIM_syndrome', 'Gene2', 'OMIM_syndrome2']
+        calls = filtered_sample_frame.rename(columns={'Name': 'Gene', 'Name2': 'Gene2', 'Score': 'OMIM_syndrome', 'Score2': 'OMIM_syndrome2'}).drop_duplicates()
 
     # Write output
-    calls = calls[cols].drop_duplicates()
     calls.to_csv(args.outputdirectory + '/confident_set/' + args.sampleID + '_Bionano_translocations.txt', sep='\t', index = False)
 
 
@@ -178,7 +144,9 @@ def main():
     parser.add_argument("-o", "--outputdirectory", help="Give the directory path for the output file",dest="outputdirectory", type=str, required=True)
     parser.add_argument("-c", "--confidence", help="Give the confidence level cutoff for the sample here",dest="confidence", type=str, default=0.5)
     parser.add_argument("-e", "--genes", help="Give the BED file with genes intervals, names, and phenotypes here",dest="genes", type=str, required=True)
-    parser.add_argument("-S", help="Set this flag if this is a singleton case", dest="singleton", action='store_true')
+    parser.add_argument("-t", "--type", help="Specify whether this is a trio, duo, or singleton case", dest="type", type=str)
+    parser.add_argument("-F", help="Set this flag if this is a duo case AND only father is sequenced", dest="father_duo", action='store_true')
+    parser.add_argument("-M", help="Set this flag if this is a duo case AND only mother is sequenced", dest="mother_duo", action='store_true')
     args = parser.parse_args()
 
 

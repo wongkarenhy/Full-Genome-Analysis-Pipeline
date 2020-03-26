@@ -13,19 +13,21 @@ import argparse
 
 def BN_insertion(args):
 
-    #loadsample
+    # Load Sample
     sample_frame = readsmap(args.samplepath, args, 'insertion')
 
-    if not args.singleton:
-        #loadparent
-        mother_frame = readsmap(args.mpath, args, 'insertion')
+    # Load parent data
+    if args.type == 'trio' or args.father_duo:
         father_frame = readsmap(args.fpath, args, 'insertion')
     else:
-        mother_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1'])
         father_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1'])
 
+    if args.type == 'trio' or args.mother_duo:
+        mother_frame = readsmap(args.mpath, args, 'insertion')
+    else:
+        mother_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1'])
 
-    #load reference
+    # Load reference
     ref_frame = readsmap(args.referencepath, args, 'insertion')
 
     # Actual fun
@@ -38,14 +40,12 @@ def BN_insertion(args):
     filtered_sample_frame = checkRefOverlap(sample_copy, ref_copy, sample_frame)
 
     #add column based on overlap with parents
-    if not args.singleton:
-        df = checkParentsOverlap(sample_copy, father_copy, mother_copy, filtered_sample_frame)
-    else:
-        df = filtered_sample_frame
+    filtered_sample_frame = checkParentsOverlap(sample_copy, father_copy, filtered_sample_frame, args, 'Found_in_Father')
+    filtered_sample_frame = checkParentsOverlap(sample_copy, mother_copy, filtered_sample_frame, args, 'Found_in_Mother')
 
     #describe exon overlap
-    df['Start'], df['End'], df['Chromosome'] = df.RefStartPos, df.RefEndPos, df['RefcontigID1']
-    exon_calls = exonOverlap(args, df)
+    filtered_sample_frame['Start'], filtered_sample_frame['End'], filtered_sample_frame['Chromosome'] = filtered_sample_frame.RefStartPos, filtered_sample_frame.RefEndPos, filtered_sample_frame['RefcontigID1']
+    exon_calls = exonOverlap(args, filtered_sample_frame)
 
     exon_calls.to_csv(args.outputdirectory + '/' + args.sampleID + '_Bionano_insertions.txt', sep='\t', index = False)
 
@@ -63,7 +63,9 @@ def main():
     parser.add_argument("-c", "--confidence", help="Give the confidence level cutoff for the sample here", dest="confidence", type=str, default=0.5)
     parser.add_argument("-e", "--exons", help="Give the file with exons intervals, names, and phenotypes here", dest="exons", type=str, required=True)
     parser.add_argument("-g", "--genelist", help="Primary genelist with scores", dest="genelist", type=str)
-    parser.add_argument("-S", help="Set this flag if this is a singleton case", dest="singleton", action='store_true')
+    parser.add_argument("-t", "--type", help="Specify whether this is a trio, duo, or singleton case", dest="type", type=str)
+    parser.add_argument("-F", help="Set this flag if this is a duo case AND only father is sequenced", dest="father_duo", action='store_true')
+    parser.add_argument("-M", help="Set this flag if this is a duo case AND only mother is sequenced", dest="mother_duo", action='store_true')
     args = parser.parse_args()
 
     # Actual function

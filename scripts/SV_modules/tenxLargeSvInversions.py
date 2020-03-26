@@ -51,52 +51,47 @@ def checkRefOverlapINVBND(sample_start, sample_end, ref_start, ref_end, sample_f
 
 
 
-def checkParentsOverlapINVBND(sample_start, father_start, mother_start, sample_end, father_end, mother_end, filtered_sample_frame):
+def checkParentsOverlapINVBND(sample_start, parent_start, sample_end, parent_end, filtered_sample_frame, args, inheritance):
 
-    denovo_start_f, denovo_start_m = PyRanges(sample_start).overlap(PyRanges(father_start)), PyRanges(sample_start).overlap(PyRanges(mother_start))
-    denovo_end_f, denovo_end_m = PyRanges(sample_end).overlap(PyRanges(father_end)), PyRanges(sample_end).overlap(PyRanges(mother_end))
-    #print(denovo_start_m)
-    #print(denovo_end_m)
-    denovo_f_frame = pd.merge(denovo_start_f.df, denovo_end_f.df['ID'], on=['ID']).drop_duplicates()
-    denovo_m_frame = pd.merge(denovo_start_m.df, denovo_end_m.df['ID'], on=['ID']).drop_duplicates()
 
-    if denovo_f_frame.empty:
-        filtered_sample_frame["Found_in_Father"] = "False"
-    if denovo_m_frame.empty:
-        filtered_sample_frame["Found_in_Mother"] = "False"
-    elif not (denovo_f_frame.empty and denovo_m_frame.empty):
-        f_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_f_frame, on=None, how='left',
-                                           indicator='Found_in_Father')
-        f_filtered_sample_frame['Found_in_Father'] = np.where(f_filtered_sample_frame.Found_in_Father == 'both', True,False)
-        f_filtered_sample_frame = f_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
-        m_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_m_frame, on=None, how='left',
-                                           indicator='Found_in_Mother')
-        m_filtered_sample_frame['Found_in_Mother'] = np.where(m_filtered_sample_frame.Found_in_Mother == 'both', True,False)
-        m_filtered_sample_frame = m_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
-        f_filtered_sample_frame['Found_in_Mother'] = m_filtered_sample_frame['Found_in_Mother']
-        filtered_sample_frame = f_filtered_sample_frame
+    if args.type == 'singleton' or (args.type == 'duo' and inheritance == 'Found_in_Father' and args.mother_duo) or  (args.type == 'duo' and inheritance == 'Found_in_Mother' and args.father_duo):
+        # Initialize columns and set to -1 if parents file not provided
+        filtered_sample_frame[inheritance] = 'None'
+        return filtered_sample_frame
 
-    calls = filtered_sample_frame.drop(columns=['Chromosome', 'Start', 'End']).rename(columns={'Name':'Gene', 'Name2':'Gene2', 'Score': 'OMIM_syndrome', 'Score2': 'OMIM_syndrome2'}).drop_duplicates()
+    denovo_start_parent = PyRanges(sample_start).overlap(PyRanges(parent_start))
+    denovo_end_parent = PyRanges(sample_end).overlap(PyRanges(parent_end))
+    denovo_parent_frame = pd.merge(denovo_start_parent.df, denovo_end_parent.df['ID'], on=['ID']).drop_duplicates()
 
-    return calls
+    if denovo_parent_frame.empty:
+        filtered_sample_frame[inheritance] = 'False'
+    else:
+        parent_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_parent_frame, on=None, how='left', indicator=inheritance)
+        parent_filtered_sample_frame[inheritance] = np.where(parent_filtered_sample_frame[inheritance] == 'both', 'True', 'False')
+        parent_filtered_sample_frame = parent_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
+
+    return parent_filtered_sample_frame
 
 
 
 def tenxlargesvinversions(args):
 
-    #load sample data
+    # Load sample data
     sample_frame = read10xlargeSVs(args.samplepath, '<INV>', False)
 
-    if not args.singleton:
-        #load parent data
+    # Load parent data
+    if args.type == 'trio' or args.father_duo:
         father_frame = read10xlargeSVs(args.fpath, '<INV>', False)
+    else:
+        father_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
+
+    if args.type == 'trio' or args.mother_duo:
         mother_frame = read10xlargeSVs(args.mpath, '<INV>', False)
     else:
         mother_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
-        father_frame = pd.DataFrame(columns=['POS', 'END', 'CHROM'])
 
 
-    #load reference data
+    # Load reference data
     ref_frame = read10xlargeSVs(args.referencepath, '<INV>', False)
 
     sample_start, sample_end, mother_start, mother_end, father_start, father_end, ref_start, ref_end = sample_frame.copy(), sample_frame.copy(), mother_frame.copy(), mother_frame.copy(), father_frame.copy(), father_frame.copy(), ref_frame.copy(), ref_frame.copy()
@@ -107,24 +102,22 @@ def tenxlargesvinversions(args):
     for df in [sample_end, father_end, mother_end, ref_end]: #create an interval for the inversion end point
         df['Start'], df['End'], df['Chromosome'] = df.END - 10000, df.END + 10000, df['CHROM']
 
-    # #overlap start and end points with genes separately
-    sample_frame =  geneOverlapINVBND(args, sample_start, sample_end, sample_frame)
+    # Overlap start and end points with genes separately
+    sample_frame = geneOverlapINVBND(args, sample_start, sample_end, sample_frame)
 
-    #remove anything that overlaps with the reference
+    # Remove anything that overlaps with the reference
     filtered_sample_frame = checkRefOverlapINVBND(sample_start, sample_end, ref_start, ref_end, sample_frame)
     
-    #add column based on overlap with parent
-    if not args.singleton:
-        calls = checkParentsOverlapINVBND(sample_start, father_start, mother_start, sample_end, father_end, mother_end, filtered_sample_frame)
-        cols = ['CHROM', 'POS', 'ID', 'REF', 'ALT_1', 'ALT_2', 'ALT_3', 'QUAL', 'FILTER_PASS', 'END', 'SVLEN', 'Gene', 'OMIM_syndrome', 'Gene2', 'OMIM_syndrome2', 'Found_in_Father', 'Found_in_Mother']
+    # Add column based on overlap with parent
+    filtered_sample_frame = checkParentsOverlapINVBND(sample_start, father_start, sample_end, father_end, filtered_sample_frame, args,'Found_in_Father')
+    filtered_sample_frame = checkParentsOverlapINVBND(sample_start, mother_start, sample_end, mother_end, filtered_sample_frame, args,'Found_in_Mother')
 
+    # Clean up dataframe
+    if 'Chromosome' in list(filtered_sample_frame.columns):
+        calls = filtered_sample_frame.drop(columns=['Chromosome', 'Start', 'End']).rename(columns={'Name': 'Gene', 'Name2': 'Gene2', 'Score': 'OMIM_syndrome','Score2': 'OMIM_syndrome2'}).drop_duplicates()
     else:
-        calls = filtered_sample_frame.rename(columns={'Name':'Gene', 'Name2':'Gene2', 'Score': 'OMIM_syndrome', 'Score2': 'OMIM_syndrome2'})
-        cols = ['CHROM' ,'POS' ,'ID' ,'REF', 'ALT_1', 'ALT_2', 'ALT_3', 'QUAL', 'FILTER_PASS', 'END', 'SVLEN','Gene', 'OMIM_syndrome', 'Gene2', 'OMIM_syndrome2']
+        calls = filtered_sample_frame.rename(columns={'Name': 'Gene', 'Name2': 'Gene2', 'Score': 'OMIM_syndrome', 'Score2': 'OMIM_syndrome2'}).drop_duplicates()
 
-
-    # Write final output
-    calls = calls[cols].drop_duplicates()
     calls.to_csv(args.outputdirectory + '/confident_set/' + args.sampleID + '_10x_inversions_largeSV.txt', sep='\t', index = False)
 
 
@@ -138,7 +131,9 @@ def main():
     parser.add_argument("-r", "--referencepath", help="Give the full path to the reference file", dest="referencepath", type=str, required=True)
     parser.add_argument("-o", "--outputdirectory", help="Give the directory path for the output file", dest="outputdirectory", type=str, required=True)
     parser.add_argument("-g", "--genes", help="Give the file with gene-level intervals, names, and phenotypes here", dest="genes", type=str, required=True)
-    parser.add_argument("-S", help="Set this flag if this is a singleton case", dest="singleton", action='store_true')
+    parser.add_argument("-t", "--type", help="Specify whether this is a trio, duo, or singleton case", dest="type", type=str)
+    parser.add_argument("-F", help="Set this flag if this is a duo case AND only father is sequenced", dest="father_duo", action='store_true')
+    parser.add_argument("-M", help="Set this flag if this is a duo case AND only mother is sequenced", dest="mother_duo", action='store_true')
     args = parser.parse_args()
 
     # Actual function

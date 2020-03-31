@@ -217,7 +217,7 @@ $SAMPLEID_Bionano_inversions.txt/$SAMPLEID_10x_inversions_largeSV.txt<br>
 Small indels in the phased_variants.vcf.gz (specifically insertions larger than 5bp) are likely to be false positives. These are usually reported as de novo variants. Similar clipped read signature can be found in the parents usually. <br>
 Large number of false positives in 10x SV calls. <br>
 
-## Pre-processing step for SNPs and indels (must run this separately before running the clinical interpretation pipeline):<br>
+## Pre-processing step for SNPs and indels (must run this separately before running the clinical interpretation pipeline; only run on probands):<br>
 **Step 1.** Change directory to the InterVar installation location<br>
 ```
 cd /media/KwokRaid02/karen/software/InterVar<br>
@@ -242,7 +242,7 @@ awk '{print $6}' ./example/BC00103.hg38_multianno.txt.intervar.FINAL | \
     sort -u > ./example/BC00103_smallVariant_geneList.txt
 ```
 ## Actual analysis:<br>
-**Example command** <br>
+**Example command** (only run on probands)<br>
 ```
 bash /media/KwokRaid05/karen/ciapm/FGA/scripts/run_clinical_interpretation_pipeline.sh \
     -j /media/KwokRaid05/karen/ciapm/jsons/BC00103.json \

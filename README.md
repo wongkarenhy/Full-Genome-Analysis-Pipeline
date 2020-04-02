@@ -37,7 +37,7 @@ All coordinates are based on hg38.<br>
 
 **Command (must run pre-processing before this):**<br>
 ```
-bash run_clinical_interpretation_pipeline.sh [-j path_to_json or None] [-w work_dir] [-s sample_id] [-i path_to_intervar] [-b true/false] [-e DLE/BspQI/None] [-l true/false] [-t trio/singleton/duo] [-f father_SNP_vcf_file_path or None if singleton or duo] [-m mother_SNP_vcf_file_path or None if singleton or duo] [-r hg19/hg38] [-a path_to_custom_artifact_file or None]
+bash run_clinical_interpretation_pipeline.sh [-j path_to_json or None] [-w work_dir] [-s sample_id] [-i path_to_intervar] [-b true/false] [-e DLE/BspQI/None] [-l true/false] [-t trio/singleton/duo] [-f father_SNP_vcf_file_path or None if singleton or duo] [-m mother_SNP_vcf_file_path or None if singleton or duo] [-r hg19/hg38] [-a path_to_custom_artifact_file or None] [-x true/false]
 ```
 
 **General assumptions about this program:**
@@ -66,8 +66,10 @@ bash run_clinical_interpretation_pipeline.sh [-j path_to_json or None] [-w work_
     Specify the path to the mother's SNP/indel vcf file. Input 'None' if running in singleton mode (or duo if mother is missing). <br>
 11. **[-r hg19/hg38]** <br>
     Specific the reference version.<br>
-12, **[-a path_to_custom_artifact_file or None]** <br>
-    Specific a custom SNV artifact tab-delimited bed file. Use None if no such file is provided.
+12. **[-a path_to_custom_artifact_file or None]** <br>
+    Specific a custom SNV artifact tab-delimited bed file. Use None if no such file is provided.<br>
+13. **[-x xlink:true or false]** <br>
+    Use this flag if the proband is male. Using this flag additionally generates an x-linked recessive SNPs/indels file.<br>
    
 **Database files from HPO**<br>
 http://purl.obolibrary.org/obo/hp.obo
@@ -104,14 +106,14 @@ To get started, pull the github repo and create two additional directories (bion
 │   │   │   └── exp_refineFinal1_merged_filter.smap 
 │   │   └── BC00103
 │   │       └── exp_refineFinal1_merged_filter.smap 
-│   └── DLE<br>
+│   └── DLE
 │       ├── BC02101
 │       │   └── exp_refineFinal1_merged_filter.smap 
 │       ├── BC02102
 │       │   └── exp_refineFinal1_merged_filter.smap 
 │       └── BC02103
 │           └── exp_refineFinal1_merged_filter.smap 
-└── controls
+└── controls # Only two files are included for illustration purpose
     ├── BspQI
     │   └── HG00251
     │       └── exp_refineFinal1_merged_filter.smap 
@@ -253,7 +255,8 @@ bash /media/KwokRaid05/karen/ciapm/FGA/scripts/run_clinical_interpretation_pipel
     -f /media/KwokRaid04/CIAPM/CIAPM_longranger/BC00101_longranger/outs/phased_variants.vcf.gz \
     -m /media/KwokRaid04/CIAPM/CIAPM_longranger/BC00102_longranger/outs/phased_variants.vcf.gz \
     -r hg38 \
-    -a None
+    -a None \
+    -x false \
 ```
 
 

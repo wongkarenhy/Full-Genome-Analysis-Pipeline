@@ -1,0 +1,2 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+22	20039552	call_40	C	<DEL>			222.0	True	20075707	-36155	True	False	TANGO2	['Metabolic encephalomyopathic crises, recurrent, with rhabdomyolysis, cardiac arrhythmias, and neurodegeneration, 616878 (3)']	11.232489070000007	12.4826259666577

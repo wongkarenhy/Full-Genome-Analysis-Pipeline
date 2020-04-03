@@ -1,0 +1,100 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+10	47600047	call_1541	T	<INV>			5.0	False	47648046	47999	ANXA8	.	ANXA8	.	False	False
+10	47600047	call_1541	T	<INV>			5.0	False	47648046	47999	LINC02675	.	ANXA8	.	False	False
+10	94182553	call_2380	A	<INV>			4.0	False	94232084	49531	PLCE1	['Nephrotic syndrome, type 3, 610725 (3)']	PLCE1	['Nephrotic syndrome, type 3, 610725 (3)']	False	False
+11	25999893	call_1059	T	<INV>			6.0	False	26042428	42535					False	False
+11	89747958	call_388	A	<INV>			13.0	False	89823751	75793			LOC105369176	.	False	False
+11	132707849	call_3603	C	<INV>			3.0	False	132805595	97746	OPCML	['Ovarian cancer, somatic, 167000 (3)']	OPCML	['Ovarian cancer, somatic, 167000 (3)']	False	False
+13	56387266	call_1107	G	<INV>			6.0	False	56417440	30174	LOC105370214	.	LOC105370214	.	False	False
+17	68096890	call_3893	T	<INV>			3.0	False	68138515	41625	LINC00674	.	LINC00674	.	False	False
+19	20417251	call_3942	C	<INV>			3.0	False	20491534	74283	ZNF826P	.	LOC105372316	.	False	False
+2	106367487	call_2761	T	<INV>			4.0	False	106417518	50031	LOC402096	.	RGPD3	.	False	False
+2	112510588	call_624	C	<INV>			8.0	False	112544396	33808	TTL	.	TTL	.	False	False
+2	112510588	call_624	C	<INV>			8.0	False	112544396	33808	TTL	.	LOC105373562	.	False	False
+2	112510588	call_624	C	<INV>			8.0	False	112544396	33808	TTL	.	POLR1B	.	False	False
+2	162409081	call_1830	A	<INV>			5.0	False	162480286	71205	KCNH7	.	KCNH7	.	False	False
+20	17684336	call_2822	G	<INV>			4.0	False	17726418	42082	RRBP1	.	BANF2	.	False	False
+20	17684336	call_2822	G	<INV>			4.0	False	17726418	42082	BANF2	.	BANF2	.	False	False
+20	58661982	call_4129	C	<INV>			3.0	False	58693095	31113	STX16-NPEPL1	.	STX16-NPEPL1	.	False	False
+20	58661982	call_4129	C	<INV>			3.0	False	58693095	31113	STX16-NPEPL1	.	NPEPL1	.	False	False
+20	58661982	call_4129	C	<INV>			3.0	False	58693095	31113	STX16	['Pseudohypoparathyroidism, type IB, 603233 (3)']	STX16-NPEPL1	.	False	False
+20	58661982	call_4129	C	<INV>			3.0	False	58693095	31113	STX16	['Pseudohypoparathyroidism, type IB, 603233 (3)']	NPEPL1	.	False	False
+22	23070019	call_4163	G	<INV>			3.0	False	23124772	54753	RSPH14	.	RSPH14	.	False	False
+22	23070019	call_4163	G	<INV>			3.0	False	23124772	54753	RSPH14	.	GNAZ	.	False	False
+22	23070019	call_4163	G	<INV>			3.0	False	23124772	54753	GNAZ	.	RSPH14	.	False	False
+22	23070019	call_4163	G	<INV>			3.0	False	23124772	54753	GNAZ	.	GNAZ	.	False	False
+3	74810681	call_2915	A	<INV>			4.0	False	74842006	31325			LOC105377167	.	False	False
+3	94111981	call_4216	T	<INV>			3.0	False	94167587	55606	NSUN3	.			False	False
+3	94550693	call_871	A	<INV>			7.0	False	94582766	32073					False	False
+3	171882143	call_1948	T	<INV>			5.0	False	171924392	42249	TMEM212-AS1	.	LOC105374218	.	False	False
+4	63605079	call_1965	T	<INV>			5.0	False	63643819	38740					False	False
+5	29902808	call_4367	T	<INV>			3.0	False	29944498	41690			LOC105374705	.	False	False
+5	97522386	call_1334	A	<INV>			6.0	False	97563960	41574	LINC01340	.	LINC01340	.	False	False
+5	162555167	call_3083	A	<INV>			4.0	False	162582253	27086	LOC105377697	.	LOC105377697	.	False	False
+5	174218250	call_4430	C	<INV>			3.0	False	174287035	68785					False	False
+6	45459104	call_1357	A	<INV>			6.0	False	45507061	47957	RUNX2	['Cleidocranial dysplasia, 119600 (3)', 'Cleidocranial dysplasia, forme fruste, dental anomalies only, 119600 (3)', 'Cleidocranial dysplasia, forme fruste, with brachydactyly, 119600 (3)', 'Metaphyseal dysplasia with maxillary hypoplasia with or without brachydactyly, 156510 (3)']	RUNX2	['Cleidocranial dysplasia, 119600 (3)', 'Cleidocranial dysplasia, forme fruste, dental anomalies only, 119600 (3)', 'Cleidocranial dysplasia, forme fruste, with brachydactyly, 119600 (3)', 'Metaphyseal dysplasia with maxillary hypoplasia with or without brachydactyly, 156510 (3)']	False	False
+6	49609966	call_4463	G	<INV>			3.0	False	49644132	34166	RHAG	['Anemia, hemolytic, Rh-null, regulator type, 268150 (3)', 'Overhydrated hereditary stomatocytosis, 185000 (3)']	RHAG	['Anemia, hemolytic, Rh-null, regulator type, 268150 (3)', 'Overhydrated hereditary stomatocytosis, 185000 (3)']	False	False
+6	82051589	call_4479	A	<INV>			3.0	False	82109316	57727	LINC02542	.	LINC02542	.	False	False
+6	82051589	call_4479	A	<INV>			3.0	False	82109316	57727	LINC02542	.	LOC107986617	.	False	False
+6	82051589	call_4479	A	<INV>			3.0	False	82109316	57727	LOC107986617	.	LINC02542	.	False	False
+6	82051589	call_4479	A	<INV>			3.0	False	82109316	57727	LOC107986617	.	LOC107986617	.	False	False
+7	85664763	call_4569	G	<INV>			3.0	False	85710828	46065					False	False
+7	145393847	call_1404	A	<INV>			6.0	False	145431402	37555					False	False
+7	154718057	call_4605	A	<INV>			3.0	False	154777101	59044	DPP6	['Mental retardation, autosomal dominant 33, 616311 (3)', '{Ventricular fibrillation, paroxysmal familial, 2}, 612956 (3)']	DPP6	['Mental retardation, autosomal dominant 33, 616311 (3)', '{Ventricular fibrillation, paroxysmal familial, 2}, 612956 (3)']	False	False
+8	83880952	call_2163	A	<INV>			5.0	False	83934350	53398					False	False
+9	11362841	call_1429	T	<INV>			6.0	False	11399117	36276	LOC105375974	.	LOC105375974	.	False	False
+9	62091199	call_551	T	<INV>			9.0	False	62140179	48980	LOC107987008	.			True	False
+9	80223457	call_3291	T	<INV>			4.0	False	80278625	55168					False	False
+9	101266950	call_2203	A	<INV>			5.0	False	101316377	49427	PLPPR1	.	PLPPR1	.	False	False
+X	52235916	call_1451	G	<INV>			6.0	False	52267229	31313	LOC105377209	.	LOC105377209	.	False	False
+X	53479761	call_4773	A	<INV>			3.0	False	53517067	37306					False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	SPRY3	.	SPRY3	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	SPRY3	.	VAMP7	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	SPRY3	.	IL9R	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	SPRY3	.	WASIR1	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	SPRY3	.	DDX11L16	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	VAMP7	.	SPRY3	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	VAMP7	.	VAMP7	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	VAMP7	.	IL9R	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	VAMP7	.	WASIR1	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	VAMP7	.	DDX11L16	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	IL9R	.	SPRY3	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	IL9R	.	VAMP7	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	IL9R	.	IL9R	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	IL9R	.	WASIR1	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	IL9R	.	DDX11L16	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	WASIR1	.	SPRY3	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	WASIR1	.	VAMP7	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	WASIR1	.	IL9R	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	WASIR1	.	WASIR1	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	WASIR1	.	DDX11L16	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	DDX11L16	.	SPRY3	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	DDX11L16	.	VAMP7	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	DDX11L16	.	IL9R	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	DDX11L16	.	WASIR1	.	False	False
+X	68777455	call_976	A	<INV>			7.0	False	68812225	34770	DDX11L16	.	DDX11L16	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	SPRY3	.	SPRY3	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	SPRY3	.	VAMP7	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	SPRY3	.	IL9R	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	SPRY3	.	WASIR1	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	SPRY3	.	DDX11L16	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	VAMP7	.	SPRY3	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	VAMP7	.	VAMP7	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	VAMP7	.	IL9R	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	VAMP7	.	WASIR1	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	VAMP7	.	DDX11L16	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	IL9R	.	SPRY3	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	IL9R	.	VAMP7	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	IL9R	.	IL9R	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	IL9R	.	WASIR1	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	IL9R	.	DDX11L16	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	WASIR1	.	SPRY3	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	WASIR1	.	VAMP7	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	WASIR1	.	IL9R	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	WASIR1	.	WASIR1	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	WASIR1	.	DDX11L16	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	DDX11L16	.	SPRY3	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	DDX11L16	.	VAMP7	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	DDX11L16	.	IL9R	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	DDX11L16	.	WASIR1	.	False	False
+X	92706962	call_2245	A	<INV>			5.0	False	92773013	66051	DDX11L16	.	DDX11L16	.	False	False

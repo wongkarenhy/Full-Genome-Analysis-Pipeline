@@ -1,0 +1,2 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+6	160498897	call_261	C	<DEL>			29.0	True	160533146	-34249	True	False	LPA	['[LPA deficiency, congenital] (3)', '{Coronary artery disease, susceptibility to} (1)']	0.0	0.0

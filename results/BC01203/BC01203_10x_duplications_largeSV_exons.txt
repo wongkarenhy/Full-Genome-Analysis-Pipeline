@@ -1,0 +1,17 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+11	105894162	call_3043	G	<DUP:TANDEM>			2.0	False	105964983	70821	False	False	GRIA4	['Neurodevelopmental disorder with or without seizures and gait abnormalities, 617864 (3)']	24.21945224099977	100.0
+11	94068241	call_3039	T	<DUP:TANDEM>			2.0	False	94147425	79184	False	False	HEPHL1	['?Abnormal hair, joint laxity, and developmental delay, 261990 (3)']	17.957784186999955	74.1461202685675
+6	42948793	call_2691	G	<DUP:TANDEM>			3.0	False	42988068	39275	False	False	PEX6	['Heimler syndrome 2, 616617 (3)', 'Peroxisome biogenesis disorder 4A (Zellweger), 614862 (3)', 'Peroxisome biogenesis disorder 4B, 614863 (3)']	14.236208761999977	58.780060838454006
+11	26102272	call_3010	G	<DUP:TANDEM>			2.0	False	26244232	141960	False	False	ANO3	['Dystonia 24, 615034 (3)']	10.536564214999995	43.50455208546471
+19	17769472	call_3294	C	<DUP:TANDEM>			2.0	False	17827338	57866	False	False	JAK3	['SCID, autosomal recessive, T-negative/B-positive type, 600802 (3)']	10.092917532999998	41.67277373810402
+10	69958612	call_2162	A	<DUP:TANDEM>			3.0	False	69997467	38855	False	False	COL13A1	['Myasthenic syndrome, congenital, 19, 616720 (3)']	7.935386502000007	32.76451681498655
+1	2324410	call_2892	A	<DUP:TANDEM>			2.0	False	2435743	111333	False	False	PEX10	['Peroxisome biogenesis disorder 6A (Zellweger), 614870 (3)', 'Peroxisome biogenesis disorder 6B, 614871 (3)']	7.746308930000007	31.983832057467875
+2	231559372	call_3399	A	<DUP:TANDEM>			2.0	False	231753538	194166	False	False	PDE6D	['?Joubert syndrome 22, 615665 (3)']	7.171110305000006	29.608887243372212
+X	153872959	call_2889	A	<DUP:TANDEM>			3.0	False	153912572	39613	False	False	L1CAM	['CRASH syndrome, 303350 (3)', 'Corpus callosum, partial agenesis of, 304100 (3)', 'Hydrocephalus due to aqueductal stenosis, 307000 (3)', 'Hydrocephalus with Hirschsprung disease, 307000 (3)', 'Hydrocephalus with congenital idiopathic intestinal pseudoobstruction, 307000 (3)', 'MASA syndrome, 303350 (3)']	2.2327617850000023	9.218878126484972
+2	189505936	call_3384	T	<DUP:TANDEM>			2.0	False	189610152	104216	False	False	SLC40A1	['Hemochromatosis, type 4, 606069 (3)']	2.231478085000002	9.213577841461074
+12	40211555	call_60	T	<DUP:TANDEM>			47.0	True	40284483	72928	False	True	LRRK2	['{Parkinson disease 8}, 607060 (3)']	1.594410995000002	6.583183546574649
+6	5383782	call_3619	T	<DUP:TANDEM>			2.0	False	5457754	73972	False	False	FARS2	['Combined oxidative phosphorylation deficiency 14, 614946 (3)', 'Spastic paraplegia 77, autosomal recessive, 617046 (3)']	1.4262700950000011	5.888944476562304
+9	16785270	call_3783	T	<DUP:TANDEM>			2.0	False	16871829	86559	False	False	BNC2	['Lower urinary tract obstruction, congenital, 618612 (3)']	1.3334574050000008	5.505728997217635
+19	33639436	call_3302	T	<DUP:TANDEM>			2.0	False	33708711	69275	False	False	CHST8	['?Peeling skin syndrome 3, 616265 (3)']	1.2426967430000004	5.130986162008684
+6	42948793	call_2691	G	<DUP:TANDEM>			3.0	False	42988068	39275	False	False	PPP2R5D	['Mental retardation, autosomal dominant 35, 616355 (3)']	0.733388912	3.0280986733402933
+4	68530638	call_3548	C	<DUP:TANDEM>			2.0	False	68585223	54585	False	False	UGT2B17	['{Bone mineral density QTL 12, osteoporosis}, 612560 (3)']	0.0	0.0

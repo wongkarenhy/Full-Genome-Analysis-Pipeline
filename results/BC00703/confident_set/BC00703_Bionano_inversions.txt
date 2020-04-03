@@ -1,0 +1,21 @@
+SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+1602	C1QTNF3	.	5	5	34193974.0	34193974.0	211616.0	563023.7	0.01	inversion	homozygous	1	C1QTNF3	.	False	False
+1602	C1QTNF3	.	5	5	34193974.0	34193974.0	211616.0	563023.7	0.01	inversion	homozygous	1	LOC646652	.	False	False
+1602	LOC646652	.	5	5	34193974.0	34193974.0	211616.0	563023.7	0.01	inversion	homozygous	1	C1QTNF3	.	False	False
+1602	LOC646652	.	5	5	34193974.0	34193974.0	211616.0	563023.7	0.01	inversion	homozygous	1	LOC646652	.	False	False
+1997	METTL24	.	6	6	110324670.0	110324670.0	323073.9	323073.9	0.0	inversion	homozygous	1	METTL24	.	True	False
+1997	METTL24	.	6	6	110324670.0	110324670.0	323073.9	323073.9	0.0	inversion	homozygous	1	LOC102724586	.	True	False
+1997	LOC102724586	.	6	6	110324670.0	110324670.0	323073.9	323073.9	0.0	inversion	homozygous	1	METTL24	.	True	False
+1997	LOC102724586	.	6	6	110324670.0	110324670.0	323073.9	323073.9	0.0	inversion	homozygous	1	LOC102724586	.	True	False
+2997	GAS2L1P2	.	9	9	97067589.0	97084498.0	20628.7	23188.1	0.03	inversion	homozygous	1	GAS2L1P2	.	False	False
+2997	GAS2L1P2	.	9	9	97067589.0	97084498.0	20628.7	23188.1	0.03	inversion	homozygous	1	LOC107987104	.	False	False
+4336	LOC105371024	.	15	15	100705854.0	100705854.0	58686.8	58686.8	0.99	inversion_paired	homozygous	1	LOC105371024	.	True	False
+4337	LOC105371024	.	15	15	100722903.0	100722903.0	40882.0	40882.0	0.99	inversion_paired	homozygous	1	LOC105371024	.	True	False
+4344	LOC105371024	.	15	15	100705854.0	100705854.0	58686.8	58686.8	0.99	inversion_paired	homozygous	1	LOC105371024	.	True	False
+4345	LOC105371024	.	15	15	100722903.0	100722903.0	40882.0	40882.0	0.99	inversion_paired	homozygous	1	LOC105371024	.	True	False
+4707	MAPT	['Dementia, frontotemporal, with or without parkinsonism, 600274 (3)', 'Pick disease, 172700 (3)', 'Supranuclear palsy, progressive atypical, 260540 (3)', 'Supranuclear palsy, progressive, 601104 (3)', '{Parkinson disease, susceptibility to}, 168600 (3)']	17	17	45935444.0	46512106.0	276665.7	584021.5	0.0	inversion	heterozygous	2	ARL17A	.	False	False
+4707	MAPT	['Dementia, frontotemporal, with or without parkinsonism, 600274 (3)', 'Pick disease, 172700 (3)', 'Supranuclear palsy, progressive atypical, 260540 (3)', 'Supranuclear palsy, progressive, 601104 (3)', '{Parkinson disease, susceptibility to}, 168600 (3)']	17	17	45935444.0	46512106.0	276665.7	584021.5	0.0	inversion	heterozygous	2	LRRC37A2	.	False	False
+4707	LOC105371800	.	17	17	45935444.0	46512106.0	276665.7	584021.5	0.0	inversion	heterozygous	2	ARL17A	.	False	False
+4707	LOC105371800	.	17	17	45935444.0	46512106.0	276665.7	584021.5	0.0	inversion	heterozygous	2	LRRC37A2	.	False	False
+5791			X	23	584711.0	584711.0	358284.4	430212.5	0.99	inversion_paired	heterozygous	1			False	False
+6043			24	Y	23929260.0	24368281.0	1025423.4	1056059.9	0.0	inversion	homozygous	1			False	False

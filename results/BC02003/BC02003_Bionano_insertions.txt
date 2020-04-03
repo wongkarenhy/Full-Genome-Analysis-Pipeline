@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+59	1	1	5939980.0	5951631.0	26724.8	44554.0	1.0	insertion	heterozygous	1	6178.0	False	True	NPHP4	['Nephronophthisis 4, 606966 (3)', 'Senior-Loken syndrome 4, 606996 (3)']	14.660752440000001	10.305479344542128

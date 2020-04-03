@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+7	73120000	73180000	call_4358	G	<DEL>	2.0	False	-60000	False	False	DISTAL 7Q11.23 MICRODELETION SYNDROME	 7q11.23 	0.0012813640000000001	0.04837234965757877

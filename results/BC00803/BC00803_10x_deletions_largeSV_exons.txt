@@ -1,0 +1,2 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+2	232338988	call_3266	T	<DEL>			2.0	False	232448865	-109877	False	False	DIS3L2	['Perlman syndrome, 267000 (3)']	57.38276152799871	52.49926959274267

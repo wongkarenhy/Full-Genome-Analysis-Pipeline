@@ -1,0 +1,13 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+2	177418008	call_3689	C	<DUP:TANDEM>			2.0	False	177526632	108624	False	False	AGPS	['Rhizomelic chondrodysplasia punctata, type 3, 600121 (3)']	61.16534956299893	60.17067632180824
+7	781569	call_3318	T	<DUP:TANDEM>			3.0	False	887013	105444	False	False	DNAAF5	['Ciliary dyskinesia, primary, 18, 614874 (3)']	55.89422484399912	54.98527083349095
+6	34224874	call_3298	A	<DUP:TANDEM>			3.0	False	34304510	79636	False	False	HMGA1	['{Diabetes mellitus, noninsulin-dependent, susceptibility to}, 125853 (3)']	54.99815120099921	54.1037691741582
+15	50999271	call_2146	T	<DUP:TANDEM>			5.0	False	51054085	54814	False	False	AP4E1	['Spastic paraplegia 51, autosomal recessive, 613744 (3)', 'Stuttering, familial persistent, 1, 184450 (3)']	46.01218971299942	45.263937733682745
+19	4671495	call_1728	A	<DUP:TANDEM>			6.0	False	4737713	66218	False	False	DPP9	.	43.928308681999496	43.21394485527526
+13	101680713	call_3054	A	<DUP:TANDEM>			3.0	False	101735076	54363	False	False	FGF14	['Spinocerebellar ataxia 27, 609307 (3)']	43.04853698999954	42.34848004399521
+14	92471778	call_3067	A	<DUP:TANDEM>			3.0	False	92545730	73952	False	False	SLC24A4	['Amelogenesis imperfecta, type IIA5, 615887 (3)', '[Skin/hair/eye pigmentation 6, blond/brown hair], 210750 (3)', '[Skin/hair/eye pigmentation 6, blue/green eyes], 210750 (3)']	43.04453698999954	42.344545092147364
+4	56019851	call_1842	A	<DUP:TANDEM>			6.0	False	56053365	33514	False	False	CEP135	['Microcephaly 8, primary, autosomal recessive, 614673 (3)']	32.84204999899975	32.30797133267568
+7	157341353	call_3343	T	<DUP:TANDEM>			3.0	False	157394655	53302	False	False	DNAJB6	['Muscular dystrophy, limb-girdle, autosomal dominant 1, 603511 (3)']	19.736640353999974	19.41568235782424
+2	49146057	call_2210	A	<DUP:TANDEM>			5.0	False	49201457	55400	False	False	FSHR	['Ovarian dysgenesis 1, 233300 (3)', 'Ovarian hyperstimulation syndrome, 608115 (3)', 'Ovarian response to FSH stimulation, 276400 (3)']	16.300423254000037	16.03534515101075
+1	8433744	call_3417	G	<DUP:TANDEM>			2.0	False	8511010	77266	False	False	RERE	['Neurodevelopmental disorder with or without anomalies of the brain, eye, or heart, 616975 (3)']	8.854542131000002	8.710549230058106
+8	132892873	call_2412	G	<DUP:TANDEM>			5.0	False	132933531	40658	False	False	TG	['Thyroid dyshormonogenesis 3, 274700 (3)', '{Autoimmune thyroid disease, susceptibility to, 3}, 608175 (3)']	5.404135992999998	5.316253727920222

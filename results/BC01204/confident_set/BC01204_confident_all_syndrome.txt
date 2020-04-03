@@ -1,0 +1,4 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	score	normalized_score
+22	17591927	17606821	call_350	G	<DEL>	162.0	True	-1445	True	False	EMANUEL SYNDROME	22q11.2	5304	0.99	deletion	heterozygous	1	1401.0	True	False	0.06103496	5.978935052373389
+22	17591927	17606821	call_350	G	<DEL>	162.0	True	-1445	True	False	EMANUEL SYNDROME	22q11.2	5304	0.99	deletion	heterozygous	1	1401.0	True	False	0.00162338	0.1590249847844893
+22	17591927	17606821	call_350	G	<DEL>	162.0	True	-1445	True	False	CHROMOSOME 22Q11.2 DELETION SYNDROME, DISTAL	22q11.2	5304	0.99	deletion	heterozygous	1	1401.0	True	False	0.00162338	0.1590249847844893

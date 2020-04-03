@@ -1,0 +1,3 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+3	46977318	call_4516	C	<DEL>			2.0	True	46981158	-3840	True	False	NBEAL2	['Gray platelet syndrome, 139090 (3)']	48.8119839759987	92.4152765970115
+16	57648280	call_3884	G	<DEL>			7.0	True	57651580	-3300	True	False	ADGRG1	['Polymicrogyria, bilateral frontoparietal, 606854 (3)', 'Polymicrogyria, bilateral perisylvian, 615752 (3)']	13.747379284000045	26.027785710156557

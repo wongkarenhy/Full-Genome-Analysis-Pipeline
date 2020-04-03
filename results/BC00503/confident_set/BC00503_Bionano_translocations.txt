@@ -1,0 +1,17 @@
+SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+7	LINC01409	.	1	6	810127.0	170561994.5	227565.5	303412.9	0.0	translocation_interchr	heterozygous	1	PSMB1	.	False	False
+7	LINC01409	.	1	6	810127.0	170561994.5	227565.5	303412.9	0.0	translocation_interchr	heterozygous	1	TBP	['Spinocerebellar ataxia 17, 607136 (3)', '{Parkinson disease, susceptibility to}, 168600 (3)']	False	False
+7	LINC01409	.	1	6	810127.0	170561994.5	227565.5	303412.9	0.0	translocation_interchr	heterozygous	1	PDCD2	.	False	False
+7	FAM87B	.	1	6	810127.0	170561994.5	227565.5	303412.9	0.0	translocation_interchr	heterozygous	1	PSMB1	.	False	False
+7	FAM87B	.	1	6	810127.0	170561994.5	227565.5	303412.9	0.0	translocation_interchr	heterozygous	1	TBP	['Spinocerebellar ataxia 17, 607136 (3)', '{Parkinson disease, susceptibility to}, 168600 (3)']	False	False
+7	FAM87B	.	1	6	810127.0	170561994.5	227565.5	303412.9	0.0	translocation_interchr	heterozygous	1	PDCD2	.	False	False
+7	LINC00115	.	1	6	810127.0	170561994.5	227565.5	303412.9	0.0	translocation_interchr	heterozygous	1	PSMB1	.	False	False
+7	LINC00115	.	1	6	810127.0	170561994.5	227565.5	303412.9	0.0	translocation_interchr	heterozygous	1	TBP	['Spinocerebellar ataxia 17, 607136 (3)', '{Parkinson disease, susceptibility to}, 168600 (3)']	False	False
+7	LINC00115	.	1	6	810127.0	170561994.5	227565.5	303412.9	0.0	translocation_interchr	heterozygous	1	PDCD2	.	False	False
+7	LINC01128	.	1	6	810127.0	170561994.5	227565.5	303412.9	0.0	translocation_interchr	heterozygous	1	PSMB1	.	False	False
+7	LINC01128	.	1	6	810127.0	170561994.5	227565.5	303412.9	0.0	translocation_interchr	heterozygous	1	TBP	['Spinocerebellar ataxia 17, 607136 (3)', '{Parkinson disease, susceptibility to}, 168600 (3)']	False	False
+7	LINC01128	.	1	6	810127.0	170561994.5	227565.5	303412.9	0.0	translocation_interchr	heterozygous	1	PDCD2	.	False	False
+2375	KCNB2	.	8	22	72872702.0	20394554.0	266871.2	193331.7	0.0	translocation_interchr	heterozygous	1	USP41	.	False	False
+2375	KCNB2	.	8	22	72872702.0	20394554.0	266871.2	193331.7	0.0	translocation_interchr	heterozygous	1	ZNF74	.	False	False
+2376	KCNB2	.	8	22	72872702.0	20383088.0	217969.0	156158.6	0.02	translocation_interchr	heterozygous	1	USP41	.	False	False
+2376	KCNB2	.	8	22	72872702.0	20383088.0	217969.0	156158.6	0.02	translocation_interchr	heterozygous	1	ZNF74	.	False	False

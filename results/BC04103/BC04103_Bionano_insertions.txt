@@ -1,0 +1,6 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+6964	6	6	129471077.0	129482859.5	69250549.5	69268813.8	1.0	insertion	heterozygous	1	6482.0	True	False	LAMA2	['Muscular dystrophy, congenital, merosin deficient or partially deficient, 607855 (3)', 'Muscular dystrophy, limb-girdle, autosomal recessive 23, 618138 (3)']	25.178951037999827	47.67107449972801
+17251	19	19	49807882.0	49845677.0	22776618.1	22986391.4	1.0	insertion	heterozygous	2	171978.0	False	False	FUZ	['{Neural tube defects, susceptibility to}, 182940 (3)']	6.692348401000027	12.6705611651863
+17251	19	19	49807882.0	49845677.0	22776618.1	22986391.4	1.0	insertion	heterozygous	2	171978.0	False	False	MED25	['?Charcot-Marie-Tooth disease, type 2B2, 605589 (3)', 'Basel-Vanagait-Smirin-Yosef syndrome, 616449 (3)']	5.137732375000016	9.727221060109196
+183	1	1	25321124.0	25371303.0	57984932.3	58064528.1	1.0	insertion	heterozygous	1	29417.0	False	True	RHD	['[Rh-negative blood type] (3)']	0.0	0.0
+183	1	1	25321124.0	25371303.0	57984932.3	58064528.1	1.0	insertion	heterozygous	1	29417.0	False	True	RHCE	['Rh-null disease, amorph type, 617970 (3)', '[Blood group, Rhesus] (3)']	0.0	0.0

@@ -1,0 +1,2 @@
+Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+X	134958975	135245773	5765	-1.0	duplication_inverted	unknown	-1	286798.0	False	False	CHROMOSOME XQ26.3 DUPLICATION SYNDROME	 Xq26.3 	0.00353357	0.11778566666666666

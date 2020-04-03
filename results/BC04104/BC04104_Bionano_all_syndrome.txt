@@ -1,0 +1,4 @@
+Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+7	130575286	130599154	8383	0.99	deletion	heterozygous	1	1250.0	False	True	NEUTROPHIL CHEMOTACTIC RESPONSE	7q22-qter	0.011904799999999998	1.176474308650379
+5	33103683	33126505	5632	0.98	deletion	heterozygous	1	1042.0	False	False	%607004 BRACHYDACTYLY, TYPE A1, B; BDA1B	5p13.3-p13.2	0.00065189	0.0644220681629339
+5	178176324	178184982	6553	1.0	deletion	heterozygous	1	2244.0	True	False	SCHIZOPHRENIA 1; SCZD1	5q23-q35	0.00065189	0.0644220681629339

@@ -1,0 +1,4 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+2915	2	2	178431759.0	178440436.0	46322279.5	46332330.3	1.0	insertion	heterozygous	1	1374.0	True	False	PRKRA	['Dystonia 16, 612067 (3)']	58.330409635999445	95.70765598244867
+12795	11	11	119181622.0	119208575.0	30275012.3	30304223.7	1.0	insertion	heterozygous	1	2258.0	False	False	CBL	['?Juvenile myelomonocytic leukemia, 607785 (3)', 'Noonan syndrome-like disorder with or without juvenile myelomonocytic leukemia, 613563 (3)']	7.126548998000018	11.693134063329184
+18604	X	23	12475587.0	12498929.0	28471534.7	28682530.5	1.0	insertion	heterozygous	1	187654.0	False	False	FRMPD4	['Mental retardation, X-linked 104, 300983 (3)']	3.3903412380000097	5.562820746407987

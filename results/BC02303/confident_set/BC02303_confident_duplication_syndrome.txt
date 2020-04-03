@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	score	normalized_score
+10	82245730	82339694	call_198	A	<DUP:TANDEM>	47.0	True	101005	False	True	10Q22.3Q23.3 MICRODUPLICATION SYNDROME	 10q22.3q23.3 	11528	-1.0	duplication	unknown	-1	93964.0	False	True	0.003970214	0.14727287045727097

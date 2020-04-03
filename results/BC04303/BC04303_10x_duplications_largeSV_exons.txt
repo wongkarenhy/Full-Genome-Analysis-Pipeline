@@ -1,0 +1,36 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+1	210614847	call_1083	T	<DUP:TANDEM>			5.0	False	210653984	39137	False	False	HHAT	.	59.07868792599939	96.93541970989986
+8	21993108	call_2816	A	<DUP:TANDEM>			3.0	False	22046111	53003	False	False	FGF17	['Hypogonadotropic hypogonadism 20 with or without anosmia, 615270 (3)']	58.765797928999405	96.42203452402347
+6	145632570	call_2760	T	<DUP:TANDEM>			3.0	False	145675145	42575	False	False	EPM2A	['Epilepsy, progressive myoclonic 2A (Lafora), 254780 (3)', 'Epilepsy, progressive myoclonic 2B (Lafora), 254780 (3)']	58.323122652999444	95.69569961069566
+5	156748941	call_2717	T	<DUP:TANDEM>			3.0	False	156795446	46505	False	False	SGCD	['Cardiomyopathy, dilated, 1L, 606685 (3)', 'Muscular dystrophy, limb-girdle, autosomal recessive 6, 601287 (3)']	54.87339926999949	90.03544553678971
+3	4450527	call_1317	A	<DUP:TANDEM>			5.0	False	4489516	38989	False	False	SUMF1	['Multiple sulfatase deficiency, 272200 (3)']	54.8201481619995	89.94807192228997
+5	132559112	call_1991	T	<DUP:TANDEM>			4.0	False	132604281	45169	False	False	RAD50	['Nijmegen breakage syndrome-like disorder, 613078 (3)']	42.084069103999674	69.05090557878412
+3	119272444	call_2613	A	<DUP:TANDEM>			3.0	False	119315782	43338	False	False	ARHGAP31	['Adams-Oliver syndrome 1, 100300 (3)']	41.671983362999704	68.37476151291841
+11	119663456	call_1632	G	<DUP:TANDEM>			4.0	False	119699097	35641	False	False	NECTIN1	['Cleft lip/palate-ectodermal dysplasia syndrome, 225060 (3)', 'Orofacial cleft 7, 225060 (3)']	38.86200637499979	63.76419367078696
+2	232109936	call_2523	A	<DUP:TANDEM>			3.0	False	232160727	50791	False	False	DIS3L2	['Perlman syndrome, 267000 (3)']	38.81326643599979	63.68422191431334
+1	237676763	call_2202	T	<DUP:TANDEM>			3.0	False	237754683	77920	False	False	RYR2	['Arrhythmogenic right ventricular dysplasia 2, 600996 (3)', 'Ventricular tachycardia, catecholaminergic polymorphic, 1, 604772 (3)']	38.50289846399981	63.17497482900208
+5	83237824	call_2694	C	<DUP:TANDEM>			3.0	False	83288201	50377	False	False	XRCC4	['Short stature, microcephaly, and endocrine dysfunction, 616541 (3)']	36.95019037599986	60.62731482704402
+10	129520114	call_2233	G	<DUP:TANDEM>			3.0	False	129585957	65843	False	False	MGMT	.	29.3291465149999	48.12282105394385
+2	223829484	call_2521	T	<DUP:TANDEM>			3.0	False	223869265	39781	False	False	AP1S3	['{Psoriasis 15, pustular, susceptibility to}, 616106 (3)']	28.372109453999922	46.552529084999584
+2	160168519	call_1816	A	<DUP:TANDEM>			4.0	False	160212163	43644	False	False	ITGB6	['Amelogenesis imperfecta, type IH, 616221 (3)']	28.08478216599993	46.08108680633433
+14	75020134	call_1183	G	<DUP:TANDEM>			5.0	False	75054605	34471	False	False	MLH3	['Colorectal cancer, hereditary nonpolyposis, type 7, 614385 (3)', 'Colorectal cancer, somatic, 114500 (3)', '{Endometrial cancer, susceptibility to}, 608089 (3)']	24.276789900999965	39.832990556766525
+2	63444583	call_2487	C	<DUP:TANDEM>			3.0	False	63492406	47823	False	False	WDPCP	['?Bardet-Biedl syndrome 15, 615992 (3)', '?Congenital heart defects, hamartomas of tongue, and polysyndactyly, 217085 (3)']	15.554773509000146	25.522037667390435
+1	154143700	call_1554	C	<DUP:TANDEM>			4.0	False	154183957	40257	False	False	TPM3	['CAP myopathy 1, 609284 (3)', 'Myopathy, congenital, with fiber-type disproportion, 255310 (3)', 'Nemaline myopathy 1, autosomal dominant or recessive, 609284 (3)']	14.580538435000129	23.923527458216736
+12	65784796	call_2296	G	<DUP:TANDEM>			3.0	False	65831402	46606	False	False	HMGA2	['Leiomyoma, uterine, somatic, 150699 (1)']	10.738975479000082	17.62034892540458
+16	75502212	call_846	C	<DUP:TANDEM>			6.0	False	75543069	40857	True	False	TMEM231	['Joubert syndrome 20, 614970 (3)', 'Meckel syndrome 11, 615397 (3)']	10.477396073000078	17.191153383014786
+11	22168813	call_1111	A	<DUP:TANDEM>			5.0	False	22201577	32764	False	False	ANO5	['Gnathodiaphyseal dysplasia, 166260 (3)', 'Miyoshi muscular dystrophy 3, 613319 (3)', 'Muscular dystrophy, limb-girdle, autosomal recessive 12, 611307 (3)']	10.324545677000073	16.940358759619564
+10	101450065	call_788	C	<DUP:TANDEM>			6.0	False	101489127	39062	False	False	BTRC	.	10.323485231000072	16.938618795823846
+14	23504349	call_1176	C	<DUP:TANDEM>			5.0	False	23536972	32623	False	False	ZFHX2	['?Marsili syndrome, 147430 (3)']	9.614742722000052	15.775724781281422
+19	45757324	call_1775	C	<DUP:TANDEM>			4.0	False	45788639	31315	False	False	DMPK	['Myotonic dystrophy 1, 160900 (3)']	9.614742722000052	15.775724781281422
+9	69184812	call_2865	G	<DUP:TANDEM>			3.0	False	69224981	40169	False	False	TJP2	['Cholestasis, progressive familial intrahepatic 4, 615878 (3)', 'Hypercholanemia, familial, 607748 (3)']	8.89199878700004	14.58985743822591
+5	150030811	call_1399	C	<DUP:TANDEM>			5.0	False	150073829	43018	False	False	CSF1R	['Brain abnormalities, neurodegeneration, and dysosteosclerosis, 618476 (3)', 'Leukoencephalopathy, diffuse hereditary, with spheroids, 221820 (3)']	5.431692197000017	8.912238597964393
+1	77885411	call_1539	C	<DUP:TANDEM>			4.0	False	77920182	34771	False	False	NEXN	['Cardiomyopathy, dilated, 1CC, 613122 (3)', 'Cardiomyopathy, hypertrophic, 20, 613876 (3)']	4.721990946000017	7.747771494014873
+5	149909805	call_979	T	<DUP:TANDEM>			6.0	False	149940315	30510	False	False	PDE6A	['Retinitis pigmentosa 43, 613810 (3)']	4.419309625000017	7.251136549680409
+2	11753341	call_2473	T	<DUP:TANDEM>			3.0	False	11816400	63059	False	False	LPIN1	['Myoglobinuria, acute recurrent, autosomal recessive, 268200 (3)']	4.253700877000016	6.97940821483453
+8	143897969	call_1494	G	<DUP:TANDEM>			5.0	False	143930980	33011	False	False	PLEC	['?Epidermolysis bullosa simplex with nail dystrophy, 616487 (3)', 'Epidermolysis bullosa simplex with muscular dystrophy, 226670 (3)', 'Epidermolysis bullosa simplex with pyloric atresia, 612138 (3)', 'Epidermolysis bullosa simplex, Ogna type, 131950 (3)', 'Muscular dystrophy, limb-girdle, autosomal recessive 17, 613723 (3)']	4.243496777000016	6.962665481524326
+2	239346498	call_1299	A	<DUP:TANDEM>			5.0	False	239372590	26092	False	False	HDAC4	.	3.542990998000013	5.813286169281805
+19	45757324	call_1775	C	<DUP:TANDEM>			4.0	False	45788639	31315	False	False	SIX5	['Branchiootorenal syndrome 2, 610896 (3)']	2.074528105000001	3.403854412102815
+17	36925105	call_1233	C	<DUP:TANDEM>			5.0	False	36956099	30994	False	False	LHX1	.	1.968274131999999	3.2295144964719733
+11	69627453	call_1617	C	<DUP:TANDEM>			4.0	False	69663257	35804	False	False	CCND1	['{Colorectal cancer, susceptibility to}, 114500 (3)', '{Multiple myeloma, susceptibility to}, 254500 (3)', '{von Hippel-Lindau syndrome, modifier of}, 193300 (3)']	0.6516407689999999	1.0692023411592775
+4	106147820	call_957	A	<DUP:TANDEM>			6.0	False	106179137	31317	False	False	TBCK	['Hypotonia, infantile, with psychomotor retardation and characteristic facies 3, 616900 (3)']	0.013196639999999999	0.021652847787729763
+1	46366182	call_1528	T	<DUP:TANDEM>			4.0	False	46404384	38202	False	False	FAAH	['Spastic paraplegia 35, autosomal recessive, 612319 (3)', '{Drug addiction, susceptibility to}, 606581 (3)']	0.0	0.0

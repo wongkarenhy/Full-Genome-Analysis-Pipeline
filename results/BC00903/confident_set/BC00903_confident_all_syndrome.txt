@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	score	normalized_score
+1	70778235	70806327	call_3645	A	<DEL>	2.0	True	-5492	True	False	SPASTIC PARAPLEGIA 29, AUTOSOMAL DOMINANT	1p31.1-p21.1	214	1.0	deletion	heterozygous	1	5672.0	True	False	0.00401606	0.401606

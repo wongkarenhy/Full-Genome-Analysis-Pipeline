@@ -1,0 +1,1 @@
+Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Found_in_Mother

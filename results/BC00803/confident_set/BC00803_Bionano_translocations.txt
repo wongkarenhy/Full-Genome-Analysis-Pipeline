@@ -1,0 +1,2 @@
+SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+737	SGPP2	.	2	18	222464773.0	24361008.0	1779358.1	1759281.0	0.0	translocation_interchr	heterozygous	1	OSBPL1A	.	False	False

@@ -1,0 +1,18 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+1	17719785	call_1990	A	<INV>			3.0	False	17754279	34494	LINC02810	.	ACTL8	.	False	False
+1	51937977	call_2004	T	<INV>			3.0	False	51972404	34427	RAB3B	.	RAB3B	.	False	False
+10	118272755	call_1368	T	<INV>			4.0	False	118309414	36659			FAM204A	.	False	False
+15	28085088	call_2260	C	<INV>			3.0	False	28115188	30100	OCA2	['Albinism, brown oculocutaneous, 203200 (3)', 'Albinism, oculocutaneous, type II, 203200 (3)', '[Skin/hair/eye pigmentation 1, blond/brown hair], 227220 (3)', '[Skin/hair/eye pigmentation 1, blue/nonblue eyes], 227220 (3)']	HERC2	['Mental retardation, autosomal recessive 38, 615516 (3)', '[Skin/hair/eye pigmentation 1, blond/brown hair], 227220 (3)', '[Skin/hair/eye pigmentation 1, blue/nonblue eyes], 227220 (3)']	False	False
+2	10306336	call_1602	G	<INV>			4.0	False	10339813	33477	LOC101929691	.	HPCAL1	.	False	False
+2	10306336	call_1602	G	<INV>			4.0	False	10339813	33477	HPCAL1	.	HPCAL1	.	False	False
+3	10698886	call_760	A	<INV>			6.0	False	10729829	30943	ATP2B2	['{Deafness, autosomal recessive 12, modifier of}, 601386 (3)']			False	False
+3	45938163	call_1097	T	<INV>			5.0	False	45969349	31186	FYCO1	['Cataract 18, autosomal recessive, 610019 (3)']	FYCO1	['Cataract 18, autosomal recessive, 610019 (3)']	False	False
+3	45938163	call_1097	T	<INV>			5.0	False	45969349	31186	CXCR6	.	FYCO1	['Cataract 18, autosomal recessive, 610019 (3)']	False	False
+4	33468648	call_1746	A	<INV>			4.0	False	33512013	43365	LOC105374391	.	LOC105374391	.	False	False
+5	175837067	call_798	C	<INV>			6.0	False	175870555	33488	CPLX2	.	CPLX2	.	False	False
+5	175837067	call_798	C	<INV>			6.0	False	175870555	33488	LOC105377744	.	CPLX2	.	False	False
+7	51991512	call_597	C	<INV>			7.0	False	52022712	31200			LOC107986738	.	False	False
+8	4507587	call_444	A	<INV>			9.0	False	4542595	35008	CSMD1	.	CSMD1	.	False	False
+8	4507587	call_444	A	<INV>			9.0	False	4542595	35008	CSMD1	.	LOC105377789	.	False	False
+X	34488739	call_2862	C	<INV>			3.0	False	34519201	30462					False	False
+Y	13030252	call_853	G	<INV>			6.0	False	13065343	35091					False	False

@@ -1,0 +1,3 @@
+SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+12280	OVOS	.	12	12	9580571.0	31244387.0	9617880.4	9523280.2	0.0	translocation_intrachr	heterozygous	1			True	False
+12280	KLRB1	.	12	12	9580571.0	31244387.0	9617880.4	9523280.2	0.0	translocation_intrachr	heterozygous	1			True	False

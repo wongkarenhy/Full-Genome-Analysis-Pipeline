@@ -1,0 +1,2 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	score	normalized_score
+20	3058388	3068772	call_1856	G	<DEL>	83.0	True	-1600	False	True	20P13 MICRODELETION SYNDROME	 20p13 	18291	0.99	deletion	heterozygous	1	1570.0	False	True	0.031032629000000003	0.5832691873028104

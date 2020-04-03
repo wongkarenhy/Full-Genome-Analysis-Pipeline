@@ -1,0 +1,5 @@
+Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	score	normalized_score
+X	26641750	26651053	call_3348	T	<DEL>	6.0	True	-2011	False	True	XP21 MICRODELETION SYNDROME	 Xp21 	5823	0.99	deletion	homozygous	1	1991.0	False	True	0.018279394	0.22624648491133642
+1	217639492	217653577	call_3470	A	<DEL>	4.0	True	-1360	True	False	1Q41Q42 MICRODELETION SYNDROME	 1q41q42 	448	0.99	deletion	heterozygous	1	1165.0	True	False	0.01742467	0.21566745255559439
+1	217639492	217653577	call_3470	A	<DEL>	4.0	True	-1360	True	False	CHROMOSOME 1Q41-Q42 DELETION SYNDROME	 1q41-q42 	448	0.99	deletion	heterozygous	1	1165.0	True	False	0.000545554	0.006752394243995135
+2	44806068	44817023	call_3062	A	<DEL>	8.0	True	-3663	True	False	2P21 MICRODELETION SYNDROME	 2p21 	628	1.0	deletion	heterozygous	1	3594.0	True	False	0.000545554	0.006752394243995135

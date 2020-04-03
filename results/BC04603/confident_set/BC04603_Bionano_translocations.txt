@@ -1,0 +1,16 @@
+SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+2934	ASB1	.	2	7	238436264.0	73039461.0	106221691.6	106227640.2	0.33	translocation_interchr	unknown	-1	SPDYE8P	.	False	False
+2934	ASB1	.	2	7	238436264.0	73039461.0	106221691.6	106227640.2	0.33	translocation_interchr	unknown	-1	SPDYE11	.	False	False
+2934	LOC107986003	.	2	7	238436264.0	73039461.0	106221691.6	106227640.2	0.33	translocation_interchr	unknown	-1	SPDYE8P	.	False	False
+2934	LOC107986003	.	2	7	238436264.0	73039461.0	106221691.6	106227640.2	0.33	translocation_interchr	unknown	-1	SPDYE11	.	False	False
+3199	ASB1	.	2	7	238436264.0	73039461.0	106257086.2	106263034.8	0.1	translocation_interchr	unknown	-1	SPDYE8P	.	False	False
+3199	ASB1	.	2	7	238436264.0	73039461.0	106257086.2	106263034.8	0.1	translocation_interchr	unknown	-1	SPDYE11	.	False	False
+3199	LOC107986003	.	2	7	238436264.0	73039461.0	106257086.2	106263034.8	0.1	translocation_interchr	unknown	-1	SPDYE8P	.	False	False
+3199	LOC107986003	.	2	7	238436264.0	73039461.0	106257086.2	106263034.8	0.1	translocation_interchr	unknown	-1	SPDYE11	.	False	False
+3206	ASB1	.	2	7	238443899.0	72778745.0	204810.3	213365.3	0.14	translocation_interchr	unknown	-1	TYW1B	.	False	False
+3206	LOC107986003	.	2	7	238443899.0	72778745.0	204810.3	213365.3	0.14	translocation_interchr	unknown	-1	TYW1B	.	False	False
+17918	SPRY3	.	X	Y	89229764.0	6634640.0	399465.0	469751.8	0.0	translocation_interchr	heterozygous	1			False	False
+17918	VAMP7	.	X	Y	89229764.0	6634640.0	399465.0	469751.8	0.0	translocation_interchr	heterozygous	1			False	False
+17918	IL9R	.	X	Y	89229764.0	6634640.0	399465.0	469751.8	0.0	translocation_interchr	heterozygous	1			False	False
+17918	WASIR1	.	X	Y	89229764.0	6634640.0	399465.0	469751.8	0.0	translocation_interchr	heterozygous	1			False	False
+17918	DDX11L16	.	X	Y	89229764.0	6634640.0	399465.0	469751.8	0.0	translocation_interchr	heterozygous	1			False	False

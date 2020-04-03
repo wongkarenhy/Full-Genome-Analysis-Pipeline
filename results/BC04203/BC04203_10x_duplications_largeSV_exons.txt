@@ -1,0 +1,20 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+2	169105306	call_3470	A	<DUP:TANDEM>			3.0	False	169152558	47252	False	False	LRP2	['Donnai-Barrow syndrome, 222448 (3)']	134.31269134200562	99.59645099238865
+12	88172156	call_3123	T	<DUP:TANDEM>			3.0	False	88255649	83493	False	False	TMTC3	['Lissencephaly 8, 617255 (3)']	134.16665443900553	99.48816072504755
+8	144286473	call_3969	G	<DUP:TANDEM>			3.0	False	144337493	51020	False	False	DGAT1	['?Diarrhea 7, protein-losing enteropathy type, 615863 (3)']	129.328174488004	95.90029850218055
+1	9932825	call_2870	G	<DUP:TANDEM>			3.0	False	9985660	52835	False	False	NMNAT1	['Leber congenital amaurosis 9, 608553 (3)']	127.5838695710037	94.60684977856413
+19	47837628	call_1544	A	<DUP:TANDEM>			5.0	False	47874469	36841	False	False	CRX	['Cone-rod retinal dystrophy-2, 120970 (3)', 'Leber congenital amaurosis 7, 613829 (3)']	107.40141034300211	79.64101675620927
+5	149000013	call_3746	A	<DUP:TANDEM>			3.0	False	149037543	37530	False	False	SH3TC2	['Charcot-Marie-Tooth disease, type 4C, 601596 (3)', 'Mononeuropathy of the median nerve, mild, 613353 (3)']	99.75641578600168	73.97204893101282
+10	62397222	call_2995	C	<DUP:TANDEM>			3.0	False	62479876	82654	False	False	ZNF365	['{Nephrolithiasis, uric acid, susceptibility to}, 605990 (3)']	85.62285720400108	63.49163743307093
+1	97550326	call_2917	T	<DUP:TANDEM>			3.0	False	97602289	51963	False	False	DPYD	['5-fluorouracil toxicity, 274270 (3)', 'Dihydropyrimidine dehydrogenase deficiency, 274270 (3)']	79.65177970500059	59.063923852478204
+15	64961382	call_3240	T	<DUP:TANDEM>			3.0	False	64991955	30573	False	False	SPG21	['Mast syndrome, 248900 (3)']	58.064781492999465	43.05658762823598
+19	43703611	call_3387	C	<DUP:TANDEM>			3.0	False	43748740	45129	False	False	SMG9	['Heart and brain malformation syndrome, 616920 (3)']	52.567864770999584	38.98047693875653
+7	41686959	call_2688	T	<DUP:TANDEM>			4.0	False	41725834	38875	False	False	INHBA	.	37.048828254999776	27.472696517030492
+4	118730107	call_2533	C	<DUP:TANDEM>			4.0	False	118774026	43919	False	False	SEC24D	['Cole-Carpenter syndrome 2, 616294 (3)']	29.114134076999825	21.588908678795047
+12	104404915	call_3133	A	<DUP:TANDEM>			3.0	False	104461110	56195	False	False	CHST11	['?Osteochondrodysplasia, brachydactyly, and overlapping malformed digits, 618167 (3)']	25.399638359999862	18.834510811078996
+4	93202778	call_3654	T	<DUP:TANDEM>			3.0	False	93250206	47428	False	False	GRID2	['Spinocerebellar ataxia, autosomal recessive 18, 616204 (3)']	20.398309364999925	15.125891668909064
+14	75036521	call_3210	T	<DUP:TANDEM>			3.0	False	75106681	70160	False	False	MLH3	['Colorectal cancer, hereditary nonpolyposis, type 7, 614385 (3)', 'Colorectal cancer, somatic, 114500 (3)', '{Endometrial cancer, susceptibility to}, 608089 (3)']	14.246847739999973	10.564418436972868
+20	34909276	call_3514	G	<DUP:TANDEM>			3.0	False	34946828	37552	False	False	GSS	['Glutathione synthetase deficiency, 266130 (3)', 'Hemolytic anemia due to glutathione synthetase deficiency, 231900 (3)']	14.023512565999974	10.398809435396625
+2	196898061	call_1588	T	<DUP:TANDEM>			5.0	False	196930560	32499	False	False	PGAP1	['Mental retardation, autosomal recessive 42, 615802 (3)']	11.718820237999978	8.689818466600526
+14	75036521	call_3210	T	<DUP:TANDEM>			3.0	False	75106681	70160	False	False	NEK9	['?Arthrogryposis, Perthes disease, and upward gaze palsy, 614262 (3)', 'Lethal congenital contracture syndrome 10, 617022 (3)', 'Nevus comedonicus, somatic, 617025 (3)']	10.714620531999985	7.945177540967312
+7	4916826	call_3832	G	<DUP:TANDEM>			3.0	False	4965283	48457	False	False	MMD2	['Miyoshi muscular dystrophy 2 (2)']	0.0	0.0

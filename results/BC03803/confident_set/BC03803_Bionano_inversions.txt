@@ -1,0 +1,14 @@
+SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+8419	LOC107986931	.	8	8	23972257.0	23977616.0	19979756.3	19974077.5	0.99	inversion_paired	heterozygous	1	LOC107986931	.	False	False
+8420	LOC107986931	.	8	8	23978463.0	23983732.0	19973138.2	19967968.4	0.99	inversion_paired	heterozygous	1	LOC107986931	.	False	False
+8507	STAU2-AS1	.	8	8	73457964.0	73459076.0	12292993.9	12292186.9	0.99	inversion_paired	heterozygous	1	STAU2-AS1	.	False	False
+8507	STAU2-AS1	.	8	8	73457964.0	73459076.0	12292993.9	12292186.9	0.99	inversion_paired	heterozygous	1	STAU2	.	False	False
+8507	STAU2	.	8	8	73457964.0	73459076.0	12292993.9	12292186.9	0.99	inversion_paired	heterozygous	1	STAU2-AS1	.	False	False
+8507	STAU2	.	8	8	73457964.0	73459076.0	12292993.9	12292186.9	0.99	inversion_paired	heterozygous	1	STAU2	.	False	False
+8508	STAU2-AS1	.	8	8	73460913.0	73466497.0	12290817.2	12284482.2	0.99	inversion_paired	heterozygous	1	STAU2	.	False	False
+8508	STAU2	.	8	8	73460913.0	73466497.0	12290817.2	12284482.2	0.99	inversion_paired	heterozygous	1	STAU2	.	False	False
+14546	SARM1	.	17	17	28419466.0	28437812.0	54496046.6	54475859.2	0.99	inversion_paired	heterozygous	1			True	False
+14546	SLC46A1	['Folate malabsorption, hereditary, 229050 (3)']	17	17	28419466.0	28437812.0	54496046.6	54475859.2	0.99	inversion_paired	heterozygous	1			True	False
+6859			6	6	134578172.0	134578172.0	74293542.9	74293542.9	0.99	inversion_paired	heterozygous	1			False	False
+6860			6	6	134578172.0	134587609.0	74293542.9	74302934.9	0.99	inversion_paired	heterozygous	1			False	False
+14547			17	17	28451568.0	28468819.0	54462092.6	54443643.2	0.99	inversion_paired	heterozygous	1	SLC13A2	.	True	False

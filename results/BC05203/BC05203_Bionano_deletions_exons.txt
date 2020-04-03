@@ -1,0 +1,12 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+16692	19	19	41337862.0	41378669.5	17019718.6	17059347.0	0.98	deletion	heterozygous	1	1179.0	True	False	B9D2	['?Meckel syndrome 10, 614175 (3)', 'Joubert syndrome 34, 614175 (3)']	35.76762898300016	99.23151457382818
+62	1	1	12777473.0	16566162.0	10166955.4	13937743.9	1.0	deletion	heterozygous	1	17900.0	True	False	CLCNKB	['Bartter syndrome, type 3, 607364 (3)', 'Bartter syndrome, type 4b, digenic, 613090 (3)']	25.656673940000154	71.18030147324377
+62	1	1	12777473.0	16566162.0	10166955.4	13937743.9	1.0	deletion	heterozygous	1	17900.0	True	False	CTRC	['{Pancreatitis, chronic, susceptibility to}, 167800 (3)']	18.52952919600004	51.40718853164594
+9822	9	9	34174087.0	34187900.0	34125129.1	34136659.9	1.0	deletion	heterozygous	1	2282.0	True	False	UBAP1	['Spastic paraplegia 80, autosomal dominant, 618418 (3)']	18.51080658800004	51.3552456771309
+16692	19	19	41337862.0	41378669.5	17019718.6	17059347.0	0.98	deletion	heterozygous	1	1179.0	True	False	TGFB1	['Camurati-Engelmann disease, 131300 (3)', 'Inflammatory bowel disease, immunodeficiency, and encephalopathy, 618213 (3)', '{Cystic fibrosis lung disease, modifier of}, 219700 (3)']	16.67902475200004	46.27326257890818
+10182	9	9	105720930.0	105735448.0	37520836.3	37532069.7	1.0	deletion	heterozygous	1	3285.0	False	True	TMEM38B	['Osteogenesis imperfecta, type XIV, 615066 (3)']	10.627308972000016	29.483753749425595
+11321	11	11	14630048.0	14917122.0	34717668.0	34729506.8	0.97	deletion	heterozygous	1	275235.0	True	False	CYP2R1	['Rickets due to defect in vitamin D 25-hydroxylation, 600081 (3)']	5.014149202	13.910947797241349
+62	1	1	12777473.0	16566162.0	10166955.4	13937743.9	1.0	deletion	heterozygous	1	17900.0	True	False	CLCNKA	['Bartter syndrome, type 4b, digenic, 613090 (3)']	4.440617918000001	12.319777804009707
+1358	1	1	210361084.0	210373992.5	4159624.6	4168420.2	1.0	deletion	heterozygous	1	4113.0	True	False	HHAT	.	0.3208890159999999	0.8902547910827292
+62	1	1	12777473.0	16566162.0	10166955.4	13937743.9	1.0	deletion	heterozygous	1	17900.0	True	False	CELA2A	['Abdominal obesity-metabolic syndrome 4, 618620 (3)']	0.0	0.0
+62	1	1	12777473.0	16566162.0	10166955.4	13937743.9	1.0	deletion	heterozygous	1	17900.0	True	False	SPEN	['Megakaryoblastic leukemia, acute (2)']	0.0	0.0

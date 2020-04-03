@@ -1,0 +1,6 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+8989	7	7	142078528.0	143824783.0	15591487.0	17199331.0	1.0	deletion	heterozygous	1	138411.0	False	False	CLCN1	['Myotonia congenita, dominant, 160800 (3)', 'Myotonia congenita, recessive, 255700 (3)', 'Myotonia levior, recessive (3)']	534.7223098469651	82.7953211203038
+8989	7	7	142078528.0	143824783.0	15591487.0	17199331.0	1.0	deletion	heterozygous	1	138411.0	False	False	PRSS2	['{Pancreatitis, chronic, protection against}, 167800 (3)']	479.25620233097345	74.20706119826289
+8989	7	7	142078528.0	143824783.0	15591487.0	17199331.0	1.0	deletion	heterozygous	1	138411.0	False	False	PRSS1	['Pancreatitis, hereditary, 167800 (3)', 'Trypsinogen deficiency, 614044 (1)']	381.3766143929853	59.05158373788152
+8989	7	7	142078528.0	143824783.0	15591487.0	17199331.0	1.0	deletion	heterozygous	1	138411.0	False	False	TRPV6	['Hyperparathyroidism, transient neonatal, 618188 (3)']	292.6683819129952	45.31618040994232
+8989	7	7	142078528.0	143824783.0	15591487.0	17199331.0	1.0	deletion	heterozygous	1	138411.0	False	False	KEL	['[Blood group, Kell], 110900 (3)']	0.0	0.0

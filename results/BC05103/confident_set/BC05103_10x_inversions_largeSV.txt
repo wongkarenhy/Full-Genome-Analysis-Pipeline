@@ -1,0 +1,63 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+10	27187064	call_882	G	<INV>			8.0	False	27218567	31503	MASTL	.	ACBD5	.	False	False
+10	27187064	call_882	G	<INV>			8.0	False	27218567	31503	ACBD5	.	ACBD5	.	False	False
+10	113936474	call_1178	G	<INV>			7.0	False	113967866	31392					False	False
+10	125034578	call_2977	T	<INV>			4.0	False	125075362	40784	CTBP2	.	CTBP2	.	False	False
+10	125034578	call_2977	T	<INV>			4.0	False	125075362	40784	MIR4296	.	CTBP2	.	False	False
+11	40652849	call_688	A	<INV>			9.0	False	40691906	39057	LRRC4C	.	LRRC4C	.	False	False
+11	54595212	call_3860	T	<INV>			3.0	False	54649581	54369	OR4C46	.			False	False
+11	80443926	call_1623	C	<INV>			6.0	False	80482265	38339					False	False
+13	94443236	call_2311	T	<INV>			5.0	False	94519806	76570	DCT	.	DCT	.	False	False
+16	79427832	call_1267	A	<INV>			7.0	False	79454787	26955	MAF	['Ayme-Gripp syndrome, 601088 (3)', 'Cataract 21, multiple types, 610202 (3)']	MAF	['Ayme-Gripp syndrome, 601088 (3)', 'Cataract 21, multiple types, 610202 (3)']	False	False
+17	41680040	call_2385	G	<INV>			5.0	False	41715756	35716	EIF1	.	GAST	.	False	False
+17	41680040	call_2385	G	<INV>			5.0	False	41715756	35716	EIF1	.	HAP1	.	False	False
+2	95996663	call_2466	G	<INV>			5.0	False	96053005	56342	ANKRD36C	.	LOC105373494	.	False	False
+2	185124687	call_4227	C	<INV>			3.0	False	185175404	50717			LOC105373782	.	False	False
+2	185124687	call_4227	C	<INV>			3.0	False	185175404	50717			LOC105373781	.	False	False
+21	9140647	call_996	T	<INV>			8.0	False	9186084	45437					False	False
+22	16923797	call_1846	C	<INV>			6.0	False	16953920	30123			GAB4	.	False	False
+22	20037999	call_3348	G	<INV>			4.0	False	20165712	127713	TANGO2	['Metabolic encephalomyopathic crises, recurrent, with rhabdomyolysis, cardiac arrhythmias, and neurodegeneration, 616878 (3)']			False	False
+22	20037999	call_3348	G	<INV>			4.0	False	20165712	127713	MIR185	.			False	False
+22	32122231	call_4292	T	<INV>			3.0	False	32173666	51435	SLC5A1	['Glucose/galactose malabsorption, 606824 (3)']			False	False
+22	32122231	call_4292	T	<INV>			3.0	False	32173666	51435	LOC105373000	.			False	False
+22	32122231	call_4292	T	<INV>			3.0	False	32173666	51435	AP1B1P1	.			False	False
+3	127934849	call_2584	C	<INV>			5.0	False	127967035	32186	KBTBD12	.	KBTBD12	.	False	False
+4	174224322	call_4416	A	<INV>			3.0	False	174278534	54212	LINC02268	.	FBXO8	.	False	False
+4	174224322	call_4416	A	<INV>			3.0	False	174278534	54212	LINC02268	.	CEP44	.	False	False
+4	188655935	call_1933	T	<INV>			6.0	False	188689838	33903					False	False
+5	32249322	call_2655	C	<INV>			5.0	False	32281617	32295	MTMR12	.	MTMR12	.	False	False
+5	155973828	call_4485	A	<INV>			3.0	False	156040511	66683	SGCD	['Cardiomyopathy, dilated, 1L, 606685 (3)', 'Muscular dystrophy, limb-girdle, autosomal recessive 6, 601287 (3)']	SGCD	['Cardiomyopathy, dilated, 1L, 606685 (3)', 'Muscular dystrophy, limb-girdle, autosomal recessive 6, 601287 (3)']	False	False
+6	13369159	call_1978	C	<INV>			6.0	False	13411288	42129	GFOD1	.	GFOD1	.	False	False
+6	69921552	call_2710	A	<INV>			5.0	False	69953678	32126	COL19A1	.	COL19A1	.	True	True
+6	76543284	call_1072	A	<INV>			8.0	False	76582696	39412	LINC02540	.	LINC02540	.	False	False
+7	38743630	call_3558	C	<INV>			4.0	False	38784216	40586	VPS41	.	VPS41	.	False	False
+7	147814305	call_4601	T	<INV>			3.0	False	147876632	62327	CNTNAP2	['Cortical dysplasia-focal epilepsy syndrome, 610042 (3)', 'Pitt-Hopkins like syndrome 1, 610042 (3)', '{Autism susceptibility 15}, 612100 (3)']	CNTNAP2	['Cortical dysplasia-focal epilepsy syndrome, 610042 (3)', 'Pitt-Hopkins like syndrome 1, 610042 (3)', '{Autism susceptibility 15}, 612100 (3)']	False	False
+8	144574095	call_2819	C	<INV>			5.0	False	144626604	52509	ARHGAP39	.	ARHGAP39	.	False	False
+9	43076200	call_3642	T	<INV>			4.0	False	43109505	33305					False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	SPRY3	.	SPRY3	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	SPRY3	.	VAMP7	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	SPRY3	.	IL9R	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	SPRY3	.	WASIR1	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	SPRY3	.	DDX11L16	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	VAMP7	.	SPRY3	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	VAMP7	.	VAMP7	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	VAMP7	.	IL9R	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	VAMP7	.	WASIR1	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	VAMP7	.	DDX11L16	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	IL9R	.	SPRY3	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	IL9R	.	VAMP7	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	IL9R	.	IL9R	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	IL9R	.	WASIR1	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	IL9R	.	DDX11L16	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	WASIR1	.	SPRY3	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	WASIR1	.	VAMP7	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	WASIR1	.	IL9R	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	WASIR1	.	WASIR1	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	WASIR1	.	DDX11L16	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	DDX11L16	.	SPRY3	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	DDX11L16	.	VAMP7	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	DDX11L16	.	IL9R	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	DDX11L16	.	WASIR1	.	False	False
+X	118259182	call_2110	C	<INV>			6.0	False	118290890	31708	DDX11L16	.	DDX11L16	.	False	False
+Y	8395231	call_3698	C	<INV>			4.0	False	8449484	54253	LOC105377231	.			False	False
+Y	20715858	call_3703	C	<INV>			4.0	False	20751745	35887			RPS4Y2	.	False	False

@@ -1,0 +1,5 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+241	1	1	35215704.0	36747411.0	0.0	618700.3	-1.0	duplication_split	unknown	-1	1531707.0	False	False	KIAA0319L	.	86.60299240200081	56.05174883168288
+10996	10	10	73552164.0	73795655.0	26064426.5	26553354.3	-1.0	duplication	unknown	-1	243491.0	True	False	SEC24C	.	70.46666017299921	45.60788752760523
+241	1	1	35215704.0	36747411.0	0.0	618700.3	-1.0	duplication_split	unknown	-1	1531707.0	False	False	COL8A2	['Corneal dystrophy, Fuchs endothelial, 1, 136800 (3)', 'Corneal dystrophy, posterior polymorphous 2, 609140 (3)']	65.63116684599895	42.47822826382169
+241	1	1	35215704.0	36747411.0	0.0	618700.3	-1.0	duplication_split	unknown	-1	1531707.0	False	False	ADPRHL2	['Neurodegeneration, childhood-onset, stress-induced, with variable ataxia and seizures, 618170 (3)']	0.0	0.0

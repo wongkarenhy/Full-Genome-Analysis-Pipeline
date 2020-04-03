@@ -53,7 +53,6 @@ def checkRefOverlapINVBND(sample_start, sample_end, ref_start, ref_end, sample_f
 
 def checkParentsOverlapINVBND(sample_start, parent_start, sample_end, parent_end, filtered_sample_frame, args, inheritance):
 
-
     if args.type == 'singleton' or (args.type == 'duo' and inheritance == 'Found_in_Father' and args.mother_duo) or  (args.type == 'duo' and inheritance == 'Found_in_Mother' and args.father_duo):
         # Initialize columns and set to -1 if parents file not provided
         filtered_sample_frame[inheritance] = 'None'
@@ -61,16 +60,20 @@ def checkParentsOverlapINVBND(sample_start, parent_start, sample_end, parent_end
 
     denovo_start_parent = PyRanges(sample_start).overlap(PyRanges(parent_start))
     denovo_end_parent = PyRanges(sample_end).overlap(PyRanges(parent_end))
-    denovo_parent_frame = pd.merge(denovo_start_parent.df, denovo_end_parent.df['ID'], on=['ID']).drop_duplicates()
-
-    if denovo_parent_frame.empty:
+    if denovo_start_parent.empty or denovo_end_parent.empty:
         filtered_sample_frame[inheritance] = 'False'
+    
+    #denovo_parent_frame = pd.merge(denovo_start_parent.df, denovo_end_parent.df['ID'], on=['ID']).drop_duplicates()
+
+    #if denovo_parent_frame.empty:
+        #filtered_sample_frame[inheritance] = 'False'
     else:
+        denovo_parent_frame = pd.merge(denovo_start_parent.df, denovo_end_parent.df['ID'], on=['ID']).drop_duplicates()
         parent_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_parent_frame, on=None, how='left', indicator=inheritance)
         parent_filtered_sample_frame[inheritance] = np.where(parent_filtered_sample_frame[inheritance] == 'both', 'True', 'False')
-        parent_filtered_sample_frame = parent_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
+        filtered_sample_frame = parent_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
 
-    return parent_filtered_sample_frame
+    return filtered_sample_frame
 
 
 

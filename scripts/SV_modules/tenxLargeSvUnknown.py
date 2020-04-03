@@ -49,7 +49,7 @@ def tenxlargesvunknown(args):
 
     # Add column based on overlap with parent
     filtered_sample_frame = checkParentsOverlapINVBND(sample_start, father_start, sample_end, father_end, sample_frame, args,'Found_in_Father')
-    filtered_sample_frame = checkParentsOverlapINVBND(sample_start, mother_start, sample_end, mother_end, sample_frame, args,'Found_in_Mother')
+    filtered_sample_frame = checkParentsOverlapINVBND(sample_start, mother_start, sample_end, mother_end, filtered_sample_frame, args,'Found_in_Mother')
 
     # Clean up dataframe
     if 'Chromosome' in list(filtered_sample_frame.columns):

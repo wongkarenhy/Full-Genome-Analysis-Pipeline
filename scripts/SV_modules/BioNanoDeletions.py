@@ -93,10 +93,10 @@ def checkParentsOverlap(sample_copy, parent_copy, filtered_sample_frame, args, i
     else:
         parent_filtered_sample_frame = pd.merge(filtered_sample_frame, denovo_parent_frame, on=None, how='left', indicator=inheritance)
         parent_filtered_sample_frame[inheritance] = np.where(parent_filtered_sample_frame[inheritance] == 'both', True,False)
-        parent_filtered_sample_frame = parent_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
+        filtered_sample_frame = parent_filtered_sample_frame.drop_duplicates().reset_index(drop=True)
 
 
-    return parent_filtered_sample_frame
+    return filtered_sample_frame
 
 
 

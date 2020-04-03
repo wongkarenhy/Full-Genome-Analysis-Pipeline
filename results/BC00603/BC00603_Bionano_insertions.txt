@@ -1,3 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-4992	X	23	50053230.0	50080352.5	1084649.5	1115140.6	1.0	insertion	homozygous	1	3369.0	False	False	CLCN5	['Dent disease, 300009 (3)', 'Hypophosphatemic rickets, 300554 (3)', 'Nephrolithiasis, type I, 310468 (3)', 'Proteinuria, low molecular weight, with hypercalciuric nephrocalcinosis, 308990 (3)']	60.82521408300027	78.14671463499985
-4132	17	17	80354208.0	80356371.0	917430.7	921249.9	1.0	insertion	heterozygous	1	1656.0	True	False	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	30.521011696000183	39.212632907862194

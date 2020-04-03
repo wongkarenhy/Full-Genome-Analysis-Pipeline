@@ -1,2 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-1	155189418	call_3374	G	<DEL>			22.0	True	155189460	-42	False	False	MUC1	['Medullary cystic kidney disease 1, 174000 (3)']	48.46554623099845	92.50974993277849

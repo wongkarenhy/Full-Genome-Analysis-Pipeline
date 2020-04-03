@@ -1,2 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-10973	11	11	316768.0	336695.0	354721.8	377893.4	1.0	insertion	heterozygous	1	3245.0	False	False	IFITM3	['{Influenza, severe, susceptibility to}, 614680 (3)']	0.0	0.0

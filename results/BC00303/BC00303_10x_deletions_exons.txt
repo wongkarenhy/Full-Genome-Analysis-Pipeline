@@ -1,2 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-18	66543327	call_3034	C	<DEL>			9.0	True	66547838	-4511	False	True	CDH19	['Mitral valve prolapse 2, 607829 (3)', 'Van Maldergem syndrome 1, 601390 (3)']	0.0	0.0

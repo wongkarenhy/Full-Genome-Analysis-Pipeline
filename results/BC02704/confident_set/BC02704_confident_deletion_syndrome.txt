@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	score	normalized_score
-17	67371337	67390594	call_1118	C	<DEL>	128.0	True	-1158	True	False	17Q24.2 MICRODELETION SYNDROME	 17q24.2 	15857	0.99	deletion	heterozygous	1	1159.0	True	False	0.50728379	17.86023144154886

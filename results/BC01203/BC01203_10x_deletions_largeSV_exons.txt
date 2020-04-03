@@ -1,2 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-14	34685319	call_40	C	<DEL>			76.0	True	34741507	-56188	False	True	CFL2	['Nemaline myopathy 7, autosomal recessive, 610687 (3)']	0.8984529150000001	3.709633504753914

@@ -1,4 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-15029	17	17	1267841.0	1315080.0	17110180.8	17156190.8	0.99	deletion	heterozygous	2	1229.0	False	False	BHLHA9	['?Camptosynpolydactyly, complex, 607539 (3)', 'Syndactyly, mesoaxial synostotic, with phalangeal reduction, 609432 (3)']	60.08582701099947	82.70005202761557
-15344	17	17	82027583.0	82050088.0	1215615.7	1236996.5	0.98	deletion	heterozygous	1	1124.0	True	False	RAC3	['Neurodevelopmental disorder with structural brain anomalies and dysmorphic facies, 618577 (3)']	0.0	0.0
-15344	17	17	82027583.0	82050088.0	1215615.7	1236996.5	0.98	deletion	heterozygous	1	1124.0	True	False	DCXR	['[Pentosuria], 260800 (3)']	0.0	0.0

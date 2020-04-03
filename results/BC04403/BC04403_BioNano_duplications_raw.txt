@@ -1,2 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother
-3248	3	3	50553.0	186248.0	52388.2	333405.4	-1.0	duplication	unknown	-1	135695.0	True	False

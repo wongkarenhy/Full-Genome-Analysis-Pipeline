@@ -1,3 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-4790	4	4	447742.0	712180.0	441149.4	1022266.9	-1.0	duplication	unknown	-1	264438.0	False	False	PIGG	['Mental retardation, autosomal recessive 53, 616917 (3)']	118.23548009000079	83.02481318069525
-4790	4	4	447742.0	712180.0	441149.4	1022266.9	-1.0	duplication	unknown	-1	264438.0	False	False	PDE6B	['Night blindness, congenital stationary, autosomal dominant 2, 163500 (3)', 'Retinitis pigmentosa-40, 613801 (3)']	118.17144187800078	82.97984562456337

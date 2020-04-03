@@ -1,2 +1,0 @@
-SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-536	LOC107985037	.	1	7	83476257.0	76823774.5	457447.1	349080.8	0.0	translocation_interchr	heterozygous	1	LOC107986712	.	False	False

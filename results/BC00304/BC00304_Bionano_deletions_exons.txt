@@ -1,2 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3329	11	11	132418698.0	132429232.0	1965673.1	1970702.0	1.0	deletion	heterozygous	1	5505.0	False	True	OPCML	['Ovarian cancer, somatic, 167000 (3)']	18.058339816999815	36.2817777578938

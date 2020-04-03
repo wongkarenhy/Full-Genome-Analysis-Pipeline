@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-22	15424062	15466378	call_4228	T	<DEL>	2.0	False	-42316	False	False	22Q11 DELETION SYNDROME (VELOCARDIOFACIAL / DIGEORGE SYNDROME)	 22q11 	0.00190476	0.07065600814771986

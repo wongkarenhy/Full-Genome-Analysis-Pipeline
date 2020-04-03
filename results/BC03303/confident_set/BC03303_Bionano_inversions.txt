@@ -1,8 +1,8 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-874	1	1	120346707.0	120677535.0	309730.8	309730.8	0.09	inversion	heterozygous	2	LOC107985522	.	LOC100996724	.	False	False
-874	1	1	120346707.0	120677535.0	309730.8	309730.8	0.09	inversion	heterozygous	2	LOC105378941	.	LOC100996724	.	False	False
-874	1	1	120346707.0	120677535.0	309730.8	309730.8	0.09	inversion	heterozygous	2	LOC105378954	.	LOC100996724	.	False	False
-8838	8	8	2172548.0	2600279.0	321592.2	340422.1	0.33	inversion	heterozygous	2	LOC105377781	.	LOC101927815	.	False	False
-2205	2	2	94280827.0	97080970.0	417641.8	3344232.4	0.0	inversion	heterozygous	2			FAHD2B	.	False	False
-4380	4	4	45512342.0	45513358.0	4098277.7	4097048.6	0.99	inversion_paired	heterozygous	1					False	False
-4381	4	4	45513358.0	45513358.0	4097048.6	4097048.6	0.99	inversion_paired	heterozygous	1					False	False
+SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+874	LOC107985522	.	1	1	120346707.0	120677535.0	309730.8	309730.8	0.09	inversion	heterozygous	2	LOC100996724	.	False	False
+874	LOC105378941	.	1	1	120346707.0	120677535.0	309730.8	309730.8	0.09	inversion	heterozygous	2	LOC100996724	.	False	False
+874	LOC105378954	.	1	1	120346707.0	120677535.0	309730.8	309730.8	0.09	inversion	heterozygous	2	LOC100996724	.	False	False
+8838	LOC105377781	.	8	8	2172548.0	2600279.0	321592.2	340422.1	0.33	inversion	heterozygous	2	LOC101927815	.	False	False
+2205			2	2	94280827.0	97080970.0	417641.8	3344232.4	0.0	inversion	heterozygous	2	FAHD2B	.	False	False
+4380			4	4	45512342.0	45513358.0	4098277.7	4097048.6	0.99	inversion_paired	heterozygous	1			False	False
+4381			4	4	45513358.0	45513358.0	4097048.6	4097048.6	0.99	inversion_paired	heterozygous	1			False	False

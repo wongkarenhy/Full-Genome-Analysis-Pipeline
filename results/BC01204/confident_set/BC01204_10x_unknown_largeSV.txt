@@ -1,0 +1,39 @@
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Mother
+1	1696877	call_42	G	<UNK>			64.0	False	1749607	52730	SLC35E2B	.	SLC35E2A	.	False
+1	1696877	call_42	G	<UNK>			64.0	False	1749607	52730	SLC35E2B	.	LOC112268218	.	False
+1	1696877	call_42	G	<UNK>			64.0	False	1749607	52730	SLC35E2B	.	NADK	.	False
+1	1696877	call_42	G	<UNK>			64.0	False	1749607	52730	MMP23A	.	SLC35E2A	.	False
+1	1696877	call_42	G	<UNK>			64.0	False	1749607	52730	MMP23A	.	LOC112268218	.	False
+1	1696877	call_42	G	<UNK>			64.0	False	1749607	52730	MMP23A	.	NADK	.	False
+1	1696877	call_42	G	<UNK>			64.0	False	1749607	52730	CDK11A	.	SLC35E2A	.	False
+1	1696877	call_42	G	<UNK>			64.0	False	1749607	52730	CDK11A	.	LOC112268218	.	False
+1	1696877	call_42	G	<UNK>			64.0	False	1749607	52730	CDK11A	.	NADK	.	False
+1	143212287	call_27	A	<UNK>			95.0	False	143249804	37517					False
+10	38526292	call_15	A	<UNK>			141.0	False	38579730	53438					True
+10	42074691	call_67	T	<UNK>			41.0	False	42104133	29442					False
+19	27363507	call_86	T	<UNK>			30.0	False	27397905	34398					True
+20	31158170	call_96	C	<UNK>			28.0	False	31241946	83776					True
+20	47842685	call_62	A	<UNK>			45.0	False	47912780	70095	LOC105372636	.			False
+21	10271774	call_6	A	<UNK>			195.0	False	10324408	52634					False
+21	43193384	call_29	A	<UNK>			89.0	False	43262810	69426	LOC105372821	.			True
+21	43262812	call_64	G	<UNK>			43.0	False	43336906	74094			LINC00322	.	False
+4	49096352	call_17	T	<UNK>			133.0	False	49118866	22514					False
+4	49102755	call_0	C	<UNK>			222.0	False	49149268	46513					False
+4	69272665	call_105	C	<UNK>			26.0	True	69381778	109113	UGT2B28	.			True
+6	29889030	call_30	C	<UNK>			87.0	True	29943947	54917	HLA-H	['Hemochromatosis, 235200 (3)', '[Transferrin serum level QTL2], 614193 (3)', '{Alzheimer disease, susceptibility to}, 104300 (3)', '{Microvascular complications of diabetes 7}, 612635 (3)', '{Porphyria cutanea tarda, susceptibility to}, 176100 (3)', '{Porphyria variegata, susceptibility to}, 176200 (3)']	HLA-A	['{Hypersensitivity syndrome, carbamazepine-induced, susceptibility to}, 608579 (3)']	True
+6	31388715	call_68	G	<UNK>			41.0	True	31485715	97000	MICA-AS1	.	MICB-DT	.	False
+6	31388715	call_68	G	<UNK>			41.0	True	31485715	97000	MICA-AS1	.	MICB	.	False
+6	32482915	call_39	T	<UNK>			71.0	False	32570584	87669			HLA-DRB1	['{Multiple sclerosis, susceptibility to, 1}, 126200 (3)', '{Sarcoidosis, susceptibility to, 1}, 181000 (3)']	True
+6	32528194	call_71	T	<UNK>			38.0	False	32571272	43078	HLA-DRB5	.	HLA-DRB1	['{Multiple sclerosis, susceptibility to, 1}, 126200 (3)', '{Sarcoidosis, susceptibility to, 1}, 181000 (3)']	True
+6	167590680	call_2	T	<UNK>			212.0	False	167651659	60979	LOC105378131	.			False
+7	142452114	call_73	G	<UNK>			37.0	False	142488912	36798	LOC107986855	.	LOC105379749	.	True
+Y	10669751	call_37	N	<UNK>			75.0	False	10691044	21293					False
+Y	10673796	call_26	T	<UNK>			96.0	False	10847144	173348					False
+Y	10684323	call_72	C	<UNK>			38.0	False	11014306	329983					False
+Y	10755233	call_10	C	<UNK>			166.0	False	10804524	49291					False
+Y	10866206	call_16	T	<UNK>			138.0	False	10934891	68685					False
+Y	10935658	call_14	A	<UNK>			147.0	False	10987711	52053					False
+Y	11539499	call_21	A	<UNK>			114.0	False	11562994	23495					False
+Y	20063903	call_38	C	<UNK>			74.0	True	20172970	109067					False
+Y	20074942	call_84	A	<UNK>			32.0	False	20260193	185251					False
+Y	26648509	call_24	G	<UNK>			101.0	False	26670347	21838					False

@@ -1,5 +1,5 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-3899	16	16	70195952.0	72846370.0	1554554.1	1554554.1	0.0	inversion	heterozygous	1	CLEC18C	.	ZFHX3	['Prostate cancer, somatic, 176807 (3)']	False	False
-3899	16	16	70195952.0	72846370.0	1554554.1	1554554.1	0.0	inversion	heterozygous	1	LOC105371328	.	ZFHX3	['Prostate cancer, somatic, 176807 (3)']	False	False
-5160	24	Y	17757412.0	17757412.0	124445.3	129977.6	0.0	inversion	homozygous	1			XKRY	.	False	False
-5162	24	Y	18386927.0	18683057.0	1196821.5	1202354.8	0.0	inversion	heterozygous	1					False	False
+SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+3899	CLEC18C	.	16	16	70195952.0	72846370.0	1554554.1	1554554.1	0.0	inversion	heterozygous	1	ZFHX3	['Prostate cancer, somatic, 176807 (3)']	False	False
+3899	LOC105371328	.	16	16	70195952.0	72846370.0	1554554.1	1554554.1	0.0	inversion	heterozygous	1	ZFHX3	['Prostate cancer, somatic, 176807 (3)']	False	False
+5160			24	Y	17757412.0	17757412.0	124445.3	129977.6	0.0	inversion	homozygous	1	XKRY	.	False	False
+5162			24	Y	18386927.0	18683057.0	1196821.5	1202354.8	0.0	inversion	heterozygous	1			False	False

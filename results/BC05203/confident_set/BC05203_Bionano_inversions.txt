@@ -1,6 +1,6 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-59	1	1	12777473.0	13005792.0	10166955.4	10242252.8	0.02	inversion	heterozygous	1	C1orf158	.			True	False
-59	1	1	12777473.0	13005792.0	10166955.4	10242252.8	0.02	inversion	heterozygous	1	PRAMEF12	.			True	False
-59	1	1	12777473.0	13005792.0	10166955.4	10242252.8	0.02	inversion	heterozygous	1	PRAMEF1	.			True	False
-16462	18	18	68532856.0	68542494.0	47647551.3	47657845.3	0.99	inversion_paired	heterozygous	1					False	True
-16463	18	18	68567476.0	68572086.0	47682858.7	47685543.4	0.99	inversion_paired	heterozygous	1					False	True
+SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+59	C1orf158	.	1	1	12777473.0	13005792.0	10166955.4	10242252.8	0.02	inversion	heterozygous	1			True	False
+59	PRAMEF12	.	1	1	12777473.0	13005792.0	10166955.4	10242252.8	0.02	inversion	heterozygous	1			True	False
+59	PRAMEF1	.	1	1	12777473.0	13005792.0	10166955.4	10242252.8	0.02	inversion	heterozygous	1			True	False
+16462			18	18	68532856.0	68542494.0	47647551.3	47657845.3	0.99	inversion_paired	heterozygous	1			False	False
+16463			18	18	68567476.0	68572086.0	47682858.7	47685543.4	0.99	inversion_paired	heterozygous	1			False	False

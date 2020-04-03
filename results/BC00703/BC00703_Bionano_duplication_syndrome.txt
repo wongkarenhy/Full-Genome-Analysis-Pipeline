@@ -1,1 +1,2 @@
-
+Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
+8	8012549	8207366	2592	-1.0	duplication_inverted	unknown	-1	194817.0	False	True	8P23.1 DUPLICATION SYNDROME	 8p23.1 	0.002450314	0.03032786149415218

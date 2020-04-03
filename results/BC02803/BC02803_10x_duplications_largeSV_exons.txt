@@ -1,21 +1,21 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-9	21857004	call_4684	A	<DUP:TANDEM>			3.0	False	22102898	245894	False	False	CDKN2A	['{Melanoma and neural system tumor syndrome}, 155755 (3)', '{Melanoma, cutaneous malignant, 2}, 155601 (3)', '{Melanoma-pancreatic cancer syndrome}, 606719 (3)']	110.22539736099957	89.85006709357344
-2	98965072	call_4016	T	<DUP:TANDEM>			3.0	False	99217689	252617	False	False	LIPT1	['Lipoyltransferase 1 deficiency, 616299 (3)']	101.79600995999976	82.97886461510059
-3	101531055	call_4219	C	<DUP:TANDEM>			3.0	False	101747353	216298	False	False	ZBTB11	['Intellectual developmental disorder, autosomal recessive 69, 618383 (3)']	95.97910912	78.23722663271336
-20	51727061	call_2837	A	<DUP:TANDEM>			4.0	False	51794191	67130	True	False	SALL4	['Duane-radial ray syndrome, 607323 (3)', 'IVIC syndrome, 147750 (3)']	90.35857988000011	73.65566066510392
-13	38754308	call_3678	A	<DUP:TANDEM>			3.0	False	38799018	44710	False	False	FREM2	['Cryptophthalmos, unilateral or bilateral, isolated, 123570 (3)', 'Fraser syndrome 2, 617666 (3)']	84.00405746600006	68.47578126421062
-9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	SIGMAR1	['?Amyotrophic lateral sclerosis 16, juvenile, 614373 (3)', '?Spinal muscular atrophy, distal, autosomal recessive, 2, 605726 (3)']	83.92078595800005	68.40790261954326
-10	71432275	call_3515	A	<DUP:TANDEM>			3.0	False	71466661	34386	False	False	CDH23	['Deafness, autosomal recessive 12, 601386 (3)', 'Usher syndrome, type 1D, 601067 (3)', 'Usher syndrome, type 1D/F digenic, 601067 (3)', '{Pituitary adenoma 5, multiple types}, 617540 (3)']	83.31604136700007	67.91494597455277
-9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	IL11RA	['Craniosynostosis and dental anomalies, 614188 (3)']	78.18610541900017	63.7332863920162
-X	9763361	call_4752	C	<DUP:TANDEM>			3.0	False	9816812	53451	False	False	GPR143	['Nystagmus 6, congenital, X-linked, 300814 (3)', 'Ocular albinism, type I, Nettleship-Falls type, 300500 (3)']	60.96494223100017	49.69548108655165
-17	13017079	call_2640	C	<DUP:TANDEM>			4.0	False	13063161	46082	False	False	ELAC2	['Combined oxidative phosphorylation deficiency 17, 615440 (3)', '{Prostate cancer, hereditary, 2, susceptibility to}, 614731 (3)']	58.70439189100019	47.85279687238466
-3	129952067	call_2932	G	<DUP:TANDEM>			4.0	False	130012364	60297	False	False	TRH	['Thyrotropin-releasing hormone deficiency, 275120 (1)']	58.12890135400019	47.38368662557087
-9	21857004	call_4684	A	<DUP:TANDEM>			3.0	False	22102898	245894	False	False	CDKN2B	.	50.12937443200011	40.86288427087808
-1	235646454	call_3480	T	<DUP:TANDEM>			3.0	False	235736000	89546	False	False	LYST	['Chediak-Higashi syndrome, 214500 (3)']	45.17881749500006	36.827445219719856
-X	53594462	call_3328	C	<DUP:TANDEM>			4.0	False	53645052	50590	False	False	HUWE1	['Mental retardation, X-linked syndromic, Turner type, 309590 (3)']	35.24542939800002	28.730258833002857
-3	101531055	call_4219	C	<DUP:TANDEM>			3.0	False	101747353	216298	False	False	TRMT10C	['Combined oxidative phosphorylation deficiency 30, 616974 (3)']	32.57434419300005	26.552927740279436
-1	27120523	call_3387	A	<DUP:TANDEM>			3.0	False	27181412	60889	False	False	SLC9A1	['?Lichtenstein-Knorr syndrome, 616291 (3)']	10.875838870000019	8.865423718709597
-9	21857004	call_4684	A	<DUP:TANDEM>			3.0	False	22102898	245894	False	False	MTAP	['Diaphyseal medullary stenosis with malignant fibrous histiocytoma, 112250 (3)']	8.78512507100002	7.1611815058339285
-1	231997269	call_3479	G	<DUP:TANDEM>			3.0	False	232030809	33540	False	False	DISC1	['{Schizophrenia 9, susceptibility to}, 604906 (3)']	8.575108204000026	6.98998657215698
-9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	GALT	['Galactosemia, 230400 (3)']	6.64580080400002	5.417314542983935
+9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	GALT	['Galactosemia, 230400 (3)']	107.34200140099999	87.49967120781548
+17	13017079	call_2640	C	<DUP:TANDEM>			4.0	False	13063161	46082	False	False	ELAC2	['Combined oxidative phosphorylation deficiency 17, 615440 (3)', '{Prostate cancer, hereditary, 2, susceptibility to}, 614731 (3)']	106.571197402	86.87135148582509
+X	9763361	call_4752	C	<DUP:TANDEM>			3.0	False	9816812	53451	False	False	GPR143	['Nystagmus 6, congenital, X-linked, 300814 (3)', 'Ocular albinism, type I, Nettleship-Falls type, 300500 (3)']	104.19232631299992	84.93221829083562
+10	71432275	call_3515	A	<DUP:TANDEM>			3.0	False	71466661	34386	False	False	CDH23	['Deafness, autosomal recessive 12, 601386 (3)', 'Usher syndrome, type 1D, 601067 (3)', 'Usher syndrome, type 1D/F digenic, 601067 (3)', '{Pituitary adenoma 5, multiple types}, 617540 (3)']	102.84509157399991	83.83402191696821
+9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	SIGMAR1	['?Amyotrophic lateral sclerosis 16, juvenile, 614373 (3)', '?Spinal muscular atrophy, distal, autosomal recessive, 2, 605726 (3)']	90.64198386199992	73.88667699534084
+20	51727061	call_2837	A	<DUP:TANDEM>			4.0	False	51794191	67130	True	False	SALL4	['Duane-radial ray syndrome, 607323 (3)', 'IVIC syndrome, 147750 (3)']	81.30731356600009	66.27753452479867
+3	101531055	call_4219	C	<DUP:TANDEM>			3.0	False	101747353	216298	False	False	TRMT10C	['Combined oxidative phosphorylation deficiency 30, 616974 (3)']	81.21463789600006	66.20199009160262
+X	53594462	call_3328	C	<DUP:TANDEM>			4.0	False	53645052	50590	False	False	HUWE1	['Mental retardation, X-linked syndromic, Turner type, 309590 (3)']	78.8975355430001	64.31320758898326
+2	98965072	call_4016	T	<DUP:TANDEM>			3.0	False	99217689	252617	False	False	LIPT1	['Lipoyltransferase 1 deficiency, 616299 (3)']	77.75807103200009	63.384374804386546
+1	231997269	call_3479	G	<DUP:TANDEM>			3.0	False	232030809	33540	False	False	DISC1	['{Schizophrenia 9, susceptibility to}, 604906 (3)']	72.832475638	59.36928311751101
+1	27120523	call_3387	A	<DUP:TANDEM>			3.0	False	27181412	60889	False	False	SLC9A1	['?Lichtenstein-Knorr syndrome, 616291 (3)']	71.06550479499997	57.92893948893712
+13	38754308	call_3678	A	<DUP:TANDEM>			3.0	False	38799018	44710	False	False	FREM2	['Cryptophthalmos, unilateral or bilateral, isolated, 123570 (3)', 'Fraser syndrome 2, 617666 (3)']	67.4682291860002	54.99662567958754
+9	34605974	call_4691	G	<DUP:TANDEM>			3.0	False	34681123	75149	False	False	IL11RA	['Craniosynostosis and dental anomalies, 614188 (3)']	64.75254322200024	52.782938345158335
+3	129952067	call_2932	G	<DUP:TANDEM>			4.0	False	130012364	60297	False	False	TRH	['Thyrotropin-releasing hormone deficiency, 275120 (1)']	53.02807283700012	43.22575392169254
+1	235646454	call_3480	T	<DUP:TANDEM>			3.0	False	235736000	89546	False	False	LYST	['Chediak-Higashi syndrome, 214500 (3)']	43.07206879400004	35.11013218056416
+9	21857004	call_4684	A	<DUP:TANDEM>			3.0	False	22102898	245894	False	False	CDKN2A	['{Melanoma and neural system tumor syndrome}, 155755 (3)', '{Melanoma, cutaneous malignant, 2}, 155601 (3)', '{Melanoma-pancreatic cancer syndrome}, 606719 (3)']	41.856906462000026	34.119594430882024
+9	21857004	call_4684	A	<DUP:TANDEM>			3.0	False	22102898	245894	False	False	CDKN2B	.	35.85991406999999	29.23115509039022
+3	101531055	call_4219	C	<DUP:TANDEM>			3.0	False	101747353	216298	False	False	ZBTB11	['Intellectual developmental disorder, autosomal recessive 69, 618383 (3)']	25.125313631999962	20.48086166737674
+9	21857004	call_4684	A	<DUP:TANDEM>			3.0	False	22102898	245894	False	False	MTAP	['Diaphyseal medullary stenosis with malignant fibrous histiocytoma, 112250 (3)']	7.509556562000015	6.121403751703974
 12	50174099	call_2470	C	<DUP:TANDEM>			4.0	False	50208961	34862	False	False	LIMA1	['[Low density lipoprotein cholesterol level QTL 8], 618079 (3)']	0.0	0.0

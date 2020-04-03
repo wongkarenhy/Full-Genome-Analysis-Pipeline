@@ -1,3 +1,3 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-271	1	1	121441013.0	206518294.5	198070.3	192351.5	0.0	translocation_intrachr	heterozygous	1	LINC02798	.	RASSF5	.	False	False
-1763	6	12	57702068.0	35388193.0	166964.6	89105.8	0.0	translocation_interchr	unknown	-1					False	False
+SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+271	LINC02798	.	1	1	121441013.0	206518294.5	198070.3	192351.5	0.0	translocation_intrachr	heterozygous	1	RASSF5	.	False	False
+1763			6	12	57702068.0	35388193.0	166964.6	89105.8	0.0	translocation_interchr	unknown	-1			False	False

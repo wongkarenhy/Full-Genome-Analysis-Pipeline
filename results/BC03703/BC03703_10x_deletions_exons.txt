@@ -1,6 +1,6 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-7	76057121	call_4564	G	<DEL>			2.0	True	76057447	-326	False	False	MDH2	['Epileptic encephalopathy, early infantile, 51, 617339 (3)']	48.629521939000085	33.427106329028675
-17	11742162	call_4472	T	<DEL>			2.0	True	11742541	-379	False	False	DNAH9	['Ciliary dyskinesia, primary, 40, 618300 (3)']	16.44386218599994	11.303231202659363
-11	1243363	call_3256	G	<DEL>			32.0	True	1243455	-92	False	False	MUC5B	['{Pulmonary fibrosis, idiopathic, susceptibility to}, 178500 (3)']	8.267149256999945	5.68269779822906
-11	1245903	call_4434	C	<DEL>			2.0	True	1246225	-322	False	False	MUC5B	['{Pulmonary fibrosis, idiopathic, susceptibility to}, 178500 (3)']	8.267149256999945	5.68269779822906
-11	1247134	call_2856	G	<DEL>			54.0	True	1247227	-93	False	False	MUC5B	['{Pulmonary fibrosis, idiopathic, susceptibility to}, 178500 (3)']	8.267149256999945	5.68269779822906
+11	1243363	call_3256	G	<DEL>			32.0	True	1243455	-92	False	False	MUC5B	['{Pulmonary fibrosis, idiopathic, susceptibility to}, 178500 (3)']	114.78295055700399	78.89984807667896
+11	1245903	call_4434	C	<DEL>			2.0	True	1246225	-322	False	False	MUC5B	['{Pulmonary fibrosis, idiopathic, susceptibility to}, 178500 (3)']	114.78295055700399	78.89984807667896
+11	1247134	call_2856	G	<DEL>			54.0	True	1247227	-93	False	False	MUC5B	['{Pulmonary fibrosis, idiopathic, susceptibility to}, 178500 (3)']	114.78295055700399	78.89984807667896
+17	11742162	call_4472	T	<DEL>			2.0	True	11742541	-379	False	False	DNAH9	['Ciliary dyskinesia, primary, 40, 618300 (3)']	29.15457577899999	20.04035955288275
+7	76057121	call_4564	G	<DEL>			2.0	True	76057447	-326	False	False	MDH2	['Epileptic encephalopathy, early infantile, 51, 617339 (3)']	14.262680014999953	9.803923674108018

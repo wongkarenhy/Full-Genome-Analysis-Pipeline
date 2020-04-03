@@ -1,0 +1,2 @@
+SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+6831	5	5	177091054.0	177120037.0	106243202.6	106273503.0	1.0	insertion	heterozygous	1	1317.0	False	True	FGFR4	['{Cancer progression/metastasis} (3)']	0.0	0.0

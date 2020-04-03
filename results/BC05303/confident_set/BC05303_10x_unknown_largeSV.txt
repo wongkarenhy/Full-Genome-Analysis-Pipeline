@@ -1,1 +1,19 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Name	Score	Name2	Score2
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Mother
+10	41858677	call_33	A	<UNK>			197.0	False	41914543	55866					False
+14	23966985	call_105	C	<UNK>			79.0	False	24004171	37186	DHRS4	.	DHRS4L2	.	True
+14	23966985	call_105	C	<UNK>			79.0	False	24004171	37186	DHRS4	.	DHRS4L1	.	True
+14	23966985	call_105	C	<UNK>			79.0	False	24004171	37186	DHRS4L2	.	DHRS4L2	.	True
+14	23966985	call_105	C	<UNK>			79.0	False	24004171	37186	DHRS4L2	.	DHRS4L1	.	True
+15	24427142	call_47	T	<UNK>			160.0	False	24477624	50482	LOC105370733	.	LOC105370733	.	False
+20	31074491	call_45	A	<UNK>			167.0	True	31184919	110428					False
+20	31105976	call_115	T	<UNK>			70.0	False	31157901	51925					False
+21	10271754	call_13	C	<UNK>			275.0	False	10324394	52640					True
+21	43193352	call_57	C	<UNK>			138.0	False	43262756	69404	LOC105372821	.			True
+21	43262483	call_122	T	<UNK>			67.0	False	43336486	74003			LINC00322	.	True
+3	195941674	call_151	T	<UNK>			52.0	False	196000958	59284	LOC727978	.	LOC105374301	.	False
+5	751490	call_91	A	<UNK>			94.0	False	844020	92530	ZDHHC11B	.	ZDHHC11	.	True
+6	29888150	call_69	T	<UNK>			120.0	True	29942934	54784	HLA-H	['Hemochromatosis, 235200 (3)', '[Transferrin serum level QTL2], 614193 (3)', '{Alzheimer disease, susceptibility to}, 104300 (3)', '{Microvascular complications of diabetes 7}, 612635 (3)', '{Porphyria cutanea tarda, susceptibility to}, 176100 (3)', '{Porphyria variegata, susceptibility to}, 176200 (3)']	HLA-A	['{Hypersensitivity syndrome, carbamazepine-induced, susceptibility to}, 608579 (3)']	False
+6	167590615	call_29	A	<UNK>			217.0	False	167651828	61213	LOC105378131	.			True
+7	62311211	call_92	G	<UNK>			92.0	False	62357583	46372					False
+Y	10682596	call_110	C	<UNK>			75.0	False	10865971	183375					False
+Y	10753495	call_43	G	<UNK>			176.0	False	10775072	21577					False

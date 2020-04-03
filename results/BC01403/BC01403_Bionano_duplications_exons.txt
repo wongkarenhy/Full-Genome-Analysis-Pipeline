@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-4236	16	16	30184251.0	30218143.0	344071.4	206274.7	-1.0	duplication_inverted	unknown	-1	33892.0	False	False	CORO1A	['Immunodeficiency 8, 615401 (3)']	178.82182170000726	86.88436620564735
+4236	16	16	30184251.0	30218143.0	344071.4	206274.7	-1.0	duplication_inverted	unknown	-1	33892.0	False	False	CORO1A	['Immunodeficiency 8, 615401 (3)']	17.50565152799997	8.505491240206567

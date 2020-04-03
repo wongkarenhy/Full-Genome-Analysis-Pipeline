@@ -3,7 +3,7 @@ CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome
 1	248404125	call_791	A	<INV>			8.0	False	248444534	40409	OR2T1	.	OR2T7	.	False	False
 1	248404125	call_791	A	<INV>			8.0	False	248444534	40409	OR2T1	.	OR2T2	.	False	False
 10	85371908	call_1062	C	<INV>			7.0	False	85408676	36768	LOC105378403	.			False	False
-10	123271762	call_1447	T	<INV>			6.0	False	123321230	49468					False	True
+10	123271762	call_1447	T	<INV>			6.0	False	123321230	49468					False	False
 11	45353122	call_1460	C	<INV>			6.0	False	45407612	54490	LINC02696	.			False	False
 11	113549832	call_631	A	<INV>			9.0	False	113581308	31476			LOC107984390	.	False	False
 12	60082974	call_3316	G	<INV>			3.0	False	60134199	51225					False	False
@@ -28,10 +28,10 @@ CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome
 5	16112132	call_2964	G	<INV>			4.0	False	16148776	36644	MARCHF11	.	MARCHF11	.	False	False
 5	16112132	call_2964	G	<INV>			4.0	False	16148776	36644	MARCHF11	.	MARCH11-AS1	.	False	False
 5	45509370	call_1257	A	<INV>			7.0	False	45545647	36277	HCN1	['Epileptic encephalopathy, early infantile, 24, 615871 (3)', 'Generalized epilepsy with febrile seizures plus, type 10, 618482 (3)']	HCN1	['Epileptic encephalopathy, early infantile, 24, 615871 (3)', 'Generalized epilepsy with febrile seizures plus, type 10, 618482 (3)']	False	False
-6	91594770	call_2376	T	<INV>			5.0	False	91652064	57294			CASC6	.	False	True
+6	91594770	call_2376	T	<INV>			5.0	False	91652064	57294			CASC6	.	False	False
 7	130120394	call_1317	T	<INV>			7.0	False	130150665	30271	KLHDC10	.	LOC100128325	.	False	False
 8	19566112	call_3837	C	<INV>			3.0	False	19631240	65128	CSGALNACT1	.	CSGALNACT1	.	False	False
-8	141901397	call_3112	T	<INV>			4.0	False	141953992	52595					False	True
+8	141901397	call_3112	T	<INV>			4.0	False	141953992	52595					False	False
 X	45156838	call_3909	T	<INV>			3.0	False	45232272	75434	DIPK2B	.			False	False
 X	45777245	call_2503	G	<INV>			5.0	False	45829704	52459					False	False
 X	86047544	call_1365	A	<INV>			7.0	False	86086675	39131	SPRY3	.	SPRY3	.	False	False

@@ -36,7 +36,7 @@ CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome
 2	56175963	call_8232	A	<INV>			2.0	False	56284783	108820	LOC100129434	.	CCDC85A	.	False	False
 2	56175963	call_8232	A	<INV>			2.0	False	56284783	108820	LOC107985795	.	CCDC85A	.	False	False
 2	56175963	call_8232	A	<INV>			2.0	False	56284783	108820	CCDC85A	.	CCDC85A	.	False	False
-2	97528554	call_4457	C	<INV>			5.0	False	97564831	36277	ANKRD36B	.	ANKRD36B	.	False	True
+2	97528554	call_4457	C	<INV>			5.0	False	97564831	36277	ANKRD36B	.	ANKRD36B	.	False	False
 2	113581923	call_4469	C	<INV>			5.0	False	113613948	32025	FAM138B	.	RPL23AP7	.	False	False
 2	113581923	call_4469	C	<INV>			5.0	False	113613948	32025	MIR1302-3	.	RPL23AP7	.	False	False
 2	113581923	call_4469	C	<INV>			5.0	False	113613948	32025	WASH2P	.	RPL23AP7	.	False	False
@@ -64,7 +64,7 @@ CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome
 3	81580355	call_5785	A	<INV>			4.0	False	81626247	45892	GBE1	['Glycogen storage disease IV, 232500 (3)', 'Polyglucosan body disease, adult form, 263570 (3)']	GBE1	['Glycogen storage disease IV, 232500 (3)', 'Polyglucosan body disease, adult form, 263570 (3)']	False	False
 3	127929247	call_8436	T	<INV>			2.0	False	127996037	66790	LOC107986129	.	KBTBD12	.	False	False
 3	127929247	call_8436	T	<INV>			2.0	False	127996037	66790	KBTBD12	.	KBTBD12	.	False	False
-3	130929719	call_5810	G	<INV>			4.0	False	130985979	56260	ATP2C1	['Hailey-Hailey disease, 169600 (3)']	ATP2C1	['Hailey-Hailey disease, 169600 (3)']	False	True
+3	130929719	call_5810	G	<INV>			4.0	False	130985979	56260	ATP2C1	['Hailey-Hailey disease, 169600 (3)']	ATP2C1	['Hailey-Hailey disease, 169600 (3)']	False	False
 3	198026153	call_2677	T	<INV>			7.0	False	198084412	58259	LMLN	.	ANKRD18DP	.	False	False
 4	8605533	call_8471	T	<INV>			2.0	False	8683810	78277	CPZ	.			False	False
 4	10393263	call_7128	T	<INV>			3.0	False	10492880	99617			CLNK	.	False	False

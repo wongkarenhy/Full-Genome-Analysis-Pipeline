@@ -1,5 +1,5 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-6225	5	5	60170889.0	60201972.0	114818352.3	114842369.0	1.0	deletion	heterozygous	1	7066.0	False	False	PDE4D	['Acrodysostosis 2, with or without hormone resistance, 614613 (3)']	21.00464457399995	34.46410387766783
-18425	22	22	37225355.0	37254840.0	16003131.8	16028301.3	1.0	deletion	heterozygous	1	4316.0	True	False	RAC2	['Neutrophil immunodeficiency syndrome, 608203 (3)']	17.499252703000007	28.712509788634012
-11037	10	10	26706185.0	26725720.0	12001457.2	12017824.8	1.0	deletion	heterozygous	1	3167.0	False	False	PDSS1	['Coenzyme Q10 deficiency, primary, 2, 614651 (3)']	6.605939117000006	10.838925226073577
+6225	5	5	60170889.0	60201972.0	114818352.3	114842369.0	1.0	deletion	heterozygous	1	7066.0	False	False	PDE4D	['Acrodysostosis 2, with or without hormone resistance, 614613 (3)']	29.3157756439999	48.1008823305603
+18425	22	22	37225355.0	37254840.0	16003131.8	16028301.3	1.0	deletion	heterozygous	1	4316.0	True	False	RAC2	['Neutrophil immunodeficiency syndrome, 608203 (3)']	4.4879707940000175	7.363794759746349
+11037	10	10	26706185.0	26725720.0	12001457.2	12017824.8	1.0	deletion	heterozygous	1	3167.0	False	False	PDSS1	['Coenzyme Q10 deficiency, primary, 2, 614651 (3)']	4.348312128000018	7.134644927884952
 8183	7	7	34764621.0	34801839.0	22265147.0	22296364.4	1.0	deletion	heterozygous	1	6001.0	True	False	NPSR1	['{Asthma, susceptibility to, 2}, 608584 (3)']	0.0	0.0

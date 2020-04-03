@@ -22,7 +22,7 @@ CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome
 9	68322414	call_2499	A	<INV>			3.0	False	68353506	31092	LOC101929800	.	PGM5	.	False	False
 X	26198392	call_1977	G	<INV>			4.0	False	26237334	38942	MAGEB6	.			False	False
 X	29853981	call_3084	T	<INV>			2.0	False	29897035	43054	IL1RAPL1	['Mental retardation, X-linked 21/34, 300143 (3)']	IL1RAPL1	['Mental retardation, X-linked 21/34, 300143 (3)']	False	False
-X	43725025	call_2513	C	<INV>			3.0	False	43764866	39841	MAOA	['Brunner syndrome, 300615 (3)', '{Antisocial behavior}, 300615 (3)']	MAOB	.	False	True
+X	43725025	call_2513	C	<INV>			3.0	False	43764866	39841	MAOA	['Brunner syndrome, 300615 (3)', '{Antisocial behavior}, 300615 (3)']	MAOB	.	False	False
 Y	5141625	call_2524	T	<INV>			3.0	False	5195975	54350	PCDH11Y	.	PCDH11Y	.	False	False
 Y	10683345	call_31	C	<INV>			82.0	False	10883630	200285					False	False
 Y	15212574	call_3102	G	<INV>			2.0	False	15270465	57891			LOC107987355	.	False	False

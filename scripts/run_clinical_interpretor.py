@@ -194,6 +194,7 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
                 cmds = [cmd2]
         else:
             cmds = [cmd1, cmd2]
+
         for cmd in cmds:
             p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
             stdout, stderr = p.communicate()
@@ -265,6 +266,11 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
             pd.DataFrame(denovo).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_denovo_candidates.txt', index=False, sep='\t', header=True)
             # Compound het
             pd.DataFrame(compoundhet).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_compoundhet_candidates.txt', index=False, sep='\t', header=True)
+            if args.xlink:
+                xlink = filtered_intervar.loc[(filtered_intervar['maternal']==1) & (filtered_intervar['paternal']==0) & (filtered_intervar['Chr'] == 'X')]
+                pd.DataFrame(xlink).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_xlink_candidates.txt', index=False, sep='\t', header=True)
+
+
 
     # All
     filtered_intervar = rerankSmallVariant(filtered_intervar)
@@ -299,7 +305,6 @@ def differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenom
 
     syndrome_score_result_r = syndrome_score_result.sort_values(by='score', ascending=False)
     syndrome_score_result_r['syndrome'] = syndrome_score_result_r['syndrome'].str.upper()
-
     # Add a normalized score column
     syndrome_score_result_r = normalizeRawScore(args, syndrome_score_result_r, 'syndrome')
 
@@ -312,9 +317,9 @@ def differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenom
 
 
 def findGenomicLocation(cytoband_key, cytobandDict):
-    print(cytoband_key)
+    #print(cytoband_key)
     keys = [key for key in cytobandDict if key.startswith(cytoband_key)]
-    print(keys)
+    #print(keys)
     if len(keys)==0:
         cytoband_key = cytoband_key[:-1]
         keys = [key for key in cytobandDict if key.startswith(cytoband_key)]
@@ -323,7 +328,7 @@ def findGenomicLocation(cytoband_key, cytobandDict):
 
     for key in keys:
         genomic_coords_list.append(str(cytobandDict[key]).split('-'))
-    print(genomic_coords_list)
+    #print(genomic_coords_list)
     genomic_coords_list = list(chain.from_iterable(genomic_coords_list))
     min_coords = min(genomic_coords_list)
     max_coords = max(genomic_coords_list)
@@ -447,7 +452,6 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
 
     del_df = parseSyndromeNameToCytoband(del_df, cytobandDict,'deldup',hpo_syndromes_mim_df, args)
     dup_df = parseSyndromeNameToCytoband(dup_df, cytobandDict,'deldup',hpo_syndromes_mim_df, args)
-
     all_omim_syndromes = parseSyndromeNameToCytoband(syndrome_score_result_r, cytobandDict,'all', hpo_syndromes_mim_df, args)
 
     if args.bionano:
@@ -539,10 +543,10 @@ def delDupSyndromeSVOverlap(del_df, cyto_BN_del, cols):
 
     if del_df.empty:
         return pd.DataFrame()
-
     del_df['Chromosome'] = del_df['Chromosome'].str.strip()
+    if 'cytoband_stop' in list(del_df.columns):
+        del_df = del_df.drop(['cytoband_start','cytoband_stop'], axis=1)
     del_df.dropna( inplace=True)
-
     overlap_del_BN = PyRanges(cyto_BN_del).join(PyRanges(del_df))
 
     if not overlap_del_BN.df.empty:
@@ -726,13 +730,13 @@ def linkedreadSV(args, famid, gene_score_result_r, all_small_variants):
     print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large inversions on ' + args.sampleid + '...')
     tenxlargesvinversions(tenx_args_largeSV)
 
-    # # Call large breakends
-    # print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large breakends on ' + args.sampleid + '...')
-    # tenxlargesvbreakends(tenx_args_largeSV)
-    #
-    # # Call large unknwon calls
-    # print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large unknown on ' + args.sampleid + '...')
-    # tenxlargesvunknown(tenx_args_largeSV)
+    # Call large breakends
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large breakends on ' + args.sampleid + '...')
+    tenxlargesvbreakends(tenx_args_largeSV)
+
+    # Call large unknwon calls
+    print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Detecting linked-reads large unknown on ' + args.sampleid + '...')
+    tenxlargesvunknown(tenx_args_largeSV)
 
     # Check potential compoundhets with SNPs and indels
     tenx_exons = pd.concat([exon_calls_10x_del, exon_calls_10x_largeSV_del, exon_calls_10x_largeSV_dup])
@@ -800,6 +804,7 @@ def main():
     parser.add_argument("-t", "--type", help="Specify whether this is a trio, duo, or singleton case", dest="type", type=str)
     parser.add_argument("-F", help="Set this flag if this is a duo case AND only father is sequenced", dest="father_duo", action='store_true')
     parser.add_argument("-M", help="Set this flag if this is a duo case AND only mother is sequenced", dest="mother_duo", action='store_true')
+    parser.add_argument("-X", help="Set this flag if the proband is male AND users would like to output potential X-linked recessive SNPs/indels", dest="xlink", action='store_true')
     args = parser.parse_args()
 
     # Change work dir
@@ -896,6 +901,13 @@ def main():
 
         # Call all SVs using bionano
         cyto_BN_del, cyto_BN_dup, exon_calls_BN_del, exon_calls_BN_dup = bionanoSV(args, famid, gene_score_result_r, all_small_variants)
+	
+		# Remove control files
+        cmd = 'rm ./results/' + args.sampleid + '/bionano_control.smap.gz'
+        p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        stdout, stderr = p.communicate()
+        if p.returncode != 0:
+            raise Exception(stderr)
 
     #Make 10x SV calls
     if args.linkedreadSV:
@@ -918,11 +930,11 @@ def main():
         syndrome_score_result_r = differentialDiangosis(hpo_syndrome_dict, weightSyndromeDict, clinical_phenome, args, cyto_10x_del, cyto_10x_del_largeSV, cyto_10x_dup_largeSV, cyto_BN_del, cyto_BN_dup, hpo_syndromes_mim_df)
 
         # Remove control files
-        cmd = 'rm ./results/' + args.sampleid + '/bionano_control.smap.gz'
-        p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        stdout, stderr = p.communicate()
-        if p.returncode != 0:
-            raise Exception(stderr)
+        #cmd = 'rm ./results/' + args.sampleid + '/bionano_control.smap.gz'
+        #p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        #stdout, stderr = p.communicate()
+        #if p.returncode != 0:
+        #    raise Exception(stderr)
 
     if args.bionano and args.linkedreadSV:
         print('[run_clinical_interpretor.py]:  ' + datetime.now().strftime("%d/%m/%Y %H:%M:%S") + ' Searching for confident large dels and dups on ' + args.sampleid + '...')

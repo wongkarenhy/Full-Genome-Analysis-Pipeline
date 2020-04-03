@@ -1,3 +1,3 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3945	16	16	88799041.0	88812461.0	295985.8	300624.7	1.0	deletion	heterozygous	1	8781.0	False	False	CDT1	['Meier-Gorlin syndrome 4, 613804 (3)']	104.59690337400323	95.69530783419098
-3945	16	16	88799041.0	88812461.0	295985.8	300624.7	1.0	deletion	heterozygous	1	8781.0	False	False	APRT	['Adenine phosphoribosyltransferase deficiency, 614723 (3)']	67.77779006699919	62.00964154350586
+3945	16	16	88799041.0	88812461.0	295985.8	300624.7	1.0	deletion	heterozygous	1	8781.0	False	False	APRT	['Adenine phosphoribosyltransferase deficiency, 614723 (3)']	18.98438837099994	17.36874449055841
+3945	16	16	88799041.0	88812461.0	295985.8	300624.7	1.0	deletion	heterozygous	1	8781.0	False	False	CDT1	['Meier-Gorlin syndrome 4, 613804 (3)']	5.255965613999979	4.808662887458523

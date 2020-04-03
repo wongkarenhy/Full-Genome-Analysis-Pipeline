@@ -21,7 +21,7 @@ CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome
 20	58127877	call_3827	T	<INV>			3.0	False	58175324	47447	LOC107985434	.	LOC105372694	.	False	False
 22	20683622	call_2438	C	<INV>			4.0	False	20723587	39965	POM121L4P	.	PI4KA	['Polymicrogyria, perisylvian, with cerebellar hypoplasia and arthrogryposis, 616531 (3)']	False	False
 3	33456532	call_3913	C	<INV>			3.0	False	33500371	43839			CLASP2	.	False	False
-4	32261732	call_2517	T	<INV>			4.0	False	32312318	50586					False	True
+4	32261732	call_2517	T	<INV>			4.0	False	32312318	50586					False	False
 4	176909838	call_2580	A	<INV>			4.0	False	176957726	47888					False	False
 5	36238945	call_604	T	<INV>			8.0	False	36280052	41107	NADK2	['?2,4-dienoyl-CoA reductase deficiency, 616034 (3)']	RANBP3L	.	False	False
 5	36238945	call_604	T	<INV>			8.0	False	36280052	41107	RANBP3L	.	RANBP3L	.	False	False

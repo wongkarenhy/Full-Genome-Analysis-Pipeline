@@ -1,6 +1,6 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-12222	11	11	55590744.0	59046675.0	1056319.7	4477263.8	1.0	deletion	heterozygous	2	34987.0	False	False	CTNND1	['Blepharocheilodontic syndrome 2, 617681 (3)']	40.80695959899865	77.89124278157556
-12222	11	11	55590744.0	59046675.0	1056319.7	4477263.8	1.0	deletion	heterozygous	2	34987.0	False	False	SERPING1	['Angioedema, hereditary, types I and II, 106100 (3)', 'Complement component 4, partial deficiency of, 120790 (3)']	17.791774050999997	33.96046668851513
-12222	11	11	55590744.0	59046675.0	1056319.7	4477263.8	1.0	deletion	heterozygous	2	34987.0	False	False	CLP1	['Pontocerebellar hypoplasia, type 10, 615803 (3)']	8.520588612000015	16.263873680888167
-11018	10	10	21015202.0	21025020.0	17552122.6	17559589.0	1.0	deletion	heterozygous	1	2352.0	True	True	NEBL	.	6.150721386999997	11.740333941674058
+12222	11	11	55590744.0	59046675.0	1056319.7	4477263.8	1.0	deletion	heterozygous	2	34987.0	False	False	CLP1	['Pontocerebellar hypoplasia, type 10, 615803 (3)']	50.739812682998185	96.85080945065177
+12222	11	11	55590744.0	59046675.0	1056319.7	4477263.8	1.0	deletion	heterozygous	2	34987.0	False	False	CTNND1	['Blepharocheilodontic syndrome 2, 617681 (3)']	50.23212536899827	95.88174936334099
+12222	11	11	55590744.0	59046675.0	1056319.7	4477263.8	1.0	deletion	heterozygous	2	34987.0	False	False	SERPING1	['Angioedema, hereditary, types I and II, 106100 (3)', 'Complement component 4, partial deficiency of, 120790 (3)']	18.344236243000022	35.014991876070795
+11018	10	10	21015202.0	21025020.0	17552122.6	17559589.0	1.0	deletion	heterozygous	1	2352.0	True	True	NEBL	.	17.108400277000083	32.656060943410324
 12222	11	11	55590744.0	59046675.0	1056319.7	4477263.8	1.0	deletion	heterozygous	2	34987.0	False	False	PRG2	['Anterior segment dysgenesis 7, with sclerocornea, 269400 (3)']	0.0	0.0

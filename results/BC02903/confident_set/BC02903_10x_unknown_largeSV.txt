@@ -1,1 +1,10 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Name	Score	Name2	Score2
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Mother
+1	143195623	call_78	A	<UNK>			168.0	False	143254273	58650					True
+20	31074505	call_103	G	<UNK>			124.0	True	31184949	110444					False
+21	43193352	call_84	C	<UNK>			149.0	False	43262802	69450	LOC105372821	.			True
+6	29888148	call_117	G	<UNK>			103.0	True	29942930	54782	HLA-H	['Hemochromatosis, 235200 (3)', '[Transferrin serum level QTL2], 614193 (3)', '{Alzheimer disease, susceptibility to}, 104300 (3)', '{Microvascular complications of diabetes 7}, 612635 (3)', '{Porphyria cutanea tarda, susceptibility to}, 176100 (3)', '{Porphyria variegata, susceptibility to}, 176200 (3)']	HLA-A	['{Hypersensitivity syndrome, carbamazepine-induced, susceptibility to}, 608579 (3)']	False
+6	167590627	call_70	A	<UNK>			177.0	False	167651819	61192	LOC105378131	.			False
+Y	10755304	call_88	C	<UNK>			142.0	False	10798223	42919					False
+Y	10865935	call_98	T	<UNK>			130.0	False	10926770	60835					False
+Y	10934948	call_86	C	<UNK>			146.0	False	10987717	52769					False
+Y	11539493	call_102	A	<UNK>			126.0	False	11562983	23490					False

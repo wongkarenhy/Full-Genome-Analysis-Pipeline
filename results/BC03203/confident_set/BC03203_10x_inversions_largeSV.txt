@@ -1,6 +1,6 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
 13	37835990	call_1443	A	<INV>			4.0	False	37880116	44126	TRPC4	.			False	False
-13	63769283	call_251	C	<INV>			23.0	False	63830171	60888			LOC102723968	.	False	True
-13	63769283	call_251	C	<INV>			23.0	False	63830171	60888			LOC647264	.	False	True
+13	63769283	call_251	C	<INV>			23.0	False	63830171	60888			LOC102723968	.	False	False
+13	63769283	call_251	C	<INV>			23.0	False	63830171	60888			LOC647264	.	False	False
 2	60473033	call_414	G	<INV>			9.0	False	60505129	32096	BCL11A	['Dias-Logan syndrome, 617101 (3)']	BCL11A	['Dias-Logan syndrome, 617101 (3)']	False	False
 5	86689823	call_1231	T	<INV>			5.0	False	86725075	35252					False	False

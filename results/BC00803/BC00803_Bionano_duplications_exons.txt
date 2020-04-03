@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3662	15	15	23314473.0	23571012.0	20.0	536022.7	-1.0	duplication_inverted	unknown	-1	256539.0	False	False	MKRN3	['Precocious puberty, central, 2, 615346 (3)']	68.41054795999929	62.58854932568604
+3662	15	15	23314473.0	23571012.0	20.0	536022.7	-1.0	duplication_inverted	unknown	-1	256539.0	False	False	MKRN3	['Precocious puberty, central, 2, 615346 (3)']	66.99269816699886	61.291363959513035

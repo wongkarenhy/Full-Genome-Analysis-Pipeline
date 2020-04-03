@@ -1,0 +1,15 @@
+SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+4485	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	3	3	192222698.0	192230029.0	6403704.1	6395884.4	0.99	inversion_paired	heterozygous	1	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	False	False
+4485	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	3	3	192222698.0	192230029.0	6403704.1	6395884.4	0.99	inversion_paired	heterozygous	1	FGF12-AS1	.	False	False
+4485	FGF12-AS1	.	3	3	192222698.0	192230029.0	6403704.1	6395884.4	0.99	inversion_paired	heterozygous	1	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	False	False
+4485	FGF12-AS1	.	3	3	192222698.0	192230029.0	6403704.1	6395884.4	0.99	inversion_paired	heterozygous	1	FGF12-AS1	.	False	False
+4486	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	3	3	192230967.0	192238579.0	6394987.2	6387798.9	0.99	inversion_paired	heterozygous	1	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	False	False
+4486	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	3	3	192230967.0	192238579.0	6394987.2	6387798.9	0.99	inversion_paired	heterozygous	1	FGF12-AS1	.	False	False
+4486	FGF12-AS1	.	3	3	192230967.0	192238579.0	6394987.2	6387798.9	0.99	inversion_paired	heterozygous	1	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	False	False
+4486	FGF12-AS1	.	3	3	192230967.0	192238579.0	6394987.2	6387798.9	0.99	inversion_paired	heterozygous	1	FGF12-AS1	.	False	False
+14068	ANKRD26P3	.	13	13	19362897.0	20427899.0	337493.6	365969.8	0.28	inversion	unknown	-1	CRYL1	.	False	False
+14068	ANKRD26P3	.	13	13	19362897.0	20427899.0	337493.6	365969.8	0.28	inversion	unknown	-1	MIR4499	.	False	False
+14068	LINC00421	.	13	13	19362897.0	20427899.0	337493.6	365969.8	0.28	inversion	unknown	-1	CRYL1	.	False	False
+14068	LINC00421	.	13	13	19362897.0	20427899.0	337493.6	365969.8	0.28	inversion	unknown	-1	MIR4499	.	False	False
+14707	FGF14	['Spinocerebellar ataxia 27, 609307 (3)']	13	13	102124384.0	102125897.0	12219760.6	12211802.8	0.99	inversion_paired	heterozygous	1	FGF14	['Spinocerebellar ataxia 27, 609307 (3)']	False	False
+14708	FGF14	['Spinocerebellar ataxia 27, 609307 (3)']	13	13	102137537.0	102144789.0	12199499.6	12198546.5	0.99	inversion_paired	heterozygous	1	FGF14	['Spinocerebellar ataxia 27, 609307 (3)']	False	False

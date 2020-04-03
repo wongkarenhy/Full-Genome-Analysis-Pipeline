@@ -3,7 +3,7 @@
 # exit immediately upon error 
 set -e
 
-while getopts 'j:w:s:i:b:e:l:t:f:m:r:a:' OPTION; do
+while getopts 'j:w:s:i:b:e:l:t:f:m:r:a:x:' OPTION; do
   case "$OPTION" in
     j)
       JSON="$OPTARG"
@@ -62,6 +62,14 @@ while getopts 'j:w:s:i:b:e:l:t:f:m:r:a:' OPTION; do
       }
 
       ;;
+    x)
+      XLINK="$OPTARG"
+      [[ ! $XLINK =~ true|false ]] && {
+          echo "ERROR! Pipeline aborted! XLINK has to be either true or false"
+          exit 1
+      }
+
+      ;;
     a)
       ARTIFACT="$OPTARG"
       ;;
@@ -89,7 +97,7 @@ fi
 
 # main pipeline
 pipeline(){
-echo [`date +"%Y-%m-%d %H:%M:%S"`] "#> START:  ${0} -j $JSON -w $WORKDIR -s $SAMPLEID -i $INTERVAR -b $BIONANO -e $ENZYME -l $LINKEDREADSV -t $TYPE -f $FATHERVCF -m $MOTHERVCF -r $REF -a $ARTIFACT"
+echo [`date +"%Y-%m-%d %H:%M:%S"`] "#> START:  ${0} -j $JSON -w $WORKDIR -s $SAMPLEID -i $INTERVAR -b $BIONANO -e $ENZYME -l $LINKEDREADSV -t $TYPE -f $FATHERVCF -m $MOTHERVCF -r $REF -a $ARTIFACT -x $XLINK" 
 
 if [[ ! -d ${WORKDIR}/results ]];
     then
@@ -141,6 +149,11 @@ if [[ ${TYPE} == 'duo' ]]; then
     else
 	additional_var+=" -M"
     fi
+fi
+
+# Check if the pipeline should generate xlink small variants file
+if [[ ${XLINK} == 'true' ]]; then
+    additional_var+=" -X"
 fi
 
 additional_var_CNLP=''

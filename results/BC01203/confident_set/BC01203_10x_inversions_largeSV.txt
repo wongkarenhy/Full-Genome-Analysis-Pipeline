@@ -29,39 +29,39 @@ CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome
 X	11160862	call_3831	G	<INV>			2.0	False	11258023	97161	ARHGAP6	.	ARHGAP6	.	False	False
 X	55184302	call_3842	G	<INV>			2.0	False	55246360	62058	MTRNR2L10	.			False	False
 X	55184302	call_3842	G	<INV>			2.0	False	55246360	62058	SNORA109	.			False	False
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	SPRY3	.	SPRY3	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	SPRY3	.	VAMP7	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	SPRY3	.	IL9R	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	SPRY3	.	WASIR1	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	SPRY3	.	DDX11L16	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	SPRY3	.	MCF2	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	VAMP7	.	SPRY3	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	VAMP7	.	VAMP7	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	VAMP7	.	IL9R	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	VAMP7	.	WASIR1	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	VAMP7	.	DDX11L16	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	VAMP7	.	MCF2	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	IL9R	.	SPRY3	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	IL9R	.	VAMP7	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	IL9R	.	IL9R	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	IL9R	.	WASIR1	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	IL9R	.	DDX11L16	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	IL9R	.	MCF2	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	WASIR1	.	SPRY3	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	WASIR1	.	VAMP7	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	WASIR1	.	IL9R	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	WASIR1	.	WASIR1	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	WASIR1	.	DDX11L16	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	WASIR1	.	MCF2	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	DDX11L16	.	SPRY3	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	DDX11L16	.	VAMP7	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	DDX11L16	.	IL9R	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	DDX11L16	.	WASIR1	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	DDX11L16	.	DDX11L16	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	DDX11L16	.	MCF2	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	F9	['Hemophilia B, 306900 (3)', 'Thrombophilia, X-linked, due to factor IX defect, 300807 (3)', '{Deep venous thrombosis, protection against}, 300807 (3)', '{Warfarin sensitivity}, 122700 (3)']	SPRY3	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	F9	['Hemophilia B, 306900 (3)', 'Thrombophilia, X-linked, due to factor IX defect, 300807 (3)', '{Deep venous thrombosis, protection against}, 300807 (3)', '{Warfarin sensitivity}, 122700 (3)']	VAMP7	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	F9	['Hemophilia B, 306900 (3)', 'Thrombophilia, X-linked, due to factor IX defect, 300807 (3)', '{Deep venous thrombosis, protection against}, 300807 (3)', '{Warfarin sensitivity}, 122700 (3)']	IL9R	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	F9	['Hemophilia B, 306900 (3)', 'Thrombophilia, X-linked, due to factor IX defect, 300807 (3)', '{Deep venous thrombosis, protection against}, 300807 (3)', '{Warfarin sensitivity}, 122700 (3)']	WASIR1	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	F9	['Hemophilia B, 306900 (3)', 'Thrombophilia, X-linked, due to factor IX defect, 300807 (3)', '{Deep venous thrombosis, protection against}, 300807 (3)', '{Warfarin sensitivity}, 122700 (3)']	DDX11L16	.	False	True
-X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	F9	['Hemophilia B, 306900 (3)', 'Thrombophilia, X-linked, due to factor IX defect, 300807 (3)', '{Deep venous thrombosis, protection against}, 300807 (3)', '{Warfarin sensitivity}, 122700 (3)']	MCF2	.	False	True
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	SPRY3	.	SPRY3	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	SPRY3	.	VAMP7	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	SPRY3	.	IL9R	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	SPRY3	.	WASIR1	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	SPRY3	.	DDX11L16	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	SPRY3	.	MCF2	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	VAMP7	.	SPRY3	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	VAMP7	.	VAMP7	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	VAMP7	.	IL9R	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	VAMP7	.	WASIR1	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	VAMP7	.	DDX11L16	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	VAMP7	.	MCF2	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	IL9R	.	SPRY3	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	IL9R	.	VAMP7	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	IL9R	.	IL9R	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	IL9R	.	WASIR1	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	IL9R	.	DDX11L16	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	IL9R	.	MCF2	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	WASIR1	.	SPRY3	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	WASIR1	.	VAMP7	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	WASIR1	.	IL9R	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	WASIR1	.	WASIR1	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	WASIR1	.	DDX11L16	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	WASIR1	.	MCF2	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	DDX11L16	.	SPRY3	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	DDX11L16	.	VAMP7	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	DDX11L16	.	IL9R	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	DDX11L16	.	WASIR1	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	DDX11L16	.	DDX11L16	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	DDX11L16	.	MCF2	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	F9	['Hemophilia B, 306900 (3)', 'Thrombophilia, X-linked, due to factor IX defect, 300807 (3)', '{Deep venous thrombosis, protection against}, 300807 (3)', '{Warfarin sensitivity}, 122700 (3)']	SPRY3	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	F9	['Hemophilia B, 306900 (3)', 'Thrombophilia, X-linked, due to factor IX defect, 300807 (3)', '{Deep venous thrombosis, protection against}, 300807 (3)', '{Warfarin sensitivity}, 122700 (3)']	VAMP7	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	F9	['Hemophilia B, 306900 (3)', 'Thrombophilia, X-linked, due to factor IX defect, 300807 (3)', '{Deep venous thrombosis, protection against}, 300807 (3)', '{Warfarin sensitivity}, 122700 (3)']	IL9R	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	F9	['Hemophilia B, 306900 (3)', 'Thrombophilia, X-linked, due to factor IX defect, 300807 (3)', '{Deep venous thrombosis, protection against}, 300807 (3)', '{Warfarin sensitivity}, 122700 (3)']	WASIR1	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	F9	['Hemophilia B, 306900 (3)', 'Thrombophilia, X-linked, due to factor IX defect, 300807 (3)', '{Deep venous thrombosis, protection against}, 300807 (3)', '{Warfarin sensitivity}, 122700 (3)']	DDX11L16	.	False	False
+X	139569700	call_2885	T	<INV>			3.0	False	139607521	37821	F9	['Hemophilia B, 306900 (3)', 'Thrombophilia, X-linked, due to factor IX defect, 300807 (3)', '{Deep venous thrombosis, protection against}, 300807 (3)', '{Warfarin sensitivity}, 122700 (3)']	MCF2	.	False	False

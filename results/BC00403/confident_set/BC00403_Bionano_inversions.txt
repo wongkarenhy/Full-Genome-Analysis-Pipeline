@@ -1,17 +1,17 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-4388	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	PLEKHM1	['?Osteopetrosis, autosomal recessive 6, 611497 (3)', 'Osteopetrosis, autosomal dominant 3, 618107 (3)']	LINC02210	.	True	False
-4388	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	PLEKHM1	['?Osteopetrosis, autosomal recessive 6, 611497 (3)', 'Osteopetrosis, autosomal dominant 3, 618107 (3)']	LINC02210-CRHR1	.	True	False
-4388	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LOC105369225	.	LINC02210	.	True	False
-4388	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LOC105369225	.	LINC02210-CRHR1	.	True	False
-4388	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LRRC37A4P	.	LINC02210	.	True	False
-4388	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LRRC37A4P	.	LINC02210-CRHR1	.	True	False
-4391	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	PLEKHM1	['?Osteopetrosis, autosomal recessive 6, 611497 (3)', 'Osteopetrosis, autosomal dominant 3, 618107 (3)']	LINC02210	.	True	False
-4391	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	PLEKHM1	['?Osteopetrosis, autosomal recessive 6, 611497 (3)', 'Osteopetrosis, autosomal dominant 3, 618107 (3)']	LINC02210-CRHR1	.	True	False
-4391	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LOC105369225	.	LINC02210	.	True	False
-4391	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LOC105369225	.	LINC02210-CRHR1	.	True	False
-4391	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LRRC37A4P	.	LINC02210	.	True	False
-4391	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LRRC37A4P	.	LINC02210-CRHR1	.	True	False
-5178	22	22	19329537.0	21181136.0	616857.2	651870.2	-1.0	inversion	unknown	-1	LOC105372859	.	FAM230B	.	False	False
-5178	22	22	19329537.0	21181136.0	616857.2	651870.2	-1.0	inversion	unknown	-1	LOC105372859	.	LOC105372935	.	False	False
-5178	22	22	19329537.0	21181136.0	616857.2	651870.2	-1.0	inversion	unknown	-1	HIRA	.	FAM230B	.	False	False
-5178	22	22	19329537.0	21181136.0	616857.2	651870.2	-1.0	inversion	unknown	-1	HIRA	.	LOC105372935	.	False	False
+SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+4388	PLEKHM1	['?Osteopetrosis, autosomal recessive 6, 611497 (3)', 'Osteopetrosis, autosomal dominant 3, 618107 (3)']	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LINC02210	.	True	False
+4388	PLEKHM1	['?Osteopetrosis, autosomal recessive 6, 611497 (3)', 'Osteopetrosis, autosomal dominant 3, 618107 (3)']	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LINC02210-CRHR1	.	True	False
+4388	LOC105369225	.	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LINC02210	.	True	False
+4388	LOC105369225	.	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LINC02210-CRHR1	.	True	False
+4388	LRRC37A4P	.	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LINC02210	.	True	False
+4388	LRRC37A4P	.	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LINC02210-CRHR1	.	True	False
+4391	PLEKHM1	['?Osteopetrosis, autosomal recessive 6, 611497 (3)', 'Osteopetrosis, autosomal dominant 3, 618107 (3)']	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LINC02210	.	True	False
+4391	PLEKHM1	['?Osteopetrosis, autosomal recessive 6, 611497 (3)', 'Osteopetrosis, autosomal dominant 3, 618107 (3)']	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LINC02210-CRHR1	.	True	False
+4391	LOC105369225	.	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LINC02210	.	True	False
+4391	LOC105369225	.	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LINC02210-CRHR1	.	True	False
+4391	LRRC37A4P	.	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LINC02210	.	True	False
+4391	LRRC37A4P	.	17	17	45495543.0	45636219.0	242240.8	252429.9	-1.0	inversion	unknown	-1	LINC02210-CRHR1	.	True	False
+5178	LOC105372859	.	22	22	19329537.0	21181136.0	616857.2	651870.2	-1.0	inversion	unknown	-1	FAM230B	.	False	False
+5178	LOC105372859	.	22	22	19329537.0	21181136.0	616857.2	651870.2	-1.0	inversion	unknown	-1	LOC105372935	.	False	False
+5178	HIRA	.	22	22	19329537.0	21181136.0	616857.2	651870.2	-1.0	inversion	unknown	-1	FAM230B	.	False	False
+5178	HIRA	.	22	22	19329537.0	21181136.0	616857.2	651870.2	-1.0	inversion	unknown	-1	LOC105372935	.	False	False

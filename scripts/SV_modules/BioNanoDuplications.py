@@ -45,7 +45,7 @@ def BN_duplication(args):
 
     # Load parent data
     if args.type == 'trio' or args.father_duo:
-        father_frame = eadsmapDup(args.fpath)
+        father_frame = readsmapDup(args.fpath)
     else:
         father_frame = pd.DataFrame(columns=['RefStartPos', 'RefEndPos', 'RefcontigID1'])
 
@@ -97,6 +97,7 @@ def main():
     parser.add_argument("-t", "--type", help="Specify whether this is a trio, duo, or singleton case", dest="type", type=str)
     parser.add_argument("-F", help="Set this flag if this is a duo case AND only father is sequenced", dest="father_duo", action='store_true')
     parser.add_argument("-M", help="Set this flag if this is a duo case AND only mother is sequenced", dest="mother_duo", action='store_true')
+
     args = parser.parse_args()
 
 

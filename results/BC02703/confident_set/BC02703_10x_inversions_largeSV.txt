@@ -21,7 +21,7 @@ CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome
 6	81157614	call_3728	G	<INV>			3.0	False	81211053	53439					False	False
 6	99760708	call_1827	C	<INV>			5.0	False	99792680	31972					False	False
 7	4561879	call_1217	G	<INV>			6.0	False	4602948	41069	LOC105375133	.			False	False
-8	26897950	call_1889	A	<INV>			5.0	False	26930136	32186					False	True
+8	26897950	call_1889	A	<INV>			5.0	False	26930136	32186					False	False
 8	94894524	call_3864	C	<INV>			3.0	False	94927898	33374	INTS8	['?Neurodevelopmental disorder with cerebellar hypoplasia and spasticity, 618572 (3)']	NDUFAF6	['Mitochondrial complex I deficiency, nuclear type 17, 618239 (3)']	False	False
 8	94894524	call_3864	C	<INV>			3.0	False	94927898	33374	INTS8	['?Neurodevelopmental disorder with cerebellar hypoplasia and spasticity, 618572 (3)']	TP53INP1	.	False	False
 8	94894524	call_3864	C	<INV>			3.0	False	94927898	33374	CCNE2	.	NDUFAF6	['Mitochondrial complex I deficiency, nuclear type 17, 618239 (3)']	False	False
@@ -35,7 +35,7 @@ CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome
 8	143593216	call_1916	A	<INV>			5.0	False	143630064	36848	PYCR3	.	LOC105375798	.	False	False
 8	143593216	call_1916	A	<INV>			5.0	False	143630064	36848	PYCR3	.	ZNF623	.	False	False
 9	19938907	call_1924	A	<INV>			5.0	False	19979739	40832	SLC24A2	.	SLC24A2	.	False	False
-9	66927892	call_1264	T	<INV>			6.0	False	66968747	40855	ZNF658	.	FAM74A3	.	False	True
+9	66927892	call_1264	T	<INV>			6.0	False	66968747	40855	ZNF658	.	FAM74A3	.	False	False
 9	91418298	call_839	C	<INV>			7.0	False	91455256	36958	NFIL3	.			False	False
 9	91418298	call_839	C	<INV>			7.0	False	91455256	36958	LOC105376146	.			False	False
 X	18753947	call_1275	G	<INV>			6.0	False	18794743	40796	PPEF1	.	PPEF1	.	False	False

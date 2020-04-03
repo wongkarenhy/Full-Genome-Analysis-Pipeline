@@ -1,13 +1,13 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-858	1	1	120503561.0	120723365.0	434362.2	434362.2	0.0	inversion	heterozygous	1	LOC100996724	.	LOC105378944	.	False	False
-858	1	1	120503561.0	120723365.0	434362.2	434362.2	0.0	inversion	heterozygous	1	LOC100996724	.	LOC105378943	.	False	False
-858	1	1	120503561.0	120723365.0	434362.2	434362.2	0.0	inversion	heterozygous	1	LOC100996724	.	NOTCH2NLR	.	False	False
-902	1	1	144453902.0	144639419.0	378065.4	378065.4	0.0	inversion	heterozygous	1	NBPF15	.	LINC01632	.	False	False
-902	1	1	144453902.0	144639419.0	378065.4	378065.4	0.0	inversion	heterozygous	1	NBPF15	.	LOC105371214	.	False	False
-902	1	1	144453902.0	144639419.0	378065.4	378065.4	0.0	inversion	heterozygous	1	NBPF15	.	LOC105371215	.	False	False
-902	1	1	144453902.0	144639419.0	378065.4	378065.4	0.0	inversion	heterozygous	1	LOC105371211	.	LINC01632	.	False	False
-902	1	1	144453902.0	144639419.0	378065.4	378065.4	0.0	inversion	heterozygous	1	LOC105371211	.	LOC105371214	.	False	False
-902	1	1	144453902.0	144639419.0	378065.4	378065.4	0.0	inversion	heterozygous	1	LOC105371211	.	LOC105371215	.	False	False
-15809	17	17	80265784.0	80280050.0	2962061.8	2947068.6	0.99	inversion_paired	heterozygous	1	SLC26A11	.	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	False	False
-15809	17	17	80265784.0	80280050.0	2962061.8	2947068.6	0.99	inversion_paired	heterozygous	1	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	False	False
-15810	17	17	80309100.0	80324173.0	2918540.5	2901434.7	0.99	inversion_paired	heterozygous	1	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	False	False
+SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+858	LOC100996724	.	1	1	120503561.0	120723365.0	434362.2	434362.2	0.0	inversion	heterozygous	1	LOC105378944	.	False	False
+858	LOC100996724	.	1	1	120503561.0	120723365.0	434362.2	434362.2	0.0	inversion	heterozygous	1	LOC105378943	.	False	False
+858	LOC100996724	.	1	1	120503561.0	120723365.0	434362.2	434362.2	0.0	inversion	heterozygous	1	NOTCH2NLR	.	False	False
+902	NBPF15	.	1	1	144453902.0	144639419.0	378065.4	378065.4	0.0	inversion	heterozygous	1	LINC01632	.	False	False
+902	NBPF15	.	1	1	144453902.0	144639419.0	378065.4	378065.4	0.0	inversion	heterozygous	1	LOC105371214	.	False	False
+902	NBPF15	.	1	1	144453902.0	144639419.0	378065.4	378065.4	0.0	inversion	heterozygous	1	LOC105371215	.	False	False
+902	LOC105371211	.	1	1	144453902.0	144639419.0	378065.4	378065.4	0.0	inversion	heterozygous	1	LINC01632	.	False	False
+902	LOC105371211	.	1	1	144453902.0	144639419.0	378065.4	378065.4	0.0	inversion	heterozygous	1	LOC105371214	.	False	False
+902	LOC105371211	.	1	1	144453902.0	144639419.0	378065.4	378065.4	0.0	inversion	heterozygous	1	LOC105371215	.	False	False
+15809	SLC26A11	.	17	17	80265784.0	80280050.0	2962061.8	2947068.6	0.99	inversion_paired	heterozygous	1	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	False	False
+15809	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	17	17	80265784.0	80280050.0	2962061.8	2947068.6	0.99	inversion_paired	heterozygous	1	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	False	False
+15810	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	17	17	80309100.0	80324173.0	2918540.5	2901434.7	0.99	inversion_paired	heterozygous	1	RNF213	['{Moyamoya disease 2, susceptibility to}, 607151 (3)']	False	False

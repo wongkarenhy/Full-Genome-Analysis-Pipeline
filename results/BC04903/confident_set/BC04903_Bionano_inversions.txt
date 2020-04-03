@@ -1,41 +1,41 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-4524	3	3	192222698.0	192230029.0	98349197.6	98356981.8	0.99	inversion_paired	heterozygous	1	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	False	False
-4524	3	3	192222698.0	192230029.0	98349197.6	98356981.8	0.99	inversion_paired	heterozygous	1	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	FGF12-AS1	.	False	False
-4524	3	3	192222698.0	192230029.0	98349197.6	98356981.8	0.99	inversion_paired	heterozygous	1	FGF12-AS1	.	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	False	False
-4524	3	3	192222698.0	192230029.0	98349197.6	98356981.8	0.99	inversion_paired	heterozygous	1	FGF12-AS1	.	FGF12-AS1	.	False	False
-4525	3	3	192230967.0	192238579.0	98357881.4	98365009.7	0.99	inversion_paired	heterozygous	1	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	False	False
-4525	3	3	192230967.0	192238579.0	98357881.4	98365009.7	0.99	inversion_paired	heterozygous	1	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	FGF12-AS1	.	False	False
-4525	3	3	192230967.0	192238579.0	98357881.4	98365009.7	0.99	inversion_paired	heterozygous	1	FGF12-AS1	.	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	False	False
-4525	3	3	192230967.0	192238579.0	98357881.4	98365009.7	0.99	inversion_paired	heterozygous	1	FGF12-AS1	.	FGF12-AS1	.	False	False
-9751	8	8	23972257.0	23977616.0	20014259.2	20008596.8	0.99	inversion_paired	heterozygous	1	LOC107986931	.	LOC107986931	.	False	False
-9752	8	8	23978463.0	23983732.0	20007684.4	20002484.4	0.99	inversion_paired	heterozygous	1	LOC107986931	.	LOC107986931	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC10B	.	WFDC10B	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC10B	.	WFDC13	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC10B	.	MIR3617	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC10B	.	WFDC3	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC10B	.	SPINT4	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC13	.	WFDC10B	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC13	.	WFDC13	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC13	.	MIR3617	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC13	.	WFDC3	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC13	.	SPINT4	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	MIR3617	.	WFDC10B	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	MIR3617	.	WFDC13	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	MIR3617	.	MIR3617	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	MIR3617	.	WFDC3	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	MIR3617	.	SPINT4	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC3	.	WFDC10B	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC3	.	WFDC13	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC3	.	MIR3617	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC3	.	WFDC3	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC3	.	SPINT4	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	SPINT4	.	WFDC10B	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	SPINT4	.	WFDC13	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	SPINT4	.	MIR3617	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	SPINT4	.	WFDC3	.	False	False
-17953	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	SPINT4	.	SPINT4	.	False	False
-17954	20	20	45737026.0	45742446.0	14639824.3	14646403.8	0.99	inversion_paired	heterozygous	1	WFDC3	.	WFDC3	.	False	False
-17954	20	20	45737026.0	45742446.0	14639824.3	14646403.8	0.99	inversion_paired	heterozygous	1	WFDC3	.	SPINT4	.	False	False
-17954	20	20	45737026.0	45742446.0	14639824.3	14646403.8	0.99	inversion_paired	heterozygous	1	SPINT4	.	WFDC3	.	False	False
-17954	20	20	45737026.0	45742446.0	14639824.3	14646403.8	0.99	inversion_paired	heterozygous	1	SPINT4	.	SPINT4	.	False	False
-804	1	1	144092961.0	144727450.0	1628175.4	1728856.9	0.0	inversion	unknown	-1			LSP1P5	.	False	True
+SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+4524	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	3	3	192222698.0	192230029.0	98349197.6	98356981.8	0.99	inversion_paired	heterozygous	1	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	False	False
+4524	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	3	3	192222698.0	192230029.0	98349197.6	98356981.8	0.99	inversion_paired	heterozygous	1	FGF12-AS1	.	False	False
+4524	FGF12-AS1	.	3	3	192222698.0	192230029.0	98349197.6	98356981.8	0.99	inversion_paired	heterozygous	1	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	False	False
+4524	FGF12-AS1	.	3	3	192222698.0	192230029.0	98349197.6	98356981.8	0.99	inversion_paired	heterozygous	1	FGF12-AS1	.	False	False
+4525	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	3	3	192230967.0	192238579.0	98357881.4	98365009.7	0.99	inversion_paired	heterozygous	1	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	False	False
+4525	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	3	3	192230967.0	192238579.0	98357881.4	98365009.7	0.99	inversion_paired	heterozygous	1	FGF12-AS1	.	False	False
+4525	FGF12-AS1	.	3	3	192230967.0	192238579.0	98357881.4	98365009.7	0.99	inversion_paired	heterozygous	1	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	False	False
+4525	FGF12-AS1	.	3	3	192230967.0	192238579.0	98357881.4	98365009.7	0.99	inversion_paired	heterozygous	1	FGF12-AS1	.	False	False
+9751	LOC107986931	.	8	8	23972257.0	23977616.0	20014259.2	20008596.8	0.99	inversion_paired	heterozygous	1	LOC107986931	.	False	False
+9752	LOC107986931	.	8	8	23978463.0	23983732.0	20007684.4	20002484.4	0.99	inversion_paired	heterozygous	1	LOC107986931	.	False	False
+17953	WFDC10B	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC10B	.	False	False
+17953	WFDC10B	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC13	.	False	False
+17953	WFDC10B	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	MIR3617	.	False	False
+17953	WFDC10B	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC3	.	False	False
+17953	WFDC10B	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	SPINT4	.	False	False
+17953	WFDC13	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC10B	.	False	False
+17953	WFDC13	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC13	.	False	False
+17953	WFDC13	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	MIR3617	.	False	False
+17953	WFDC13	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC3	.	False	False
+17953	WFDC13	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	SPINT4	.	False	False
+17953	MIR3617	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC10B	.	False	False
+17953	MIR3617	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC13	.	False	False
+17953	MIR3617	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	MIR3617	.	False	False
+17953	MIR3617	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC3	.	False	False
+17953	MIR3617	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	SPINT4	.	False	False
+17953	WFDC3	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC10B	.	False	False
+17953	WFDC3	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC13	.	False	False
+17953	WFDC3	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	MIR3617	.	False	False
+17953	WFDC3	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC3	.	False	False
+17953	WFDC3	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	SPINT4	.	False	False
+17953	SPINT4	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC10B	.	False	False
+17953	SPINT4	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC13	.	False	False
+17953	SPINT4	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	MIR3617	.	False	False
+17953	SPINT4	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	WFDC3	.	False	False
+17953	SPINT4	.	20	20	45708067.0	45722139.0	14608377.1	14625025.4	0.99	inversion_paired	heterozygous	1	SPINT4	.	False	False
+17954	WFDC3	.	20	20	45737026.0	45742446.0	14639824.3	14646403.8	0.99	inversion_paired	heterozygous	1	WFDC3	.	False	False
+17954	WFDC3	.	20	20	45737026.0	45742446.0	14639824.3	14646403.8	0.99	inversion_paired	heterozygous	1	SPINT4	.	False	False
+17954	SPINT4	.	20	20	45737026.0	45742446.0	14639824.3	14646403.8	0.99	inversion_paired	heterozygous	1	WFDC3	.	False	False
+17954	SPINT4	.	20	20	45737026.0	45742446.0	14639824.3	14646403.8	0.99	inversion_paired	heterozygous	1	SPINT4	.	False	False
+804			1	1	144092961.0	144727450.0	1628175.4	1728856.9	0.0	inversion	unknown	-1	LSP1P5	.	False	False

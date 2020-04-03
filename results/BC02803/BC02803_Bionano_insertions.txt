@@ -1,3 +1,3 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-10301	10	10	195028.0	202252.0	195009.4	203284.9	1.0	insertion	heterozygous	1	1052.0	True	False	ZMYND11	['Mental retardation, autosomal dominant 30, 616083 (3)']	43.05293708800003	35.09453699915534
+10301	10	10	195028.0	202252.0	195009.4	203284.9	1.0	insertion	heterozygous	1	1052.0	True	False	ZMYND11	['Mental retardation, autosomal dominant 30, 616083 (3)']	52.71323148700008	42.96911146815085
 16967	19	19	17171785.0	17190218.5	7371898.3	7393102.2	1.0	insertion	heterozygous	1	2770.0	False	True	MYO9B	['{Celiac disease, susceptibility to, 4}, 609753 (3)']	0.0	0.0

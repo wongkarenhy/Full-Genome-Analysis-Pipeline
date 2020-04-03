@@ -1,10 +1,10 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-3955	3	3	111574909.0	111574909.0	86725124.8	86725124.8	0.99	inversion_paired	heterozygous	1	CD96	['C syndrome, 211750 (3)']	CD96	['C syndrome, 211750 (3)']	False	False
-3955	3	3	111574909.0	111574909.0	86725124.8	86725124.8	0.99	inversion_paired	heterozygous	1	CD96	['C syndrome, 211750 (3)']	ZBED2	.	False	False
-3955	3	3	111574909.0	111574909.0	86725124.8	86725124.8	0.99	inversion_paired	heterozygous	1	ZBED2	.	CD96	['C syndrome, 211750 (3)']	False	False
-3955	3	3	111574909.0	111574909.0	86725124.8	86725124.8	0.99	inversion_paired	heterozygous	1	ZBED2	.	ZBED2	.	False	False
-3956	3	3	111597730.5	111597730.5	86702379.7	86702379.7	0.99	inversion_paired	heterozygous	1	CD96	['C syndrome, 211750 (3)']	CD96	['C syndrome, 211750 (3)']	False	False
-3956	3	3	111597730.5	111597730.5	86702379.7	86702379.7	0.99	inversion_paired	heterozygous	1	CD96	['C syndrome, 211750 (3)']	ZBED2	.	False	False
-3956	3	3	111597730.5	111597730.5	86702379.7	86702379.7	0.99	inversion_paired	heterozygous	1	ZBED2	.	CD96	['C syndrome, 211750 (3)']	False	False
-3956	3	3	111597730.5	111597730.5	86702379.7	86702379.7	0.99	inversion_paired	heterozygous	1	ZBED2	.	ZBED2	.	False	False
-11551	10	10	79976015.0	80248935.0	449605.3	449605.3	0.59	inversion	heterozygous	1	SFTPD	.	LOC100130698	.	False	False
+SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+3955	CD96	['C syndrome, 211750 (3)']	3	3	111574909.0	111574909.0	86725124.8	86725124.8	0.99	inversion_paired	heterozygous	1	CD96	['C syndrome, 211750 (3)']	False	False
+3955	CD96	['C syndrome, 211750 (3)']	3	3	111574909.0	111574909.0	86725124.8	86725124.8	0.99	inversion_paired	heterozygous	1	ZBED2	.	False	False
+3955	ZBED2	.	3	3	111574909.0	111574909.0	86725124.8	86725124.8	0.99	inversion_paired	heterozygous	1	CD96	['C syndrome, 211750 (3)']	False	False
+3955	ZBED2	.	3	3	111574909.0	111574909.0	86725124.8	86725124.8	0.99	inversion_paired	heterozygous	1	ZBED2	.	False	False
+3956	CD96	['C syndrome, 211750 (3)']	3	3	111597730.5	111597730.5	86702379.7	86702379.7	0.99	inversion_paired	heterozygous	1	CD96	['C syndrome, 211750 (3)']	False	False
+3956	CD96	['C syndrome, 211750 (3)']	3	3	111597730.5	111597730.5	86702379.7	86702379.7	0.99	inversion_paired	heterozygous	1	ZBED2	.	False	False
+3956	ZBED2	.	3	3	111597730.5	111597730.5	86702379.7	86702379.7	0.99	inversion_paired	heterozygous	1	CD96	['C syndrome, 211750 (3)']	False	False
+3956	ZBED2	.	3	3	111597730.5	111597730.5	86702379.7	86702379.7	0.99	inversion_paired	heterozygous	1	ZBED2	.	False	False
+11551	SFTPD	.	10	10	79976015.0	80248935.0	449605.3	449605.3	0.59	inversion	heterozygous	1	LOC100130698	.	False	False

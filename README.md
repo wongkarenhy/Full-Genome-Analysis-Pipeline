@@ -7,11 +7,12 @@
 2. clinphen (for NLP)
 4. python2.7
 3. python3.6 or above
-4. annovar 
-5. intervar (to annotate small variants)
-6. bcftools 
+4. annovar version 2016-06-11 (use by intervar)
+5. intervar version 2015-11-10 (to annotate small variants)
+6. bcftools version 1.10.2
 
-**Required python packages:** allel,argparse,collections,datetime,io,itertools,networkx,numpy,obonet,os,subprocess,pandas,pyranges,re,sys
+**Required python packages:** <br>
+allel(v1.2.1), argparse(v1.1), collections, datetime, io, itertools, networkx(v2.4), numpy(v1.18.1), obonet(v0.2.5), os, subprocess, pandas(v1.0.1), pyranges(v0.0.73), re(v2.2.1), sys <br>
 
 **Descriptions:** <br>
 This tool parses SNPs, indels, and structural variations (SVs) from 10x Genomics linked-read and Bionano optical mapping data based on trio sequencing (singleton is allowed). SNPs/indels analysis can be done alone or in combination with SV analysis. In general, this tool parses a patient's electronic health record in JSON format and outputs a clinically relevant gene list. This gene list is then used to inform how genetic variants are prioritized. Genetic variants (SNPs, indels, and SVs) are vetted against a set of controls and parents. For SNPs and indels, variants are filtered based on allele frequencies reported by gnomad(?). Small variants reported as likely benign or benign by either Clinvar or Intervar are discarded from the pipeline. For SVs, the prevalent of these variants are compared against a set of 1KGP + CIAPM control sequenced previously by the Kwok lab. See below for more details. <br>

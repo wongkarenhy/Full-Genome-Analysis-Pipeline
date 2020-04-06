@@ -223,7 +223,7 @@ Large number of false positives in 10x SV calls. <br>
 ## Pre-processing step for SNPs and indels (must run this separately before running the clinical interpretation pipeline; only run on probands):<br>
 **Step 1.** Change directory to the InterVar installation location<br>
 ```
-cd /media/KwokRaid02/karen/software/InterVar<br>
+cd /media/KwokRaid02/karen/software/InterVar
 
 bcftools view -i 'MIN(FMT/DP)>10 & MIN(FMT/GQ)>30' \
     -f PASS /media/KwokRaid04/CIAPM/CIAPM_longranger/BC00103_longranger/outs/phased_variants.vcf.gz | \
@@ -233,16 +233,6 @@ bcftools view -i 'MIN(FMT/DP)>10 & MIN(FMT/GQ)>30' \
 Run Intervar<br>
 ```
 python2.7 ./Intervar.py -c ./configFiles/BC00103_config.ini
-```
-**Step 3.** Subset the Intervar output <br>
-Grep functional variants and keep variants with maf <=0.05<br>
-```
-grep -w -E 'frameshift|nonframeshift|nonsynonymous|stopgain|stoploss|splicing' \
-    ./example/BC00103.hg38_multianno.txt.intervar | \
-    grep -i -v benign | awk -F'\t' '$15<=0.05' > ./example/BC00103.hg38_multianno.txt.intervar.FINAL
-
-awk '{print $6}' ./example/BC00103.hg38_multianno.txt.intervar.FINAL | \
-    sort -u > ./example/BC00103_smallVariant_geneList.txt
 ```
 ## Actual analysis:<br>
 **Example command** (only run on probands)<br>
@@ -258,6 +248,7 @@ bash /media/KwokRaid05/karen/ciapm/FGA/scripts/run_clinical_interpretation_pipel
     -r hg38 \
     -a None \
     -x false \
+    -M 0.05
 ```
 
 

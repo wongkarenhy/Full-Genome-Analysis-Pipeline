@@ -1,6 +1,6 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-6713	6	6	26759767.0	30001083.0	28388000.0	31707821.6	1.0	insertion	heterozygous	2	78506.0	True	False	MOG	['?Narcolepsy 7, 614250 (3)']	68.37549583999969	94.10966520185914
-14815	16	16	70685000.0	70703822.0	24271445.0	24383933.7	1.0	insertion	heterozygous	1	93667.0	False	False	VAC14	['Striatonigral degeneration, childhood-onset, 617054 (3)']	34.460163213999664	47.42977558012464
-6713	6	6	26759767.0	30001083.0	28388000.0	31707821.6	1.0	insertion	heterozygous	2	78506.0	True	False	ZFP57	['Diabetes mellitus, transient neonatal, 1, 601410 (3)']	32.32790018499968	44.49500256946808
-6713	6	6	26759767.0	30001083.0	28388000.0	31707821.6	1.0	insertion	heterozygous	2	78506.0	True	False	HLA-A	['{Hypersensitivity syndrome, carbamazepine-induced, susceptibility to}, 608579 (3)']	31.369997553999724	43.176578552327
+6713	6	6	26759767.0	30001083.0	28388000.0	31707821.6	1.0	insertion	heterozygous	2	78506.0	True	False	HLA-A	['{Hypersensitivity syndrome, carbamazepine-induced, susceptibility to}, 608579 (3)']	58.02343205199945	79.86144300955912
+6713	6	6	26759767.0	30001083.0	28388000.0	31707821.6	1.0	insertion	heterozygous	2	78506.0	True	False	ZFP57	['Diabetes mellitus, transient neonatal, 1, 601410 (3)']	29.566440314999625	40.69422481069021
+6713	6	6	26759767.0	30001083.0	28388000.0	31707821.6	1.0	insertion	heterozygous	2	78506.0	True	False	MOG	['?Narcolepsy 7, 614250 (3)']	28.967737805999658	39.8701914053699
+14815	16	16	70685000.0	70703822.0	24271445.0	24383933.7	1.0	insertion	heterozygous	1	93667.0	False	False	VAC14	['Striatonigral degeneration, childhood-onset, 617054 (3)']	12.947294643000086	17.820208089953734
 6713	6	6	26759767.0	30001083.0	28388000.0	31707821.6	1.0	insertion	heterozygous	2	78506.0	True	False	OR2J3	['[C3HEX, ability to smell], 615082 (3)']	0.0	0.0

@@ -1,2 +1,2 @@
 Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-16	30184251	30218143	4236	-1.0	duplication_inverted	unknown	-1	33892.0	False	False	PROXIMAL 16P11.2 MICRODUPLICATION SYNDROME	 16p11.2 	0.002991733	0.1109766643691606
+16	30184251	30218143	4236	-1.0	duplication_inverted	unknown	-1	33892.0	False	False	PROXIMAL 16P11.2 MICRODUPLICATION SYNDROME	 16p11.2 	0.002991733	0.11097666436916062

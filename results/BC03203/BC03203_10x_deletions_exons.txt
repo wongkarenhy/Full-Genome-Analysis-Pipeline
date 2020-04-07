@@ -1,3 +1,3 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-2	165164344	call_4610	T	<DEL>			2.0	True	165164761	-417	False	False	SCN3A	['Epilepsy, familial focal, with variable foci 4, 617935 (3)', 'Epileptic encephalopathy, early infantile, 62, 617938 (3)']	7.1008815319999945	81.69426577536359
-9	95101539	call_4704	A	<DEL>			2.0	True	95101839	-300	False	False	FANCC	['Fanconi anemia, complementation group C, 227645 (3)']	2.8365751630000062	32.6342474823192
+9	95101539	call_4704	A	<DEL>			2.0	True	95101839	-300	False	False	FANCC	['Fanconi anemia, complementation group C, 227645 (3)']	8.594244212999998	98.87511398566488
+2	165164344	call_4610	T	<DEL>			2.0	True	165164761	-417	False	False	SCN3A	['Epilepsy, familial focal, with variable foci 4, 617935 (3)', 'Epileptic encephalopathy, early infantile, 62, 617938 (3)']	2.633161538000003	30.294013151103716

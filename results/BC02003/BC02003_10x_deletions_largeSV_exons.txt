@@ -1,5 +1,5 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-19	50136989	call_296	A	<DEL>			9.0	False	50604094	-467105	False	False	SPIB	.	87.47591815400104	61.489427051597865
-19	50136989	call_296	A	<DEL>			9.0	False	50604094	-467105	False	False	KCNC3	['Spinocerebellar ataxia 13, 605259 (3)']	64.62583178100076	45.42742108691915
-19	50136989	call_296	A	<DEL>			9.0	False	50604094	-467105	False	False	POLD1	['Mandibular hypoplasia, deafness, progeroid features, and lipodystrophy syndrome, 615381 (3)', '{Colorectal cancer, susceptibility to, 10}, 612591 (3)']	56.53137288500059	39.737584954744825
-19	50136989	call_296	A	<DEL>			9.0	False	50604094	-467105	False	False	MYH14	['?Peripheral neuropathy, myopathy, hoarseness, and hearing loss, 614369 (3)', 'Deafness, autosomal dominant 4A, 600652 (3)']	14.660752440000001	10.305479344542128
+19	50136989	call_296	A	<DEL>			9.0	False	50604094	-467105	False	False	POLD1	['Mandibular hypoplasia, deafness, progeroid features, and lipodystrophy syndrome, 615381 (3)', '{Colorectal cancer, susceptibility to, 10}, 612591 (3)']	140.5466915189995	98.79445358077325
+19	50136989	call_296	A	<DEL>			9.0	False	50604094	-467105	False	False	KCNC3	['Spinocerebellar ataxia 13, 605259 (3)']	76.8889442800008	54.04752793855929
+19	50136989	call_296	A	<DEL>			9.0	False	50604094	-467105	False	False	SPIB	.	32.75240161300001	23.022638141410493
+19	50136989	call_296	A	<DEL>			9.0	False	50604094	-467105	False	False	MYH14	['?Peripheral neuropathy, myopathy, hoarseness, and hearing loss, 614369 (3)', 'Deafness, autosomal dominant 4A, 600652 (3)']	13.230420252	9.300056268230547

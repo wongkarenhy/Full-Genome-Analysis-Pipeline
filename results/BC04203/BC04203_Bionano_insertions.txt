@@ -1,3 +1,3 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-424	1	1	52665062.0	52697342.0	36454090.4	36658574.8	1.0	insertion	heterozygous	1	172204.0	False	False	COA7	['Spinocerebellar ataxia, autosomal recessive, with axonal neuropathy 3, 618387 (3)']	41.85490543199967	31.036531216804736
-16728	19	19	17785136.0	17826452.0	17892944.8	18252728.3	0.91	insertion	heterozygous	1	318468.0	False	False	INSL3	['Cryptorchidism, 219050 (3)']	19.66015347999993	14.57852934826325
+16728	19	19	17785136.0	17826452.0	17892944.8	18252728.3	0.91	insertion	heterozygous	1	318468.0	False	False	INSL3	['Cryptorchidism, 219050 (3)']	68.20004073499962	50.57215328554728
+424	1	1	52665062.0	52697342.0	36454090.4	36658574.8	1.0	insertion	heterozygous	1	172204.0	False	False	COA7	['Spinocerebellar ataxia, autosomal recessive, with axonal neuropathy 3, 618387 (3)']	27.953595676999857	20.728338432413352

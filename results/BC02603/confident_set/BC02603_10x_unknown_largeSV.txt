@@ -1,5 +1,5 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Mother
-21	10271759	call_55	C	<UNK>			244.0	False	10324396	52637			None	None	True
-21	43193413	call_79	C	<UNK>			154.0	False	43262816	69403	LOC105372821	.	None	None	False
-Y	10755296	call_106	T	<UNK>			114.0	False	10804537	49241			None	None	False
-Y	11532313	call_104	T	<UNK>			115.0	False	11555865	23552			None	None	False
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
+21	10271759	call_55	C	<UNK>			244.0	False	10324396	52637			None	None	True	True
+21	43193413	call_79	C	<UNK>			154.0	False	43262816	69403	LOC105372821	.	None	None	True	False
+Y	10755296	call_106	T	<UNK>			114.0	False	10804537	49241			None	None	True	False
+Y	11532313	call_104	T	<UNK>			115.0	False	11555865	23552			None	None	False	False

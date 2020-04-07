@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3796	3	3	192371005.5	192412939.0	98443991.6	98484652.6	0.99	deletion	heterozygous	1	1272.0	True	False	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	82.47648743600003	67.2305848487589
+3796	3	3	192371005.5	192412939.0	98443991.6	98484652.6	0.99	deletion	heterozygous	1	1272.0	True	False	FGF12	['Epileptic encephalopathy, early infantile, 47, 617166 (3)']	46.4859270970001	37.892933648432106

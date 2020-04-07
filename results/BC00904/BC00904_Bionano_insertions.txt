@@ -1,3 +1,3 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-4261	18	18	79720727.0	79728941.0	95039.6	104540.1	1.0	insertion	homozygous	1	1286.0	False	True	CTDP1	['Congenital cataracts, facial dysmorphism, and neuropathy, 604168 (3)']	4.546268184999999	35.10634048810228
-4819	21	21	42467293.0	42480684.0	291782.6	306324.6	1.0	insertion	heterozygous	1	1151.0	False	True	RSPH1	['Ciliary dyskinesia, primary, 24, 615481 (3)']	0.5805557690000002	4.483058999047164
+4819	21	21	42467293.0	42480684.0	291782.6	306324.6	1.0	insertion	heterozygous	1	1151.0	False	True	RSPH1	['Ciliary dyskinesia, primary, 24, 615481 (3)']	12.547211632000023	96.88972709146695
+4261	18	18	79720727.0	79728941.0	95039.6	104540.1	1.0	insertion	homozygous	1	1286.0	False	True	CTDP1	['Congenital cataracts, facial dysmorphism, and neuropathy, 604168 (3)']	1.4759855710000014	11.39757926776419

@@ -1,4 +1,4 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-2792	12	12	6388400.5	6556090.0	21049.7	245366.9	-1.0	duplication_inverted	unknown	-1	167690.0	False	False	NCAPD2	['?Microcephaly 21, primary, autosomal recessive, 617983 (3)']	313.9168941629851	78.61937729380605
-2792	12	12	6388400.5	6556090.0	21049.7	245366.9	-1.0	duplication_inverted	unknown	-1	167690.0	False	False	VAMP1	['Myasthenic syndrome, congenital, 25, 618323 (3)', 'Spastic ataxia 1, autosomal dominant, 108600 (3)']	92.25978074099997	23.10613619716351
-2792	12	12	6388400.5	6556090.0	21049.7	245366.9	-1.0	duplication_inverted	unknown	-1	167690.0	False	False	CD27	['Lymphoproliferative syndrome 2, 615122 (3)']	40.69125394999994	10.190980817974527
+2792	12	12	6388400.5	6556090.0	21049.7	245366.9	-1.0	duplication_inverted	unknown	-1	167690.0	False	False	VAMP1	['Myasthenic syndrome, congenital, 25, 618323 (3)', 'Spastic ataxia 1, autosomal dominant, 108600 (3)']	297.17753957399077	74.42706506545113
+2792	12	12	6388400.5	6556090.0	21049.7	245366.9	-1.0	duplication_inverted	unknown	-1	167690.0	False	False	CD27	['Lymphoproliferative syndrome 2, 615122 (3)']	208.44148820100105	52.20343444162877
+2792	12	12	6388400.5	6556090.0	21049.7	245366.9	-1.0	duplication_inverted	unknown	-1	167690.0	False	False	NCAPD2	['?Microcephaly 21, primary, autosomal recessive, 617983 (3)']	156.68906884600102	39.24222381934994

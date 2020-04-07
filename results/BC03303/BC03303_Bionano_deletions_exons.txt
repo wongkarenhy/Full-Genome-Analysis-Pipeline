@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3792	3	3	136253400.0	136262104.0	42433114.4	42440658.0	0.99	deletion	heterozygous	1	1160.0	False	True	PCCB	['Propionicacidemia, 606054 (3)']	13.138983572000004	9.56954628191943
+3792	3	3	136253400.0	136262104.0	42433114.4	42440658.0	0.99	deletion	heterozygous	1	1160.0	False	True	PCCB	['Propionicacidemia, 606054 (3)']	93.26451470500021	67.92755961977348

@@ -1,13 +1,13 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-5	132570465	call_2902	T	<DUP:TANDEM>			3.0	False	132623017	52552	False	False	RAD50	['Nijmegen breakage syndrome-like disorder, 613078 (3)']	11.825627696999966	91.31764680890988
-10	94559460	call_3222	T	<DUP:TANDEM>			2.0	False	94637981	78521	False	False	HELLS	['Immunodeficiency-centromeric instability-facial anomalies syndrome 4, 616911 (3)']	9.145941485999911	70.62507595815603
-14	99921379	call_3361	T	<DUP:TANDEM>			2.0	False	100027572	106193	False	False	EML1	['Band heterotopia, 600348 (3)']	8.942650805999904	69.0552627531882
-19	7152567	call_3493	T	<DUP:TANDEM>			2.0	False	7229864	77297	False	False	INSR	['Diabetes mellitus, insulin-resistant, with acanthosis nigricans, 610549 (3)', 'Hyperinsulinemic hypoglycemia, familial, 5, 609968 (3)', 'Leprechaunism, 246200 (3)', 'Rabson-Mendenhall syndrome, 262190 (3)']	5.9232327699999505	45.73927844819906
-2	1778901	call_2665	T	<DUP:TANDEM>			3.0	False	1833485	54584	False	False	MYT1L	['Mental retardation, autosomal dominant 39, 616521 (3)']	4.63958893099999	35.8269644703145
-21	33236178	call_3651	C	<DUP:TANDEM>			2.0	False	33293738	57560	False	False	IL10RB	.	3.209438572000029	24.783325289966772
-1	119025549	call_3158	C	<DUP:TANDEM>			2.0	False	119138203	112654	False	False	WARS2	['Neurodevelopmental disorder, mitochondrial, with abnormal movements and lactic acidosis, with or without seizures, 617710 (3)']	2.5783219560000186	19.909834790198712
-7	44170703	call_3936	C	<DUP:TANDEM>			2.0	False	44252208	81505	False	False	CAMK2B	['Mental retardation, autosomal dominant 54, 617799 (3)']	1.5954643050000088	12.320195564517448
-9	130898773	call_4065	A	<DUP:TANDEM>			2.0	False	131015303	116530	False	False	LAMC3	['Cortical malformations, occipital, 614115 (3)']	1.2680671400000068	9.792030510979263
-9	130997328	call_3073	G	<DUP:TANDEM>			3.0	False	131041756	44428	False	False	LAMC3	['Cortical malformations, occipital, 614115 (3)']	1.2680671400000068	9.792030510979263
-7	44170703	call_3936	C	<DUP:TANDEM>			2.0	False	44252208	81505	False	False	GCK	['Diabetes mellitus, noninsulin-dependent, late onset, 125853 (3)', 'Diabetes mellitus, permanent neonatal, 606176 (3)', 'Hyperinsulinemic hypoglycemia, familial, 3, 602485 (3)', 'MODY, type II, 125851 (3)']	0.8152698610000034	6.295524189353108
-1	67238273	call_3142	C	<DUP:TANDEM>			2.0	False	67338092	99819	False	False	IL23R	['{Inflammatory bowel disease 17, protection against}, 612261 (3)', '{Psoriasis, protection against}, 605606 (3)']	0.8010965400000031	6.186077625132615
+7	44170703	call_3936	C	<DUP:TANDEM>			2.0	False	44252208	81505	False	False	GCK	['Diabetes mellitus, noninsulin-dependent, late onset, 125853 (3)', 'Diabetes mellitus, permanent neonatal, 606176 (3)', 'Hyperinsulinemic hypoglycemia, familial, 3, 602485 (3)', 'MODY, type II, 125851 (3)']	12.548573410000024	96.90024275842539
+21	33236178	call_3651	C	<DUP:TANDEM>			2.0	False	33293738	57560	False	False	IL10RB	.	11.880492781999976	91.74131568996545
+1	119025549	call_3158	C	<DUP:TANDEM>			2.0	False	119138203	112654	False	False	WARS2	['Neurodevelopmental disorder, mitochondrial, with abnormal movements and lactic acidosis, with or without seizures, 617710 (3)']	10.925792594999962	84.36910875781382
+9	130898773	call_4065	A	<DUP:TANDEM>			2.0	False	131015303	116530	False	False	LAMC3	['Cortical malformations, occipital, 614115 (3)']	9.711629753999933	74.99332792623306
+9	130997328	call_3073	G	<DUP:TANDEM>			3.0	False	131041756	44428	False	False	LAMC3	['Cortical malformations, occipital, 614115 (3)']	9.711629753999933	74.99332792623306
+5	132570465	call_2902	T	<DUP:TANDEM>			3.0	False	132623017	52552	False	False	RAD50	['Nijmegen breakage syndrome-like disorder, 613078 (3)']	9.584648388999922	74.01277621790169
+10	94559460	call_3222	T	<DUP:TANDEM>			2.0	False	94637981	78521	False	False	HELLS	['Immunodeficiency-centromeric instability-facial anomalies syndrome 4, 616911 (3)']	8.443030318999863	65.1971870265236
+19	7152567	call_3493	T	<DUP:TANDEM>			2.0	False	7229864	77297	False	False	INSR	['Diabetes mellitus, insulin-resistant, with acanthosis nigricans, 610549 (3)', 'Hyperinsulinemic hypoglycemia, familial, 5, 609968 (3)', 'Leprechaunism, 246200 (3)', 'Rabson-Mendenhall syndrome, 262190 (3)']	8.422065734999858	65.03529824342806
+7	44170703	call_3936	C	<DUP:TANDEM>			2.0	False	44252208	81505	False	False	CAMK2B	['Mental retardation, autosomal dominant 54, 617799 (3)']	8.275767233999842	63.905579366316644
+2	1778901	call_2665	T	<DUP:TANDEM>			3.0	False	1833485	54584	False	False	MYT1L	['Mental retardation, autosomal dominant 39, 616521 (3)']	6.320152523999887	48.80429781426946
+14	99921379	call_3361	T	<DUP:TANDEM>			2.0	False	100027572	106193	False	False	EML1	['Band heterotopia, 600348 (3)']	5.921262791999914	45.72406625313931
+1	67238273	call_3142	C	<DUP:TANDEM>			2.0	False	67338092	99819	False	False	IL23R	['{Inflammatory bowel disease 17, protection against}, 612261 (3)', '{Psoriasis, protection against}, 605606 (3)']	4.2042512930000075	32.4652817175593

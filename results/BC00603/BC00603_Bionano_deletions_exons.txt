@@ -1,2 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-5143	X	23	133509044.0	133537329.0	2675800.4	2699143.4	1.0	deletion	heterozygous	1	4942.0	False	True	GPC3	['Simpson-Golabi-Behmel syndrome, type 1, 312870 (3)', 'Wilms tumor, somatic, 194070 (3)']	47.99690940400025	61.66522944642855
+5143	X	23	133509044.0	133537329.0	2675800.4	2699143.4	1.0	deletion	heterozygous	1	4942.0	False	True	GPC3	['Simpson-Golabi-Behmel syndrome, type 1, 312870 (3)', 'Wilms tumor, somatic, 194070 (3)']	45.444554051000125	58.38602708890248

@@ -1,3 +1,3 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-2429	9	9	18574768.0	18648489.0	2354407.5	2434318.4	1.0	insertion	heterozygous	1	6190.0	True	False	ADAMTSL1	.	78.84563929600047	72.13557457657683
+2429	9	9	18574768.0	18648489.0	2354407.5	2434318.4	1.0	insertion	heterozygous	1	6190.0	True	False	ADAMTSL1	.	106.2437294000036	97.20198268233582
 3006	11	11	69054243.0	69072626.5	56793.4	76341.4	1.0	insertion	homozygous	1	1164.0	False	False	TPCN2	['[Skin/hair/eye pigmentation 10, blond/brown hair], 612267 (3)']	0.0	0.0

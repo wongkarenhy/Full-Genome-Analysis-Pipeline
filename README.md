@@ -7,11 +7,12 @@
 2. clinphen (for NLP)
 4. python2.7
 3. python3.6 or above
-4. annovar 
-5. intervar (to annotate small variants)
-6. bcftools 
+4. annovar version 2016-06-11 (use by intervar)
+5. intervar version 2015-11-10 (to annotate small variants)
+6. bcftools version 1.10.2
 
-**Required python packages:** allel,argparse,collections,datetime,io,itertools,networkx,numpy,obonet,os,subprocess,pandas,pyranges,re,sys
+**Required python packages:** <br>
+allel(v1.2.1), argparse(v1.1), collections, datetime, io, itertools, networkx(v2.4), numpy(v1.18.1), obonet(v0.2.5), os, subprocess, pandas(v1.0.1), pyranges(v0.0.73), re(v2.2.1), sys <br>
 
 **Descriptions:** <br>
 This tool parses SNPs, indels, and structural variations (SVs) from 10x Genomics linked-read and Bionano optical mapping data based on trio sequencing (singleton is allowed). SNPs/indels analysis can be done alone or in combination with SV analysis. In general, this tool parses a patient's electronic health record in JSON format and outputs a clinically relevant gene list. This gene list is then used to inform how genetic variants are prioritized. Genetic variants (SNPs, indels, and SVs) are vetted against a set of controls and parents. For SNPs and indels, variants are filtered based on allele frequencies reported by gnomad(?). Small variants reported as likely benign or benign by either Clinvar or Intervar are discarded from the pipeline. For SVs, the prevalent of these variants are compared against a set of 1KGP + CIAPM control sequenced previously by the Kwok lab. See below for more details. <br>
@@ -222,7 +223,7 @@ Large number of false positives in 10x SV calls. <br>
 ## Pre-processing step for SNPs and indels (must run this separately before running the clinical interpretation pipeline; only run on probands):<br>
 **Step 1.** Change directory to the InterVar installation location<br>
 ```
-cd /media/KwokRaid02/karen/software/InterVar<br>
+cd /media/KwokRaid02/karen/software/InterVar
 
 bcftools view -i 'MIN(FMT/DP)>10 & MIN(FMT/GQ)>30' \
     -f PASS /media/KwokRaid04/CIAPM/CIAPM_longranger/BC00103_longranger/outs/phased_variants.vcf.gz | \
@@ -232,16 +233,6 @@ bcftools view -i 'MIN(FMT/DP)>10 & MIN(FMT/GQ)>30' \
 Run Intervar<br>
 ```
 python2.7 ./Intervar.py -c ./configFiles/BC00103_config.ini
-```
-**Step 3.** Subset the Intervar output <br>
-Grep functional variants and keep variants with maf <=0.05<br>
-```
-grep -w -E 'frameshift|nonframeshift|nonsynonymous|stopgain|stoploss|splicing' \
-    ./example/BC00103.hg38_multianno.txt.intervar | \
-    grep -i -v benign | awk -F'\t' '$15<=0.05' > ./example/BC00103.hg38_multianno.txt.intervar.FINAL
-
-awk '{print $6}' ./example/BC00103.hg38_multianno.txt.intervar.FINAL | \
-    sort -u > ./example/BC00103_smallVariant_geneList.txt
 ```
 ## Actual analysis:<br>
 **Example command** (only run on probands)<br>
@@ -257,6 +248,7 @@ bash /media/KwokRaid05/karen/ciapm/FGA/scripts/run_clinical_interpretation_pipel
     -r hg38 \
     -a None \
     -x false \
+    -M 0.05
 ```
 
 

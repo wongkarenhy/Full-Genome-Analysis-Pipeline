@@ -267,7 +267,7 @@ def smallVariantGeneOverlapCheckInheritance(args, smallVariantFile, interVarFina
             # Compound het
             pd.DataFrame(compoundhet).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_compoundhet_candidates.txt', index=False, sep='\t', header=True)
             if args.xlink:
-                xlink = filtered_intervar.loc[(filtered_intervar['maternal']==1) & (filtered_intervar['paternal']==0) & (filtered_intervar['Chr'] == 'X')]
+                xlink = filtered_intervar.loc[(filtered_intervar['maternal']!=2) & (filtered_intervar['paternal']==0) & (filtered_intervar['Chr'] == 'X')]
                 pd.DataFrame(xlink).to_csv('./results/' + args.sampleid + "/confident_set/" + args.sampleid + '_smallVariants_xlink_candidates.txt', index=False, sep='\t', header=True)
 
 
@@ -473,7 +473,7 @@ def delDupSyndrome(syndrome_score_result_r, args, cyto_10x_del, cyto_10x_del_lar
         overlap_del_BN = delDupSyndromeSVOverlap(del_df, cyto_BN_del, cols)
         overlap_del_BN.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_deletion_syndrome.txt', sep='\t', index=False)
 
-        all_BN = pd.concat([cyto_BN_dup, cyto_BN_del])
+        all_BN = pd.concat([cyto_BN_dup, cyto_BN_del], ignore_index=True)
         overlap_all_BN = delDupSyndromeSVOverlap(all_omim_syndromes, all_BN, cols)
         overlap_all_BN.to_csv('./results/' + args.sampleid + "/" + args.sampleid + '_Bionano_all_syndrome.txt', sep='\t', index=False)
 

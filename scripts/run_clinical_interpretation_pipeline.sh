@@ -3,7 +3,7 @@
 # exit immediately upon error 
 set -e
 
-while getopts 'j:w:s:i:b:e:l:t:f:m:r:a:x:' OPTION; do
+while getopts 'j:w:s:i:b:e:l:t:f:m:r:a:x:M:' OPTION; do
   case "$OPTION" in
     j)
       JSON="$OPTARG"
@@ -73,9 +73,12 @@ while getopts 'j:w:s:i:b:e:l:t:f:m:r:a:x:' OPTION; do
     a)
       ARTIFACT="$OPTARG"
       ;;
+    M)
+      MAF="$OPTARG"
+      ;;
 
     ?)
-      echo "script usage: $(basename $0) [-j path_to_json/None] [-w work_dir] [-s sample_id] [-i path_to_intervar] [-b true/false] [-e DLE/BspQI/None] [-l true/false] [-t trio/singleton] [-f father_SNP_vcf_file_path or None if singleton] [-m mother_SNP_vcf_file_path or None if singleton] [-r hg19/hg38] [-a path_to_custom_artifact_file or None]" >&2
+      echo "script usage: $(basename $0) [-j path_to_json/None] [-w work_dir] [-s sample_id] [-i path_to_intervar] [-b true/false] [-e DLE/BspQI/None] [-l true/false] [-t trio/singleton] [-f father_SNP_vcf_file_path or None if singleton] [-m mother_SNP_vcf_file_path or None if singleton] [-r hg19/hg38] [-a path_to_custom_artifact_file or None] [-x true/false] [-M 0-1]" >&2
       exit 1
       ;;
   esac
@@ -97,7 +100,7 @@ fi
 
 # main pipeline
 pipeline(){
-echo [`date +"%Y-%m-%d %H:%M:%S"`] "#> START:  ${0} -j $JSON -w $WORKDIR -s $SAMPLEID -i $INTERVAR -b $BIONANO -e $ENZYME -l $LINKEDREADSV -t $TYPE -f $FATHERVCF -m $MOTHERVCF -r $REF -a $ARTIFACT -x $XLINK" 
+echo [`date +"%Y-%m-%d %H:%M:%S"`] "#> START:  ${0} -j $JSON -w $WORKDIR -s $SAMPLEID -i $INTERVAR -b $BIONANO -e $ENZYME -l $LINKEDREADSV -t $TYPE -f $FATHERVCF -m $MOTHERVCF -r $REF -a $ARTIFACT -x $XLINK -M $MAF" 
 
 if [[ ! -d ${WORKDIR}/results ]];
     then
@@ -161,6 +164,14 @@ if [[ ${JSON} == 'None' ]]; then
     additional_var_CNLP+=" -m"
 fi
 
+# Check if the intervar output file is present and not empty
+if [[ -s ${INTERVAR}/example/${SAMPLEID}.hg38_multianno.txt.intervar ]]; then
+    grep -w -E 'frameshift|nonframeshift|nonsynonymous|stopgain|stoploss|splicing' ${INTERVAR}/example/${SAMPLEID}.${REF}_multianno.txt.intervar | awk -F'\t' -v maf=$MAF '$15<=maf' > ${INTERVAR}/example/${SAMPLEID}.${REF}_multianno.txt.intervar.FINAL
+    awk -F'\t' '{print $6}' ${INTERVAR}/example/${SAMPLEID}.${REF}_multianno.txt.intervar.FINAL | sort -u > ${INTERVAR}/example/${SAMPLEID}_smallVariant_geneList.txt
+else
+    echo "${INTERVAR}/example/${SAMPLEID}.hg38_multianno.txt.intervar is either missing or empty"
+    exit 1
+fi
 
 # extract exact and inexact HPO terms then run CNLP
 python3.6 ${WORKDIR}/scripts/run_CNLP.py -s ${SAMPLEID} -w ${WORKDIR} -j ${JSON} ${additional_var_CNLP}

@@ -15,7 +15,7 @@
 allel(v1.2.1), argparse(v1.1), collections, datetime, io, itertools, networkx(v2.4), numpy(v1.18.1), obonet(v0.2.5), os, subprocess, pandas(v1.0.1), pyranges(v0.0.73), re(v2.2.1), sys <br>
 
 **Descriptions:** <br>
-This tool parses SNPs, indels, and structural variations (SVs) from 10x Genomics linked-read and Bionano optical mapping data based on trio sequencing (singleton is allowed). SNPs/indels analysis can be done alone or in combination with SV analysis. In general, this tool parses a patient's electronic health record in JSON format and outputs a clinically relevant gene list. This gene list is then used to inform how genetic variants are prioritized. Genetic variants (SNPs, indels, and SVs) are vetted against a set of controls and parents. For SNPs and indels, variants are filtered based on allele frequencies reported by gnomad(?). Small variants reported as likely benign or benign by either Clinvar or Intervar are discarded from the pipeline. For SVs, the prevalent of these variants are compared against a set of 1KGP + CIAPM control sequenced previously by the Kwok lab. See below for more details. <br>
+This tool parses SNPs, indels, and structural variations (SVs) from 10x Genomics linked-read and Bionano optical mapping data based on trio sequencing (singleton is allowed). SNPs/indels analysis can be done alone or in combination with SV analysis. In general, this tool parses a patient's electronic health record in JSON format and outputs a clinically relevant gene list. This gene list is then used to inform how genetic variants are prioritized. Genetic variants (SNPs, indels, and SVs) are vetted against a set of controls and parents. For SNPs and indels, variants are filtered based on allele frequencies reported by gnomad. Small variants reported as likely benign or benign by either Clinvar or Intervar are discarded from the pipeline. For SVs, the prevalent of these variants are compared against a set of 1KGP + CIAPM control sequenced previously by the Kwok lab. See below for more details. <br>
 
 A pre-processing step (for SNPs and indels) is required to run this software. This pre-processing step takes the 10xG GATK output and applies filters based on GQ, DP, and PASS. This step removes the bulk of the variants that are likely to be artifacts. Remaining variants are annotated using Intervar, which is a wrapper for Annovar and it assigns ACMG pathogeneicity to all variants. Variants are additionally filtered for frameshift, nonframeshift, nonsynonymous, stopgain, stoploss, and splicing. They are overlapped with the ranked gene list generated previously. All remaining variatns are ranked by the reported pathogicity based on ClinVar/Intervar and then by the gene sum score (see manuscript for details). <br>
 
@@ -42,8 +42,8 @@ bash run_clinical_interpretation_pipeline.sh [-j path_to_json or None] [-w work_
 ```
 
 **General assumptions about this program:**
-1. All samples must be named BC0XX01, BC0XX02, and BC0XX03, where XX is the family ID shared acorss a trio<br>
-    The last two digits (01/02/03) indicates father, mother, and proband respectively. Please use 04 and onward if there are more than one probands.<br>  
+1. All samples must be named BCXXX01, BCXXX02, and BCXXX03, where XXX is the family ID shared acorss a trio<br>
+    The last two digits (01/02/03) indicates father, mother, and proband respectively. Please use 04 and onward if there are more than one affected probands.<br>  
 2. **[-j path_to_json]**<br>
     This is the path to the EHR file in JSON format for natural language processing (NPL). Input 'None' if user wants to skip NLP and only use a list of manually curated HPO terms instead. For now, the file containing manually curated HPO terms (one term per line) must be placed in $WORKDIR/results/$SAMPLEID/$SAMPLEID_hpo_manual.txt for the pipeline for work.
 3. **[-w work_dir]**<br>

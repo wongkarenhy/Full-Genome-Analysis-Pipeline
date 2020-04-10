@@ -230,6 +230,19 @@ bcftools view -i 'MIN(FMT/DP)>10 & MIN(FMT/GQ)>30' \
     bgzip -c > /media/KwokRaid02/karen/software/InterVar/input_vcf/BC00103_filtered.vcf.gz" 
 ```
 **Step 2.** Generate the config files according to instructions provided by Intervar<br>
+In the config file, make sure that the inputfile is the path to $SAMPLEID_filtered.vcf.gz and inputfile_type is VCF. Outfile should be example/$SAMPLEID. Replace $SAMPLEID with the actual ID. <br>
+```
+[InterVar]
+buildver = hg38 
+# hg38
+inputfile = /media/KwokRaid02/karen/software/InterVar/input_vcf/BC00103_filtered.vcf.gz
+# the inputfile and the path  example/ex1.avinput hg19_clinvar_20151201.avinput
+# tab-delimited will be better for including the other information
+inputfile_type = VCF
+# the input file type VCF(vcf file with single sample),AVinput,VCF_m(vcf file with multiple samples)
+outfile = example/BC00103
+...
+```
 Run Intervar<br>
 ```
 python2.7 ./Intervar.py -c ./configFiles/BC00103_config.ini

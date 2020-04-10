@@ -15,7 +15,7 @@
 allel(v1.2.1), argparse(v1.1), collections, datetime, io, itertools, networkx(v2.4), numpy(v1.18.1), obonet(v0.2.5), os, subprocess, pandas(v1.0.1), pyranges(v0.0.73), re(v2.2.1), sys <br>
 
 **Descriptions:** <br>
-This tool parses SNPs, indels, and structural variations (SVs) from 10x Genomics linked-read and Bionano optical mapping data based on trio sequencing (singleton is allowed). SNPs/indels analysis can be done alone or in combination with SV analysis. In general, this tool parses a patient's electronic health record in JSON format and outputs a clinically relevant gene list. This gene list is then used to inform how genetic variants are prioritized. Genetic variants (SNPs, indels, and SVs) are vetted against a set of controls and parents. For SNPs and indels, variants are filtered based on allele frequencies reported by gnomad. Small variants reported as likely benign or benign by either Clinvar or Intervar are discarded from the pipeline. For SVs, the prevalent of these variants are compared against a set of 1KGP + CIAPM control sequenced previously by the Kwok lab. See below for more details. <br>
+This tool parses SNPs, indels, and structural variations (SVs) from 10x Genomics linked-read and Bionano optical mapping data based on trio sequencing (singleton is allowed). SNPs/indels analysis can be done alone or in combination with SV analysis. In general, this tool parses a patient's electronic health record in JSON format and outputs a clinically relevant gene list. This gene list is then used to inform how genetic variants are prioritized. Genetic variants (SNPs, indels, and SVs) are vetted against a set of controls and parents. For SNPs and indels, variants are filtered based on allele frequencies reported by gnomad. For SVs, the prevalent of these variants are compared against a set of 1KGP + CIAPM control sequenced previously by the Kwok lab. See below for more details. <br>
 
 A pre-processing step (for SNPs and indels) is required to run this software. This pre-processing step takes the 10xG GATK output and applies filters based on GQ, DP, and PASS. This step removes the bulk of the variants that are likely to be artifacts. Remaining variants are annotated using Intervar, which is a wrapper for Annovar and it assigns ACMG pathogeneicity to all variants. Variants are additionally filtered for frameshift, nonframeshift, nonsynonymous, stopgain, stoploss, and splicing. They are overlapped with the ranked gene list generated previously. All remaining variatns are ranked by the reported pathogicity based on ClinVar/Intervar and then by the gene sum score (see manuscript for details). <br>
 
@@ -230,6 +230,19 @@ bcftools view -i 'MIN(FMT/DP)>10 & MIN(FMT/GQ)>30' \
     bgzip -c > /media/KwokRaid02/karen/software/InterVar/input_vcf/BC00103_filtered.vcf.gz" 
 ```
 **Step 2.** Generate the config files according to instructions provided by Intervar<br>
+In the config file, make sure that the inputfile is the path to $SAMPLEID_filtered.vcf.gz and inputfile_type is VCF. Outfile should be example/$SAMPLEID. Replace $SAMPLEID with the actual ID. <br>
+```
+[InterVar]
+buildver = hg38 
+# hg38
+inputfile = /media/KwokRaid02/karen/software/InterVar/input_vcf/BC00103_filtered.vcf.gz
+# the inputfile and the path  example/ex1.avinput hg19_clinvar_20151201.avinput
+# tab-delimited will be better for including the other information
+inputfile_type = VCF
+# the input file type VCF(vcf file with single sample),AVinput,VCF_m(vcf file with multiple samples)
+outfile = example/BC00103
+...
+```
 Run Intervar<br>
 ```
 python2.7 ./Intervar.py -c ./configFiles/BC00103_config.ini

@@ -1,8 +1,29 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-534	2	2	47425414.0	47430854.0	4075529.4	4079774.5	0.99	deletion	heterozygous	1	1195.0	False	False	MSH2	['Colorectal cancer, hereditary nonpolyposis, type 1, 120435 (3)', 'Mismatch repair cancer syndrome, 276300 (3)', 'Muir-Torre syndrome, 158320 (3)']	70.46326030099848	92.95923421194168
-751	2	2	231337204.0	231358663.0	1039262.2	1059586.7	0.98	deletion	homozygous	1	1134.0	False	False	ARMC9	['Joubert syndrome 30, 617622 (3)']	70.30163303499845	92.74600611532861
-752	2	2	231337204.0	231358663.0	1039262.2	1059586.7	0.98	deletion	homozygous	1	1134.0	False	False	ARMC9	['Joubert syndrome 30, 617622 (3)']	70.30163303499845	92.74600611532861
-814	3	3	9679946.0	9689020.5	636320.4	641458.8	1.0	deletion	heterozygous	1	3936.0	False	True	MTMR14	['{Centronuclear myopathy, autosomal, modifier of}, 160150 (3)']	69.1036792159984	91.16559571195224
-3187	11	11	116860341.0	116868910.0	70077.4	77443.6	0.99	deletion	heterozygous	1	1203.0	False	False	SIK3	['?Spondyloepimetaphyseal dysplasia, Krakow type, 618162 (3)']	66.68265365099808	87.97163787394436
-4432	19	19	1027846.0	1046471.5	968635.4	986129.2	0.99	deletion	heterozygous	1	1132.0	False	False	ABCA7	['{Alzheimer disease 9, susceptibility to}, 608907 (3)']	29.527346637999813	38.95419428584286
-2794	10	10	53902290.0	53918336.0	182365.8	196903.3	0.99	deletion	heterozygous	1	1508.0	True	False	PCDH15	['Deafness, autosomal recessive 23, 609533 (3)', 'Usher syndrome, type 1D/F digenic, 601067 (3)', 'Usher syndrome, type 1F, 602083 (3)']	8.361052404999981	11.030386976909409
+4432	19	19	1027846.0	1046471.5	968635.4	986129.2	0.99	deletion	heterozygous	1	1132.0	False	False	ABCA7	['{Alzheimer disease 9, susceptibility to}, 608907 (3)']	73.93137949499868	97.53457891005573
+751	2	2	231337204.0	231358663.0	1039262.2	1059586.7	0.98	deletion	homozygous	1	1134.0	False	False	ARMC9	['Joubert syndrome 30, 617622 (3)']	59.737004555998205	78.80853332530488
+752	2	2	231337204.0	231358663.0	1039262.2	1059586.7	0.98	deletion	homozygous	1	1134.0	False	False	ARMC9	['Joubert syndrome 30, 617622 (3)']	59.737004555998205	78.80853332530488
+534	2	2	47425414.0	47430854.0	4075529.4	4079774.5	0.99	deletion	heterozygous	1	1195.0	False	False	MSH2	['Colorectal cancer, hereditary nonpolyposis, type 1, 120435 (3)', 'Mismatch repair cancer syndrome, 276300 (3)', 'Muir-Torre syndrome, 158320 (3)']	45.645525921998946	60.21823453505789
+3187	11	11	116860341.0	116868910.0	70077.4	77443.6	0.99	deletion	heterozygous	1	1203.0	False	False	SIK3	['?Spondyloepimetaphyseal dysplasia, Krakow type, 618162 (3)']	41.89264957299907	55.267221624146735
+814	3	3	9679946.0	9689020.5	636320.4	641458.8	1.0	deletion	heterozygous	1	3936.0	False	True	MTMR14	['{Centronuclear myopathy, autosomal, modifier of}, 160150 (3)']	36.437893391999445	48.07098978314866
+2794	10	10	53902290.0	53918336.0	182365.8	196903.3	0.99	deletion	heterozygous	1	1508.0	True	False	PCDH15	['Deafness, autosomal recessive 23, 609533 (3)', 'Usher syndrome, type 1D/F digenic, 601067 (3)', 'Usher syndrome, type 1F, 602083 (3)']	29.718410785999765	39.206257230525885
+137	1	1	32767906.0	32791169.0	970760.1	992730.9	0.98	deletion	homozygous	1	1292.0	True	False	KIAA1522	.	0.0	0.0
+2783	10	10	46339302.4	46818532.0	126080.6	126080.6	1.0	deletion	heterozygous	2	479230.0	True	False	NPY4R	.	0.0	0.0
+4439	19	19	2787520.0	2795885.0	2176753.6	2181857.8	1.0	deletion	heterozygous	1	3261.0	True	False	THOP1	.	0.0	0.0
+4432	19	19	1027846.0	1046471.5	968635.4	986129.2	0.99	deletion	heterozygous	1	1132.0	False	False	CNN2	.	0.0	0.0
+3980	16	16	15105499.0	15178911.0	993156.7	1063454.2	1.0	deletion	heterozygous	1	3114.0	True	False	PDXDC1	.	0.0	0.0
+3833	15	15	30617125.0	30646193.0	424166.8	451725.5	0.98	deletion	homozygous	1	1509.0	False	False	ARHGAP11B	.	0.0	0.0
+3833	15	15	30617125.0	30646193.0	424166.8	451725.5	0.98	deletion	homozygous	1	1509.0	False	False	AC091057.6	.	0.0	0.0
+2783	10	10	46339302.4	46818532.0	126080.6	126080.6	1.0	deletion	heterozygous	2	479230.0	True	False	SYT15	.	0.0	0.0
+2783	10	10	46339302.4	46818532.0	126080.6	126080.6	1.0	deletion	heterozygous	2	479230.0	True	False	GPRIN2	.	0.0	0.0
+2781	10	10	46339302.4	46818532.0	126080.6	126080.6	1.0	deletion	heterozygous	1	479230.0	True	False	SYT15	.	0.0	0.0
+2783	10	10	46339302.4	46818532.0	126080.6	126080.6	1.0	deletion	heterozygous	2	479230.0	True	False	ANXA8L1	.	0.0	0.0
+137	1	1	32767906.0	32791169.0	970760.1	992730.9	0.98	deletion	homozygous	1	1292.0	True	False	YARS	['Charcot-Marie-Tooth disease, dominant intermediate C, 608323 (3)']	0.0	0.0
+2781	10	10	46339302.4	46818532.0	126080.6	126080.6	1.0	deletion	heterozygous	1	479230.0	True	False	GPRIN2	.	0.0	0.0
+2781	10	10	46339302.4	46818532.0	126080.6	126080.6	1.0	deletion	heterozygous	1	479230.0	True	False	NPY4R	.	0.0	0.0
+2781	10	10	46339302.4	46818532.0	126080.6	126080.6	1.0	deletion	heterozygous	1	479230.0	True	False	ANXA8L1	.	0.0	0.0
+2177	7	7	151452781.0	151470688.0	349929.9	357544.9	1.0	deletion	heterozygous	1	10292.0	True	False	RHEB	.	0.0	0.0
+2176	7	7	151452781.0	151470688.0	349929.9	357544.9	1.0	deletion	heterozygous	1	10292.0	True	False	RHEB	.	0.0	0.0
+2094	7	7	100400914.5	100407387.0	1219180.1	1224459.4	0.99	deletion	heterozygous	1	1193.0	True	False	ZCWPW1	.	0.0	0.0
+139	1	1	32767906.0	32791169.0	977722.9	999693.7	0.98	deletion	homozygous	1	1292.0	True	False	YARS	['Charcot-Marie-Tooth disease, dominant intermediate C, 608323 (3)']	0.0	0.0
+139	1	1	32767906.0	32791169.0	977722.9	999693.7	0.98	deletion	homozygous	1	1292.0	True	False	KIAA1522	.	0.0	0.0
+4622	20	20	5720368.0	5821341.5	466109.3	554085.0	1.0	deletion	heterozygous	2	12998.0	False	True	SHLD1	.	0.0	0.0

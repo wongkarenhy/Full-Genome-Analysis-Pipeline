@@ -1,5 +1,15 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-892	3	3	12614705.0	12625782.0	300271.1	313806.1	1.0	insertion	heterozygous	1	2458.0	False	True	RAF1	['Cardiomyopathy, dilated, 1NN, 615916 (3)', 'LEOPARD syndrome 2, 611554 (3)', 'Noonan syndrome 5, 611553 (3)']	323.29028637300536	97.58172330328529
-2680	9	9	33106502.0	33137532.0	1651290.6	1683523.7	1.0	insertion	heterozygous	2	1203.0	False	False	B4GALT1	['Congenital disorder of glycosylation, type IId, 607091 (3)']	40.979131110999845	12.369113461914816
-324	1	1	161590409.5	161592084.0	1934216.4	2017517.8	1.0	insertion	heterozygous	1	81627.0	False	False	FCGR2C	['Thrombocytopenic purpura, autoimmune, 188030 (1)']	38.1520225259999	11.515780901927196
+892	3	3	12614705.0	12625782.0	300271.1	313806.1	1.0	insertion	heterozygous	1	2458.0	False	True	RAF1	['Cardiomyopathy, dilated, 1NN, 615916 (3)', 'LEOPARD syndrome 2, 611554 (3)', 'Noonan syndrome 5, 611553 (3)']	257.1934964490099	77.63111254426876
+324	1	1	161590409.5	161592084.0	1934216.4	2017517.8	1.0	insertion	heterozygous	1	81627.0	False	False	FCGR2C	['Thrombocytopenic purpura, autoimmune, 188030 (1)']	167.97860053100214	50.70254817052234
+2680	9	9	33106502.0	33137532.0	1651290.6	1683523.7	1.0	insertion	heterozygous	2	1203.0	False	False	B4GALT1	['Congenital disorder of glycosylation, type IId, 607091 (3)']	160.49982671100122	48.44516009450338
+3354	11	11	113923280.0	113946056.0	590309.7	614549.6	1.0	insertion	heterozygous	1	1464.0	True	False	HTR3B	.	0.0	0.0
+3355	11	11	113903288.0	113946056.0	570599.7	614549.6	1.0	insertion	heterozygous	2	1182.0	True	False	HTR3B	.	0.0	0.0
+3570	12	12	105377049.0	105415192.0	2335993.7	2379303.4	1.0	insertion	heterozygous	1	5167.0	False	True	C12orf75	.	0.0	0.0
+3901	14	14	73323995.0	73361742.0	15380.8	54898.4	1.0	insertion	heterozygous	2	1771.0	False	False	NUMB	.	0.0	0.0
 4105	15	15	78589426.0	78609633.0	667684.4	689079.6	1.0	insertion	heterozygous	2	1188.0	False	False	CHRNA5	['{Lung cancer susceptibility 2}, 612052 (3)', '{Nicotine dependence, susceptibility to}, 612052 (3)']	0.0	0.0
+4105	15	15	78589426.0	78609633.0	667684.4	689079.6	1.0	insertion	heterozygous	2	1188.0	False	False	CHRNA3	['{Lung cancer susceptibility 2}, 612052 (3)']	0.0	0.0
+4111	15	15	86519472.0	86527310.0	534355.3	640979.8	1.0	insertion	heterozygous	1	98786.0	False	False	AGBL1	['Corneal dystrophy, Fuchs endothelial, 8, 615523 (3)']	0.0	0.0
+4731	19	19	8139147.0	8147849.0	213323.5	242559.3	1.0	insertion	heterozygous	1	20534.0	True	False	FBN3	.	0.0	0.0
+4818	19	19	37185780.0	37238574.0	2765623.8	2849364.0	0.99	insertion	heterozygous	1	30946.0	False	False	ZNF585B	.	0.0	0.0
+4818	19	19	37185780.0	37238574.0	2765623.8	2849364.0	0.99	insertion	heterozygous	1	30946.0	False	False	AC012309.1	.	0.0	0.0
+4818	19	19	37185780.0	37238574.0	2765623.8	2849364.0	0.99	insertion	heterozygous	1	30946.0	False	False	ZNF383	.	0.0	0.0

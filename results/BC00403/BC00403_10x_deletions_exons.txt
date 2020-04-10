@@ -1,1 +1,4 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+15	21410723	call_3417	A	<DEL>			2.0	True	21411123	-400	False	False	POTEB3	.	0.0	0.0
+17	35597874	call_3429	T	<DEL>			2.0	True	35598304	-430	False	False	AP2B1	.	0.0	0.0
+19	54786836	call_3440	C	<DEL>			2.0	True	54805122	-18286	False	False	KIR2DL4	.	0.0	0.0

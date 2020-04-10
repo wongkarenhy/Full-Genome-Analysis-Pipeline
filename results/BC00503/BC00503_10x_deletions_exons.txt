@@ -1,2 +1,4 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3	9682341	call_3266	A	<DEL>			4.0	True	9687134	-4793	False	True	MTMR14	['{Centronuclear myopathy, autosomal, modifier of}, 160150 (3)']	69.1036792159984	91.16559571195224
+3	9682341	call_3266	A	<DEL>			4.0	True	9687134	-4793	False	True	MTMR14	['{Centronuclear myopathy, autosomal, modifier of}, 160150 (3)']	36.437893391999445	48.07098978314866
+14	104943133	call_2993	T	<DEL>			6.0	True	104943532	-399	True	False	AHNAK2	.	0.0	0.0
+19	2791930	call_2420	C	<DEL>			12.0	True	2795244	-3314	True	False	THOP1	.	0.0	0.0

@@ -113,7 +113,8 @@ def exonOverlap(args, df):
         exon_calls = exon_overlap.df.drop(columns = ['Chromosome', 'Start', 'End']).rename(columns = {'Name':'gene', 'Score':'OMIM_syndrome'}).drop_duplicates()
         # if args.genelist:
         #     #gene_list = pd.read_csv(args.genelist, sep='\t', names=['Gene'], header=None)
-        exon_calls = exon_calls.merge(args.genelist, on=['gene'])
+        exon_calls = exon_calls.merge(args.genelist, on=['gene'], how='left')
+        exon_calls.fillna(value={'score':0,'normalized_score':0}, inplace=True)
         exon_calls = exon_calls.sort_values(by='score', ascending=False)
 
     return exon_calls

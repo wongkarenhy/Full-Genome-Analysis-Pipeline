@@ -1,1 +1,3 @@
-
+CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score	SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	gene_b	OMIM_syndrome_b	score_b	normalized_score_b	Start_b	End_b	overlap_len
+10	26009957	call_3008	C	<DEL>			9.0	True	26019602	-9645	True	False	MYO3A	['Deafness, autosomal recessive 30, 607101 (3)']	0.0	0.0	2924	10	10	25994613.0	26021720.0	2138361.9	2155972.8	1.0	deletion	heterozygous	1	9496.0	False	False	MYO3A	['Deafness, autosomal recessive 30, 607101 (3)']	0.0	0.0	25994613	26021720	9645
+10	127012107	call_3480	C	<DEL>			4.0	True	127014350	-2243	False	True	DOCK1	.	0.0	0.0	3081	10	10	127006573.0	127015124.5	703044.4	709424.7	1.0	deletion	heterozygous	1	2171.0	False	True	DOCK1	.	0.0	0.0	127006573	127015124	2243

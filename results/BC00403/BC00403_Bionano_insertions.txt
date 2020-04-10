@@ -1,4 +1,17 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3003	10	10	119667561.0	119672973.0	217992.8	224495.3	1.0	insertion	heterozygous	1	1090.0	False	False	BAG3	['Cardiomyopathy, dilated, 1HH, 613881 (3)', 'Myopathy, myofibrillar, 6, 612954 (3)']	39.839049993999396	52.34972540011723
-1141	4	4	8628938.0	9212770.0	360450.8	1105468.5	1.0	insertion	heterozygous	2	161186.0	False	False	HMX1	['Oculoauricular syndrome, 612109 (3)']	31.550833123999777	41.458755930050756
-1753	6	6	32026323.0	32029517.0	452270.5	488490.3	0.99	insertion	heterozygous	1	33026.0	False	False	C4B	['C4B deficiency, 614379 (3)']	27.026614784999808	35.513795201004854
+1753	6	6	32026323.0	32029517.0	452270.5	488490.3	0.99	insertion	heterozygous	1	33026.0	False	False	C4B	['C4B deficiency, 614379 (3)']	42.70895092599921	56.120862657113946
+3003	10	10	119667561.0	119672973.0	217992.8	224495.3	1.0	insertion	heterozygous	1	1090.0	False	False	BAG3	['Cardiomyopathy, dilated, 1HH, 613881 (3)', 'Myopathy, myofibrillar, 6, 612954 (3)']	38.3811898099994	50.434052704215496
+1141	4	4	8628938.0	9212770.0	360450.8	1105468.5	1.0	insertion	heterozygous	2	161186.0	False	False	HMX1	['Oculoauricular syndrome, 612109 (3)']	29.53634120999991	38.81165218298507
+893	3	3	42617589.0	42632786.0	531091.0	549835.4	1.0	insertion	heterozygous	1	3547.0	False	False	NKTR	.	0.0	0.0
+1141	4	4	8628938.0	9212770.0	360450.8	1105468.5	1.0	insertion	heterozygous	2	161186.0	False	False	FAM90A26	.	0.0	0.0
+1141	4	4	8628938.0	9212770.0	360450.8	1105468.5	1.0	insertion	heterozygous	2	161186.0	False	False	USP17L10	.	0.0	0.0
+1146	4	4	9250743.0	9255491.0	1143953.7	1235710.5	1.0	insertion	heterozygous	1	87009.0	False	False	USP17L19	.	0.0	0.0
+2160	7	7	100997009.0	100998784.0	1110417.5	1129691.9	1.0	insertion	homozygous	1	17499.0	True	True	MUC12	.	0.0	0.0
+2163	7	7	100997009.0	100998784.0	1110417.5	1129691.9	1.0	insertion	homozygous	1	17499.0	True	True	MUC12	.	0.0	0.0
+2751	9	9	119246790.0	119274544.0	254472.4	284271.1	1.0	insertion	heterozygous	1	2045.0	False	True	BRINP1	.	0.0	0.0
+3416	12	12	11354766.0	11356389.0	467965.5	509557.2	0.99	insertion	heterozygous	1	39969.0	False	False	PRB1	.	0.0	0.0
+4307	17	17	1057159.0	1067408.5	662170.3	675877.6	1.0	insertion	heterozygous	1	3458.0	True	False	ABR	.	0.0	0.0
+4662	19	19	531759.5	543199.0	182604.0	243103.2	0.99	insertion	heterozygous	1	49060.0	True	False	CDC34	.	0.0	0.0
+4719	19	19	8730754.0	8737485.0	407749.1	424379.2	1.0	insertion	heterozygous	1	9899.0	False	False	OR2Z1	.	0.0	0.0
+5398	X	23	52805030.0	52823199.0	1106503.1	1135145.8	1.0	insertion	homozygous	1	10474.0	False	True	XAGE5	.	0.0	0.0
+5401	X	23	52805030.0	52823199.0	1106503.1	1135145.8	1.0	insertion	homozygous	1	10474.0	False	True	XAGE5	.	0.0	0.0

@@ -1,1 +1,7 @@
 CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+7	74883480	call_3098	C	<DEL>			6.0	False	75376037	-492557	False	False	CASTOR2	.	0	0
+7	74883480	call_3098	C	<DEL>			6.0	False	75376037	-492557	False	False	RCC1L	.	0	0
+7	74883480	call_3098	C	<DEL>			6.0	False	75376037	-492557	False	False	GTF2IRD2B	.	0	0
+7	74883480	call_3098	C	<DEL>			6.0	False	75376037	-492557	False	False	AC211486.7	.	0	0
+7	74883480	call_3098	C	<DEL>			6.0	False	75376037	-492557	False	False	AC211486.8	.	0	0
+7	74883480	call_3098	C	<DEL>			6.0	False	75376037	-492557	False	False	AC211486.6	.	0	0

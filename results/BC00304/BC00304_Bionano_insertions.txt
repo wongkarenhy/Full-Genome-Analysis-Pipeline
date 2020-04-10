@@ -1,1 +1,2 @@
 SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
+4720	19	19	53046369.0	53049604.0	809210.8	847834.0	0.99	insertion	heterozygous	1	35388.0	False	False	ERVV-2	.	0.0	0.0

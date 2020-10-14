@@ -1,2 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3473	12	12	40223727.0	40283171.0	2683233.8	2815760.0	-1.0	duplication	unknown	-1	59444.0	False	True	LRRK2	['{Parkinson disease 8}, 607060 (3)']	11.31224480300001	66.26104884914375

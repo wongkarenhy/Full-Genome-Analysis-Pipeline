@@ -1,2 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-4276	17	17	2029081.0	2042679.0	1335308.0	1350147.0	1.0	insertion	heterozygous	1	1241.0	True	False	DPH1	['Developmental delay with short stature, dysmorphic facial features, and sparse hair, 616901 (3)']	2.7242405850000013	15.957136856836183

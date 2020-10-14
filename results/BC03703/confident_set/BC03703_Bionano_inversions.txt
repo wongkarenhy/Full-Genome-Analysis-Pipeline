@@ -1,7 +1,0 @@
-SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-14488	LINC02250	.	15	15	25520994.0	25529374.0	3160743.3	3150200.1	0.99	inversion_paired	unknown	-1	LINC02250	.	False	False
-14489	LINC02250	.	15	15	25545001.0	25545001.0	3134232.4	3134232.4	0.99	inversion_paired	unknown	-1	LINC02250	.	False	False
-14489	LINC02250	.	15	15	25545001.0	25545001.0	3134232.4	3134232.4	0.99	inversion_paired	unknown	-1	LOC107984789	.	False	False
-14489	LOC107984789	.	15	15	25545001.0	25545001.0	3134232.4	3134232.4	0.99	inversion_paired	unknown	-1	LINC02250	.	False	False
-14489	LOC107984789	.	15	15	25545001.0	25545001.0	3134232.4	3134232.4	0.99	inversion_paired	unknown	-1	LOC107984789	.	False	False
-18878			24	Y	21736843.0	23554377.0	3584606.6	3682359.9	0.04	inversion	heterozygous	1			False	False

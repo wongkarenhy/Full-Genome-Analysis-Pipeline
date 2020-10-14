@@ -1,3 +1,0 @@
-SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-10837	FLJ43315	.	9	9	64051038.0	65764247.0	353332.8	847670.1	0.0	inversion	heterozygous	2			False	False
-14890			14	14	106398665.0	106453324.0	87046659.1	87089994.6	0.11	inversion	heterozygous	1			False	False

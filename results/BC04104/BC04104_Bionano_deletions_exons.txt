@@ -1,2 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-3476	3	3	46959367.0	46987679.0	46926359.3	46951236.5	1.0	deletion	heterozygous	2	3435.0	True	False	NBEAL2	['Gray platelet syndrome, 139090 (3)']	10.091740823000077	45.46279311919617

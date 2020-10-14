@@ -1,3 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-1	168715823	call_21	T	<DEL>			113.0	True	168762276	-46453	True	False	DPT	.	0	0
-15	32439993	call_8516	C	<DEL>			2.0	False	32584142	-144149	False	False	GOLGA8O	.	0	0

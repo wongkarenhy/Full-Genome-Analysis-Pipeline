@@ -1,2 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-19	14424687	14765096	call_3954	A	<DEL>	2.0	False	-340409	False	False	19P13.12 MICRODELETION SYNDROME	 19p13.12 	0.06780249399999999	1.1498731022640356

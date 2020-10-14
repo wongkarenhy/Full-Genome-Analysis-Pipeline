@@ -1,8 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-4970	22	22	45842569.0	45859062.0	166880.3	356811.6	1.0	insertion	homozygous	1	173438.0	False	False	ATXN10	['Spinocerebellar ataxia 10, 603516 (3)']	48.20665700599878	63.59702772839032
-4972	22	22	45842569.0	45859062.0	166880.3	356811.6	1.0	insertion	homozygous	1	173438.0	False	False	ATXN10	['Spinocerebellar ataxia 10, 603516 (3)']	48.20665700599878	63.59702772839032
-2573	9	9	81619371.0	81630652.5	1383114.5	1425427.6	0.99	insertion	heterozygous	1	31032.0	False	False	TLE1	.	0.0	0.0
-2962	11	11	397812.0	399027.0	160844.7	163501.3	1.0	insertion	heterozygous	1	1442.0	True	False	PKP3	.	0.0	0.0
-4543	19	19	39750628.0	39780151.0	174753.3	206937.9	1.0	insertion	heterozygous	1	2662.0	False	True	LEUTX	.	0.0	0.0
-5234	X	23	141174274.0	141201590.0	67091.8	95673.6	1.0	insertion	homozygous	1	1266.0	True	False	LDOC1	.	0.0	0.0
-5236	X	23	141174274.0	141201590.0	67091.8	95673.6	1.0	insertion	homozygous	1	1266.0	True	False	LDOC1	.	0.0	0.0

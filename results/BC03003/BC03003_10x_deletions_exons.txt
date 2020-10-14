@@ -1,4 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-12	88080228	call_4651	A	<DEL>			2.0	True	88080540	-312	False	False	CEP290	['?Bardet-Biedl syndrome 14, 615991 (3)', 'Joubert syndrome 5, 610188 (3)', 'Leber congenital amaurosis 10, 611755 (3)', 'Meckel syndrome 4, 611134 (3)', 'Senior-Loken syndrome 6, 610189 (3)']	356.6039560459877	55.21583541567237
-12	88115511	call_4652	T	<DEL>			2.0	True	88115839	-328	False	False	CEP290	['?Bardet-Biedl syndrome 14, 615991 (3)', 'Joubert syndrome 5, 610188 (3)', 'Leber congenital amaurosis 10, 611755 (3)', 'Meckel syndrome 4, 611134 (3)', 'Senior-Loken syndrome 6, 610189 (3)']	356.6039560459877	55.21583541567237
-16	72057480	call_1108	A	<DEL>			108.0	False	72059195	-1715	False	False	HP	['[Anhaptoglobinemia], 614081 (3)', '[Hypohaptoglobinemia], 614081 (3)']	0.0	0.0

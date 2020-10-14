@@ -1,3 +1,0 @@
-Chromosome	Start	End	ID	REF	ALT_1	QUAL	FILTER_PASS	SVLEN	Found_in_Father	Found_in_Mother	syndrome	cytoband	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father_b	Found_in_Mother_b	score	normalized_score
-1	233328547	233353022	call_3300	G	<DEL>	6.0	True	-2909	True	False	1Q41Q42 MICRODELETION SYNDROME	 1q41q42 	482	1.0	deletion	heterozygous	1	3038.0	True	False	0.007948829	0.2948573713165081
-1	233328547	233353022	call_3300	G	<DEL>	6.0	True	-2909	True	False	CHROMOSOME 1Q41-Q42 DELETION SYNDROME	 1q41-q42 	482	1.0	deletion	heterozygous	1	3038.0	True	False	0.001086973	0.04032065622144076

@@ -1,3 +1,0 @@
-Chromosome	Start	End	SmapEntryID	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	syndrome	cytoband	score	normalized_score
-8	106928067	106964440	9712	1.0	deletion	heterozygous	1	15054.0	False	True	MUNGAN SYNDROME	8q23-q24	0.8	78.18695094191037
-19	42975586	43135632	17039	-1.0	duplication	unknown	-1	160046.0	False	True	%603855 CYSTIC FIBROSIS, MODIFIER OF, 1; CFM1MECONIUM ILEUS IN CYSTIC FIBROSIS, SUSCEPTIBILITY TO, INCLUDED	19q13.2-q13.4	0.25	24.43342216934699

@@ -1,3 +1,0 @@
-SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-10409	EPB41L4B	.	9	9	109202937.0	109205854.0	29212620.0	29209294.1	0.99	inversion_paired	heterozygous	1	EPB41L4B	.	False	False
-10410	EPB41L4B	.	9	9	109207062.0	109210361.5	29208213.8	29205215.1	0.99	inversion_paired	heterozygous	1	EPB41L4B	.	False	False

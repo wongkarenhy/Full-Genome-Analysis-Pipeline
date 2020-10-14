@@ -1,6 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-2365	3	3	81650023.0	83320017.0	0.0	614988.1	-1.0	duplication_split	unknown	-1	1669994.0	False	False	GBE1	['Glycogen storage disease IV, 232500 (3)', 'Polyglucosan body disease, adult form, 263570 (3)']	25.818428659999885	83.93330146291834
-12710	X	23	123768869.0	124194479.0	0.0	629617.9	-1.0	duplication_split	unknown	-1	425610.0	False	False	XIAP	['Lymphoproliferative syndrome, X-linked, 2, 300635 (3)']	22.001098705999937	71.52351812436457
-5305	7	7	74731468.0	74975342.0	372047.3	872339.1	-1.0	duplication	unknown	-1	243874.0	False	False	GTF2I	.	18.71109434199997	60.828021053865186
-12710	X	23	123768869.0	124194479.0	0.0	629617.9	-1.0	duplication_split	unknown	-1	425610.0	False	False	STAG2	['Mullegama-Klein-Martinez syndrome, 301022 (3)']	1.6814122720000046	5.46611433901367
-5305	7	7	74731468.0	74975342.0	372047.3	872339.1	-1.0	duplication	unknown	-1	243874.0	False	False	NCF1	['Chronic granulomatous disease due to deficiency of NCF-1, 233700 (3)']	1.6639594340000043	5.409376791871344

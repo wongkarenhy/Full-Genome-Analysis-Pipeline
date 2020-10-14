@@ -1,3 +1,0 @@
-SmapEntryID	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	SV_size	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-18576	22	22	20036490.0	20076036.0	28664297.6	28670020.3	1.0	deletion	heterozygous	1	33823.0	True	True	TANGO2	['Metabolic encephalomyopathic crises, recurrent, with rhabdomyolysis, cardiac arrhythmias, and neurodegeneration, 616878 (3)']	132.23040028700083	35.76095747031546
-18593	22	22	20036490.0	20076036.0	28800847.6	28804243.6	1.0	deletion	heterozygous	2	36150.0	True	True	TANGO2	['Metabolic encephalomyopathic crises, recurrent, with rhabdomyolysis, cardiac arrhythmias, and neurodegeneration, 616878 (3)']	132.23040028700083	35.76095747031546

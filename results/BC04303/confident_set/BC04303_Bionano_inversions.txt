@@ -1,5 +1,0 @@
-SmapEntryID	Gene	OMIM_syndrome	RefcontigID1	RefcontigID2	RefStartPos	RefEndPos	QryStartPos	QryEndPos	Confidence	Type	Zygosity	Genotype	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-7990	TTK	.	6	6	79999170.0	80003972.0	19781993.5	19787545.0	0.99	inversion_paired	heterozygous	1	TTK	.	False	False
-7991	TTK	.	6	6	80005081.0	80009983.5	19788549.3	19793272.3	0.99	inversion_paired	heterozygous	1	TTK	.	False	False
-18292	COL6A2	['?Myosclerosis, congenital, 255600 (3)', 'Bethlem myopathy 1, 158810 (3)', 'Ullrich congenital muscular dystrophy 1, 254090 (3)']	21	21	46086582.0	46104030.0	606074.8	623944.4	0.11	inversion	homozygous	1	COL6A2	['?Myosclerosis, congenital, 255600 (3)', 'Bethlem myopathy 1, 158810 (3)', 'Ullrich congenital muscular dystrophy 1, 254090 (3)']	False	False
-2178			2	2	90277250.0	91434682.0	578203.4	578203.4	0.15	inversion	heterozygous	1	LOC101930047	.	False	False

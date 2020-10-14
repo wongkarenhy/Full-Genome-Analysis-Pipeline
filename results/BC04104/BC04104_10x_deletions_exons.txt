@@ -1,3 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-5	484209	call_4019	C	<DEL>			5.0	True	484573	-364	False	False	SLC9A3	['Diarrhea 8, secretory sodium, congenital, 616868 (3)']	11.471922058000109	51.68044129846736
-3	46977311	call_3794	A	<DEL>			7.0	True	46981162	-3851	True	False	NBEAL2	['Gray platelet syndrome, 139090 (3)']	10.091740823000077	45.46279311919617

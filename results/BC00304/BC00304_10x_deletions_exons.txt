@@ -1,4 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-16	89649131	call_3468	T	<DEL>			2.0	True	89649438	-307	False	False	CHMP1A	['Pontocerebellar hypoplasia, type 8, 614961 (3)']	24.74893341999958	49.72413362406834
-10	26009959	call_2435	T	<DEL>			12.0	True	26019601	-9642	True	False	MYO3A	['Deafness, autosomal recessive 30, 607101 (3)']	0.0	0.0
-14	50358421	call_3005	A	<DEL>			6.0	True	50360670	-2249	False	True	CDKL1	.	0.0	0.0

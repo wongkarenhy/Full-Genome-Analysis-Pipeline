@@ -1,3 +1,0 @@
-CHROM_x	POS_x	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	MATEID_x	SVTYPE	ID_y	MATEID_y	CHROM_y	POS_y	Gene	OMIM_syndrome	Gene2	OMIM_syndrome2	Found_in_Father	Found_in_Mother
-19	21893538	call_67_1	A	A[chr19:22138053[			38.0	True	call_67_2	BND	call_67_2	call_67_1	19	22138053	LOC105372326	.			False	False
-19	21893538	call_67_1	A	A[chr19:22138053[			38.0	True	call_67_2	BND	call_67_2	call_67_1	19	22138053	LOC112268249	.			False	False

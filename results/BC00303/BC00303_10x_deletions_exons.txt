@@ -1,9 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-2	89936866	call_2916	A	<DEL>			11.0	True	89959975	-23109	False	False	IGKV2D-30	.	0.0	0.0
-2	89936866	call_2916	A	<DEL>			11.0	True	89959975	-23109	False	False	IGKV2D-29	.	0.0	0.0
-10	26009957	call_3008	C	<DEL>			9.0	True	26019602	-9645	True	False	MYO3A	['Deafness, autosomal recessive 30, 607101 (3)']	0.0	0.0
-10	127012107	call_3480	C	<DEL>			4.0	True	127014350	-2243	False	True	DOCK1	.	0.0	0.0
-11	32654577	call_3599	C	<DEL>			3.0	True	32654884	-307	False	False	CCDC73	.	0.0	0.0
-15	84240320	call_3283	A	<DEL>			6.0	True	84240476	-156	False	False	GOLGA6L4	.	0.0	0.0
-18	66543327	call_3034	C	<DEL>			9.0	True	66547838	-4511	False	True	CDH19	['Mitral valve prolapse 2, 607829 (3)', 'Van Maldergem syndrome 1, 601390 (3)']	0.0	0.0
-19	4512933	call_2454	C	<DEL>			44.0	True	4513133	-200	False	False	PLIN4	.	0.0	0.0

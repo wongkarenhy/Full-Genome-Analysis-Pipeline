@@ -1,2 +1,0 @@
-CHROM	POS	ID	REF	ALT_1	ALT_2	ALT_3	QUAL	FILTER_PASS	END	SVLEN	Found_in_Father	Found_in_Mother	gene	OMIM_syndrome	score	normalized_score
-1	240207632	call_4293	G	<DEL>			2.0	True	240208315	-683	False	False	FMN2	['Mental retardation, autosomal recessive 47, 616193 (3)']	194.10325954900654	52.494119313832286
